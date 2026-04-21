@@ -1,11 +1,27 @@
-<div align="center">
+# Orval'IA Studio - Site
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Este projeto foi construído usando **React + Vite + Tailwind CSS**.
 
-  <h1>Built with AI Studio</h2>
+## Como rodar localmente
+1. Instale as dependências: `npm install`
+2. Rode o servidor de desenvolvimento: `npm run dev`
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Como publicar no GitHub Pages
+O projeto já está configurado para o GitHub Pages.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. No terminal, execute o comando:
+   ```bash
+   npm run deploy
+   ```
+   *Isso irá construir o projeto e enviar a pasta `dist` para a branch `gh-pages` do seu repositório.*
 
-</div>
+2. Vá nas configurações do seu repositório no GitHub -> **Pages**.
+3. Em **Build and deployment**, selecione **Deploy from a branch**.
+4. Escolha a branch `gh-pages` e a pasta `/ (root)`.
+5. Salve e aguarde alguns minutos.
+
+## Versão em HTML/CSS Simples
+Se você preferir não usar o sistema de build do Node.js no futuro, após rodar `npm run build`, os arquivos dentro da pasta `dist/` são arquivos estáticos comuns (HTML, CSS, JS) que podem ser colocados em qualquer servidor.
+
+---
+© 2026 Orval'IA Studio
