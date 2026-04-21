@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Orval'IA Studio - Site Oficial",
   "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/ && cp CNAME dist/ || true",
     "start": "npx serve ."
   },
   "dependencies": {},
