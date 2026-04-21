@@ -35,7 +35,7 @@ import {
   Star,
   Plus
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // --- Constants ---
 const WHATSAPP_URL = "https://wa.me/5511942789109?text=Ol%C3%A1%2C%20vim%20pelo%20site%20orvalia.com.br%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es";
@@ -623,6 +623,26 @@ const FAQ = () => {
   );
 };
 
+const SocialLink = ({ icon, href, label }: { icon: React.ReactNode, href: string, label: string }) => {
+  return (
+    <div className="relative group">
+      <a 
+        href={href} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all duration-300 flex items-center justify-center border border-white/5 hover:border-white/20"
+        aria-label={label}
+      >
+        {icon}
+      </a>
+      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-white text-slate-950 text-[10px] font-bold rounded opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200 pointer-events-none whitespace-nowrap shadow-xl z-20">
+        {label}
+        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white"></div>
+      </div>
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="py-20 bg-slate-950 border-t border-white/10">
@@ -642,9 +662,9 @@ const Footer = () => {
               Agência de marketing digital em Indaiatuba/SP. Colocamos sua empresa no digital com inteligência e estratégia.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.instagram.com/orvaliastudio" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors"><Instagram size={18} /></a>
-              <a href="https://www.linkedin.com/company/orvaliastudio/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors"><Linkedin size={18} /></a>
-              <a href="https://www.youtube.com/@orvaliastudio" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors"><Youtube size={18} /></a>
+              <SocialLink href="https://www.instagram.com/orvaliastudio" label="Instagram" icon={<Instagram size={18} />} />
+              <SocialLink href="https://www.linkedin.com/company/orvaliastudio/" label="LinkedIn" icon={<Linkedin size={18} />} />
+              <SocialLink href="https://www.youtube.com/@orvaliastudio" label="YouTube" icon={<Youtube size={18} />} />
             </div>
           </div>
           
