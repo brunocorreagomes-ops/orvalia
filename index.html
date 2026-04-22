@@ -1,274 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orvalia Studio — Agência de Marketing Digital em Indaiatuba</title>
-    <meta name="description" content="Agência de marketing digital em Indaiatuba/SP. Criação de sites, identidade visual e conteúdo com IA.">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Branding em Indaiatuba | Orvalia Studio</title>
+    <meta name="description" content="Estúdio especializado em branding e identidade visual em Indaiatuba. Criamos marcas estratégicas que se posicionam no digital." />
     
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Animate on Scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #22d3ee, #3b82f6, #6366f1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        /* Custom Tooltip */
-        .tooltip {
-            position: relative;
-        }
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 80px;
-            background-color: white;
-            color: #020617;
-            text-align: center;
-            border-radius: 4px;
-            padding: 4px 0;
-            position: absolute;
-            z-index: 100;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -40px;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            font-size: 10px;
-            font-weight: bold;
-            transform: translateY(10px);
-        }
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: white transparent transparent transparent;
-        }
-    </style>
-</head>
-<body class="bg-slate-950 text-slate-300">
-
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="https://i.ibb.co/Kjqj14D6/orvalia-logo-novo-fundo-transparentes.webp" alt="Logo" class="h-10 w-auto">
-                <span class="text-white font-bold text-xl tracking-tight">Orval'IA <span class="text-cyan-400">Studio</span></span>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
-                <a href="#portfolio" class="hover:text-white transition-colors">Portfólio</a>
-                <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
-                <a href="https://wa.me/5511942789109" target="_blank" class="px-5 py-2 bg-white text-slate-950 rounded-full font-semibold hover:bg-cyan-50 transition-all">Iniciar Projeto</a>
-            </div>
-
-            <button onclick="toggleMenu()" class="md:hidden text-white">
-                <i data-lucide="menu" size="28"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950 z-50 flex flex-col p-8 space-y-8">
-            <div class="flex justify-between items-center">
-                <span class="text-white font-bold text-xl">Orval'IA Studio</span>
-                <button onclick="toggleMenu()" class="text-white"><i data-lucide="x" size="28"></i></button>
-            </div>
-            <a href="#servicos" onclick="toggleMenu()" class="text-3xl font-bold text-white">Serviços</a>
-            <a href="#portfolio" onclick="toggleMenu()" class="text-3xl font-bold text-white">Portfólio</a>
-            <a href="#sobre" onclick="toggleMenu()" class="text-3xl font-bold text-white">Sobre</a>
-            <a href="https://wa.me/5511942789109" target="_blank" class="w-full py-4 bg-cyan-500 text-white rounded-xl text-center font-bold text-xl">Falar no WhatsApp</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-10 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <div data-aos="fade-up" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-8">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
-                </span>
-                Agência de Marketing Digital em Indaiatuba e Região
-            </div>
-
-            <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-none">
-                Sua empresa merece ser<br> 
-                <span class="text-gradient">encontrada na internet</span>
-            </h1>
-
-            <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10">
-                Criamos sites, identidade visual e conteúdo com IA para empresas que ainda não têm presença digital. Sem burocracia, sem contrato longo, resultado real.
-            </p>
-
-            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/5511942789109" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-cyan-500 text-white rounded-full font-extrabold text-lg flex items-center justify-center gap-2 hover:shadow-cyan-500/20 shadow-xl transition-all">
-                    Quero minha empresa no digital
-                    <i data-lucide="chevron-right" size="20"></i>
-                </a>
-                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all">
-                    Ver projetos
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="servicos" class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-4">Nossas Soluções</h2>
-                <h3 class="text-4xl md:text-5xl font-extrabold text-white">Tudo que sua empresa precisa.</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div data-aos="fade-up" class="p-8 rounded-3xl glass-card border border-white/5 hover:border-cyan-500/30 transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 transition-colors group-hover:bg-cyan-500 group-hover:text-white">
-                        <i data-lucide="layout" size="28"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Criação de Sites</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Sites rápidos, modernos e otimizados para converter visitantes em clientes reais.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="100" class="p-8 rounded-3xl glass-card border border-white/5 hover:border-blue-500/30 transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 transition-colors group-hover:bg-blue-500 group-hover:text-white">
-                        <i data-lucide="palette" size="28"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Identidade Visual</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Logos e designs criados com auxílio de IA para destacar sua marca da concorrência.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="200" class="p-8 rounded-3xl glass-card border border-white/5 hover:border-indigo-500/30 transition-all group">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-6 transition-colors group-hover:bg-indigo-500 group-hover:text-white">
-                        <i data-lucide="sparkles" size="28"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Conteúdo com IA</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Textos e posts inteligentes que falam a língua do seu cliente e geram desejo de compra.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CT A Section -->
-    <section id="sobre" class="py-24 bg-slate-950 px-6">
-        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center border border-white/5 relative overflow-hidden">
-            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-500/10 blur-[120px]"></div>
-            <div class="relative z-10 space-y-8">
-                <h2 class="text-4xl md:text-6xl font-black text-white leading-tight">
-                    Pronto para o<br> <span class="text-cyan-400">próximo nível?</span>
-                </h2>
-                <a href="https://wa.me/5511942789109" target="_blank" class="px-12 py-5 bg-white text-slate-950 rounded-full font-black text-xl hover:bg-cyan-50 transition-all inline-block">
-                    Falar com Especialista
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-20 bg-slate-950 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="https://i.ibb.co/Kjqj14D6/orvalia-logo-novo-fundo-transparentes.webp" alt="Logo" class="h-8 w-auto">
-                        <span class="text-white font-bold text-lg">Orval'IA Studio</span>
-                    </div>
-                    <p class="text-slate-400 text-sm max-w-sm">Agência de marketing em Indaiatuba/SP. Colocamos sua empresa no digital com inteligência.</p>
-                </div>
-
-                <div class="flex gap-6">
-                    <div class="tooltip">
-                        <a href="https://instagram.com/orvaliastudio" target="_blank" class="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white block transition-all">
-                            <i data-lucide="instagram" size="20"></i>
-                        </a>
-                        <span class="tooltiptext">Instagram</span>
-                    </div>
-                    <div class="tooltip">
-                        <a href="https://linkedin.com/company/orvaliastudio" target="_blank" class="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white block transition-all">
-                            <i data-lucide="linkedin" size="20"></i>
-                        </a>
-                        <span class="tooltiptext">LinkedIn</span>
-                    </div>
-                    <div class="tooltip">
-                        <a href="https://youtube.com/@orvaliastudio" target="_blank" class="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white block transition-all">
-                            <i data-lucide="youtube" size="20"></i>
-                        </a>
-                        <span class="tooltiptext">YouTube</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-16 pt-8 border-t border-white/5 text-center text-slate-500 text-xs">
-                <p>© 2026 Orval'IA Studio · Indaiatuba/SP · orvalia.com.br</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5511942789109" target="_blank" class="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-90 transition-all animate-bounce">
-        <i data-lucide="message-circle" size="32" fill="currentColor"></i>
-    </a>
-
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Initialize AOS
-        AOS.init({ duration: 800, once: true });
-
-        // Navbar Scroll Effect
-        window.onscroll = function() {
-            const nav = document.getElementById('navbar');
-            if (window.pageYOffset > 50) {
-                nav.classList.add('bg-slate-950/80', 'backdrop-blur-md', 'py-4');
-                nav.classList.remove('py-6');
-            } else {
-                nav.classList.remove('bg-slate-950/80', 'backdrop-blur-md', 'py-4');
-                nav.classList.add('py-6');
-            }
-        };
-
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#05070A]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DesignAgency",
+      "name": "Orvalia Studio",
+      "description": "Branding e construção de marca em Indaiatuba",
+      "url": "https://orvalia.com.br",
+      "areaServed": "Indaiatuba",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indaiatuba",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      }
+    }
     </script>
-</body>
+  </body>
 </html>
