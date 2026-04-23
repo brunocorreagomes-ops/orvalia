@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
@@ -11,13 +12,15 @@ function BackToTop() {
   };
 
   return (
-    <button
+    <motion.button
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
-      className="fixed bottom-32 right-8 z-[200] bg-brand-bg border border-white/10 text-white p-4 rounded-full shadow-2xl hover:bg-white hover:text-brand-bg transition-all flex items-center justify-center glow-subtle active:scale-95"
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.9 }}
+      className="fixed bottom-32 right-8 z-[200] bg-white text-brand-bg p-4 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-white/10 active:scale-95"
     >
-      <ChevronUp size={24} />
-    </button>
+      <ChevronUp size={22} />
+    </motion.button>
   );
 }
 import Home from "./pages/Home";
@@ -60,18 +63,20 @@ export default function App() {
         <BackToTop />
         
         {/* Floating WhatsApp Action */}
-        <a
+        <motion.a
           href="https://wa.me/5511978959567?text=Olá,%20vim%20através%20do%20site%20Orvalia%20e%20gostaria%20de%20maiores%20informações"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Entre em contato pelo WhatsApp"
-          className="fixed bottom-8 right-8 z-[200] bg-brand-whatsapp text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center glow-subtle group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-whatsapp"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          className="fixed bottom-8 right-8 z-[200] bg-brand-whatsapp text-brand-bg p-5 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-brand-whatsapp/20 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-whatsapp"
         >
           <MessageCircle size={32} />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-bold whitespace-nowrap">
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-black uppercase tracking-widest text-xs whitespace-nowrap">
             Conversar Agora
           </span>
-        </a>
+        </motion.a>
 
         <Navbar />
         

@@ -62,10 +62,10 @@ export default function Projects() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.9, x: 50 },
+    hidden: { opacity: 0, y: 40, x: 20 },
     visible: { 
       opacity: 1, 
-      scale: 1,
+      y: 0,
       x: 0,
       transition: {
         duration: 0.8,
@@ -76,7 +76,12 @@ export default function Projects() {
 
   return (
     <section id="projetos" className="py-32 px-8 md:px-24 overflow-hidden">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+      >
         <div>
           <span className="text-brand-accent-light font-bold text-[10px] uppercase tracking-widest block mb-4">Portfólio Selecionado</span>
           <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">Trabalhos que elevam <br /> marcas ao próximo nível.</h2>
@@ -98,7 +103,7 @@ export default function Projects() {
             <ChevronRight size={24} className="text-white" />
           </button>
         </div>
-      </div>
+      </motion.div>
 
       <div className="embla" ref={emblaRef}>
         <motion.div 

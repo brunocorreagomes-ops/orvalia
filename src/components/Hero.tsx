@@ -4,6 +4,9 @@ import { ChevronRight, MessageCircle } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center px-8 md:px-24 bg-brand-bg overflow-hidden pt-44 lg:pt-32">
+      {/* Noise Overlay */}
+      <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent-light/5 rounded-full blur-[120px] pointer-events-none" />
       
@@ -35,13 +38,13 @@ export default function Hero() {
           
           <motion.h1 
             variants={{
-              hidden: { opacity: 0, y: 20 },
+              hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 }
             }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl md:text-8xl font-black leading-[1.0] tracking-tighter text-white mb-8"
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-6xl md:text-[7.5rem] font-black leading-[0.9] tracking-[-0.05em] text-white mb-10"
           >
-            Expert em <span className="text-gradient">branding em Indaiatuba</span>.
+            Design <br /> <span className="text-gradient">Estratégico</span>.
           </motion.h1>
 
           <motion.p 
@@ -50,9 +53,9 @@ export default function Hero() {
               visible: { opacity: 1, y: 0 }
             }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 text-brand-secondary text-lg md:text-xl max-w-xl leading-relaxed"
+            className="mt-6 text-brand-secondary text-lg md:text-xl max-w-lg leading-relaxed font-medium"
           >
-            Especialistas na construção de marcas sólidas e posicionamento digital em Indaiatuba, São Paulo. Ajudamos empresas a comunicarem autoridade e confiança através de design estratégico e tecnologia de alta performance.
+            Construindo marcas de autoridade em Indaiatuba através de um sistema visual minimalista, alta performance e posicionamento premium.
           </motion.p>
 
           <motion.div 

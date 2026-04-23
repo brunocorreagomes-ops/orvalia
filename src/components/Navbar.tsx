@@ -37,13 +37,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold tracking-tighter text-brand-text flex items-center gap-3 font-sans">
-          <img 
-            src="https://i.ibb.co/ynz3p9ZR/orvalia-logo-novo-fundo-transparentes.png" 
-            alt="Orvalia Studio Logo" 
-            className="h-10 w-auto"
-          />
-          Orvalia Studio
+        <Link to="/" className="text-2xl font-black tracking-[-0.08em] text-white flex items-center gap-3 font-sans group">
+          <motion.div
+            whileHover={{ rotate: -10, scale: 1.1 }}
+            className="relative"
+          >
+            <img 
+              src="https://i.ibb.co/ynz3p9ZR/orvalia-logo-novo-fundo-transparentes.png" 
+              alt="Orvalia Studio Logo" 
+              className="h-9 w-auto brightness-200 contrast-125"
+            />
+          </motion.div>
+          <span className="group-hover:text-brand-accent-light transition-colors">ORVALIA</span>
         </Link>
 
         {/* Desktop Links */}
