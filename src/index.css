@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,18 +11,34 @@
 
 @layer components {
   .glass {
-    @apply bg-brand-text/[0.03] backdrop-blur-xl border border-brand-text/[0.08];
+    @apply bg-brand-text/[0.02] backdrop-blur-xl border border-brand-text/[0.05];
   }
 
   .glass-premium {
-    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/[0.1] shadow-[inset_0_0_20px_rgba(255,255,255,0.02)];
+    @apply bg-white/[0.01] backdrop-blur-3xl border border-white/[0.08] shadow-[inset_0_0_40px_rgba(255,255,255,0.01)];
   }
 
   .text-gradient {
     @apply bg-gradient-to-br from-brand-text via-brand-accent-light to-brand-accent-dark bg-clip-text text-transparent;
   }
 
-  .glow-subtle {
-    box-shadow: 0 0 60px -15px rgba(0, 85, 255, 0.25);
+  .glow-cyan {
+    box-shadow: 0 0 80px -20px rgba(0, 245, 255, 0.15);
+  }
+
+  .dna-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

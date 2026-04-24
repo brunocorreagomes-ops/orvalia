@@ -1,48 +1,77 @@
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="py-20 px-8 md:px-24 border-t border-white/5">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
-        <div className="md:col-span-2">
-          <Link to="/" className="text-xl font-bold tracking-tighter text-brand-text flex items-center gap-3 mb-8">
-            <img 
-              src="https://i.ibb.co/ynz3p9ZR/orvalia-logo-novo-fundo-transparentes.png" 
-              alt="Orvalia Studio Logo" 
-              className="h-8 w-auto"
-            />
-            Orvalia Studio
-          </Link>
-          <p className="text-brand-secondary max-w-sm text-sm leading-relaxed">
-            Impulsionando o crescimento de pequenas e médias empresas através do design estratégico e tecnologia de ponta.
-          </p>
+    <footer className="py-20 md:py-40 bg-brand-bg relative overflow-hidden border-t border-white/[0.03]">
+      <div className="container mx-auto px-6">
+        <div className="dna-grid mb-24">
+          <div className="col-span-12 lg:col-span-6">
+            <Link to="/" className="text-3xl font-black tracking-super-tight text-white inline-block mb-12 uppercase">
+              ORVALIA
+            </Link>
+            <p className="text-brand-secondary/60 max-w-sm text-xs font-mono uppercase tracking-[0.2em] leading-relaxed">
+               [ STUDIO DE DESIGN ESTRATÉGICO E ARQUITETURA DE SOFTWARES DE ALTA PERFORMANCE ]
+            </p>
+          </div>
+
+          <div className="col-span-6 lg:col-span-3">
+            <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Diretório</h4>
+            <ul className="space-y-6">
+              {[
+                { name: "Projetos", href: "/#projetos" },
+                { name: "Metodologia", href: "/#processo" },
+                { name: "Serviços", href: "/#servicos" },
+                { name: "Planos", href: "/#precos" },
+                { name: "Blog", href: "/blog" }
+              ].map(item => (
+                <li key={item.name}>
+                  <a href={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
+                    {item.name}
+                    <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="col-span-6 lg:col-span-3">
+             <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Governança</h4>
+             <ul className="space-y-6">
+              {[
+                { name: "Segurança", href: "/privacidade" },
+                { name: "Acordos", href: "/termos" },
+                { name: "Arquitetura", href: "/cookies" }
+              ].map(item => (
+                <li key={item.name}>
+                  <Link to={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Menu</h4>
-          <ul className="space-y-4 text-brand-secondary text-sm">
-            <li><a href="/#projetos" className="hover:text-brand-accent-light transition-colors">Portfólio</a></li>
-            <li><a href="/#processo" className="hover:text-brand-accent-light transition-colors">Processo</a></li>
-            <li><a href="/#servicos" className="hover:text-brand-accent-light transition-colors">Serviços</a></li>
-            <li><a href="/#precos" className="hover:text-brand-accent-light transition-colors">Planos</a></li>
-            <li><Link to="/blog" className="hover:text-brand-accent-light transition-colors">Blog</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Legal</h4>
-          <ul className="space-y-4 text-brand-secondary text-sm">
-            <li><Link to="/termos" className="hover:text-brand-accent-light transition-colors">Termos</Link></li>
-            <li><Link to="/privacidade" className="hover:text-brand-accent-light transition-colors">Privacidade</Link></li>
-            <li><Link to="/cookies" className="hover:text-brand-accent-light transition-colors">Cookies</Link></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-        <p className="text-brand-secondary text-xs">© 2026 Orvalia Studio. Todos os direitos reservados.</p>
-        <div className="flex gap-6 text-brand-secondary text-xs font-mono uppercase tracking-widest">
-            Design for Future
+        <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12">
+            <div className="flex items-center gap-6">
+               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO ARCHITECTURE</span>
+               <div className="w-[1px] h-4 bg-white/5" />
+               <span className="font-mono text-[8px] text-brand-secondary/40">INDAIATUBA • BR</span>
+            </div>
+            <div className="flex gap-16">
+               <div className="flex flex-col gap-2">
+                  <span className="font-mono text-[7px] text-brand-accent-light">FUSO HORÁRIO</span>
+                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">GMT-3</span>
+               </div>
+               <div className="flex flex-col gap-2">
+                  <span className="font-mono text-[7px] text-brand-accent-light">STATUS</span>
+                  <span className="text-[10px] text-white font-bold tracking-widest uppercase flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
+                    Operacional
+                  </span>
+               </div>
+            </div>
         </div>
       </div>
     </footer>

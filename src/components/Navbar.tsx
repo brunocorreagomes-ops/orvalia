@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, BookText, Instagram, Youtube } from "lucide-react";
-
+import { Menu, X, Instagram, Youtube } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -18,176 +17,134 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Projetos", href: "/#projetos", isLink: false },
-    { name: "Processo", href: "/#processo", isLink: false },
-    { name: "Serviços", href: "/#servicos", isLink: false },
-    { name: "Preços", href: "/#precos", isLink: false },
-    { name: "Blog", href: "/blog", isLink: true },
-  ];
-
-  const socialLinks = [
-    { name: "Instagram", href: "https://www.instagram.com/orvaliastudio", icon: <Instagram size={20} /> },
-    { name: "YouTube", href: "https://www.youtube.com/@orvaliastudio", icon: <Youtube size={20} /> },
+    { name: "Projetos", href: "/#projetos", id: "01" },
+    { name: "Metodologia", href: "/#processo", id: "02" },
+    { name: "Serviços", href: "/#servicos", id: "03" },
+    { name: "Planos", href: "/#precos", id: "04" },
+    { name: "Blog", href: "/blog", id: "05", isLink: true },
   ];
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 font-sans ${
-        isScrolled || isMenuOpen ? "py-4 bg-brand-bg/80 backdrop-blur-xl border-b border-white/5" : "py-8 bg-transparent"
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+        isScrolled || isMenuOpen ? "py-6 bg-brand-bg/90 backdrop-blur-xl border-b border-white/[0.03]" : "py-10 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-black tracking-[-0.08em] text-white flex items-center gap-3 font-sans group">
-          <motion.div
-            whileHover={{ rotate: -10, scale: 1.1 }}
-            className="relative"
-          >
-            <img 
-              src="https://i.ibb.co/ynz3p9ZR/orvalia-logo-novo-fundo-transparentes.png" 
-              alt="Orvalia Studio Logo" 
-              className="h-9 w-auto brightness-200 contrast-125"
-            />
-          </motion.div>
-          <span className="group-hover:text-brand-accent-light transition-colors">ORVALIA</span>
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* Logo Section - Minimalist DNA */}
+        <Link to="/" className="group flex items-center gap-4">
+          <div className="relative overflow-hidden">
+             <span className="text-xl font-black tracking-super-tight text-white block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
+               ORVALIA
+             </span>
+             <span className="absolute top-full left-0 text-xl font-black tracking-super-tight text-brand-accent-light block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
+               ORVALIA
+             </span>
+          </div>
+          <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
+          <span className="hidden md:block font-mono text-[9px] uppercase tracking-[0.3em] text-brand-secondary/40">Estúdio • Arq</span>
         </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          <div className="flex items-center gap-8 pr-8 border-r border-white/10 uppercase tracking-[0.2em] text-[10px] font-black">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-16">
+          <div className="flex items-center gap-12">
             {navLinks.map((link) => (
-              link.isLink ? (
-                <Link 
-                  key={link.name} 
-                  to={link.href} 
-                  className={`transition-all flex items-center gap-2 group font-sans hover:text-brand-accent-light ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary'}`}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <BookText size={14} />
-                  </motion.div>
-                  {link.name}
-                </Link>
-              ) : (
-                <motion.a 
-                  key={link.name} 
-                  href={link.href} 
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="transition-all font-sans text-brand-secondary hover:text-brand-accent-light"
-                >
-                  {link.name}
-                </motion.a>
-              )
+              <motion.div 
+                key={link.name}
+                className="group relative"
+                whileHover={{ y: -2 }}
+              >
+                <div className="flex flex-col">
+                  <span className="font-mono text-[8px] text-brand-accent-light/40 group-hover:text-brand-accent-light transition-colors mb-1">
+                    {link.id}
+                  </span>
+                  {link.isLink ? (
+                    <Link 
+                      to={link.href}
+                      className={`text-xs font-black uppercase tracking-[0.2em] transition-colors ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary hover:text-white'}`}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a 
+                      href={link.href}
+                      className="text-xs font-black uppercase tracking-[0.2em] text-brand-secondary hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  )}
+                </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="flex items-center gap-5">
-            {socialLinks.map((social) => (
-              <motion.a 
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, color: "#58C2FF" }}
-                whileTap={{ scale: 0.8 }}
-                className="text-brand-secondary transition-colors"
-                title={social.name}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
-            <motion.a 
-              href="https://wa.me/5511978959567?text=Olá,%20vim%20através%20do%20site%20Orvalia%20e%20gostaria%20de%20maiores%20informações"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-              whileTap={{ scale: 0.95, filter: "brightness(0.9)" }}
-              className="ml-2 px-6 py-2.5 bg-brand-whatsapp text-brand-bg rounded-full text-xs font-black uppercase tracking-[0.15em] transition-all font-sans shadow-lg shadow-brand-whatsapp/20"
-            >
-              Falar no WhatsApp
-            </motion.a>
-          </div>
+          <motion.a 
+            href="https://wa.me/5511978959567"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-white text-brand-bg rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:bg-brand-accent-light"
+          >
+            Iniciar Projeto
+          </motion.a>
         </div>
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-white"
+          className="lg:hidden w-10 h-10 flex items-center justify-center text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.nav
-            id="mobile-navigation"
-            role="navigation"
-            aria-label="Menu de navegação mobile"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-brand-bg border-b border-white/5 overflow-hidden"
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed inset-0 top-[88px] bg-brand-bg z-50 lg:hidden p-8"
           >
-            <div className="flex flex-col gap-8 p-8">
+            <div className="flex flex-col gap-12 mt-12">
               {navLinks.map((link) => (
-                link.isLink ? (
-                  <Link 
-                    key={link.name} 
-                    to={link.href} 
-                    className={`text-2xl font-black uppercase tracking-[0.2em] transition-colors flex items-center gap-4 font-sans ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-text'}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <BookText size={24} className={pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary'} />
-                    {link.name}
-                  </Link>
-                ) : (
-                  <a 
-                    key={link.name} 
-                    href={link.href} 
-                    className="text-2xl font-black uppercase tracking-[0.2em] text-brand-text hover:text-brand-accent-light transition-colors font-sans"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                )
+                <div key={link.name} className="group">
+                   <span className="font-mono text-[10px] text-brand-accent-light block mb-2">{link.id}</span>
+                   {link.isLink ? (
+                    <Link 
+                      to={link.href}
+                      className="text-4xl font-black uppercase tracking-tight text-white hover:text-brand-accent-light transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a 
+                      href={link.href}
+                      className="text-4xl font-black uppercase tracking-tight text-white hover:text-brand-accent-light transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </a>
+                  )}
+                </div>
               ))}
-
-              <div className="flex items-center gap-6 py-8 border-t border-white/5">
-                {socialLinks.map((social) => (
-                  <motion.a 
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileTap={{ scale: 0.9 }}
-                    className="flex items-center gap-3 text-brand-secondary font-sans text-xs font-black uppercase tracking-widest"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {social.icon}
-                    <span>{social.name}</span>
-                  </motion.a>
-                ))}
+              
+              <div className="mt-auto flex flex-col gap-8">
+                 <div className="h-[1px] w-full bg-white/5" />
+                 <div className="flex justify-between items-center">
+                    <div className="flex gap-6">
+                      <Instagram className="text-brand-secondary" size={20} />
+                      <Youtube className="text-brand-secondary" size={20} />
+                    </div>
+                    <span className="font-mono text-[10px] text-brand-secondary/40">INDAIATUBA • BR</span>
+                 </div>
               </div>
-
-              <motion.a 
-                href="https://wa.me/5511978959567?text=Olá,%20vim%20através%20do%20site%20Orvalia%20e%20gostaria%20de%20maiores%20informações"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileTap={{ scale: 0.95 }}
-                className="w-full py-5 bg-brand-whatsapp text-brand-bg rounded-2xl text-center font-black uppercase tracking-widest text-sm font-sans shadow-xl shadow-brand-whatsapp/10"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Falar no WhatsApp
-              </motion.a>
             </div>
-          </motion.nav>
+          </motion.div>
         )}
       </AnimatePresence>
     </nav>
