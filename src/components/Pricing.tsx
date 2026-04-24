@@ -36,16 +36,16 @@ export default function Pricing() {
       <div className="container mx-auto px-6">
         {/* DNA Header Grid */}
         <div className="dna-grid mb-24 items-end">
-          <div className="col-span-12 lg:col-span-7">
+          <div className="col-span-4 lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Lógica de Investimento</span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-sans font-black text-white tracking-ultra-tight leading-[0.85]">
+            <h2 className="responsive-subtitle font-sans font-black text-white tracking-ultra-tight leading-[0.85]">
               ARQUITETURA <br /> <span className="italic font-serif font-light text-brand-secondary">DE VALOR.</span>
             </h2>
           </div>
-          <div className="col-span-12 lg:col-span-5 flex flex-col justify-end text-right">
+          <div className="col-span-4 lg:col-span-5 flex flex-col justify-end text-left lg:text-right">
              <p className="text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed">
                [ Modelos de investimento projetados para transformar sua presença digital em um ativo de lucro constante. ]
              </p>
@@ -61,7 +61,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`col-span-12 lg:col-span-4 p-10 md:p-14 rounded-[3.5rem] glass-premium relative flex flex-col justify-between overflow-hidden group ${plan.highlight ? 'border-brand-accent-light/20 glow-cyan' : 'border-white/5'}`}
+              className={`col-span-4 lg:col-span-4 p-8 md:p-14 rounded-[3rem] md:rounded-[3.5rem] glass-premium relative flex flex-col justify-between overflow-hidden group ${plan.highlight ? 'border-brand-accent-light/20 glow-cyan' : 'border-white/5'}`}
             >
               {plan.highlight && (
                 <div className="absolute top-0 right-0 p-8">

@@ -6,31 +6,31 @@ const projects = [
     title: "Beth Olmeda",
     category: "Branding • Estética",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
-    span: "col-span-12 lg:col-span-12 h-[600px]"
+    span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
   },
   {
     title: "Marta Ana Chiconato",
     category: "Estratégia • Terapia",
     image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
-    span: "col-span-12 lg:col-span-6 h-[700px]"
+    span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
   {
     title: "Quinta de Caraíva",
     category: "Web • Experiência",
     image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
-    span: "col-span-12 lg:col-span-6 h-[500px]"
+    span: "col-span-4 lg:col-span-6 h-[400px] md:h-[500px]"
   },
   {
     title: "Dario Eletricidade",
     category: "Marketing • Digital",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
-    span: "col-span-12 lg:col-span-7 h-[600px]"
+    span: "col-span-4 lg:col-span-7 h-[500px] md:h-[600px]"
   },
   {
     title: "KNJ TUR",
     category: "Interface • Estratégia",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
-    span: "col-span-12 lg:col-span-5 h-[400px]"
+    span: "col-span-4 lg:col-span-5 h-[350px] md:h-[400px]"
   }
 ];
 
@@ -39,30 +39,30 @@ export default function Projects() {
     <section id="projetos" className="py-20 md:py-40 bg-brand-bg relative z-10">
       <div className="container mx-auto px-6">
         {/* Header DNA Grid */}
-        <div className="grid grid-cols-12 gap-6 mb-24 items-end">
+        <div className="dna-grid mb-24 items-end">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 lg:col-span-6"
+            className="col-span-4 lg:col-span-6"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-10 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">Arquitetura de Portfólio</span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-sans font-black tracking-ultra-tight text-white leading-[0.85]">
+            <h2 className="responsive-subtitle font-sans font-black tracking-ultra-tight text-white leading-[0.85]">
               RESULTADOS <br /> <span className="italic font-serif font-light text-brand-secondary">REAIS.</span>
             </h2>
           </motion.div>
-          <div className="col-span-12 lg:col-span-6 flex justify-end pb-4">
-             <p className="max-w-xs text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed text-right">
+          <div className="col-span-4 lg:col-span-6 flex lg:justify-end pb-4">
+             <p className="max-w-xs text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed text-left lg:text-right">
                [ Arquitetura de marca e produtos digitais que definem novos padrões de mercado local. ]
              </p>
           </div>
         </div>
 
         {/* Asymmetric Grid */}
-        <div className="grid grid-cols-12 gap-8 md:gap-12">
+        <div className="dna-grid">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}

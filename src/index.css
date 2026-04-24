@@ -28,12 +28,26 @@
 
   .dna-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    .dna-grid {
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
   }
 }
 
 @layer utilities {
+  .responsive-title {
+    @apply text-5xl sm:text-6xl md:text-8xl lg:text-[11rem];
+  }
+  .responsive-subtitle {
+    @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }

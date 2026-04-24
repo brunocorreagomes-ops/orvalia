@@ -6,16 +6,16 @@ export default function Footer() {
     <footer className="py-20 md:py-40 bg-brand-bg relative overflow-hidden border-t border-white/[0.03]">
       <div className="container mx-auto px-6">
         <div className="dna-grid mb-24">
-          <div className="col-span-12 lg:col-span-6">
+          <div className="col-span-4 lg:col-span-6">
             <Link to="/" className="text-3xl font-black tracking-super-tight text-white inline-block mb-12 uppercase">
               ORVALIA
             </Link>
-            <p className="text-brand-secondary/60 max-w-sm text-xs font-mono uppercase tracking-[0.2em] leading-relaxed">
+            <p className="text-brand-secondary/60 max-w-sm text-xs font-mono uppercase tracking-[0.2em] leading-relaxed mb-12 lg:mb-0">
                [ STUDIO DE DESIGN ESTRATÉGICO E ARQUITETURA DE SOFTWARES DE ALTA PERFORMANCE ]
             </p>
           </div>
 
-          <div className="col-span-6 lg:col-span-3">
+          <div className="col-span-2 lg:col-span-3">
             <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Diretório</h4>
             <ul className="space-y-6">
               {[
@@ -35,7 +35,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-6 lg:col-span-3">
+          <div className="col-span-2 lg:col-span-3">
              <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Governança</h4>
              <ul className="space-y-6">
               {[

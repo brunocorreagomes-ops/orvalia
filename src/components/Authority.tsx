@@ -12,7 +12,7 @@ export default function Authority() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 lg:col-span-12 mb-16"
+            className="col-span-4 lg:col-span-12 mb-16"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="w-16 h-[1px] bg-brand-accent-light" />
@@ -24,12 +24,12 @@ export default function Authority() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-12 lg:col-span-7"
+            className="col-span-4 lg:col-span-7"
           >
-            <h2 className="text-4xl md:text-7xl font-sans font-black text-white tracking-ultra-tight leading-[0.9] mb-12">
+            <h2 className="responsive-subtitle font-sans font-black text-white tracking-ultra-tight leading-[0.9] mb-12">
               CONSTRUÇÃO <br /> DE <span className="text-gradient">AUTORIDADE.</span>
             </h2>
-            <p className="font-serif text-2xl md:text-3xl text-brand-secondary italic leading-relaxed font-light max-w-2xl">
+            <p className="font-serif text-xl md:text-3xl text-brand-secondary italic leading-relaxed font-light max-w-2xl">
               "Branding não é apenas estética; é uma <span className="text-white not-italic font-medium">arquitetura de percepção</span> que sustenta sua liderança e garante seu retorno digital."
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ export default function Authority() {
              initial={{ opacity: 0 }}
              whileInView={{ opacity: 1 }}
              viewport={{ once: true }}
-             className="col-span-12 lg:col-span-5 flex flex-col justify-end pt-12 lg:pt-0"
+             className="col-span-4 lg:col-span-5 flex flex-col justify-end pt-12 lg:pt-0"
           >
             <div className="glass-premium p-10 rounded-[3rem] relative space-y-8">
               <div className="flex gap-6 items-start">

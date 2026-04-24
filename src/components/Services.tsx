@@ -40,7 +40,7 @@ export default function Services() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div>
           <span className="text-brand-accent-light font-bold text-[10px] uppercase tracking-widest block mb-4">Especialidades</span>
-          <h2 className="text-4xl md:text-6xl font-semibold text-white tracking-tight mb-8 leading-tight">Soluções completas <br /> para sua evolução.</h2>
+          <h2 className="text-3xl md:text-6xl font-semibold text-white tracking-tight mb-8 leading-tight">Soluções completas <br className="hidden md:block" /> para sua evolução.</h2>
           <p className="text-brand-secondary text-lg leading-relaxed max-w-lg">
             Não entregamos apenas arquivos. Entregamos ativos digitais que trabalham para o seu negócio 24 horas por dia.
           </p>

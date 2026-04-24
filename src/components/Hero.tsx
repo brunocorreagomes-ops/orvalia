@@ -18,13 +18,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="col-span-12 lg:col-span-4 mb-12 lg:mb-0"
+            className="col-span-4 lg:col-span-4 mb-12 lg:mb-0"
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Arquitetura de Estúdio</span>
             </div>
-            <p className="font-serif text-2xl text-brand-secondary leading-relaxed italic font-light">
+            <p className="font-serif text-xl md:text-2xl text-brand-secondary leading-relaxed italic font-light">
               Elevando o design para um padrão <span className="text-white not-italic font-medium">high-tech</span> e autoridade digital em Indaiatuba.
             </p>
           </motion.div>
@@ -34,16 +34,16 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 lg:col-span-8 flex flex-col justify-end"
+            className="col-span-4 lg:col-span-8 flex flex-col justify-end"
           >
             <div className="relative">
-              <h1 className="text-7xl md:text-[11rem] font-sans font-black leading-[0.85] tracking-ultra-tight text-white mb-10 flex flex-col">
+              <h1 className="responsive-title font-sans font-black leading-[0.85] tracking-ultra-tight text-white mb-10 flex flex-col">
                 <span className="block">DESIGN</span>
                 <span className="block text-gradient">ESTRATÉGICO</span>
               </h1>
               
               {/* Secondary Detail Floating */}
-              <div className="absolute -top-10 right-0 hidden md:block group cursor-default">
+              <div className="absolute -top-10 right-0 hidden lg:block group cursor-default">
                 <div className="glass-premium p-6 rounded-2xl flex flex-col gap-3 max-w-[200px]">
                   <div className="w-8 h-8 rounded-full bg-brand-accent-light/10 flex items-center justify-center">
                     <Globe className="text-brand-accent-light" size={16} />
@@ -57,12 +57,12 @@ export default function Hero() {
           </motion.div>
 
           {/* Bottom Action Section */}
-          <div className="col-span-12 mt-20 md:mt-32 dna-grid">
+          <div className="col-span-4 lg:col-span-12 mt-20 md:mt-32 dna-grid">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="col-span-12 md:col-span-6 flex flex-col md:flex-row gap-8 items-center"
+              className="col-span-4 lg:col-span-6 flex flex-col md:flex-row gap-8 items-center"
             >
               <a 
                 href="#projetos"
@@ -88,7 +88,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="col-span-12 md:col-span-6 flex justify-end items-center mt-12 md:mt-0"
+              className="col-span-4 lg:col-span-6 flex justify-end items-center mt-12 md:mt-0"
             >
               <div className="flex flex-col gap-10">
                 <div className="flex gap-12 items-center">
