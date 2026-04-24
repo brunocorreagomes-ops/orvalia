@@ -103,44 +103,62 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-[88px] bg-brand-bg z-50 lg:hidden p-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 top-0 bg-[#0A0A0B] z-40 lg:hidden flex flex-col"
           >
-            <div className="flex flex-col gap-12 mt-12">
-              {navLinks.map((link) => (
-                <div key={link.name} className="group">
-                   <span className="font-mono text-[10px] text-brand-accent-light block mb-2">{link.id}</span>
-                   {link.isLink ? (
-                    <Link 
-                      to={link.href}
-                      className="text-4xl font-black uppercase tracking-tight text-white hover:text-brand-accent-light transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <a 
-                      href={link.href}
-                      className="text-4xl font-black uppercase tracking-tight text-white hover:text-brand-accent-light transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </a>
-                  )}
-                </div>
-              ))}
-              
-              <div className="mt-auto flex flex-col gap-8">
-                 <div className="h-[1px] w-full bg-white/5" />
-                 <div className="flex justify-between items-center">
-                    <div className="flex gap-6">
-                      <Instagram className="text-brand-secondary" size={20} />
-                      <Youtube className="text-brand-secondary" size={20} />
+            <div className="flex-1 overflow-y-auto px-8 pt-32 pb-12">
+              <div className="flex flex-col gap-10">
+                {navLinks.map((link, idx) => (
+                  <motion.div 
+                    key={link.name} 
+                    className="group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + idx * 0.05 }}
+                  >
+                     <span className="font-mono text-[10px] text-brand-accent-light/60 block mb-2">{link.id}</span>
+                     {link.isLink ? (
+                      <Link 
+                        to={link.href}
+                        className="text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light transition-colors block"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a 
+                        href={link.href}
+                        className="text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light transition-colors block"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {link.name}
+                      </a>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-20 flex flex-col gap-12">
+                 <div className="h-[1px] w-full bg-white/10" />
+                 <div className="flex justify-between items-end">
+                    <div className="flex flex-col gap-4">
+                      <span className="font-mono text-[10px] text-brand-secondary/40 uppercase tracking-widest">Siga-nos</span>
+                      <div className="flex gap-6">
+                        <a href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:bg-white/5 transition-colors">
+                          <Instagram className="text-brand-secondary" size={18} />
+                        </a>
+                        <a href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:bg-white/5 transition-colors">
+                          <Youtube className="text-brand-secondary" size={18} />
+                        </a>
+                      </div>
                     </div>
-                    <span className="font-mono text-[10px] text-brand-secondary/40">INDAIATUBA • BR</span>
+                    <div className="text-right">
+                       <span className="font-mono text-[10px] text-brand-secondary/40 block">INDAIATUBA • SP</span>
+                       <span className="font-mono text-[10px] text-brand-secondary/20 block">© 2026 ORVALIA</span>
+                    </div>
                  </div>
               </div>
             </div>
