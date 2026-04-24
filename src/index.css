@@ -6,6 +6,10 @@
 @layer base {
   body {
     @apply bg-brand-bg text-brand-text antialiased font-sans selection:bg-brand-accent-light/30 selection:text-brand-accent-light;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
   }
 }
 
@@ -42,10 +46,15 @@
 
 @layer utilities {
   .responsive-title {
-    @apply text-4xl sm:text-6xl md:text-8xl lg:text-[11rem];
+    @apply text-[11vw] sm:text-6xl md:text-8xl lg:text-[11rem];
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   .responsive-subtitle {
-    @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl;
+    @apply text-[10vw] sm:text-5xl md:text-7xl lg:text-8xl;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .no-scrollbar::-webkit-scrollbar {
