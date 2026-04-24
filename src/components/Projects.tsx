@@ -50,7 +50,7 @@ export default function Projects() {
               <div className="w-10 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">Arquitetura de Portfólio</span>
             </div>
-            <h2 className="responsive-subtitle font-sans font-black tracking-ultra-tight text-white leading-[0.85]">
+            <h2 className="responsive-subtitle font-sans font-black tracking-tighter md:tracking-ultra-tight text-white leading-[0.85]">
               RESULTADOS <br /> <span className="italic font-serif font-light text-brand-secondary">REAIS.</span>
             </h2>
           </motion.div>

@@ -21,7 +21,7 @@ export default function CTA() {
            </div>
         </div>
 
-        <h2 className="responsive-subtitle font-sans font-black text-white leading-[0.85] tracking-ultra-tight mb-16 uppercase">
+        <h2 className="responsive-subtitle font-sans font-black text-white leading-[0.85] tracking-tighter md:tracking-ultra-tight mb-16 uppercase">
           PRONTO PARA <br /> <span className="text-gradient">EVOLUIR?</span>
         </h2>
 

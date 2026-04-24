@@ -26,7 +26,7 @@ export default function Authority() {
             viewport={{ once: true }}
             className="col-span-4 lg:col-span-7"
           >
-            <h2 className="responsive-subtitle font-sans font-black text-white tracking-ultra-tight leading-[0.9] mb-12">
+            <h2 className="responsive-subtitle font-sans font-black text-white tracking-tighter md:tracking-ultra-tight leading-[0.9] mb-12">
               CONSTRUÇÃO <br /> DE <span className="text-gradient">AUTORIDADE.</span>
             </h2>
             <p className="font-serif text-xl md:text-3xl text-brand-secondary italic leading-relaxed font-light max-w-2xl">

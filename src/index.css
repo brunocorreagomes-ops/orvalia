@@ -42,7 +42,7 @@
 
 @layer utilities {
   .responsive-title {
-    @apply text-5xl sm:text-6xl md:text-8xl lg:text-[11rem];
+    @apply text-4xl sm:text-6xl md:text-8xl lg:text-[11rem];
   }
   .responsive-subtitle {
     @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl;

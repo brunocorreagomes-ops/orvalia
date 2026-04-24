@@ -37,7 +37,7 @@ export default function Hero() {
             className="col-span-4 lg:col-span-8 flex flex-col justify-end"
           >
             <div className="relative">
-              <h1 className="responsive-title font-sans font-black leading-[0.85] tracking-ultra-tight text-white mb-10 flex flex-col">
+              <h1 className="responsive-title font-sans font-black leading-[0.85] tracking-tighter md:tracking-ultra-tight text-white mb-10 flex flex-col">
                 <span className="block">DESIGN</span>
                 <span className="block text-gradient">ESTRATÉGICO</span>
               </h1>

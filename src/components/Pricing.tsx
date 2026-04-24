@@ -41,7 +41,7 @@ export default function Pricing() {
               <div className="w-12 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Lógica de Investimento</span>
             </div>
-            <h2 className="responsive-subtitle font-sans font-black text-white tracking-ultra-tight leading-[0.85]">
+            <h2 className="responsive-subtitle font-sans font-black text-white tracking-tighter md:tracking-ultra-tight leading-[0.85]">
               ARQUITETURA <br /> <span className="italic font-serif font-light text-brand-secondary">DE VALOR.</span>
             </h2>
           </div>
