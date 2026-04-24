@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ChevronLeft, Check, Clock, RotateCcw, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ArrowRight, Globe, Code, Palette } from "lucide-react";
 
 export default function Hero() {

@@ -1,28 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
 import { MessageCircle, ChevronUp } from "lucide-react";
-
-function BackToTop() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  return (
-    <motion.button
-      onClick={scrollToTop}
-      aria-label="Voltar ao topo"
-      whileHover={{ y: -5 }}
-      whileTap={{ scale: 0.9 }}
-      className="fixed bottom-32 right-8 z-[200] bg-white text-brand-bg p-4 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-white/10 active:scale-95"
-    >
-      <ChevronUp size={22} />
-    </motion.button>
-  );
-}
 import Home from "./pages/Home";
 import Essencial from "./pages/Essencial";
 import Profissional from "./pages/Profissional";
@@ -41,6 +23,24 @@ import BlogIndex from "./pages/Blog/BlogIndex";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
+
+function BackToTop() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <motion.button
+      onClick={scrollToTop}
+      aria-label="Voltar ao topo"
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.9 }}
+      className="fixed bottom-32 right-8 z-[200] bg-white text-brand-bg p-4 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-white/10 active:scale-95"
+    >
+      <ChevronUp size={22} />
+    </motion.button>
+  );
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation();

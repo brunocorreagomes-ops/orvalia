@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ShieldCheck, Target, Zap } from "lucide-react";
 
 export default function Authority() {

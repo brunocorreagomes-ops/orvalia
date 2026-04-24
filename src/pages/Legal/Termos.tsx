@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
