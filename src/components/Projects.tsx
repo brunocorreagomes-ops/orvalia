@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -34,6 +39,71 @@ const projects = [
   }
 ];
 
+function ProjectCard({ project, idx }: { project: any; idx: number }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(imageRef.current, 
+        { yPercent: -10 },
+        { 
+          yPercent: 10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <motion.div
+      ref={containerRef}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className={`${project.span} group relative overflow-hidden rounded-[3rem] cursor-pointer bg-brand-bg/20`}
+    >
+      <motion.div 
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute inset-0"
+      >
+        <img 
+          ref={imageRef}
+          src={project.image} 
+          alt={project.title} 
+          className="absolute inset-0 w-full h-[120%] object-cover transition-all duration-1000 grayscale group-hover:grayscale-0 scale-110"
+        />
+        <div className="absolute inset-0 bg-brand-bg/40 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+      </motion.div>
+
+      <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
+        <div className="space-y-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-accent-light bg-brand-bg/80 backdrop-blur px-3 py-1 rounded-full border border-white/10">
+            {project.category}
+          </span>
+          <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+            {project.title}
+          </h3>
+        </div>
+        <div className="w-14 h-14 rounded-full glass-premium flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+          <ArrowUpRight className="text-brand-accent-light" size={24} />
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projetos" className="py-20 md:py-40 bg-brand-bg relative z-10">
@@ -64,42 +134,7 @@ export default function Projects() {
         {/* Asymmetric Grid */}
         <div className="dna-grid">
           {projects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className={`${project.span} group relative overflow-hidden rounded-[3rem] cursor-pointer`}
-            >
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0"
-              >
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-all duration-1000 grayscale group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 bg-brand-bg/40 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              </motion.div>
-
-              <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
-                <div className="space-y-2">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-accent-light bg-brand-bg/80 backdrop-blur px-3 py-1 rounded-full border border-white/10">
-                    {project.category}
-                  </span>
-                  <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
-                    {project.title}
-                  </h3>
-                </div>
-                <div className="w-14 h-14 rounded-full glass-premium flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  <ArrowUpRight className="text-brand-accent-light" size={24} />
-                </div>
-              </div>
-            </motion.div>
+            <ProjectCard key={idx} project={project} idx={idx} />
           ))}
         </div>
       </div>
