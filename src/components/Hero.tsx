@@ -31,15 +31,40 @@ export default function Hero() {
 
           {/* Main Headline Section */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.15,
+                  delayChildren: 0.2,
+                },
+              },
+            }}
             className="col-span-4 lg:col-span-8 flex flex-col justify-end"
           >
             <div className="relative">
               <h1 className="responsive-title font-sans font-black leading-[0.85] tracking-tighter md:tracking-ultra-tight text-white mb-10 flex flex-col">
-                <span className="block">DESIGN</span>
-                <span className="block text-gradient">ESTRATÉGICO</span>
+                <motion.span 
+                  variants={{
+                    hidden: { opacity: 0, y: 40 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+                  }}
+                  className="block"
+                >
+                  DESIGN
+                </motion.span>
+                <motion.span 
+                  variants={{
+                    hidden: { opacity: 0, y: 40 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+                  }}
+                  className="block text-gradient"
+                >
+                  ESTRATÉGICO
+                </motion.span>
               </h1>
               
               {/* Secondary Detail Floating */}

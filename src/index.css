@@ -46,13 +46,13 @@
 
 @layer utilities {
   .responsive-title {
-    @apply text-[11vw] sm:text-6xl md:text-8xl lg:text-[11rem];
+    @apply text-[clamp(2.5rem,11vw,11rem)] sm:text-6xl md:text-8xl lg:text-[11rem];
     word-break: normal;
     overflow-wrap: break-word;
     hyphens: auto;
   }
   .responsive-subtitle {
-    @apply text-[10vw] sm:text-5xl md:text-7xl lg:text-8xl;
+    @apply text-[clamp(2rem,10vw,8rem)] sm:text-5xl md:text-7xl lg:text-8xl;
     word-break: normal;
     overflow-wrap: break-word;
   }
