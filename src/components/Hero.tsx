@@ -1,9 +1,46 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Code, Palette } from "lucide-react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animação da Gota (Parallax)
+      gsap.to(".dewdrop-animation", {
+        yPercent: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.5,
+        }
+      });
+
+      // Animação sutil do Texto
+      gsap.to(".hero-content h1", {
+        yPercent: 15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        }
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-brand-bg">
+    <section ref={heroRef} className="hero-canvas relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-brand-bg">
       {/* Noise Overlay from DNA vibes */}
       <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
@@ -11,7 +48,11 @@ export default function Hero() {
       <div className="absolute top-0 right-0 w-[80vw] h-[80vw] bg-brand-accent-light/5 blur-[150px] -mr-[40vw] -mt-[40vw] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-brand-accent-dark/5 blur-[150px] -ml-[30vw] -mb-[30vw] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      {/* Dewdrop Element (GSAP Parallax) */}
+      <div className="dewdrop-animation absolute top-1/4 right-[10%] w-32 h-32 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-3xl opacity-20 pointer-events-none z-[1]" />
+      <div className="dewdrop-animation absolute bottom-1/4 left-[5%] w-20 h-20 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-brand-accent-light/10 to-transparent blur-2xl opacity-20 pointer-events-none z-[1]" />
+
+      <div className="container mx-auto px-6 relative z-10 hero-content">
         <div className="dna-grid">
           {/* Top Detail Section */}
           <motion.div 
