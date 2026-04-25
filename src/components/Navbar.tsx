@@ -32,7 +32,7 @@ export default function Navbar() {
         isScrolled || isMenuOpen ? "py-6 bg-brand-bg/90 backdrop-blur-xl border-b border-white/[0.03]" : "py-10 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center relative z-[110]">
         {/* Logo Section - Minimalist DNA */}
         <Link to="/" className="group flex items-center gap-4 relative">
           <div className="relative overflow-hidden">
@@ -101,10 +101,11 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden w-10 h-10 flex items-center justify-center text-white"
+          className="lg:hidden w-12 h-12 flex items-center justify-center text-white relative z-[120]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 

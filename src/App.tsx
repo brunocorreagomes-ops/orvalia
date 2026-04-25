@@ -76,9 +76,49 @@ function JSONLD() {
         "areaServed": [
           { "@type": "City", "name": "Indaiatuba" },
           { "@type": "City", "name": "Campinas" },
+          { "@type": "City", "name": "Salto" },
+          { "@type": "City", "name": "Itu" },
           { "@type": "State", "name": "RMC" }
         ],
-        "description": "Agência especializada em branding estratégico, criação de sites de alta performance e design para empresas em Indaiatuba, Campinas e região."
+        "description": "Agência especializada em branding estratégico, criação de sites de alta performance e design para empresas em Indaiatuba, Campinas e região.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços Digitais",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Criação de Sites em Indaiatuba",
+                "description": "Desenvolvimento de websites de alta performance, rápidos e focados em conversão."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Branding e Identidade Visual",
+                "description": "Construção de marcas fortes e posicionamento de elite para empresas."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO - Otimização para Buscas",
+                "description": "Estratégias para colocar seu negócio no topo do Google em Indaiatuba e região."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Landing Pages de Alta Conversão",
+                "description": "Páginas de vendas otimizadas para tráfego pago e captação de leads."
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "WebSite",
