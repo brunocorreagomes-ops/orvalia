@@ -48,7 +48,7 @@ function JSONLD() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://orvalia.com/#localbusiness",
+        "@id": "https://orvalia.com.br/#localbusiness",
         "name": "Orvalia - Branding & Websites",
         "image": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/logo.png",
         "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
@@ -82,10 +82,10 @@ function JSONLD() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://orvalia.com/#website",
+        "@id": "https://orvalia.com.br/#website",
         "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
         "name": "Orvalia Studio",
-        "publisher": { "@id": "https://orvalia.com/#localbusiness" }
+        "publisher": { "@id": "https://orvalia.com.br/#localbusiness" }
       },
       {
         "@type": "FAQPage",

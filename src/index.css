@@ -46,15 +46,15 @@
 
 @layer utilities {
   .responsive-title {
-    @apply text-[clamp(2.5rem,11vw,11rem)] sm:text-6xl md:text-8xl lg:text-[11rem];
+    @apply text-[clamp(1.75rem,8vw,9rem)] sm:text-6xl md:text-8xl lg:text-9xl;
     word-break: normal;
     overflow-wrap: break-word;
-    hyphens: auto;
   }
   .responsive-subtitle {
-    @apply text-[clamp(2rem,10vw,8rem)] sm:text-5xl md:text-7xl lg:text-8xl;
+    @apply text-[clamp(1.75rem,7vw,7rem)] sm:text-5xl md:text-7xl lg:text-8xl;
     word-break: normal;
     overflow-wrap: break-word;
+    line-height: 1;
   }
 
   .no-scrollbar::-webkit-scrollbar {

@@ -48,7 +48,7 @@ export default function SitesEstrategicos() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="dna-grid gap-12 items-center">
-            <div className="col-span-4 lg:col-span-8">
+            <div className="col-span-4 lg:col-span-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function SitesEstrategicos() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-6 block">
                   Indaiatuba · RMC Campinas
                 </span>
-                <h1 className="responsive-title font-sans font-black text-white leading-[0.85] tracking-ultra-tight uppercase mb-8">
+                <h1 className="responsive-title font-sans font-black text-white leading-[1.1] md:leading-[0.95] tracking-tight md:tracking-tighter uppercase mb-8">
                   Se o seu site não gera clientes, <br />
                   ele está <span className="text-gradient">custando dinheiro.</span>
                 </h1>

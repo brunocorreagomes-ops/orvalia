@@ -79,47 +79,59 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8 }}
-      className={`${project.span} group relative overflow-hidden rounded-[3rem] cursor-pointer bg-brand-bg/20`}
+      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      className={`${project.span} group relative overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] cursor-pointer bg-brand-bg/20 border border-white/5 transition-all duration-700 hover:border-brand-accent-light/30`}
     >
-      <motion.div 
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0"
-      >
+      <div className="absolute inset-0 z-0 scale-110 transition-transform duration-1000 group-hover:scale-100">
         <img 
           ref={imageRef}
           src={project.image} 
           alt={project.title} 
-          className="absolute inset-0 w-full h-[120%] object-cover transition-all duration-1000 grayscale group-hover:grayscale-0 scale-110"
+          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-50 group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-1000"
         />
-        <div className="absolute inset-0 bg-brand-bg/40 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-      </motion.div>
+        <div className="absolute inset-0 bg-brand-bg/60 mix-blend-multiply group-hover:bg-brand-bg/20 transition-all duration-700" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/20 to-transparent" />
+      </div>
 
-      <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
-        <div className="space-y-3">
-          <div className="flex gap-2 items-center">
-            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-accent-light bg-brand-bg/80 backdrop-blur px-3 py-1 rounded-full border border-white/10">
+      <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between z-10">
+        <div className="flex justify-between items-start">
+          <div className="flex flex-col gap-2">
+            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-secondary/60 group-hover:text-brand-accent-light transition-colors">
               {project.category}
             </span>
-            {project.location && (
-              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/40 bg-white/5 backdrop-blur px-3 py-1 rounded-full border border-white/5">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
+              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/40">
                 {project.location}
               </span>
-            )}
+            </div>
           </div>
-          <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
-            {project.title}
-          </h3>
-          {project.metric && (
-            <p className="text-brand-accent-light font-mono text-[10px] uppercase tracking-widest bg-brand-accent-light/10 inline-block px-3 py-1 rounded-md">
-              {project.metric}
-            </p>
-          )}
+          <div className="w-12 h-12 rounded-2xl glass-premium border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+            <ArrowUpRight className="text-brand-accent-light" size={20} />
+          </div>
         </div>
-        <div className="w-14 h-14 rounded-full glass-premium flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-          <ArrowUpRight className="text-brand-accent-light" size={24} />
+
+        <div className="space-y-6">
+          <h3 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase leading-[0.9]">
+            {project.title.split(' ')[0]} <br />
+            <span className="text-white/40 group-hover:text-white transition-colors">
+              {project.title.split(' ').slice(1).join(' ')}
+            </span>
+          </h3>
+          
+          <div className="flex flex-wrap gap-4 items-center pt-6 border-t border-white/5">
+            {project.metric && (
+              <div className="flex items-center gap-3 bg-brand-accent-light/10 backdrop-blur px-5 py-2.5 rounded-2xl border border-brand-accent-light/20">
+                <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />
+                <span className="text-brand-accent-light font-black text-sm md:text-base uppercase tracking-tighter">
+                  {project.metric}
+                </span>
+              </div>
+            )}
+            <div className="hidden md:flex px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-white/20 uppercase tracking-widest">
+              Performance Otimizada
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>

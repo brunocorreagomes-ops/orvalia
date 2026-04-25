@@ -73,11 +73,11 @@ export default function AgenciaIndaiatuba() {
                   </li>
                   <li className="flex items-center gap-4 text-white">
                     <Mail className="text-brand-accent-light" size={20} />
-                    <span className="text-xl opacity-80">contato@orvalia.com</span>
+                    <span className="text-xl opacity-80">orvaliastudio@gmail.com</span>
                   </li>
                   <li className="flex items-center gap-4 text-white">
                     <Globe className="text-brand-accent-light" size={20} />
-                    <span className="text-xl opacity-80">www.orvalia.com</span>
+                    <span className="text-xl opacity-80">www.orvalia.com.br</span>
                   </li>
                 </ul>
               </div>
