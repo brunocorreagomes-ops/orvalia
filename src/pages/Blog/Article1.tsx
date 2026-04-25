@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ArrowRight, ChevronRight } from "lucide-react";
 
 export default function Article1() {
   return (
@@ -62,14 +62,43 @@ export default function Article1() {
         </div>
 
         <footer className="mt-20 pt-10 border-t border-white/5">
-          <div className="p-12 rounded-[2.5rem] glass-premium border border-brand-accent-light/20 text-center">
+          <div className="p-12 rounded-[2.5rem] glass-premium border border-brand-accent-light/20 text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">Pronto para transformar sua marca em Indaiatuba?</h3>
             <a 
               href="https://wa.me/5511978959567" 
-              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all"
+              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_20px_rgba(25,211,101,0.2)]"
             >
               Falar com um Especialista <ArrowRight size={18} />
             </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="w-full sm:w-auto opacity-40 cursor-not-allowed">
+              <div className="flex items-center gap-4 p-6 rounded-3xl border border-white/5 bg-white/5 transition-all">
+                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0">
+                  <ChevronLeft size={20} className="text-white" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-brand-accent-light block mb-1">Anterior</span>
+                  <span className="text-sm font-bold text-white line-clamp-1">Início do Blog</span>
+                </div>
+              </div>
+            </div>
+
+            <Link 
+              to="/blog/identidade-visual-precos" 
+              className="w-full sm:w-auto group"
+            >
+              <div className="flex items-center justify-end gap-4 p-6 rounded-3xl border border-white/5 bg-white/5 hover:border-brand-accent-light/30 hover:bg-brand-accent-light/[0.02] transition-all">
+                <div className="text-right">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-brand-accent-light block mb-1">Próximo</span>
+                  <span className="text-sm font-bold text-white line-clamp-1 group-hover:text-brand-accent-light transition-colors">Preços de Identidade Visual</span>
+                </div>
+                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center translate-x-0 group-hover:translate-x-1 group-hover:border-brand-accent-light/50 transition-all shrink-0">
+                  <ChevronRight size={20} className="text-white group-hover:text-brand-accent-light" />
+                </div>
+              </div>
+            </Link>
           </div>
         </footer>
       </div>

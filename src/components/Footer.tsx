@@ -23,13 +23,21 @@ export default function Footer() {
                 { name: "Metodologia", href: "/#processo" },
                 { name: "Serviços", href: "/#servicos" },
                 { name: "Planos", href: "/#precos" },
-                { name: "Blog", href: "/blog" }
+                { name: "Blog", href: "/blog" },
+                { name: "Filial Indaiatuba", href: "/agencia-indaiatuba", isLink: true }
               ].map(item => (
                 <li key={item.name}>
-                  <a href={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
-                    {item.name}
-                    <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  {item.isLink ? (
+                    <Link to={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
+                      {item.name}
+                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  ) : (
+                    <a href={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
+                      {item.name}
+                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

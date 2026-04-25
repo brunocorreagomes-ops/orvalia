@@ -23,6 +23,83 @@ import BlogIndex from "./pages/Blog/BlogIndex";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
+import AgenciaIndaiatuba from "./pages/AgenciaIndaiatuba";
+
+function JSONLD() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://orvalia.com/#localbusiness",
+        "name": "Orvalia - Branding & Websites",
+        "image": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/logo.png",
+        "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
+        "telephone": "+55 11 97895-9567",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Pres. Kennedy",
+          "addressLocality": "Indaiatuba",
+          "postalCode": "13334-170",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -23.0898,
+          "longitude": -47.2185
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Indaiatuba" },
+          { "@type": "City", "name": "Campinas" },
+          { "@type": "State", "name": "RMC" }
+        ],
+        "description": "Agência especializada em branding estratégico, criação de sites de alta performance e design para empresas em Indaiatuba, Campinas e região."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://orvalia.com/#website",
+        "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
+        "name": "Orvalia Studio",
+        "publisher": { "@id": "https://orvalia.com/#localbusiness" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual o valor de um projeto de branding em Indaiatuba?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os projetos de branding na Orvalia são personalizados conforme a necessidade da empresa, focando em posicionamento premium e conversão. Entre em contato para um diagnóstico gratuito."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A Orvalia cria sites profissionais em Campinas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, atendemos toda a RMC Campinas e Indaiatuba com criação de sites otimizados para SEO e alta conversão."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
+  return (
+    <script type="application/ld+json">
+      {JSON.stringify(schema)}
+    </script>
+  );
+}
 
 function BackToTop() {
   const scrollToTop = () => {
@@ -64,6 +141,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
+      <JSONLD />
       <ScrollToTop />
       <main className="relative bg-brand-bg text-brand-text">
         {/* Global Features */}
@@ -108,6 +186,7 @@ export default function App() {
           <Route path="/termos" element={<Termos />} />
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/cookies" element={<Cookies />} />
+          <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
         </Routes>
 
         <Footer />

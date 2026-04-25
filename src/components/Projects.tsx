@@ -10,30 +10,40 @@ const projects = [
   {
     title: "Beth Olmeda",
     category: "Branding • Estética",
+    metric: "280% de crescimento no tráfego em 60 dias",
+    location: "Indaiatuba/SP",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
     span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
   },
   {
     title: "Marta Ana Chiconato",
     category: "Estratégia • Terapia",
+    metric: "Posicionamento premium consolidado",
+    location: "Campinas/SP",
     image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
     span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
   {
     title: "Quinta de Caraíva",
     category: "Web • Experiência",
+    metric: "Arquitetura de reservas otimizada",
+    location: "Bahia/BR",
     image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
     span: "col-span-4 lg:col-span-6 h-[400px] md:h-[500px]"
   },
   {
     title: "Dario Eletricidade",
     category: "Marketing • Digital",
+    metric: "+150% em conversão de leads",
+    location: "Indaiatuba/SP",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
     span: "col-span-4 lg:col-span-7 h-[500px] md:h-[600px]"
   },
   {
     title: "KNJ TUR",
     category: "Interface • Estratégia",
+    metric: "Redesign de plataforma global",
+    location: "São Paulo/BR",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
     span: "col-span-4 lg:col-span-5 h-[350px] md:h-[400px]"
   }
@@ -88,13 +98,25 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
       </motion.div>
 
       <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
-        <div className="space-y-2">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-accent-light bg-brand-bg/80 backdrop-blur px-3 py-1 rounded-full border border-white/10">
-            {project.category}
-          </span>
+        <div className="space-y-3">
+          <div className="flex gap-2 items-center">
+            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-accent-light bg-brand-bg/80 backdrop-blur px-3 py-1 rounded-full border border-white/10">
+              {project.category}
+            </span>
+            {project.location && (
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/40 bg-white/5 backdrop-blur px-3 py-1 rounded-full border border-white/5">
+                {project.location}
+              </span>
+            )}
+          </div>
           <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
             {project.title}
           </h3>
+          {project.metric && (
+            <p className="text-brand-accent-light font-mono text-[10px] uppercase tracking-widest bg-brand-accent-light/10 inline-block px-3 py-1 rounded-md">
+              {project.metric}
+            </p>
+          )}
         </div>
         <div className="w-14 h-14 rounded-full glass-premium flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
           <ArrowUpRight className="text-brand-accent-light" size={24} />

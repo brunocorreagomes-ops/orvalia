@@ -63,10 +63,10 @@ export default function Hero() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Arquitetura de Estúdio</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Branding Estratégico em Indaiatuba & RMC</span>
             </div>
             <p className="font-serif text-xl md:text-2xl text-brand-secondary leading-relaxed italic font-light">
-              Elevando o design para um padrão <span className="text-white not-italic font-medium">high-tech</span> e autoridade digital em Indaiatuba.
+              A Orvalia é a agência de branding e websites de Indaiatuba e RMC. <span className="text-white not-italic font-medium">Transformamos negócios</span> em marcas que dominam o digital.
             </p>
           </motion.div>
 
@@ -125,27 +125,31 @@ export default function Hero() {
           {/* Bottom Action Section */}
           <div className="col-span-4 lg:col-span-12 mt-20 md:mt-32 dna-grid">
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="col-span-4 lg:col-span-6 flex flex-col md:flex-row gap-8 items-center"
             >
               <a 
-                href="#projetos"
-                className="group relative flex items-center gap-6 px-10 py-6 bg-transparent overflow-hidden rounded-full border border-white/20 transition-all hover:border-brand-accent-light"
+                href="https://wa.me/5511978959567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-6 px-12 py-7 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_40px_rgba(0,255,209,0.4)] hover:scale-105 active:scale-95"
               >
-                <div className="absolute inset-0 bg-brand-accent-light opacity-0 group-hover:opacity-1 group-hover:scale-110 transition-all duration-500" />
-                <span className="relative font-sans text-sm font-black uppercase tracking-[0.2em] text-white">Saber Mais</span>
-                <ArrowRight className="text-brand-accent-light group-hover:translate-x-2 transition-transform" size={20} />
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                <span className="relative font-sans text-sm font-black uppercase tracking-[0.2em] text-brand-bg">Diagnóstico Gratuito</span>
+                <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
               </a>
 
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-bg bg-brand-accent-light/20 backdrop-blur-sm" />
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-bg bg-brand-accent-light/20 backdrop-blur-sm overflow-hidden">
+                     <img src={`https://i.pravatar.cc/100?u=${i + 20}`} alt="User" className="w-full h-full object-cover grayscale" />
+                  </div>
                 ))}
-                <div className="pl-6 flex flex-col justify-center">
-                  <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest">Índice de Confiança</span>
-                  <span className="text-xs text-white font-medium">+150 Projetos</span>
+                <div className="pl-8 flex flex-col justify-center">
+                  <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Digital</span>
+                  <span className="text-xs text-white font-medium">+50 Projetos Locais</span>
                 </div>
               </div>
             </motion.div>
@@ -169,7 +173,7 @@ export default function Hero() {
                 </div>
                 <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 <p className="text-xs font-mono text-brand-secondary/60 text-right uppercase tracking-[0.2em]">
-                  [ Orvalia Studio ] indaiatuba — sp
+                  [ Orvalia Agency ] indaiatuba — rmc
                 </p>
               </div>
             </motion.div>

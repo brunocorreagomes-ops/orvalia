@@ -4,6 +4,7 @@ import Authority from "../components/Authority";
 import Process from "../components/Process";
 import Services from "../components/Services";
 import Pricing from "../components/Pricing";
+import FAQ from "../components/FAQ";
 import CTA from "../components/CTA";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Process />
       <Services />
       <Pricing />
+      <FAQ />
       <CTA />
     </>
   );
