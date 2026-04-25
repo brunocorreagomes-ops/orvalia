@@ -25,6 +25,22 @@ import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
 import AgenciaIndaiatuba from "./pages/AgenciaIndaiatuba";
 import SitesEstrategicos from "./pages/SitesEstrategicos";
+import MarketingLandingPage from "./pages/MarketingLandingPage";
+
+function NotFound() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-brand-bg text-white p-6 pt-32">
+      <div className="text-center">
+        <h1 className="text-9xl font-black text-brand-accent-light opacity-20 mb-8">404</h1>
+        <h2 className="text-4xl font-black uppercase tracking-tighter mb-4">Página não encontrada</h2>
+        <p className="text-brand-secondary mb-8">O destino que você procura não existe ou foi movido.</p>
+        <Link to="/" className="px-10 py-4 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs">
+          Voltar ao Início
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 function JSONLD() {
   const schema = {
@@ -189,6 +205,8 @@ export default function App() {
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
           <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
+          <Route path="/solucoes/:slug" element={<MarketingLandingPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

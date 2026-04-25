@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { marketingPages } from "../data/marketingPages";
 
 export default function Footer() {
   return (
     <footer className="py-20 md:py-40 bg-brand-bg relative overflow-hidden border-t border-white/[0.03]">
       <div className="container mx-auto px-6">
         <div className="dna-grid mb-24">
-          <div className="col-span-4 lg:col-span-6">
+          <div className="col-span-4 lg:col-span-4">
             <Link to="/" className="text-3xl font-black tracking-super-tight text-white inline-block mb-12 uppercase">
               ORVALIA
             </Link>
@@ -24,8 +25,7 @@ export default function Footer() {
                 { name: "Serviços", href: "/#servicos" },
                 { name: "Planos", href: "/#precos" },
                 { name: "Blog", href: "/blog" },
-                { name: "Filial Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
-                { name: "Sites Estratégicos", href: "/sites-estrategicos", isLink: true }
+                { name: "Agência Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
               ].map(item => (
                 <li key={item.name}>
                   {item.isLink ? (
@@ -45,6 +45,19 @@ export default function Footer() {
           </div>
 
           <div className="col-span-2 lg:col-span-3">
+             <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Soluções</h4>
+             <ul className="space-y-6">
+              {marketingPages.slice(0, 5).map(page => (
+                <li key={page.slug}>
+                  <Link to={`/solucoes/${page.slug}`} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors">
+                    {page.title.split(' em ')[0]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="col-span-2 lg:col-span-2">
              <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Governança</h4>
              <ul className="space-y-6">
               {[
