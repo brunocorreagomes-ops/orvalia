@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: "Planos", href: "/#precos", id: "04" },
     { name: "Blog", href: "/blog", id: "05", isLink: true },
     { name: "Indaiatuba", href: "/agencia-indaiatuba", id: "06", isLink: true },
+    { name: "Performance", href: "/sites-estrategicos", id: "07", isLink: true },
   ];
 
   return (

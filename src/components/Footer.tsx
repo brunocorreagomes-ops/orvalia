@@ -24,7 +24,8 @@ export default function Footer() {
                 { name: "Serviços", href: "/#servicos" },
                 { name: "Planos", href: "/#precos" },
                 { name: "Blog", href: "/blog" },
-                { name: "Filial Indaiatuba", href: "/agencia-indaiatuba", isLink: true }
+                { name: "Filial Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
+                { name: "Sites Estratégicos", href: "/sites-estrategicos", isLink: true }
               ].map(item => (
                 <li key={item.name}>
                   {item.isLink ? (

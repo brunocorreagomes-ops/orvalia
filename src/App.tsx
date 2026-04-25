@@ -24,6 +24,7 @@ import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
 import AgenciaIndaiatuba from "./pages/AgenciaIndaiatuba";
+import SitesEstrategicos from "./pages/SitesEstrategicos";
 
 function JSONLD() {
   const schema = {
@@ -187,6 +188,7 @@ export default function App() {
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
+          <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
         </Routes>
 
         <Footer />
