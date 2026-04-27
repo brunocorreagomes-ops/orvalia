@@ -40,17 +40,32 @@ export default function AgenciaIndaiatuba() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Presença Local</span>
               </div>
               <h1 className="responsive-title font-sans font-black text-white leading-[0.85] tracking-ultra-tight uppercase mb-8">
-                Agência de Sites e <br /> <span className="text-gradient">Branding em Indaiatuba</span>
+                Agência de Branding e <br /> <span className="text-gradient">Sites em Indaiatuba</span>
               </h1>
-              <p className="font-serif text-2xl text-brand-secondary italic leading-relaxed max-w-2xl">
-                Elevando o padrão digital das empresas e profissionais de Indaiatuba com design estratégico e alta performance.
+              <p className="font-serif text-2xl text-brand-secondary italic leading-relaxed max-w-2xl mb-10">
+                A Orvalia Studio transforma marcas de Indaiatuba e da RMC em referências no mercado. Identidade visual, sites de alta performance e social media com padrão de elite.
               </p>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <a 
+                  href="https://wa.me/5511978959567"
+                  className="px-10 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-accent-light/20 flex items-center justify-center gap-3"
+                >
+                  Solicitar Diagnóstico Gratuito
+                  <ArrowUpRight size={18} />
+                </a>
+                <a 
+                   href="#mapa"
+                   className="px-10 py-6 border border-white/10 text-white rounded-full font-black text-xs uppercase tracking-widest transition-all hover:bg-white/5 flex items-center justify-center gap-3"
+                >
+                   Diagnóstico Presencial
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
 
         {/* Contact info & Map */}
-        <section className="py-20 border-t border-white/5">
+        <section id="mapa" className="py-20 border-t border-white/5">
           <div className="dna-grid gap-12">
             <div className="col-span-4 lg:col-span-5 space-y-12">
               <div>
@@ -140,6 +155,62 @@ export default function AgenciaIndaiatuba() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* Local FAQ Section */}
+        <section className="py-20 border-t border-white/5">
+          <div className="dna-grid mb-16">
+            <div className="col-span-4 lg:col-span-8">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-4">Dúvidas Frequentes</h3>
+              <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase mb-8">
+                SEO & Branding <br /> <span className="italic font-serif font-light text-brand-secondary">EM INDAIATUBA.</span>
+              </h2>
+              <div className="space-y-12 mt-16 text-left">
+                {[
+                  {
+                    q: "Por que escolher uma agência de branding local em Indaiatuba?",
+                    a: "Ter uma agência local facilita o alinhamento estratégico, reuniões presenciais periódicas e um entendimento profundo do comportamento do consumidor na Região Metropolitana de Campinas (RMC)."
+                  },
+                  {
+                    q: "Como minha empresa pode aparecer no Google em Indaiatuba?",
+                    a: "Utilizamos técnicas avançadas de SEO Local e GEO (Generative Engine Optimization). Otimizamos seu Google Meu Negócio e criamos sites com arquitetura semântica que o Google e as IAs adoram."
+                  },
+                  {
+                    q: "Qual o benefício de um site de alta performance para meu negócio?",
+                    a: "Sites rápidos e otimizados convertem até 4x mais. Em mercados competitivos como Indaiatuba e Campinas, a velocidade e a clareza da oferta são os principais diferenciais entre um lead e um clique perdido."
+                  },
+                  {
+                    q: "Quanto tempo leva para ver resultados com branding e SEO?",
+                    a: "O branding tem impacto imediato na percepção de valor. Já o SEO é um trabalho de médio prazo, mas com as nossas técnicas de GEO e otimização local, muitas empresas começam a notar aumento relevante de tráfego e leads qualificados entre os primeiros 60 a 90 dias."
+                  },
+                  {
+                    q: "A Orvalia Studio atende outros municípios além de Indaiatuba?",
+                    a: "Sim, somos uma agência com DNA regional forte. Atendemos com excelência empresas em Campinas, Salto, Itu, Americana e toda a Região Metropolitana de Campinas (RMC), além de projetos selecionados em todo o Brasil."
+                  }
+                ].map((faq, idx) => (
+                  <div key={idx} className="group">
+                    <h4 className="text-xl font-black text-white uppercase tracking-tight mb-4 group-hover:text-brand-accent-light transition-colors">{faq.q}</h4>
+                    <p className="text-brand-secondary text-lg leading-relaxed italic">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="col-span-4 lg:col-span-4 flex flex-col justify-center items-center lg:items-end p-8 glass-premium rounded-[3rem] border border-white/5 h-fit mt-12 lg:mt-32">
+              <div className="flex gap-2 mb-4">
+                 {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 bg-yellow-400 rounded-sm" />)}
+              </div>
+              <p className="text-white font-black text-xl mb-2">5.0 no Google</p>
+              <p className="text-brand-secondary text-[10px] font-mono uppercase tracking-[0.2em] text-center lg:text-right">Orvalia Studio — Atendimento de Excelência em Indaiatuba</p>
+              <a 
+                href="https://g.page/r/YOUR_GMB_LINK" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-8 text-brand-accent-light font-mono text-[10px] uppercase tracking-widest border-b border-brand-accent-light/30 pb-1"
+              >
+                Ver Avaliações Reais
+              </a>
+            </div>
           </div>
         </section>
       </div>

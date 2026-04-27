@@ -13,11 +13,11 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       // Animação da Gota (Parallax)
       gsap.to(".dewdrop-animation", {
-        yPercent: -30,
+        yPercent: -15,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
-          start: "top top",
+          start: "top+=50px center",
           end: "bottom top",
           scrub: 1.5,
         }
@@ -88,7 +88,7 @@ export default function Hero() {
             className="col-span-4 lg:col-span-12 flex flex-col items-center text-center"
           >
             <div className="relative w-full overflow-visible py-4">
-              <h1 className="responsive-title font-sans font-black leading-[1.1] md:leading-[0.95] tracking-tight md:tracking-tighter text-white mb-10 flex flex-col items-center">
+              <h1 className="text-4xl md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.1] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-10 flex flex-col items-center uppercase">
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 40 },
@@ -96,7 +96,7 @@ export default function Hero() {
                   }}
                   className="block relative"
                 >
-                  DESIGN
+                  Branding e Comunicação
                 </motion.span>
                 <motion.span 
                   variants={{
@@ -105,7 +105,7 @@ export default function Hero() {
                   }}
                   className="block text-gradient relative py-4"
                 >
-                  ESTRATÉGICO
+                  Estratégica em Indaiatuba
                 </motion.span>
               </h1>
             </div>
@@ -120,16 +120,25 @@ export default function Hero() {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col md:flex-row gap-12 items-center justify-center w-full"
               >
-                <a 
-                  href="https://wa.me/5511978959567"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_60px_rgba(0,255,209,0.5)] hover:scale-105 active:scale-95 z-20"
-                >
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                  <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
-                  <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={24} />
-                </a>
+                <div className="flex flex-col sm:flex-row gap-6 items-center">
+                  <a 
+                    href="https://wa.me/5511978959567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_60px_rgba(0,255,209,0.5)] hover:scale-105 active:scale-95 z-20"
+                  >
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                    <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
+                    <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={24} />
+                  </a>
+                  
+                  <a 
+                    href="#projetos"
+                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:bg-white/5 transition-all"
+                  >
+                    Ver cases locais
+                  </a>
+                </div>
 
                 <div className="flex -space-x-4 items-center">
                   <div className="flex -space-x-3">
@@ -139,32 +148,60 @@ export default function Hero() {
                       </div>
                     ))}
                   </div>
-                  <div className="pl-8 flex flex-col justify-center border-l border-white/10 ml-4">
-                    <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Digital</span>
-                    <span className="text-xs text-white font-medium">+50 Projetos Locais</span>
+                  <div className="pl-8 flex flex-col justify-center border-l border-white/10 ml-4 text-left">
+                    <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Regional</span>
+                    <span className="text-xs text-white font-medium">Campinas, Americana, Itu e RMC</span>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8 }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.1,
+                      delayChildren: 0.8
+                    }
+                  }
+                }}
                 className="flex flex-col items-center gap-8"
               >
                 <div className="flex gap-16 items-center">
-                  <div className="flex flex-col items-center gap-2">
+                  <motion.div 
+                    variants={{
+                      hidden: { opacity: 0, y: 15 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                    }}
+                    className="flex flex-col items-center gap-2"
+                  >
                     <Palette className="text-brand-accent-light" size={20} />
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">DNA DO DESIGN</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
+                  </motion.div>
+                  <motion.div 
+                    variants={{
+                      hidden: { opacity: 0, y: 15 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                    }}
+                    className="flex flex-col items-center gap-2"
+                  >
                     <Globe className="text-brand-accent-light" size={20} />
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">ESTRATÉGIA GEO</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
+                  </motion.div>
+                  <motion.div 
+                    variants={{
+                      hidden: { opacity: 0, y: 15 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                    }}
+                    className="flex flex-col items-center gap-2"
+                  >
                     <Code className="text-brand-accent-dark" size={20} />
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">ARQ DE CÓDIGO</span>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="h-[1px] w-64 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 <p className="text-[10px] font-mono text-brand-secondary/60 uppercase tracking-[0.3em]">

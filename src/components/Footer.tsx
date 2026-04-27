@@ -76,20 +76,22 @@ export default function Footer() {
         </div>
 
         <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12">
-            <div className="flex items-center gap-6">
-               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO ARCHITECTURE</span>
-               <div className="w-[1px] h-4 bg-white/5" />
-               <span className="font-mono text-[8px] text-brand-secondary/40">INDAIATUBA • BR</span>
+            <div className="flex flex-col md:flex-row items-center gap-6">
+               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO — DESIGN & ESTRATÉGIA</span>
+               <div className="hidden md:block w-[1px] h-4 bg-white/5" />
+               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-widest leading-relaxed text-center">
+                 Indaiatuba, SP — Região Metropolitana de Campinas
+               </span>
             </div>
             <div className="flex gap-16">
                <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[7px] text-brand-accent-light">FUSO HORÁRIO</span>
-                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">GMT-3</span>
+                  <span className="font-mono text-[7px] text-brand-accent-light">BASE</span>
+                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">Indaiatuba</span>
                </div>
                <div className="flex flex-col gap-2">
                   <span className="font-mono text-[7px] text-brand-accent-light">STATUS</span>
                   <span className="text-[10px] text-white font-bold tracking-widest uppercase flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light animate-pulse" />
                     Operacional
                   </span>
                </div>

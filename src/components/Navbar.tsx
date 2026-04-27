@@ -16,70 +16,81 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+
   const navLinks = [
-    { name: "Projetos", href: "/#projetos", id: "01" },
-    { name: "Metodologia", href: "/#processo", id: "02" },
-    { name: "Serviços", href: "/#servicos", id: "03" },
-    { name: "Planos", href: "/#precos", id: "04" },
-    { name: "Blog", href: "/blog", id: "05", isLink: true },
-    { name: "Indaiatuba", href: "/agencia-indaiatuba", id: "06", isLink: true },
-    { name: "Performance", href: "/sites-estrategicos", id: "07", isLink: true },
+    { name: "Cases", href: "/#projetos", id: "01" },
+    { name: "Indaiatuba", href: "/agencia-indaiatuba", id: "02", isLink: true },
+    { name: "Sites", href: "/sites-estrategicos", id: "03", isLink: true },
+    { name: "Serviços", href: "/#servicos", id: "04" },
+    { name: "Planos", href: "/#planos-mensais", id: "05" },
+    { name: "Blog", href: "/blog", id: "06", isLink: true },
   ];
 
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        isScrolled || isMenuOpen ? "py-6 bg-brand-bg/90 backdrop-blur-xl border-b border-white/[0.03]" : "py-10 bg-transparent"
+        isMenuOpen 
+          ? "py-5 bg-brand-bg border-b border-white/[0.08]" 
+          : isScrolled 
+            ? "py-5 bg-brand-bg/95 backdrop-blur-2xl border-b border-white/[0.05]" 
+            : "py-8 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center relative z-[110]">
         {/* Logo Section - Minimalist DNA */}
-        <Link to="/" className="group flex items-center gap-4 relative">
+        <Link to="/" className="group flex items-center gap-4 relative" onClick={() => setIsMenuOpen(false)}>
           <div className="relative overflow-hidden">
-             <span className="text-xl font-black tracking-super-tight text-white block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
+             <span className="text-xl md:text-2xl font-black tracking-ultra-tight text-white block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
                ORVALIA
              </span>
-             <span className="absolute top-full left-0 text-xl font-black tracking-super-tight text-brand-accent-light block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
+             <span className="absolute top-full left-0 text-xl md:text-2xl font-black tracking-ultra-tight text-brand-accent-light block group-hover:-translate-y-full transition-transform duration-500 ease-in-out">
                ORVALIA
              </span>
           </div>
-          <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
-          <span className="hidden md:block font-mono text-[9px] uppercase tracking-[0.3em] text-brand-secondary/40">Estúdio • Arq</span>
+          <div className="h-4 w-[1px] bg-white/20 hidden md:block" />
+          <span className="hidden md:block font-mono text-[8px] uppercase tracking-[0.4em] text-brand-accent-light">DNA ESTRATÉGICO</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-16">
-          <div className="flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-12">
+          <div className="flex items-center gap-8">
             {navLinks.map((link) => (
               <motion.div 
                 key={link.name}
                 className="group relative"
-                whileHover={{ y: -2 }}
               >
-                <div className="flex flex-col items-center">
-                  <span className="font-mono text-[7px] text-brand-accent-light/40 group-hover:text-brand-accent-light transition-colors mb-1">
+                <div className="flex flex-col items-start">
+                  <span className="font-mono text-[7px] text-brand-accent-light/30 group-hover:text-brand-accent-light/60 transition-colors mb-0.5 ml-0.5">
                     {link.id}
                   </span>
                   {link.isLink ? (
                     <Link 
                       to={link.href}
-                      className={`text-xs font-black uppercase tracking-[0.2em] transition-all relative ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary hover:text-white'}`}
+                      aria-current={pathname === link.href ? "page" : undefined}
+                      className={`text-[11px] font-black uppercase tracking-[0.2em] transition-all relative pb-1 ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary/80 hover:text-white'}`}
                     >
                       {link.name}
                       {pathname === link.href && (
                         <motion.div 
                           layoutId="nav-active"
-                          className="absolute -bottom-2 left-0 right-0 h-[2px] bg-brand-accent-light rounded-full"
+                          className="absolute bottom-0 left-0 right-0 h-[1px] bg-brand-accent-light"
                         />
                       )}
                     </Link>
                   ) : (
                     <a 
                       href={link.href}
-                      className="text-xs font-black uppercase tracking-[0.2em] text-brand-secondary hover:text-white transition-all relative"
+                      className="text-[11px] font-black uppercase tracking-[0.2em] text-brand-secondary/80 hover:text-white transition-all relative pb-1 group"
                     >
                       {link.name}
-                      <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-brand-accent-light rounded-full group-hover:w-full transition-all duration-300" />
+                      <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-brand-accent-light transition-all duration-500 group-hover:w-full" />
                     </a>
                   )}
                 </div>
@@ -91,22 +102,30 @@ export default function Navbar() {
             href="https://wa.me/5511978959567"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-white text-brand-bg rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:bg-brand-accent-light hover:shadow-[0_0_20px_rgba(0,255,209,0.3)]"
+            whileHover={{ y: -2, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3.5 bg-brand-accent-light text-brand-bg rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_10px_30px_rgba(0,255,209,0.25)] flex items-center gap-2"
           >
-            Iniciar Projeto
+            Começar Agora
           </motion.a>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="lg:hidden w-12 h-12 flex items-center justify-center text-white relative z-[120]"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+          <a 
+            href="https://wa.me/5511978959567"
+            className="px-5 py-2.5 bg-brand-accent-light text-brand-bg rounded-full text-[9px] font-black uppercase tracking-widest"
+          >
+            WhatsApp
+          </a>
+          <button 
+            className="w-10 h-10 flex items-center justify-center text-white relative z-[120] bg-white/5 rounded-full border border-white/10"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -116,33 +135,37 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-0 bg-[#0A0A0B]/98 backdrop-blur-3xl z-40 lg:hidden flex flex-col"
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-[#0A0A0B] z-40 lg:hidden flex flex-col"
           >
-            {/* Noise Overlay */}
-            <div className="absolute inset-0 z-[-1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+            <div className="absolute inset-0 bg-brand-bg z-0" />
             
-            <div className="flex-1 overflow-y-auto px-8 pt-32 pb-12">
-              <div className="flex flex-col gap-8">
+            {/* Design Elements for the Menu Background */}
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-accent-light/5 blur-[100px] rounded-full pointer-events-none z-1" />
+            <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-brand-accent-light/5 blur-[80px] rounded-full pointer-events-none z-1" />
+            
+            <div className="flex-1 overflow-y-auto px-8 pt-28 pb-12 relative z-10">
+              <div className="flex flex-col gap-6">
                 {navLinks.map((link, idx) => (
                   <motion.div 
                     key={link.name} 
                     className="group"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ 
-                      delay: 0.1 + idx * 0.05,
-                      duration: 0.6,
+                      delay: idx * 0.05,
+                      duration: 0.5,
                       ease: [0.16, 1, 0.3, 1]
                     }}
                   >
-                     <div className="flex items-center gap-4 mb-2">
-                        <span className="font-mono text-[9px] text-brand-accent-light/40 uppercase tracking-widest">{link.id}</span>
-                        <div className="h-[1px] w-4 bg-brand-accent-light/20" />
+                     <div className="flex items-center gap-3 mb-1">
+                        <span className="font-mono text-[8px] text-brand-accent-light/40 uppercase tracking-widest leading-none">{link.id}</span>
+                        <div className="h-[1px] w-3 bg-brand-accent-light/20" />
                      </div>
                      {link.isLink ? (
                       <Link 
                         to={link.href}
-                        className={`text-5xl font-black uppercase tracking-ultra-tight transition-all block ${pathname === link.href ? 'text-brand-accent-light' : 'text-white hover:text-brand-accent-light'}`}
+                        className={`text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight transition-all block ${pathname === link.href ? 'text-brand-accent-light' : 'text-white hover:text-brand-accent-light'}`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.name}
@@ -150,7 +173,7 @@ export default function Navbar() {
                     ) : (
                       <a 
                         href={link.href}
-                        className="text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light transition-all block"
+                        className="text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light transition-all block"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.name}
@@ -158,21 +181,36 @@ export default function Navbar() {
                     )}
                   </motion.div>
                 ))}
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="mt-4"
+                >
+                  <a 
+                    href="https://wa.me/5511978959567"
+                    className="w-full py-6 bg-brand-accent-light text-brand-bg rounded-2xl font-black uppercase tracking-widest text-xs flex items-center justify-center gap-3 shadow-lg shadow-brand-accent-light/20"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Diagnóstico Gratuito
+                  </a>
+                </motion.div>
               </div>
 
-              <div className="mt-16 flex flex-col gap-10">
+              <div className="mt-12 flex flex-col gap-8">
                  <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ delay: 0.5, duration: 1 }}
-                  className="h-[1px] bg-gradient-to-r from-brand-accent-light/20 via-white/10 to-transparent" 
+                  className="h-[1px] bg-white/5" 
                  />
-                 <div className="flex justify-between items-end">
-                    <div className="flex flex-col gap-6">
-                      <span className="font-mono text-[10px] text-brand-secondary/40 uppercase tracking-[0.3em]">Conexões Digital</span>
-                      <div className="flex gap-4">
+                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-8">
+                    <div className="flex flex-col gap-4">
+                      <span className="font-mono text-[9px] text-brand-secondary/40 uppercase tracking-[0.3em]">Redes Sociais</span>
+                      <div className="flex gap-3">
                         {[
-                          { icon: Instagram, href: "#" },
+                          { icon: Instagram, href: "https://instagram.com/orvaliastudio" },
                           { icon: Youtube, href: "#" }
                         ].map((social, i) => (
                           <motion.a 
@@ -181,17 +219,18 @@ export default function Navbar() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.6 + i * 0.1 }}
                             href={social.href} 
-                            className="w-12 h-12 rounded-full border border-white/5 flex items-center justify-center hover:bg-brand-accent-light hover:border-brand-accent-light group transition-all"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:bg-brand-accent-light hover:border-brand-accent-light group transition-all"
                           >
-                            <social.icon className="text-brand-secondary group-hover:text-brand-bg" size={20} />
+                            <social.icon className="text-brand-secondary group-hover:text-brand-bg" size={18} />
                           </motion.a>
                         ))}
                       </div>
                     </div>
-                    <div className="text-right">
-                       <span className="font-mono text-[10px] text-brand-accent-light block mb-2">AGENDAR REUNIÃO</span>
-                       <span className="font-mono text-[9px] text-brand-secondary/40 block">INDAIATUBA • BRASIL</span>
-                       <span className="font-mono text-[8px] text-brand-secondary/20 block tracking-widest mt-1">© 2026 ORVALIA STUDIO</span>
+                    <div className="text-left sm:text-right">
+                       <span className="font-mono text-[9px] text-brand-accent-light block mb-2 uppercase tracking-widest">Base: Indaiatuba / SP</span>
+                       <span className="font-mono text-[8px] text-brand-secondary/30 block tracking-[0.2em]">© 2026 ORVALIA STUDIO DNA</span>
                     </div>
                  </div>
               </div>

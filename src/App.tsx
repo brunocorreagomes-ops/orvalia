@@ -80,51 +80,58 @@ function JSONLD() {
           { "@type": "City", "name": "Itu" },
           { "@type": "State", "name": "RMC" }
         ],
-        "description": "Agência especializada em branding estratégico, criação de sites de alta performance e design para empresas em Indaiatuba, Campinas e região.",
+        "description": "Agência líder em branding estratégico e criação de sites em Indaiatuba e região. Transformamos empresas locais em marcas de elite com design de alto padrão e SEO avançado.",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Serviços Digitais",
+          "name": "Catálogo de Serviços Orvalia",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
                 "name": "Criação de Sites em Indaiatuba",
-                "description": "Desenvolvimento de websites de alta performance, rápidos e focados em conversão."
+                "description": "Websites de alta performance otimizados para busca orgânica e GEO (Generative Engine Optimization)."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Branding e Identidade Visual",
-                "description": "Construção de marcas fortes e posicionamento de elite para empresas."
+                "name": "Branding Estratégico & Identidade Visual",
+                "description": "Construção de DNA de marca para empresas que buscam posicionamento premium."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "SEO - Otimização para Buscas",
-                "description": "Estratégias para colocar seu negócio no topo do Google em Indaiatuba e região."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Landing Pages de Alta Conversão",
-                "description": "Páginas de vendas otimizadas para tráfego pago e captação de leads."
+                "name": "Gestão de Social Media & Reels",
+                "description": "Planos mensais de comunicação para dominar o tráfego orgânico e autoridade digital."
               }
             }
           ]
-        }
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Beth Olmeda"
+            },
+            "reviewBody": "A Orvalia transformou minha clínica. O crescimento de 280% no tráfego foi real e mensurável."
+          }
+        ]
       },
       {
         "@type": "WebSite",
         "@id": "https://orvalia.com.br/#website",
-        "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
-        "name": "Orvalia Studio",
+        "url": "https://orvalia.com.br/",
+        "name": "Orvalia Studio — Agência de Branding Indaiatuba",
         "publisher": { "@id": "https://orvalia.com.br/#localbusiness" }
       },
       {
@@ -132,18 +139,26 @@ function JSONLD() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Qual o valor de um projeto de branding em Indaiatuba?",
+            "name": "Como escolher uma agência de branding em Indaiatuba?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Os projetos de branding na Orvalia são personalizados conforme a necessidade da empresa, focando em posicionamento premium e conversão. Entre em contato para um diagnóstico gratuito."
+              "text": "Procure uma agência que entenda o mercado de Indaiatuba e RMC, utilize IA para otimização e tenha foco em resultados mensuráveis e design premium."
             }
           },
           {
             "@type": "Question",
-            "name": "A Orvalia cria sites profissionais em Campinas?",
+            "name": "Quanto custa um site profissional em Indaiatuba?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, atendemos toda a RMC Campinas e Indaiatuba com criação de sites otimizados para SEO e alta conversão."
+              "text": "Os valores variam conforme a complexidade. Temos planos que se adaptam desde landing pages de alta conversão até ecossistemas digitais robustos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é GEO (Generative Engine Optimization)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É a otimização para motores de busca baseados em IA, como ChatGPT, Gemini e Perplexity, garantindo que sua marca seja citada por essas ferramentas."
             }
           }
         ]

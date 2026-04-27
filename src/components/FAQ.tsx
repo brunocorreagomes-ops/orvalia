@@ -4,24 +4,24 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "Como o branding estratégico pode ajudar minha empresa em Indaiatuba?",
-    answer: "O branding estratégico vai além de um logo bonito. Ele constrói uma percepção de valor superior na mente do seu cliente, permitindo que você cobre mais caro, atraia melhores talentos e se destaque em um mercado altamente competitivo como o de Indaiatuba e região."
+    question: "Como escolher uma agência de branding em Indaiatuba?",
+    answer: "Escolher uma agência em Indaiatuba exige olhar além do portfólio. Procure por parceiros que entendam a dinâmica do mercado regional da RMC, que utilizem inteligência artificial para acelerar processos e que entreguem design de nível global para empresas que desejam se destacar localmente."
   },
   {
-    question: "Qual o prazo médio para a criação de um site de alta performance?",
-    answer: "Nossos projetos levam geralmente entre 4 a 8 semanas, dependendo da complexidade. Cada etapa é milimetricamente planejada: desde a arquitetura de informação e copy estratégica até o design exclusivo e desenvolvimento otimizado para SEO."
+    question: "Quanto custa um projeto de branding para empresas?",
+    answer: "O investimento em branding na Orvalia Studio é modular. Temos desde soluções essenciais para empresas em crescimento até ecossistemas completos para marcas de elite. O valor reflete a profundidade estratégica, pesquisa de mercado e o impacto direto no posicionamento e faturamento do negócio."
   },
   {
-    question: "A Orvalia atende apenas empresas locais?",
-    answer: "Embora tenhamos nossa base em Indaiatuba e foco na RMC Campinas, atendemos clientes em todo o Brasil e no exterior. O processo digital permite uma colaboração fluida independente da localização geográfica."
+    question: "Qual a diferença entre branding e marketing digital?",
+    answer: "Branding é a alma: define quem sua empresa é, como ela fala e como é percebida. Marketing digital é o megafone: são as ferramentas e canais para levar essa alma ao público. Na Orvalia, integramos ambos para garantir que sua mensagem seja potente e coerente em Indaiatuba e região."
   },
   {
-    question: "O que está incluído no plano de Design Estratégico?",
-    answer: "Nossos planos costumam incluir diagnóstico de marca, manual de identidade visual, design de interface (UI/UX), copy direcionada para conversão e otimização técnica (SEO). Cada solução é personalizada para os objetivos específicos do seu negócio."
+    question: "Como funciona um projeto de posicionamento de marca?",
+    answer: "Nosso processo é dividido em: Diagnóstico de DNA, Estratégia de Diferenciação, Identidade Visual Exclusiva e Arquitetura Digital. Utilizamos metodologias ágeis e IA para garantir que cada marca tenha um posicionamento único e lucrativo no digital."
   },
   {
-    question: "Como funciona o suporte pós-lançamento?",
-    answer: "Não apenas entregamos o projeto e sumimos. Oferecemos acompanhamento pós-lançamento para garantir que tudo esteja rodando conforme o esperado e suporte técnico contínuo para atualizações e otimizações de performance."
+    question: "A Orvalia cria sites otimizados para o Google (SEO)?",
+    answer: "Sim. Todos os nossos sites são construídos com foco em SEO Local e GEO (Generative Engine Optimization). Isso significa que sua empresa será encontrada não apenas por buscas tradicionais, mas também por mecanismos de IA como ChatGPT, Gemini e Perplexity."
   }
 ];
 

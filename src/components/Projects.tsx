@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Beth Olmeda",
+    title: "Beth Olmeda — 280% de tráfego",
     category: "Branding • Estética",
     metric: "280% de crescimento no tráfego em 60 dias",
     location: "Indaiatuba/SP",
@@ -16,33 +16,33 @@ const projects = [
     span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
   },
   {
-    title: "Marta Ana Chiconato",
+    title: "Marta Ana Chiconato — Posicionamento Premium",
     category: "Estratégia • Terapia",
-    metric: "Posicionamento premium consolidado",
+    metric: "Autoridade consolidada na RMC",
     location: "Campinas/SP",
     image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
     span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
   {
-    title: "Quinta de Caraíva",
+    title: "Quinta de Caraíva — Arquitetura Digital",
     category: "Web • Experiência",
-    metric: "Arquitetura de reservas otimizada",
+    metric: "Fluxo de reservas automatizado",
     location: "Bahia/BR",
     image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
     span: "col-span-4 lg:col-span-6 h-[400px] md:h-[500px]"
   },
   {
-    title: "Dario Eletricidade",
+    title: "Dario Eletricidade — +150% em Conversão",
     category: "Marketing • Digital",
-    metric: "+150% em conversão de leads",
+    metric: "Domínio orgânico em Indaiatuba",
     location: "Indaiatuba/SP",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
     span: "col-span-4 lg:col-span-7 h-[500px] md:h-[600px]"
   },
   {
-    title: "KNJ TUR",
+    title: "KNJ TUR — Redesign Global",
     category: "Interface • Estratégia",
-    metric: "Redesign de plataforma global",
+    metric: "Presença digital internacional de elite",
     location: "São Paulo/BR",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
     span: "col-span-4 lg:col-span-5 h-[350px] md:h-[400px]"
