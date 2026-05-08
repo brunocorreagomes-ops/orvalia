@@ -48,10 +48,10 @@ function JSONLD() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://orvalia.com.br/#localbusiness",
+        "@id": "https://www.orvalia.com.br/#localbusiness",
         "name": "Orvalia - Branding & Websites",
-        "image": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/logo.png",
-        "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
+        "image": "https://www.orvalia.com.br/logo.png",
+        "url": "https://www.orvalia.com.br/",
         "telephone": "+55 11 97895-9567",
         "priceRange": "$$$",
         "address": {
@@ -129,10 +129,10 @@ function JSONLD() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://orvalia.com.br/#website",
-        "url": "https://orvalia.com.br/",
+        "@id": "https://www.orvalia.com.br/#website",
+        "url": "https://www.orvalia.com.br/",
         "name": "Orvalia Studio — Agência de Branding Indaiatuba",
-        "publisher": { "@id": "https://orvalia.com.br/#localbusiness" }
+        "publisher": { "@id": "https://www.orvalia.com.br/#localbusiness" }
       },
       {
         "@type": "FAQPage",
