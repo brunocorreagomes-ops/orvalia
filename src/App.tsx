@@ -19,7 +19,9 @@ import Article7 from "./pages/Blog/Article7";
 import Article8 from "./pages/Blog/Article8";
 import Article9 from "./pages/Blog/Article9";
 import Article10 from "./pages/Blog/Article10";
+import Article11 from "./pages/Blog/Article11";
 import BlogIndex from "./pages/Blog/BlogIndex";
+import PresencaDigital from "./pages/PresencaDigital";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
@@ -48,10 +50,10 @@ function JSONLD() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://www.orvalia.com.br/#localbusiness",
+        "@id": "https://orvalia.com.br/#localbusiness",
         "name": "Orvalia - Branding & Websites",
-        "image": "https://www.orvalia.com.br/logo.png",
-        "url": "https://www.orvalia.com.br/",
+        "image": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/logo.png",
+        "url": "https://ais-dev-vvyha72miapruwovmaedpl-71352453893.us-east1.run.app/",
         "telephone": "+55 11 97895-9567",
         "priceRange": "$$$",
         "address": {
@@ -129,10 +131,10 @@ function JSONLD() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.orvalia.com.br/#website",
-        "url": "https://www.orvalia.com.br/",
+        "@id": "https://orvalia.com.br/#website",
+        "url": "https://orvalia.com.br/",
         "name": "Orvalia Studio — Agência de Branding Indaiatuba",
-        "publisher": { "@id": "https://www.orvalia.com.br/#localbusiness" }
+        "publisher": { "@id": "https://orvalia.com.br/#localbusiness" }
       },
       {
         "@type": "FAQPage",
@@ -255,6 +257,8 @@ export default function App() {
           <Route path="/blog/por-que-nao-cresce" element={<Article8 />} />
           <Route path="/blog/identidade-profissionais-liberais" element={<Article9 />} />
           <Route path="/blog/guia-marca-forte" element={<Article10 />} />
+          <Route path="/blog/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />
+          <Route path="/presenca-digital" element={<PresencaDigital />} />
           <Route path="/termos" element={<Termos />} />
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/cookies" element={<Cookies />} />

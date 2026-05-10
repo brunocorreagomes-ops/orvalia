@@ -72,6 +72,13 @@ const articles = [
     excerpt: "O passo a passo para empresas que querem dominar o mercado local e digital.",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
     date: "13 Abr 2026"
+  },
+  {
+    id: "branding-estrategico-indaiatuba-campinas",
+    title: "Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP",
+    excerpt: "Descubra como a Orval’IA Studio transforma empresas de Indaiatuba, Campinas e região através do branding estratégico e design minimalista.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+    date: "10 Mai 2026"
   }
 ];
 
