@@ -74,6 +74,26 @@ export default function TrustSection() {
               </motion.div>
             ))}
           </div>
+
+          <div className="mt-16 flex justify-center">
+            <motion.a
+              href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20diferenciais%20da%20Orvalia%20Studio."
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(0, 255, 209, 0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
+            >
+              Ver mais diferenciais
+              <TrendingUp size={18} />
+            </motion.a>
+          </div>
         </div>
 
         {/* [5 — CONTEÚDO PARA GEO] Depoimentos com microdata */}
