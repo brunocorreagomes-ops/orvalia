@@ -270,40 +270,22 @@ export default function SitesEstrategicos() {
       {/* Captura / Pressão */}
       <section className="py-24 bg-brand-accent-dark/20 border-y border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="dna-grid gap-12 items-center">
-            <div className="col-span-4 lg:col-span-6">
-              <h2 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase mb-8">
-                Enquanto você decide, seu <span className="text-gradient">concorrente avança.</span>
-              </h2>
-              <p className="text-xl text-brand-secondary leading-relaxed opacity-80">
-                Todo dia que sua empresa não aparece no Google, você perde clientes para quem já entendeu o jogo digital.
-              </p>
-            </div>
-            <div id="diagnostico" className="col-span-4 lg:col-span-6">
-              <div className="p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-brand-bg border border-brand-accent-light/20 shadow-2xl relative overflow-hidden group">
-                <div className="relative z-10">
-                  <div className="mb-6 md:mb-8">
-                    <h3 className="text-xl md:text-2xl font-black text-white mb-2 uppercase tracking-tight">O primeiro passo para sua <span className="text-brand-accent-light">Elite Digital</span></h3>
-                    <p className="text-brand-secondary text-[10px] md:text-sm uppercase tracking-widest font-mono">Receba um diagnóstico estratégico via WhatsApp.</p>
-                  </div>
-                  <div className="space-y-6">
-                    <p className="text-brand-secondary/80 text-sm leading-relaxed italic">
-                      "Ao clicar no botão abaixo, você iniciará uma conversa direta com nossos especialistas para analisar seus gargalos digitais e identificar oportunidades de crescimento imediato."
-                    </p>
-                    <a 
-                      href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20um%20diagnóstico%20gratuito%20do%20meu%20site%20e%20entender%20como%20melhorar%20minha%20performance%20digital."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-6 bg-brand-accent-light text-brand-bg rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all hover:scale-[1.02] flex items-center justify-center gap-4 shadow-xl shadow-brand-accent-light/20"
-                    >
-                      <MessageSquare size={18} />
-                      Iniciar Diagnóstico Gratuito
-                    </a>
-                  </div>
-                </div>
-                <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-brand-accent-light/5 blur-[80px] rounded-full pointer-events-none" />
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase mb-8">
+              Enquanto você decide, seu <span className="text-gradient">concorrente avança.</span>
+            </h2>
+            <p className="text-xl text-brand-secondary leading-relaxed opacity-80 mb-12">
+              Todo dia que sua empresa não aparece no Google, você perde clientes para quem já entendeu o jogo digital.
+            </p>
+            <a 
+              href="https://wa.me/5511978959567?text=Olá!%20Vi%20a%20página%20de%20Sites%20Estratégicos%20e%20gostaria%20de%20iniciar%20um%20projeto."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all hover:scale-105 shadow-xl shadow-brand-accent-light/20"
+            >
+              <MessageSquare size={20} />
+              Iniciar Projeto via WhatsApp
+            </a>
           </div>
         </div>
       </section>

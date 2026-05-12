@@ -61,8 +61,10 @@ export default function Article2() {
           <div className="p-12 rounded-[2.5rem] glass-premium border border-brand-accent-light/20 text-center">
             <h3 className="text-2xl font-bold text-white mb-6">Quer um orçamento estratégico para sua marca?</h3>
             <a 
-              href="https://wa.me/5511978959567" 
-              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all"
+              href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Identidade%20Visual%20e%20gostaria%20de%20solicitar%20uma%20proposta."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(25,211,101,0.3)]"
             >
               Solicitar Proposta <ArrowRight size={18} />
             </a>

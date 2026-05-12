@@ -79,9 +79,22 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-6">
                <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO — DESIGN & ESTRATÉGIA</span>
                <div className="hidden md:block w-[1px] h-4 bg-white/5" />
-               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-widest leading-relaxed text-center">
-                 Indaiatuba, SP — Região Metropolitana de Campinas
-               </span>
+               {/* [4 — FOOTER COM NAP] LOCAL SEO */}
+               <div className="flex flex-col gap-1 items-center md:items-start">
+                 <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-widest leading-relaxed">
+                   Indaiatuba, SP — Região Metropolitana de Campinas
+                 </span>
+                 <span className="font-mono text-[8px] text-brand-secondary/60 uppercase tracking-widest">
+                   Agência de Branding em Indaiatuba | Atendemos toda a RMC: Campinas, Jundiaí, Itu e região
+                 </span>
+               </div>
+            </div>
+            {/* NAP em texto puro para spiders */}
+            <div className="hidden">
+              <span>Orvalia Studio</span>
+              <span>Av. Presidente Kennedy, 1500, Indaiatuba - SP</span>
+              <span>Telefone: +55 11 97895-9567</span>
+              <span>E-mail: contato@orvalia.com.br</span>
             </div>
             <div className="flex gap-16">
                <div className="flex flex-col gap-2">

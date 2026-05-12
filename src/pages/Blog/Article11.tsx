@@ -76,10 +76,12 @@ export default function Article11() {
           <div className="p-12 rounded-[2.5rem] bg-gray-100 border border-gray-200 text-center">
             <h3 className="text-2xl font-bold text-black mb-6">Eleve seu Posicionamento. Fale com a Orval’IA.</h3>
             <a 
-              href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20Estratégico%20e%20quero%20elevar%20o%20posicionamento%20da%20minha%20empresa." 
-              className="inline-flex items-center justify-center gap-3 bg-black text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-gray-800 transition-all shadow-xl"
+              href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20Estratégico%20e%20quero%20elevar%20o%20posicionamento%20da%20minha%20empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 bg-black text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 hover:bg-gray-800 transition-all shadow-xl hover:shadow-[0_0_30px_rgba(0,0,0,0.2)]"
             >
-              Falar com a Orval'IA <ArrowRight size={18} />
+              Elevar o meu Posicionamento <ArrowRight size={18} />
             </a>
           </div>
         </footer>

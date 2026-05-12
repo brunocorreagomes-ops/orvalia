@@ -170,6 +170,29 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} idx={idx} />
           ))}
+          {/* Projetos CTA */}
+          <div className="mt-20 p-12 md:p-16 rounded-[3rem] bg-brand-accent-light text-center border-t border-white/5 relative overflow-hidden group">
+            <div className="relative z-10">
+               <h3 className="text-3xl md:text-5xl font-black text-brand-bg tracking-tight uppercase mb-6 drop-shadow-sm">
+                 Gostou dos Resultados?
+               </h3>
+               <p className="text-brand-bg/80 text-lg md:text-xl font-serif italic mb-10 max-w-2xl mx-auto">
+                 Sua marca pode ser o nosso próximo case de sucesso. Entre em contato e descubra como podemos acelerar seu crescimento no digital.
+               </p>
+               <a 
+                 href="https://wa.me/5511978959567?text=Olá!%20Acabei%20de%20ver%20os%20cases%20da%20agência%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-flex items-center gap-3 bg-brand-bg text-brand-accent-light px-10 md:px-14 py-5 md:py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-xl hover:shadow-[0_0_40px_rgba(0,0,0,0.2)]"
+               >
+                 Ser o próximo
+                 <ArrowUpRight size={20} />
+               </a>
+            </div>
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/5 blur-[40px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
+          </div>
         </div>
       </div>
     </section>

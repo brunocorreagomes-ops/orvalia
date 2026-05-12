@@ -4,32 +4,32 @@ import { Sparkles, Layout, BarChart, Target, Compass, Search } from "lucide-reac
 const services = [
   {
     title: "Branding",
-    desc: "Identidade visual completa que comunica os valores da sua marca de forma única.",
+    desc: "Identidade visual completa que comunica os valores da sua marca de forma única e autoritária.",
     icon: <Sparkles className="text-brand-accent-light" size={32} />
   },
   {
     title: "Criação de Sites",
-    desc: "Websites de alta performance otimizados para busca e experiência do usuário.",
+    desc: "Websites de alta performance criados em Indaiatuba, otimizados para busca e conversão.",
     icon: <Layout className="text-brand-accent-light" size={32} />
   },
   {
     title: "Design para Crescimento",
-    desc: "Design focado em conversão e retenção, impulsionando suas métricas digitais.",
+    desc: "Design focado em conversão e retenção para empresas que buscam liderança na RMC.",
     icon: <BarChart className="text-brand-accent-light" size={32} />
   },
   {
     title: "Planejamento Estratégico",
-    desc: "Estratégias de marketing e comunicação personalizadas para o seu nicho.",
+    desc: "Estratégias de marketing e comunicação personalizadas para o contexto regional de SP.",
     icon: <Compass className="text-brand-accent-light" size={32} />
   },
   {
-    title: "Análise Empresarial",
-    desc: "Diagnóstico completo do seu negócio de acordo com seus objetivos de mercado.",
+    title: "SEO e GEO",
+    desc: "Diagnóstico completo e otimização para ser encontrado no Google e recomendado por IAs.",
     icon: <Search className="text-brand-accent-light" size={32} />
   },
   {
     title: "Estratégia Digital",
-    desc: "Planejamento tático para posicionar sua empresa à frente da concorrência.",
+    desc: "Planejamento tático para posicionar sua empresa à frente da concorrência local.",
     icon: <Target className="text-brand-accent-light" size={32} />
   }
 ];

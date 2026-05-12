@@ -97,6 +97,7 @@ export default function Hero() {
             className="col-span-4 lg:col-span-12 flex flex-col items-center text-center"
           >
             <div className="relative w-full overflow-visible py-2">
+              {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
               <h1 className="text-4xl md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.05] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-8 md:mb-10 flex flex-col items-center uppercase">
                 <motion.span 
                   variants={{
@@ -105,7 +106,7 @@ export default function Hero() {
                   }}
                   className="block relative"
                 >
-                  Branding e Comunicação
+                  Agência de Branding
                 </motion.span>
                 <motion.span 
                   variants={{
@@ -114,9 +115,11 @@ export default function Hero() {
                   }}
                   className="block text-gradient relative py-4"
                 >
-                  Estratégica em Indaiatuba
+                  Indaiatuba e Região
                 </motion.span>
               </h1>
+              {/* Proposta de valor clara */}
+              <p className="sr-only">Orvalia Studio: Branding Estratégico, Criação de Sites e Performance Digital na RMC.</p>
             </div>
           </motion.div>
 

@@ -74,7 +74,7 @@ export default function Navbar() {
                     <Link 
                       to={link.href}
                       aria-current={pathname === link.href ? "page" : undefined}
-                      className={`text-[11px] font-black uppercase tracking-[0.2em] transition-all relative pb-1 ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary/80 hover:text-white'}`}
+                      className={`inline-block text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] relative pb-1 ${pathname === link.href ? 'text-brand-accent-light' : 'text-brand-secondary/80 hover:text-white'}`}
                     >
                       {link.name}
                       {pathname === link.href && (
@@ -87,7 +87,7 @@ export default function Navbar() {
                   ) : (
                     <a 
                       href={link.href}
-                      className="text-[11px] font-black uppercase tracking-[0.2em] text-brand-secondary/80 hover:text-white transition-all relative pb-1 group"
+                      className="inline-block text-[11px] font-black uppercase tracking-[0.2em] text-brand-secondary/80 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300 relative pb-1 group"
                     >
                       {link.name}
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-brand-accent-light transition-all duration-500 group-hover:w-full" />
@@ -165,7 +165,7 @@ export default function Navbar() {
                      {link.isLink ? (
                       <Link 
                         to={link.href}
-                        className={`text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight transition-all block ${pathname === link.href ? 'text-brand-accent-light' : 'text-white hover:text-brand-accent-light'}`}
+                        className={`inline-block origin-left text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.6)] ${pathname === link.href ? 'text-brand-accent-light' : 'text-white hover:text-brand-accent-light'}`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.name}
@@ -173,7 +173,7 @@ export default function Navbar() {
                     ) : (
                       <a 
                         href={link.href}
-                        className="text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light transition-all block"
+                        className="inline-block origin-left text-4xl xs:text-5xl font-black uppercase tracking-ultra-tight text-white hover:text-brand-accent-light hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.6)] transition-all duration-300"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.name}

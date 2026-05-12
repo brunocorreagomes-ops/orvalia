@@ -65,8 +65,10 @@ export default function Article1() {
           <div className="p-12 rounded-[2.5rem] glass-premium border border-brand-accent-light/20 text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">Pronto para transformar sua marca em Indaiatuba?</h3>
             <a 
-              href="https://wa.me/5511978959567" 
-              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_20px_rgba(25,211,101,0.2)]"
+              href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20em%20Indaiatuba%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-brand-whatsapp text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(25,211,101,0.3)]"
             >
               Falar com um Especialista <ArrowRight size={18} />
             </a>

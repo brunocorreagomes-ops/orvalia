@@ -5,6 +5,7 @@ import Process from "../components/Process";
 import Services from "../components/Services";
 import Pricing from "../components/Pricing";
 import MonthlyPricing from "../components/MonthlyPricing";
+import TrustSection from "../components/TrustSection";
 import FAQ from "../components/FAQ";
 import CTA from "../components/CTA";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Authority />
+      <TrustSection />
       <Process />
       <Services />
       <Pricing />
