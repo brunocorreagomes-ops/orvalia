@@ -98,7 +98,7 @@ export default function Hero() {
           >
             <div className="relative w-full overflow-visible py-2">
               {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
-              <h1 className="text-4xl md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.05] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-8 md:mb-10 flex flex-col items-center uppercase">
+              <h1 className="text-[10vw] md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.05] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-8 md:mb-10 flex flex-col items-center uppercase">
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 40 },
@@ -134,13 +134,13 @@ export default function Hero() {
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-center">
                   <a 
-                    href="https://wa.me/5511978959567?text=Olá!%20Vi%20o%20site%20da%20Orvalia%20e%20gostaria%20de%20um%20diagnóstico%20gratuito%20da%20minha%20marca."
+                    href="https://wa.me/5511978959567?text=Olá!%20Vi%20o%20site%20da%20Orvalia%20e%20gostaria%20de%20solicitar%20uma%20proposta."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_60px_rgba(0,255,209,0.5)] hover:scale-105 active:scale-95 z-20"
                   >
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                    <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
+                    <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Solicitar Proposta</span>
                     <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={24} />
                   </a>
                   
@@ -148,7 +148,7 @@ export default function Hero() {
                     href="#projetos"
                     className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:bg-white/5 transition-all"
                   >
-                    Ver cases locais
+                    Ver Portfolio
                   </a>
                 </div>
 
@@ -156,7 +156,7 @@ export default function Hero() {
                   <div className="flex -space-x-3">
                     {[1, 2, 3, 4].map(i => (
                       <div key={i} className="w-12 h-12 rounded-full border-2 border-brand-bg bg-brand-accent-light/20 backdrop-blur-sm overflow-hidden">
-                        <img src={`https://i.pravatar.cc/100?u=${i + 20}`} alt="User" className="w-full h-full object-cover grayscale" />
+                        <img src={`https://i.pravatar.cc/100?u=${i + 20}`} alt="User" referrerPolicy="no-referrer" className="w-full h-full object-cover grayscale" />
                       </div>
                     ))}
                   </div>

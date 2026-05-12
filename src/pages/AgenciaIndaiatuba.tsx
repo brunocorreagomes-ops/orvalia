@@ -136,6 +136,7 @@ export default function AgenciaIndaiatuba() {
                    <img 
                       src={project.image} 
                       alt={project.title} 
+                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                    />
                    <div className="absolute inset-0 bg-brand-bg/40 group-hover:bg-transparent transition-colors duration-700" />

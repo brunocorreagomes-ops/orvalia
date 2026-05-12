@@ -87,6 +87,7 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
           ref={imageRef}
           src={project.image} 
           alt={project.title} 
+          referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-50 group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-1000"
         />
         <div className="absolute inset-0 bg-brand-bg/60 mix-blend-multiply group-hover:bg-brand-bg/20 transition-all duration-700" />
