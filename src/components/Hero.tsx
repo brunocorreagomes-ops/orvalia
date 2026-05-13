@@ -150,6 +150,14 @@ export default function Hero() {
                   >
                     Ver Portfolio
                   </a>
+
+                  <a 
+                    href="#servicos"
+                    className="flex items-center gap-4 px-10 py-6 border border-white/5 rounded-full font-black uppercase tracking-widest text-[10px] text-white/60 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-500 group/link"
+                  >
+                    <span>Saiba Mais</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light opacity-0 group-hover/link:opacity-100 transition-opacity duration-500" />
+                  </a>
                 </div>
 
                 <div className="flex -space-x-4 items-center">
