@@ -92,7 +92,7 @@ export default function AgenciaIndaiatuba() {
                   </li>
                   <li className="flex items-center gap-4 text-white">
                     <Globe className="text-brand-accent-light" size={20} />
-                    <span className="text-xl opacity-80">www.orvalia.com.br</span>
+                    <span className="text-xl opacity-80">orvalia.com.br</span>
                   </li>
                 </ul>
               </div>

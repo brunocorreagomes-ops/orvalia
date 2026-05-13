@@ -2,35 +2,38 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScroll() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    let lenis: Lenis | null = null;
-    
-    try {
-      lenis = new Lenis({
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: 'vertical',
-        gestureOrientation: 'vertical',
-        smoothWheel: true,
-        wheelMultiplier: 0.8,
-      });
+    gsap.registerPlugin(ScrollTrigger);
 
-      const raf = (time: number) => {
-        lenis?.raf(time);
-        requestAnimationFrame(raf);
-      };
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      lerp: 0.1,
+    });
 
-      requestAnimationFrame(raf);
-    } catch (error) {
-      console.error("Lenis skip:", error);
-    }
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      lenis?.destroy();
+      lenis.destroy();
+      gsap.ticker.remove((time) => {
+        lenis.raf(time * 1000);
+      });
     };
   }, []);
 
