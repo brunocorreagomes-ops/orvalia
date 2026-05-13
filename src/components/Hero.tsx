@@ -146,7 +146,7 @@ export default function Hero() {
                   
                   <a 
                     href="#projetos"
-                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:bg-white/5 transition-all"
+                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:text-brand-accent-light hover:border-brand-accent-light/40 hover:shadow-[0_0_25px_rgba(0,255,209,0.15)] hover:bg-brand-accent-light/5 transition-all duration-500"
                   >
                     Ver Portfolio
                   </a>
