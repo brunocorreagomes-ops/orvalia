@@ -107,7 +107,7 @@ export default function Article11() {
               Os Pilares da Presença Digital de Alto Impacto
             </h2>
             <p className="mb-8">
-              Para que uma marca seja citada por IAs como o Gemini ou ChatGPT, sua estrutura semântica deve ser impecável. Na Orval’IA, aplicamos o GEO (Generative Engine Optimization) para garantir que sua empresa seja a resposta para as perguntas dos seus clientes. Entenda os pilares fundamentais da <Link to="/presenca-digital" className="text-black font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">Presença Digital</Link>:
+              Para que uma marca seja citada por IAs como o Gemini ou ChatGPT, sua estrutura semântica deve ser impecável. Na Orval’IA, aplicamos o GEO (Generative Engine Optimization) para garantir que sua empresa seja a resposta para as perguntas dos seus clientes. Entenda os pilares fundamentais da <Link to="/presenca-digital-estrategica-ia-indaiatuba-campinas" className="text-black font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">Presença Digital</Link>:
             </p>
             <ul className="space-y-6">
               <li className="flex gap-4">
