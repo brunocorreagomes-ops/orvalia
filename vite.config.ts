@@ -7,6 +7,20 @@ export default defineConfig(({mode}) => {
   return {
     base: '/',
     plugins: [react()],
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      sourcemap: false,
+      minify: 'esbuild',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'react-router-dom'],
+            animations: ['framer-motion', 'gsap', '@studio-freight/lenis'],
+          },
+        },
+      },
+    },
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },

@@ -9,31 +9,37 @@ export default function SmoothScroll() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    gsap.registerPlugin(ScrollTrigger);
+    let lenis: Lenis | null = null;
+    let tick: ((time: number) => void) | null = null;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      lerp: 0.1,
-    });
+    try {
+      gsap.registerPlugin(ScrollTrigger);
 
-    lenis.on('scroll', ScrollTrigger.update);
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        lerp: 0.1,
+      });
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+      lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.lagSmoothing(0);
+      tick = (time: number) => {
+        lenis?.raf(time * 1000);
+      };
+
+      gsap.ticker.add(tick);
+      gsap.ticker.lagSmoothing(0);
+    } catch (e) {
+      console.error("Lenis/Scroll error:", e);
+    }
 
     return () => {
-      lenis.destroy();
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      if (lenis) lenis.destroy();
+      if (tick) gsap.ticker.remove(tick);
     };
   }, []);
 
