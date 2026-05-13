@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -88,49 +88,49 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
           src={project.image} 
           alt={project.title} 
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-50 group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-1000"
+          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
         />
-        <div className="absolute inset-0 bg-brand-bg/60 mix-blend-multiply group-hover:bg-brand-bg/20 transition-all duration-700" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/20 to-transparent" />
+        <div className="absolute inset-0 bg-brand-bg/80 mix-blend-multiply group-hover:bg-brand-bg/10 transition-all duration-700" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent" />
       </div>
 
-      <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between z-10">
+      <div className="absolute inset-0 p-8 md:p-14 flex flex-col justify-between z-10">
         <div className="flex justify-between items-start">
-          <div className="flex flex-col gap-2">
-            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-secondary/60 group-hover:text-brand-accent-light transition-colors">
+          <div className="flex flex-col gap-3">
+            <span className="font-mono text-[9px] md:text-[11px] uppercase tracking-[0.4em] text-brand-secondary/60 group-hover:text-brand-accent-light transition-colors">
               {project.category}
             </span>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
-              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/40">
+              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/60">
                 {project.location}
               </span>
             </div>
           </div>
-          <div className="w-12 h-12 rounded-2xl glass-premium border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-            <ArrowUpRight className="text-brand-accent-light" size={20} />
+          <div className="w-14 h-14 rounded-2xl glass-premium border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-700 shadow-2xl">
+            <ArrowUpRight className="text-brand-accent-light" size={24} />
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h3 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase leading-[0.9]">
+        <div className="space-y-8">
+          <h3 className="text-4xl md:text-7xl font-black text-white tracking-ultra-tight uppercase leading-[0.85]">
             {project.title.split(' ')[0]} <br />
-            <span className="text-white/40 group-hover:text-white transition-colors">
+            <span className="text-white/20 group-hover:text-white transition-colors duration-700">
               {project.title.split(' ').slice(1).join(' ')}
             </span>
           </h3>
           
-          <div className="flex flex-wrap gap-4 items-center pt-6 border-t border-white/5">
+          <div className="flex flex-wrap gap-4 items-center pt-8 border-t border-white/10">
             {project.metric && (
-              <div className="flex items-center gap-3 bg-brand-accent-light/10 backdrop-blur px-5 py-2.5 rounded-2xl border border-brand-accent-light/20">
-                <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />
-                <span className="text-brand-accent-light font-black text-sm md:text-base uppercase tracking-tighter">
+              <div className="flex items-center gap-4 bg-brand-accent-light text-brand-bg px-6 py-3 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-brand-accent-light/20 transition-all">
+                <TrendingUp size={18} />
+                <span className="font-black text-sm md:text-base uppercase tracking-tighter">
                   {project.metric}
                 </span>
               </div>
             )}
-            <div className="hidden md:flex px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-white/20 uppercase tracking-widest">
-              Performance Otimizada
+            <div className="hidden md:flex px-5 py-3 border border-white/20 rounded-xl font-mono text-[10px] text-white uppercase tracking-widest bg-white/5 backdrop-blur-sm">
+              Elite Standard
             </div>
           </div>
         </div>
@@ -171,29 +171,58 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} idx={idx} />
           ))}
-          {/* Projetos CTA */}
-          <div className="mt-20 p-12 md:p-16 rounded-[3rem] bg-brand-accent-light text-center border-t border-white/5 relative overflow-hidden group">
+          {/* Projetos CTA - Enhanced UX and Layout */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="col-span-4 lg:col-span-12 mt-20 p-8 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-brand-accent-light text-center border border-white/10 relative overflow-hidden group shadow-[0_0_80px_rgba(0,255,209,0.15)]"
+          >
             <div className="relative z-10">
-               <h3 className="text-3xl md:text-5xl font-black text-brand-bg tracking-tight uppercase mb-6 drop-shadow-sm">
-                 Gostou dos Resultados?
-               </h3>
-               <p className="text-brand-bg/80 text-lg md:text-xl font-serif italic mb-10 max-w-2xl mx-auto">
-                 Sua marca pode ser o nosso próximo case de sucesso. Entre em contato e descubra como podemos acelerar seu crescimento no digital.
-               </p>
-               <a 
-                 href="https://wa.me/5511978959567?text=Olá!%20Acabei%20de%20ver%20os%20cases%20da%20agência%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="inline-flex items-center gap-3 bg-brand-bg text-brand-accent-light px-10 md:px-14 py-5 md:py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-xl hover:shadow-[0_0_40px_rgba(0,0,0,0.2)]"
+               <motion.div 
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ delay: 0.2 }}
+                 className="inline-block px-4 py-1.5 bg-brand-bg/10 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] text-brand-bg/60 mb-8"
                >
-                 Ser o próximo
-                 <ArrowUpRight size={20} />
-               </a>
+                 Inicie sua transformação
+               </motion.div>
+               
+              <h3 className="text-4xl md:text-7xl font-black text-brand-bg tracking-ultra-tight uppercase mb-8 leading-[0.9]">
+                 Gostou dos <br className="hidden md:block" /> <span className="text-white">Resultados?</span>
+               </h3>
+               
+               <p className="text-brand-bg/90 text-lg md:text-2xl font-serif italic mb-12 max-w-2xl mx-auto leading-tight">
+                 "O posicionamento de elite não é sobre ser visto, é sobre ser desejado pelo valor que você entrega."
+               </p>
+               
+               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                 <motion.a 
+                   href="https://wa.me/5511978959567?text=Olá!%20Acabei%20de%20ver%20os%20cases%20da%20agência%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   whileHover={{ scale: 1.05 }}
+                   whileTap={{ scale: 0.95 }}
+                   className="group relative inline-flex items-center gap-6 bg-brand-bg text-brand-accent-light px-12 md:px-18 py-6 md:py-8 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-2xl hover:shadow-[0_0_50px_rgba(0,0,0,0.3)] transition-all"
+                 >
+                   <span>Seja o próximo Case</span>
+                   <ArrowUpRight size={22} className="group-hover:rotate-45 transition-transform" />
+                 </motion.a>
+                 
+                 <span className="font-mono text-[9px] text-brand-bg/40 uppercase tracking-widest">
+                   Consultoria Grátis inclusa
+                 </span>
+               </div>
             </div>
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/5 blur-[40px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
-          </div>
+            
+            {/* Background elements - Animated and subtle */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/20 blur-[100px] rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-1000" />
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-black/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-1000" />
+            
+            {/* Decorative Grid Lines */}
+            <div className="absolute inset-0 opacity-5 pointer-events-none" 
+                 style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+          </motion.div>
         </div>
       </div>
     </section>

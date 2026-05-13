@@ -29,22 +29,32 @@ export default function CTA() {
           Sua marca merece uma arquitetura que <span className="text-white not-italic font-medium">multiplique valor</span> e domine o digital.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
             <motion.a 
               href="https://wa.me/5511978959567?text=Olá!%20Vi%20a%20seção%20final%20do%20site%20da%20Orvalia%20e%20estou%20pronto%20para%20evoluir%20minha%20marca."
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative flex items-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-2xl shadow-brand-accent-light/20 w-fit"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative flex items-center gap-8 px-14 md:px-20 py-8 md:py-10 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
             >
-              <span className="relative z-10 font-sans text-xs font-black uppercase tracking-[0.3em] text-brand-bg">Começar Agora</span>
-              <ArrowUpRight className="relative z-10 text-brand-bg group-hover:rotate-45 transition-transform" size={20} />
+              <span className="relative z-10 font-sans text-base font-black uppercase tracking-[0.4em] text-brand-bg">Começar Agora</span>
+              <div className="w-12 h-12 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
+                <ArrowUpRight className="text-brand-accent-light" size={24} />
+              </div>
+              
+              {/* Internal Glow */}
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.a>
 
-            <span className="font-mono text-[10px] text-brand-secondary/40 uppercase tracking-[0.2em] hidden md:block">
-              // SEM MOTIVOS PARA ESPERAR //
-            </span>
+            <div className="flex flex-col items-center md:items-start opacity-40">
+               <span className="font-mono text-[10px] text-brand-secondary uppercase tracking-[0.3em]">
+                 Fila de espera para Junho/2026 
+               </span>
+               <span className="font-mono text-[9px] text-brand-accent-light uppercase tracking-widest mt-1">
+                 // Apenas 2 vagas restantes //
+               </span>
+            </div>
         </div>
 
         <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">

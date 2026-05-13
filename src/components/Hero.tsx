@@ -101,8 +101,8 @@ export default function Hero() {
               <h1 className="text-[10vw] md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.05] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-8 md:mb-10 flex flex-col items-center uppercase">
                 <motion.span 
                   variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
                   }}
                   className="block relative"
                 >
@@ -110,8 +110,8 @@ export default function Hero() {
                 </motion.span>
                 <motion.span 
                   variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
                   }}
                   className="block text-gradient relative py-4"
                 >
@@ -133,23 +133,35 @@ export default function Hero() {
                 className="flex flex-col md:flex-row gap-12 items-center justify-center w-full"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-center">
-                  <a 
+                  <motion.a 
                     href="https://wa.me/5511978959567?text=Olá!%20Vi%20o%20site%20da%20Orvalia%20e%20gostaria%20de%20solicitar%20uma%20proposta."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_60px_rgba(0,255,209,0.5)] hover:scale-105 active:scale-95 z-20"
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0 0 40px rgba(0, 255, 209, 0.4)"
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
                   >
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                     <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Solicitar Proposta</span>
                     <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={24} />
-                  </a>
+                  </motion.a>
                   
-                  <a 
+                  <motion.a 
                     href="#projetos"
-                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:text-brand-accent-light hover:border-brand-accent-light/40 hover:shadow-[0_0_25px_rgba(0,255,209,0.15)] hover:bg-brand-accent-light/5 transition-all duration-500"
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0 0 25px rgba(255, 255, 255, 0.05)",
+                      backgroundColor: "rgba(0, 255, 209, 0.05)",
+                      borderColor: "rgba(0, 255, 209, 0.3)"
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-all duration-500"
                   >
                     Ver Portfolio
-                  </a>
+                  </motion.a>
 
                   <a 
                     href="#servicos"
