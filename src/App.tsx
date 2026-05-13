@@ -126,6 +126,7 @@ export default function App() {
           <Route path="/blog/identidade-profissionais-liberais" element={<Article9 />} />
           <Route path="/blog/guia-marca-forte" element={<Article10 />} />
           <Route path="/blog/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />
+          <Route path="/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />
           <Route path="/presenca-digital" element={<PresencaDigital />} />
           <Route path="/termos" element={<Termos />} />
           <Route path="/privacidade" element={<Privacidade />} />
