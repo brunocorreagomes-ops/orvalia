@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import ShareButton from "../../components/ShareButton";
 
 export default function ArticleClinicas() {
   useEffect(() => {
@@ -94,10 +95,13 @@ export default function ArticleClinicas() {
   return (
     <article className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24">
       <div className="max-w-4xl mx-auto">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-black mb-12 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
-          <ChevronLeft size={16} />
-          Voltar ao Blog
-        </Link>
+        <div className="flex justify-between items-center mb-12">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-black transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
+            <ChevronLeft size={16} />
+            Voltar ao Blog
+          </Link>
+          <ShareButton />
+        </div>
 
         <header className="mb-16">
           <motion.span 
