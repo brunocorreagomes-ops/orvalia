@@ -22,6 +22,7 @@ import Article10 from "./pages/Blog/Article10";
 import Article11 from "./pages/Blog/Article11";
 import ArticleClinicas from "./pages/Blog/ArticleClinicas";
 import ArticleAdvogados from "./pages/Blog/ArticleAdvogados";
+import ArticleArquitetura from "./pages/Blog/ArticleArquitetura";
 import BlogIndex from "./pages/Blog/BlogIndex";
 import PresencaDigital from "./pages/PresencaDigital";
 import Termos from "./pages/Legal/Termos";
@@ -131,6 +132,7 @@ export default function App() {
           <Route path="/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />
           <Route path="/branding-para-clinicas-campinas-indaiatuba" element={<ArticleClinicas />} />
           <Route path="/posicionamento-digital-advogados-indaiatuba" element={<ArticleAdvogados />} />
+          <Route path="/design-estrategico-arquitetura-itu-jundiai" element={<ArticleArquitetura />} />
           <Route path="/presenca-digital-estrategica-ia-indaiatuba-campinas" element={<PresencaDigital />} />
           <Route path="/presenca-digital" element={<PresencaDigital />} />
           <Route path="/termos" element={<Termos />} />
