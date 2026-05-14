@@ -102,20 +102,22 @@ const articles = [
 
 export default function BlogIndex() {
   return (
-    <div className="min-h-screen bg-brand-bg pt-40 pb-20 px-8 md:px-24">
+    <div className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24 selection:bg-black selection:text-white">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-7xl mx-auto"
       >
-        <div className="mb-16">
-          <span className="text-brand-accent-light font-black uppercase tracking-[0.3em] text-[10px] block mb-4">Insights e Estratégia</span>
-          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 underline decoration-brand-accent-light decoration-4">
-            Blog Orvalia Studio
-          </h1>
-          <p className="text-brand-secondary text-lg md:text-xl max-w-2xl leading-relaxed">
-            Explorando branding, tecnologia e design para transformar negócios em referências no digital.
-          </p>
+        <div className="mb-24 md:flex justify-between items-end gap-12">
+          <div className="max-w-4xl">
+            <span className="text-gray-400 font-black uppercase tracking-[0.4em] text-[10px] block mb-6">Insights e Estratégia</span>
+            <h1 className="text-5xl md:text-8xl font-black text-black tracking-tighter mb-8 leading-[0.9]">
+              Blog Orval'IA
+            </h1>
+            <p className="text-gray-500 text-xl max-w-2xl leading-relaxed font-serif italic">
+              Explorando branding, tecnologia e design para transformar negócios em referências no digital.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,34 +128,40 @@ export default function BlogIndex() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group flex flex-col glass-premium rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500"
+              className="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
             >
-              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden">
+              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-[4/3] overflow-hidden bg-gray-100">
                 <img 
                   src={article.image} 
                   alt={article.title} 
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-brand-bg/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <ChevronRight size={48} className="text-brand-accent-light" />
-                </div>
               </Link>
-              <div className="p-8 flex flex-col flex-grow">
-                <span className="text-[10px] text-brand-accent-light font-black uppercase tracking-widest mb-4">{article.date}</span>
-                <Link to={article.slug || `/blog/${article.id}`}>
-                  <h2 className="text-xl font-bold text-white mb-4 group-hover:text-brand-accent-light transition-colors line-clamp-2 leading-tight">
+              <div className="p-10 flex flex-col flex-grow">
+                <span className="text-[10px] text-gray-400 font-mono uppercase tracking-[0.2em] mb-4 
+                               border border-gray-100 px-3 py-1 rounded-full w-fit">
+                  {article.date}
+                </span>
+                <Link to={article.slug || `/blog/${article.id}`} className="mb-4">
+                  <h2 className="text-xl md:text-2xl font-black text-black leading-tight group-hover:text-gray-600 transition-colors">
                     {article.title}
                   </h2>
                 </Link>
-                <p className="text-brand-secondary text-sm line-clamp-3 leading-relaxed mb-6">
+                <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                   {article.excerpt}
                 </p>
                 <Link 
                   to={article.slug || `/blog/${article.id}`} 
-                  className="mt-auto flex items-center gap-2 text-brand-accent-light text-[10px] font-black uppercase tracking-widest hover:gap-4 transition-all"
+                  className="mt-auto flex items-center justify-between w-full
+                             text-black text-[10px] font-black uppercase tracking-[0.2em] 
+                             pt-6 border-t border-gray-100 group-hover:border-black/10 transition-colors"
                 >
-                  Leia mais <ChevronRight size={14} />
+                  <span>Ler Artigo</span>
+                  <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center
+                                group-hover:bg-black group-hover:border-black group-hover:text-white transition-all">
+                    <ChevronRight size={14} />
+                  </div>
                 </Link>
               </div>
             </motion.article>

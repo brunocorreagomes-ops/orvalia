@@ -177,19 +177,19 @@ export default function Article11() {
           >
             <div className="relative z-10">
               <h3 className="text-3xl md:text-5xl font-black text-black tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-                Eleve seu Posicionamento.<br />
-                <span className="text-gray-300">Fale com a Orval’IA.</span>
+                Pronto para se destacar?<br />
+                <span className="text-gray-300">Solicite um Diagnóstico Gratuito.</span>
               </h3>
               <p className="text-gray-500 mb-12 max-w-xl mx-auto font-serif italic text-lg">
-                "Sua marca não é o que você diz que ela é. É o que eles sentem quando encontram você."
+                "Descubra o potencial oculto da sua marca. A Orval’IA Studio analisa sua presença atual e traça o caminho para o posicionamento premium que você merece."
               </p>
               <a 
-                href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20Estratégico%20e%20estou%20pronto%20para%20elevar%20meu%20posicionamento."
+                href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20Estratégico%20e%20gostaria%20de%20solicitar%20um%20diagnóstico%20gratuito%20da%20minha%20marca."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-4 bg-black text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
               >
-                Eleve seu Posicionamento <ArrowRight size={18} />
+                Solicitar Diagnóstico Gratuito <ArrowRight size={18} />
               </a>
             </div>
             {/* Background Accent */}
