@@ -71,14 +71,32 @@ const articles = [
     title: "Como construir uma marca forte no digital (guia completo)",
     excerpt: "O passo a passo para empresas que querem dominar o mercado local e digital.",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
-    date: "13 Abr 2026"
+    date: "13 Abr 2026",
+    slug: "/blog/guia-marca-forte"
   },
   {
     id: "branding-estrategico-indaiatuba-campinas",
     title: "Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP",
     excerpt: "Descubra como a Orval’IA Studio transforma empresas de Indaiatuba, Campinas e região através do branding estratégico e design minimalista.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
-    date: "10 Mai 2026"
+    date: "10 Mai 2026",
+    slug: "/branding-estrategico-indaiatuba-campinas"
+  },
+  {
+    id: "geo-inteligencia-artificial-empresas-sorocaba",
+    title: "Por que sua Empresa em Sorocaba ainda não é citada pela IA? O Guia do GEO",
+    excerpt: "Do SEO ao GEO: A Nova Fronteira da Visibilidade Digital para o Setor Industrial e Tecnológico de Sorocaba.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    date: "14 Mai 2026",
+    slug: "/geo-inteligencia-artificial-empresas-sorocaba"
+  },
+  {
+    id: "percepcao-de-valor-estetica-premium-indaiatuba",
+    title: "Percepção de Valor: Estratégias de Branding para Clínicas de Estética Premium",
+    excerpt: "Descubra como a Orval’IA Studio eleva a percepção de valor de clínicas de estética em Indaiatuba e Campinas através do branding de luxo.",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=800",
+    date: "14 Mai 2026",
+    slug: "/percepcao-de-valor-estetica-premium-indaiatuba"
   }
 ];
 
@@ -110,7 +128,7 @@ export default function BlogIndex() {
               transition={{ delay: idx * 0.1 }}
               className="group flex flex-col glass-premium rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500"
             >
-              <Link to={`/blog/${article.id}`} className="block relative aspect-video overflow-hidden">
+              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden">
                 <img 
                   src={article.image} 
                   alt={article.title} 
@@ -123,7 +141,7 @@ export default function BlogIndex() {
               </Link>
               <div className="p-8 flex flex-col flex-grow">
                 <span className="text-[10px] text-brand-accent-light font-black uppercase tracking-widest mb-4">{article.date}</span>
-                <Link to={`/blog/${article.id}`}>
+                <Link to={article.slug || `/blog/${article.id}`}>
                   <h2 className="text-xl font-bold text-white mb-4 group-hover:text-brand-accent-light transition-colors line-clamp-2 leading-tight">
                     {article.title}
                   </h2>
@@ -132,7 +150,7 @@ export default function BlogIndex() {
                   {article.excerpt}
                 </p>
                 <Link 
-                  to={`/blog/${article.id}`} 
+                  to={article.slug || `/blog/${article.id}`} 
                   className="mt-auto flex items-center gap-2 text-brand-accent-light text-[10px] font-black uppercase tracking-widest hover:gap-4 transition-all"
                 >
                   Leia mais <ChevronRight size={14} />
