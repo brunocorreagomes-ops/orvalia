@@ -16,6 +16,14 @@ const projects = [
     span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
   },
   {
+    title: "Ryna Hayashi. Posicionamento de Elite",
+    category: "Estratégia • Psicologia",
+    metric: "Atração de clientes de alto padrão sob demanda",
+    location: "São Paulo/BR",
+    image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp",
+    span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
+  },
+  {
     title: "Marta Ana Chiconato. Posicionamento Premium",
     category: "Estratégia • Terapia",
     metric: "Autoridade consolidada na RMC",

@@ -4,6 +4,14 @@ import { ChevronRight } from "lucide-react";
 
 const articles = [
   {
+    id: "geo-generative-engine-optimization-buscas-ia",
+    title: "O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA",
+    excerpt: "O Google mudou. Descubra por que as IAs já decidem quem domina o mercado e como posicionar sua empresa como a única recomendação possível.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
+    date: "26 Mai 2026",
+    slug: "/blog/geo-generative-engine-optimization-buscas-ia"
+  },
+  {
     id: "branding-indaiatuba",
     title: "Branding em Indaiatuba: Como construir uma marca forte com base em estratégia",
     excerpt: "Criar uma marca forte vai muito além de desenvolver um logotipo. Descubra os pilares fundamentais.",
