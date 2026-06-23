@@ -152,7 +152,7 @@ export default function BlogIndex() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24 selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-brand-bg pt-40 pb-20 px-8 md:px-24 selection:bg-brand-accent-light selection:text-brand-bg">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -160,11 +160,11 @@ export default function BlogIndex() {
       >
         <div className="mb-24 md:flex justify-between items-end gap-12">
           <div className="max-w-4xl">
-            <span className="text-gray-400 font-black uppercase tracking-[0.4em] text-[10px] block mb-6">Insights e Estratégia</span>
-            <h1 className="text-5xl md:text-8xl font-black text-black tracking-tighter mb-8 leading-[0.9]">
+            <span className="text-brand-accent-light font-mono font-black uppercase tracking-[0.4em] text-[10px] block mb-6">Insights e Estratégia</span>
+            <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[0.9] uppercase">
               Blog Orval'IA
             </h1>
-            <p className="text-gray-500 text-xl max-w-2xl leading-relaxed font-serif italic">
+            <p className="text-brand-secondary/80 text-xl max-w-2xl leading-relaxed font-serif italic">
               Explorando branding, tecnologia e design para transformar negócios em referências no digital.
             </p>
           </div>
@@ -181,9 +181,9 @@ export default function BlogIndex() {
             <motion.article 
               key={article.id}
               variants={itemVariants}
-              className="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
+              className="group flex flex-col bg-brand-card rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_0_50px_rgba(0,255,209,0.05)] transition-all duration-500 border border-white/5 hover:border-brand-accent-light/20"
             >
-              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-[4/3] overflow-hidden bg-gray-100">
+              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-[4/3] overflow-hidden bg-white/5">
                 <img 
                   src={article.image} 
                   alt={article.title} 
@@ -192,27 +192,27 @@ export default function BlogIndex() {
                 />
               </Link>
               <div className="p-10 flex flex-col flex-grow">
-                <span className="text-[10px] text-gray-400 font-mono uppercase tracking-[0.2em] mb-4 
-                               border border-gray-100 px-3 py-1 rounded-full w-fit">
+                <span className="text-[10px] text-brand-accent-light font-mono uppercase tracking-[0.2em] mb-4 
+                               border border-brand-accent-light/10 bg-brand-accent-light/5 px-3 py-1 rounded-full w-fit">
                   {article.date}
                 </span>
                 <Link to={article.slug || `/blog/${article.id}`} className="mb-4">
-                  <h2 className="text-xl md:text-2xl font-black text-black leading-tight group-hover:text-gray-600 transition-colors">
+                  <h2 className="text-xl md:text-2xl font-black text-white leading-tight group-hover:text-brand-accent-light transition-colors uppercase">
                     {article.title}
                   </h2>
                 </Link>
-                <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                <p className="text-brand-secondary/70 text-sm leading-relaxed mb-8 flex-grow">
                   {article.excerpt}
                 </p>
                 <Link 
                   to={article.slug || `/blog/${article.id}`} 
                   className="mt-auto flex items-center justify-between w-full
-                             text-black text-[10px] font-black uppercase tracking-[0.2em] 
-                             pt-6 border-t border-gray-100 group-hover:border-black/10 transition-colors"
+                             text-white text-[10px] font-black uppercase tracking-[0.2em] 
+                             pt-6 border-t border-white/5 group-hover:border-brand-accent-light/20 transition-colors"
                 >
                   <span>Ler Artigo</span>
-                  <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center
-                                group-hover:bg-black group-hover:border-black group-hover:text-white transition-all">
+                  <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center
+                                group-hover:bg-brand-accent-light group-hover:border-brand-accent-light group-hover:text-brand-bg transition-all">
                     <ChevronRight size={14} />
                   </div>
                 </Link>

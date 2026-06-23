@@ -203,40 +203,43 @@ export default function Projects() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="col-span-4 lg:col-span-12 mt-20 p-8 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-brand-accent-light text-center border border-white/10 relative overflow-hidden group shadow-[0_0_80px_rgba(0,255,209,0.15)]"
+            className="col-span-4 lg:col-span-12 mt-20 p-8 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-brand-card text-center border border-brand-accent-light/20 relative overflow-hidden group shadow-[0_0_50px_rgba(0,255,209,0.03)]"
           >
             <div className="relative z-10">
                <motion.div 
                  initial={{ opacity: 0, y: 20 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  transition={{ delay: 0.2 }}
-                 className="inline-block px-4 py-1.5 bg-brand-bg/10 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] text-brand-bg/60 mb-8"
+                 className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light mb-8"
                >
                  Inicie sua transformação
                </motion.div>
                
-              <h3 className="text-4xl md:text-7xl font-black text-brand-bg tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-                 Gostou dos <br className="hidden md:block" /> <span className="text-white">Resultados?</span>
+              <h3 className="text-4xl md:text-7xl font-black text-white tracking-ultra-tight uppercase mb-8 leading-[0.9]">
+                 Gostou dos <br className="hidden md:block" /> <span className="text-gradient">Resultados?</span>
                </h3>
                
-               <p className="text-brand-bg/90 text-lg md:text-2xl font-serif italic mb-12 max-w-2xl mx-auto leading-tight">
-                 "O posicionamento de elite não é sobre ser visto, é sobre ser desejado pelo valor que você entrega."
+               <p className="text-slate-300 text-lg md:text-2xl font-sans font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                 O posicionamento de elite não é sobre ser visto, é sobre ser desejado pelo valor que você entrega.
                </p>
                
                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                  <motion.a 
-                   href="https://wa.me/5511978959567?text=Olá!%20Acabei%20de%20ver%20os%20cases%20da%20agência%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+                   href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
                    target="_blank"
                    rel="noopener noreferrer"
-                   whileHover={{ scale: 1.05 }}
+                   whileHover={{ 
+                     scale: 1.05,
+                     boxShadow: "0 0 30px rgba(0, 255, 209, 0.3)"
+                   }}
                    whileTap={{ scale: 0.95 }}
-                   className="group relative inline-flex items-center gap-6 bg-brand-bg text-brand-accent-light px-12 md:px-18 py-6 md:py-8 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-2xl hover:shadow-[0_0_50px_rgba(0,0,0,0.3)] transition-all"
+                   className="group relative inline-flex items-center gap-6 bg-brand-accent-light text-brand-bg px-12 md:px-18 py-6 md:py-8 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-2xl transition-all"
                  >
                    <span>Seja o próximo Case</span>
                    <ArrowUpRight size={22} className="group-hover:rotate-45 transition-transform" />
                  </motion.a>
                  
-                 <span className="font-mono text-[9px] text-brand-bg/40 uppercase tracking-widest">
+                 <span className="font-mono text-[9px] text-brand-secondary/60 uppercase tracking-widest">
                    Consultoria Grátis inclusa
                  </span>
                </div>

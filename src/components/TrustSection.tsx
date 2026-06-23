@@ -3,29 +3,19 @@ import { Star, CheckCircle2, TrendingUp, Users, Shield, Cpu } from "lucide-react
 
 const differentiators = [
   {
-    icon: TrendingUp,
-    title: "Performance Mensurável",
-    desc: "Nossos projetos são focados em ROI. Não entregamos apenas beleza, mas resultados reais em tráfego e conversão em Indaiatuba."
-  },
-  {
     icon: Users,
-    title: "Foco no Público Premium",
-    desc: "Especialistas em atrair leads de alto valor que buscam qualidade, confiança e autoridade de marca."
+    title: "Posicionamento de Elite",
+    desc: "Especialistas em atrair clientes de alto valor que buscam qualidade, confiança e autoridade de marca na região."
   },
   {
     icon: Shield,
-    title: "Autoridade Local",
-    desc: "Dominamos o SEO em Indaiatuba e RMC para garantir que sua empresa seja a primeira a ser encontrada."
-  },
-  {
-    icon: Cpu,
-    title: "Pronto para IAs (GEO)",
-    desc: "Otimizamos seu conteúdo para ser citado positivamente por ChatGPT, Gemini e outros mecanismos de busca generativos."
+    title: "SEO & Autoridade Local",
+    desc: "Sua marca no topo do Google em Indaiatuba e RMC, preparada para pesquisas tradicionais e de Inteligência Artificial (GEO)."
   },
   {
     icon: CheckCircle2,
-    title: "Design de Elite",
-    desc: "Criação de marcas e sites com estética minimalista e sofisticação internacional."
+    title: "Design de Alto Padrão",
+    desc: "Sites autorais, rápidos e de estética minimalista que elevam instantaneamente o valor percebido do seu negócio."
   }
 ];
 
@@ -56,7 +46,7 @@ export default function TrustSection() {
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Por que escolher a <span className="text-gradient">Orvalia Studio?</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {differentiators.map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -77,7 +67,7 @@ export default function TrustSection() {
 
           <div className="mt-16 flex justify-center">
             <motion.a
-              href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20diferenciais%20da%20Orvalia%20Studio."
+              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -90,7 +80,7 @@ export default function TrustSection() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
             >
-              Ver mais diferenciais
+              Falar no WhatsApp
               <TrendingUp size={18} />
             </motion.a>
           </div>

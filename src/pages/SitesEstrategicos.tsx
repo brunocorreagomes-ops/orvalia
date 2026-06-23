@@ -3,8 +3,8 @@ import { ArrowRight, CheckCircle2, MessageSquare, Target, Zap, TrendingUp, BarCh
 import { Link } from "react-router-dom";
 
 const stats = [
-  { num: "+200%", label: "crescimento médio em presença digital" },
-  { num: "3×", label: "mais engajamento após lançamento" }
+  { num: "100%", label: "foco em conversão e experiência de usuário" },
+  { num: "24/7", label: "sua marca gerando confiança e leads" }
 ];
 
 const problems = [
@@ -66,12 +66,12 @@ export default function SitesEstrategicos() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <a 
-                    href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20um%20diagnóstico%20gratuito%20do%20meu%20site%20e%20entender%20como%20melhorar%20minha%20performance%20digital." 
+                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-10 py-5 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-all text-center flex items-center justify-center gap-3"
                   >
-                    Quero um diagnóstico gratuito
+                    Quero meu diagnóstico gratuito
                     <Zap size={16} />
                   </a>
                   <a 
@@ -82,7 +82,7 @@ export default function SitesEstrategicos() {
                   </a>
                 </div>
                 <p className="mt-8 font-mono text-[10px] text-brand-secondary/60 uppercase tracking-widest italic">
-                  +50 projetos entregues · Foco em resultado · Atendimento na região
+                  Projetos Autorais · Foco em Percepção de Valor · Atendimento na Região
                 </p>
               </motion.div>
             </div>
@@ -278,13 +278,13 @@ export default function SitesEstrategicos() {
               Todo dia que sua empresa não aparece no Google, você perde clientes para quem já entendeu o jogo digital.
             </p>
             <a 
-              href="https://wa.me/5511978959567?text=Olá!%20Vi%20a%20página%20de%20Sites%20Estratégicos%20e%20gostaria%20de%20iniciar%20um%20projeto."
+              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all hover:scale-105 shadow-xl shadow-brand-accent-light/20"
             >
               <MessageSquare size={20} />
-              Iniciar Projeto via WhatsApp
+              Solicitar diagnóstico gratuito
             </a>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function SitesEstrategicos() {
                 Solicitar via E-mail
               </a>
               <a 
-                href="https://wa.me/5511978959567?text=Olá!%20Vi%20a%20página%20de%20Sites%20Estratégicos%20e%20gostaria%20de%20falar%20com%20um%20especialista." 
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-12 py-6 border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all flex items-center justify-center gap-3"

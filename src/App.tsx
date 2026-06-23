@@ -115,7 +115,7 @@ export default function App() {
         
         {/* Floating WhatsApp Action */}
         <motion.a
-          href="https://wa.me/5511978959567?text=Olá,%20vim%20através%20do%20site%20Orvalia%20e%20gostaria%20de%20maiores%20informações"
+          href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Entre em contato pelo WhatsApp"

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight, HelpCircle } from "lucide-react";
 import { useEffect } from "react";
 import ShareButton from "../../components/ShareButton";
+import BlogCTA from "../../components/BlogCTA";
 
 export default function ArticleNewGEO() {
   useEffect(() => {
@@ -171,29 +172,7 @@ export default function ArticleNewGEO() {
         </div>
 
         <footer className="mt-32">
-          <motion.div 
-            whileHover={{ y: -10 }}
-            className="p-12 md:p-20 rounded-[4rem] bg-white border border-gray-100 text-center shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden"
-          >
-            <div className="relative z-10">
-              <h3 className="text-3xl md:text-5xl font-black text-black tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-                Sua marca já é reconhecida<br />
-                <span className="text-gray-300">pela Inteligência Artificial?</span>
-              </h3>
-              <p className="text-gray-500 mb-12 max-w-xl mx-auto font-serif italic text-lg">
-                Descubra como o GEO e o Branding Premium podem isolar sua empresa da concorrência tradicional.
-              </p>
-              <a 
-                href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20GEO%20e%20Buscas%20por%20IA%20e%20gostaria%20de%20agendar%20uma%20consultoria."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-4 bg-black text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
-              >
-                Agendar Consultoria Estratégica <ArrowRight size={18} />
-              </a>
-            </div>
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-accent-light/5 blur-[60px] rounded-full" />
-          </motion.div>
+          <BlogCTA articleTitle="O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA" />
         </footer>
       </div>
     </article>

@@ -26,6 +26,7 @@ export default function Footer() {
                 { name: "Planos", href: "/#precos" },
                 { name: "Blog", href: "/blog" },
                 { name: "Agência Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
+                { name: "Falar no WhatsApp", href: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:", isExternal: true },
               ].map(item => (
                 <li key={item.name}>
                   {item.isLink ? (
@@ -33,6 +34,11 @@ export default function Footer() {
                       {item.name}
                       <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
+                  ) : item.isExternal ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-xs font-black uppercase tracking-widest text-brand-accent-light hover:text-white transition-colors flex items-center gap-2 group">
+                      {item.name}
+                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
                   ) : (
                     <a href={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
                       {item.name}
@@ -75,16 +81,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12">
+         <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="flex flex-col md:flex-row items-center gap-6">
-               <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO — DESIGN & ESTRATÉGIA</span>
+               <span className="font-mono text-[8px] text-brand-secondary/80 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO — DESIGN & ESTRATÉGIA</span>
                <div className="hidden md:block w-[1px] h-4 bg-white/5" />
                {/* [4 — FOOTER COM NAP] LOCAL SEO */}
                <div className="flex flex-col gap-1 items-center md:items-start">
-                 <span className="font-mono text-[8px] text-brand-secondary/40 uppercase tracking-widest leading-relaxed">
+                 <span className="font-mono text-[8px] text-brand-secondary/80 uppercase tracking-widest leading-relaxed">
                    Indaiatuba, SP — Região Metropolitana de Campinas
                  </span>
-                 <span className="font-mono text-[8px] text-brand-secondary/60 uppercase tracking-widest">
+                 <span className="font-mono text-[8px] text-brand-secondary/90 uppercase tracking-widest">
                    Agência de Branding em Indaiatuba | Atendemos toda a RMC: Campinas, Jundiaí, Itu e região
                  </span>
                </div>

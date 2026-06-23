@@ -37,7 +37,7 @@ export default function AgenciaIndaiatuba() {
             <div className="col-span-4 lg:col-span-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-[1px] bg-brand-accent-light" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Presença Local</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Estratégia local com foco no público de Indaiatuba</span>
               </div>
               <h1 className="responsive-title font-sans font-black text-white leading-[0.85] tracking-ultra-tight uppercase mb-8">
                 Agência de Branding e <br /> <span className="text-gradient">Sites em Indaiatuba</span>
@@ -47,10 +47,10 @@ export default function AgenciaIndaiatuba() {
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <a 
-                  href="https://wa.me/5511978959567?text=Olá!%20Sou%20de%20Indaiatuba/RMC%20e%20gostaria%20de%20um%20diagnóstico%20gratuito%20pela%20Orvalia."
+                  href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
                   className="px-10 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-accent-light/20 flex items-center justify-center gap-3"
                 >
-                  Solicitar Diagnóstico Gratuito
+                  Solicitar diagnóstico gratuito
                   <ArrowUpRight size={18} />
                 </a>
                 <a 
@@ -170,24 +170,24 @@ export default function AgenciaIndaiatuba() {
               <div className="space-y-12 mt-16 text-left">
                 {[
                   {
-                    q: "Por que escolher uma agência de branding local em Indaiatuba?",
-                    a: "Ter uma agência local facilita o alinhamento estratégico, reuniões presenciais periódicas e um entendimento profundo do comportamento do consumidor na Região Metropolitana de Campinas (RMC)."
+                    q: "Como funciona o branding em Indaiatuba para atrair clientes premium?",
+                    a: "O branding em Indaiatuba foca em criar um posicionamento estratégico que se destaca da concorrência local. Ajustamos a narrativa de marca, a identidade visual e a comunicação para atrair um público regional exigente e de alto padrão."
                   },
                   {
-                    q: "Como minha empresa pode aparecer no Google em Indaiatuba?",
-                    a: "Utilizamos técnicas avançadas de SEO Local e GEO (Generative Engine Optimization). Otimizamos seu Google Meu Negócio e criamos sites com arquitetura semântica que o Google e as IAs adoram."
+                    q: "Qual a importância de trabalhar o SEO em Indaiatuba?",
+                    a: "A nossa estratégia de SEO em Indaiatuba garante que sua empresa apareça no topo das buscas orgânicas quando potenciais clientes procurarem por seus serviços. Otimizamos sua presença para buscas locais e para respostas em inteligências artificiais de última geração (GEO)."
                   },
                   {
-                    q: "Qual o benefício de um site de alta performance para meu negócio?",
-                    a: "Sites rápidos e otimizados convertem até 4x mais. Em mercados competitivos como Indaiatuba e Campinas, a velocidade e a clareza da oferta são os principais diferenciais entre um lead e um clique perdido."
+                    q: "Qual o diferencial da Orvalia em relação a uma agência de marketing em Indaiatuba tradicional?",
+                    a: "Não somos apenas uma agência de marketing em Indaiatuba focada em postagens genéricas. Somos uma boutique de branding e desenvolvimento de sites premium, focada em criar ativos digitais permanentes e estratégicos que geram conversão real."
                   },
                   {
-                    q: "Quanto tempo leva para ver resultados com branding e SEO?",
-                    a: "O branding tem impacto imediato na percepção de valor. Já o SEO é um trabalho de médio prazo, mas com as nossas técnicas de GEO e otimização local, muitas empresas começam a notar aumento relevante de tráfego e leads qualificados entre os primeiros 60 a 90 dias."
+                    q: "Como um site de alta performance melhora a conversão?",
+                    a: "Sites rápidos e persuasivos evitam a perda de visitantes. Em mercados dinâmicos como Indaiatuba, Itu, Salto e Campinas, a velocidade extrema aliada a uma proposta de valor clara transforma cliques em contatos reais."
                   },
                   {
-                    q: "A Orvalia Studio atende outros municípios além de Indaiatuba?",
-                    a: "Sim, somos uma agência com DNA regional forte. Atendemos com excelência empresas em Campinas, Salto, Itu, Americana e toda a Região Metropolitana de Campinas (RMC), além de projetos selecionados em todo o Brasil."
+                    q: "A agência atende outras cidades além de Indaiatuba?",
+                    a: "Sim. Atendemos empresas de destaque em Campinas, Salto, Itu, Sorocaba e toda a Região Metropolitana de Campinas (RMC), garantindo proximidade e alinhamento estratégico contínuo."
                   }
                 ].map((faq, idx) => (
                   <div key={idx} className="group">
