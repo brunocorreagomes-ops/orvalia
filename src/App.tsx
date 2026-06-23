@@ -50,6 +50,22 @@ function NotFound() {
   );
 }
 
+function ElifeRedirect() {
+  useEffect(() => {
+    window.location.href = "/clientes/elife/index.html";
+  }, []);
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-brand-bg text-white">
+      <div className="text-center">
+        <div className="w-12 h-12 rounded-full border-2 border-brand-accent-light/20 border-t-brand-accent-light animate-spin mx-auto mb-6"></div>
+        <p className="font-mono text-xs uppercase tracking-widest text-brand-accent-light animate-pulse">
+          Carregando Report Executivo...
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function BackToTop() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -147,6 +163,9 @@ export default function App() {
           <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
           <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
           <Route path="/solucoes/:slug" element={<MarketingLandingPage />} />
+          <Route path="/clientes/elife" element={<ElifeRedirect />} />
+          <Route path="/clientes/elife/" element={<ElifeRedirect />} />
+          <Route path="/clientes/elife/index.html" element={<ElifeRedirect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
