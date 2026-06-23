@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Executivo | Projeto Elife • Orvalia Studio</title>
+    <title>Report Executivo | Elife Fitness • Orvalia Studio</title>
     <!-- Tailwind CSS para estilização premium -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter para o corpo, Space Grotesk para títulos, JetBrains Mono para código/dados -->
@@ -40,287 +40,308 @@
             color: #f8fafc;
         }
         .text-gradient {
-            background: linear-gradient(135deg, #ffffff 30%, #00ffd1 100%);
+            background: linear-gradient(135deg, #ffffff 40%, #00ffd1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .custom-glow {
-            box-shadow: 0 0 50px rgba(0, 255, 209, 0.05);
-        }
-        .border-gradient {
-            border-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(0, 255, 209, 0.1), rgba(255, 255, 255, 0.05)) 1;
+            box-shadow: 0 0 50px rgba(0, 255, 209, 0.04);
         }
     </style>
 </head>
 <body class="min-h-screen selection:bg-brand-accent selection:text-brand-bg font-sans antialiased">
 
     <!-- Top Glow Element -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[radial-gradient(circle_at_top,rgba(0,255,209,0.06)_0%,transparent_70%)] pointer-events-none z-0"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[radial-gradient(circle_at_top,rgba(0,255,209,0.05)_0%,transparent_70%)] pointer-events-none z-0"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-20">
         
-        <!-- Header / Navigation info -->
-        <header class="flex flex-col md:flex-row md:items-center md:justify-between pb-12 border-b border-white/5 mb-16 gap-6">
+        <!-- Header / Logo -->
+        <header class="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-white/5 mb-12 gap-6">
             <div class="flex items-center gap-4">
                 <div class="w-3 h-3 rounded-full bg-brand-accent animate-pulse"></div>
                 <div>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent">Ambiente de Governança</span>
-                    <h1 class="font-space text-lg font-bold text-white tracking-tight uppercase">Orvalia Studio</h1>
+                    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent">Report de Alinhamento</span>
+                    <h1 class="font-space text-base font-bold text-white tracking-tight uppercase">Orvalia Studio</h1>
                 </div>
             </div>
-            <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
-                <span class="px-3 py-1.5 rounded-full bg-white/[0.02] border border-white/5 text-brand-textMuted">CÓDIGO: <strong class="text-white">ORV-ELF-2026</strong></span>
-                <span class="px-3 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent font-semibold uppercase tracking-wider">Fase de Homologação</span>
+            <div class="flex items-center gap-4 text-xs font-mono">
+                <span class="px-3 py-1.5 rounded-full bg-white/[0.02] border border-white/5 text-brand-textMuted">DATA: <strong class="text-white">23/06/2026</strong></span>
+                <span class="px-3 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent font-semibold uppercase tracking-wider">Documento Consultivo</span>
             </div>
         </header>
 
-        <!-- Main Executive Summary Block -->
-        <main class="space-y-16">
+        <!-- Main Content -->
+        <main class="space-y-12">
             
             <!-- Document Meta Info & Client Identification -->
-            <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-8 space-y-6">
-                    <span class="font-mono text-xs uppercase tracking-[0.25em] text-brand-accent">Report de Acompanhamento</span>
-                    <h2 class="font-space text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight uppercase">
-                        Acompanhamento Executivo <br>
-                        <span class="text-gradient">Projeto Elife</span>
-                    </h2>
-                    <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-3xl font-light">
-                        Este documento apresenta o status consolidado de evolução das entregas do ecossistema digital da <strong class="text-white font-medium">Elife</strong>. O projeto contempla o alinhamento da presença de marca, desenvolvimento de plataformas web sob medida e otimizações técnicas para suporte a canais institucionais corporativos.
-                    </p>
+            <section class="space-y-6">
+                <span class="font-mono text-xs uppercase tracking-[0.25em] text-brand-accent">Acompanhamento Consultivo</span>
+                <h2 class="font-space text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight uppercase">
+                    Report Executivo <br>
+                    <span class="text-gradient">— Elife Fitness</span>
+                </h2>
+                <p class="font-mono text-xs md:text-sm text-brand-accent/80 font-medium">
+                    O que foi definido, próximos passos e informações necessárias
+                </p>
+            </section>
+
+            <!-- Resumo Executivo -->
+            <section class="bg-white/[0.01] border border-white/5 rounded-[2rem] p-6 md:p-10 custom-glow space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-5 bg-brand-accent rounded-full"></div>
+                    <h3 class="font-space text-lg font-bold uppercase tracking-tight text-white">Resumo Executivo</h3>
+                </div>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed font-light">
+                    Nossa prioridade neste momento é <strong class="text-white font-semibold">organizar a base digital e comercial da Elife</strong>, reduzindo de forma inteligente a dispersão entre múltiplos links para centralizar as vendas e a autoridade da marca. 
+                </p>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed font-light">
+                    Estruturaremos o <strong class="text-white font-semibold">site como a central oficial da marca</strong>, mantendo o <strong class="text-white font-semibold">Vendizap como catálogo operacional</strong> principal integrado. Em paralelo, iniciaremos o planejamento da estratégia de comunicação com suporte direto da <strong class="text-white font-semibold">Eliana Digital</strong> para dar corpo e consistência à marca nas redes.
+                </p>
+            </section>
+
+            <!-- Grid: Discussed & Defined -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- O que foi discutido -->
+                <div class="bg-brand-card rounded-[2rem] p-6 md:p-8 border border-white/5 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-5 bg-slate-500 rounded-full"></div>
+                            <h3 class="font-space text-base font-bold uppercase tracking-tight text-white">O que foi discutido</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Site como central oficial da marca:</strong> Concentrar os acessos em um único endereço profissional.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Vendizap como catálogo operacional:</strong> Preservar a ferramenta que o cliente já usa para gerenciar pedidos de forma integrada.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Novas categorias de vendas:</strong> Criar seções como “Últimas Peças” ou “Seleção Especial” no Vendizap para girar o estoque parado de forma ágil.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Eliminação futura do Canva:</strong> Descontinuar o uso de PDF separado no Canva para evitar links dispersos e informações desatualizadas.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Organização lógica:</strong> Estruturar produtos em categorias limpas e intuitivas para o cliente.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Presença nas redes:</strong> Definir a comunicação contínua durante o processo de construção do site.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Eliana Digital:</strong> Realizar testes estruturados de comunicação utilizando a Eliana Digital.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- O que foi definido -->
+                <div class="bg-brand-card rounded-[2rem] p-6 md:p-8 border border-white/5 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-5 bg-brand-accent rounded-full"></div>
+                            <h3 class="font-space text-base font-bold uppercase tracking-tight text-white">O que foi definido</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Site institucional:</strong> Decidido pelo desenvolvimento do site como a nova central oficial da marca.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Vendizap mantido:</strong> Manter a operação comercial através do Vendizap inicialmente, simplificando a transição.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Categoria estratégica:</strong> Avaliar a criação da categoria “Últimas Peças” para movimentar peças específicas.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Análise do catálogo:</strong> Fazer uma varredura completa nos cadastros existentes antes de qualquer reorganização de categorias.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Estratégia de conteúdo:</strong> Iniciar imediatamente o planejamento dos conteúdos iniciais de marca.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                <span><strong>Alinhamento visual:</strong> Estruturar e consolidar a base visual para a Eliana Digital.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- O que preciso receber da cliente -->
+            <section class="bg-brand-card rounded-[2rem] p-6 md:p-10 border border-brand-accent/20 ring-1 ring-brand-accent/5 space-y-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-5 bg-brand-accent rounded-full"></div>
+                    <h3 class="font-space text-lg font-bold uppercase tracking-tight text-white">O que preciso receber da cliente</h3>
                 </div>
                 
-                <div class="lg:col-span-4 bg-brand-card rounded-3xl p-8 border border-white/5 space-y-6 custom-glow">
-                    <h3 class="font-space text-xs uppercase tracking-widest text-white/40 font-bold">Metadados do Projeto</h3>
-                    <div class="space-y-4 font-mono text-xs">
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-slate-400">CLIENTE:</span>
-                            <span class="text-white font-bold">ELIFE GROUP</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-slate-400">DATA DE EMISSÃO:</span>
-                            <span class="text-white">23 JUN 2026</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-slate-400">SITUAÇÃO GERAL:</span>
-                            <span class="text-brand-accent font-bold">EM CRONOGRAMA</span>
-                        </div>
-                        <div class="flex justify-between py-2">
-                            <span class="text-slate-400">RESPONSÁVEL:</span>
-                            <span class="text-white">B. GOMES (ORVALIA)</span>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Acessos e Dados -->
+                    <div class="space-y-4">
+                        <h4 class="font-space text-xs uppercase tracking-widest text-slate-400 font-bold">Acessos e Dados Básicos</h4>
+                        <ul class="space-y-3 text-xs md:text-sm text-slate-300 font-light">
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Acesso operacional ao Vendizap</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Dados do domínio no Registro.br</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Produtos já cadastrados no Vendizap</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Informações de Estoque & Peças -->
+                    <div class="space-y-4">
+                        <h4 class="font-space text-xs uppercase tracking-widest text-slate-400 font-bold">Inventário de Peças</h4>
+                        <ul class="space-y-3 text-xs md:text-sm text-slate-300 font-light">
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Peças ainda não cadastradas (Produto, cor, tamanho, quantidade e valor)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Mapeamento de produtos mais vendidos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Listagem de produtos com maior estoque parado</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Materiais de Mídia -->
+                    <div class="space-y-4 md:col-span-2">
+                        <h4 class="font-space text-xs uppercase tracking-widest text-slate-400 font-bold">Imagens e Criativos</h4>
+                        <ul class="space-y-3 text-xs md:text-sm text-slate-300 font-light">
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Fotos da Eliana para os canais institucionais</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Fotos de produtos de alta qualidade</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <input type="checkbox" disabled class="rounded border-white/20 bg-white/5 text-brand-accent focus:ring-brand-accent w-4 h-4" />
+                                <span>Logotipos originais e materiais visuais existentes</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Project Progress / Timeline Tracker -->
-            <section class="space-y-8 pt-12 border-t border-white/5">
-                <div class="flex items-center gap-3">
-                    <div class="w-1.5 h-6 bg-brand-accent rounded-full"></div>
-                    <h3 class="font-space text-xl font-bold uppercase tracking-tight text-white">Cronograma e Fases de Evolução</h3>
-                </div>
+            <!-- Próximas etapas da Orvalia & Cronograma -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-white/5">
                 
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                    <!-- Step 1 -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-40">
-                        <div class="flex justify-between items-start">
-                            <span class="font-mono text-[10px] text-white/40">FASE 01</span>
-                            <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[9px] uppercase">Concluído</span>
-                        </div>
-                        <div>
-                            <h4 class="font-space text-sm font-bold text-white uppercase mb-1">Diagnóstico</h4>
-                            <p class="text-xs text-slate-400 font-light">Mapeamento de requisitos, arquitetura de fluxos e alinhamento.</p>
-                        </div>
+                <!-- Próximas etapas -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-5 bg-brand-accent rounded-full"></div>
+                        <h3 class="font-space text-lg font-bold uppercase tracking-tight text-white">Próximas etapas da Orvalia</h3>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-40">
-                        <div class="flex justify-between items-start">
-                            <span class="font-mono text-[10px] text-white/40">FASE 02</span>
-                            <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[9px] uppercase">Concluído</span>
-                        </div>
-                        <div>
-                            <h4 class="font-space text-sm font-bold text-white uppercase mb-1">Direção de Arte</h4>
-                            <p class="text-xs text-slate-400 font-light">Definição conceitual, guias visuais e tipografia de marca.</p>
-                        </div>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-accent/20 flex flex-col justify-between h-40 ring-1 ring-brand-accent/10">
-                        <div class="flex justify-between items-start">
-                            <span class="font-mono text-[10px] text-brand-accent">FASE 03</span>
-                            <span class="px-2 py-0.5 rounded bg-brand-accent/10 border border-brand-accent/20 text-brand-accent font-mono text-[9px] uppercase">Em Execução</span>
-                        </div>
-                        <div>
-                            <h4 class="font-space text-sm font-bold text-white uppercase mb-1">Interfaces Web</h4>
-                            <p class="text-xs text-slate-400 font-light">Desenvolvimento do front-end e codificação das seções.</p>
-                        </div>
-                    </div>
-                    <!-- Step 4 -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-40 opacity-60">
-                        <div class="flex justify-between items-start">
-                            <span class="font-mono text-[10px] text-white/40">FASE 04</span>
-                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/40 font-mono text-[9px] uppercase">A Iniciar</span>
-                        </div>
-                        <div>
-                            <h4 class="font-space text-sm font-bold text-white uppercase mb-1">Otimização SEO</h4>
-                            <p class="text-xs text-slate-400 font-light">Indexação semântica estruturada e velocidade extrema.</p>
-                        </div>
-                    </div>
-                    <!-- Step 5 -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-40 opacity-60">
-                        <div class="flex justify-between items-start">
-                            <span class="font-mono text-[10px] text-white/40">FASE 05</span>
-                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/40 font-mono text-[9px] uppercase">A Iniciar</span>
-                        </div>
-                        <div>
-                            <h4 class="font-space text-sm font-bold text-white uppercase mb-1">Implantação</h4>
-                            <p class="text-xs text-slate-400 font-light">Publicação em produção, testes Finais e homologação DNS.</p>
-                        </div>
-                    </div>
+                    <ul class="space-y-4 text-xs md:text-sm text-slate-300 font-light">
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">A.</span>
+                            <span>Análise detalhada do catálogo e configurações do Vendizap.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">B.</span>
+                            <span>Proposta de uma nova estruturação lógica de categorias.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">C.</span>
+                            <span>Mapeamento de produtos estratégicos e de alto giro.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">D.</span>
+                            <span>Início do desenvolvimento da primeira versão (esboço) do novo site.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">E.</span>
+                            <span>Planejamento das linhas editoriais de conteúdos iniciais.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-mono text-brand-accent text-xs">F.</span>
+                            <span>Criação da base de diretrizes visuais da Eliana Digital.</span>
+                        </li>
+                    </ul>
                 </div>
-            </section>
 
-            <!-- Detailed Deliverables Breakdown -->
-            <section class="space-y-8 pt-12 border-t border-white/5">
-                <div class="flex items-center gap-3">
-                    <div class="w-1.5 h-6 bg-brand-accent rounded-full"></div>
-                    <h3 class="font-space text-xl font-bold uppercase tracking-tight text-white">Detalhamento Técnico das Entregas</h3>
-                </div>
-                
-                <div class="space-y-4">
-                    <!-- Delivery Item 1 -->
-                    <div class="bg-brand-card rounded-2xl p-6 md:p-8 border border-white/5 hover:border-white/10 transition-all duration-300">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-8 h-8 rounded-lg bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent font-mono text-xs">01</div>
-                                <h4 class="font-space text-base md:text-lg font-bold text-white uppercase">Alinhamento de Marca e Arquitetura Conceitual</h4>
+                <!-- Cronograma -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-5 bg-brand-accent rounded-full"></div>
+                        <h3 class="font-space text-lg font-bold uppercase tracking-tight text-white">Cronograma Geral</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="relative pl-6 border-l border-white/10 space-y-4">
+                            <!-- Milestone 1 -->
+                            <div class="relative">
+                                <div class="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-brand-accent border-2 border-brand-bg"></div>
+                                <span class="font-mono text-[10px] uppercase text-brand-accent block mb-1">Fase Inicial (Agora)</span>
+                                <h4 class="font-space text-xs md:text-sm font-bold text-white uppercase mb-1">Coleta de acessos e dados</h4>
+                                <p class="text-xs text-slate-400 font-light">Período de recepção de acessos ao Vendizap e ativos visuais.</p>
                             </div>
-                            <span class="self-start md:self-auto px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[10px] uppercase tracking-wider rounded-full">100% Validado</span>
-                        </div>
-                        <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
-                            Consolidação da narrativa de posicionamento digital e reestruturação da arquitetura de informação. Mapeamento completo dos canais de captação institucional para assegurar uma comunicação corporativa consistente e livre de ruídos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-mono text-slate-400">
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">Narrativa de Marca</span>
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">Wireframe de Fluxo</span>
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">Estrutura de Conteúdo</span>
-                        </div>
-                    </div>
-
-                    <!-- Delivery Item 2 -->
-                    <div class="bg-brand-card rounded-2xl p-6 md:p-8 border border-brand-accent/20 flex flex-col justify-between hover:border-brand-accent/30 transition-all duration-300 ring-1 ring-brand-accent/5">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-8 h-8 rounded-lg bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent font-mono text-xs">02</div>
-                                <h4 class="font-space text-base md:text-lg font-bold text-white uppercase">Desenvolvimento da Landing Page & Sistema Web</h4>
+                            <!-- Milestone 2 -->
+                            <div class="relative">
+                                <div class="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-white/20 border-2 border-brand-bg"></div>
+                                <span class="font-mono text-[10px] uppercase text-slate-500 block mb-1">Semana 1</span>
+                                <h4 class="font-space text-xs md:text-sm font-bold text-white uppercase mb-1">Análise do Vendizap e estruturação</h4>
+                                <p class="text-xs text-slate-400 font-light">Estudo de usabilidade, mapeamento e definição da arquitetura do site.</p>
                             </div>
-                            <span class="self-start md:self-auto px-3 py-1 bg-brand-accent/10 border border-brand-accent/20 text-brand-accent font-mono text-[10px] uppercase tracking-wider rounded-full font-bold">85% Codificado</span>
-                        </div>
-                        <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
-                            Implementação do código front-end utilizando as melhores práticas globais de desempenho. Desenvolvimento de layouts responsivos otimizados para dispositivos móveis, garantindo navegação fluida, tempos de carregamento mínimos e foco claro no direcionamento do usuário.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-mono">
-                            <span class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent rounded">Mobile-First UI</span>
-                            <span class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent rounded">Semantic HTML5</span>
-                            <span class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent rounded">Framer Motion Interaction</span>
-                        </div>
-                    </div>
-
-                    <!-- Delivery Item 3 -->
-                    <div class="bg-brand-card rounded-2xl p-6 md:p-8 border border-white/5 hover:border-white/10 transition-all duration-300 opacity-70">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/40 font-mono text-xs">03</div>
-                                <h4 class="font-space text-base md:text-lg font-bold text-white uppercase">SEO Semântico e Estruturação de Metadados</h4>
+                            <!-- Milestone 3 -->
+                            <div class="relative">
+                                <div class="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-white/20 border-2 border-brand-bg"></div>
+                                <span class="font-mono text-[10px] uppercase text-slate-500 block mb-1">Semanas 1–2</span>
+                                <h4 class="font-space text-xs md:text-sm font-bold text-white uppercase mb-1">Primeira versão do site</h4>
+                                <p class="text-xs text-slate-400 font-light">Desenvolvimento da base do site institucional integrado ao catálogo.</p>
                             </div>
-                            <span class="self-start md:self-auto px-3 py-1 bg-white/5 border border-white/10 text-white/40 font-mono text-[10px] uppercase tracking-wider rounded-full">Aguardando Fase Anterior</span>
-                        </div>
-                        <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
-                            Planejamento de marcações semânticas detalhadas para melhor posicionamento orgânico e indexação inteligente em mecanismos de busca convencionais e motores baseados em Inteligência Artificial (Generative Engine Optimization).
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-mono text-slate-400">
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">JSON-LD Schemas</span>
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">Meta-tags Otimizadas</span>
-                            <span class="px-2.5 py-1 bg-white/[0.02] border border-white/5 rounded">Local SEO Mapping</span>
+                            <!-- Milestone 4 -->
+                            <div class="relative">
+                                <div class="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-white/20 border-2 border-brand-bg"></div>
+                                <span class="font-mono text-[10px] uppercase text-slate-500 block mb-1">Após Validação</span>
+                                <h4 class="font-space text-xs md:text-sm font-bold text-white uppercase mb-1">Conteúdo e Eliana Digital</h4>
+                                <p class="text-xs text-slate-400 font-light">Criação de criativos, ajustes finos e primeiros testes da Eliana.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
-            <!-- Audit Quality KPI Control -->
-            <section class="space-y-8 pt-12 border-t border-white/5">
-                <div class="flex items-center gap-3">
-                    <div class="w-1.5 h-6 bg-brand-accent rounded-full"></div>
-                    <h3 class="font-space text-xl font-bold uppercase tracking-tight text-white">Mapeamento de Critérios de Qualidade</h3>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                    <div class="bg-brand-card p-8 rounded-3xl border border-white/5">
-                        <div class="font-space text-4xl font-black text-white mb-2">100%</div>
-                        <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-1">TypeScript Strict</div>
-                        <div class="text-xs text-brand-accent/80">Compilação sem erros</div>
-                    </div>
-                    <div class="bg-brand-card p-8 rounded-3xl border border-white/5">
-                        <div class="font-space text-4xl font-black text-white mb-2">95+</div>
-                        <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-1">Performance Alvo</div>
-                        <div class="text-xs text-emerald-400">Excelente (Core Web Vitals)</div>
-                    </div>
-                    <div class="bg-brand-card p-8 rounded-3xl border border-white/5">
-                        <div class="font-space text-4xl font-black text-white mb-2">Sim</div>
-                        <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-1">Responsivo</div>
-                        <div class="text-xs text-brand-accent/80">Suporte mobile nativo</div>
-                    </div>
-                    <div class="bg-brand-card p-8 rounded-3xl border border-white/5">
-                        <div class="font-space text-4xl font-black text-white mb-2">Ativo</div>
-                        <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-1">Deploy Pipeline</div>
-                        <div class="text-xs text-brand-accent/80">GitHub Actions CI/CD</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Status de Próximos Passos e Contato Técnico -->
-            <section class="bg-brand-card rounded-[2.5rem] p-8 md:p-12 border border-white/5 custom-glow space-y-8">
-                <div class="flex items-center gap-3">
-                    <div class="w-1.5 h-6 bg-brand-accent rounded-full"></div>
-                    <h3 class="font-space text-lg font-bold uppercase tracking-tight text-white">Próximos Passos e Homologação</h3>
-                </div>
-                
-                <ul class="space-y-4 text-sm text-slate-300 font-light">
-                    <li class="flex items-start gap-3">
-                        <div class="w-5 h-5 rounded-full bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-[10px] font-mono text-brand-accent shrink-0 mt-0.5">1</div>
-                        <span>Conclusão final das seções de interface (Fase 3) com validação de layouts mobile.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <div class="w-5 h-5 rounded-full bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-[10px] font-mono text-brand-accent shrink-0 mt-0.5">2</div>
-                        <span>Implementação de meta-tags otimizadas para motores de buscas locais de alta precisão.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <div class="w-5 h-5 rounded-full bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-[10px] font-mono text-brand-accent shrink-0 mt-0.5">3</div>
-                        <span>Geração de build final de produção e início dos testes de performance em ambiente de homologação.</span>
-                    </li>
-                </ul>
-
-                <div class="pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-                    <div class="text-left">
-                        <span class="text-[9px] font-mono text-brand-secondary/40 uppercase block">Suporte e Alinhamento Direto</span>
-                        <span class="text-xs font-mono text-slate-400">Dúvidas técnicas ou solicitações de ajuste:</span>
-                    </div>
-                    <a 
-                        href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Estou%20visualizando%20o%20report%20executivo%20da%20Elife%20e%20gostaria%20de%20esclarecer%20uma%20dúvida."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="px-6 py-3 bg-white/[0.02] border border-white/10 hover:border-brand-accent/35 hover:bg-white/[0.04] transition-all rounded-full text-xs font-mono font-bold text-white flex items-center justify-center gap-2"
-                    >
-                        <span>Contatar Coordenação de Projeto</span>
-                    </a>
-                </div>
+            <!-- Objetivo Final -->
+            <section class="bg-brand-card rounded-[2rem] p-6 md:p-10 border border-white/5 text-center space-y-4">
+                <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent">Alvo do Projeto</span>
+                <h3 class="font-space text-xl md:text-2xl font-bold uppercase text-white tracking-tight">Objetivo Desta Etapa</h3>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-light">
+                    Organizar com precisão a base digital e comercial da <strong class="text-white font-medium">Elife</strong> para que a marca passe a ter uma presença digital mais clara, altamente profissional e estruturalmente preparada para o crescimento sustentável.
+                </p>
             </section>
 
         </main>
 
-        <!-- Footer block -->
-        <footer class="mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-brand-secondary/40 gap-4 text-center sm:text-left">
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-brand-secondary/40 gap-4 text-center sm:text-left">
             <span>© 2026 Orvalia Studio. Todos os direitos reservados.</span>
-            <span>Documento interno restrito para consulta do cliente.</span>
+            <span>Documento estratégico restrito para alinhamento entre agência e cliente.</span>
         </footer>
 
     </div>
