@@ -68,16 +68,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center mb-16"
+            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center mb-10"
           >
-            <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Branding Estratégico em Indaiatuba & RMC</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
               <div className="w-12 h-[1px] bg-brand-accent-light" />
             </div>
-            <p className="font-serif text-xl md:text-3xl text-brand-secondary leading-relaxed italic font-light max-w-3xl">
-              A Orvalia é a agência de branding e websites de Indaiatuba e RMC. <span className="text-white not-italic font-medium">Transformamos negócios</span> em marcas que dominam o digital.
-            </p>
           </motion.div>
 
           {/* Main Headline Section */}
@@ -98,7 +95,7 @@ export default function Hero() {
           >
             <div className="relative w-full overflow-visible py-2">
               {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
-              <h1 className="text-[10vw] md:text-7xl lg:text-[6.5rem] font-sans font-black leading-[1.05] md:leading-[1] tracking-tight md:tracking-tighter text-white mb-8 md:mb-10 flex flex-col items-center uppercase">
+              <h1 className="text-[8.5vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.1] tracking-tight md:tracking-tighter text-white mb-8 flex flex-col items-center uppercase max-w-5xl mx-auto">
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 30 },
@@ -106,35 +103,54 @@ export default function Hero() {
                   }}
                   className="block relative"
                 >
-                  Agência de Branding
+                  Branding, sites e
                 </motion.span>
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
                   }}
-                  className="block text-gradient relative py-4"
+                  className="block text-gradient relative py-2"
                 >
-                  Indaiatuba e Região
+                  presença digital premium
+                </motion.span>
+                <motion.span 
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
+                  }}
+                  className="block text-white/90 text-[6vw] md:text-4xl lg:text-5xl font-light tracking-normal lowercase italic font-serif"
+                >
+                  para negócios de Indaiatuba e região
                 </motion.span>
               </h1>
+              
               {/* Proposta de valor clara */}
-              <p className="sr-only">Orvalia Studio: Branding Estratégico, Criação de Sites e Performance Digital na RMC.</p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto mb-12 font-sans px-4"
+              >
+                Transformamos empresas locais em marcas mais desejadas, confiáveis e preparadas para vender melhor no digital — com estratégia, design, site e comunicação.
+              </motion.p>
+              
+              <p className="sr-only">Orvalia Studio: Branding Estratégico, Criação de Sites e Performance Digital em Indaiatuba, Campinas, Itu, Sorocaba e RMC.</p>
             </div>
           </motion.div>
 
           {/* Bottom Action Section */}
-          <div className="col-span-4 lg:col-span-12 mt-12 md:mt-20">
+          <div className="col-span-4 lg:col-span-12 mt-4 md:mt-8">
             <div className="flex flex-col items-center gap-12">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col md:flex-row gap-12 items-center justify-center w-full"
+                className="flex flex-col items-center justify-center w-full"
               >
-                <div className="flex flex-col sm:flex-row gap-6 items-center">
+                <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-6">
                   <motion.a 
-                    href="https://wa.me/5511978959567?text=Olá!%20Vi%20o%20site%20da%20Orvalia%20e%20gostaria%20de%20solicitar%20uma%20proposta."
+                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ 
@@ -142,11 +158,11 @@ export default function Hero() {
                       boxShadow: "0 0 40px rgba(0, 255, 209, 0.4)"
                     }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative flex items-center gap-8 px-14 py-8 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
+                    className="group relative flex items-center gap-8 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
                   >
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                    <span className="relative font-sans text-base font-black uppercase tracking-[0.3em] text-brand-bg">Solicitar Proposta</span>
-                    <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={24} />
+                    <span className="relative font-sans text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Solicitar diagnóstico gratuito</span>
+                    <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
                   </motion.a>
                   
                   <motion.a 
@@ -160,19 +176,18 @@ export default function Hero() {
                     whileTap={{ scale: 0.98 }}
                     className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-all duration-500"
                   >
-                    Ver Portfolio
+                    Ver resultados reais
                   </motion.a>
-
-                  <a 
-                    href="#servicos"
-                    className="flex items-center gap-4 px-10 py-6 border border-white/5 rounded-full font-black uppercase tracking-widest text-[10px] text-white/60 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-500 group/link"
-                  >
-                    <span>Saiba Mais</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light opacity-0 group-hover/link:opacity-100 transition-opacity duration-500" />
-                  </a>
                 </div>
 
-                <div className="flex -space-x-4 items-center">
+                {/* Microcopy below CTAs */}
+                <div className="text-center mb-12">
+                  <p className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-brand-secondary/60">
+                    Atendimento direto <span className="text-brand-accent-light mx-2">•</span> Diagnóstico estratégico <span className="text-brand-accent-light mx-2">•</span> Projetos sob medida
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-6 mt-2">
                   <div className="flex -space-x-3">
                     {[1, 2, 3, 4].map(i => (
                       <div key={i} className="w-12 h-12 rounded-full border-2 border-brand-bg bg-brand-accent-light/20 backdrop-blur-sm overflow-hidden">
@@ -180,9 +195,9 @@ export default function Hero() {
                       </div>
                     ))}
                   </div>
-                  <div className="pl-8 flex flex-col justify-center border-l border-white/10 ml-4 text-left">
+                  <div className="sm:pl-8 flex flex-col justify-center sm:border-l border-white/10 text-center sm:text-left">
                     <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Regional</span>
-                    <span className="text-xs text-white font-medium">Campinas, Americana, Itu e RMC</span>
+                    <span className="text-xs text-white/80 font-medium">Indaiatuba, Campinas, Itu, Sorocaba e RMC</span>
                   </div>
                 </div>
               </motion.div>

@@ -4,94 +4,114 @@ import { Link } from "react-router-dom";
 
 const plans = [
   {
-    name: "ESSENCIAL",
-    focus: "MÉDIA ESCALA",
-    price: "R$ 1.497",
-    features: ["Landing Page High-Performance", "Identidade Visual Minimalista", "Infraestrutura Cloud"],
-    link: "/plano-essencial",
+    name: "Diagnóstico Digital",
+    focus: "Mapeamento e Clareza",
+    price: "Diagnóstico Gratuito",
+    features: ["Varredura completa de SEO local", "Auditoria de experiência mobile", "Mapeamento de gargalos de conversão", "Plano de ação imediato"],
+    desc: "Para entender o que está travando sua imagem, clareza e conversão.",
+    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20o%20Diagnóstico%20de%20Presença%20Digital%20gratuito%20da%20minha%20empresa.",
     id: "01"
   },
   {
-    name: "PROFISSIONAL",
-    focus: "ALTA AUTORIDADE",
-    price: "R$ 3.997",
-    features: ["Ecossistema Web Completo", "Branding Estratégico Pro", "SEO Geo-Local AI", "Motion Design Assets"],
-    link: "/plano-profissional",
+    name: "Landing Page Premium",
+    focus: "Performance e Contatos",
+    price: "A partir de R$ 1.890",
+    features: ["Design exclusivo e autoral", "Copywriting comercial refinado", "Otimização SEO Local agressiva", "Foco absoluto em conversão"],
+    desc: "Para empresas que precisam de uma página forte, elegante e preparada para gerar contatos.",
+    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Tenho%20interesse%20na%20Landing%20Page%20Premium.%20Meu%20negócio%20é:",
     highlight: true,
     id: "02"
   },
   {
-    name: "EVOLUÇÃO",
-    focus: "CONTROLE ELITE",
-    price: "CONSULTA",
-    features: ["Business Intelligence Integrado", "Gestão de Tráfego & ROI", "Consultoria de Expansão", "Product Architecture"],
-    link: "/plano-evolucao",
+    name: "Branding Estratégico",
+    focus: "Diferenciação e Valor",
+    price: "A partir de R$ 3.890",
+    features: ["Nova identidade visual & logo", "Estudo de narrativa e tom de voz", "Manual de direcionamento de arte", "Estratégia de posicionamento"],
+    desc: "Para marcas que precisam se reposicionar com consistência, diferenciação e percepção de valor.",
+    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Tenho%20interesse%20no%20Branding%20Estratégico.%20Meu%20negócio%20é:",
     id: "03"
+  },
+  {
+    name: "Presença Completa",
+    focus: "Domínio e Crescimento",
+    price: "Sob Consulta",
+    features: ["Branding Estratégico integrado", "Site multi-páginas de elite", "SEO Geo-Local & Tráfego Pago", "Gestão de comunicação mensal"],
+    desc: "Para quem quer marca, site, conteúdo e SEO trabalhando juntos.",
+    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Tenho%20interesse%20na%20Presença%20Digital%20Completa.%20Meu%20negócio%20é:",
+    id: "04"
   }
 ];
 
 export default function Pricing() {
   return (
-    <section id="precos" className="py-24 md:py-48 bg-brand-bg">
+    <section id="precos" className="py-24 md:py-40 bg-brand-bg relative z-10 border-t border-white/5">
       <div className="container mx-auto px-6">
         {/* DNA Header Grid */}
-        <div className="dna-grid mb-24 items-end">
+        <div className="dna-grid mb-20 items-end">
           <div className="col-span-4 lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Lógica de Investimento</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Pontos de Entrada</span>
             </div>
-            <h2 className="responsive-subtitle font-sans font-black text-white tracking-tighter md:tracking-ultra-tight leading-[0.85]">
-              ARQUITETURA <br /> <span className="italic font-serif font-light text-brand-secondary">DE VALOR.</span>
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-[1.1]">
+              Escolha por onde <br /> sua marca <span className="text-gradient">começa a evoluir.</span>
             </h2>
           </div>
-          <div className="col-span-4 lg:col-span-5 flex flex-col justify-end text-left lg:text-right">
-             <p className="text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed">
-               [ Modelos de investimento projetados para transformar sua presença digital em um ativo de lucro constante. ]
+          <div className="col-span-4 lg:col-span-5 flex flex-col justify-end text-left lg:text-right pb-2">
+             <p className="text-brand-secondary/60 text-xs md:text-sm font-mono uppercase tracking-widest leading-relaxed">
+               [ Diferentes caminhos projetados para alinhar seu posicionamento digital ao nível real do seu negócio. ]
              </p>
           </div>
         </div>
 
         {/* Pricing DNA Grid */}
-        <div className="dna-grid mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {plans.map((plan, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className={`col-span-4 lg:col-span-4 p-8 md:p-14 rounded-[3rem] md:rounded-[3.5rem] glass-premium relative flex flex-col justify-between overflow-hidden group ${plan.highlight ? 'border-brand-accent-light/20 glow-cyan' : 'border-white/5'}`}
+              transition={{ delay: idx * 0.05 }}
+              className={`p-8 rounded-[2.5rem] bg-white/[0.01] border relative flex flex-col justify-between overflow-hidden group transition-all duration-500 hover:border-brand-accent-light/30 ${plan.highlight ? 'border-brand-accent-light/30 ring-1 ring-brand-accent-light/20 shadow-[0_0_50px_rgba(0,255,209,0.08)]' : 'border-white/5'}`}
             >
               {plan.highlight && (
-                <div className="absolute top-0 right-0 p-8">
-                   <div className="px-3 py-1 bg-brand-accent-light rounded-full text-[8px] font-black uppercase tracking-widest text-brand-bg">PREMIUM</div>
+                <div className="absolute top-0 right-0 p-6 z-10">
+                   <div className="px-2.5 py-1 bg-brand-accent-light rounded-full text-[8px] font-black uppercase tracking-widest text-brand-bg">MAIS RECOMENDADO</div>
                 </div>
               )}
               
               <div>
-                <span className="font-mono text-[9px] text-brand-accent-light/40 mb-6 block">{plan.id} // {plan.focus}</span>
-                <h3 className="text-4xl font-black text-white tracking-super-tight mb-4">{plan.name}</h3>
-                <div className="text-xl font-bold text-brand-secondary mb-12 uppercase tracking-[0.1em]">{plan.price}</div>
+                <span className="font-mono text-[9px] text-brand-accent-light/40 mb-4 block">{plan.id} // {plan.focus}</span>
+                <h3 className="text-2xl font-black text-white tracking-tight mb-2 uppercase leading-none">{plan.name}</h3>
+                <div className="text-sm font-semibold text-brand-accent-light mb-4 tracking-wider uppercase">{plan.price}</div>
                 
-                <ul className="space-y-6 mb-16">
+                <p className="text-brand-secondary/80 text-xs mb-8 font-light leading-relaxed min-h-[40px]">
+                  {plan.desc}
+                </p>
+                
+                <div className="h-[1px] w-full bg-white/5 mb-6" />
+                
+                <ul className="space-y-4 mb-10">
                   {plan.features.map((feature, fidx) => (
-                    <li key={fidx} className="flex items-start gap-4 text-brand-secondary/80 text-xs uppercase tracking-widest leading-relaxed">
+                    <li key={fidx} className="flex items-start gap-3 text-brand-secondary/70 text-[10px] uppercase tracking-wider leading-relaxed font-mono">
                       <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light shrink-0 mt-1" />
-                      {feature}
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <Link 
-                to={plan.link}
-                className="group/btn relative py-5 px-10 rounded-full border border-white/10 flex items-center justify-center gap-4 overflow-hidden transition-all hover:border-brand-accent-light"
+              <a 
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/btn relative py-4 px-6 rounded-full border border-white/10 flex items-center justify-center gap-3 overflow-hidden transition-all hover:border-brand-accent-light bg-white/[0.02]"
               >
                 <div className="absolute inset-0 bg-brand-accent-light scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform duration-500" />
-                <span className="relative text-[10px] font-black uppercase tracking-widest text-white group-hover/btn:text-brand-bg transition-colors">Ver Estrutura</span>
-                <ArrowRight className="relative text-brand-accent-light group-hover/btn:text-brand-bg group-hover/btn:translate-x-1 transition-all" size={16} />
-              </Link>
+                <span className="relative text-[9px] font-black uppercase tracking-widest text-white group-hover/btn:text-brand-bg transition-colors">Iniciar Evolução</span>
+                <ArrowRight className="relative text-brand-accent-light group-hover/btn:text-brand-bg group-hover/btn:translate-x-1 transition-all" size={14} />
+              </a>
             </motion.div>
           ))}
         </div>

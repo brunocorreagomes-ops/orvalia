@@ -21,26 +21,26 @@ export default function CTA() {
            </div>
         </div>
 
-        <h2 className="responsive-subtitle font-sans font-black text-white leading-[0.85] tracking-tighter md:tracking-ultra-tight mb-12 md:mb-16 uppercase">
-          PRONTO PARA <br /> <span className="text-gradient">EVOLUIR?</span>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tighter mb-8 max-w-4xl mx-auto uppercase">
+          Pronto para sua marca parecer <br className="hidden md:block" /> tão forte quanto o seu <br className="hidden md:block" /> <span className="text-gradient">negócio realmente é?</span>
         </h2>
 
-        <p className="font-serif text-xl sm:text-2xl md:text-4xl text-brand-secondary italic font-light mb-16 md:mb-20 max-w-2xl mx-auto leading-relaxed">
-          Sua marca merece uma arquitetura que <span className="text-white not-italic font-medium">multiplique valor</span> e domine o digital.
+        <p className="text-lg md:text-2xl text-brand-secondary/80 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+          Receba uma análise inicial da sua presença digital e veja quais ajustes podem aumentar sua percepção de valor, autoridade e conversão.
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
             <motion.a 
-              href="https://wa.me/5511978959567?text=Olá!%20Vi%20a%20seção%20final%20do%20site%20da%20Orvalia%20e%20estou%20pronto%20para%20evoluir%20minha%20marca."
+              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative flex items-center gap-8 px-14 md:px-20 py-8 md:py-10 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
+              className="group relative flex items-center justify-between gap-6 px-10 md:px-14 py-6 md:py-8 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
             >
-              <span className="relative z-10 font-sans text-base font-black uppercase tracking-[0.4em] text-brand-bg">Começar Agora</span>
-              <div className="w-12 h-12 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
-                <ArrowUpRight className="text-brand-accent-light" size={24} />
+              <span className="relative z-10 font-sans text-xs md:text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Quero meu diagnóstico gratuito</span>
+              <div className="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500 shrink-0">
+                <ArrowUpRight className="text-brand-accent-light" size={18} />
               </div>
               
               {/* Internal Glow */}

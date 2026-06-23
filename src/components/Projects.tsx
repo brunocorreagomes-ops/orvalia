@@ -8,52 +8,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Beth Olmeda. 280% de tráfego",
-    category: "Branding • Estética",
-    metric: "280% de crescimento no tráfego em 60 dias",
+    client: "BETH OLMEDA",
+    segment: "Mentoria • Marca Pessoal & Estética",
+    context: "Posicionamento digital desatualizado e falta de clareza na oferta de serviços.",
+    solution: "Redesign de marca premium, nova narrativa e Landing Page estratégica de alta conversão.",
+    metric: "+280% de tráfego em 60 dias",
     location: "Indaiatuba/SP",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
-    span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
+    span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
   },
   {
-    title: "Ryna Hayashi. Posicionamento de Elite",
-    category: "Estratégia • Psicologia",
-    metric: "Atração de clientes de alto padrão sob demanda",
+    client: "RYNA HAYASHI",
+    segment: "Psicologia • Clínica de Alto Padrão",
+    context: "Falta de presença estruturada e dependência de indicações físicas locais.",
+    solution: "Identidade visual corporativa, site de altíssimo padrão e estratégia de posicionamento.",
+    metric: "Atração de clientes premium sob demanda",
     location: "São Paulo/BR",
     image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp",
-    span: "col-span-4 lg:col-span-12 h-[400px] md:h-[600px]"
+    span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
   },
   {
-    title: "Marta Ana Chiconato. Posicionamento Premium",
-    category: "Estratégia • Terapia",
+    client: "MARTA ANA CHICONATO",
+    segment: "Estratégia • Terapia Integrativa",
+    context: "Atração de leads desqualificados e baixa conversão com o formato antigo.",
+    solution: "Branding de luxo, copy refinada de alto ticket e otimização total de velocidade do site.",
     metric: "Autoridade consolidada na RMC",
     location: "Campinas/SP",
     image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
     span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
   {
-    title: "Quinta de Caraíva. Arquitetura Digital",
-    category: "Web • Experiência",
-    metric: "Fluxo de reservas automatizado",
+    client: "QUINTA DE CARAÍVA",
+    segment: "Turismo • Hotelaria & Experiências",
+    context: "Processo de reservas manual ineficiente e perda de conversões no tráfego.",
+    solution: "Site de experiência imersiva com fluxo automatizado de reservas direto e inteligente.",
+    metric: "Reservas automatizadas sem comissão",
     location: "Bahia/BR",
     image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
-    span: "col-span-4 lg:col-span-6 h-[400px] md:h-[500px]"
+    span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
   {
-    title: "Dario Eletricidade. +150% em Conversão",
-    category: "Marketing • Digital",
-    metric: "Domínio orgânico em Indaiatuba",
+    client: "DARIO ELETRICIDADE",
+    segment: "Serviços • Engenharia Elétrica Local",
+    context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
+    solution: "SEO Local agressivo integrado a uma Landing Page focada em conversão ultra-rápida.",
+    metric: "Domínio orgânico em Indaiatuba & +150% Conversão",
     location: "Indaiatuba/SP",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
-    span: "col-span-4 lg:col-span-7 h-[500px] md:h-[600px]"
+    span: "col-span-4 lg:col-span-7 h-[450px] md:h-[600px]"
   },
   {
-    title: "KNJ TUR. Redesign Global",
-    category: "Interface • Estratégia",
+    client: "KNJ TUR",
+    segment: "Interface • Turismo Corporativo",
+    context: "Identidade visual desatualizada que não representava a solidez do grupo.",
+    solution: "Redesign de marca global, identidade visual de elite e portal corporativo robusto.",
     metric: "Presença digital internacional de elite",
     location: "São Paulo/BR",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
-    span: "col-span-4 lg:col-span-5 h-[350px] md:h-[400px]"
+    span: "col-span-4 lg:col-span-5 h-[450px] md:h-[600px]"
   }
 ];
 
@@ -94,51 +106,58 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
         <img 
           ref={imageRef}
           src={project.image} 
-          alt={project.title} 
+          alt={project.client} 
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-30 group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
         />
-        <div className="absolute inset-0 bg-brand-bg/80 mix-blend-multiply group-hover:bg-brand-bg/10 transition-all duration-700" />
+        <div className="absolute inset-0 bg-brand-bg/90 mix-blend-multiply group-hover:bg-brand-bg/50 transition-all duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent" />
       </div>
 
-      <div className="absolute inset-0 p-8 md:p-14 flex flex-col justify-between z-10">
+      <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between z-10">
+        {/* Top: Client Name & Segment */}
         <div className="flex justify-between items-start">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             <span className="font-mono text-[9px] md:text-[11px] uppercase tracking-[0.4em] text-brand-secondary/60 group-hover:text-brand-accent-light transition-colors">
-              {project.category}
+              {project.segment}
             </span>
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
-              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/60">
-                {project.location}
-              </span>
-            </div>
+            <h3 className="text-xl md:text-3xl font-sans font-black text-white tracking-tight uppercase">
+              {project.client}
+            </h3>
           </div>
-          <div className="w-14 h-14 rounded-2xl glass-premium border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-700 shadow-2xl">
-            <ArrowUpRight className="text-brand-accent-light" size={24} />
+          <div className="w-10 h-10 rounded-xl glass-premium border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
+            <ArrowUpRight className="text-brand-accent-light" size={18} />
           </div>
         </div>
 
-        <div className="space-y-8">
-          <h3 className="text-4xl md:text-7xl font-black text-white tracking-ultra-tight uppercase leading-[0.85]">
-            {project.title.split(' ')[0]} <br />
-            <span className="text-white/20 group-hover:text-white transition-colors duration-700">
-              {project.title.split(' ').slice(1).join(' ')}
-            </span>
-          </h3>
-          
-          <div className="flex flex-wrap gap-4 items-center pt-8 border-t border-white/10">
+        {/* Middle/Bottom: Context, Solution, and Metric */}
+        <div className="space-y-6 pt-4 border-t border-white/5 bg-brand-bg/80 backdrop-blur-md rounded-3xl p-5 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-left">
+            <div>
+              <span className="text-[9px] uppercase tracking-widest text-white/40 block mb-1">Contexto</span>
+              <p className="text-white/80 font-light leading-relaxed">
+                {project.context}
+              </p>
+            </div>
+            <div>
+              <span className="text-[9px] uppercase tracking-widest text-brand-accent-light block mb-1">Solução Orvalia</span>
+              <p className="text-white/80 font-light leading-relaxed">
+                {project.solution}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4 items-center pt-4 border-t border-white/5">
             {project.metric && (
-              <div className="flex items-center gap-4 bg-brand-accent-light text-brand-bg px-6 py-3 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-brand-accent-light/20 transition-all">
-                <TrendingUp size={18} />
-                <span className="font-black text-sm md:text-base uppercase tracking-tighter">
+              <div className="flex items-center gap-3 bg-brand-accent-light text-brand-bg px-5 py-2.5 rounded-xl overflow-hidden shadow-xl group-hover:shadow-brand-accent-light/20 transition-all">
+                <TrendingUp size={16} />
+                <span className="font-black text-xs md:text-sm uppercase tracking-tighter">
                   {project.metric}
                 </span>
               </div>
             )}
-            <div className="hidden md:flex px-5 py-3 border border-white/20 rounded-xl font-mono text-[10px] text-white uppercase tracking-widest bg-white/5 backdrop-blur-sm">
-              Elite Standard
+            <div className="px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-white/50 uppercase tracking-widest ml-auto md:ml-0">
+              {project.location}
             </div>
           </div>
         </div>

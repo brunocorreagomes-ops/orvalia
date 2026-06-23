@@ -4,22 +4,22 @@ const steps = [
   {
     num: "01",
     title: "Diagnóstico",
-    desc: "Entendemos seu mercado, público e objetivos reais para 2026."
+    desc: "Entendemos sua marca, mercado, público, presença digital atual e oportunidades."
   },
   {
     num: "02",
     title: "Estratégia",
-    desc: "Criamos o caminho visual e técnico para sua empresa se destacar."
+    desc: "Definimos posicionamento, narrativa, oferta, arquitetura da página e direção criativa."
   },
   {
     num: "03",
-    title: "Execução",
-    desc: "Design e desenvolvimento com foco total em usabilidade e performance."
+    title: "Criação",
+    desc: "Desenvolvemos identidade, site, textos, peças e materiais necessários para elevar sua presença."
   },
   {
     num: "04",
-    title: "Lançamento",
-    desc: "Sua marca no ar, pronta para converter e escalar suas vendas."
+    title: "Implantação",
+    desc: "Publicamos, organizamos os canais e deixamos sua marca pronta para se apresentar melhor e converter mais."
   }
 ];
 
