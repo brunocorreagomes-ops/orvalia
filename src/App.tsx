@@ -35,6 +35,13 @@ import AgenciaIndaiatuba from "./pages/AgenciaIndaiatuba";
 import SitesEstrategicos from "./pages/SitesEstrategicos";
 import MarketingLandingPage from "./pages/MarketingLandingPage";
 
+function ElifeRedirect() {
+  useEffect(() => {
+    window.location.href = "/elife/index.html";
+  }, []);
+  return null;
+}
+
 function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-brand-bg text-white p-6 pt-32">
@@ -147,6 +154,8 @@ export default function App() {
           <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
           <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
           <Route path="/solucoes/:slug" element={<MarketingLandingPage />} />
+          <Route path="/elife" element={<ElifeRedirect />} />
+          <Route path="/elife/" element={<ElifeRedirect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

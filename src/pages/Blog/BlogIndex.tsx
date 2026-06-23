@@ -108,7 +108,49 @@ const articles = [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1], // premium cubic-bezier easeOut
+    },
+  },
+};
+
 export default function BlogIndex() {
+  const sortedArticles = [...articles].sort((a, b) => {
+    const monthsMap: Record<string, number> = {
+      jan: 0, fev: 1, mar: 2, abr: 3, mai: 4, jun: 5,
+      jul: 6, ago: 7, set: 8, out: 9, nov: 10, dez: 11
+    };
+
+    const parseDate = (dateStr: string) => {
+      const parts = dateStr.trim().split(/\s+/);
+      if (parts.length < 3) return new Date(0);
+      const day = parseInt(parts[0], 10);
+      const monthStr = parts[1].toLowerCase().replace(".", "");
+      const year = parseInt(parts[2], 10);
+      const month = monthsMap[monthStr] !== undefined ? monthsMap[monthStr] : 0;
+      return new Date(year, month, day);
+    };
+
+    return parseDate(b.date).getTime() - parseDate(a.date).getTime();
+  });
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24 selection:bg-black selection:text-white">
       <motion.div 
@@ -128,14 +170,17 @@ export default function BlogIndex() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, idx) => (
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.05 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {sortedArticles.map((article) => (
             <motion.article 
               key={article.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              variants={itemVariants}
               className="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
             >
               <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-[4/3] overflow-hidden bg-gray-100">
@@ -174,7 +219,7 @@ export default function BlogIndex() {
               </div>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
