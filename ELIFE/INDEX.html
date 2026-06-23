@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report de Próximos Passos | Elife Fitness</title>
+  <style>
+    :root {
+      --green-dark: #193E39;
+      --green: #06A791;
+      --pink: #DF5CBD;
+      --cream: #F7F5EF;
+      --white: #FFFFFF;
+      --text: #1D2724;
+      --muted: #63716C;
+      --line: #DDE7E1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .report {
+      background: var(--white);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(25, 62, 57, 0.12);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(223, 92, 189, .22), transparent 40%),
+        linear-gradient(135deg, var(--green-dark), #0F2926);
+      color: white;
+      padding: 56px 56px 48px;
+    }
+
+    .eyebrow {
+      color: #B9F4E9;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.05;
+      max-width: 760px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #D9EAE5;
+      font-size: 18px;
+      margin: 22px 0 0;
+    }
+
+    .content {
+      padding: 48px 56px 56px;
+    }
+
+    section {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      color: var(--green-dark);
+      font-size: 28px;
+      margin: 0 0 14px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .highlight {
+      background: #F1FAF7;
+      border-left: 5px solid var(--green);
+      padding: 22px 24px;
+      border-radius: 18px;
+      color: var(--text);
+      margin: 24px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: #FAFCFB;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      color: var(--green-dark);
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: #FAFCFB;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .num {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .step strong {
+      color: var(--green-dark);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .phase {
+      border-top: 6px solid var(--green);
+      background: #FAFCFB;
+      border-radius: 20px;
+      padding: 22px;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .phase:nth-child(2) {
+      border-top-color: var(--pink);
+    }
+
+    .phase:nth-child(3) {
+      border-top-color: var(--green-dark);
+    }
+
+    .phase h3 {
+      color: var(--green-dark);
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .footer {
+      background: #F1F5F3;
+      border-top: 1px solid var(--line);
+      padding: 28px 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .signature {
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    @media (max-width: 760px) {
+      .hero, .content, .footer {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .grid, .timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="report">
+      <header class="hero">
+        <div class="eyebrow">Report de próximos passos</div>
+        <h1>Elife Fitness: estrutura digital, site e nova etapa de comunicação</h1>
+        <p>
+          Consolidação dos próximos movimentos do projeto, incluindo construção do site, organização dos produtos,
+          estratégia de conteúdo e criação da versão digital da fundadora para apoiar a comunicação da marca.
+        </p>
+      </header>
+
+      <div class="content">
+        <section>
+          <h2>Visão geral</h2>
+          <p>
+            Enquanto os acessos do domínio e demais dados técnicos são localizados, a primeira versão do site da Elife Fitness
+            já pode começar a ser estruturada. A proposta é não deixar o projeto parado e avançar com uma base visual e estratégica
+            para validação.
+          </p>
+          <div class="highlight">
+            A previsão sugerida é apresentar uma primeira versão conceitual do site em até <strong>1 a 2 semanas</strong>,
+            para validar estrutura, posicionamento, organização dos produtos e experiência da cliente.
+          </div>
+        </section>
+
+        <section>
+          <h2>Frente 1: construção do site</h2>
+          <p>
+            O site será desenvolvido como uma central da marca, reunindo autoridade, produtos, canais de contato e uma estrutura
+            preparada para evolução futura.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Objetivos iniciais</h3>
+              <ul>
+                <li>Centralizar a presença digital da Elife;</li>
+                <li>Fortalecer a credibilidade da marca;</li>
+                <li>Organizar produtos, coleções e contatos;</li>
+                <li>Melhorar a experiência antes do atendimento no WhatsApp.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Estrutura prevista</h3>
+              <ul>
+                <li>Home institucional e comercial;</li>
+                <li>Sobre a marca e a fundadora;</li>
+                <li>Coleções por categoria;</li>
+                <li>Seleção especial de produtos;</li>
+                <li>Botão para WhatsApp com produto identificado.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Frente 2: organização dos produtos</h2>
+          <p>
+            Para que o site e os conteúdos nas redes sociais sejam mais assertivos, será importante mapear as peças da Elife.
+            Essa etapa ajuda a definir o que será divulgado, para quem, com qual prioridade e em qual formato.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <strong>Separar os produtos mais vendidos</strong>
+                Produtos com maior aceitação podem ser usados como âncora de comunicação e venda.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <strong>Identificar produtos com estoque parado</strong>
+                Peças com maior volume em estoque podem entrar em ações de seleção especial, kits e conteúdos direcionados.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <strong>Mapear cores, tamanhos e disponibilidade</strong>
+                Isso permite criar mensagens mais organizadas e reduzir trocas no WhatsApp.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <strong>Definir prioridades de divulgação</strong>
+                Cada peça poderá ter um objetivo: venda rápida, autoridade, coleção, comunidade ou teste de interesse.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Frente 3: Eliana Digital</h2>
+          <p>
+            Uma das oportunidades do projeto é testar uma versão digital da fundadora para apoiar a rotina de conteúdo da marca,
+            sem depender exclusivamente da disponibilidade dela para gravar vídeos e stories diariamente.
+          </p>
+
+          <div class="highlight">
+            A ideia não é criar uma personagem fictícia, mas uma extensão digital da própria fundadora:
+            com sua identidade, estilo, contexto profissional e ligação real com o universo fitness.
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Materiais necessários</h3>
+              <ul>
+                <li>Fotos de rosto em boa qualidade;</li>
+                <li>Fotos de corpo inteiro;</li>
+                <li>Fotos em ambiente de academia;</li>
+                <li>Fotos com roupas fitness;</li>
+                <li>Fotos em poses naturais, sorrindo e em movimento.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Conteúdos possíveis</h3>
+              <ul>
+                <li>Look do dia Elife;</li>
+                <li>Chegada na academia;</li>
+                <li>Peça escolhida para dar aula;</li>
+                <li>Rotina fitness;</li>
+                <li>Corrida, beach tennis e bastidores;</li>
+                <li>Stories com enquetes e chamadas para WhatsApp.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Frente 4: redes sociais durante o desenvolvimento</h2>
+          <p>
+            A comunicação não precisa esperar o site ficar pronto. Enquanto o site é construído, já podemos iniciar uma rotina leve
+            de conteúdos para aquecer a audiência, testar interesse e preparar a marca para o lançamento da nova estrutura.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Periodicidade sugerida</h3>
+              <ul>
+                <li><strong>Stories:</strong> diariamente, de 3 a 8 stories;</li>
+                <li><strong>Feed:</strong> 3 publicações por semana;</li>
+                <li><strong>Reels:</strong> 2 vídeos curtos por semana;</li>
+                <li><strong>Destaques:</strong> reorganização por categoria.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Pilares de conteúdo</h3>
+              <ul>
+                <li>Produtos e coleções;</li>
+                <li>Dicas e autoridade profissional;</li>
+                <li>Bastidores e rotina;</li>
+                <li>Clientes, comunidade e parcerias;</li>
+                <li>Seleção especial e giro de estoque.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Cronograma inicial</h2>
+
+          <div class="timeline">
+            <div class="phase">
+              <h3>Semana 1</h3>
+              <p>
+                Recebimento das fotos, organização dos produtos, início da estrutura do site e validação dos acessos do domínio.
+              </p>
+            </div>
+
+            <div class="phase">
+              <h3>Semanas 1 a 2</h3>
+              <p>
+                Construção da primeira versão conceitual do site e criação da base visual para a Eliana Digital.
+              </p>
+            </div>
+
+            <div class="phase">
+              <h3>Semana 3 em diante</h3>
+              <p>
+                Ajustes do site, início dos conteúdos nas redes, testes de formatos e análise dos primeiros sinais de interesse.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Próximos passos</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <strong>Cliente envia fotos e informações dos produtos</strong>
+                Fotos pessoais, fotos de produtos, produtos prioritários, estoque, tamanhos, cores e peças de maior interesse.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <strong>Orvalia inicia a primeira versão do site</strong>
+                Estrutura visual e estratégica para apresentação inicial em até 1 a 2 semanas.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <strong>Criação da base da Eliana Digital</strong>
+                Desenvolvimento da primeira linha visual para testar stories, imagens e conteúdos de rotina.
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <strong>Planejamento da comunicação</strong>
+                Organização dos conteúdos iniciais para Instagram enquanto o site é finalizado.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p>
+          Este report organiza as próximas etapas para que o site, as redes sociais e a estratégia comercial evoluam juntos,
+          criando uma presença digital mais clara, profissional e sustentável para a Elife Fitness.
+        </p>
+        <p class="signature">Bruno • Orvalia Studio</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
