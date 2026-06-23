@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const localCases = [
   {
     title: "Beth Olmeda",
-    metric: "280% de crescimento no tráfego em 60 dias",
+    metric: "Imagem mais elegante, clara e alinhada a um atendimento de alto valor",
     location: "Indaiatuba/SP",
     category: "Branding • Estética",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg"
   },
   {
     title: "Dario Eletricidade",
-    metric: "Aumento de 150% em leads qualificados",
+    metric: "Mensagem mais profissional para clientes que precisam de segurança técnica",
     location: "Indaiatuba/SP",
     category: "Marketing • Digital",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
@@ -118,7 +118,7 @@ export default function AgenciaIndaiatuba() {
             <div className="col-span-4 lg:col-span-12">
               <h3 className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-4">Casos de Sucesso Local</h3>
               <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase">
-                Resultados em <span className="italic font-serif font-light text-brand-secondary">Indaiatuba</span>
+                Projetos em <span className="italic font-serif font-light text-brand-secondary">Indaiatuba</span>
               </h2>
             </div>
           </div>

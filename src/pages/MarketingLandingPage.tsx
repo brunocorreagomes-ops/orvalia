@@ -73,13 +73,13 @@ export default function MarketingLandingPage() {
                 </p>
                 <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
                    <div className="flex flex-col">
-                      <span className="text-2xl font-black text-white">98%</span>
-                      <span className="text-[8px] font-mono text-brand-secondary uppercase tracking-widest text-center mt-1">SEO Relevância</span>
+                      <span className="text-2xl font-black text-white">TOPO</span>
+                      <span className="text-[8px] font-mono text-brand-secondary uppercase tracking-widest text-center mt-1">Estrutura SEO</span>
                    </div>
                    <div className="h-8 w-[1px] bg-white/10" />
                    <div className="flex flex-col">
-                      <span className="text-2xl font-black text-white">+50</span>
-                      <span className="text-[8px] font-mono text-brand-secondary uppercase tracking-widest text-center mt-1">Projetos Locais</span>
+                      <span className="text-2xl font-black text-white">ELITE</span>
+                      <span className="text-[8px] font-mono text-brand-secondary uppercase tracking-widest text-center mt-1">Design de Marca</span>
                    </div>
                 </div>
               </motion.div>

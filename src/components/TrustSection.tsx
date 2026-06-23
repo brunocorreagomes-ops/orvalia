@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: "Ricardo Mendes",
     role: "CEO, TechIndaia",
-    content: "A Orvalia transformou nosso posicionamento digital em Indaiatuba. Em 3 meses, dobramos nossos leads qualificados.",
+    content: "A Orvalia transformou nosso posicionamento digital em Indaiatuba. Passamos a atrair clientes muito mais qualificados e alinhados ao nosso real valor.",
     rating: 5
   },
   {

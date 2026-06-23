@@ -3,8 +3,8 @@ import { ArrowRight, CheckCircle2, MessageSquare, Target, Zap, TrendingUp, BarCh
 import { Link } from "react-router-dom";
 
 const stats = [
-  { num: "100%", label: "foco em conversão e experiência de usuário" },
-  { num: "24/7", label: "sua marca gerando confiança e leads" }
+  { num: "Foco", label: "Presença digital mais clara, profissional e preparada para conversão" },
+  { num: "Atração", label: "Estrutura pensada para atrair contatos mais alinhados ao seu negócio" }
 ];
 
 const problems = [
@@ -75,10 +75,10 @@ export default function SitesEstrategicos() {
                     <Zap size={16} />
                   </a>
                   <a 
-                    href="#cases" 
+                    href="#projetos" 
                     className="px-10 py-5 bg-white/5 text-white border border-white/10 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all text-center"
                   >
-                    Ver resultados
+                    Ver cases
                   </a>
                 </div>
                 <p className="mt-8 font-mono text-[10px] text-brand-secondary/60 uppercase tracking-widest italic">
@@ -94,11 +94,14 @@ export default function SitesEstrategicos() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + i * 0.1 }}
-                  className="p-10 rounded-[3rem] glass-premium border border-white/5 relative overflow-hidden group"
+                  className="p-10 rounded-[3rem] glass-premium border border-white/5 relative overflow-hidden group text-left"
                 >
                   <div className="relative z-10">
-                    <div className="text-5xl font-black text-brand-accent-light mb-2">{stat.num}</div>
-                    <div className="text-xs font-mono text-brand-secondary uppercase tracking-widest leading-relaxed">
+                    <div className="text-2xl font-black text-white uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
+                      {stat.num}
+                    </div>
+                    <div className="text-sm text-brand-secondary/80 leading-relaxed font-sans">
                       {stat.label}
                     </div>
                   </div>
@@ -206,7 +209,7 @@ export default function SitesEstrategicos() {
               </h2>
               <div className="p-8 rounded-[2rem] border border-brand-accent-light/20 bg-brand-accent-light/5 italic">
                 <p className="text-xl text-brand-accent-light leading-relaxed">
-                  “Enquanto outras agências entregam layout, nós entregamos <span className="font-bold underline decoration-brand-accent-light/30">resultado mensurável.</span>”
+                  “Enquanto outras agências entregam apenas layout, nós entregamos <span className="font-bold underline decoration-brand-accent-light/30">posicionamento estratégico e clareza comercial.</span>”
                 </p>
               </div>
             </div>

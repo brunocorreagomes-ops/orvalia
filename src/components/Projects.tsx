@@ -12,8 +12,9 @@ const projects = [
     segment: "Mentoria • Marca Pessoal & Estética",
     context: "Posicionamento digital desatualizado e falta de clareza na oferta de serviços.",
     solution: "Redesign de marca premium, nova narrativa e Landing Page estratégica de alta conversão.",
-    metric: "+280% de tráfego em 60 dias",
+    metric: "Estética facial com presença mais premium",
     location: "Indaiatuba/SP",
+    cta: "Ver projeto",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
     span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
   },
@@ -21,9 +22,10 @@ const projects = [
     client: "RYNA HAYASHI",
     segment: "Psicologia • Clínica de Alto Padrão",
     context: "Falta de presença estruturada e dependência de indicações físicas locais.",
-    solution: "Identidade visual corporativa, site de altíssimo padrão e estratégia de posicionamento.",
-    metric: "Atração de clientes premium sob demanda",
+    solution: "Construção de uma presença digital sensível, técnica e premium para fortalecer autoridade clínica.",
+    metric: "Psicologia com posicionamento mais acolhedor e sofisticado",
     location: "São Paulo/BR",
+    cta: "Conhecer projeto",
     image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp",
     span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
   },
@@ -31,9 +33,10 @@ const projects = [
     client: "MARTA ANA CHICONATO",
     segment: "Estratégia • Terapia Integrativa",
     context: "Atração de leads desqualificados e baixa conversão com o formato antigo.",
-    solution: "Branding de luxo, copy refinada de alto ticket e otimização total de velocidade do site.",
-    metric: "Autoridade consolidada na RMC",
+    solution: "Estratégia visual e narrativa para organizar a percepção da marca e fortalecer sua presença digital.",
+    metric: "Marca pessoal com comunicação mais profissional",
     location: "Campinas/SP",
+    cta: "Ver identidade",
     image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
     span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
@@ -41,9 +44,10 @@ const projects = [
     client: "QUINTA DE CARAÍVA",
     segment: "Turismo • Hotelaria & Experiências",
     context: "Processo de reservas manual ineficiente e perda de conversões no tráfego.",
-    solution: "Site de experiência imersiva com fluxo automatizado de reservas direto e inteligente.",
-    metric: "Reservas automatizadas sem comissão",
+    solution: "Branding e arquitetura digital para traduzir exclusividade, natureza e sofisticação em uma experiência de marca.",
+    metric: "Hospedagem exclusiva com narrativa de desejo",
     location: "Bahia/BR",
+    cta: "Ver conceito",
     image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
     span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
   },
@@ -51,9 +55,10 @@ const projects = [
     client: "DARIO ELETRICIDADE",
     segment: "Serviços • Engenharia Elétrica Local",
     context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
-    solution: "SEO Local agressivo integrado a uma Landing Page focada em conversão ultra-rápida.",
-    metric: "Domínio orgânico em Indaiatuba & +150% Conversão",
+    solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
+    metric: "Serviço técnico com comunicação mais confiável",
     location: "Indaiatuba/SP",
+    cta: "Ver projeto",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
     span: "col-span-4 lg:col-span-7 h-[450px] md:h-[600px]"
   },
@@ -61,9 +66,10 @@ const projects = [
     client: "KNJ TUR",
     segment: "Interface • Turismo Corporativo",
     context: "Identidade visual desatualizada que não representava a solidez do grupo.",
-    solution: "Redesign de marca global, identidade visual de elite e portal corporativo robusto.",
-    metric: "Presença digital internacional de elite",
+    solution: "Reorganização visual e estratégica para comunicar segurança, experiência e profissionalismo no planejamento de viagens.",
+    metric: "Turismo com presença mais confiável e global",
     location: "São Paulo/BR",
+    cta: "Ver redesign",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
     span: "col-span-4 lg:col-span-5 h-[450px] md:h-[600px]"
   }
@@ -147,17 +153,22 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 items-center pt-4 border-t border-white/5">
+          <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center pt-4 border-t border-white/5">
             {project.metric && (
-              <div className="flex items-center gap-3 bg-brand-accent-light text-brand-bg px-5 py-2.5 rounded-xl overflow-hidden shadow-xl group-hover:shadow-brand-accent-light/20 transition-all">
-                <TrendingUp size={16} />
-                <span className="font-black text-xs md:text-sm uppercase tracking-tighter">
+              <div className="flex items-center gap-3 bg-white/5 border border-white/10 text-brand-secondary px-4 py-2 rounded-xl">
+                <span className="font-mono text-[9px] uppercase tracking-wider text-brand-accent-light shrink-0">Resultado //</span>
+                <span className="font-sans font-medium text-xs text-white/90 tracking-tight text-left">
                   {project.metric}
                 </span>
               </div>
             )}
-            <div className="px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-white/50 uppercase tracking-widest ml-auto md:ml-0">
-              {project.location}
+            <div className="flex items-center gap-4 ml-auto shrink-0">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-brand-accent-light font-black group-hover:underline transition-all">
+                {project.cta || "Ver projeto"}
+              </span>
+              <div className="px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-white/50 uppercase tracking-widest">
+                {project.location}
+              </div>
             </div>
           </div>
         </div>
@@ -183,12 +194,12 @@ export default function Projects() {
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">Arquitetura de Portfólio</span>
             </div>
             <h2 className="responsive-subtitle font-sans font-black tracking-tighter md:tracking-ultra-tight text-white leading-[0.85]">
-              RESULTADOS <br /> <span className="italic font-serif font-light text-brand-secondary">REAIS.</span>
+              PROJETOS <br /> <span className="italic font-serif font-light text-brand-secondary">REAIS.</span>
             </h2>
           </motion.div>
           <div className="col-span-4 lg:col-span-6 flex lg:justify-end pb-4">
-             <p className="max-w-xs text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed text-left lg:text-right">
-               [ Arquitetura de marca e produtos digitais que definem novos padrões de mercado local. ]
+             <p className="max-w-md text-brand-secondary/80 text-sm md:text-base font-sans font-light leading-relaxed text-left lg:text-right">
+               Cases desenvolvidos para marcas, profissionais e empresas que precisavam comunicar mais valor, clareza e confiança no digital.
              </p>
           </div>
         </div>
@@ -216,7 +227,7 @@ export default function Projects() {
                </motion.div>
                
               <h3 className="text-4xl md:text-7xl font-black text-white tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-                 Gostou dos <br className="hidden md:block" /> <span className="text-gradient">Resultados?</span>
+                 Gostou da <br className="hidden md:block" /> <span className="text-gradient">Transformação?</span>
                </h3>
                
                <p className="text-slate-300 text-lg md:text-2xl font-sans font-light mb-12 max-w-2xl mx-auto leading-relaxed">
