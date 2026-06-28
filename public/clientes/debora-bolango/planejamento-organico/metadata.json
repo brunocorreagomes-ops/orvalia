@@ -1,0 +1,8 @@
+{
+  "name": "Apresentação Executiva - Débora Bolangno",
+  "description": "Uma apresentação executiva e estratégica de comunicação orgânica para Débora Bolangno com a assinatura Orvalia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

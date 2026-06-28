@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-offwhite: #F7F1E8;
+  --color-brand-green: #173F35;
+  --color-brand-gold: #C9A45C;
+  --color-brand-black: #111111;
+  --color-brand-graphite: #2B2B2B;
+  --color-brand-beige: #E8DDCE;
+}
+
+/* Base style resets to match premium editorial style */
+body {
+  background-color: var(--color-brand-offwhite);
+  color: var(--color-brand-graphite);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Soft transition effects */
+.transition-all-custom {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium editorial transition and micro-interaction for the next slide button */
+#btn-next-slide {
+  transition: all 0.55s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#btn-next-slide:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(23, 63, 53, 0.15);
+}
+
+#btn-next-slide:disabled,
+#btn-next-slide[disabled] {
+  cursor: not-allowed !important;
+  opacity: 0.3 !important;
+  transform: scale(1) !important;
+  box-shadow: none !important;
+}
+
+/* 
+  =========================================
+  PREMIUM PRINT STYLING & PDF EXPORT RESETS
+  =========================================
+*/
+@media print {
+  /* Absolute Hide of non-editorial components */
+  header, 
+  footer, 
+  aside, 
+  .no-print, 
+  [id^="btn-"], 
+  button, 
+  select,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Unchain the flexbox overflow viewport to allow multi-page document pagination */
+  html, 
+  body, 
+  #root, 
+  main,
+  .min-h-screen,
+  .flex-1 {
+    background-color: #F7F1E8 !important;
+    background: #F7F1E8 !important;
+    color: #111111 !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Format slide sections cleanly */
+  .print-document-container {
+    display: block !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1.5cm 0 !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    background: #F7F1E8 !important;
+  }
+
+  .print-presentation-container {
+    display: none !important;
+  }
+
+  /* Force page breaks between strategic segments */
+  .print-slide-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: always !important;
+    break-after: always !important;
+    margin-bottom: 2cm !important;
+    padding-top: 1.5cm !important;
+    border-top: 1px solid #E8DDCE !important;
+  }
+
+  /* Keep strategic cards or panels from splitting in half */
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Text color enhancement for print contrast */
+  h1, h2, h3, h4, font-serif {
+    color: #173F35 !important;
+  }
+
+  p, li, span, div {
+    color: #2B2B2B !important;
+  }
+
+  /* Adjust SVG and graphics colors for high print quality */
+  svg, .text-brand-gold {
+    color: #C9A45C !important;
+  }
+
+  /* Clear default margins and headers/footers of browser print */
+  @page {
+    size: A4 portrait;
+    margin: 2cm 1.5cm;
+  }
+}
