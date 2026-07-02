@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cronograma Instagram — Elife Fitness</title>
+  <style>
+    :root{
+      --bg:#f5f8f7;
+      --surface:#ffffff;
+      --surface-2:#eef6f4;
+      --dark:#143f3a;
+      --teal:#0d8f7b;
+      --teal-2:#1ca690;
+      --line:#d7e6e2;
+      --text:#173c38;
+      --muted:#5f706d;
+      --accent:#e8f4f1;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    .deck{
+      max-width:1180px;
+      margin:0 auto;
+      padding:28px 20px 64px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg, #143f3a 0%, #0f7567 100%);
+      color:#fff;
+      border-radius:28px;
+      padding:38px 34px;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:22px;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      right:-80px;
+      top:-80px;
+      width:280px;
+      height:280px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:50%;
+    }
+
+    .kicker{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:1.8px;
+      text-transform:uppercase;
+      font-weight:800;
+      color:#9cf0e4;
+      margin-bottom:14px;
+    }
+
+    h1{
+      margin:0 0 12px;
+      font-size:clamp(32px, 6vw, 64px);
+      line-height:.98;
+      letter-spacing:-.04em;
+    }
+
+    .subtitle{
+      margin:0;
+      max-width:820px;
+      font-size:20px;
+      color:rgba(255,255,255,.88);
+    }
+
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      background:#fff;
+      color:var(--text);
+      border-radius:999px;
+      font-size:14px;
+      font-weight:800;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+
+    section{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+      margin-top:18px;
+      box-shadow:0 14px 36px rgba(20,63,58,.05);
+      overflow:visible;
+    }
+
+    h2{
+      margin:0 0 18px;
+      font-size:34px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+      color:var(--dark);
+    }
+
+    h3{
+      margin:0 0 8px;
+      font-size:22px;
+      line-height:1.18;
+      color:var(--dark);
+      word-break:break-word;
+    }
+
+    p{
+      margin:0;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.55;
+      word-break:break-word;
+    }
+
+    .grid-5,
+    .grid-4,
+    .grid-3,
+    .grid-2{
+      display:grid;
+      gap:16px;
+      align-items:stretch;
+    }
+
+    .grid-5{grid-template-columns:repeat(5,minmax(0,1fr));}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:20px;
+      min-height:unset;
+      overflow:visible;
+    }
+
+    .card.soft{
+      background:var(--surface-2);
+    }
+
+    .card.dark{
+      background:var(--dark);
+      border-color:var(--dark);
+      color:#fff;
+    }
+
+    .card.dark h3,
+    .card.dark p,
+    .card.dark .metric,
+    .card.dark .mini-note{color:#fff;}
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--teal);
+      color:#fff;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+      white-space:normal;
+      line-height:1.2;
+    }
+
+    .tag.alt{
+      background:var(--accent);
+      color:var(--dark);
+      border:1px solid #cce2dc;
+    }
+
+    .metric{
+      font-size:44px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-.04em;
+      color:var(--teal);
+      margin-bottom:10px;
+      word-break:break-word;
+    }
+
+    .mini-note{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .table{
+      display:grid;
+      grid-template-columns:140px 1fr 1fr 1.2fr;
+      gap:12px;
+    }
+
+    .cell,
+    .head{
+      border-radius:18px;
+      padding:16px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      overflow:visible;
+      word-break:break-word;
+    }
+
+    .head{
+      background:var(--surface-2);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      font-weight:900;
+      color:var(--dark);
+    }
+
+    .cell strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:18px;
+      color:var(--dark);
+    }
+
+    .story-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .story-item{
+      display:grid;
+      grid-template-columns:74px 1fr;
+      gap:12px;
+      align-items:start;
+    }
+
+    .day{
+      background:var(--dark);
+      color:#fff;
+      border-radius:14px;
+      padding:12px 10px;
+      font-size:14px;
+      font-weight:900;
+      text-align:center;
+      letter-spacing:.5px;
+    }
+
+    .story-box{
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:700;
+      color:var(--text);
+      word-break:break-word;
+    }
+
+    ul.clean{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      padding:28px 6px 0;
+    }
+
+    @media (max-width: 1080px){
+      .grid-5{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .table{grid-template-columns:120px 1fr 1fr 1fr;}
+    }
+
+    @media (max-width: 860px){
+      .grid-5,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .table{grid-template-columns:1fr;}
+      .deck{padding:18px 14px 42px;}
+      .hero{padding:28px 22px;border-radius:22px;}
+      section{padding:22px;}
+      h2{font-size:28px;}
+      .story-item{grid-template-columns:68px 1fr;}
+    }
+
+    @media print{
+      body{background:#fff;}
+      .deck{padding:0;}
+      section,.hero{box-shadow:none; break-inside:avoid;}
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="hero">
+      <div class="kicker">Elife Fitness • Cronograma Instagram</div>
+      <h1>Calendário de conteúdo para Instagram</h1>
+      <p class="subtitle">Estrutura prática para organizar postagens da Elife com foco em constância, apresentação dos lançamentos, relacionamento e conversão para o Vendizap.</p>
+      <div class="badge-row">
+        <div class="badge">Frequência inicial: <strong>12 posts/mês</strong></div>
+        <div class="badge">Stories: <strong>4 a 6 dias por semana</strong></div>
+        <div class="badge">Foco: <strong>Desejo + benefício + venda leve</strong></div>
+      </div>
+    </div>
+
+    <section>
+      <h2>1. Frequência recomendada</h2>
+      <div class="grid-5">
+        <div class="card soft">
+          <span class="tag">Reels</span>
+          <h3>2x por semana</h3>
+          <p>Alcance, descoberta e produto no corpo. Ideal para lançamentos, looks da semana e vídeos curtos com movimento.</p>
+        </div>
+        <div class="card soft">
+          <span class="tag alt">Carrossel</span>
+          <h3>1x por semana</h3>
+          <p>Educação comercial: caimento, tecido, sustentação, uso, tamanhos e dúvidas frequentes.</p>
+        </div>
+        <div class="card dark">
+          <span class="tag alt">Stories</span>
+          <h3>4 a 6 dias por semana</h3>
+          <p>Bastidor, prova social, enquete, detalhes das peças e arte fixa com link do Vendizap.</p>
+        </div>
+        <div class="card soft">
+          <span class="tag">Post fixo / arte</span>
+          <h3>Quando houver lançamento</h3>
+          <p>Usar após a sequência de vídeos para mostrar cor, tamanho, disponibilidade e chamada para compra.</p>
+        </div>
+        <div class="card soft">
+          <span class="tag alt">Destaques</span>
+          <h3>Atualizar sempre</h3>
+          <p>Organizar como vitrine: Como Comprar, Lançamentos, Tamanhos, Clientes, Pronta Entrega e Vendizap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Calendário mensal base</h2>
+      <div class="grid-4">
+        <div class="card">
+          <div class="metric">8</div>
+          <h3>Reels por mês</h3>
+          <p>Vídeos curtos com peças em uso, lançamentos, detalhes e conteúdo de conversão leve.</p>
+        </div>
+        <div class="card">
+          <div class="metric">4</div>
+          <h3>Carrosséis por mês</h3>
+          <p>Conteúdos educativos e comerciais para reduzir dúvidas e valorizar o diferencial das peças.</p>
+        </div>
+        <div class="card">
+          <div class="metric">12</div>
+          <h3>Posts no feed</h3>
+          <p>Volume ideal para começar com consistência e sem sobrecarregar a operação.</p>
+        </div>
+        <div class="card soft">
+          <div class="metric">4–6x</div>
+          <h3>Stories por semana</h3>
+          <p>Canal principal para relacionamento, lançamento e envio de tráfego para o Vendizap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Grade semanal fixa</h2>
+      <div class="table">
+        <div class="head">Dia</div>
+        <div class="head">Formato</div>
+        <div class="head">Objetivo</div>
+        <div class="head">Conteúdo</div>
+
+        <div class="cell"><strong>Segunda</strong></div>
+        <div class="cell"><strong>Reels</strong></div>
+        <div class="cell">Desejo / lançamento</div>
+        <div class="cell">Peça no corpo, movimento leve, benefício curto e CTA suave para ver no Vendizap.</div>
+
+        <div class="cell"><strong>Quarta</strong></div>
+        <div class="cell"><strong>Carrossel</strong></div>
+        <div class="cell">Educação / benefício</div>
+        <div class="cell">Como escolher, caimento, tecido, sustentação, tamanhos e dúvidas mais comuns.</div>
+
+        <div class="cell"><strong>Sexta</strong></div>
+        <div class="cell"><strong>Reels</strong></div>
+        <div class="cell">Conversão leve</div>
+        <div class="cell">Produto + diferencial + reforço nos stories com arte fixa e link do Vendizap.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Stories da semana</h2>
+      <div class="grid-2">
+        <div class="story-list">
+          <div class="story-item"><div class="day">SEG</div><div class="story-box">Lançamento, vídeo da peça, enquete e link.</div></div>
+          <div class="story-item"><div class="day">TER</div><div class="story-box">Dúvida de tamanho, atendimento e apoio de compra.</div></div>
+          <div class="story-item"><div class="day">QUA</div><div class="story-box">Repost do carrossel + caixa de pergunta.</div></div>
+        </div>
+        <div class="story-list">
+          <div class="story-item"><div class="day">QUI</div><div class="story-box">Cores e tamanhos disponíveis.</div></div>
+          <div class="story-item"><div class="day">SEX</div><div class="story-box">Reels novo + arte fixa + Vendizap.</div></div>
+          <div class="story-item"><div class="day">SÁB</div><div class="story-box">Bastidor, cliente, showroom ou rotina.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Mix editorial do mês</h2>
+      <div class="grid-3">
+        <div class="card dark">
+          <div class="metric">60%</div>
+          <h3>Desejo + benefício</h3>
+          <p>Caimento, conforto, tecido, visual, movimento e estilo de uso.</p>
+        </div>
+        <div class="card">
+          <div class="metric">25%</div>
+          <h3>Autoridade + prova social</h3>
+          <p>Fundadora, clientes reais, feedbacks, dicas e conteúdo de confiança.</p>
+        </div>
+        <div class="card soft">
+          <div class="metric">15%</div>
+          <h3>Venda direta</h3>
+          <p>Tamanhos, cores, pronta entrega, combos, últimas unidades e Vendizap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Primeira semana pronta</h2>
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Segunda</span>
+          <h3>Reels: Novo macacão verde Elife</h3>
+          <p>Stories com corpo inteiro, costas, enquete “treino ou dia a dia?” e link do Vendizap.</p>
+        </div>
+        <div class="card">
+          <span class="tag alt">Quarta</span>
+          <h3>Carrossel: 4 detalhes que fazem diferença</h3>
+          <p>Cintura alta, sustentação, tecido confortável, caimento e CTA para o catálogo.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Sexta</span>
+          <h3>Reels: Conjunto preto funcional</h3>
+          <p>Vídeo curto com close no cós e no top + arte fixa com tamanhos nos stories.</p>
+        </div>
+        <div class="card dark">
+          <span class="tag alt">Destaques</span>
+          <h3>Organizar vitrine</h3>
+          <p>Como Comprar • Lançamentos • Tamanhos • Clientes • Pronta Entrega • Vendizap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Observação estratégica</h2>
+      <div class="card soft">
+        <h3>Proporção ideal para a Elife</h3>
+        <p>Evitar deixar o perfil com aparência de catálogo repetitivo. A recomendação é manter a comunicação com 60% desejo e benefício, 25% autoridade e prova social e 15% venda direta.</p>
+        <ul class="clean">
+          <li>Primeiro mês: priorizar constância e clareza.</li>
+          <li>Stories são o principal canal de conversão no curto prazo.</li>
+          <li>Arte fixa entra depois dos vídeos para facilitar a compra.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">Elife Fitness × Orvalia Studio — Cronograma visual corrigido</div>
+  </div>
+</body>
+</html>
