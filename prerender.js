@@ -18,6 +18,15 @@ const routesToPrerender = [
   '/portfolio/marta-ana-chiconato/',
   '/sobre/',
   '/contato/',
+  '/blog/',
+  '/solucoes/criacao-de-sites-indaiatuba/',
+  '/solucoes/landing-pages-indaiatuba/',
+  '/solucoes/seo-indaiatuba/',
+  '/solucoes/sites-para-medicos-indaiatuba/',
+  '/solucoes/sites-para-advogados-indaiatuba/',
+  '/privacidade/',
+  '/termos/',
+  '/cookies/',
   // Legado
   '/agencia-indaiatuba/',
   '/sites-estrategicos/',
@@ -49,6 +58,10 @@ async function prerender() {
     );
     
     if (helmet) {
+      // Remove original title and meta description
+      html = html.replace(/<title>.*<\/title>/g, '');
+      html = html.replace(/<meta name="description"[^>]*>/g, '');
+      
       const helmetTags = `
         ${helmet.title.toString()}
         ${helmet.meta.toString()}

@@ -3,6 +3,8 @@ import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+import SEO from "../../components/SEO";
+
 export default function Cookies() {
   useEffect(() => {
     document.title = "Política de Cookies | Orvalia Studio - Estúdio de Branding em Indaiatuba";

@@ -131,6 +131,8 @@ const itemVariants = {
   },
 };
 
+import SEO from "../../components/SEO";
+
 export default function BlogIndex() {
   const sortedArticles = [...articles].sort((a, b) => {
     const monthsMap: Record<string, number> = {

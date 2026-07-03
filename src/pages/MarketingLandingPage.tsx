@@ -3,6 +3,8 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2, MessageSquare, Target, Zap, Search, Layout, MousePointer2, Smartphone } from "lucide-react";
 import { marketingPages } from "../data/marketingPages";
 
+import SEO from "../components/SEO";
+
 export default function MarketingLandingPage() {
   const { slug } = useParams<{ slug: string }>();
   const pageContent = marketingPages.find(p => p.slug === slug);
@@ -13,6 +15,24 @@ export default function MarketingLandingPage() {
 
   return (
     <div className="min-h-screen bg-brand-bg pt-32 pb-20">
+
+      <SEO 
+        title={`${pageContent.title} | Orvalia Studio`}
+        description={pageContent.problem.description}
+        canonical={`https://orvalia.com.br/solucoes/${pageContent.slug}/`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": pageContent.title,
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Orvalia Studio"
+          },
+          "areaServed": "Indaiatuba",
+          "description": pageContent.problem.description
+        }}
+      />
+
       {/* Noise Overlay */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       

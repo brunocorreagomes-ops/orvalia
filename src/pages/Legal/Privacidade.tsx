@@ -3,6 +3,8 @@ import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+import SEO from "../../components/SEO";
+
 export default function Privacidade() {
   useEffect(() => {
     document.title = "Política de Privacidade | Orvalia Studio - Branding em Indaiatuba";
