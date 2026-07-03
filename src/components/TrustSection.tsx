@@ -19,20 +19,7 @@ const differentiators = [
   }
 ];
 
-const testimonials = [
-  {
-    name: "Ricardo Mendes",
-    role: "CEO, TechIndaia",
-    content: "A Orvalia transformou nosso posicionamento digital em Indaiatuba. Passamos a atrair clientes muito mais qualificados e alinhados ao nosso real valor.",
-    rating: 5
-  },
-  {
-    name: "Ana Silveira",
-    role: "Fundadora, Studio AS",
-    content: "O melhor investimento em branding que já fizemos. O site é rápido, elegante e transmite exatamente nossa autoridade.",
-    rating: 5
-  }
-];
+
 
 export default function TrustSection() {
   return (
@@ -86,49 +73,6 @@ export default function TrustSection() {
           </div>
         </div>
 
-        {/* [5 — CONTEÚDO PARA GEO] Depoimentos com microdata */}
-        <div className="pt-24 border-t border-white/5">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4">Relatos de <span className="text-gradient">Sucesso Local</span></h2>
-            <p className="text-brand-secondary italic font-serif text-lg">O que dizem os líderes que transformaram seus negócios conosco.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testi, idx) => (
-              <div 
-                key={idx} 
-                itemScope 
-                itemType="https://schema.org/Review" 
-                className="p-10 rounded-[3rem] glass-premium relative border border-white/5"
-              >
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testi.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="text-brand-accent-light fill-brand-accent-light" />
-                  ))}
-                </div>
-                <div itemProp="reviewBody" className="text-white text-lg leading-relaxed mb-8 italic">
-                  "{testi.content}"
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-accent-light/10 flex items-center justify-center text-brand-accent-light font-black">
-                    {testi.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div itemProp="author" itemScope itemType="https://schema.org/Person">
-                      <span itemProp="name" className="text-white font-black uppercase tracking-widest text-xs">{testi.name}</span>
-                    </div>
-                    <div className="text-brand-secondary/60 text-[10px] uppercase tracking-widest font-mono">{testi.role}</div>
-                  </div>
-                </div>
-                {/* Meta info for SEO */}
-                <meta itemProp="reviewRating" itemScope itemType="https://schema.org/Rating" content={testi.rating.toString()} />
-                <meta itemProp="itemReviewed" itemScope itemType="https://schema.org/ProfessionalService" content="Orvalia Studio" />
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-    </section>
+        </div></section>
   );
 }

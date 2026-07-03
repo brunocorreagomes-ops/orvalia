@@ -104,15 +104,13 @@ export default function Footer() {
             </div>
             <div className="flex gap-16">
                <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[7px] text-brand-accent-light">BASE</span>
-                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">Indaiatuba</span>
+                  <span className="font-mono text-[7px] text-brand-accent-light">ATENDIMENTO</span>
+                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">Indaiatuba e Região</span>
                </div>
                <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[7px] text-brand-accent-light">STATUS</span>
+                  <span className="font-mono text-[7px] text-brand-accent-light">DISPONIBILIDADE</span>
                   <span className="text-[10px] text-white font-bold tracking-widest uppercase flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light animate-pulse" />
-                    Operacional
-                  </span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light animate-pulse" />Aberto para projetos</span>
                </div>
             </div>
         </div>

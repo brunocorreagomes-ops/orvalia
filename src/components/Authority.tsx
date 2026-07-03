@@ -57,7 +57,7 @@ export default function Authority() {
                  </div>
                  <div>
                     <h4 className="text-white font-black text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Velocidade</h4>
-                    <p className="text-brand-secondary/60 text-[9px] md:text-xs leading-relaxed font-mono">INFRAESTRUTURA DE CÓDIGO LEVE E PERFORMANCE OTIMIZADA.</p>
+                    <p className="text-brand-secondary/60 text-[9px] md:text-xs leading-relaxed font-mono">SITES RÁPIDOS, CONFIÁVEIS E OTIMIZADOS PARA VENDER.</p>
                  </div>
               </div>
             </div>

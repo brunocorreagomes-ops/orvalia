@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="hero-canvas relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-brand-bg">
+    <section ref={heroRef} className="hero-canvas relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 md:pt-28 overflow-hidden bg-brand-bg">
       {/* Noise Overlay from DNA vibes */}
       <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
@@ -68,9 +68,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center mb-10"
+            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center mb-6"
           >
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-0">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
               <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
               <div className="w-12 h-[1px] bg-brand-accent-light" />
@@ -95,7 +95,7 @@ export default function Hero() {
           >
             <div className="relative w-full overflow-visible py-2">
               {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
-              <h1 className="text-[8.5vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.1] tracking-tight md:tracking-tighter text-white mb-8 flex flex-col items-center uppercase max-w-5xl mx-auto">
+              <h1 className="text-[8.5vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.1] tracking-tight md:tracking-tighter text-white mb-5 flex flex-col items-center uppercase max-w-5xl mx-auto">
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 30 },
@@ -130,7 +130,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto mb-12 font-sans px-4"
+                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto mb-8 font-sans px-4"
               >
                 Transformamos empresas locais em marcas mais desejadas, confiáveis e preparadas para vender melhor no digital — com estratégia, design, site e comunicação.
               </motion.p>
@@ -140,15 +140,15 @@ export default function Hero() {
           </motion.div>
 
           {/* Bottom Action Section */}
-          <div className="col-span-4 lg:col-span-12 mt-4 md:mt-8">
-            <div className="flex flex-col items-center gap-12">
+          <div className="col-span-4 lg:col-span-12 mt-2 md:mt-4">
+            <div className="flex flex-col items-center gap-4 absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="flex flex-col items-center justify-center w-full"
               >
-                <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-6">
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-4">
                   <motion.a 
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
                     target="_blank"
@@ -181,20 +181,14 @@ export default function Hero() {
                 </div>
 
                 {/* Microcopy below CTAs */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-4">
                   <p className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-brand-secondary/60">
                     Atendimento direto <span className="text-brand-accent-light mx-2">•</span> Diagnóstico estratégico <span className="text-brand-accent-light mx-2">•</span> Projetos sob medida
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-6 mt-2">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3, 4].map(i => (
-                      <div key={i} className="w-12 h-12 rounded-full border-2 border-brand-bg bg-brand-accent-light/20 backdrop-blur-sm overflow-hidden">
-                        <img src={`https://i.pravatar.cc/100?u=${i + 20}`} alt="User" referrerPolicy="no-referrer" className="w-full h-full object-cover grayscale" />
-                      </div>
-                    ))}
-                  </div>
+                  
                   <div className="sm:pl-8 flex flex-col justify-center sm:border-l border-white/10 text-center sm:text-left">
                     <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Regional</span>
                     <span className="text-xs text-white/80 font-medium">Indaiatuba, Campinas, Itu, Sorocaba e RMC</span>
@@ -216,9 +210,9 @@ export default function Hero() {
                     }
                   }
                 }}
-                className="flex flex-col items-center gap-8"
+                className="flex flex-col items-center gap-4 absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full hidden md:flex"
               >
-                <div className="flex gap-16 items-center">
+                <div className="flex gap-8 md:gap-16 items-center scale-90 md:scale-100">
                   <motion.div 
                     variants={{
                       hidden: { opacity: 0, y: 15 },
@@ -228,7 +222,7 @@ export default function Hero() {
                     className="flex flex-col items-center gap-2"
                   >
                     <Palette className="text-brand-accent-light" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">DNA DO DESIGN</span>
+                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">IDENTIDADE SOB MEDIDA</span>
                   </motion.div>
                   <motion.div 
                     variants={{
@@ -239,7 +233,7 @@ export default function Hero() {
                     className="flex flex-col items-center gap-2"
                   >
                     <Globe className="text-brand-accent-light" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">ESTRATÉGIA GEO</span>
+                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">POSICIONAMENTO DIGITAL</span>
                   </motion.div>
                   <motion.div 
                     variants={{
@@ -250,7 +244,7 @@ export default function Hero() {
                     className="flex flex-col items-center gap-2"
                   >
                     <Code className="text-brand-accent-dark" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">ARQ DE CÓDIGO</span>
+                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">SITE RÁPIDO E EFICIENTE</span>
                   </motion.div>
                 </div>
                 <div className="h-[1px] w-64 bg-gradient-to-r from-transparent via-white/10 to-transparent" />

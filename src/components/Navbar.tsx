@@ -55,7 +55,7 @@ export default function Navbar() {
              </span>
           </div>
           <div className="h-4 w-[1px] bg-white/20 hidden md:block" />
-          <span className="hidden md:block font-mono text-[8px] uppercase tracking-[0.4em] text-brand-accent-light">DNA ESTRATÉGICO</span>
+          <span className="hidden md:block font-mono text-[8px] uppercase tracking-[0.4em] text-brand-accent-light">POSICIONAMENTO ESTRATÉGICO</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -230,7 +230,7 @@ export default function Navbar() {
                     </div>
                     <div className="text-left sm:text-right">
                        <span className="font-mono text-[9px] text-brand-accent-light block mb-2 uppercase tracking-widest">Base: Indaiatuba / SP</span>
-                       <span className="font-mono text-[8px] text-brand-secondary/30 block tracking-[0.2em]">© 2026 ORVALIA STUDIO DNA</span>
+                       <span className="font-mono text-[8px] text-brand-secondary/30 block tracking-[0.2em]">© 2026 ORVALIA STUDIO</span>
                     </div>
                  </div>
               </div>

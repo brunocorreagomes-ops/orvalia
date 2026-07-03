@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Como funciona um projeto de posicionamento de marca?",
-    answer: "Nosso processo é dividido em: Diagnóstico de DNA, Estratégia de Diferenciação, Identidade Visual Exclusiva e Arquitetura Digital. Utilizamos metodologias ágeis e IA para garantir que cada marca tenha um posicionamento único e lucrativo no digital."
+    answer: "Nosso processo é dividido em: Diagnóstico de Marca, Estratégia de Diferenciação, Identidade Visual Exclusiva e Desenvolvimento do Site. Utilizamos metodologias ágeis e IA para garantir que cada marca tenha um posicionamento único e lucrativo no digital."
   },
   {
     question: "A Orvalia cria sites otimizados para o Google (SEO)?",

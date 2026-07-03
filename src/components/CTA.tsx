@@ -16,7 +16,7 @@ export default function CTA() {
         <div className="flex justify-center mb-12">
            <div className="flex items-center gap-4">
               <div className="w-12 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Protocolo Final</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Método Comprovado</span>
               <div className="w-12 h-[1px] bg-brand-accent-light" />
            </div>
         </div>
@@ -47,21 +47,14 @@ export default function CTA() {
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.a>
 
-            <div className="flex flex-col items-center md:items-start opacity-40">
-               <span className="font-mono text-[10px] text-brand-secondary uppercase tracking-[0.3em]">
-                 Fila de espera para Junho/2026 
-               </span>
-               <span className="font-mono text-[9px] text-brand-accent-light uppercase tracking-widest mt-1">
-                 // Apenas 2 vagas restantes //
-               </span>
-            </div>
+            
         </div>
 
         <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
            <div className="flex gap-12">
               <div className="flex flex-col gap-2 text-left">
-                 <span className="font-mono text-[8px] text-brand-accent-light">VERSÃO ARQ</span>
-                 <span className="text-[10px] text-white font-bold tracking-widest uppercase italic">2.0 Premium</span>
+                 <span className="font-mono text-[8px] text-brand-accent-light">POSICIONAMENTO</span>
+                 <span className="text-[10px] text-white font-bold tracking-widest uppercase italic">PREMIUM</span>
               </div>
               <div className="flex flex-col gap-2 text-left">
                  <span className="font-mono text-[8px] text-brand-accent-light">LOCALIZAÇÃO</span>
@@ -71,7 +64,7 @@ export default function CTA() {
            
            <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />
-              <span className="font-mono text-[9px] text-brand-secondary uppercase tracking-[0.2em]">Status do Sistema: Otimização Ativa</span>
+              <span className="font-mono text-[9px] text-brand-secondary uppercase tracking-[0.2em]">Sua marca pronta para crescer</span>
            </div>
         </div>
       </motion.div>
