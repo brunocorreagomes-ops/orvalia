@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://orvalia.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://orvalia.com.br/branding/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://orvalia.com.br/sites/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://orvalia.com.br/seo-geo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/debora-bolangno/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/elife-fitness/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/quinta-de-caraiva/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/knj-tur/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/smii-care/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/portfolio/marta-ana-chiconato/</loc><priority>0.7</priority></url>
+  <url><loc>https://orvalia.com.br/sobre/</loc><priority>0.6</priority></url>
+  <url><loc>https://orvalia.com.br/contato/</loc><priority>0.8</priority></url>
+</urlset>

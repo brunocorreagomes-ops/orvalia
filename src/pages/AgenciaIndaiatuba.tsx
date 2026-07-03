@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { ArrowLeft, MapPin, Phone, Mail, Globe, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -18,6 +19,19 @@ const localCases = [
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
   }
 ];
+
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Branding e Identidade Visual",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Orvalia Studio"
+  },
+  "areaServed": "Indaiatuba",
+  "description": "Construção de posicionamento de marca premium e identidade visual corporativa para empresas."
+};
 
 export default function AgenciaIndaiatuba() {
   return (

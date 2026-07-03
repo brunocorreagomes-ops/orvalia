@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight, Globe, Sparkles, ShieldCheck } from "lucide-react";
@@ -5,6 +6,19 @@ import { useEffect } from "react";
 
 import { Share2 } from "lucide-react";
 import ShareButton from "../components/ShareButton";
+
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoria em SEO e Inteligência Artificial (GEO)",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Orvalia Studio"
+  },
+  "areaServed": "Indaiatuba",
+  "description": "Estratégias de presença digital focadas em otimização para motores de busca e inteligência artificial."
+};
 
 export default function PresencaDigital() {
   useEffect(() => {

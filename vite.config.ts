@@ -1,8 +1,8 @@
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(({ mode, isSsrBuild }) => {
   const env = loadEnv(mode, '.', '');
   return {
     base: '/',
@@ -13,7 +13,7 @@ export default defineConfig(({mode}) => {
       sourcemap: false,
       minify: 'esbuild',
       rollupOptions: {
-        output: {
+        output: isSsrBuild ? {} : {
           manualChunks: {
             vendor: ['react', 'react-dom', 'react-router-dom'],
             animations: ['framer-motion', 'gsap', '@studio-freight/lenis'],
@@ -30,8 +30,6 @@ export default defineConfig(({mode}) => {
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };

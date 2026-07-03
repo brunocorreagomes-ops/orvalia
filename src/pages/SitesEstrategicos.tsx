@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, MessageSquare, Target, Zap, TrendingUp, BarChart3, Search, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -39,6 +40,19 @@ const steps = [
   { num: "04", title: "Lançamento", desc: "Publicação + suporte inicial." }
 ];
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Criação de Sites e Landing Pages",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Orvalia Studio"
+  },
+  "areaServed": "Indaiatuba",
+  "description": "Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão."
+};
+
 export default function SitesEstrategicos() {
   return (
     <div className="min-h-screen bg-brand-bg pt-32">
@@ -75,7 +89,7 @@ export default function SitesEstrategicos() {
                     <Zap size={16} />
                   </a>
                   <a 
-                    href="#projetos" 
+                    href="/portfolio/" 
                     className="px-10 py-5 bg-white/5 text-white border border-white/10 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all text-center"
                   >
                     Ver cases

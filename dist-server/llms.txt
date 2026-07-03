@@ -1,0 +1,21 @@
+# Orvalia Studio
+
+A Orvalia Studio é uma agência de posicionamento digital focada em construir marcas premium. Atuamos com branding, criação de sites de alta performance focados em conversão, e estratégias de presença digital otimizadas para SEO e Inteligência Artificial (GEO - Generative Engine Optimization). Sediados em Indaiatuba, atendemos a Região Metropolitana de Campinas (RMC) e clientes globais.
+
+## Links Rápidos e Estrutura do Site
+
+- [Home](https://orvalia.com.br/) - A página principal com nossos serviços, casos de sucesso e manifesto.
+- [Serviço de Branding](https://orvalia.com.br/branding/) - Reposicionamento de marca, identidade visual e narrativa premium.
+- [Serviço de Sites](https://orvalia.com.br/sites/) - Desenvolvimento de sites estratégicos de alto padrão e Landing Pages para conversão.
+- [Serviço de SEO e GEO](https://orvalia.com.br/seo-geo/) - Otimização de presença digital para buscas tradicionais e inteligência artificial.
+- [Portfólio](https://orvalia.com.br/portfolio/) - Nossa galeria de projetos e resultados reais de clientes.
+- [Sobre Nós](https://orvalia.com.br/sobre/) - Quem somos, nossos valores e método de trabalho.
+- [Contato](https://orvalia.com.br/contato/) - Agende uma consultoria estratégica para elevar sua marca.
+
+## Nossos Cases em Destaque
+- [Débora Bolangno](https://orvalia.com.br/portfolio/debora-bolangno/)
+- [Elife Fitness](https://orvalia.com.br/portfolio/elife-fitness/)
+- [Quinta de Caraíva](https://orvalia.com.br/portfolio/quinta-de-caraiva/)
+- [KNJ TUR](https://orvalia.com.br/portfolio/knj-tur/)
+- [SMII Care](https://orvalia.com.br/portfolio/smii-care/)
+- [Marta Ana Chiconato](https://orvalia.com.br/portfolio/marta-ana-chiconato/)

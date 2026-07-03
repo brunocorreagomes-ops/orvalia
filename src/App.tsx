@@ -1,14 +1,19 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
 import { MessageCircle, ChevronUp } from "lucide-react";
 import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Sobre from "./pages/Sobre";
+import Contato from "./pages/Contato";
+
 import Essencial from "./pages/Essencial";
 import Profissional from "./pages/Profissional";
 import Evolucao from "./pages/Evolucao";
+import BlogIndex from "./pages/Blog/BlogIndex";
 import Article1 from "./pages/Blog/Article1";
 import Article2 from "./pages/Blog/Article2";
 import Article3 from "./pages/Blog/Article3";
@@ -26,7 +31,6 @@ import ArticleArquitetura from "./pages/Blog/ArticleArquitetura";
 import ArticleGEO from "./pages/Blog/ArticleGEO";
 import ArticleNewGEO from "./pages/Blog/ArticleNewGEO";
 import ArticleEstetica from "./pages/Blog/ArticleEstetica";
-import BlogIndex from "./pages/Blog/BlogIndex";
 import PresencaDigital from "./pages/PresencaDigital";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
@@ -41,10 +45,9 @@ function NotFound() {
       <div className="text-center">
         <h1 className="text-9xl font-black text-brand-accent-light opacity-20 mb-8">404</h1>
         <h2 className="text-4xl font-black uppercase tracking-tighter mb-4">Página não encontrada</h2>
-        <p className="text-brand-secondary mb-8">O destino que você procura não existe ou foi movido.</p>
-        <Link to="/" className="px-10 py-4 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs">
+        <a href="/" className="px-10 py-4 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs">
           Voltar ao Início
-        </Link>
+        </a>
       </div>
     </div>
   );
@@ -54,23 +57,13 @@ function ElifeRedirect() {
   useEffect(() => {
     window.location.href = "/clientes/elife/index.html";
   }, []);
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-bg text-white">
-      <div className="text-center">
-        <div className="w-12 h-12 rounded-full border-2 border-brand-accent-light/20 border-t-brand-accent-light animate-spin mx-auto mb-6"></div>
-        <p className="font-mono text-xs uppercase tracking-widest text-brand-accent-light animate-pulse">
-          Carregando Report Executivo...
-        </p>
-      </div>
-    </div>
-  );
+  return null;
 }
 
 function BackToTop() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   return (
     <motion.button
       onClick={scrollToTop}
@@ -86,7 +79,6 @@ function BackToTop() {
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
-  
   useEffect(() => {
     if (!hash) {
       window.scrollTo(0, 0);
@@ -99,23 +91,18 @@ function ScrollToTop() {
       }, 100);
     }
   }, [pathname, hash]);
-  
   return null;
 }
 
 export default function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <main className="relative bg-brand-bg text-brand-text">
-        {/* Global Features */}
         <SmoothScroll />
-        
         <BackToTop />
-        
-        {/* Floating WhatsApp Action */}
         <motion.a
-          href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+          href="https://wa.me/5511978959567?text=Olá,%20Bruno."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Entre em contato pelo WhatsApp"
@@ -128,11 +115,21 @@ export default function App() {
             Conversar Agora
           </span>
         </motion.a>
-
         <Navbar />
-        
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/branding" element={<AgenciaIndaiatuba />} />
+          <Route path="/sites" element={<SitesEstrategicos />} />
+          <Route path="/seo-geo" element={<PresencaDigital />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:cliente" element={<Portfolio />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/contato" element={<Contato />} />
+
+          {/* Legacy routes kept to avoid breaking old links */}
+          <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
+          <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
+          <Route path="/presenca-digital" element={<PresencaDigital />} />
           <Route path="/plano-essencial" element={<Essencial />} />
           <Route path="/plano-profissional" element={<Profissional />} />
           <Route path="/plano-evolucao" element={<Evolucao />} />
@@ -156,21 +153,16 @@ export default function App() {
           <Route path="/blog/geo-generative-engine-optimization-buscas-ia" element={<ArticleNewGEO />} />
           <Route path="/percepcao-de-valor-estetica-premium-indaiatuba" element={<ArticleEstetica />} />
           <Route path="/presenca-digital-estrategica-ia-indaiatuba-campinas" element={<PresencaDigital />} />
-          <Route path="/presenca-digital" element={<PresencaDigital />} />
+          
           <Route path="/termos" element={<Termos />} />
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/cookies" element={<Cookies />} />
-          <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
-          <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
           <Route path="/solucoes/:slug" element={<MarketingLandingPage />} />
           <Route path="/clientes/elife" element={<ElifeRedirect />} />
-          <Route path="/clientes/elife/" element={<ElifeRedirect />} />
-          <Route path="/clientes/elife/index.html" element={<ElifeRedirect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-
         <Footer />
       </main>
-    </Router>
+    </>
   );
 }
