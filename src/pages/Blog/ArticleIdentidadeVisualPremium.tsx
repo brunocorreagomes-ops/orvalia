@@ -28,6 +28,19 @@ export default function ArticleIdentidadeVisualPremium() {
             Arquitetura da Autoridade Visual: O Papel do Design de Alto Padrão no Posicionamento Digital de Profissionais Liberais na Região de Jundiaí e Campinas
           </h1>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp"
+            alt="Arquitetura da Autoridade Visual para Profissionais Liberais"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

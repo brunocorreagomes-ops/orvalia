@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="hero-canvas relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 md:pt-28 overflow-hidden bg-brand-bg">
+    <section ref={heroRef} className="hero-canvas relative min-h-[100svh] md:min-h-[70vh] flex flex-col items-center justify-center pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-brand-bg">
       {/* Noise Overlay from DNA vibes */}
       <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
@@ -61,19 +61,19 @@ export default function Hero() {
       <div className="dewdrop-animation absolute top-1/4 right-[10%] w-32 h-32 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-3xl opacity-20 pointer-events-none z-[1]" />
       <div className="dewdrop-animation absolute bottom-1/4 left-[5%] w-20 h-20 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-brand-accent-light/10 to-transparent blur-2xl opacity-20 pointer-events-none z-[1]" />
 
-      <div className="container mx-auto px-6 relative z-10 hero-content">
-        <div className="dna-grid">
+            <div className="container mx-auto px-6 relative z-10 hero-content w-full">
+        <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto gap-6 md:gap-8">
           {/* Top Detail Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center mb-6"
+            className="flex flex-col items-center text-center w-full"
           >
-            <div className="flex items-center justify-center gap-3 mb-0">
-              <div className="w-12 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
-              <div className="w-12 h-[1px] bg-brand-accent-light" />
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-12 h-[1px] bg-brand-accent-light/50" />
+              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
+              <div className="w-12 h-[1px] bg-brand-accent-light/50" />
             </div>
           </motion.div>
 
@@ -91,11 +91,11 @@ export default function Hero() {
                 },
               },
             }}
-            className="col-span-4 lg:col-span-12 flex flex-col items-center text-center"
+            className="flex flex-col items-center text-center w-full"
           >
-            <div className="relative w-full overflow-visible py-2">
+            <div className="relative w-full overflow-visible">
               {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
-              <h1 className="text-[8.5vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.1] tracking-tight md:tracking-tighter text-white mb-5 flex flex-col items-center uppercase max-w-5xl mx-auto">
+              <h1 className="text-[9vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.05] tracking-tight md:tracking-tighter text-white flex flex-col items-center uppercase max-w-5xl mx-auto">
                 <motion.span 
                   variants={{
                     hidden: { opacity: 0, y: 30 },
@@ -110,7 +110,7 @@ export default function Hero() {
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
                   }}
-                  className="block text-gradient relative py-2"
+                  className="block text-gradient relative py-1 md:py-2"
                 >
                   presença digital premium
                 </motion.span>
@@ -119,7 +119,7 @@ export default function Hero() {
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
                   }}
-                  className="block text-white/90 text-[6vw] md:text-4xl lg:text-5xl font-light tracking-normal lowercase italic font-serif"
+                  className="block text-white/90 text-[6.5vw] sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-normal italic font-serif mt-2 md:mt-4"
                 >
                   para negócios de Indaiatuba e região
                 </motion.span>
@@ -130,7 +130,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto mb-8 font-sans px-4"
+                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto font-sans px-4 mt-4 md:mt-6"
               >
                 Transformamos empresas locais em marcas mais desejadas, confiáveis e preparadas para vender melhor no digital — com estratégia, design, site e comunicação.
               </motion.p>
@@ -140,8 +140,8 @@ export default function Hero() {
           </motion.div>
 
           {/* Bottom Action Section */}
-          <div className="col-span-4 lg:col-span-12 mt-2 md:mt-4">
-            <div className="flex flex-col items-center gap-4 absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full">
+          <div className="w-full mt-2 md:mt-4">
+            <div className="flex flex-col items-center gap-6 w-full relative">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -181,21 +181,21 @@ export default function Hero() {
                 </div>
 
                 {/* Microcopy below CTAs */}
-                <div className="text-center mb-4">
+                <div className="text-center mt-2 mb-8">
                   <p className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-brand-secondary/60">
                     Atendimento direto <span className="text-brand-accent-light mx-2">•</span> Diagnóstico estratégico <span className="text-brand-accent-light mx-2">•</span> Projetos sob medida
                   </p>
                 </div>
-
-                <div className="flex flex-col sm:flex-row items-center gap-6 mt-2">
-                  
-                  <div className="sm:pl-8 flex flex-col justify-center sm:border-l border-white/10 text-center sm:text-left">
+                
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4 w-full border-t border-white/5 pt-8">
+                  <div className="flex flex-col justify-center text-center">
                     <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Regional</span>
                     <span className="text-xs text-white/80 font-medium">Indaiatuba, Campinas, Itu, Sorocaba e RMC</span>
                   </div>
                 </div>
-              </motion.div>
 
+              </motion.div>
+              
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
@@ -210,7 +210,7 @@ export default function Hero() {
                     }
                   }
                 }}
-                className="flex flex-col items-center gap-4 absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full hidden md:flex"
+                className="flex flex-col items-center gap-4 mt-8 w-full hidden md:flex"
               >
                 <div className="flex gap-8 md:gap-16 items-center scale-90 md:scale-100">
                   <motion.div 
@@ -224,6 +224,7 @@ export default function Hero() {
                     <Palette className="text-brand-accent-light" size={20} />
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">IDENTIDADE SOB MEDIDA</span>
                   </motion.div>
+
                   <motion.div 
                     variants={{
                       hidden: { opacity: 0, y: 15 },
@@ -235,6 +236,7 @@ export default function Hero() {
                     <Globe className="text-brand-accent-light" size={20} />
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">POSICIONAMENTO DIGITAL</span>
                   </motion.div>
+
                   <motion.div 
                     variants={{
                       hidden: { opacity: 0, y: 15 },
@@ -247,9 +249,11 @@ export default function Hero() {
                     <span className="text-[9px] font-mono text-brand-secondary tracking-widest">SITE RÁPIDO E EFICIENTE</span>
                   </motion.div>
                 </div>
+
                 <div className="h-[1px] w-64 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                
                 <p className="text-[10px] font-mono text-brand-secondary/60 uppercase tracking-[0.3em]">
-                  [ Orvalia Agency ] indaiatuba — rmc
+                  [ Orvalia Agency ] Indaiatuba — RMC
                 </p>
               </motion.div>
             </div>

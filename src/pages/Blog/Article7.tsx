@@ -43,6 +43,19 @@ export default function Article7() {
             <span>5 min de leitura</span>
           </motion.div>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp"
+            alt="Instagram para empresas"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">O Instagram deixou de ser apenas uma rede social — hoje ele é um dos principais canais de construção de marca. Segundo <strong>Gary Vaynerchuk</strong>, marcas são construídas através de atenção e consistência.</p>

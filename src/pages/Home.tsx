@@ -42,8 +42,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Orvalia Studio | Branding e Sites em Indaiatuba" 
-        description="Agência de posicionamento digital, branding premium e criação de sites focados em conversão em Indaiatuba e região."
+        title="Orvalia Studio | Branding, Sites e Presença Digital em Indaiatuba" 
+        description="Agência de branding em Indaiatuba especializada em identidade visual, sites premium, SEO local e comunicação estratégica para negócios que querem elevar sua presença digital."
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />

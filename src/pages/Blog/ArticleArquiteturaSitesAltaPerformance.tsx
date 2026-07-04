@@ -28,6 +28,19 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
             Arquitetura de Sites de Alto Padrão: Como Estruturar o Site da sua Empresa para Ser a Resposta Principal das IAs em Campinas e RMC
           </h1>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp"
+            alt="Arquitetura de Sites de Alto Padrão em Campinas e RMC"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

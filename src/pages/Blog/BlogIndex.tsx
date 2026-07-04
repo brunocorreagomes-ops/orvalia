@@ -7,7 +7,7 @@ const articles = [
     id: "geo-generative-engine-optimization-buscas-ia",
     title: "O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA",
     excerpt: "O Google mudou. Descubra por que as IAs já decidem quem domina o mercado e como posicionar sua empresa como a única recomendação possível.",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/04-o-que-e-geo-e-como-preparar-sua-marca.webp",
     date: "26 Mai 2026",
     slug: "/blog/geo-generative-engine-optimization-buscas-ia"
   },
@@ -15,70 +15,70 @@ const articles = [
     id: "branding-indaiatuba",
     title: "Branding em Indaiatuba: Como construir uma marca forte com base em estratégia",
     excerpt: "Criar uma marca forte vai muito além de desenvolver um logotipo. Descubra os pilares fundamentais.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/05-branding-em-indaiatuba-como-construir-uma-marca-forte.webp",
     date: "22 Abr 2026"
   },
   {
     id: "identidade-visual-precos",
     title: "Quanto custa uma identidade visual em Indaiatuba? (E por que o barato sai caro)",
     excerpt: "Entenda o valor real por trás de um projeto de identidade visual e como ele impacta seu negócio.",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/06-quanto-custa-uma-identidade-visual-em-indaiatuba.webp",
     date: "21 Abr 2026"
   },
   {
     id: "erros-marca-amadora",
     title: "Erros que fazem sua empresa parecer amadora no digital",
     excerpt: "Muitas empresas estão presentes, mas poucas se posicionam. Saiba como evitar erros comuns.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/07-erros-que-fazem-sua-empresa-parecer-amadora-no-digital.webp",
     date: "20 Abr 2026"
   },
   {
     id: "logo-vs-branding",
     title: "Diferença entre logo e branding: do conceito clássico à construção no digital",
     excerpt: "Logo é um elemento, branding é o sistema. Saiba por que você não pode parar no design.",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/08-diferenca-entre-logo-e-branding.webp",
     date: "19 Abr 2026"
   },
   {
     id: "posicionamento-premium",
     title: "Como posicionar sua empresa como premium: estratégia clássica no digital",
     excerpt: "Posicionamento premium não é sobre preço, é sobre percepção. Aprenda como construir.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/09-como-posicionar-sua-empresa-como-premium.webp",
     date: "18 Abr 2026"
   },
   {
     id: "site-profissional-conversao",
     title: "Criação de site profissional: da usabilidade à conversão moderna",
     excerpt: "Seu site é uma ferramenta de vendas. Descubra como unir UX, Branding e Conversão.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/10-criacao-de-site-profissional-da-usabilidade-a-conversao.webp",
     date: "17 Abr 2026"
   },
   {
     id: "instagram-estrategico",
     title: "Instagram para empresas: da construção de marca à geração de valor",
     excerpt: "Instagram não é só sobre postar, é sobre posicionar. Aprenda a estratégia de valor.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp",
     date: "16 Abr 2026"
   },
   {
     id: "por-que-nao-cresce",
     title: "Por que sua empresa não cresce no digital (mesmo com redes sociais)",
     excerpt: "Presença não é o mesmo que estratégia. Identifique o que está travando seu crescimento.",
-    image: "https://images.unsplash.com/photo-1454165833965-ad296263b8b7?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/12-por-que-sua-empresa-nao-cresce-no-digital.webp",
     date: "15 Abr 2026"
   },
   {
     id: "identidade-profissionais-liberais",
     title: "Identidade visual para profissionais liberais em Indaiatuba",
     excerpt: "Como transmitir autoridade e confiança através do visual. Indispensável para médicos e advogados.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/13-identidade-visual-para-profissionais-liberais-em-indaiatuba.webp",
     date: "14 Abr 2026"
   },
   {
     id: "guia-marca-forte",
     title: "Como construir uma marca forte no digital (guia completo)",
     excerpt: "O passo a passo para empresas que querem dominar o mercado local e digital.",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/14-como-construir-uma-marca-forte-no-digital-guia-completo.webp",
     date: "13 Abr 2026",
     slug: "/blog/guia-marca-forte"
   },
@@ -86,7 +86,7 @@ const articles = [
     id: "branding-estrategico-indaiatuba-campinas",
     title: "Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP",
     excerpt: "Descubra como a Orval’IA Studio transforma empresas de Indaiatuba, Campinas e região através do branding estratégico e design minimalista.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp",
     date: "10 Mai 2026",
     slug: "/branding-estrategico-indaiatuba-campinas"
   },
@@ -94,7 +94,7 @@ const articles = [
     id: "geo-inteligencia-artificial-empresas-sorocaba",
     title: "Por que sua Empresa em Sorocaba ainda não é citada pela IA? O Guia do GEO",
     excerpt: "Do SEO ao GEO: A Nova Fronteira da Visibilidade Digital para o Setor Industrial e Tecnológico de Sorocaba.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/16-por-que-sua-empresa-em-sorocaba-ainda-nao-e-citada-pela-ia.webp",
     date: "14 Mai 2026",
     slug: "/geo-inteligencia-artificial-empresas-sorocaba"
   },
@@ -102,7 +102,7 @@ const articles = [
     id: "arquitetura-sites-alta-performance-campinas",
     title: "Arquitetura de Sites de Alto Padrão: Como Estruturar o Site para Ser a Resposta das IAs",
     excerpt: "Descubra como a arquitetura de um site premium une design minimalista e engenharia de dados estruturados para ser recomendado por IAs.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp",
     date: "03 Jul 2026",
     slug: "/blog/arquitetura-sites-alta-performance-campinas"
   },
@@ -110,7 +110,7 @@ const articles = [
     id: "identidade-visual-profissionais-liberais-premium",
     title: "Arquitetura da Autoridade Visual: Design de Alto Padrão para Profissionais Liberais",
     excerpt: "Entenda como o design estratégico de marcas consolida a autoridade de médicos, advogados e arquitetos de elite.",
-    image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp",
     date: "03 Jul 2026",
     slug: "/blog/identidade-visual-profissionais-liberais-premium"
   },
@@ -118,7 +118,7 @@ const articles = [
     id: "rebranding-digital-b2b-sorocaba-itu-salto",
     title: "Rebranding Digital B2B: Modernizando Marcas Industriais para Alto Valor",
     excerpt: "Saiba como indústrias B2B utilizam o rebranding para renovar sua presença de mercado e garantir grandes contratos.",
-    image: "https://images.unsplash.com/photo-1587392683056-b072e2d6b38c?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp",
     date: "03 Jul 2026",
     slug: "/blog/rebranding-digital-b2b-sorocaba-itu-salto"
   },
@@ -126,7 +126,7 @@ const articles = [
     id: "percepcao-de-valor-estetica-premium-indaiatuba",
     title: "Percepção de Valor: Estratégias de Branding para Clínicas de Estética Premium",
     excerpt: "Descubra como a Orval’IA Studio eleva a percepção de valor de clínicas de estética em Indaiatuba e Campinas através do branding de luxo.",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=800",
+    image: "/images/blog/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp",
     date: "14 Mai 2026",
     slug: "/percepcao-de-valor-estetica-premium-indaiatuba"
   }
@@ -156,6 +156,7 @@ const itemVariants = {
 };
 
 import SEO from "../../components/SEO";
+
 
 export default function BlogIndex() {
   const sortedArticles = [...articles].sort((a, b) => {
@@ -209,13 +210,8 @@ export default function BlogIndex() {
               variants={itemVariants}
               className="group flex flex-col bg-brand-card rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_0_50px_rgba(0,255,209,0.05)] transition-all duration-500 border border-white/5 hover:border-brand-accent-light/20"
             >
-              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-[4/3] overflow-hidden bg-white/5">
-                <img 
-                  src={article.image} 
-                  alt={article.title} 
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-                />
+              <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden bg-white/5">
+                <img src={article.image} alt={article.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" onError={(e) => { e.currentTarget.style.opacity = '0'; }} onLoad={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.filter = 'none'; }} style={{ filter: 'blur(10px)', opacity: 0, transition: 'filter 0.5s ease-out, opacity 0.5s ease-out' }} />
               </Link>
               <div className="p-10 flex flex-col flex-grow">
                 <span className="text-[10px] text-brand-accent-light font-mono uppercase tracking-[0.2em] mb-4 

@@ -135,6 +135,19 @@ export default function ArticleEstetica() {
             <span>Luxury Branding</span>
           </motion.div>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp"
+            alt="Percepção de Valor:"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <motion.div
            initial={{ opacity: 0, scale: 0.98 }}

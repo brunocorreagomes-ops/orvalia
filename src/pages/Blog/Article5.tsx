@@ -43,6 +43,19 @@ export default function Article5() {
             <span>5 min de leitura</span>
           </motion.div>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/09-como-posicionar-sua-empresa-como-premium.webp"
+            alt="Como posicionar sua empresa como premium"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Posicionamento premium não tem relação direta com preço — tem relação com percepção. Segundo <strong>Al Ries</strong>, o posicionamento acontece na mente do consumidor. Ou seja, não é o que você cobra que define se sua marca é premium — é como ela é percebida.</p>

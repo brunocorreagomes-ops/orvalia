@@ -43,6 +43,19 @@ export default function Article2() {
             <span>5 min de leitura</span>
           </motion.div>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/06-quanto-custa-uma-identidade-visual-em-indaiatuba.webp"
+            alt="Quanto custa uma identidade visual"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Uma das dúvidas mais comuns entre empresas e profissionais liberais em Indaiatuba é sobre o valor de uma identidade visual. Mas a pergunta mais importante não é “quanto custa?”, e sim “o que está sendo entregue?”.</p>

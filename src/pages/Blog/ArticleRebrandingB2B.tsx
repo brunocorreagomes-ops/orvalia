@@ -28,6 +28,19 @@ export default function ArticleRebrandingB2B() {
             Rebranding Digital B2B: Como Indústrias e Empresas de Serviços Globais em Sorocaba, Itu e Salto Estão Modernizando suas Marcas
           </h1>
         </header>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <img
+            src="/images/blog/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp"
+            alt="Rebranding Digital B2B em Sorocaba, Itu e Salto"
+            loading="lazy" decoding="async"
+            className="w-full aspect-video object-cover"
+          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
