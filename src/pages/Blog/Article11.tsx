@@ -50,7 +50,7 @@ export default function Article11() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-7xl font-sans font-black text-brand-text tracking-tight leading-[1] mb-8"
+            className="text-3xl md:text-4xl lg:text-5xl font-sans font-black text-brand-text tracking-tight leading-[1.1] mb-10 max-w-[95%]"
           >
             Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP
           </motion.h1>

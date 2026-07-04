@@ -5,10 +5,13 @@ interface BlogImageProps {
   alt: string;
   className?: string;
   caption?: string;
+  variant?: 'card' | 'hero';
 }
 
-export default function BlogImage({ src, alt, className = '', caption }: BlogImageProps) {
+export default function BlogImage({ src, alt, className = '', caption, variant = 'hero' }: BlogImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const isCard = variant === 'card';
 
   return (
     <div className={`relative w-full aspect-video bg-[#0a0a0a] overflow-hidden flex items-center justify-center group/image ${className}`}>
@@ -38,17 +41,29 @@ export default function BlogImage({ src, alt, className = '', caption }: BlogIma
       
       {/* Gradient overlay for better caption legibility */}
       {caption && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent z-10 pointer-events-none opacity-80 group-hover/image:opacity-100 transition-opacity duration-700" />
+        <div className={`absolute inset-0 bg-gradient-to-t ${isCard ? 'from-black/95 via-black/10' : 'from-black/95 via-black/40'} to-transparent z-10 pointer-events-none opacity-90 group-hover/image:opacity-100 transition-opacity duration-700`} />
       )}
       
       {/* Editorial-style caption badge */}
       {caption && (
-        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 md:pb-8 z-20 pointer-events-none flex justify-start items-end transform transition-transform duration-700 group-hover/image:-translate-y-2">
-          <div className="bg-black/50 backdrop-blur-xl border border-white/20 px-5 py-3 md:px-6 md:py-4 rounded-xl shadow-2xl max-w-[95%] md:max-w-[85%] relative overflow-hidden">
+        <div className={`absolute bottom-0 right-0 z-20 pointer-events-none flex justify-end items-end transform transition-transform duration-700 group-hover/image:-translate-y-1 md:group-hover/image:-translate-y-2 ${
+          isCard 
+            ? 'p-3 md:p-5' 
+            : 'p-5 md:p-10 lg:p-12'
+        }`}>
+          <div className={`bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-center ${
+            isCard 
+              ? 'px-5 py-4 md:px-6 md:py-4 rounded-xl min-w-[85%] md:min-w-[80%] max-w-[95%]' 
+              : 'px-8 py-6 md:px-12 md:py-10 lg:px-16 lg:py-12 rounded-2xl min-w-[95%] md:min-w-[85%] lg:min-w-[70%] max-w-[98%] md:max-w-[90%]'
+          }`}>
             {/* Subtle glow effect behind the text */}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-accent-light/10 to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-accent-light/5 to-transparent opacity-50" />
             
-            <span className="relative block text-white/95 text-[11px] md:text-[13px] font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase font-mono leading-relaxed drop-shadow-lg">
+            <span className={`relative block text-white/95 font-bold uppercase font-mono leading-relaxed drop-shadow-lg text-right ${
+              isCard
+                ? 'text-[10px] md:text-[11px] tracking-[0.15em] md:tracking-[0.2em]'
+                : 'text-sm md:text-[17px] lg:text-xl tracking-[0.2em] md:tracking-[0.25em]'
+            }`}>
               {caption}
             </span>
           </div>

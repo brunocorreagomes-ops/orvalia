@@ -40,12 +40,12 @@ export const marketingPages: MarketingPage[] = [
     },
     cta: "Construa sua autoridade digital hoje.",
     relatedCase: {
-      client: "DARIO ELETRICIDADE",
-      segment: "Serviços • Engenharia Elétrica Local",
-      context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
-      solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
-      metric: "Serviço técnico com comunicação mais confiável",
-      image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
+      client: "KNJ TUR",
+      segment: "Interface • Turismo Corporativo",
+      context: "Identidade visual desatualizada que não representava a solidez do grupo.",
+      solution: "Reorganização visual e estratégica para comunicar segurança, experiência e profissionalismo no planejamento de viagens.",
+      metric: "Turismo com presença mais confiável e global",
+      image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png"
     }
   },
   {
@@ -92,12 +92,12 @@ export const marketingPages: MarketingPage[] = [
     },
     cta: "Chegue no topo das buscas orgânicas.",
     relatedCase: {
-      client: "QUINTA DE CARAÍVA",
-      segment: "Turismo • Hotelaria & Experiências",
-      context: "Processo de reservas manual ineficiente e perda de conversões no tráfego.",
-      solution: "Branding e arquitetura digital para traduzir exclusividade, natureza e sofisticação em uma experiência de marca.",
-      metric: "Hospedagem exclusiva com narrativa de desejo",
-      image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp"
+      client: "DARIO ELETRICIDADE",
+      segment: "Serviços • Engenharia Elétrica Local",
+      context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
+      solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
+      metric: "Serviço técnico com comunicação mais confiável",
+      image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
     }
   },
   {

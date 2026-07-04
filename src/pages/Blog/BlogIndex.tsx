@@ -229,7 +229,7 @@ export default function BlogIndex() {
               className="group flex flex-col bg-brand-card rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_0_50px_rgba(0,255,209,0.05)] transition-all duration-500 border border-white/5 hover:border-brand-accent-light/20"
             >
               <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden bg-white/5">
-                <BlogImage src={article.image} alt={article.title} caption={article.caption} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
+                <BlogImage src={article.image} alt={article.title} caption={article.caption} variant="card" className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
               </Link>
               <div className="p-10 flex flex-col flex-grow">
                 <span className="text-[10px] text-brand-accent-light font-mono uppercase tracking-[0.2em] mb-4 
@@ -237,7 +237,7 @@ export default function BlogIndex() {
                   {article.date}
                 </span>
                 <Link to={article.slug || `/blog/${article.id}`} className="mb-4">
-                  <h2 className="text-xl md:text-2xl font-black text-white leading-tight group-hover:text-brand-accent-light transition-colors uppercase">
+                  <h2 className="text-lg md:text-xl font-black text-white leading-tight group-hover:text-brand-accent-light transition-colors uppercase">
                     {article.title}
                   </h2>
                 </Link>
