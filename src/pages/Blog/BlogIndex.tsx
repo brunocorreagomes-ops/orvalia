@@ -156,6 +156,7 @@ const itemVariants = {
 };
 
 import SEO from "../../components/SEO";
+import BlogImage from "../../components/BlogImage";
 
 
 export default function BlogIndex() {
@@ -211,7 +212,7 @@ export default function BlogIndex() {
               className="group flex flex-col bg-brand-card rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_0_50px_rgba(0,255,209,0.05)] transition-all duration-500 border border-white/5 hover:border-brand-accent-light/20"
             >
               <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden bg-white/5">
-                <img src={article.image} alt={article.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" onError={(e) => { e.currentTarget.style.opacity = '0'; }} onLoad={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.filter = 'none'; }} style={{ filter: 'blur(10px)', opacity: 0, transition: 'filter 0.5s ease-out, opacity 0.5s ease-out' }} />
+                <BlogImage src={article.image} alt={article.title} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
               </Link>
               <div className="p-10 flex flex-col flex-grow">
                 <span className="text-[10px] text-brand-accent-light font-mono uppercase tracking-[0.2em] mb-4 

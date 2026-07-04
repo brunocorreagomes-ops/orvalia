@@ -145,13 +145,7 @@ export default function ArticleEstetica() {
           <BlogImage src="/images/blog/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp" alt="Percepção de Valor:" />
         </motion.div>
 
-        <motion.div
-           initial={{ opacity: 0, scale: 0.98 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-        >
-          <BlogImage src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200" alt="Percepção de Valor e Branding para Clínicas de Estética - Orval’IA Studio" />
-        </motion.div>
+        
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">

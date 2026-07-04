@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface BlogImageProps {
   src: string;
   alt: string;
@@ -7,24 +5,27 @@ interface BlogImageProps {
 }
 
 export default function BlogImage({ src, alt, className = '' }: BlogImageProps) {
-  const [loaded, setLoaded] = useState(false);
-
   return (
-    <img
-      src={src}
-      alt={alt}
-      loading="lazy"
-      decoding="async"
-      className={`w-full aspect-video object-cover ${className}`}
-      onLoad={() => setLoaded(true)}
-      onError={(e) => {
-        e.currentTarget.style.opacity = '0';
-      }}
-      style={{
-        filter: loaded ? 'none' : 'blur(10px)',
-        opacity: loaded ? 1 : 0,
-        transition: 'filter 0.5s ease-out, opacity 0.5s ease-out',
-      }}
-    />
+    <div className={`relative w-full aspect-video bg-white/5 overflow-hidden flex items-center justify-center ${className}`}>
+      {/* Fallback text behind the image */}
+      <span className="absolute inset-0 flex items-center justify-center text-white/20 text-xs text-center px-4 font-mono z-0">
+        {alt}
+      </span>
+      {/* Image sits on top and hides the text if it loads. If it breaks, opacity-0 reveals the text */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover z-10"
+        onError={(e) => {
+          e.currentTarget.style.opacity = '0';
+        }}
+        onLoad={(e) => {
+          e.currentTarget.style.opacity = '1';
+        }}
+        style={{ transition: 'opacity 0.3s ease' }}
+      />
+    </div>
   );
 }

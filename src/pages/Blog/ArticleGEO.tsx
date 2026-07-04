@@ -154,13 +154,7 @@ export default function ArticleGEO() {
           <BlogImage src="/images/blog/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="O que é GEO" />
         </motion.div>
 
-        <motion.div
-           initial={{ opacity: 0, scale: 0.98 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-        >
-          <BlogImage src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" alt="Inteligência artificial e otimização GEO para empresas em Sorocaba - Orval’IA Studio" />
-        </motion.div>
+        
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">

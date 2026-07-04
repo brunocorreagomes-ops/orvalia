@@ -74,13 +74,7 @@ export default function Article11() {
           <BlogImage src="/images/blog/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp" alt="Branding Estratégico:" />
         </motion.div>
 
-        <motion.div
-           initial={{ opacity: 0, scale: 0.98 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-        >
-          <BlogImage src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" alt="Consultoria de Branding Estratégico em Indaiatuba - Orval’IA Studio" />
-        </motion.div>
+        
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
