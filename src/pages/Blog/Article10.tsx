@@ -8,7 +8,7 @@ export default function Article10() {
   return (
     <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-8 md:px-24">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-12">
+        <div className="flex justify-between items-center mb-16 md:mb-20">
           <Link to="/blog" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
             <ChevronLeft size={16} />
             Voltar ao Blog
@@ -20,7 +20,7 @@ export default function Article10() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
+            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-6 md:mb-8"
           >
             Guia Completo
           </motion.span>
@@ -28,7 +28,7 @@ export default function Article10() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-sans font-black text-brand-text tracking-tight leading-[1.1] mb-10 max-w-[95%]"
+            className="text-[clamp(2.6rem,4vw,4.4rem)] font-sans font-black text-brand-text tracking-[-0.03em] leading-[0.98] mb-12 max-w-[12ch] md:max-w-[14ch]"
           >
             Como construir uma marca forte no digital: guia completo para empresas em Indaiatuba
           </motion.h1>

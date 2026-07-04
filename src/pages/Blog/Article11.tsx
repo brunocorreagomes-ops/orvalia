@@ -42,7 +42,7 @@ export default function Article11() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
+            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-6 md:mb-8"
           >
             Conteúdo Pilar // Branding Estratégico
           </motion.span>
@@ -50,7 +50,7 @@ export default function Article11() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-sans font-black text-brand-text tracking-tight leading-[1.1] mb-10 max-w-[95%]"
+            className="text-[clamp(2.6rem,4vw,4.4rem)] font-sans font-black text-brand-text tracking-[-0.03em] leading-[0.98] mb-12 max-w-[12ch] md:max-w-[14ch]"
           >
             Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP
           </motion.h1>

@@ -46,23 +46,23 @@ export default function BlogImage({ src, alt, className = '', caption, variant =
       
       {/* Editorial-style caption badge */}
       {caption && (
-        <div className={`absolute bottom-0 right-0 z-20 pointer-events-none flex justify-end items-end transform transition-transform duration-700 group-hover/image:-translate-y-1 md:group-hover/image:-translate-y-2 ${
+        <div className={`absolute z-20 pointer-events-none flex justify-end items-end transform transition-transform duration-700 group-hover/image:-translate-y-1 md:group-hover/image:-translate-y-2 ${
           isCard 
-            ? 'p-3 md:p-5' 
-            : 'p-5 md:p-10 lg:p-12'
+            ? 'bottom-2 right-2 md:bottom-4 md:right-4' 
+            : 'bottom-4 right-4 md:bottom-7 md:right-7 lg:bottom-9 lg:right-9'
         }`}>
           <div className={`bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-center ${
             isCard 
-              ? 'px-5 py-4 md:px-6 md:py-4 rounded-xl min-w-[85%] md:min-w-[80%] max-w-[95%]' 
-              : 'px-8 py-6 md:px-12 md:py-10 lg:px-16 lg:py-12 rounded-2xl min-w-[95%] md:min-w-[85%] lg:min-w-[70%] max-w-[98%] md:max-w-[90%]'
+              ? 'px-4 py-3 md:px-[22px] md:py-[16px] rounded-xl w-[60%] md:w-[65%] max-w-[280px]' 
+              : 'px-7 py-5 md:px-[36px] md:py-[26px] rounded-[1.25rem] w-[80%] md:w-[46%] lg:w-[42%] min-w-[280px] md:min-w-[380px] max-w-[560px]'
           }`}>
             {/* Subtle glow effect behind the text */}
             <div className="absolute inset-0 bg-gradient-to-r from-brand-accent-light/5 to-transparent opacity-50" />
             
-            <span className={`relative block text-white/95 font-bold uppercase font-mono leading-relaxed drop-shadow-lg text-right ${
+            <span className={`relative block text-white/95 font-bold uppercase font-mono leading-relaxed drop-shadow-lg text-center ${
               isCard
-                ? 'text-[10px] md:text-[11px] tracking-[0.15em] md:tracking-[0.2em]'
-                : 'text-sm md:text-[17px] lg:text-xl tracking-[0.2em] md:tracking-[0.25em]'
+                ? 'text-[11px] md:text-[13px] tracking-[0.15em] md:tracking-[0.2em]'
+                : 'text-sm md:text-base lg:text-[1.1rem] tracking-[0.2em] md:tracking-[0.25em]'
             }`}>
               {caption}
             </span>
