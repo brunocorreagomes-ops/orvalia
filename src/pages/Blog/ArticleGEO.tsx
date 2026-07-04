@@ -143,7 +143,7 @@ export default function ArticleGEO() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/HDzXkPh9/16-por-que-sua-empresa-em-sorocaba-ainda-nao-e-citada-pela-ia.webp" alt="Por que sua Empresa em Sorocaba ainda não é citada pela IA?" caption="Sua marca na IA" />
+          <BlogImage src="https://i.ibb.co/HDzXkPh9/16-por-que-sua-empresa-em-sorocaba-ainda-nao-e-citada-pela-ia.webp" alt="Por que sua Empresa em Sorocaba ainda não é citada pela IA?" caption="As IAs estão ignorando a sua empresa?" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ export default function ArticleGEO() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="O que é GEO" caption="Domine as buscas por IA" />
+          <BlogImage src="https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="O que é GEO" caption="GEO: O futuro das buscas já começou" />
         </motion.div>
 
         

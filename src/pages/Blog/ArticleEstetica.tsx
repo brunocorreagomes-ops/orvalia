@@ -142,7 +142,7 @@ export default function ArticleEstetica() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/WvZnn51p/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp" alt="Percepção de Valor:" caption="Clínicas premium" />
+          <BlogImage src="https://i.ibb.co/WvZnn51p/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp" alt="Percepção de Valor:" caption="Luxo e Confiança para Clínicas Premium" />
         </motion.div>
 
         

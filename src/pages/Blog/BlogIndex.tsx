@@ -10,70 +10,79 @@ const articles = [
     image: "https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp",
     date: "26 Mai 2026",
     slug: "/blog/geo-generative-engine-optimization-buscas-ia",
-    caption: "Domine as buscas por IA"
+    caption: "GEO: O futuro das buscas já começou"
   },
   {
     id: "branding-indaiatuba",
     title: "Branding em Indaiatuba: Como construir uma marca forte com base em estratégia",
     excerpt: "Criar uma marca forte vai muito além de desenvolver um logotipo. Descubra os pilares fundamentais.",
     image: "https://i.ibb.co/dsKJRZVN/05-branding-em-indaiatuba-como-construir-uma-marca-forte.webp",
-    date: "22 Abr 2026"
+    date: "22 Abr 2026",
+    caption: "O segredo para uma marca inesquecível"
   },
   {
     id: "identidade-visual-precos",
     title: "Quanto custa uma identidade visual em Indaiatuba? (E por que o barato sai caro)",
     excerpt: "Entenda o valor real por trás de um projeto de identidade visual e como ele impacta seu negócio.",
     image: "https://i.ibb.co/4ZfGQ7jV/06-quanto-custa-uma-identidade-visual-em-indaiatuba.webp",
-    date: "21 Abr 2026"
+    date: "21 Abr 2026",
+    caption: "Por que design barato afasta clientes de alto ticket"
   },
   {
     id: "erros-marca-amadora",
     title: "Erros que fazem sua empresa parecer amadora no digital",
     excerpt: "Muitas empresas estão presentes, mas poucas se posicionam. Saiba como evitar erros comuns.",
     image: "https://i.ibb.co/BH55gRZb/07-erros-que-fazem-sua-empresa-parecer-amadora-no-digital.webp",
-    date: "20 Abr 2026"
+    date: "20 Abr 2026",
+    caption: "Os erros que destroem a confiança na sua empresa"
   },
   {
     id: "logo-vs-branding",
     title: "Diferença entre logo e branding: do conceito clássico à construção no digital",
     excerpt: "Logo é um elemento, branding é o sistema. Saiba por que você não pode parar no design.",
     image: "https://i.ibb.co/XH858kk/08-diferenca-entre-logo-e-branding.webp",
-    date: "19 Abr 2026"
+    date: "19 Abr 2026",
+    caption: "Branding: Muito mais do que um logo bonito"
   },
   {
     id: "posicionamento-premium",
     title: "Como posicionar sua empresa como premium: estratégia clássica no digital",
     excerpt: "Posicionamento premium não é sobre preço, é sobre percepção. Aprenda como construir.",
     image: "https://i.ibb.co/vvwvVyVp/09-como-posicionar-sua-empresa-como-premium.webp",
-    date: "18 Abr 2026"
+    date: "18 Abr 2026",
+    caption: "Posicionamento Premium: O guia para cobrar mais"
   },
   {
     id: "site-profissional-conversao",
     title: "Criação de site profissional: da usabilidade à conversão moderna",
     excerpt: "Seu site é uma ferramenta de vendas. Descubra como unir UX, Branding e Conversão.",
     image: "https://i.ibb.co/jPfp3h9W/10-criacao-de-site-profissional-da-usabilidade-a-conversao.webp",
-    date: "17 Abr 2026"
+    date: "17 Abr 2026",
+    caption: "Transforme visitantes em clientes fiéis"
   },
   {
     id: "instagram-estrategico",
     title: "Instagram para empresas: da construção de marca à geração de valor",
     excerpt: "Instagram não é só sobre postar, é sobre posicionar. Aprenda a estratégia de valor.",
     image: "https://i.ibb.co/0pT5XqZW/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp",
-    date: "16 Abr 2026"
+    date: "16 Abr 2026",
+    caption: "Instagram como máquina de autoridade"
   },
   {
     id: "por-que-nao-cresce",
     title: "Por que sua empresa não cresce no digital (mesmo com redes sociais)",
     excerpt: "Presença não é o mesmo que estratégia. Identifique o que está travando seu crescimento.",
     image: "https://i.ibb.co/N2Hd5sRC/12-por-que-sua-empresa-nao-cresce-no-digital.webp",
-    date: "15 Abr 2026"
+    date: "15 Abr 2026",
+    caption: "O verdadeiro motivo da estagnação no digital"
   },
   {
     id: "identidade-profissionais-liberais",
     title: "Identidade visual para profissionais liberais em Indaiatuba",
     excerpt: "Como transmitir autoridade e confiança através do visual. Indispensável para médicos e advogados.",
     image: "https://i.ibb.co/Y79hhg1n/13-identidade-visual-para-profissionais-liberais-em-indaiatuba.webp",
-    date: "14 Abr 2026"
+    date: "14 Abr 2026",
+    caption: "Identidade de Elite para Médicos e Advogados"
   },
   {
     id: "guia-marca-forte",
@@ -82,7 +91,7 @@ const articles = [
     image: "https://i.ibb.co/7tHDHJgT/14-como-construir-uma-marca-forte-no-digital-guia-completo.webp",
     date: "13 Abr 2026",
     slug: "/blog/guia-marca-forte",
-    caption: "O guia definitivo",
+    caption: "Construa uma marca magnética no digital"
   },
   {
     id: "branding-estrategico-indaiatuba-campinas",
@@ -91,7 +100,7 @@ const articles = [
     image: "https://i.ibb.co/nsKZ4K3f/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp",
     date: "10 Mai 2026",
     slug: "/branding-estrategico-indaiatuba-campinas",
-    caption: "Crie desejo de compra"
+    caption: "Crie desejo de compra através do Design"
   },
   {
     id: "geo-inteligencia-artificial-empresas-sorocaba",
@@ -100,7 +109,7 @@ const articles = [
     image: "https://i.ibb.co/HDzXkPh9/16-por-que-sua-empresa-em-sorocaba-ainda-nao-e-citada-pela-ia.webp",
     date: "14 Mai 2026",
     slug: "/geo-inteligencia-artificial-empresas-sorocaba",
-    caption: "Sua marca na IA"
+    caption: "As IAs estão ignorando a sua empresa?"
   },
   {
     id: "arquitetura-sites-alta-performance-campinas",
@@ -109,7 +118,7 @@ const articles = [
     image: "https://i.ibb.co/mrW1xwFV/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp",
     date: "03 Jul 2026",
     slug: "/blog/arquitetura-sites-alta-performance-campinas",
-    caption: "Arquitetura de performance"
+    caption: "Arquitetura invisível, resultados palpáveis"
   },
   {
     id: "identidade-visual-profissionais-liberais-premium",
@@ -118,7 +127,7 @@ const articles = [
     image: "https://i.ibb.co/KpYfYybp/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp",
     date: "03 Jul 2026",
     slug: "/blog/identidade-visual-profissionais-liberais-premium",
-    caption: "Autoridade visual"
+    caption: "O visual que transmite extrema autoridade"
   },
   {
     id: "rebranding-digital-b2b-sorocaba-itu-salto",
@@ -127,7 +136,7 @@ const articles = [
     image: "https://i.ibb.co/mrr3PbMV/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp",
     date: "03 Jul 2026",
     slug: "/blog/rebranding-digital-b2b-sorocaba-itu-salto",
-    caption: "Rebranding B2B de sucesso"
+    caption: "A evolução que atrai grandes contratos"
   },
   {
     id: "percepcao-de-valor-estetica-premium-indaiatuba",
@@ -136,7 +145,7 @@ const articles = [
     image: "https://i.ibb.co/WvZnn51p/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp",
     date: "14 Mai 2026",
     slug: "/percepcao-de-valor-estetica-premium-indaiatuba",
-    caption: "Clínicas premium"
+    caption: "Luxo e Confiança para Clínicas Premium"
   }
 ];
 
@@ -146,10 +155,10 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.08,
-      delayChildren: 0.05,
-    },
-  },
-};
+      delayChildren: 0.05
+  }
+  }
+  };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -159,9 +168,9 @@ const itemVariants = {
     transition: {
       duration: 0.8,
       ease: [0.16, 1, 0.3, 1], // premium cubic-bezier easeOut
-    },
-  },
-};
+    }
+  }
+  };
 
 import SEO from "../../components/SEO";
 import BlogImage from "../../components/BlogImage";

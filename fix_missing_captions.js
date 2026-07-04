@@ -1,20 +1,5 @@
 import fs from 'fs';
 
-let content = fs.readFileSync('src/pages/Blog/BlogIndex.tsx', 'utf8');
-
-// Find all articles and remove ALL caption lines first
-const articleRegex = /({[\s\S]*?})/g;
-
-content = content.replace(articleRegex, (match) => {
-  if (match.includes('id:') && match.includes('title:')) {
-    const lines = match.split('\n');
-    const newLines = lines.filter(line => !line.trim().startsWith('caption:'));
-    return newLines.join('\n');
-  }
-  return match;
-});
-
-// Now add the correct captions back
 const captions = {
   "geo-generative-engine-optimization-buscas-ia": "Domine as buscas por IA",
   "branding-indaiatuba": "Destaque sua marca",
@@ -35,18 +20,23 @@ const captions = {
   "percepcao-de-valor-estetica-premium-indaiatuba": "Clínicas premium"
 };
 
+let content = fs.readFileSync('src/pages/Blog/BlogIndex.tsx', 'utf8');
+
 for (const [id, caption] of Object.entries(captions)) {
-  const idMatch = new RegExp(`id: "${id}",([\\s\\S]*?)(date: "[^"]+")(,\\n\\s*slug: "[^"]+")?`, 'g');
-  content = content.replace(idMatch, (match, middle, date, slugGroup) => {
-    if (slugGroup) {
-      return `id: "${id}",${middle}${date}${slugGroup},\n    caption: "${caption}"`;
+  const idMatch = new RegExp(`id: "${id}",([\\s\\S]*?)date: "([^"]+)"(,\\n\\s*slug: "([^"]+)")?`, 'g');
+  content = content.replace(idMatch, (match, middle, date, slugGroup, slug) => {
+    if (slug) {
+      if (!match.includes('caption:')) {
+        return `id: "${id}",${middle}date: "${date}",\n    slug: "${slug}",\n    caption: "${caption}"`;
+      }
+      return match;
     } else {
-      return `id: "${id}",${middle}${date},\n    caption: "${caption}"`;
+      if (!match.includes('caption:')) {
+        return `id: "${id}",${middle}date: "${date}",\n    caption: "${caption}"`;
+      }
+      return match;
     }
   });
 }
-
-// Remove trailing commas if they happen to precede closing bracket
-content = content.replace(/,\n\s*}/g, '\n  }');
 
 fs.writeFileSync('src/pages/Blog/BlogIndex.tsx', content);
