@@ -64,9 +64,8 @@ export default function AgenciaIndaiatuba() {
                   href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
                   className="px-10 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-accent-light/20 flex items-center justify-center gap-3"
                 >
-                  Solicitar diagnóstico gratuito
-                  <ArrowUpRight size={18} />
-                </a>
+                Diagnóstico Gratuito
+              </a>
                 <a 
                    href="#mapa"
                    className="px-10 py-6 border border-white/10 text-white rounded-full font-black text-xs uppercase tracking-widest transition-all hover:bg-white/5 flex items-center justify-center gap-3"
@@ -151,7 +150,7 @@ export default function AgenciaIndaiatuba() {
                       src={project.image} 
                       alt={project.title} 
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                      className="w-full h-full object-cover  transition-all duration-700"
                    />
                    <div className="absolute inset-0 bg-brand-bg/40 group-hover:bg-transparent transition-colors duration-700" />
                 </div>

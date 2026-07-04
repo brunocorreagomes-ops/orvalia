@@ -56,7 +56,7 @@ export default function MonthlyPricing() {
             </h2>
           </div>
           <div className="col-span-4 lg:col-span-5 flex flex-col justify-end text-left lg:text-right">
-             <p className="text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed">
+             <p className="text-brand-secondary/60 text-sm font-mono uppercase tracking-widest leading-relaxed line-clamp-2">
                [ Gestão contínua de marca e conteúdo para empresas que buscam autoridade inabalável em Indaiatuba e região. ]
              </p>
           </div>

@@ -66,9 +66,8 @@ export default function MarketingLandingPage() {
                     rel="noopener noreferrer"
                     className="group relative flex items-center justify-center gap-6 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all hover:shadow-[0_0_40px_rgba(0,255,209,0.4)] hover:scale-105"
                   >
-                    <span className="relative font-sans text-sm font-black uppercase tracking-[0.2em] text-brand-bg">Diagnóstico Gratuito</span>
-                    <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
-                  </a>
+                Diagnóstico Gratuito <ArrowRight size={18} />
+              </a>
                   <Link 
                     to="/blog"
                     className="flex items-center justify-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white hover:bg-white/5 transition-all"
@@ -88,7 +87,7 @@ export default function MarketingLandingPage() {
               >
                 <div className="text-sm font-mono text-brand-accent-light uppercase tracking-widest mb-6">Foco Local</div>
                 <div className="text-2xl font-black text-white mb-4 uppercase">Indaiatuba & RMC</div>
-                <p className="text-brand-secondary text-sm leading-relaxed italic">
+                <p className="text-brand-secondary text-sm leading-relaxed italic line-clamp-2">
                   Especialistas em transformar empresas da região em referências digitais com websites de alta performance e branding estratégico.
                 </p>
                 <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
@@ -133,7 +132,7 @@ export default function MarketingLandingPage() {
                     <CheckCircle2 className="text-brand-accent-light mt-1 shrink-0" size={20} />
                     <div>
                       <h4 className="text-white font-black uppercase tracking-widest text-sm mb-2">{feature.name}</h4>
-                      <p className="text-brand-secondary text-sm leading-relaxed">{feature.desc}</p>
+                      <p className="text-brand-secondary text-sm leading-relaxed line-clamp-2">{feature.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -174,7 +173,7 @@ export default function MarketingLandingPage() {
                   <img 
                     src={pageContent.relatedCase.image} 
                     alt={pageContent.relatedCase.client} 
-                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-bg via-brand-bg/40 to-transparent z-10" />
                 </div>
@@ -191,19 +190,24 @@ export default function MarketingLandingPage() {
                   <div className="space-y-6 mb-8">
                     <div>
                       <span className="text-[9px] uppercase tracking-widest text-white/40 block mb-1">O Desafio</span>
-                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed">
+                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed line-clamp-3">
                         {pageContent.relatedCase.context}
                       </p>
                     </div>
                     <div>
                       <span className="text-[9px] uppercase tracking-widest text-brand-accent-light block mb-1">A Solução</span>
-                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed">
+                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed line-clamp-3">
                         {pageContent.relatedCase.solution}
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6 border-t border-white/5">
+                  <div className="mt-8 pt-6 border-t border-white/5 flex justify-end">
+                      <Link to="/agencia-indaiatuba" className="inline-block text-[10px] font-black uppercase tracking-widest text-brand-accent-light hover:text-white transition-colors border-b border-brand-accent-light hover:border-white pb-1">
+                        Ver mais projetos como este
+                      </Link>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6 mt-4 border-t border-white/5">
                     <div className="flex items-center gap-3 bg-white/5 border border-white/10 text-brand-secondary px-4 py-2 rounded-xl">
                       <span className="font-mono text-[9px] uppercase tracking-wider text-brand-accent-light shrink-0">Resultado //</span>
                       <span className="font-sans font-medium text-xs text-white/90 tracking-tight text-left">
@@ -235,7 +239,7 @@ export default function MarketingLandingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-6 px-12 py-6 bg-brand-bg text-white rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-2xl"
               >
-                Solicitar Diagnóstico Agora <ArrowRight size={20} />
+                Diagnóstico Gratuito <ArrowRight size={18} />
               </a>
             </div>
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />

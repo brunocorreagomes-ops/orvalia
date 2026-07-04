@@ -85,9 +85,8 @@ export default function SitesEstrategicos() {
                     rel="noopener noreferrer"
                     className="px-10 py-5 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-all text-center flex items-center justify-center gap-3"
                   >
-                    Quero meu diagnóstico gratuito
-                    <Zap size={16} />
-                  </a>
+                Diagnóstico Gratuito
+              </a>
                   <a 
                     href="/portfolio/" 
                     className="px-10 py-5 bg-white/5 text-white border border-white/10 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all text-center"
@@ -300,9 +299,8 @@ export default function SitesEstrategicos() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all hover:scale-105 shadow-xl shadow-brand-accent-light/20"
             >
-              <MessageSquare size={20} />
-              Solicitar diagnóstico gratuito
-            </a>
+                Diagnóstico Gratuito <MessageSquare size={18} />
+              </a>
           </div>
         </div>
       </section>
@@ -335,9 +333,7 @@ export default function SitesEstrategicos() {
                 rel="noopener noreferrer"
                 className="px-12 py-6 border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all flex items-center justify-center gap-3"
               >
-                <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />
-                Falar no WhatsApp
-              </a>
+                <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />Diagnóstico Gratuito</a>
             </div>
           </motion.div>
         </div>

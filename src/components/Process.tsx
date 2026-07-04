@@ -44,7 +44,7 @@ export default function Process() {
             >
               <div className="text-5xl font-bold opacity-10 mb-8 font-mono">{step.num}</div>
               <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-              <p className="text-brand-secondary text-sm leading-relaxed">{step.desc}</p>
+              <p className="text-brand-secondary text-sm leading-relaxed line-clamp-2">{step.desc}</p>
               
               {idx < steps.length - 1 && (
                 <div className="hidden md:block absolute top-[25px] left-full w-full h-[1px] bg-white/5 -translate-x-1/2" />

@@ -58,7 +58,7 @@ export default function Pricing() {
             </h2>
           </div>
           <div className="col-span-4 lg:col-span-5 flex flex-col justify-end text-left lg:text-right pb-2">
-             <p className="text-brand-secondary/60 text-xs md:text-sm font-mono uppercase tracking-widest leading-relaxed">
+             <p className="text-brand-secondary/60 text-xs md:text-sm font-mono uppercase tracking-widest leading-relaxed line-clamp-2">
                [ Diferentes caminhos projetados para alinhar seu posicionamento digital ao nível real do seu negócio. ]
              </p>
           </div>
@@ -137,8 +137,8 @@ export default function Pricing() {
             href="https://wa.me/5511978959567?text=Olá!%20Tenho%20um%20projeto%20especial%20e%20gostaria%20de%20uma%20consultoria%20exclusiva%20da%20Orvalia."
             className="px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-accent-light/20"
           >
-            Consultoria Exclusiva
-          </a>
+                Diagnóstico Gratuito
+              </a>
         </motion.div>
       </div>
     </section>

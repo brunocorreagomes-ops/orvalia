@@ -104,10 +104,8 @@ export default function Navbar() {
             rel="noopener noreferrer"
             whileHover={{ y: -2, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-3.5 bg-brand-accent-light text-brand-bg rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:shadow-[0_10px_30px_rgba(0,255,209,0.25)] flex items-center gap-2"
-          >
-            Começar Agora
-          </motion.a>
+            className="px-6 py-2.5 border border-white/20 text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:border-brand-accent-light hover:text-brand-accent-light flex items-center gap-2 bg-white/5 backdrop-blur-md"
+          >Diagnóstico Gratuito</motion.a>
         </div>
 
         {/* Mobile Toggle */}
@@ -116,8 +114,8 @@ export default function Navbar() {
             href="https://wa.me/5511978959567?text=Olá!%20Estou%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20falar%20com%20um%20especialista."
             className="px-5 py-2.5 bg-brand-accent-light text-brand-bg rounded-full text-[9px] font-black uppercase tracking-widest"
           >
-            WhatsApp
-          </a>
+                Diagnóstico Gratuito
+              </a>
           <button 
             className="w-10 h-10 flex items-center justify-center text-white relative z-[120] bg-white/5 rounded-full border border-white/10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -191,10 +189,9 @@ export default function Navbar() {
                   <a 
                     href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20um%20diagnóstico%20gratuito%20pela%20Orvalia."
                     className="w-full py-6 bg-brand-accent-light text-brand-bg rounded-2xl font-black uppercase tracking-widest text-xs flex items-center justify-center gap-3 shadow-lg shadow-brand-accent-light/20"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Diagnóstico Gratuito
-                  </a>
+                    onClick={() => setIsMenuOpen(false)}>
+                Diagnóstico Gratuito
+              </a>
                 </motion.div>
               </div>
 

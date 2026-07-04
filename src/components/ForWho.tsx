@@ -71,7 +71,7 @@ export default function ForWho() {
                 <h3 className="text-white font-black text-lg md:text-xl uppercase tracking-tight mb-4 group-hover:text-white transition-colors">
                   {audience.title}
                 </h3>
-                <p className="text-brand-secondary/70 text-sm leading-relaxed mb-6 font-light">
+                <p className="text-brand-secondary/70 text-sm leading-relaxed mb-6 font-light line-clamp-2">
                   {audience.desc}
                 </p>
               </div>

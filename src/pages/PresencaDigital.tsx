@@ -137,7 +137,7 @@ export default function PresencaDigital() {
           <img 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
             alt="Presença Digital Estratégica em Indaiatuba e Campinas - Orval'IA Studio" 
-            className="w-full h-[600px] object-cover rounded-[2.5rem] mb-16 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl"
+            className="w-full h-[600px] object-cover rounded-[2.5rem] mb-16  transition-all duration-1000 shadow-2xl"
           />
         </motion.div>
 
@@ -244,7 +244,7 @@ export default function PresencaDigital() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-4 bg-brand-surface text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
               >
-                Eleve sua Presença Digital <ArrowRight size={18} />
+                Diagnóstico Gratuito <ArrowRight size={18} />
               </a>
             </div>
             {/* Background Accent */}

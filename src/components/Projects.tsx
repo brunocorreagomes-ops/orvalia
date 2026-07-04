@@ -114,7 +114,7 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
           src={project.image} 
           alt={project.client} 
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-[120%] object-cover grayscale opacity-30 group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+          className="absolute inset-0 w-full h-[120%] object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
         />
         <div className="absolute inset-0 bg-brand-bg/90 mix-blend-multiply group-hover:bg-brand-bg/50 transition-all duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent" />
@@ -198,7 +198,7 @@ export default function Projects() {
             </h2>
           </motion.div>
           <div className="col-span-4 lg:col-span-6 flex lg:justify-end pb-4">
-             <p className="max-w-md text-brand-secondary/80 text-sm md:text-base font-sans font-light leading-relaxed text-left lg:text-right">
+             <p className="max-w-md text-brand-secondary/80 text-sm md:text-base font-sans font-light leading-relaxed text-left lg:text-right line-clamp-2">
                Cases desenvolvidos para marcas, profissionais e empresas que precisavam comunicar mais valor, clareza e confiança no digital.
              </p>
           </div>

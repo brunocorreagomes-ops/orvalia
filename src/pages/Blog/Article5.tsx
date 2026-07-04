@@ -112,8 +112,8 @@ export default function Article5() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 bg-brand-surface text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
             >
-              Consultoria Premium <ArrowRight size={18} />
-            </a>
+                Diagnóstico Gratuito <ArrowRight size={18} />
+              </a>
             </div>
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-accent-light/5 blur-[60px] rounded-full" />
           </motion.div>

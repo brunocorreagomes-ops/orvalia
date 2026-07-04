@@ -8,14 +8,14 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: "#0A0A0B", // Deep Noir
-          surface: "rgba(255, 237, 215, 0.03)",
-          text: "#FFEDD7", // From DNA: rgb(255, 237, 215)
-          secondary: "#BBAC97", // From DNA: rgb(187, 172, 151)
+          bg: "#0A1620", // Deep Teal / Orvalho
+          surface: "rgba(255, 255, 255, 0.03)",
+          text: "#E5F0F1", // Slightly cooler white to match teal
+          secondary: "#9EABB2", // Cooler muted text
           whatsapp: "#25D366",
           accent: {
-            light: "#00F5FF", // Electric Turquoise
-            dark: "#0066FF", // Deep High-Tech Blue
+            light: "#79DEC8", // Água de piscina ao amanhecer / Soft teal
+            dark: "#1A6B63", // Deep water
             brown: "#6C5F51", // From DNA
           },
         },
@@ -28,6 +28,9 @@ export default {
       letterSpacing: {
         'ultra-tight': '-0.06em',
         'super-tight': '-0.1em',
+      },
+      backgroundImage: {
+        'orvalho-gradient': 'linear-gradient(135deg, #0A1620 0%, #0D2430 100%)',
       }
     },
   },

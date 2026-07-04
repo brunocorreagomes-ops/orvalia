@@ -111,8 +111,8 @@ export default function ArticleRebrandingB2B() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-4 bg-white/5 text-brand-text px-8 py-4 rounded-full font-mono text-[10px] uppercase tracking-[0.2em] font-black hover:bg-white/10 transition-colors"
             >
-              Consulte nossa Equipe B2B <ArrowRight size={16} />
-            </a>
+                Diagnóstico Gratuito <ArrowRight size={18} />
+              </a>
           </div>
         </motion.div>
       </div>

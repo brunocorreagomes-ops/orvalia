@@ -188,7 +188,7 @@ export default function Article11() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-4 bg-brand-surface text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
               >
-                Solicitar Diagnóstico Gratuito <ArrowRight size={18} />
+                Diagnóstico Gratuito <ArrowRight size={18} />
               </a>
             </div>
             {/* Background Accent */}

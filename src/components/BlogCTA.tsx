@@ -24,8 +24,8 @@ export default function BlogCTA({ articleTitle }: BlogCTAProps) {
           Oportunidade Estratégica
         </span>
         <h3 className="text-3xl md:text-5xl font-black text-white tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-          Gostou dos insights?<br />
-          <span className="text-brand-secondary/60">Transforme sua marca em um ativo de vendas</span>
+          Gostou deste conteúdo?<br />
+          <span className="text-brand-secondary/60">Fale com a Orvalia sobre este tema</span>
         </h3>
         <p className="text-brand-secondary max-w-xl mx-auto italic font-serif text-lg leading-relaxed mb-10">
           Oferecemos um diagnóstico gratuito de posicionamento e performance digital para empresas selecionadas de Indaiatuba e região.

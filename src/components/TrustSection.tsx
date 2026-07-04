@@ -33,7 +33,7 @@ export default function TrustSection() {
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Por que escolher a <span className="text-gradient">Orvalia Studio?</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-white/10">
             {differentiators.map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -41,13 +41,13 @@ export default function TrustSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand-accent-light/30 transition-all group"
+                className="p-8 lg:px-12 flex-1 flex flex-col items-center text-center transition-all group"
               >
                 <div className="w-12 h-12 rounded-2xl bg-brand-accent-light/10 flex items-center justify-center mb-6 border border-brand-accent-light/20 group-hover:bg-brand-accent-light/20 transition-all">
                   <item.icon className="text-brand-accent-light" size={24} />
                 </div>
                 <h3 className="text-white font-black text-lg uppercase tracking-tight mb-4">{item.title}</h3>
-                <p className="text-brand-secondary/70 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-brand-secondary/70 text-sm leading-relaxed line-clamp-2">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -66,9 +66,7 @@ export default function TrustSection() {
               }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
-            >
-              Falar no WhatsApp
-              <TrendingUp size={18} />
+            >Diagnóstico Gratuito<TrendingUp size={18} />
             </motion.a>
           </div>
         </div>
