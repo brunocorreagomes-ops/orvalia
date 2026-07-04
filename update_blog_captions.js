@@ -1,0 +1,40 @@
+import fs from 'fs';
+
+const captions = {
+  "geo-generative-engine-optimization-buscas-ia": "Domine as buscas por IA",
+  "branding-indaiatuba": "Destaque sua marca",
+  "identidade-visual-precos": "Valor além do design",
+  "erros-marca-amadora": "Evite o amadorismo",
+  "logo-vs-branding": "Mais que um logo",
+  "posicionamento-premium": "Posicionamento Premium",
+  "site-profissional-conversao": "Sites que convertem",
+  "instagram-estrategico": "Autoridade no Instagram",
+  "por-que-nao-cresce": "Estratégia de crescimento",
+  "identidade-profissionais-liberais": "Para médicos e advogados",
+  "guia-marca-forte": "O guia definitivo",
+  "branding-estrategico-indaiatuba-campinas": "Crie desejo de compra",
+  "geo-inteligencia-artificial-empresas-sorocaba": "Sua marca na IA",
+  "arquitetura-sites-alta-performance-campinas": "Arquitetura de performance",
+  "identidade-visual-profissionais-liberais-premium": "Autoridade visual",
+  "rebranding-digital-b2b-sorocaba-itu-salto": "Rebranding B2B de sucesso",
+  "percepcao-de-valor-estetica-premium-indaiatuba": "Clínicas premium"
+};
+
+let content = fs.readFileSync('src/pages/Blog/BlogIndex.tsx', 'utf8');
+
+for (const [id, caption] of Object.entries(captions)) {
+  const idMatch = new RegExp(`id: "${id}",([\\s\\S]*?)slug: "([^"]+)"`, 'g');
+  content = content.replace(idMatch, (match, middle, slug) => {
+    if (!middle.includes('caption:')) {
+      return `id: "${id}",${middle}slug: "${slug}",\n    caption: "${caption}"`;
+    }
+    return match;
+  });
+}
+
+content = content.replace(
+  /<BlogImage src=\{article\.image\} alt=\{article\.title\} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" \/>/,
+  '<BlogImage src={article.image} alt={article.title} caption={article.caption} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />'
+);
+
+fs.writeFileSync('src/pages/Blog/BlogIndex.tsx', content);

@@ -71,7 +71,7 @@ export default function Article11() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/nsKZ4K3f/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp" alt="Branding Estratégico:" />
+          <BlogImage src="https://i.ibb.co/nsKZ4K3f/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp" alt="Branding Estratégico:" caption="Crie desejo de compra" />
         </motion.div>
 
         

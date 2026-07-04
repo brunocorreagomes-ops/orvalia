@@ -50,7 +50,7 @@ export default function Article4() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/XH858kk/08-diferenca-entre-logo-e-branding.webp" alt="Diferença entre logo e branding" />
+          <BlogImage src="https://i.ibb.co/XH858kk/08-diferenca-entre-logo-e-branding.webp" alt="Diferença entre logo e branding" caption="Mais que um logo" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">

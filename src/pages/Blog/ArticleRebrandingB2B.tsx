@@ -35,7 +35,7 @@ export default function ArticleRebrandingB2B() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/mrr3PbMV/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp" alt="Rebranding Digital B2B em Sorocaba, Itu e Salto" />
+          <BlogImage src="https://i.ibb.co/mrr3PbMV/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp" alt="Rebranding Digital B2B em Sorocaba, Itu e Salto" caption="Rebranding B2B de sucesso" />
         </motion.div>
 
         <motion.div 

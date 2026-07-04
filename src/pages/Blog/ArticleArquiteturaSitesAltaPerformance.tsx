@@ -35,7 +35,7 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/mrW1xwFV/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp" alt="Arquitetura de Sites de Alto Padrão em Campinas e RMC" />
+          <BlogImage src="https://i.ibb.co/mrW1xwFV/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp" alt="Arquitetura de Sites de Alto Padrão em Campinas e RMC" caption="Arquitetura de performance" />
         </motion.div>
 
         <motion.div 

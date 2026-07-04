@@ -9,7 +9,8 @@ const articles = [
     excerpt: "O Google mudou. Descubra por que as IAs já decidem quem domina o mercado e como posicionar sua empresa como a única recomendação possível.",
     image: "https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp",
     date: "26 Mai 2026",
-    slug: "/blog/geo-generative-engine-optimization-buscas-ia"
+    slug: "/blog/geo-generative-engine-optimization-buscas-ia",
+    caption: "Domine as buscas por IA"
   },
   {
     id: "branding-indaiatuba",
@@ -80,7 +81,8 @@ const articles = [
     excerpt: "O passo a passo para empresas que querem dominar o mercado local e digital.",
     image: "https://i.ibb.co/7tHDHJgT/14-como-construir-uma-marca-forte-no-digital-guia-completo.webp",
     date: "13 Abr 2026",
-    slug: "/blog/guia-marca-forte"
+    slug: "/blog/guia-marca-forte",
+    caption: "O guia definitivo",
   },
   {
     id: "branding-estrategico-indaiatuba-campinas",
@@ -88,7 +90,8 @@ const articles = [
     excerpt: "Descubra como a Orval’IA Studio transforma empresas de Indaiatuba, Campinas e região através do branding estratégico e design minimalista.",
     image: "https://i.ibb.co/nsKZ4K3f/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp",
     date: "10 Mai 2026",
-    slug: "/branding-estrategico-indaiatuba-campinas"
+    slug: "/branding-estrategico-indaiatuba-campinas",
+    caption: "Crie desejo de compra"
   },
   {
     id: "geo-inteligencia-artificial-empresas-sorocaba",
@@ -96,7 +99,8 @@ const articles = [
     excerpt: "Do SEO ao GEO: A Nova Fronteira da Visibilidade Digital para o Setor Industrial e Tecnológico de Sorocaba.",
     image: "https://i.ibb.co/HDzXkPh9/16-por-que-sua-empresa-em-sorocaba-ainda-nao-e-citada-pela-ia.webp",
     date: "14 Mai 2026",
-    slug: "/geo-inteligencia-artificial-empresas-sorocaba"
+    slug: "/geo-inteligencia-artificial-empresas-sorocaba",
+    caption: "Sua marca na IA"
   },
   {
     id: "arquitetura-sites-alta-performance-campinas",
@@ -104,7 +108,8 @@ const articles = [
     excerpt: "Descubra como a arquitetura de um site premium une design minimalista e engenharia de dados estruturados para ser recomendado por IAs.",
     image: "https://i.ibb.co/mrW1xwFV/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp",
     date: "03 Jul 2026",
-    slug: "/blog/arquitetura-sites-alta-performance-campinas"
+    slug: "/blog/arquitetura-sites-alta-performance-campinas",
+    caption: "Arquitetura de performance"
   },
   {
     id: "identidade-visual-profissionais-liberais-premium",
@@ -112,7 +117,8 @@ const articles = [
     excerpt: "Entenda como o design estratégico de marcas consolida a autoridade de médicos, advogados e arquitetos de elite.",
     image: "https://i.ibb.co/KpYfYybp/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp",
     date: "03 Jul 2026",
-    slug: "/blog/identidade-visual-profissionais-liberais-premium"
+    slug: "/blog/identidade-visual-profissionais-liberais-premium",
+    caption: "Autoridade visual"
   },
   {
     id: "rebranding-digital-b2b-sorocaba-itu-salto",
@@ -120,7 +126,8 @@ const articles = [
     excerpt: "Saiba como indústrias B2B utilizam o rebranding para renovar sua presença de mercado e garantir grandes contratos.",
     image: "https://i.ibb.co/mrr3PbMV/03-rebranding-digital-b2b-em-sorocaba-itu-e-salto.webp",
     date: "03 Jul 2026",
-    slug: "/blog/rebranding-digital-b2b-sorocaba-itu-salto"
+    slug: "/blog/rebranding-digital-b2b-sorocaba-itu-salto",
+    caption: "Rebranding B2B de sucesso"
   },
   {
     id: "percepcao-de-valor-estetica-premium-indaiatuba",
@@ -128,7 +135,8 @@ const articles = [
     excerpt: "Descubra como a Orval’IA Studio eleva a percepção de valor de clínicas de estética em Indaiatuba e Campinas através do branding de luxo.",
     image: "https://i.ibb.co/WvZnn51p/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp",
     date: "14 Mai 2026",
-    slug: "/percepcao-de-valor-estetica-premium-indaiatuba"
+    slug: "/percepcao-de-valor-estetica-premium-indaiatuba",
+    caption: "Clínicas premium"
   }
 ];
 
@@ -212,7 +220,7 @@ export default function BlogIndex() {
               className="group flex flex-col bg-brand-card rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_0_50px_rgba(0,255,209,0.05)] transition-all duration-500 border border-white/5 hover:border-brand-accent-light/20"
             >
               <Link to={article.slug || `/blog/${article.id}`} className="block relative aspect-video overflow-hidden bg-white/5">
-                <BlogImage src={article.image} alt={article.title} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
+                <BlogImage src={article.image} alt={article.title} caption={article.caption} className="group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
               </Link>
               <div className="p-10 flex flex-col flex-grow">
                 <span className="text-[10px] text-brand-accent-light font-mono uppercase tracking-[0.2em] mb-4 

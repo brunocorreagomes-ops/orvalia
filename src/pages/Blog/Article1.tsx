@@ -50,7 +50,7 @@ export default function Article1() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/dsKJRZVN/05-branding-em-indaiatuba-como-construir-uma-marca-forte.webp" alt="Branding em Indaiatuba:" />
+          <BlogImage src="https://i.ibb.co/dsKJRZVN/05-branding-em-indaiatuba-como-construir-uma-marca-forte.webp" alt="Branding em Indaiatuba:" caption="Destaque sua marca" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary/80 leading-relaxed space-y-8 font-sans">

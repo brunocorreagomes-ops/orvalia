@@ -50,7 +50,7 @@ export default function Article5() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/vvwvVyVp/09-como-posicionar-sua-empresa-como-premium.webp" alt="Como posicionar sua empresa como premium" />
+          <BlogImage src="https://i.ibb.co/vvwvVyVp/09-como-posicionar-sua-empresa-como-premium.webp" alt="Como posicionar sua empresa como premium" caption="Posicionamento Premium" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
