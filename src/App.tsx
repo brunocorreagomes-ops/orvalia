@@ -28,6 +28,9 @@ import Article11 from "./pages/Blog/Article11";
 import ArticleClinicas from "./pages/Blog/ArticleClinicas";
 import ArticleAdvogados from "./pages/Blog/ArticleAdvogados";
 import ArticleArquitetura from "./pages/Blog/ArticleArquitetura";
+import ArticleArquiteturaSitesAltaPerformance from "./pages/Blog/ArticleArquiteturaSitesAltaPerformance";
+import ArticleIdentidadeVisualPremium from "./pages/Blog/ArticleIdentidadeVisualPremium";
+import ArticleRebrandingB2B from "./pages/Blog/ArticleRebrandingB2B";
 import ArticleGEO from "./pages/Blog/ArticleGEO";
 import ArticleNewGEO from "./pages/Blog/ArticleNewGEO";
 import ArticleEstetica from "./pages/Blog/ArticleEstetica";
@@ -143,6 +146,9 @@ export default function App() {
           <Route path="/blog/instagram-estrategico" element={<Article7 />} />
           <Route path="/blog/por-que-nao-cresce" element={<Article8 />} />
           <Route path="/blog/identidade-profissionais-liberais" element={<Article9 />} />
+          <Route path="/blog/arquitetura-sites-alta-performance-campinas" element={<ArticleArquiteturaSitesAltaPerformance />} />
+          <Route path="/blog/identidade-visual-profissionais-liberais-premium" element={<ArticleIdentidadeVisualPremium />} />
+          <Route path="/blog/rebranding-digital-b2b-sorocaba-itu-salto" element={<ArticleRebrandingB2B />} />
           <Route path="/blog/guia-marca-forte" element={<Article10 />} />
           <Route path="/blog/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />
           <Route path="/branding-estrategico-indaiatuba-campinas" element={<Article11 />} />

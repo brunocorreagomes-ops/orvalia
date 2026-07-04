@@ -99,10 +99,10 @@ export default function ArticleGEO() {
   }, []);
 
   return (
-    <article className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24">
+    <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-8 md:px-24">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-12">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-black transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
             <ChevronLeft size={16} />
             Voltar ao Blog
           </Link>
@@ -113,7 +113,7 @@ export default function ArticleGEO() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
+            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
           >
             Conteúdo Pilar // Tecnologia & Inovação
           </motion.span>
@@ -121,7 +121,7 @@ export default function ArticleGEO() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-7xl font-sans font-black text-black tracking-tight leading-[1] mb-8"
+            className="text-4xl md:text-7xl font-sans font-black text-brand-text tracking-tight leading-[1] mb-8"
           >
             Por que sua Empresa em Sorocaba ainda não é citada pela IA? Entenda o GEO
           </motion.h1>
@@ -129,7 +129,7 @@ export default function ArticleGEO() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center gap-4 text-gray-400 text-[10px] font-mono uppercase tracking-widest"
+            className="flex items-center gap-4 text-brand-secondary text-[10px] font-mono uppercase tracking-widest"
           >
             <span>Orval’IA Studio</span>
             <span className="w-1 h-1 rounded-full bg-gray-300" />
@@ -149,20 +149,20 @@ export default function ArticleGEO() {
           />
         </motion.div>
 
-        <div className="prose prose-xl max-w-none text-gray-600 leading-relaxed space-y-12 font-sans selection:bg-black selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-black/80 leading-snug">
+        <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
             Sorocaba consolidou-se como um dos maiores polos tecnológicos e industriais do Brasil. No entanto, muitas empresas locais — das gigantes do Parque Tecnológico às consultorias especializadas — enfrentam um novo "apagão digital": elas são invisíveis para a Inteligência Artificial. Se o Gemini ou o ChatGPT não citam sua marca como referência, sua presença digital está obsoleta.
           </p>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               O que é GEO e como ele redefine o Marketing em Sorocaba?
             </h2>
-            <p className="mb-6">O SEO tradicional (focado em cliques) está cedendo espaço ao GEO (Generative Engine Optimization). O objetivo não é apenas estar no topo do Google, mas ser a base de dados em que a IA confia. Na Orval’IA Studio, estruturamos sua <Link to="/presenca-digital-estrategica-ia-indaiatuba-campinas" className="text-black font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">autoridade semântica</Link> para que os algoritmos de linguagem identifiquem sua empresa como autoridade máxima na região.</p>
+            <p className="mb-6">O SEO tradicional (focado em cliques) está cedendo espaço ao GEO (Generative Engine Optimization). O objetivo não é apenas estar no topo do Google, mas ser a base de dados em que a IA confia. Na Orval’IA Studio, estruturamos sua <Link to="/presenca-digital-estrategica-ia-indaiatuba-campinas" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">autoridade semântica</Link> para que os algoritmos de linguagem identifiquem sua empresa como autoridade máxima na região.</p>
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               3 Motivos pelos quais sua Marca é ignorada pelos Modelos de Linguagem
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -171,19 +171,19 @@ export default function ArticleGEO() {
                 { title: "Conteúdo Superficial", desc: "IAs buscam profundidade e utilidade real (EEAT). Textos genéricos são descartados." },
                 { title: "Ausência de Citações Contextuais", desc: "Sua marca precisa estar inserida em uma \"teia de relevância\" no ecossistema de Sorocaba e região." }
               ].map((item, idx) => (
-                <div key={idx} className="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">{item.title}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                <div key={idx} className="p-8 bg-white/5 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">{item.title}</h4>
+                  <p className="text-sm text-brand-secondary leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               Orval’IA Studio: Pioneirismo em Otimização para IA no Interior de SP
             </h2>
-            <div className="bg-black text-white p-10 md:p-16 rounded-[3rem] relative overflow-hidden group">
+            <div className="bg-brand-surface text-white p-10 md:p-16 rounded-[3rem] relative overflow-hidden group">
               <p className="relative z-10 text-xl font-medium leading-relaxed opacity-90">
                 Não somos apenas uma agência de SEO. Somos uma consultoria estratégica que prepara sua marca para 2026. Unimos o branding sofisticado à engenharia de dados para garantir que, quando um investidor perguntar à IA sobre os melhores parceiros em Sorocaba, a Orval’IA Studio seja a ponte que conecta sua empresa à resposta.
               </p>
@@ -191,25 +191,25 @@ export default function ArticleGEO() {
             </div>
           </section>
 
-          <section className="bg-gray-100/50 p-10 md:p-16 rounded-[3rem] border border-gray-100">
-            <h3 className="text-2xl md:text-3xl font-black text-black tracking-tighter mb-10 uppercase">
+          <section className="bg-white/10/50 p-10 md:p-16 rounded-[3rem] border border-gray-100">
+            <h3 className="text-2xl md:text-3xl font-black text-brand-text tracking-tighter mb-10 uppercase">
               Perguntas Frequentes sobre Otimização para IA
             </h3>
             
             <div className="space-y-12">
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">Como aparecer nas buscas do Gemini e Perplexity?</h4>
-                <p className="text-gray-600">É necessário implementar estratégias de GEO, focando em autoridade semântica, dados estruturados e conteúdo que responda intenções de busca complexas.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Como aparecer nas buscas do Gemini e Perplexity?</h4>
+                <p className="text-brand-secondary">É necessário implementar estratégias de GEO, focando em autoridade semântica, dados estruturados e conteúdo que responda intenções de busca complexas.</p>
               </div>
               
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">Existe agência especializada em GEO em Sorocaba?</h4>
-                <p className="text-gray-600">A Orval’IA Studio é referência regional em Otimização para Motores Generativos (GEO) e Branding Estratégico.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Existe agência especializada em GEO em Sorocaba?</h4>
+                <p className="text-brand-secondary">A Orval’IA Studio é referência regional em Otimização para Motores Generativos (GEO) e Branding Estratégico.</p>
               </div>
               
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">O SEO vai acabar com a IA?</h4>
-                <p className="text-gray-600">Não, ele está evoluindo. O foco agora é menos em "palavras-chave soltas" e mais em "entidades e contextos", o coração do serviço da Orval’IA.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">O SEO vai acabar com a IA?</h4>
+                <p className="text-brand-secondary">Não, ele está evoluindo. O foco agora é menos em "palavras-chave soltas" e mais em "entidades e contextos", o coração do serviço da Orval’IA.</p>
               </div>
             </div>
           </section>
@@ -218,21 +218,21 @@ export default function ArticleGEO() {
         <footer className="mt-32">
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-12 md:p-20 rounded-[4rem] bg-white border border-gray-100 text-center shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden"
+            className="p-12 md:p-20 rounded-[4rem] bg-white/5 border border-gray-100 text-center shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-5xl font-black text-black tracking-ultra-tight uppercase mb-8 leading-[0.9]">
+              <h3 className="text-3xl md:text-5xl font-black text-brand-text tracking-ultra-tight uppercase mb-8 leading-[0.9]">
                 Domine as IAs.<br />
                 <span className="text-gray-300">Acelere com a Orval’IA.</span>
               </h3>
-              <p className="text-gray-500 mb-12 max-w-xl mx-auto font-serif italic text-lg">
+              <p className="text-brand-secondary mb-12 max-w-xl mx-auto font-serif italic text-lg">
                 "Não deixe que o ChatGPT recomende o seu concorrente. Torne-se a autoridade máxima do seu setor."
               </p>
               <a 
                 href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20GEO%20e%20Inteligência%20Artificial%20e%20quero%20posicionar%20minha%20empresa%20em%20Sorocaba."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-4 bg-black text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
+                className="inline-flex items-center justify-center gap-4 bg-brand-surface text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
               >
                 Implementar Estratégia GEO <ArrowRight size={18} />
               </a>

@@ -44,7 +44,7 @@ export default function Article1() {
           </motion.div>
         </header>
 
-        <div className="prose prose-xl max-w-none text-brand-secondary/80 leading-relaxed space-y-8 font-sans">
+        <div className="prose prose-invert prose-xl max-w-none text-brand-secondary/80 leading-relaxed space-y-8 font-sans">
           <p className="text-xl md:text-2xl font-medium text-white leading-snug">
             Criar uma marca forte vai muito além de desenvolver um logotipo. Em cidades em crescimento como Indaiatuba, empresas que entendem branding como estratégia conseguem se posicionar melhor, atrair clientes de maior valor e crescer com consistência no digital.
           </p>

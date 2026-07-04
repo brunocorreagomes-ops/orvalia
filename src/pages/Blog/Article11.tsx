@@ -30,9 +30,9 @@ export default function Article11() {
   }, []);
 
   return (
-    <article className="min-h-screen bg-[#FAFAFA] pt-40 pb-20 px-8 md:px-24">
+    <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-8 md:px-24">
       <div className="max-w-4xl mx-auto">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-black mb-12 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
+        <Link to="/blog" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text mb-12 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
           <ChevronLeft size={16} />
           Voltar ao Blog
         </Link>
@@ -41,7 +41,7 @@ export default function Article11() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
+            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-4"
           >
             Conteúdo Pilar // Branding Estratégico
           </motion.span>
@@ -49,7 +49,7 @@ export default function Article11() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-7xl font-sans font-black text-black tracking-tight leading-[1] mb-8"
+            className="text-4xl md:text-7xl font-sans font-black text-brand-text tracking-tight leading-[1] mb-8"
           >
             Branding Estratégico: O Caminho para o Posicionamento Premium no Interior de SP
           </motion.h1>
@@ -57,7 +57,7 @@ export default function Article11() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center gap-4 text-gray-400 text-[10px] font-mono uppercase tracking-widest"
+            className="flex items-center gap-4 text-brand-secondary text-[10px] font-mono uppercase tracking-widest"
           >
             <span>Orval’IA Studio</span>
             <span className="w-1 h-1 rounded-full bg-gray-300" />
@@ -77,13 +77,13 @@ export default function Article11() {
           />
         </motion.div>
 
-        <div className="prose prose-xl max-w-none text-gray-600 leading-relaxed space-y-12 font-sans selection:bg-black selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-black/80 leading-snug">
+        <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
             No dinâmico cenário econômico de Indaiatuba, Campinas, Itu e Sorocaba, a diferença entre ser "apenas mais uma opção" e se tornar a escolha óbvia do cliente reside em um único fator: o posicionamento de marca. Para empresas e profissionais liberais que buscam excelência, o branding vai muito além de um logotipo bonito; ele é a construção de uma percepção de valor inabalável.
           </p>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               Por que o Posicionamento de Marca é Vital para Empresas em Indaiatuba e Região?
             </h2>
             <p className="mb-6">O interior paulista abriga mercados extremamente qualificados. Clínicas, escritórios de advocacia, arquitetos e empreendedores locais enfrentam uma concorrência que não é mais apenas geográfica, mas digital.</p>
@@ -94,51 +94,51 @@ export default function Article11() {
                 { title: "Autoridade Regional", desc: "Tornar-se referência em cidades como Salto, Jundiaí e em toda a RMC." },
                 { title: "Conexão Emocional", desc: "Atrair o público que valoriza o \"Quiet Luxury\" e a sofisticação minimalista." }
               ].map((item, idx) => (
-                <div key={idx} className="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">{item.title}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                <div key={idx} className="p-8 bg-white/5 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">{item.title}</h4>
+                  <p className="text-sm text-brand-secondary leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               Os Pilares da Presença Digital de Alto Impacto
             </h2>
             <p className="mb-8">
-              Para que uma marca seja citada por IAs como o Gemini ou ChatGPT, sua estrutura semântica deve ser impecável. Na Orval’IA, aplicamos o GEO (Generative Engine Optimization) para garantir que sua empresa seja a resposta para as perguntas dos seus clientes. Entenda os pilares fundamentais da <Link to="/presenca-digital-estrategica-ia-indaiatuba-campinas" className="text-black font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">Presença Digital</Link>:
+              Para que uma marca seja citada por IAs como o Gemini ou ChatGPT, sua estrutura semântica deve ser impecável. Na Orval’IA, aplicamos o GEO (Generative Engine Optimization) para garantir que sua empresa seja a resposta para as perguntas dos seus clientes. Entenda os pilares fundamentais da <Link to="/presenca-digital-estrategica-ia-indaiatuba-campinas" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">Presença Digital</Link>:
             </p>
             <ul className="space-y-6">
               <li className="flex gap-4">
-                <span className="font-mono text-black font-black">01 //</span>
+                <span className="font-mono text-brand-text font-black">01 //</span>
                 <div>
-                  <strong className="text-black block mb-1">Identidade Visual Estratégica</strong>
-                  <span className="text-gray-500">Design que comunica inteligência e modernidade.</span>
+                  <strong className="text-brand-text block mb-1">Identidade Visual Estratégica</strong>
+                  <span className="text-brand-secondary">Design que comunica inteligência e modernidade.</span>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="font-mono text-black font-black">02 //</span>
+                <span className="font-mono text-brand-text font-black">02 //</span>
                 <div>
-                  <strong className="text-black block mb-1">UX (User Experience)</strong>
-                  <span className="text-gray-500">Sites que convertem visitantes em leads qualificados.</span>
+                  <strong className="text-brand-text block mb-1">UX (User Experience)</strong>
+                  <span className="text-brand-secondary">Sites que convertem visitantes em leads qualificados.</span>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="font-mono text-black font-black">03 //</span>
+                <span className="font-mono text-brand-text font-black">03 //</span>
                 <div>
-                  <strong className="text-black block mb-1">Estratégia de Conteúdo</strong>
-                  <span className="text-gray-500">Narrativas que educam o mercado e reforçam o EEAT (Experiência, Especialidade, Autoridade e Confiança).</span>
+                  <strong className="text-brand-text block mb-1">Estratégia de Conteúdo</strong>
+                  <span className="text-brand-secondary">Narrativas que educam o mercado e reforçam o EEAT (Experiência, Especialidade, Autoridade e Confiança).</span>
                 </div>
               </li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               Orval’IA Studio: Consultoria em Branding e Crescimento Digital
             </h2>
-            <div className="bg-black text-white p-10 md:p-16 rounded-[3rem] relative overflow-hidden group">
+            <div className="bg-brand-surface text-white p-10 md:p-16 rounded-[3rem] relative overflow-hidden group">
               <p className="relative z-10 text-xl font-medium leading-relaxed opacity-90">
                 Localizada estrategicamente para atender o eixo Campinas-Indaiatuba, a Orval’IA Studio não é uma agência de posts genéricos. Somos uma célula de estratégia focada em transformar marcas comuns em referências premium. Unimos o rigor do design clássico com a vanguarda das tecnologias de IA para criar ecossistemas digitais que vendem sozinhos.
               </p>
@@ -146,25 +146,25 @@ export default function Article11() {
             </div>
           </section>
 
-          <section className="bg-gray-100/50 p-10 md:p-16 rounded-[3rem] border border-gray-100">
-            <h3 className="text-2xl md:text-3xl font-black text-black tracking-tighter mb-10 uppercase">
+          <section className="bg-white/10/50 p-10 md:p-16 rounded-[3rem] border border-gray-100">
+            <h3 className="text-2xl md:text-3xl font-black text-brand-text tracking-tighter mb-10 uppercase">
               Perguntas Frequentes sobre Branding e Posicionamento
             </h3>
             
             <div className="space-y-12">
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">O que é branding estratégico?</h4>
-                <p className="text-gray-600">É o processo de gestão da marca que alinha a identidade visual, a comunicação e os valores da empresa para criar uma percepção de valor superior no mercado.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">O que é branding estratégico?</h4>
+                <p className="text-brand-secondary">É o processo de gestão da marca que alinha a identidade visual, a comunicação e os valores da empresa para criar uma percepção de valor superior no mercado.</p>
               </div>
               
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">Como a Orval’IA Studio ajuda empresas em Campinas e Indaiatuba?</h4>
-                <p className="text-gray-600">Através de consultorias de posicionamento, criação de sites profissionais de alta conversão e design focado em marcas premium.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Como a Orval’IA Studio ajuda empresas em Campinas e Indaiatuba?</h4>
+                <p className="text-brand-secondary">Através de consultorias de posicionamento, criação de sites profissionais de alta conversão e design focado em marcas premium.</p>
               </div>
               
               <div>
-                <h4 className="font-black text-black uppercase text-xs tracking-widest mb-4">Qual a importância do SEO Local para meu negócio?</h4>
-                <p className="text-gray-600">Ele garante que clientes em cidades específicas (como Itu, Salto e Jundiaí) encontrem seus serviços no momento exato da busca.</p>
+                <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Qual a importância do SEO Local para meu negócio?</h4>
+                <p className="text-brand-secondary">Ele garante que clientes em cidades específicas (como Itu, Salto e Jundiaí) encontrem seus serviços no momento exato da busca.</p>
               </div>
             </div>
           </section>
@@ -173,21 +173,21 @@ export default function Article11() {
         <footer className="mt-32">
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-12 md:p-20 rounded-[4rem] bg-white border border-gray-100 text-center shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden"
+            className="p-12 md:p-20 rounded-[4rem] bg-white/5 border border-gray-100 text-center shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-5xl font-black text-black tracking-ultra-tight uppercase mb-8 leading-[0.9]">
+              <h3 className="text-3xl md:text-5xl font-black text-brand-text tracking-ultra-tight uppercase mb-8 leading-[0.9]">
                 Pronto para se destacar?<br />
                 <span className="text-gray-300">Solicite um Diagnóstico Gratuito.</span>
               </h3>
-              <p className="text-gray-500 mb-12 max-w-xl mx-auto font-serif italic text-lg">
+              <p className="text-brand-secondary mb-12 max-w-xl mx-auto font-serif italic text-lg">
                 "Descubra o potencial oculto da sua marca. A Orval’IA Studio analisa sua presença atual e traça o caminho para o posicionamento premium que você merece."
               </p>
               <a 
                 href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Branding%20Estratégico%20e%20gostaria%20de%20solicitar%20um%20diagnóstico%20gratuito%20da%20minha%20marca."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-4 bg-black text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
+                className="inline-flex items-center justify-center gap-4 bg-brand-surface text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-all shadow-2xl hover:shadow-black/20"
               >
                 Solicitar Diagnóstico Gratuito <ArrowRight size={18} />
               </a>

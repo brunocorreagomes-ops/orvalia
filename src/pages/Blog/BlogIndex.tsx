@@ -99,6 +99,30 @@ const articles = [
     slug: "/geo-inteligencia-artificial-empresas-sorocaba"
   },
   {
+    id: "arquitetura-sites-alta-performance-campinas",
+    title: "Arquitetura de Sites de Alto Padrão: Como Estruturar o Site para Ser a Resposta das IAs",
+    excerpt: "Descubra como a arquitetura de um site premium une design minimalista e engenharia de dados estruturados para ser recomendado por IAs.",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+    date: "03 Jul 2026",
+    slug: "/blog/arquitetura-sites-alta-performance-campinas"
+  },
+  {
+    id: "identidade-visual-profissionais-liberais-premium",
+    title: "Arquitetura da Autoridade Visual: Design de Alto Padrão para Profissionais Liberais",
+    excerpt: "Entenda como o design estratégico de marcas consolida a autoridade de médicos, advogados e arquitetos de elite.",
+    image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=800",
+    date: "03 Jul 2026",
+    slug: "/blog/identidade-visual-profissionais-liberais-premium"
+  },
+  {
+    id: "rebranding-digital-b2b-sorocaba-itu-salto",
+    title: "Rebranding Digital B2B: Modernizando Marcas Industriais para Alto Valor",
+    excerpt: "Saiba como indústrias B2B utilizam o rebranding para renovar sua presença de mercado e garantir grandes contratos.",
+    image: "https://images.unsplash.com/photo-1587392683056-b072e2d6b38c?auto=format&fit=crop&q=80&w=800",
+    date: "03 Jul 2026",
+    slug: "/blog/rebranding-digital-b2b-sorocaba-itu-salto"
+  },
+  {
     id: "percepcao-de-valor-estetica-premium-indaiatuba",
     title: "Percepção de Valor: Estratégias de Branding para Clínicas de Estética Premium",
     excerpt: "Descubra como a Orval’IA Studio eleva a percepção de valor de clínicas de estética em Indaiatuba e Campinas através do branding de luxo.",
