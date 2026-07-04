@@ -148,17 +148,75 @@ export default function MarketingLandingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-sm font-mono text-brand-accent-light uppercase tracking-[0.4em] mb-8">Base de Operações: Indaiatuba</h3>
-            <p className="text-2xl md:text-3xl text-white font-sans font-black uppercase tracking-tighter leading-tight mb-12">
+            <p className="text-2xl md:text-3xl text-white font-sans font-black uppercase tracking-tighter leading-tight">
               Atendemos empresas em toda a <span className="text-gradient">Região Metropolitana de Campinas</span> que buscam posicionamento premium.
             </p>
-            <div className="flex flex-wrap justify-center gap-8 opacity-40">
-               {["Hélice", "Sui", "Matrix", "Lotto", "Vibe"].map(n => (
-                 <span key={n} className="font-mono text-xs uppercase tracking-[0.5em]">{n} Partner</span>
-               ))}
-            </div>
+            
           </div>
         </div>
       </section>
+
+      
+      {/* Related Case */}
+      {pageContent.relatedCase && (
+        <section className="py-24 border-t border-white/5 relative">
+          <div className="container mx-auto px-6">
+            <div className="mb-16">
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-4 block">Case Relacionado</span>
+              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Resultados <span className="text-gradient">Reais</span></h2>
+            </div>
+            
+            <div className="relative rounded-[3rem] overflow-hidden group cursor-pointer border border-white/10 glass-premium">
+              <div className="flex flex-col md:flex-row">
+                {/* Image Side */}
+                <div className="w-full md:w-1/2 h-[300px] md:h-auto relative overflow-hidden">
+                  <div className="absolute inset-0 bg-brand-bg/20 z-10 group-hover:bg-transparent transition-colors duration-500" />
+                  <img 
+                    src={pageContent.relatedCase.image} 
+                    alt={pageContent.relatedCase.client} 
+                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-bg via-brand-bg/40 to-transparent z-10" />
+                </div>
+                
+                {/* Content Side */}
+                <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center relative z-20 -mt-20 md:mt-0 bg-brand-bg/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-none">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-secondary/60 mb-4 block">
+                    {pageContent.relatedCase.segment}
+                  </span>
+                  <h3 className="text-2xl md:text-4xl font-sans font-black text-white tracking-tight uppercase mb-8">
+                    {pageContent.relatedCase.client}
+                  </h3>
+                  
+                  <div className="space-y-6 mb-8">
+                    <div>
+                      <span className="text-[9px] uppercase tracking-widest text-white/40 block mb-1">O Desafio</span>
+                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed">
+                        {pageContent.relatedCase.context}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-[9px] uppercase tracking-widest text-brand-accent-light block mb-1">A Solução</span>
+                      <p className="text-white/80 font-light text-sm md:text-base leading-relaxed">
+                        {pageContent.relatedCase.solution}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6 border-t border-white/5">
+                    <div className="flex items-center gap-3 bg-white/5 border border-white/10 text-brand-secondary px-4 py-2 rounded-xl">
+                      <span className="font-mono text-[9px] uppercase tracking-wider text-brand-accent-light shrink-0">Resultado //</span>
+                      <span className="font-sans font-medium text-xs text-white/90 tracking-tight text-left">
+                        {pageContent.relatedCase.metric}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Final */}
       <section className="py-20">

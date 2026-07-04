@@ -285,7 +285,7 @@ export default function SitesEstrategicos() {
       </section>
 
       {/* Captura / Pressão */}
-      <section className="py-24 bg-brand-accent-dark/20 border-y border-white/5 relative overflow-hidden">
+      <section className="py-24 bg-brand-accent-light/10 border-y border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase mb-8">

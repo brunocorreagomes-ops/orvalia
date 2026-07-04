@@ -11,6 +11,14 @@ export interface MarketingPage {
     features: { name: string; desc: string }[];
   };
   cta: string;
+  relatedCase?: {
+    client: string;
+    segment: string;
+    context: string;
+    solution: string;
+    metric: string;
+    image: string;
+  };
 }
 
 export const marketingPages: MarketingPage[] = [
@@ -30,7 +38,15 @@ export const marketingPages: MarketingPage[] = [
         { name: "Mobile First", desc: "Experiência perfeita em smartphones e tablets." }
       ]
     },
-    cta: "Construa sua autoridade digital hoje."
+    cta: "Construa sua autoridade digital hoje.",
+    relatedCase: {
+      client: "DARIO ELETRICIDADE",
+      segment: "Serviços • Engenharia Elétrica Local",
+      context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
+      solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
+      metric: "Serviço técnico com comunicação mais confiável",
+      image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
+    }
   },
   {
     slug: "landing-pages-indaiatuba",
@@ -48,7 +64,15 @@ export const marketingPages: MarketingPage[] = [
         { name: "Tracking Avançado", desc: "Saiba exatamente de onde vêm seus melhores leads." }
       ]
     },
-    cta: "Transforme cliques em clientes agora."
+    cta: "Transforme cliques em clientes agora.",
+    relatedCase: {
+      client: "BETH OLMEDA",
+      segment: "Mentoria • Marca Pessoal & Estética",
+      context: "Posicionamento digital desatualizado e falta de clareza na oferta de serviços.",
+      solution: "Redesign de marca premium, nova narrativa e Landing Page estratégica de alta conversão.",
+      metric: "Estética facial com presença mais premium",
+      image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg"
+    }
   },
   {
     slug: "seo-indaiatuba",
@@ -66,7 +90,15 @@ export const marketingPages: MarketingPage[] = [
         { name: "Autoridade Técnica", desc: "Ajustes estruturais que o Google adora e premia com posições." }
       ]
     },
-    cta: "Chegue no topo das buscas orgânicas."
+    cta: "Chegue no topo das buscas orgânicas.",
+    relatedCase: {
+      client: "QUINTA DE CARAÍVA",
+      segment: "Turismo • Hotelaria & Experiências",
+      context: "Processo de reservas manual ineficiente e perda de conversões no tráfego.",
+      solution: "Branding e arquitetura digital para traduzir exclusividade, natureza e sofisticação em uma experiência de marca.",
+      metric: "Hospedagem exclusiva com narrativa de desejo",
+      image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp"
+    }
   },
   {
     slug: "sites-para-medicos-indaiatuba",
@@ -84,7 +116,15 @@ export const marketingPages: MarketingPage[] = [
         { name: "SEO de Especialidade", desc: "Ranqueie para procedimentos específicos e exames." }
       ]
     },
-    cta: "Eleve o padrão do seu consultório."
+    cta: "Eleve o padrão do seu consultório.",
+    relatedCase: {
+      client: "RYNA HAYASHI",
+      segment: "Psicologia • Clínica de Alto Padrão",
+      context: "Falta de presença estruturada e dependência de indicações físicas locais.",
+      solution: "Construção de uma presença digital sensível, técnica e premium para fortalecer autoridade clínica.",
+      metric: "Psicologia com posicionamento mais acolhedor e sofisticado",
+      image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp"
+    }
   },
   {
     slug: "sites-para-advogados-indaiatuba",
@@ -102,7 +142,15 @@ export const marketingPages: MarketingPage[] = [
         { name: "Segurança de Dados", desc: "Sistemas protegidos e em conformidade com a LGPD." }
       ]
     },
-    cta: "Destaque seu escritório na região."
+    cta: "Destaque seu escritório na região.",
+    relatedCase: {
+      client: "MARTA ANA CHICONATO",
+      segment: "Estratégia • Terapia Integrativa",
+      context: "Atração de leads desqualificados e baixa conversão com o formato antigo.",
+      solution: "Estratégia visual e narrativa para organizar a percepção da marca e fortalecer sua presença digital.",
+      metric: "Marca pessoal com comunicação mais profissional",
+      image: "https://i.ibb.co/2366nSC3/marta-identidade.webp"
+    }
   },
   {
     slug: "branding-em-indaiatuba",
@@ -120,6 +168,14 @@ export const marketingPages: MarketingPage[] = [
         { name: "Posicionamento Premium", desc: "Estratégias para tornar seu produto um objeto de desejo." }
       ]
     },
-    cta: "Deixe de ser uma opção e vire uma escolha."
+    cta: "Deixe de ser uma opção e vire uma escolha.",
+    relatedCase: {
+      client: "KNJ TUR",
+      segment: "Turismo • Agência de Viagens",
+      context: "Identidade visual genérica que não refletia a exclusividade dos pacotes oferecidos.",
+      solution: "Redesign completo de marca, posicionando a empresa como boutique de experiências e viagens personalizadas.",
+      metric: "Aumento na procura por pacotes premium",
+      image: "https://i.ibb.co/zXqG9zF/knj.webp"
+    }
   }
 ];
