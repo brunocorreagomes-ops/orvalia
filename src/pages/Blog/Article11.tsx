@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import BlogImage from "../../components/BlogImage";
 
 export default function Article11() {
   useEffect(() => {
@@ -70,12 +71,7 @@ export default function Article11() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <img
-            src="/images/blog/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp"
-            alt="Branding Estratégico:"
-            loading="lazy" decoding="async"
-            className="w-full aspect-video object-cover"
-          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+          <BlogImage src="/images/blog/15-branding-estrategico-o-caminho-para-o-posicionamento-premium.webp" alt="Branding Estratégico:" />
         </motion.div>
 
         <motion.div
@@ -83,11 +79,7 @@ export default function Article11() {
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3 }}
         >
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
-            alt="Consultoria de Branding Estratégico em Indaiatuba - Orval’IA Studio" 
-            className="w-full h-[600px] object-cover rounded-[2.5rem] mb-16 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl"
-          />
+          <BlogImage src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" alt="Consultoria de Branding Estratégico em Indaiatuba - Orval’IA Studio" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">

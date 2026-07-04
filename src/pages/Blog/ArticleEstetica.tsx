@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import ShareButton from "../../components/ShareButton";
+import BlogImage from "../../components/BlogImage";
 
 export default function ArticleEstetica() {
   useEffect(() => {
@@ -141,12 +142,7 @@ export default function ArticleEstetica() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <img
-            src="/images/blog/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp"
-            alt="Percepção de Valor:"
-            loading="lazy" decoding="async"
-            className="w-full aspect-video object-cover"
-          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+          <BlogImage src="/images/blog/17-percepcao-de-valor-estrategias-para-clinicas-de-estetica-premium.webp" alt="Percepção de Valor:" />
         </motion.div>
 
         <motion.div
@@ -154,11 +150,7 @@ export default function ArticleEstetica() {
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3 }}
         >
-          <img 
-            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200" 
-            alt="Percepção de Valor e Branding para Clínicas de Estética - Orval’IA Studio" 
-            className="w-full h-[600px] object-cover rounded-[2.5rem] mb-16 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl"
-          />
+          <BlogImage src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200" alt="Percepção de Valor e Branding para Clínicas de Estética - Orval’IA Studio" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">

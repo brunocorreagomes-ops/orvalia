@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import SEO from "../../components/SEO";
+import BlogImage from "../../components/BlogImage";
 
 export default function ArticleArquiteturaSitesAltaPerformance() {
   return (
@@ -34,12 +35,7 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <img
-            src="/images/blog/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp"
-            alt="Arquitetura de Sites de Alto Padrão em Campinas e RMC"
-            loading="lazy" decoding="async"
-            className="w-full aspect-video object-cover"
-          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+          <BlogImage src="/images/blog/01-arquitetura-de-sites-de-alto-padrao-em-campinas-e-rmc.webp" alt="Arquitetura de Sites de Alto Padrão em Campinas e RMC" />
         </motion.div>
 
         <motion.div 

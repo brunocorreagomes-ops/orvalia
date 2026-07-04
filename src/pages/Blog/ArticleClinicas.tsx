@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import ShareButton from "../../components/ShareButton";
+import BlogImage from "../../components/BlogImage";
 
 export default function ArticleClinicas() {
   useEffect(() => {
@@ -136,11 +137,7 @@ export default function ArticleClinicas() {
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3 }}
         >
-          <img 
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" 
-            alt="Branding para Clínicas em Campinas e Indaiatuba - Orval’IA Studio" 
-            className="w-full h-[600px] object-cover rounded-[2.5rem] mb-16 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl"
-          />
+          <BlogImage src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" alt="Branding para Clínicas em Campinas e Indaiatuba - Orval’IA Studio" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">

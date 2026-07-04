@@ -4,6 +4,7 @@ import { ChevronLeft, ArrowRight, HelpCircle } from "lucide-react";
 import { useEffect } from "react";
 import ShareButton from "../../components/ShareButton";
 import BlogCTA from "../../components/BlogCTA";
+import BlogImage from "../../components/BlogImage";
 
 export default function ArticleNewGEO() {
   useEffect(() => {
@@ -75,12 +76,7 @@ export default function ArticleNewGEO() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <img
-            src="/images/blog/04-o-que-e-geo-e-como-preparar-sua-marca.webp"
-            alt="O que é GEO"
-            loading="lazy" decoding="async"
-            className="w-full aspect-video object-cover"
-          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+          <BlogImage src="/images/blog/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="O que é GEO" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">

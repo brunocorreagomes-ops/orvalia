@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import ShareButton from "../../components/ShareButton";
+import BlogImage from "../../components/BlogImage";
 
 export default function Article7() {
   return (
@@ -49,12 +50,7 @@ export default function Article7() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <img
-            src="/images/blog/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp"
-            alt="Instagram para empresas"
-            loading="lazy" decoding="async"
-            className="w-full aspect-video object-cover"
-          onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
+          <BlogImage src="/images/blog/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp" alt="Instagram para empresas" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
