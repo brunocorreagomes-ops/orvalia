@@ -50,7 +50,7 @@ export default function Article7() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="/images/blog/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp" alt="Instagram para empresas" />
+          <BlogImage src="https://i.ibb.co/0pT5XqZW/11-instagram-para-empresas-da-construcao-a-geracao-de-valor.webp" alt="Instagram para empresas" />
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">

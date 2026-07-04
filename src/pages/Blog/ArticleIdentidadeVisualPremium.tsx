@@ -35,7 +35,7 @@ export default function ArticleIdentidadeVisualPremium() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="/images/blog/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp" alt="Arquitetura da Autoridade Visual para Profissionais Liberais" />
+          <BlogImage src="https://i.ibb.co/KpYfYybp/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp" alt="Arquitetura da Autoridade Visual para Profissionais Liberais" />
         </motion.div>
 
         <motion.div 
