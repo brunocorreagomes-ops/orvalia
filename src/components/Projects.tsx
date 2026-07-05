@@ -107,35 +107,34 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
       className={`${project.span} group flex flex-col relative overflow-hidden rounded-[2.5rem] md:rounded-[3rem] cursor-pointer bg-white/[0.02] border border-white/5 transition-all duration-700 hover:border-brand-accent-light/30`}
     >
-      <div className="relative w-full h-[50%] md:h-[55%] overflow-hidden bg-brand-bg/50">
+      <div className="relative w-full h-[45%] md:h-[50%] overflow-hidden bg-brand-bg/50">
         <img 
           ref={imageRef}
           src={project.image} 
           alt={project.client} 
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-[120%] object-cover object-top transition-all duration-1000 group-hover:scale-105"
+          className="absolute inset-0 w-full h-[120%] object-cover object-center transition-all duration-1000 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/80 via-transparent to-transparent z-10" />
-        
-        {/* Top: Client Name & Segment (moved into image area) */}
-        <div className="absolute top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-20">
-          <div className="flex flex-col gap-2">
-            <span className="font-mono text-[9px] md:text-[11px] uppercase tracking-[0.4em] text-brand-secondary/90 group-hover:text-brand-accent-light transition-colors drop-shadow-md">
-              {project.segment}
-            </span>
-            <h3 className="text-xl md:text-3xl font-sans font-black text-white tracking-tight uppercase drop-shadow-lg">
-              {project.client}
-            </h3>
-          </div>
-          <div className="w-10 h-10 rounded-xl glass-premium border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-500 shadow-2xl bg-black/20 backdrop-blur-md">
-            <ArrowUpRight className="text-brand-accent-light" size={18} />
-          </div>
-        </div>
       </div>
       
-      <div className="flex-1 p-6 md:p-8 flex flex-col justify-between z-10 bg-gradient-to-b from-brand-bg/40 to-transparent">
+      <div className="flex-1 p-6 md:p-8 flex flex-col justify-between z-10 bg-gradient-to-b from-brand-bg/60 to-transparent">
         {/* Middle/Bottom: Context, Solution, and Metric */}
         <div className="space-y-6">
+          {/* Header Inside Content Area for Maximum Readability */}
+          <div className="flex justify-between items-start border-b border-white/5 pb-4">
+            <div className="flex flex-col gap-1.5">
+              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">
+                {project.segment}
+              </span>
+              <h3 className="text-xl md:text-2xl font-sans font-black text-white tracking-tight uppercase">
+                {project.client}
+              </h3>
+            </div>
+            <div className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center bg-white/5 group-hover:bg-brand-accent-light group-hover:text-brand-bg transition-all duration-300 shadow-md shrink-0">
+              <ArrowUpRight className="text-brand-accent-light group-hover:text-brand-bg transition-colors" size={16} />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm text-left">
             <div>
               <span className="text-[9px] uppercase tracking-widest text-brand-secondary/60 block mb-2 font-mono">Contexto</span>
