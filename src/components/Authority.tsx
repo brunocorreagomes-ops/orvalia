@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Target, Zap } from "lucide-react";
+import { ShieldCheck } from 'lucide-react';
+import { IconElite, IconWeb } from './CustomIcons';
 
 export default function Authority() {
   return (
@@ -43,7 +44,7 @@ export default function Authority() {
             <div className="glass-premium p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] relative space-y-6 md:space-y-8">
               <div className="flex gap-4 md:gap-6 items-start">
                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-brand-accent-light/10 flex items-center justify-center shrink-0">
-                    <Target className="text-brand-accent-light" size={20} />
+                    <IconElite className="text-brand-accent-light" size={20} />
                  </div>
                  <div>
                     <h4 className="text-white font-black text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Segmentação</h4>
@@ -53,7 +54,7 @@ export default function Authority() {
               <div className="h-[1px] w-full bg-white/5" />
               <div className="flex gap-4 md:gap-6 items-start">
                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-brand-accent-dark/10 flex items-center justify-center shrink-0">
-                    <Zap className="text-brand-accent-dark" size={20} />
+                    <IconWeb className="text-brand-accent-dark" size={20} />
                  </div>
                  <div>
                     <h4 className="text-white font-black text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Velocidade</h4>
@@ -84,7 +85,7 @@ export default function Authority() {
                     Não desenvolvemos apenas logotipos. Projetamos a jornada que transforma seu público em uma comunidade leal. Do design sonoro à performance do site, cada detalhe é uma peça de <span className="text-brand-accent-light font-bold">autoridade digital.</span>
                   </p>
                   <div className="flex items-center gap-4 md:gap-6">
-                     <span className="font-mono text-[8px] md:text-[9px] uppercase tracking-super-tight text-white/40">Desenvolvido por Orvalia Studio</span>
+                     <span className="font-mono text-[8px] md:text-[9px] uppercase tracking-super-tight text-white/40">Assinado: Bruno G.</span>
                      <div className="flex-1 h-[1px] bg-white/5" />
                   </div>
                 </div>

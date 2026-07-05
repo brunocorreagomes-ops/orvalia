@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Sparkles, Layout, Globe, Activity } from "lucide-react";
+import { IconBrand, IconWeb, IconLocal, IconComm } from './CustomIcons';
 
 const services = [
   {
     title: "1. Branding Estratégico",
     desc: "Posicionamento, identidade, narrativa, tom de voz e direção visual para sua marca ser percebida com mais valor.",
-    icon: <Sparkles className="text-brand-accent-light" size={28} />
+    icon: <IconBrand className="text-brand-accent-light" size={28} />
   },
   {
     title: "2. Sites e Landing Pages Premium",
     desc: "Páginas institucionais e comerciais com design sofisticado, copy estratégica, SEO local e foco total em conversão.",
-    icon: <Layout className="text-brand-accent-light" size={28} />
+    icon: <IconWeb className="text-brand-accent-light" size={28} />
   },
   {
     title: "3. Presença Local Inteligente",
     desc: "Estrutura digital para sua empresa aparecer melhor, comunicar com mais clareza e gerar mais confiança na região de Indaiatuba.",
-    icon: <Globe className="text-brand-accent-light" size={28} />
+    icon: <IconLocal className="text-brand-accent-light" size={28} />
   },
   {
     title: "4. Comunicação Mensal",
     desc: "Conteúdo, campanhas, criativos e direção de comunicação para manter sua marca ativa, consistente e desejável.",
-    icon: <Activity className="text-brand-accent-light" size={28} />
+    icon: <IconComm className="text-brand-accent-light" size={28} />
   }
 ];
 
@@ -54,8 +54,6 @@ export default function Services() {
                 transition={{ delay: idx * 0.05 }}
                 className="p-8 rounded-[2.5rem] bg-white/[0.01] border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500 relative overflow-hidden group"
               >
-                {/* Internal glow for depth */}
-                <div className="absolute -top-24 -right-24 w-48 h-48 bg-brand-accent-light/5 blur-3xl group-hover:bg-brand-accent-light/10 transition-colors duration-500" />
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 rounded-2xl bg-brand-accent-light/10 flex items-center justify-center mb-6 border border-brand-accent-light/10 group-hover:scale-110 group-hover:bg-brand-accent-light/20 transition-all duration-500">
