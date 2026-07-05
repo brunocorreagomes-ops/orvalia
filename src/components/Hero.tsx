@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Globe, Code, Palette } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { IconBrand, IconAuthority, IconWeb } from "./CustomIcons";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,9 +15,9 @@ export default function Hero() {
     offset: ["start start", "end start"]
   });
 
-  const globeY = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const paletteY = useTransform(scrollYProgress, [0, 1], [0, 60]);
-  const codeY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const globeY = useTransform(scrollYProgress, [0, 1], [0, -15]);
+  const paletteY = useTransform(scrollYProgress, [0, 1], [0, -20]);
+  const codeY = useTransform(scrollYProgress, [0, 1], [0, -10]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -195,15 +196,30 @@ export default function Hero() {
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4 w-full border-t border-white/5 pt-8">
-                  <div className="flex flex-col justify-center text-center">
-                    <span className="text-[10px] font-black text-brand-accent-light uppercase tracking-widest leading-none mb-1">Autoridade Regional</span>
-                    <span className="text-xs text-white/80 font-medium">Indaiatuba, Campinas, Itu, Sorocaba e RMC</span>
-                  </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4 w-full">
+                  {/* Buttons wrapper inside parent motion.div */}
                 </div>
 
               </motion.div>
+
+              {/* 1. Autoridade Regional Block */}
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="w-full max-w-xl mx-auto py-8 border-y border-white/5 my-10 select-none"
+              >
+                <div className="flex flex-col items-center justify-center text-center">
+                  <span className="text-[10px] md:text-[11px] font-black text-brand-accent-light uppercase tracking-[0.3em] leading-none mb-3 font-mono">
+                    Autoridade Regional
+                  </span>
+                  <span className="text-xs md:text-sm text-brand-secondary/80 font-light tracking-wide px-4">
+                    Indaiatuba, Campinas, Itu, Sorocaba e RMC
+                  </span>
+                </div>
+              </motion.div>
               
+              {/* 2 & 3. Custom Key Features Row (3 items normalized) */}
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
@@ -214,54 +230,63 @@ export default function Hero() {
                     opacity: 1,
                     transition: {
                       staggerChildren: 0.1,
-                      delayChildren: 0.8
+                      delayChildren: 0.2
                     }
                   }
                 }}
-                className="flex flex-col items-center gap-4 mt-8 w-full hidden md:flex"
+                className="flex flex-col items-center gap-10 w-full mt-6"
               >
-                <div className="flex gap-8 md:gap-16 items-center scale-90 md:scale-100">
+                <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 md:gap-14 lg:gap-16 items-center justify-center w-full max-w-5xl px-4">
+                  {/* Item 1 */}
                   <motion.div 
                     variants={{
-                      hidden: { opacity: 0, y: 15 },
+                      hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
                     }}
                     style={{ y: paletteY }}
-                    className="flex flex-col items-center gap-2"
+                    className="flex flex-col items-center text-center gap-3 shrink-0"
                   >
-                    <Palette className="text-brand-accent-light" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">IDENTIDADE SOB MEDIDA</span>
+                    <div className="w-10 h-10 rounded-xl bg-brand-accent-light/5 border border-brand-accent-light/10 flex items-center justify-center shadow-sm shrink-0">
+                      <IconBrand className="text-brand-accent-light" size={18} />
+                    </div>
+                    <span className="text-[9px] md:text-[10px] font-mono text-brand-secondary/90 font-medium tracking-[0.2em] whitespace-nowrap">IDENTIDADE SOB MEDIDA</span>
                   </motion.div>
 
+                  {/* Item 2 */}
                   <motion.div 
                     variants={{
-                      hidden: { opacity: 0, y: 15 },
+                      hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
                     }}
                     style={{ y: globeY }}
-                    className="flex flex-col items-center gap-2"
+                    className="flex flex-col items-center text-center gap-3 shrink-0"
                   >
-                    <Globe className="text-brand-accent-light" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">POSICIONAMENTO DIGITAL</span>
+                    <div className="w-10 h-10 rounded-xl bg-brand-accent-light/5 border border-brand-accent-light/10 flex items-center justify-center shadow-sm shrink-0">
+                      <IconAuthority className="text-brand-accent-light" size={18} />
+                    </div>
+                    <span className="text-[9px] md:text-[10px] font-mono text-brand-secondary/90 font-medium tracking-[0.2em] whitespace-nowrap">POSICIONAMENTO DIGITAL</span>
                   </motion.div>
 
+                  {/* Item 3 */}
                   <motion.div 
                     variants={{
-                      hidden: { opacity: 0, y: 15 },
+                      hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
                     }}
                     style={{ y: codeY }}
-                    className="flex flex-col items-center gap-2"
+                    className="flex flex-col items-center text-center gap-3 shrink-0"
                   >
-                    <Code className="text-brand-accent-dark" size={20} />
-                    <span className="text-[9px] font-mono text-brand-secondary tracking-widest">SITE RÁPIDO E EFICIENTE</span>
+                    <div className="w-10 h-10 rounded-xl bg-brand-accent-light/5 border border-brand-accent-light/10 flex items-center justify-center shadow-sm shrink-0">
+                      <IconWeb className="text-brand-accent-light" size={18} />
+                    </div>
+                    <span className="text-[9px] md:text-[10px] font-mono text-brand-secondary/90 font-medium tracking-[0.2em] whitespace-nowrap">SITE RÁPIDO E EFICIENTE</span>
                   </motion.div>
                 </div>
 
-                <div className="h-[1px] w-64 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="h-[1px] w-48 bg-gradient-to-r from-transparent via-white/10 to-transparent mt-4" />
                 
-                <p className="text-[10px] font-mono text-brand-secondary/60 uppercase tracking-[0.3em]">
-                  [ Orvalia Agency ] Indaiatuba — RMC
+                <p className="text-[9px] md:text-[10px] font-mono text-brand-secondary/40 uppercase tracking-[0.3em] mt-2">
+                  [ Orvalia Studio ] Indaiatuba — RMC
                 </p>
               </motion.div>
             </div>
