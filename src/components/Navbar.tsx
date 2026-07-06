@@ -29,7 +29,7 @@ export default function Navbar() {
     { name: "Indaiatuba", href: "/agencia-indaiatuba", id: "02", isLink: true },
     { name: "Sites", href: "/sites-estrategicos", id: "03", isLink: true },
     { name: "Serviços", href: "/#servicos", id: "04" },
-    { name: "Planos", href: "/#precos", id: "05" },
+    { name: "Como Começar", href: "/#pontos-partida", id: "05" },
     { name: "Blog", href: "/blog", id: "06", isLink: true },
   ];
 

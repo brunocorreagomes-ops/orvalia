@@ -4,33 +4,33 @@ import { Stethoscope, Palmtree, Landmark, Compass, Users, UserCheck } from "luci
 const targetAudiences = [
   {
     icon: Stethoscope,
-    title: "Clínicas e profissionais premium",
-    desc: "Médicos, dentistas e terapeutas de elite que buscam se diferenciar pela excelência e atrair pacientes de alto padrão."
+    title: "Clínicas e profissionais de saúde",
+    desc: "Médicos, dentistas e terapeutas de referência que buscam se diferenciar pela excelência e aumentar seu valor percebido."
   },
   {
     icon: Palmtree,
     title: "Turismo, hotelaria e experiências",
-    desc: "Hotéis boutique, pousadas de charme, restaurantes e destinos singulares que entregam momentos inesquecíveis."
+    desc: "Hotéis boutique, pousadas, restaurantes e experiências locais de destaque que desejam expressar sua identidade única."
   },
   {
     icon: Landmark,
-    title: "Serviços locais de alto valor",
-    desc: "Boutiques jurídicas, consultorias de negócios, construtoras e escritórios especializados de extrema credibilidade."
+    title: "Serviços corporativos e locais",
+    desc: "Escritórios de advocacia, consultorias de negócios, construtoras e empresas focadas em alta credibilidade e crescimento regional."
   },
   {
     icon: Compass,
     title: "Arquitetura, interiores e estética",
-    desc: "Estúdios de design, arquitetos renomados e clínicas de estética médica onde o visual sofisticado e o requinte são indispensáveis."
+    desc: "Arquitetos, designers de interiores e clínicas de estética onde a percepção de valor visual e a diferenciação estética são indispensáveis."
   },
   {
     icon: Users,
-    title: "Negócios familiares em fase de transição",
-    desc: "Empresas tradicionais e consolidadas que passam por transição geracional e exigem profissionalização de imagem digital."
+    title: "Negócios tradicionais e familiares",
+    desc: "Empresas consolidadas em fase de transição de liderança ou expansão comercial que exigem maturidade e clareza digital."
   },
   {
     icon: UserCheck,
     title: "Marcas pessoais e especialistas",
-    desc: "Mentores de negócios, palestrantes, conselheiros e diretores que desejam transformar prestígio físico em autoridade digital."
+    desc: "Mentores, consultores, palestrantes e profissionais liberais decididos a traduzir prestígio físico em presença digital vendável."
   }
 ];
 

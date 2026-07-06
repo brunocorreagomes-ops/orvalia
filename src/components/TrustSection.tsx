@@ -84,7 +84,7 @@ export default function TrustSection() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
-              >Diagnóstico Gratuito<TrendingUp size={18} />
+              >Avaliar minha presença digital<TrendingUp size={18} />
               </motion.a>
             </MagneticWrapper>
           </div>

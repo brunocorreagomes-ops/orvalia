@@ -23,7 +23,7 @@ export default function Footer() {
                 { name: "Projetos", href: "/#projetos" },
                 { name: "Metodologia", href: "/#processo" },
                 { name: "Serviços", href: "/#servicos" },
-                { name: "Planos", href: "/#precos" },
+                { name: "Como Começar", href: "/#pontos-partida" },
                 { name: "Blog", href: "/blog" },
                 { name: "Agência Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
                 { name: "Falar no WhatsApp", href: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:", isExternal: true },

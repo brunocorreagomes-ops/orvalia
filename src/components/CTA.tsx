@@ -40,7 +40,7 @@ export default function CTA() {
                 whileTap={{ scale: 0.95 }}
                 className="group relative flex items-center justify-between gap-6 px-10 md:px-14 py-6 md:py-8 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
               >
-                <span className="relative z-10 font-sans text-xs md:text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Quero meu diagnóstico gratuito</span>
+                <span className="relative z-10 font-sans text-xs md:text-sm font-black uppercase tracking-[0.25em] text-brand-bg">Quero um diagnóstico da minha marca</span>
                 <div className="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500 shrink-0">
                   <ArrowUpRight className="text-brand-accent-light" size={18} />
                 </div>

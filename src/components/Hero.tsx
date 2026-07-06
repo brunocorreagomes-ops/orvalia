@@ -174,7 +174,7 @@ export default function Hero() {
                       className="group relative flex items-center gap-8 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
                     >
                       <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                      <span className="relative font-sans text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
+                      <span className="relative font-sans text-xs md:text-sm font-black uppercase tracking-[0.25em] text-brand-bg">Quero meu diagnóstico gratuito</span>
                       <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
                     </motion.a>
                   </MagneticWrapper>
