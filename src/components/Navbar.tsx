@@ -67,14 +67,14 @@ export default function Navbar() {
                 className="group relative"
               >
                 <div className="flex flex-col items-start">
-                  <span className="font-mono text-[7px] text-brand-accent-light/70 group-hover:text-brand-accent-light transition-colors mb-0.5 ml-0.5">
+                  <span className="font-mono text-[7px] text-white/80 group-hover:text-brand-accent-light transition-colors mb-0.5 ml-0.5">
                     {link.id}
                   </span>
                   {link.isLink ? (
                     <Link 
                       to={link.href}
                       aria-current={pathname === link.href ? "page" : undefined}
-                      className={`inline-block text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] relative pb-1 ${pathname === link.href ? 'text-brand-accent-light font-black' : 'text-white/90 hover:text-white'}`}
+                      className={`inline-block text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] relative pb-1 ${pathname === link.href ? 'text-brand-accent-light font-black' : 'text-white hover:text-white'}`}
                     >
                       {link.name}
                       {pathname === link.href && (
@@ -87,7 +87,7 @@ export default function Navbar() {
                   ) : (
                     <a 
                       href={link.href}
-                      className="inline-block text-[11px] font-black uppercase tracking-[0.2em] text-white/90 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300 relative pb-1 group"
+                      className="inline-block text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300 relative pb-1 group"
                     >
                       {link.name}
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-brand-accent-light transition-all duration-500 group-hover:w-full" />
@@ -157,7 +157,7 @@ export default function Navbar() {
                     }}
                   >
                      <div className="flex items-center gap-3 mb-1">
-                        <span className="font-mono text-[8px] text-brand-accent-light/80 uppercase tracking-widest leading-none">{link.id}</span>
+                        <span className="font-mono text-[8px] text-white/90 uppercase tracking-widest leading-none">{link.id}</span>
                         <div className="h-[1px] w-3 bg-brand-accent-light/40" />
                      </div>
                      {link.isLink ? (

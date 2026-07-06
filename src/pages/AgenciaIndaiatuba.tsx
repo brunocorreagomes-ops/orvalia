@@ -21,21 +21,61 @@ const localCases = [
 ];
 
 
-const serviceSchema = {
+const agencySchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Branding e Identidade Visual",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Orvalia Studio"
-  },
-  "areaServed": "Indaiatuba",
-  "description": "Construção de posicionamento de marca premium e identidade visual corporativa para empresas."
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://orvalia.com.br/#localbusiness",
+      "name": "Orvalia Studio",
+      "url": "https://orvalia.com.br/agencia-indaiatuba",
+      "logo": "https://orvalia.com.br/logo.png",
+      "telephone": "+5511978959567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indaiatuba",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": ["Indaiatuba", "Campinas", "RMC", "Brasil"],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://orvalia.com.br/#founder",
+        "name": "Bruno Correa Gomes",
+        "jobTitle": "Fundador da Orvalia Studio",
+        "sameAs": [
+          "https://www.linkedin.com/in/brunocorreagomes"
+        ],
+        "image": "https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Orvalia Studio",
+          "url": "https://orvalia.com.br"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Branding e Identidade Visual",
+      "provider": {
+        "@id": "https://orvalia.com.br/#localbusiness"
+      },
+      "areaServed": "Indaiatuba",
+      "description": "Construção de posicionamento de marca premium e identidade visual corporativa para empresas."
+    }
+  ]
 };
 
 export default function AgenciaIndaiatuba() {
   return (
-    <div className="min-h-screen bg-brand-bg pt-32 pb-20">
+    <>
+      <SEO 
+        title="Agência de Branding e Sites em Indaiatuba | Orvalia Studio"
+        description="A Orvalia Studio cria marcas e sites de luxo em Indaiatuba e na RMC. Identidade visual exclusiva, SEO local e posicionamento premium para negócios de elite."
+        canonical="https://orvalia.com.br/agencia-indaiatuba"
+        schema={agencySchema}
+      />
+      <div className="min-h-screen bg-brand-bg pt-32 pb-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -131,6 +171,99 @@ export default function AgenciaIndaiatuba() {
                     Nossas sessões e alinhamentos de entrega são realizados de forma 100% online ou presenciais combinados estrategicamente em Indaiatuba e região — sempre com agendamento prévio.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quem está por trás da Orvalia */}
+        <section className="py-24 border-t border-white/5 relative overflow-hidden">
+          {/* Decorative subtle background dewdrop */}
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 opacity-[0.03] pointer-events-none">
+            <svg width="600" height="600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-accent-light">
+              <path d="M12 2C12 2 4 10 4 15C4 19.4183 7.58172 23 12 23C16.4183 23 20 19.4183 20 15C20 10 12 2 12 2Z" fill="currentColor" />
+            </svg>
+          </div>
+
+          <div className="dna-grid gap-12 items-center">
+            {/* Portrait Column */}
+            <div className="col-span-4 lg:col-span-5">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative aspect-[3/4] rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl"
+              >
+                {/* Image */}
+                <img 
+                  src="https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg" 
+                  alt="Bruno Correa Gomes - Fundador da Orvalia Studio" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Subtle color treatment gradient overlay matching brand colors (teal/water) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-brand-accent-light/10 pointer-events-none" />
+                <div className="absolute inset-0 bg-brand-accent-light/5 mix-blend-color pointer-events-none" />
+                
+                {/* Frame Accent corner */}
+                <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-brand-bg/80 backdrop-blur-md border border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <p className="text-white font-black uppercase text-[10px] tracking-widest mb-1">Bruno Correa Gomes</p>
+                  <p className="text-brand-accent-light font-mono text-[8px] uppercase tracking-wider">Liderança Estratégica & Design de Elite</p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Content Column */}
+            <div className="col-span-4 lg:col-span-7 space-y-8 lg:pl-6">
+              <div>
+                <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-4 block">Liderança & Visão</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-black text-white leading-[1.1] tracking-tighter uppercase mb-2">
+                  Quem está por trás da <br className="hidden sm:inline" /><span className="text-gradient">Orvalia Studio?</span>
+                </h2>
+                <div className="h-[1px] w-20 bg-brand-accent-light mt-6" />
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-brand-secondary text-lg leading-relaxed font-serif italic">
+                  "Acreditamos que negócios extraordinários de Indaiatuba e região merecem um nível de design e estratégia que projeta sua verdadeira maestria. Nosso papel é pavimentar essa autoridade digital."
+                </p>
+                
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tight">Bruno Correa Gomes</h3>
+                  <p className="text-brand-accent-light font-mono text-xs uppercase tracking-widest font-semibold">Fundador da Orvalia Studio</p>
+                </div>
+
+                <p className="text-brand-secondary text-base leading-relaxed">
+                  Com mais de 18 anos de sólida trajetória de liderança em marketing de alta performance no setor financeiro, Bruno traz a precisão analítica e a sofisticação do mercado premium para a esfera digital de Indaiatuba e região.
+                </p>
+
+                <p className="text-brand-secondary text-base leading-relaxed">
+                  Com MBA e pós-graduações pela renomada <strong>Fundação Getulio Vargas (FGV)</strong> e detentor da certificação <strong>CEA</strong> de especialista em investimentos, unifica a visão analítica de negócios ao refinamento estético, estruturando ecossistemas digitais de elite que impulsionam resultados exponenciais para marcas exigentes.
+                </p>
+              </div>
+
+              {/* LinkedIn & WhatsApp button */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <a 
+                  href="https://www.linkedin.com/in/brunocorreagomes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-4 border border-white/10 hover:border-brand-accent-light text-white hover:text-brand-accent-light rounded-full font-mono text-[10px] uppercase tracking-widest transition-all flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                  LinkedIn Profissional
+                </a>
+
+                <a 
+                  href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20sua%20trajetória%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20agendar%20uma%20conversa."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-4 bg-brand-accent-light/10 hover:bg-brand-accent-light hover:text-brand-bg border border-brand-accent-light/20 text-brand-accent-light rounded-full font-mono text-[10px] uppercase tracking-widest transition-all flex items-center gap-2"
+                >
+                  Conectar pelo WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -240,5 +373,6 @@ export default function AgenciaIndaiatuba() {
         </section>
       </div>
     </div>
+    </>
   );
 }
