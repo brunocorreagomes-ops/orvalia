@@ -7,7 +7,7 @@ export default function FounderSection() {
     {
       icon: Award,
       title: "Bagagem Comercial",
-      desc: "Mais de 18 anos de inteligência comercial real e análise de dados para transformar seu tráfego em clientes pagantes."
+      desc: "Mais de 18 anos de inteligência comercial real e análise de dados para estruturar sua jornada e qualificar os contatos recebidos."
     },
     {
       icon: Compass,
@@ -17,12 +17,12 @@ export default function FounderSection() {
     {
       icon: TrendingUp,
       title: "SEO Local e Regional",
-      desc: "Estruturação técnica para que sua empresa lidere as pesquisas do Google na região de Indaiatuba, Salto e Campinas."
+      desc: "Estruturação técnica para fortalecer sua presença local e aumentar sua competitividade nas buscas do Google na região."
     },
     {
       icon: Cpu,
       title: "Busca com IA e GEO",
-      desc: "Otimização avançada para colocar seu negócio como indicação direta do ChatGPT, Gemini e buscas de IA."
+      desc: "Estruturação de conteúdo para que a marca seja compreendida com mais clareza por mecanismos de busca, assistentes de IA e plataformas como Google, ChatGPT e Gemini."
     }
   ];
 
@@ -56,11 +56,11 @@ export default function FounderSection() {
               </p>
               
               <p>
-                Essa experiência de negócios beneficia diretamente o seu faturamento: enquanto agências tradicionais entregam apenas telas decoradas, nosso foco está em <strong className="text-white font-medium">identificar os diferenciais competitivos da sua empresa e traduzi-los em uma estrutura digital de alta performance</strong>. Desde a velocidade de abertura até a hierarquia de argumentos, tudo é projetado para reduzir a hesitação do cliente e motivar o contato comercial.
+                Essa experiência de negócios beneficia diretamente a forma como sua marca se posiciona, gera confiança e conduz o visitante até o contato comercial. Enquanto soluções genéricas entregam apenas telas bonitas, a Orvalia organiza diferenciais competitivos, argumentos, hierarquia visual e jornada digital para reduzir dúvidas e aumentar a intenção de contato.
               </p>
               
               <p>
-                Ao conectar sofisticação visual refinada com leitura de consumo regional, asseguramos que profissionais liberais, clínicas de saúde e empresas em expansão em <strong className="text-white font-medium">Indaiatuba, Campinas, Salto, Itu e região</strong> construam autoridade duradoura e conquistem leads de maior qualidade.
+                Ao conectar sofisticação visual refinada com leitura de consumo regional, asseguramos que profissionais liberais, clínicas de saúde e empresas em expansão em <strong className="text-white font-medium">Indaiatuba, Campinas, Salto, Itu e região</strong> construam autoridade duradoura, melhorem sua presença local e conquistem contatos de maior qualidade.
               </p>
             </div>
 

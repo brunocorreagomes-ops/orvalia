@@ -35,10 +35,10 @@ const paths = [
   {
     name: "Site Institucional Premium",
     focus: "Autoridade & Presença Local",
-    desc: "Desenvolvimento sob medida projetado para posicionar sua marca como líder absoluto em buscas orgânicas do Google.",
+    desc: "Desenvolvimento sob medida projetado para posicionar sua marca com destaque e alta competitividade em buscas locais e orgânicas do Google.",
     features: [
       "Arquitetura robusta estruturada",
-      "SEO Geo-Local nativo avançado",
+      "SEO local e regional nativo integrado",
       "Velocidade ultra-rápida (Web Vitals)",
       "Integrações de contato inteligentes"
     ],

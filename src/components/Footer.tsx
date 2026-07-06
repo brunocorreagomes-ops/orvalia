@@ -98,7 +98,7 @@ export default function Footer() {
             {/* NAP em texto puro para spiders */}
             <div className="hidden">
               <span>Orvalia Studio</span>
-              <span>Av. Presidente Kennedy, 1500, Indaiatuba - SP</span>
+              <span>Atendimento Digital Estratégico para Indaiatuba, Campinas e Região</span>
               <span>Telefone: +55 11 97895-9567</span>
               <span>E-mail: contato@orvalia.com.br</span>
             </div>

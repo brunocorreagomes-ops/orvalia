@@ -67,27 +67,26 @@ export default function AgenciaIndaiatuba() {
                 Diagnóstico Gratuito
               </a>
                 <a 
-                   href="#mapa"
+                   href="#atendimento"
                    className="px-10 py-6 border border-white/10 text-white rounded-full font-black text-xs uppercase tracking-widest transition-all hover:bg-white/5 flex items-center justify-center gap-3"
                 >
-                   Diagnóstico Presencial
+                   Atendimento Regional
                 </a>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Contact info & Map */}
-        <section id="mapa" className="py-20 border-t border-white/5">
+        {/* Contact info & Regional Service details */}
+        <section id="atendimento" className="py-20 border-t border-white/5">
           <div className="dna-grid gap-12">
             <div className="col-span-4 lg:col-span-5 space-y-12">
               <div>
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-6">Localização</h3>
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-6">Atendimento Regional</h3>
                 <div className="flex items-start gap-4 text-white">
                   <MapPin className="text-brand-accent-light shrink-0" size={24} />
                   <p className="text-xl leading-relaxed opacity-80">
-                    Av. Pres. Kennedy, Indaiatuba - SP,<br />
-                    CEP: 13334-170, Brasil
+                    Atendimento estratégico para empresas de Indaiatuba, Campinas, Salto, Itu, Sorocaba e região, com diagnóstico inicial pelo WhatsApp e reuniões por agendamento.
                   </p>
                 </div>
               </div>
@@ -111,16 +110,28 @@ export default function AgenciaIndaiatuba() {
               </div>
             </div>
 
-            <div className="col-span-4 lg:col-span-7 h-[400px] rounded-[3rem] overflow-hidden border border-white/5">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58703.1119330865!2d-47.25191060934661!3d-23.135766299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf50a31a980753%3A0xe6f4ef64a0e1c251!2sIndaiatuba%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1714032000000!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)' }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="col-span-4 lg:col-span-7 p-10 md:p-12 glass-premium rounded-[3rem] border border-white/5 flex flex-col justify-center space-y-8">
+              <h4 className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Dinâmica de Atendimento</h4>
+              <div className="space-y-6">
+                <div>
+                  <h5 className="text-white font-bold text-lg mb-1">1. Primeiro Passo via WhatsApp</h5>
+                  <p className="text-brand-secondary text-sm leading-relaxed">
+                    Tudo começa com uma conversa direta e sem intermediários. Você nos conta sobre seus objetivos de negócio e nós realizamos um diagnóstico prévio da sua presença digital.
+                  </p>
+                </div>
+                <div className="border-t border-white/5 pt-6">
+                  <h5 className="text-white font-bold text-lg mb-1">2. Diagnóstico Personalizado</h5>
+                  <p className="text-brand-secondary text-sm leading-relaxed">
+                    Apresentamos caminhos claros e os melhores pontos de partida para estruturar o seu design estratégico, seja para um lançamento rápido ou um reposicionamento completo de marca.
+                  </p>
+                </div>
+                <div className="border-t border-white/5 pt-6">
+                  <h5 className="text-white font-bold text-lg mb-1">3. Reuniões sob Demanda</h5>
+                  <p className="text-brand-secondary text-sm leading-relaxed">
+                    Nossas sessões e alinhamentos de entrega são realizados de forma 100% online ou presenciais combinados estrategicamente em Indaiatuba e região — sempre com agendamento prévio.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -214,15 +225,15 @@ export default function AgenciaIndaiatuba() {
               <div className="flex gap-2 mb-4">
                  {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 bg-yellow-400 rounded-sm" />)}
               </div>
-              <p className="text-white font-black text-xl mb-2">5.0 no Google</p>
-              <p className="text-brand-secondary text-[10px] font-mono uppercase tracking-[0.2em] text-center lg:text-right">Orvalia Studio. Atendimento de Excelência em Indaiatuba</p>
+              <p className="text-white font-black text-xl mb-2">Atendimento de Excelência</p>
+              <p className="text-brand-secondary text-[10px] font-mono uppercase tracking-[0.2em] text-center lg:text-right">Orvalia Studio. Padrão Global para Marcas de Indaiatuba e Região</p>
               <a 
-                href="https://g.page/r/YOUR_GMB_LINK" 
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20seção%20sobre%20Indaiatuba%20e%20gostaria%20de%20solicitar%20um%20diagnóstico%20da%20presença%20digital%20da%20minha%20empresa."
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="mt-8 text-brand-accent-light font-mono text-[10px] uppercase tracking-widest border-b border-brand-accent-light/30 pb-1"
+                className="mt-8 text-brand-accent-light font-mono text-[10px] uppercase tracking-widest border-b border-brand-accent-light/30 pb-1 hover:border-brand-accent-light transition-all"
               >
-                Ver Avaliações Reais
+                Solicitar Diagnóstico Gratuito
               </a>
             </div>
           </div>

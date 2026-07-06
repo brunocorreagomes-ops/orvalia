@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TrendingUp } from 'lucide-react';
-import { IconElite, IconAuthority, IconDesign } from './CustomIcons';
+import { IconElite, IconAuthority, IconDesign, IconDewdrop } from './CustomIcons';
 import MagneticWrapper from './MagneticWrapper';
 
 const differentiators = [
@@ -40,7 +40,7 @@ export default function TrustSection() {
     </div>
   </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-8">
     {differentiators.map((item, idx) => (
       <motion.div 
         key={idx}
@@ -48,22 +48,46 @@ export default function TrustSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: idx * 0.1 }}
-        className={`p-8 lg:p-10 bg-white/[0.02] border border-white/5 rounded-3xl transition-all group relative overflow-hidden ${idx === 1 ? 'md:-translate-y-6' : ''}`}
+        className={`p-8 lg:p-10 rounded-3xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between ${
+          idx === 1 
+            ? 'bg-gradient-to-b from-white/[0.04] to-brand-bg/90 border-2 border-brand-accent-light/30 shadow-[0_0_50px_rgba(0,255,209,0.06)] md:-translate-y-6 md:scale-[1.04] z-10' 
+            : 'bg-white/[0.02] border border-white/5'
+        }`}
       >
-        {/* Subtle background element */}
-        <div className="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
-           <item.icon size={120} className="text-white" />
+        {/* Subtle background element - Gota d'água / Orvalho (Option A) */}
+        {idx === 0 && (
+          <div className="absolute -top-12 -right-12 p-6 opacity-[0.05] pointer-events-none rotate-[15deg] text-white">
+             <IconDewdrop size={180} />
+          </div>
+        )}
+        {idx === 1 && (
+          <div className="absolute -bottom-16 -right-10 p-6 opacity-[0.07] pointer-events-none -rotate-[25deg] text-brand-accent-light">
+             <IconDewdrop size={200} />
+          </div>
+        )}
+        {idx === 2 && (
+          <div className="absolute -top-10 -left-16 p-6 opacity-[0.05] pointer-events-none rotate-[45deg] text-white">
+             <IconDewdrop size={190} />
+          </div>
+        )}
+
+        {idx === 1 && (
+          <div className="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[8px] uppercase tracking-widest px-3 py-1 rounded-full">
+            Mais Solicitado
+          </div>
+        )}
+        
+        <div>
+          <div className="w-12 h-12 rounded-xl bg-brand-accent-light/10 flex items-center justify-center mb-10 border border-brand-accent-light/20 group-hover:bg-brand-accent-light/20 transition-all">
+            <item.icon className="text-brand-accent-light" size={24} />
+          </div>
+          <h3 className="text-white font-black text-lg uppercase tracking-tight mb-4 pr-8">{item.title}</h3>
+          <p className="text-brand-secondary/80 text-sm leading-relaxed mb-6">{item.desc}</p>
         </div>
         
-        <div className="w-12 h-12 rounded-xl bg-brand-accent-light/10 flex items-center justify-center mb-10 border border-brand-accent-light/20 group-hover:bg-brand-accent-light/20 transition-all">
-          <item.icon className="text-brand-accent-light" size={24} />
-        </div>
-        <h3 className="text-white font-black text-lg uppercase tracking-tight mb-4 pr-8">{item.title}</h3>
-        <p className="text-brand-secondary/80 text-sm leading-relaxed">{item.desc}</p>
-        
-        <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
+        <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
            <span className="font-mono text-[9px] text-white/30 uppercase tracking-widest">Diferencial {idx + 1}</span>
-           <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light/50" />
+           <div className={`w-1.5 h-1.5 rounded-full ${idx === 1 ? 'bg-emerald-400' : 'bg-brand-accent-light/50'}`} />
         </div>
       </motion.div>
     ))}

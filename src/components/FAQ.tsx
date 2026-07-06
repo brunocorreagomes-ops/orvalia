@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "É possível realizar uma reunião presencial em Indaiatuba ou RMC?",
-    answer: "Com certeza. Valorizamos a proximidade estratégica. Podemos agendar um café para discutir seu diagnóstico em nosso endereço na Av. Presidente Kennedy, ou agendar uma visita presencial à sua empresa em Indaiatuba, Salto, Itu, Campinas ou região."
+    answer: "Oferecemos atendimento estratégico para empresas de Indaiatuba, Campinas, Salto, Itu, Sorocaba e região, com diagnóstico inicial pelo WhatsApp e reuniões presenciais ou online por agendamento prévio. Sem atendimento em endereço físico aberto ao público para garantir o foco total na execução dos projetos."
   }
 ];
 
