@@ -22,6 +22,10 @@ const faqs = [
   {
     question: "A Orvalia cria sites otimizados para o Google (SEO)?",
     answer: "Sim. Todos os nossos sites são construídos com foco em SEO Local e GEO (Generative Engine Optimization). Isso significa que sua empresa será encontrada não apenas por buscas tradicionais, mas também por mecanismos de IA como ChatGPT, Gemini e Perplexity."
+  },
+  {
+    question: "É possível realizar uma reunião presencial em Indaiatuba ou RMC?",
+    answer: "Com certeza. Valorizamos a proximidade estratégica. Podemos agendar um café para discutir seu diagnóstico em nosso endereço na Av. Presidente Kennedy, ou agendar uma visita presencial à sua empresa em Indaiatuba, Salto, Itu, Campinas ou região."
   }
 ];
 
