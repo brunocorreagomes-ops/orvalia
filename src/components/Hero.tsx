@@ -4,6 +4,8 @@ import { IconBrand, IconAuthority, IconWeb } from "./CustomIcons";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import WaterDropAnimation from "./WaterDropAnimation";
+import MagneticWrapper from "./MagneticWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,6 +81,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center text-center w-full"
           >
+            <WaterDropAnimation />
             <div className="flex items-center justify-center gap-3">
               <div className="w-12 h-[1px] bg-brand-accent-light/50" />
               <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
@@ -158,21 +161,23 @@ export default function Hero() {
                 className="flex flex-col items-center justify-center w-full"
               >
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-4">
-                  <motion.a 
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ 
-                      scale: 1.05,
-                      boxShadow: "0 0 40px rgba(0, 255, 209, 0.4)"
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    className="group relative flex items-center gap-8 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
-                  >
-                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                    <span className="relative font-sans text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
-                    <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
-                  </motion.a>
+                  <MagneticWrapper>
+                    <motion.a 
+                      href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ 
+                        scale: 1.05,
+                        boxShadow: "0 0 40px rgba(0, 255, 209, 0.4)"
+                      }}
+                      whileTap={{ scale: 0.98 }}
+                      className="group relative flex items-center gap-8 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
+                    >
+                      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                      <span className="relative font-sans text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Diagnóstico Gratuito</span>
+                      <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
+                    </motion.a>
+                  </MagneticWrapper>
                   
                   <motion.a 
                     href="#projetos"

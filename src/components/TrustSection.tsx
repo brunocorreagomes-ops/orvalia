@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp } from 'lucide-react';
 import { IconElite, IconAuthority, IconDesign } from './CustomIcons';
+import MagneticWrapper from './MagneticWrapper';
 
 const differentiators = [
   {
@@ -69,21 +70,23 @@ export default function TrustSection() {
   </div>
 
           <div className="mt-20 flex justify-center">
-            <motion.a
-              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(0, 255, 209, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
-            >Diagnóstico Gratuito<TrendingUp size={18} />
-            </motion.a>
+            <MagneticWrapper>
+              <motion.a
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(0, 255, 209, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-[0.2em] text-sm shadow-xl transition-all"
+              >Diagnóstico Gratuito<TrendingUp size={18} />
+              </motion.a>
+            </MagneticWrapper>
           </div>
         </div>
 

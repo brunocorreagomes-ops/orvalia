@@ -75,6 +75,25 @@ const projects = [
   }
 ];
 
+const cardVariants = {
+  hidden: (idx: number) => ({
+    opacity: 0,
+    x: idx % 2 === 0 ? -40 : 40,
+    y: 15,
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 100,
+      mass: 0.8,
+    }
+  }
+};
+
 function ProjectCard({ project, idx }: { project: any; idx: number }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -101,10 +120,8 @@ function ProjectCard({ project, idx }: { project: any; idx: number }) {
   return (
     <motion.div
       ref={containerRef}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      custom={idx}
+      variants={cardVariants}
       className={`${project.span} group flex flex-col relative overflow-hidden rounded-[2.5rem] md:rounded-[3rem] cursor-pointer bg-white/[0.02] border border-white/5 transition-all duration-700 hover:border-brand-accent-light/30`}
     >
       <div className="relative w-full h-[45%] md:h-[50%] overflow-hidden bg-brand-bg/50">
@@ -201,11 +218,25 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Asymmetric Grid */}
-        <div className="dna-grid">
+        {/* Asymmetric Grid with Staggered Entrance */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15
+              }
+            }
+          }}
+          className="dna-grid"
+        >
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} idx={idx} />
           ))}
+        </motion.div>
           {/* Projetos CTA - Enhanced UX and Layout */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -261,7 +292,6 @@ export default function Projects() {
             <div className="absolute inset-0 opacity-5 pointer-events-none" 
                  style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
           </motion.div>
-        </div>
       </div>
     </section>
   );

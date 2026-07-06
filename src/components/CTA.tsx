@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import MagneticWrapper from "./MagneticWrapper";
 
 export default function CTA() {
   return (
@@ -30,22 +31,24 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-            <motion.a 
-              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative flex items-center justify-between gap-6 px-10 md:px-14 py-6 md:py-8 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
-            >
-              <span className="relative z-10 font-sans text-xs md:text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Quero meu diagnóstico gratuito</span>
-              <div className="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500 shrink-0">
-                <ArrowUpRight className="text-brand-accent-light" size={18} />
-              </div>
-              
-              {/* Internal Glow */}
-              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            </motion.a>
+            <MagneticWrapper>
+              <motion.a 
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative flex items-center justify-between gap-6 px-10 md:px-14 py-6 md:py-8 bg-brand-accent-light rounded-full overflow-hidden transition-all shadow-[0_0_60px_rgba(0,255,209,0.3)] w-full md:w-auto"
+              >
+                <span className="relative z-10 font-sans text-xs md:text-sm font-black uppercase tracking-[0.3em] text-brand-bg">Quero meu diagnóstico gratuito</span>
+                <div className="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center group-hover:rotate-45 transition-transform duration-500 shrink-0">
+                  <ArrowUpRight className="text-brand-accent-light" size={18} />
+                </div>
+                
+                {/* Internal Glow */}
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              </motion.a>
+            </MagneticWrapper>
 
             
         </div>

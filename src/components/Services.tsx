@@ -44,27 +44,58 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {services.map((service, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                className="p-8 rounded-[2.5rem] bg-white/[0.01] border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500 relative overflow-hidden group"
-              >
-                
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-accent-light/10 flex items-center justify-center mb-6 border border-brand-accent-light/10 group-hover:scale-110 group-hover:bg-brand-accent-light/20 transition-all duration-500">
-                    {service.icon}
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.12
+                }
+              }
+            }}
+            className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            {services.map((service, idx) => {
+              const cardVariants = {
+                hidden: {
+                  opacity: 0,
+                  x: idx % 2 === 0 ? -30 : 30,
+                  y: 15,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  transition: {
+                    type: "spring",
+                    stiffness: 90,
+                    damping: 18,
+                    mass: 0.8
+                  }
+                }
+              };
+
+              return (
+                <motion.div
+                  key={idx}
+                  variants={cardVariants}
+                  className="p-8 rounded-[2.5rem] bg-white/[0.01] border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500 relative overflow-hidden group"
+                >
+                  
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-accent-light/10 flex items-center justify-center mb-6 border border-brand-accent-light/10 group-hover:scale-110 group-hover:bg-brand-accent-light/20 transition-all duration-500">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-black uppercase text-white tracking-tight mb-4">{service.title}</h3>
+                    <p className="text-brand-secondary/70 text-sm leading-relaxed font-light line-clamp-2">{service.desc}</p>
                   </div>
-                  <h3 className="text-lg md:text-xl font-black uppercase text-white tracking-tight mb-4">{service.title}</h3>
-                  <p className="text-brand-secondary/70 text-sm leading-relaxed font-light line-clamp-2">{service.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
 
         </div>
       </div>
