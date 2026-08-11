@@ -1,297 +1,168 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp } from "lucide-react";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const projects = [
+const cases = [
   {
-    client: "BETH OLMEDA",
-    segment: "Mentoria • Marca Pessoal & Estética",
-    context: "Posicionamento digital desatualizado e falta de clareza na oferta de serviços.",
-    solution: "Redesign de marca premium, nova narrativa e Landing Page estratégica de alta conversão.",
-    metric: "Estética facial com presença mais premium",
-    location: "Indaiatuba/SP",
-    cta: "Ver projeto",
+    cliente: "BETH OLMEDA",
+    categoria: "Mentoria • Marca Pessoal & Estética Avançada",
+    antes: "Posicionamento digital genérico que não refletia a bagagem técnica e a exclusividade do atendimento presencial.",
+    decisao: "Reconstrução da identidade visual, tom de voz editorial e desenvolvimento de landing page estratégica orientada à percepção de autoridade.",
+    depois: "Elevação da percepção de valor dos procedimentos e consolidação de uma presença de marca inconfundível em Indaiatuba.",
     image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
-    span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
+    slug: "beth-olmeda"
   },
   {
-    client: "RYNA HAYASHI",
-    segment: "Psicologia • Clínica de Alto Padrão",
-    context: "Falta de presença estruturada e dependência de indicações físicas locais.",
-    solution: "Construção de uma presença digital sensível, técnica e premium para fortalecer autoridade clínica.",
-    metric: "Psicologia com posicionamento mais acolhedor e sofisticado",
-    location: "São Paulo/BR",
-    cta: "Conhecer projeto",
+    cliente: "RYNA HAYASHI",
+    categoria: "Psicologia • Clínica de Alto Padrão",
+    antes: "Falta de estrutura digital proprietária, dependendo exclusivamente de indicações e redes sociais informais.",
+    decisao: "Construção de ecossistema digital com arquitetura sensível, rápida e alinhada ao acolhimento e sofisticação da prática clínica.",
+    depois: "Fortalecimento da reputação da clínica com um canal direto que transmite segurança técnica antes da primeira consulta.",
     image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp",
-    span: "col-span-4 lg:col-span-12 h-[450px] md:h-[600px]"
+    slug: "ryna-hayashi"
   },
   {
-    client: "MARTA ANA CHICONATO",
-    segment: "Estratégia • Terapia Integrativa",
-    context: "Atração de leads desqualificados e baixa conversão com o formato antigo.",
-    solution: "Estratégia visual e narrativa para organizar a percepção da marca e fortalecer sua presença digital.",
-    metric: "Marca pessoal com comunicação mais profissional",
-    location: "Campinas/SP",
-    cta: "Ver identidade",
-    image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
-    span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
-  },
-  {
-    client: "QUINTA DE CARAÍVA",
-    segment: "Turismo • Hotelaria & Experiências",
-    context: "Processo de reservas manual ineficiente e perda de conversões no tráfego.",
-    solution: "Branding e arquitetura digital para traduzir exclusividade, natureza e sofisticação em uma experiência de marca.",
-    metric: "Hospedagem exclusiva com narrativa de desejo",
-    location: "Bahia/BR",
-    cta: "Ver conceito",
-    image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
-    span: "col-span-4 lg:col-span-6 h-[500px] md:h-[700px]"
-  },
-  {
-    client: "DARIO ELETRICIDADE",
-    segment: "Serviços • Engenharia Elétrica Local",
-    context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
-    solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
-    metric: "Serviço técnico com comunicação mais confiável",
-    location: "Indaiatuba/SP",
-    cta: "Ver projeto",
+    cliente: "DARIO ELETRICIDADE",
+    categoria: "Serviços • Engenharia Elétrica & Instalações Industriais",
+    antes: "Comunicação visual datada e baixa visibilidade orgânica frente aos concorrentes no segmento industrial regional.",
+    decisao: "Reposicionamento digital com foco em clareza técnica, prova institucional e otimização para buscas locais em Indaiatuba e RMC.",
+    depois: "Apresentação objetiva e robusta da capacidade operacional, facilitando o diálogo com contratantes de grande porte.",
     image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
-    span: "col-span-4 lg:col-span-7 h-[450px] md:h-[600px]"
+    slug: "dario-eletricidade"
   },
   {
-    client: "KNJ TUR",
-    segment: "Interface • Turismo Corporativo",
-    context: "Identidade visual desatualizada que não representava a solidez do grupo.",
-    solution: "Reorganização visual e estratégica para comunicar segurança, experiência e profissionalismo no planejamento de viagens.",
-    metric: "Turismo com presença mais confiável e global",
-    location: "São Paulo/BR",
-    cta: "Ver redesign",
+    cliente: "QUINTA DE CARAÍVA",
+    categoria: "Turismo • Hotelaria & Experiências Exclusivas",
+    antes: "Processo de apresentação desconectado da atmosfera real da pousada, gerando dúvidas no visitante durante a navegação.",
+    decisao: "Direção de arte imersiva, narrativa fotográfica editorial e experiência de navegação rápida com direcionamento direto para reservas.",
+    depois: "Apresentação da hospedagem como destino de desejo, alinhando a experiência da tela ao nível do serviço prestado.",
+    image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
+    slug: "quinta-de-caraiva"
+  },
+  {
+    cliente: "MARTA ANA CHICONATO",
+    categoria: "Estratégia • Terapia Integrativa & Marca Pessoal",
+    antes: "Atração de públicos sem alinhamento comercial e comunicação fragmentada em diferentes canais.",
+    decisao: "Organização da hierarquia da oferta, redesign da marca e estruturação de site focado em esclarecer o método antes do contato.",
+    depois: "Filtro natural do perfil de cliente e transmissão de serenidade e profissionalismo em toda a presença digital.",
+    image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
+    slug: "marta-chiconato"
+  },
+  {
+    cliente: "KNJ TUR",
+    categoria: "Interface • Turismo Corporativo & Viagens",
+    antes: "Site institucional desatualizado que não acompanhava a evolução e solidez operacional do grupo.",
+    decisao: "Reestruturação do design de interface, arquitetura da informação limpa e destaque para os pilares de segurança e atendimento B2B.",
+    depois: "Presença digital alinhada ao porte do grupo corporativo, reforçando credibilidade junto a parceiros e clientes.",
     image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
-    span: "col-span-4 lg:col-span-5 h-[450px] md:h-[600px]"
+    slug: "knj-tur"
   }
 ];
 
-const cardVariants = {
-  hidden: (idx: number) => ({
-    opacity: 0,
-    x: idx % 2 === 0 ? -40 : 40,
-    y: 15,
-  }),
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 20,
-      stiffness: 100,
-      mass: 0.8,
-    }
-  }
-};
-
-function ProjectCard({ project, idx }: { project: any; idx: number }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(imageRef.current, 
-        { yPercent: -5 },
-        { 
-          yPercent: 5,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-          }
-        }
-      );
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <motion.div
-      ref={containerRef}
-      custom={idx}
-      variants={cardVariants}
-      className={`${project.span} group flex flex-col relative overflow-hidden rounded-[2.5rem] md:rounded-[3rem] cursor-pointer bg-white/[0.02] border border-white/5 transition-all duration-700 hover:border-brand-accent-light/30`}
-    >
-      <div className="relative w-full h-[45%] md:h-[50%] overflow-hidden bg-brand-bg/50">
-        <img 
-          ref={imageRef}
-          src={project.image} 
-          alt={project.client} 
-          referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-[120%] object-cover object-center transition-all duration-1000 group-hover:scale-105"
-        />
-      </div>
-      
-      <div className="flex-1 p-6 md:p-8 flex flex-col justify-between z-10 bg-gradient-to-b from-brand-bg/60 to-transparent">
-        {/* Middle/Bottom: Context, Solution, and Metric */}
-        <div className="space-y-6">
-          {/* Header Inside Content Area for Maximum Readability */}
-          <div className="flex justify-between items-start border-b border-white/5 pb-4">
-            <div className="flex flex-col gap-1.5">
-              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">
-                {project.segment}
-              </span>
-              <h3 className="text-xl md:text-2xl font-sans font-black text-white tracking-tight uppercase">
-                {project.client}
-              </h3>
-            </div>
-            <div className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center bg-white/5 group-hover:bg-brand-accent-light group-hover:text-brand-bg transition-all duration-300 shadow-md shrink-0">
-              <ArrowUpRight className="text-brand-accent-light group-hover:text-brand-bg transition-colors" size={16} />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm text-left">
-            <div>
-              <span className="text-[9px] uppercase tracking-widest text-brand-secondary/60 block mb-2 font-mono">Contexto</span>
-              <p className="text-brand-secondary/80 font-light leading-relaxed line-clamp-3">
-                {project.context}
-              </p>
-            </div>
-            <div>
-              <span className="text-[9px] uppercase tracking-widest text-brand-accent-light block mb-2 font-mono">Solução Orvalia</span>
-              <p className="text-brand-secondary/80 font-light leading-relaxed line-clamp-3">
-                {project.solution}
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-end pt-6 mt-6 border-t border-white/5">
-          {project.metric && (
-            <div className="flex items-center gap-3 bg-white/5 border border-white/10 text-brand-secondary px-4 py-2 rounded-xl">
-              <span className="font-mono text-[9px] uppercase tracking-wider text-brand-accent-light shrink-0">Resultado //</span>
-              <span className="font-sans font-medium text-xs text-white/90 tracking-tight text-left">
-                {project.metric}
-              </span>
-            </div>
-          )}
-          <div className="flex items-center gap-4 ml-auto shrink-0 mt-auto">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-brand-accent-light font-black group-hover:underline transition-all">
-              {project.cta || "Ver projeto"}
-            </span>
-            <div className="px-4 py-2 border border-white/10 rounded-xl font-mono text-[9px] text-brand-secondary/60 uppercase tracking-widest">
-              {project.location}
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function Projects() {
   return (
-    <section id="projetos" className="py-20 md:py-40 bg-brand-bg relative z-10">
+    <section id="cases" className="py-24 md:py-36 bg-brand-bg relative z-10 border-b border-white/5">
       <div className="container mx-auto px-6">
-        {/* Header DNA Grid */}
-        <div className="dna-grid mb-24 items-end">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="col-span-4 lg:col-span-6"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-10 h-[1px] bg-brand-accent-light" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light">Arquitetura de Portfólio</span>
-            </div>
-            <h2 className="responsive-subtitle font-sans font-black tracking-tighter md:tracking-ultra-tight text-white leading-[0.85]">
-              PROJETOS <br /> <span className="italic font-serif font-light text-brand-secondary">REAIS.</span>
-            </h2>
-          </motion.div>
-          <div className="col-span-4 lg:col-span-6 flex lg:justify-end pb-4">
-             <p className="max-w-md text-brand-secondary/80 text-sm md:text-base font-sans font-light leading-relaxed text-left lg:text-right line-clamp-2">
-               Cases desenvolvidos para marcas, profissionais e empresas que precisavam comunicar mais valor, clareza e confiança no digital.
-             </p>
+        
+        {/* Header */}
+        <div className="max-w-4xl mb-16 md:mb-20 space-y-4">
+          <div className="flex items-center gap-3">
+            <span className="w-2 h-2 bg-brand-red" />
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-red font-semibold">
+              EVIDÊNCIA & TRANSFORMAÇÃO
+            </span>
           </div>
+
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase">
+            TRABALHOS QUE MUDARAM <br />
+            <span className="text-brand-secondary">O PAPEL DO DIGITAL.</span>
+          </h2>
+
+          <p className="text-base md:text-xl text-brand-secondary font-sans leading-relaxed max-w-2xl">
+            Cases de empresas que já entregavam excelência e precisavam que sua presença digital alcançasse o mesmo nível.
+          </p>
         </div>
 
-        {/* Asymmetric Grid with Staggered Entrance */}
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.15
-              }
-            }
-          }}
-          className="dna-grid"
-        >
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} idx={idx} />
+        {/* Cases Editorial Grid */}
+        <div className="space-y-16 md:space-y-24">
+          {cases.map((item, idx) => (
+            <motion.div 
+              key={item.cliente}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-stretch border-t border-white/10 pt-12 group"
+            >
+              {/* Image Column */}
+              <div className="lg:col-span-6 relative overflow-hidden bg-neutral-900 aspect-[16/10] border border-white/10">
+                <img 
+                  src={item.image} 
+                  alt={item.cliente} 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter grayscale contrast-125 group-hover:grayscale-0"
+                />
+                <div className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md border border-white/10 font-mono text-[10px] text-white uppercase tracking-widest">
+                  CASE 0{idx + 1}
+                </div>
+              </div>
+
+              {/* Editorial Info Column */}
+              <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="font-mono text-xs text-brand-red uppercase tracking-widest font-semibold mb-2">
+                    {item.categoria}
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-sans font-black text-white uppercase tracking-tight mb-6">
+                    {item.cliente}
+                  </h3>
+
+                  {/* Problem / Decision / Result Grid */}
+                  <div className="space-y-4 text-xs md:text-sm">
+                    <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-brand-secondary font-bold block">
+                        [ANTES] O Desafio de Percepção:
+                      </span>
+                      <p className="text-brand-secondary leading-relaxed font-sans">
+                        {item.antes}
+                      </p>
+                    </div>
+
+                    <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold block">
+                        [DECISÃO] O que foi alterado:
+                      </span>
+                      <p className="text-white/90 leading-relaxed font-sans">
+                        {item.decisao}
+                      </p>
+                    </div>
+
+                    <div className="p-4 bg-brand-red/10 border border-brand-red/30 space-y-1">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-brand-red font-bold block">
+                        [DEPOIS] Transformação de Percepção:
+                      </span>
+                      <p className="text-white leading-relaxed font-sans font-medium">
+                        {item.depois}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="pt-2">
+                  <Link 
+                    to={`/portfolio`}
+                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white font-bold group-hover:text-brand-red transition-colors"
+                  >
+                    <span>Ver transformações detalhadas</span>
+                    <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
           ))}
-        </motion.div>
-          {/* Projetos CTA - Enhanced UX and Layout */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="col-span-4 lg:col-span-12 mt-20 p-8 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-brand-card text-center border border-brand-accent-light/20 relative overflow-hidden group shadow-[0_0_50px_rgba(0,255,209,0.03)]"
-          >
-            <div className="relative z-10">
-               <motion.div 
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.2 }}
-                 className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] text-brand-accent-light mb-8"
-               >
-                 Inicie sua transformação
-               </motion.div>
-               
-              <h3 className="text-4xl md:text-7xl font-black text-white tracking-ultra-tight uppercase mb-8 leading-[0.9]">
-                 Gostou da <br className="hidden md:block" /> <span className="text-gradient">Transformação?</span>
-               </h3>
-               
-               <p className="text-slate-300 text-lg md:text-2xl font-sans font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-                 O posicionamento de elite não é sobre ser visto, é sobre ser desejado pelo valor que você entrega.
-               </p>
-               
-               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                 <motion.a 
-                   href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   whileHover={{ 
-                     scale: 1.05,
-                     boxShadow: "0 0 30px rgba(0, 255, 209, 0.3)"
-                   }}
-                   whileTap={{ scale: 0.95 }}
-                   className="group relative inline-flex items-center gap-6 bg-brand-accent-light text-brand-bg px-12 md:px-18 py-6 md:py-8 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-2xl transition-all"
-                 >
-                   <span>Seja o próximo Case</span>
-                   <ArrowUpRight size={22} className="group-hover:rotate-45 transition-transform" />
-                 </motion.a>
-                 
-                 <span className="font-mono text-[9px] text-brand-secondary/60 uppercase tracking-widest">
-                   Consultoria Grátis inclusa
-                 </span>
-               </div>
-            </div>
-            
-            {/* Background elements - Animated and subtle */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/20 blur-[100px] rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-1000" />
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-black/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-1000" />
-            
-            {/* Decorative Grid Lines */}
-            <div className="absolute inset-0 opacity-5 pointer-events-none" 
-                 style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-          </motion.div>
+        </div>
+
       </div>
     </section>
   );

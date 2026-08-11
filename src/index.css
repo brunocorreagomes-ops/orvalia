@@ -15,19 +15,19 @@
 
 @layer components {
   .glass {
-    @apply bg-brand-text/[0.02] backdrop-blur-xl border border-brand-text/[0.05];
+    @apply bg-white/[0.02] backdrop-blur-md border border-white/[0.07];
   }
 
   .glass-premium {
-    @apply bg-white/[0.01] backdrop-blur-3xl border border-white/[0.08] shadow-[inset_0_0_40px_rgba(255,255,255,0.01)];
+    @apply bg-white/[0.02] border border-white/10;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-br from-brand-text via-brand-accent-light to-brand-accent-dark bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent;
   }
 
-  .glow-cyan {
-    box-shadow: 0 0 80px -20px rgba(121, 222, 200, 0.2);
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-white via-brand-red to-white bg-clip-text text-transparent;
   }
 
   .dna-grid {

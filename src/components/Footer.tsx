@@ -1,119 +1,85 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import { marketingPages } from "../data/marketingPages";
 
 export default function Footer() {
   return (
-    <footer className="py-20 md:py-40 bg-brand-bg relative overflow-hidden border-t border-white/[0.03]">
+    <footer className="py-20 md:py-28 bg-brand-bg relative overflow-hidden border-t border-white/10">
       <div className="container mx-auto px-6">
-        <div className="dna-grid mb-16 md:mb-24 gap-12 md:gap-8">
-          <div className="col-span-4 lg:col-span-4">
-            <Link to="/" className="text-2xl md:text-3xl font-black tracking-super-tight text-white inline-block mb-8 md:mb-12 uppercase">
-              ORVALIA
+        
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+          
+          {/* Col 1: Brand & Positioning */}
+          <div className="md:col-span-5 space-y-6">
+            <Link to="/" className="inline-block">
+              <span className="text-2xl md:text-3xl font-black tracking-tighter text-white uppercase block leading-none">
+                ORVALIA
+              </span>
+              <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-brand-red font-bold">
+                ESTRUTURA DE PERCEPÇÃO
+              </span>
             </Link>
-            <p className="text-brand-secondary/60 max-w-sm text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] leading-relaxed mb-4 lg:mb-0">
-               [ STUDIO DE DESIGN ESTRATÉGICO E ARQUITETURA DE SOFTWARES DE ALTA PERFORMANCE ]
+
+            <p className="text-sm text-brand-secondary leading-relaxed max-w-sm font-sans">
+              O estúdio que fecha a distância entre o valor real de uma empresa e o valor que ela consegue transmitir no digital.
             </p>
+
+            <div className="pt-2 font-mono text-[10px] uppercase tracking-widest text-brand-secondary">
+              Indaiatuba • Campinas • Região Metropolitana
+            </div>
           </div>
 
-          <div className="col-span-4 sm:col-span-2 lg:col-span-3">
-            <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-10">Diretório</h4>
-            <ul className="space-y-6">
-              {[
-                { name: "Projetos", href: "/#projetos" },
-                { name: "Metodologia", href: "/#processo" },
-                { name: "Serviços", href: "/#servicos" },
-                { name: "Como Começar", href: "/#pontos-partida" },
-                { name: "Blog", href: "/blog" },
-                { name: "Agência Indaiatuba", href: "/agencia-indaiatuba", isLink: true },
-                { name: "Falar no WhatsApp", href: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:", isExternal: true },
-              ].map(item => (
-                <li key={item.name}>
-                  {item.isLink ? (
-                    <Link to={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
-                      {item.name}
-                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  ) : item.isExternal ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-xs font-black uppercase tracking-widest text-brand-accent-light hover:text-white transition-colors flex items-center gap-2 group">
-                      {item.name}
-                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                  ) : (
-                    <a href={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors flex items-center gap-2 group">
-                      {item.name}
-                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                  )}
-                </li>
-              ))}
+          {/* Col 2: Navigation */}
+          <div className="md:col-span-3 space-y-4">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white font-bold block">
+              DIRETÓRIO
+            </span>
+            <ul className="space-y-3 font-sans text-xs">
+              <li><a href="/#gap-percepcao" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">O Gap de Percepção</a></li>
+              <li><a href="/#cases" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Cases de Transformação</a></li>
+              <li><a href="/#metodo" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Método em 4 Camadas</a></li>
+              <li><a href="/#formas-trabalhar" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Momentos de Atuação</a></li>
+              <li><a href="/#autoridade" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Direção Estratégica</a></li>
+              <li><Link to="/branding" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Presença Indaiatuba</Link></li>
+              <li><Link to="/blog" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Artigos & Diagnósticos</Link></li>
             </ul>
           </div>
 
-          <div className="col-span-4 sm:col-span-2 lg:col-span-3">
-             <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-8 md:mb-10">Soluções</h4>
-             <ul className="space-y-6">
-              {marketingPages.slice(0, 5).map(page => (
-                <li key={page.slug}>
-                  <Link to={`/solucoes/${page.slug}`} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors">
-                    {page.title.split(' em ')[0]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Col 3: Direct Action */}
+          <div className="md:col-span-4 space-y-6 p-6 bg-white/[0.02] border border-white/5">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-red font-bold block">
+              DIAGNÓSTICO DIRETO
+            </span>
+
+            <p className="text-xs text-brand-secondary leading-relaxed font-sans">
+              Conversa direta com Bruno Correa Gomes sobre marca, mensagem, site e próximo movimento do seu negócio.
+            </p>
+
+            <a 
+              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20meu%20diagnóstico%20de%20percepção."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-brand-red hover:bg-red-600 text-white font-black text-[10px] uppercase tracking-widest transition-colors w-full justify-center"
+            >
+              <span>Quero meu diagnóstico</span>
+              <ArrowUpRight size={14} />
+            </a>
           </div>
 
-          <div className="col-span-4 sm:col-span-2 lg:col-span-2">
-             <h4 className="font-mono text-[9px] uppercase tracking-[0.4em] text-brand-accent-light mb-8 md:mb-10">Governança</h4>
-             <ul className="space-y-6">
-              {[
-                { name: "Segurança", href: "/privacidade" },
-                { name: "Acordos", href: "/termos" },
-                { name: "Arquitetura", href: "/cookies" }
-              ].map(item => (
-                <li key={item.name}>
-                  <Link to={item.href} className="text-xs font-black uppercase tracking-widest text-brand-secondary hover:text-white transition-colors">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        </div>
+
+        {/* Bottom Legal & SEO Ribbon */}
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-[10px] font-mono uppercase tracking-widest">
+          <div>
+            © 2026 ORVALIA STUDIO — TODOS OS DIREITOS RESERVADOS.
+          </div>
+
+          <div className="flex gap-6">
+            <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
+            <Link to="/termos" className="hover:text-white transition-colors">Termos</Link>
+            <Link to="/cookies" className="hover:text-white transition-colors">Cookies</Link>
           </div>
         </div>
 
-         <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-               <span className="font-mono text-[8px] text-brand-secondary/80 uppercase tracking-[0.3em]">© 2026 ORVALIA STUDIO — DESIGN & ESTRATÉGIA</span>
-               <div className="hidden md:block w-[1px] h-4 bg-white/5" />
-               {/* [4 — FOOTER COM NAP] LOCAL SEO */}
-               <div className="flex flex-col gap-1 items-center md:items-start">
-                 <span className="font-mono text-[8px] text-brand-secondary/80 uppercase tracking-widest leading-relaxed">
-                   Indaiatuba, SP — Região Metropolitana de Campinas
-                 </span>
-                 <span className="font-mono text-[8px] text-brand-secondary/90 uppercase tracking-widest">
-                   Agência de Branding em Indaiatuba | Atendemos toda a RMC: Campinas, Jundiaí, Itu e região
-                 </span>
-               </div>
-            </div>
-            {/* NAP em texto puro para spiders */}
-            <div className="hidden">
-              <span>Orvalia Studio</span>
-              <span>Atendimento Digital Estratégico para Indaiatuba, Campinas e Região</span>
-              <span>Telefone: +55 11 97895-9567</span>
-              <span>E-mail: contato@orvalia.com.br</span>
-            </div>
-            <div className="flex gap-16">
-               <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[7px] text-brand-accent-light">ATENDIMENTO</span>
-                  <span className="text-[10px] text-white font-bold tracking-widest uppercase">Indaiatuba e Região</span>
-               </div>
-               <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[7px] text-brand-accent-light">DISPONIBILIDADE</span>
-                  <span className="text-[10px] text-white font-bold tracking-widest uppercase flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light animate-pulse" />Aberto para projetos</span>
-               </div>
-            </div>
-        </div>
       </div>
     </footer>
   );

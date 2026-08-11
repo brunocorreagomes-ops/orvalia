@@ -1,206 +1,102 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import WaterDropAnimation from "./WaterDropAnimation";
+import { motion } from "framer-motion";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import MagneticWrapper from "./MagneticWrapper";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-
-  const globeY = useTransform(scrollYProgress, [0, 1], [0, -15]);
-  const paletteY = useTransform(scrollYProgress, [0, 1], [0, -20]);
-  const codeY = useTransform(scrollYProgress, [0, 1], [0, -10]);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animação da Gota (Parallax)
-      gsap.to(".dewdrop-animation", {
-        yPercent: -15,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top+=50px center",
-          end: "bottom top",
-          scrub: 1.5,
-        }
-      });
-
-      // Animação sutil do Texto
-      gsap.to(".hero-content h1", {
-        yPercent: 15,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        }
-      });
-    }, heroRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={heroRef} className="hero-canvas relative min-h-[100svh] md:min-h-[70vh] flex flex-col items-center justify-center pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-brand-bg">
-      {/* Noise Overlay from DNA vibes */}
-      <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+    <section className="relative min-h-[92vh] flex flex-col justify-between pt-32 pb-16 overflow-hidden bg-brand-bg border-b border-white/5">
+      {/* Background Architectural Grid Lines */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
       
-      {/* Structural Atmosphere */}
-      <div className="absolute top-0 right-0 w-[80vw] h-[80vw] bg-brand-accent-light/5 blur-[150px] -mr-[40vw] -mt-[40vw] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-brand-accent-dark/5 blur-[150px] -ml-[30vw] -mb-[30vw] rounded-full pointer-events-none" />
+      {/* Structural Accent Marker */}
+      <div className="absolute top-0 right-1/4 w-[1px] h-full bg-white/[0.03] pointer-events-none hidden lg:block" />
+      <div className="absolute top-0 left-1/4 w-[1px] h-full bg-white/[0.03] pointer-events-none hidden lg:block" />
 
-      {/* Dewdrop Element (GSAP Parallax) */}
-      <div className="dewdrop-animation absolute top-1/4 right-[10%] w-32 h-32 md:w-64 md:h-64 opacity-20 pointer-events-none z-[1]">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-brand-accent-light blur-2xl">
-          <path d="M47.7,-57.2C59.9,-46.8,66.6,-28.9,69.5,-10.8C72.3,7.4,71.2,25.9,61.8,40.1C52.4,54.4,34.7,64.4,15.7,68.8C-3.4,73.1,-23.7,71.7,-41.7,62.8C-59.7,53.8,-75.3,37.3,-79.8,17.9C-84.3,-1.5,-77.7,-23.7,-64.7,-38.7C-51.6,-53.6,-32,-61.2,-14,-62.7C4,-64.2,23.3,-59.6,47.7,-57.2Z" transform="translate(100 100)" />
-        </svg>
-      </div>
-      <div className="dewdrop-animation absolute bottom-1/4 left-[5%] w-20 h-20 md:w-40 md:h-40 opacity-20 pointer-events-none z-[1]">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-brand-accent-dark blur-2xl">
-          <path d="M37.9,-54.2C51.1,-43.3,65.3,-34.5,72.6,-21.4C79.9,-8.3,80.3,9.1,72.6,23.1C64.8,37,49,47.4,33.5,56.8C18.1,66.2,3.1,74.7,-11.2,76.5C-25.5,78.3,-39.1,73.4,-49.2,63.1C-59.3,52.8,-65.9,37,-72.1,20.8C-78.3,4.6,-84.1,-12,-79.3,-25.9C-74.5,-39.8,-59,-51,-44.2,-61C-29.4,-71,-14.7,-79.8,-0.9,-78.6C12.9,-77.4,24.7,-65.1,37.9,-54.2Z" transform="translate(100 100)" />
-        </svg>
-      </div>
+      <div className="container mx-auto px-6 relative z-10 my-auto">
+        <div className="max-w-5xl mx-auto flex flex-col items-start text-left space-y-8 md:space-y-12">
+          
+          {/* Eyebrow */}
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3"
+          >
+            <div className="w-8 h-[2px] bg-brand-red" />
+            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.35em] text-white font-semibold">
+              ORVALIA / ESTRATÉGIA DE MARCA + EXPERIÊNCIA DIGITAL
+            </span>
+          </motion.div>
 
-            <div className="container mx-auto px-6 relative z-10 hero-content w-full">
-        <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto gap-6 md:gap-8">
-          {/* Top Detail Section */}
+          {/* Headline */}
+          <motion.div 
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="space-y-2 md:space-y-4"
+          >
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-black leading-[0.98] tracking-tighter uppercase text-white">
+              Seu negócio cresceu.
+            </h1>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-black leading-[0.98] tracking-tighter uppercase text-brand-secondary/90">
+              Sua presença digital <br className="hidden sm:inline" />
+              <span className="text-white relative inline-block">
+                ficou para trás.
+                <span className="absolute bottom-1 left-0 w-full h-[3px] bg-brand-red/80" />
+              </span>
+            </h1>
+          </motion.div>
+
+          {/* Body Text */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg sm:text-xl md:text-2xl text-brand-secondary font-sans font-normal leading-relaxed max-w-3xl"
+          >
+            Reposicionamos marca, mensagem e site para empresas que já entregam valor no mundo real — mas ainda não conseguem transmitir essa força com a mesma clareza no digital.
+          </motion.p>
+
+          {/* Actions */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center text-center w-full"
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 w-full pt-2"
           >
-            <WaterDropAnimation />
-            <div className="flex items-center justify-center gap-3">
-              <div className="w-12 h-[1px] bg-brand-accent-light/50" />
-              <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-brand-accent-light">Orvalia Studio • Agência Boutique</span>
-              <div className="w-12 h-[1px] bg-brand-accent-light/50" />
-            </div>
+            <MagneticWrapper>
+              <a 
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center justify-center gap-4 px-8 md:px-10 py-5 bg-brand-red hover:bg-red-600 text-white transition-all rounded-none font-sans text-xs md:text-sm font-black uppercase tracking-[0.2em] shadow-lg shadow-brand-red/20"
+              >
+                <span>Mapear meu gap de percepção</span>
+                <ArrowRight className="group-hover:translate-x-1.5 transition-transform" size={18} />
+              </a>
+            </MagneticWrapper>
+
+            <a 
+              href="#cases"
+              className="flex items-center justify-center gap-3 px-8 py-5 border border-white/20 text-white hover:border-white hover:bg-white/5 transition-all text-xs md:text-sm font-black uppercase tracking-[0.2em]"
+            >
+              <span>Ver transformações</span>
+              <ArrowDown size={16} className="text-brand-secondary group-hover:text-white" />
+            </a>
           </motion.div>
 
-          {/* Main Headline Section */}
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.15,
-                  delayChildren: 0.2,
-                },
-              },
-            }}
-            className="flex flex-col items-center text-center w-full"
-          >
-            <div className="relative w-full overflow-visible">
-              {/* [3 — H1 E HERO] SEO: H1 explícito e otimizado */}
-              <h1 className="text-[9vw] md:text-6xl lg:text-[5.5rem] font-sans font-black leading-[1.05] tracking-tight md:tracking-tighter text-white flex flex-col items-center uppercase max-w-5xl mx-auto">
-                <motion.span 
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
-                  }}
-                  className="block relative"
-                >
-                  Branding, sites e
-                </motion.span>
-                <motion.span 
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
-                  }}
-                  className="block text-gradient relative py-1 md:py-2"
-                >
-                  presença digital premium
-                </motion.span>
-                <motion.span 
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
-                  }}
-                  className="block text-white/90 text-[6.5vw] sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-normal italic font-serif mt-2 md:mt-4"
-                >
-                  para negócios de Indaiatuba e região
-                </motion.span>
-              </h1>
-              
-              {/* Proposta de valor clara */}
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-base md:text-xl text-brand-secondary leading-relaxed max-w-3xl mx-auto font-sans px-4 mt-4 md:mt-6"
-              >
-                Transformamos empresas locais em marcas mais desejadas, confiáveis e preparadas para vender melhor no digital — com estratégia, design, site e comunicação.
-              </motion.p>
-              
-              <p className="sr-only">Orvalia Studio: Branding Estratégico, Criação de Sites e Performance Digital em Indaiatuba, Campinas, Itu, Sorocaba e RMC.</p>
-            </div>
-          </motion.div>
+        </div>
+      </div>
 
-          {/* Bottom Action Section */}
-          <div className="w-full mt-2 md:mt-4">
-            <div className="flex flex-col items-center gap-6 w-full relative">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-col items-center justify-center w-full"
-              >
-                <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-4">
-                  <MagneticWrapper>
-                    <motion.a 
-                      href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20landing%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ 
-                        scale: 1.05,
-                        boxShadow: "0 0 40px rgba(0, 255, 209, 0.4)"
-                      }}
-                      whileTap={{ scale: 0.98 }}
-                      className="group relative flex items-center gap-8 px-12 py-6 bg-brand-accent-light overflow-hidden rounded-full transition-all z-20"
-                    >
-                      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                      <span className="relative font-sans text-xs md:text-sm font-black uppercase tracking-[0.25em] text-brand-bg">Quero meu diagnóstico gratuito</span>
-                      <ArrowRight className="relative text-brand-bg group-hover:translate-x-2 transition-transform" size={20} />
-                    </motion.a>
-                  </MagneticWrapper>
-                  
-                  <motion.a 
-                    href="#projetos"
-                    whileHover={{ 
-                      scale: 1.05,
-                      boxShadow: "0 0 25px rgba(255, 255, 255, 0.05)",
-                      backgroundColor: "rgba(0, 255, 209, 0.05)",
-                      borderColor: "rgba(0, 255, 209, 0.3)"
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center gap-4 px-10 py-6 border border-white/10 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-all duration-500"
-                  >
-                    Ver resultados reais
-                  </motion.a>
-                </div>
-
-                {/* Microcopy below CTAs */}
-                <div className="text-center mt-2 mb-2">
-                  <p className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-brand-secondary/60">
-                    Atendimento direto <span className="text-brand-accent-light mx-2">•</span> Diagnóstico estratégico <span className="text-brand-accent-light mx-2">•</span> Projetos sob medida
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+      {/* Supporting Footer Ribbon */}
+      <div className="container mx-auto px-6 relative z-10 pt-12">
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-[11px] font-mono uppercase tracking-widest">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
+            <span className="text-white font-semibold">Indaiatuba + Região Metropolitana de Campinas</span>
+          </div>
+          <div>
+            <span>Estratégia • Branding • Sites • Presença Digital</span>
           </div>
         </div>
       </div>

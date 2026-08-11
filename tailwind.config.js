@@ -8,15 +8,18 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: "#0A1620", // Deep Teal / Orvalho
-          surface: "rgba(255, 255, 255, 0.03)",
-          text: "#E5F0F1", // Slightly cooler white to match teal
-          secondary: "#9EABB2", // Cooler muted text
+          bg: "#0D1117", // Grafite profundo mineral
+          surface: "#141820",
+          card: "#12161F",
+          text: "#E8EAEF", // Off-white mineral
+          secondary: "#8A92A0", // Neutro sofisticado
           whatsapp: "#25D366",
+          red: "#E5383B", // Vermelho de diagnóstico e correção
           accent: {
-            light: "#79DEC8", // Água de piscina ao amanhecer / Soft teal
-            dark: "#1A6B63", // Deep water
-            brown: "#6C5F51", // From DNA
+            red: "#E5383B", // Marcador de diagnóstico / gap
+            light: "#E8EAEF", // Off-white de alto contraste
+            dark: "#1A222D",
+            teal: "#79DEC8",
           },
         },
       },

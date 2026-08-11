@@ -1,25 +1,28 @@
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
+import GapPercepcao from "../components/GapPercepcao";
 import Projects from "../components/Projects";
-import Authority from "../components/Authority";
-import FounderSection from "../components/FounderSection";
-import Process from "../components/Process";
-import Services from "../components/Services";
-import Pricing from "../components/Pricing";
-import TrustSection from "../components/TrustSection";
-import ForWho from "../components/ForWho";
-import FAQ from "../components/FAQ";
+import Metodo from "../components/Metodo";
+import FormasTrabalhar from "../components/FormasTrabalhar";
+import BrunoSection from "../components/BrunoSection";
+import PosicionamentoLocal from "../components/PosicionamentoLocal";
 import CTA from "../components/CTA";
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://orvalia.com.br/#organization",
       "name": "Orvalia Studio",
       "url": "https://orvalia.com.br/",
-      "logo": "https://orvalia.com.br/logo.png"
+      "logo": "https://orvalia.com.br/logo.png",
+      "description": "Estúdio de estratégia de marca, criação de sites e posicionamento digital em Indaiatuba.",
+      "founder": {
+        "@type": "Person",
+        "name": "Bruno Correa Gomes",
+        "jobTitle": "Diretor Estratégico"
+      }
     },
     {
       "@type": "LocalBusiness",
@@ -42,21 +45,33 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Orvalia Studio | Branding, Sites e Presença Digital em Indaiatuba" 
-        description="Agência de branding em Indaiatuba especializada em identidade visual, sites premium, SEO local e comunicação estratégica para negócios que querem elevar sua presença digital."
+        title="Orvalia Studio — Branding e Sites Estratégicos em Indaiatuba" 
+        description="Estratégia de marca, criação de sites, posicionamento e SEO local para empresas de Indaiatuba e região que precisam elevar sua presença digital."
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />
+      {/* 1. HERO */}
       <Hero />
+
+      {/* 2. O GAP DE PERCEPÇÃO */}
+      <GapPercepcao />
+
+      {/* 3. CASES / TRANSFORMAÇÕES */}
       <Projects />
-      <Authority />
-      <FounderSection />
-      <TrustSection />
-      <ForWho />
-      <Process />
-      <Services />
-      <Pricing />
-      <FAQ />
+
+      {/* 4. MÉTODO */}
+      <Metodo />
+
+      {/* 5. FORMAS DE TRABALHAR */}
+      <FormasTrabalhar />
+
+      {/* 6. BRUNO / VISÃO ESTRATÉGICA E COMERCIAL */}
+      <BrunoSection />
+
+      {/* 7. PRESENÇA REGIONAL / INDAIATUBA */}
+      <PosicionamentoLocal />
+
+      {/* 8. CTA FINAL */}
       <CTA />
     </>
   );
