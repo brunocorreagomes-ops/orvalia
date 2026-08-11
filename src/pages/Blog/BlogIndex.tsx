@@ -71,8 +71,8 @@ const articles = [
     id: "geo-generative-engine-optimization-buscas-ia",
     territoryId: "busca",
     territoryName: "04 / BUSCA & IA",
-    title: "O que é GEO (Generative Engine Optimization) e como preparar sua marca para buscas com IA",
-    excerpt: "Como os motores de inteligência artificial compreendem entidades e marcas, e o que sua empresa precisa fazer para ser recomendada.",
+    title: "Sua empresa é fácil de entender para Google e inteligência artificial?",
+    excerpt: "Como motores generativos analisam a autoridade da sua marca e o que é necessário fazer para ser citado nas respostas técnicas de IA.",
     date: "26 Mai 2026",
     readTime: "7 min",
     slug: "/blog/geo-generative-engine-optimization-buscas-ia"
@@ -81,8 +81,8 @@ const articles = [
     id: "geo-inteligencia-artificial-empresas-sorocaba",
     territoryId: "busca",
     territoryName: "04 / BUSCA & IA",
-    title: "Por que sua empresa regional ainda não é citada por IA? Guia prático de GEO",
-    excerpt: "Do SEO tradicional para a inteligência de entidade: como empresas do interior de SP ganham autoridade técnica em respostas generativas.",
+    title: "Por que sua empresa regional ainda não é citada por IAs em buscas locais",
+    excerpt: "Do SEO tradicional para a reputação de entidade: como empresas do interior de SP constroem presença em respostas generativas.",
     date: "14 Mai 2026",
     readTime: "6 min",
     slug: "/geo-inteligencia-artificial-empresas-sorocaba"
@@ -91,8 +91,8 @@ const articles = [
     id: "identidade-visual-precos",
     territoryId: "branding",
     territoryName: "02 / MARCA & POSICIONAMENTO",
-    title: "Quanto custa uma identidade visual em Indaiatuba em 2026 — e o que realmente muda o preço",
-    excerpt: "Entenda a diferença entre comprar apenas um logotipo e investir em um sistema de marca capaz de sustentar o crescimento comercial.",
+    title: "Quanto custa um projeto de marca e site em Indaiatuba — e o que realmente muda o valor",
+    excerpt: "A diferença entre comprar apenas um logotipo decorativo e investir em um sistema de comunicação capaz de acelerar a decisão comercial.",
     date: "21 Abr 2026",
     readTime: "5 min",
     slug: "/blog/identidade-visual-precos"
@@ -101,8 +101,8 @@ const articles = [
     id: "branding-indaiatuba",
     territoryId: "branding",
     territoryName: "02 / MARCA & POSICIONAMENTO",
-    title: "Branding em Indaiatuba: como construir uma marca forte com base em estratégia",
-    excerpt: "Os pilares fundamentais para empresas do interior paulista que desejam projetar autoridade local sem parecer genéricas.",
+    title: "Quando a empresa já cresceu, mas sua marca digital continua parecendo pequena",
+    excerpt: "Os pilares fundamentais para negócios consolidados do interior paulista que precisam alinhar sua presença digital à reputação real.",
     date: "22 Abr 2026",
     readTime: "6 min",
     slug: "/blog/branding-indaiatuba"
@@ -315,37 +315,50 @@ export default function BlogIndex() {
             </h3>
 
             <div className="space-y-4">
-              {filteredArticles.map((art) => (
-                <div 
-                  key={art.id}
-                  className="p-6 md:p-8 bg-white/[0.01] border border-white/5 hover:border-white/20 transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group"
-                >
-                  <div className="space-y-2 max-w-3xl">
-                    <div className="flex items-center gap-3">
+              {filteredArticles.map((art, idx) => (
+                <div key={art.id} className="space-y-4">
+                  {/* Subtle Editorial Divider Callout every 4th item in 'all' view */}
+                  {activeTerritory === "all" && idx === 3 && (
+                    <div className="p-6 my-6 border-l-2 border-brand-red bg-neutral-900/80 space-y-2">
                       <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold">
-                        {art.territoryName}
+                        [INSIGHT DE DIAGNÓSTICO]
                       </span>
-                      <span className="font-mono text-[10px] text-brand-secondary uppercase">
-                        {art.date}
-                      </span>
+                      <p className="text-sm md:text-base text-white font-serif italic">
+                        "O Gap de Percepção não se resolve com mais posts nas redes sociais. Resolve-se com clareza de posicionamento, mensagem consistente e um canal próprio que conduza o cliente à decisão."
+                      </p>
+                    </div>
+                  )}
+
+                  <div 
+                    className="p-6 md:p-8 bg-white/[0.01] border border-white/5 hover:border-white/20 transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group"
+                  >
+                    <div className="space-y-2 max-w-3xl">
+                      <div className="flex items-center gap-3">
+                        <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold">
+                          {art.territoryName}
+                        </span>
+                        <span className="font-mono text-[10px] text-brand-secondary uppercase">
+                          {art.date}
+                        </span>
+                      </div>
+
+                      <h4 className="text-lg md:text-xl font-sans font-black text-white uppercase tracking-tight group-hover:text-brand-red transition-colors">
+                        {art.title}
+                      </h4>
+
+                      <p className="text-xs md:text-sm text-brand-secondary font-sans line-clamp-2">
+                        {art.excerpt}
+                      </p>
                     </div>
 
-                    <h4 className="text-lg md:text-xl font-sans font-black text-white uppercase tracking-tight group-hover:text-brand-red transition-colors">
-                      {art.title}
-                    </h4>
-
-                    <p className="text-xs md:text-sm text-brand-secondary font-sans line-clamp-2">
-                      {art.excerpt}
-                    </p>
+                    <Link 
+                      to={art.slug}
+                      className="px-6 py-3 border border-white/10 group-hover:border-white text-white font-mono text-xs uppercase tracking-widest inline-flex items-center gap-2 shrink-0 transition-all"
+                    >
+                      <span>Ler Artigo</span>
+                      <ChevronRight size={14} />
+                    </Link>
                   </div>
-
-                  <Link 
-                    to={art.slug}
-                    className="px-6 py-3 border border-white/10 group-hover:border-white text-white font-mono text-xs uppercase tracking-widest inline-flex items-center gap-2 shrink-0 transition-all"
-                  >
-                    <span>Ler Artigo</span>
-                    <ChevronRight size={14} />
-                  </Link>
                 </div>
               ))}
             </div>

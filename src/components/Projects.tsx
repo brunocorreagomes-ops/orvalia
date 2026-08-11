@@ -2,60 +2,51 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const cases = [
+const primaryCases = [
   {
     cliente: "BETH OLMEDA",
     categoria: "Mentoria • Marca Pessoal & Estética Avançada",
     antes: "Posicionamento digital genérico que não refletia a bagagem técnica e a exclusividade do atendimento presencial.",
-    decisao: "Reconstrução da identidade visual, tom de voz editorial e desenvolvimento de landing page estratégica orientada à percepção de autoridade.",
-    depois: "Elevação da percepção de valor dos procedimentos e consolidação de uma presença de marca inconfundível em Indaiatuba.",
-    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
-    slug: "beth-olmeda"
+    decisao: "Reconstrução da identidade visual, tom de voz editorial e desenvolvimento de landing page estratégica.",
+    depois: "Reorganização da apresentação de serviços e alinhamento do ambiente digital à maturidade do atendimento presencial.",
+    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg"
   },
   {
     cliente: "RYNA HAYASHI",
     categoria: "Psicologia • Clínica de Alto Padrão",
     antes: "Falta de estrutura digital proprietária, dependendo exclusivamente de indicações e redes sociais informais.",
-    decisao: "Construção de ecossistema digital com arquitetura sensível, rápida e alinhada ao acolhimento e sofisticação da prática clínica.",
-    depois: "Fortalecimento da reputação da clínica com um canal direto que transmite segurança técnica antes da primeira consulta.",
-    image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp",
-    slug: "ryna-hayashi"
+    decisao: "Construção de ecossistema digital com arquitetura sensível, rápida e alinhada ao acolhimento da prática clínica.",
+    depois: "Estruturação de canal proprietário de acolhimento e agendamento direto com transmissão de segurança técnica.",
+    image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp"
   },
   {
     cliente: "DARIO ELETRICIDADE",
     categoria: "Serviços • Engenharia Elétrica & Instalações Industriais",
     antes: "Comunicação visual datada e baixa visibilidade orgânica frente aos concorrentes no segmento industrial regional.",
     decisao: "Reposicionamento digital com foco em clareza técnica, prova institucional e otimização para buscas locais em Indaiatuba e RMC.",
-    depois: "Apresentação objetiva e robusta da capacidade operacional, facilitando o diálogo com contratantes de grande porte.",
-    image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png",
-    slug: "dario-eletricidade"
-  },
+    depois: "Apresentação objetiva da capacidade operacional B2B e facilitação do contato com contratantes corporativos.",
+    image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
+  }
+];
+
+const secondaryCases = [
   {
     cliente: "QUINTA DE CARAÍVA",
-    categoria: "Turismo • Hotelaria & Experiências Exclusivas",
-    antes: "Processo de apresentação desconectado da atmosfera real da pousada, gerando dúvidas no visitante durante a navegação.",
-    decisao: "Direção de arte imersiva, narrativa fotográfica editorial e experiência de navegação rápida com direcionamento direto para reservas.",
-    depois: "Apresentação da hospedagem como destino de desejo, alinhando a experiência da tela ao nível do serviço prestado.",
-    image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp",
-    slug: "quinta-de-caraiva"
+    categoria: "Turismo • Hotelaria Exclusiva",
+    resumo: "Direção de arte imersiva e narrativa fotográfica editorial conectada ao canal direto de reservas.",
+    image: "https://i.ibb.co/8nLt62wX/Captura-de-tela-2026-04-22-141843.webp"
   },
   {
     cliente: "MARTA ANA CHICONATO",
-    categoria: "Estratégia • Terapia Integrativa & Marca Pessoal",
-    antes: "Atração de públicos sem alinhamento comercial e comunicação fragmentada em diferentes canais.",
-    decisao: "Organização da hierarquia da oferta, redesign da marca e estruturação de site focado em esclarecer o método antes do contato.",
-    depois: "Filtro natural do perfil de cliente e transmissão de serenidade e profissionalismo em toda a presença digital.",
-    image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
-    slug: "marta-chiconato"
+    categoria: "Estratégia • Terapia Integrativa",
+    resumo: "Organização da hierarquia de serviços e clareza metodológica antes do primeiro contato comercial.",
+    image: "https://i.ibb.co/2366nSC3/marta-identidade.webp"
   },
   {
     cliente: "KNJ TUR",
-    categoria: "Interface • Turismo Corporativo & Viagens",
-    antes: "Site institucional desatualizado que não acompanhava a evolução e solidez operacional do grupo.",
-    decisao: "Reestruturação do design de interface, arquitetura da informação limpa e destaque para os pilares de segurança e atendimento B2B.",
-    depois: "Presença digital alinhada ao porte do grupo corporativo, reforçando credibilidade junto a parceiros e clientes.",
-    image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png",
-    slug: "knj-tur"
+    categoria: "Interface • Turismo Corporativo",
+    resumo: "Reestruturação do design de interface B2B com destaque para segurança operacional e agilidade.",
+    image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png"
   }
 ];
 
@@ -83,15 +74,15 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Cases Editorial Grid */}
-        <div className="space-y-16 md:space-y-24">
-          {cases.map((item, idx) => (
+        {/* Primary Cases (3 Featured) */}
+        <div className="space-y-16 md:space-y-20">
+          {primaryCases.map((item, idx) => (
             <motion.div 
               key={item.cliente}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-stretch border-t border-white/10 pt-12 group"
             >
               {/* Image Column */}
@@ -118,10 +109,10 @@ export default function Projects() {
                   </h3>
 
                   {/* Problem / Decision / Result Grid */}
-                  <div className="space-y-4 text-xs md:text-sm">
+                  <div className="space-y-3 text-xs md:text-sm">
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
                       <span className="font-mono text-[10px] uppercase tracking-widest text-brand-secondary font-bold block">
-                        [ANTES] O Desafio de Percepção:
+                        [ANTES] O Desafio:
                       </span>
                       <p className="text-brand-secondary leading-relaxed font-sans">
                         {item.antes}
@@ -130,7 +121,7 @@ export default function Projects() {
 
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
                       <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold block">
-                        [DECISÃO] O que foi alterado:
+                        [DECISÃO] O que mudou:
                       </span>
                       <p className="text-white/90 leading-relaxed font-sans">
                         {item.decisao}
@@ -139,7 +130,7 @@ export default function Projects() {
 
                     <div className="p-4 bg-brand-red/10 border border-brand-red/30 space-y-1">
                       <span className="font-mono text-[10px] uppercase tracking-widest text-brand-red font-bold block">
-                        [DEPOIS] Transformação de Percepção:
+                        [DEPOIS] Resultado na percepção:
                       </span>
                       <p className="text-white leading-relaxed font-sans font-medium">
                         {item.depois}
@@ -148,7 +139,6 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* CTA */}
                 <div className="pt-2">
                   <Link 
                     to={`/portfolio`}
@@ -161,6 +151,52 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Secondary Compact Cases Grid */}
+        <div className="mt-16 pt-12 border-t border-white/10 space-y-6">
+          <div className="font-mono text-xs text-brand-secondary uppercase tracking-[0.3em] font-semibold">
+            OUTROS CASOS DE ALINHAMENTO DE PERCEPÇÃO
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {secondaryCases.map((sc) => (
+              <div 
+                key={sc.cliente}
+                className="p-6 bg-white/[0.01] border border-white/10 hover:border-white/30 transition-all flex flex-col justify-between space-y-4 group"
+              >
+                <div className="space-y-3">
+                  <div className="aspect-[16/9] overflow-hidden bg-neutral-900 border border-white/5">
+                    <img 
+                      src={sc.image} 
+                      alt={sc.cliente} 
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+                  <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest block">
+                    {sc.categoria}
+                  </span>
+                  <h4 className="text-lg font-sans font-black text-white uppercase tracking-tight">
+                    {sc.cliente}
+                  </h4>
+                  <p className="text-xs text-brand-secondary font-sans leading-relaxed">
+                    {sc.resumo}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-white/5">
+                  <Link 
+                    to="/portfolio"
+                    className="font-mono text-[10px] uppercase tracking-widest text-white font-bold group-hover:text-brand-red inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>Ver case</span>
+                    <ArrowUpRight size={12} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
