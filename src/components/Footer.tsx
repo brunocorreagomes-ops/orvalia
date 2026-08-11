@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Bottom Legal & SEO Ribbon */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-xs font-sans tracking-wide">
           <div>
-            © 2026 ORVALIA STUDIO — Todos os direitos reservados.
+            © 2026 ORVALIA STUDIO | Todos os direitos reservados.
           </div>
 
           <div className="flex gap-6">

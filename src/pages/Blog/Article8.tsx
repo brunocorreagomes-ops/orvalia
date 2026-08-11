@@ -56,9 +56,9 @@ export default function Article8() {
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Muitas empresas em Indaiatuba estão presentes no digital, mas poucas realmente crescem. Estar nas redes sociais não é o mesmo que ter uma estratégia de marca.</p>
           
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Segundo <strong>Philip Kotler</strong>, marketing é sobre gerar valor e comunicar esse valor com clareza. Quando isso não acontece, a presença digital se torna apenas operacional — e não estratégica.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Segundo <strong>Philip Kotler</strong>, marketing é sobre gerar valor e comunicar esse valor com clareza. Quando isso não acontece, a presença digital se torna apenas operacional, e não estratégica.</p>
 
-          <p><strong>Marty Neumeier</strong> explica que, quando uma marca não define sua percepção, o público define por conta própria — e geralmente isso resulta em algo genérico.</p>
+          <p><strong>Marty Neumeier</strong> explica que, quando uma marca não define sua percepção, o público define por conta própria, o que geralmente resulta em algo genérico.</p>
 
           <div className="p-8 md:p-12 bg-white/5 border border-gray-100 rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.02)] my-16">
             <h3 className="text-2xl font-black text-brand-text tracking-tighter mb-8 uppercase">Principais motivos que travam o crescimento:</h3>
@@ -94,7 +94,7 @@ export default function Article8() {
             </ul>
           </div>
 
-          <p>Empresas que crescem no digital seguem um padrão: posicionamento claro, identidade visual consistente e presença digital integrada. Esse conjunto cria percepção de valor — e percepção gera crescimento.</p>
+          <p>Empresas que crescem no digital seguem um padrão: posicionamento claro, identidade visual consistente e presença digital integrada. Esse conjunto cria percepção de valor, e percepção gera crescimento.</p>
 
           <p>Para destravar esse crescimento, veja nosso artigo sobre <Link to="/blog/branding-indaiatuba" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">como construir uma marca forte em Indaiatuba</Link>.</p>
         </div>

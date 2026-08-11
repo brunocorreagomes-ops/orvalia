@@ -35,7 +35,7 @@ export default function ArticleGapPercepcao() {
   return (
     <>
       <SEO 
-        title="Gap de percepção digital: por que empresas excelentes parecem comuns na internet — Orvalia Studio"
+        title="Gap de percepção digital: por que empresas excelentes parecem comuns na internet | Orvalia Studio"
         description="Entenda por que negócios maduros e competentes parecem genéricos no digital e como fechar essa distância com estratégia de marca, mensagem e site."
         canonical="https://orvalia.com.br/blog/gap-de-percepcao-digital-empresas-excelentes-comuns"
         schema={articleSchema}
@@ -181,7 +181,7 @@ export default function ArticleGapPercepcao() {
                 Conclusão: O valor real precisa de uma tradução à altura
               </h2>
               <p>
-                Se a sua empresa já venceu as etapas mais difíceis no mundo real — conquistou clientes, consolidou processos e construiu reputação —, a sua presença digital não pode ser o elo fraco da operação.
+                Se a sua empresa já venceu as etapas mais difíceis no mundo real, conquistou clientes, consolidou processos e construiu reputação, a sua presença digital não pode ser o elo fraco da operação.
               </p>
               <p>
                 Fechar o Gap de Percepção é o investimento mais rentável para marcas que querem parar de disputar atenção com amadores e passar a ser percebidas exatamente pelo valor que entregam.

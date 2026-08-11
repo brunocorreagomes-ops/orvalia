@@ -101,10 +101,10 @@ export default function Projects() {
               {/* Editorial Info Column */}
               <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold mb-2">
+                  <div className="font-sans text-xs text-brand-secondary uppercase tracking-wider font-semibold mb-2">
                     {item.categoria}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-sans font-extrabold text-white tracking-tight mb-6">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-sans font-extrabold text-white tracking-tight mb-6">
                     {item.cliente}
                   </h3>
 
@@ -112,7 +112,7 @@ export default function Projects() {
                   <div className="space-y-3 text-xs md:text-sm">
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
                       <span className="font-sans text-xs uppercase tracking-wider text-brand-secondary font-semibold block">
-                        Antes — O Desafio:
+                        Antes (O Desafio):
                       </span>
                       <p className="text-brand-secondary leading-relaxed font-sans">
                         {item.antes}
@@ -121,7 +121,7 @@ export default function Projects() {
 
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
                       <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold block">
-                        Decisão — O que mudou:
+                        Decisão (O que mudou):
                       </span>
                       <p className="text-white/90 leading-relaxed font-sans">
                         {item.decisao}
@@ -130,7 +130,7 @@ export default function Projects() {
 
                     <div className="p-4 bg-brand-red/10 border border-brand-red/30 space-y-1">
                       <span className="font-sans text-xs uppercase tracking-wider text-brand-red font-semibold block">
-                        Depois — Resultado na percepção:
+                        Depois (Resultado na percepção):
                       </span>
                       <p className="text-white leading-relaxed font-sans font-medium">
                         {item.depois}

@@ -78,7 +78,7 @@ export default function ArticleRebrandingB2B() {
 
           <h2 className="text-3xl font-black text-brand-text uppercase tracking-tight mt-16 mb-8 font-sans">Alinhando Identidade e Infraestrutura Digital</h2>
           <p>
-            Ao unificar um branding refinado — focado em sobriedade, precisão milimétrica e peso institucional — a uma plataforma digital rápida e segura, indústrias de Sorocaba, Itu e Salto estabelecem uma barreira competitiva intransponível para concorrentes que ainda operam sob a lógica analógica do passado.
+            Ao unificar um branding refinado, focado em sobriedade, precisão milimétrica e peso institucional, a uma plataforma digital rápida e segura, indústrias de Sorocaba, Itu e Salto estabelecem uma barreira competitiva intransponível para concorrentes que ainda operam sob a lógica analógica do passado.
           </p>
 
           <hr className="my-16 border-white/10" />

@@ -26,7 +26,7 @@ export default function Termos() {
           className="mb-16 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-4">Termos de Uso</h1>
-          <p className="text-brand-accent-light uppercase tracking-widest text-[10px] font-black">Orvalia Studio — Indaiatuba</p>
+          <p className="text-brand-accent-light uppercase tracking-widest text-[10px] font-black">Orvalia Studio | Indaiatuba</p>
         </motion.header>
 
         <section className="prose prose-invert prose-brand max-w-none space-y-8 leading-relaxed text-lg">

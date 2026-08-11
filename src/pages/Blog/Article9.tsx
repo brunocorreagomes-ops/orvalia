@@ -59,7 +59,7 @@ export default function Article9() {
           
           <p><strong>David Aaker</strong> destaca que marcas fortes criam associações positivas na mente do público. Para profissionais liberais, isso significa transmitir profissionalismo e segurança desde o primeiro contato.</p>
 
-          <p>No ambiente digital, o cliente avalia sua credibilidade em segundos. <strong>Seth Godin</strong> reforça que pessoas não escolhem apenas pelo serviço — escolhem pela confiança e identificação com a marca.</p>
+          <p>No ambiente digital, o cliente avalia sua credibilidade em segundos. <strong>Seth Godin</strong> reforça que pessoas não escolhem apenas pelo serviço, mas pela confiança e identificação com a marca.</p>
 
           <div className="p-8 md:p-12 bg-white/5 border border-gray-100 rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.02)] my-16">
             <h3 className="text-2xl font-black text-brand-text tracking-tighter mb-8 uppercase">Elementos essenciais para autoridade visual:</h3>
@@ -88,7 +88,7 @@ export default function Article9() {
             </ul>
           </div>
 
-          <p>Muitos profissionais em Indaiatuba ainda usam soluções genéricas, o que enfraquece sua percepção no mercado. <strong>Chris Do</strong> destaca que design não é estética — é comunicação de valor.</p>
+          <p>Muitos profissionais em Indaiatuba ainda usam soluções genéricas, o que enfraquece sua percepção no mercado. <strong>Chris Do</strong> destaca que design não é estética: é comunicação de valor.</p>
 
           <p>Se você busca atrair clientes de maior ticket e elevar sua percepção, veja nosso artigo sobre <Link to="/posicionamento-digital-advogados-indaiatuba" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">como se posicionar como premium</Link>.</p>
         </div>

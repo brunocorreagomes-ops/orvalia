@@ -54,11 +54,11 @@ export default function Article4() {
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Muitas empresas em Indaiatuba ainda confundem logo com branding — e esse é um dos principais fatores que limitam crescimento no digital.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Muitas empresas em Indaiatuba ainda confundem logo com branding, e esse é um dos principais fatores que limitam crescimento no digital.</p>
           
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">De forma direta: <strong>logo é um elemento visual. Branding é o sistema completo de percepção da marca.</strong></p>
 
-          <p>Segundo <strong>Marty Neumeier</strong>, marca é a percepção que o público constrói ao longo do tempo. Já o logo é apenas um dos pontos de contato dessa percepção. Essa visão também é reforçada por <strong>David Aaker</strong>, que descreve branding como um conjunto de ativos — incluindo nome, identidade, posicionamento e associações mentais.</p>
+          <p>Segundo <strong>Marty Neumeier</strong>, marca é a percepção que o público constrói ao longo do tempo. Já o logo é apenas um dos pontos de contato dessa percepção. Essa visão também é reforçada por <strong>David Aaker</strong>, que descreve branding como um conjunto de ativos, incluindo nome, identidade, posicionamento e associações mentais.</p>
 
           <p>Mas quando trazemos isso para o cenário atual, vemos uma evolução clara. Profissionais contemporâneos como <strong>Chris Do</strong> reforçam que o branding hoje não pode existir separado do digital. Para ele, o design precisa comunicar valor estratégico e não apenas estética.</p>
 

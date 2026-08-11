@@ -44,7 +44,7 @@ export default function ArticleIdentidadeVisualPremium() {
           className="prose prose-invert prose-lg max-w-none text-brand-secondary font-serif"
         >
           <p className="lead text-2xl text-brand-text font-light italic mb-12">
-            Para profissionais liberais que operam no mercado de alto padrão — sejam médicos especialistas, advogados corporativos ou arquitetos de interiores — a reputação técnica é o ativo mais valioso. No entanto, no ambiente contemporâneo, a excelência técnica de um profissional é frequentemente julgada antes do primeiro contato físico.
+            Para profissionais liberais que operam no mercado de alto padrão (médicos especialistas, advogados corporativos ou arquitetos de interiores), a reputação técnica é o ativo mais valioso. No entanto, no ambiente contemporâneo, a excelência técnica de um profissional é frequentemente julgada antes do primeiro contato físico.
           </p>
 
           <p>
@@ -58,7 +58,7 @@ export default function ArticleIdentidadeVisualPremium() {
 
           <h3 className="text-xl font-bold text-brand-text mt-12 mb-6 font-sans">O Minimalismo Como Filtro de Qualidade</h3>
           <p>
-            A sofisticação não reside no excesso de ornamentos, mas na precisão cirúrgica de cada elemento visual. Para clínicas médicas de elite e escritórios de advocacia de Jundiaí, o uso de paletas de cores institucionais refinadas — tons profundos equilibrados com contrastes sutis — e tipografias de alta legibilidade transmitem atributos psicológicos imediatos:
+            A sofisticação não reside no excesso de ornamentos, mas na precisão cirúrgica de cada elemento visual. Para clínicas médicas de elite e escritórios de advocacia de Jundiaí, o uso de paletas de cores institucionais refinadas, com tons profundos equilibrados por contrastes sutis, e tipografias de alta legibilidade transmitem atributos psicológicos imediatos:
           </p>
           <ul className="list-disc pl-6 mb-8">
             <li className="mb-4"><strong>Segurança Institucional:</strong> A solidez visual elimina a desconfiança inicial.</li>
@@ -68,7 +68,7 @@ export default function ArticleIdentidadeVisualPremium() {
 
           <h2 className="text-3xl font-black text-brand-text uppercase tracking-tight mt-16 mb-8 font-sans">O Site como Extensão do Consultório ou Escritório Físico</h2>
           <p>
-            O investimento em um ambiente físico impecável — com mobiliário assinado e atendimento personalizado em bairros nobres de Campinas ou Jundiaí — perde o sentido se a jornada digital do cliente começa em uma página lenta, poluída e confusa.
+            O investimento em um ambiente físico impecável, com mobiliário assinado e atendimento personalizado em bairros nobres de Campinas ou Jundiaí, perde o sentido se a jornada digital do cliente começa em uma página lenta, poluída e confusa.
           </p>
           <p>
             O site de um profissional liberal de alto padrão deve ser desenhado como uma extensão digital da experiência física de seu espaço de trabalho. Cada transição de página, a escolha das imagens autorais, a disposição clara das áreas de atuação e a simplicidade para agendar uma consulta privada devem emanar o mesmo cuidado e sofisticação de uma recepção de alto luxo.

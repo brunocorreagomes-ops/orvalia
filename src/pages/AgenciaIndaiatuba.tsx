@@ -168,7 +168,7 @@ export default function AgenciaIndaiatuba() {
                 <div className="border-t border-white/5 pt-6">
                   <h5 className="text-white font-bold text-lg mb-1">3. Reuniões sob Demanda</h5>
                   <p className="text-brand-secondary text-sm leading-relaxed">
-                    Nossas sessões e alinhamentos de entrega são realizados de forma 100% online ou presenciais combinados estrategicamente em Indaiatuba e região — sempre com agendamento prévio.
+                    Nossas sessões e alinhamentos de entrega são realizados de forma 100% online ou presenciais combinados estrategicamente em Indaiatuba e região, sempre com agendamento prévio.
                   </p>
                 </div>
               </div>

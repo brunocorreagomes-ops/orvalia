@@ -51,7 +51,7 @@ const articles = [
     id: "rebranding-digital-b2b-sorocaba-itu-salto",
     territoryId: "branding",
     territoryName: "02 / MARCA & POSICIONAMENTO",
-    title: "Quando uma marca industrial precisa de rebranding — e o que realmente deve mudar",
+    title: "Quando uma marca industrial precisa de rebranding: o que realmente deve mudar",
     excerpt: "Como indústrias e empresas B2B utilizam o reposicionamento para modernizar a presença e fechar grandes contratos corporativos.",
     date: "03 Jul 2026",
     readTime: "6 min",
@@ -91,7 +91,7 @@ const articles = [
     id: "identidade-visual-precos",
     territoryId: "branding",
     territoryName: "02 / MARCA & POSICIONAMENTO",
-    title: "Quanto custa um projeto de marca e site em Indaiatuba — e o que realmente muda o valor",
+    title: "Quanto custa um projeto de marca e site em Indaiatuba: o que realmente muda o valor",
     excerpt: "A diferença entre comprar apenas um logotipo decorativo e investir em um sistema de comunicação capaz de acelerar a decisão comercial.",
     date: "21 Abr 2026",
     readTime: "5 min",
@@ -174,8 +174,8 @@ export default function BlogIndex() {
   return (
     <>
       <SEO 
-        title="Orvalia / Perspectivas — Diagnósticos, Marca & Experiência Digital"
-        description="Ideias e análises estratégicas para empresas que já cresceram no mundo real — mas cuja presença digital ainda não acompanhou."
+        title="Orvalia / Perspectivas | Diagnósticos, Marca & Experiência Digital"
+        description="Ideias e análises estratégicas para empresas que já cresceram no mundo real, mas cuja presença digital ainda não acompanhou."
         canonical="https://orvalia.com.br/blog"
         schema={blogSchema}
       />
@@ -193,7 +193,7 @@ export default function BlogIndex() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
-              Ideias para empresas que já cresceram — <br />
+              Ideias para empresas que já cresceram, <br />
               <span className="text-brand-secondary">mas cuja presença digital ainda não acompanhou.</span>
             </h1>
 

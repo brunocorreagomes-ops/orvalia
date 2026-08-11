@@ -54,7 +54,7 @@ export default function Article7() {
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">O Instagram deixou de ser apenas uma rede social — hoje ele é um dos principais canais de construção de marca. Segundo <strong>Gary Vaynerchuk</strong>, marcas são construídas através de atenção e consistência.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">O Instagram deixou de ser apenas uma rede social: hoje ele é um dos principais canais de construção de marca. Segundo <strong>Gary Vaynerchuk</strong>, marcas são construídas através de atenção e consistência.</p>
           
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug"><strong>Philip Kotler</strong> já defendia que marketing é sobre criar valor e comunicar esse valor. O Instagram, hoje, é uma das principais ferramentas para isso. Especialistas atuais como na estratégia de <em>Jab Jab Jab Right Hook</em> do próprio Gary mostram que o conteúdo deve entregar valor antes de pedir algo.</p>
 

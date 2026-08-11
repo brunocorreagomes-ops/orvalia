@@ -26,9 +26,9 @@ export default function PosicionamentoLocal() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-black text-white leading-[1.05] tracking-tighter uppercase">
-                INDAIATUBA É NOSSA BASE. <br />
-                <span className="text-brand-secondary">NÃO NOSSO LIMITE.</span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
+                Indaiatuba é nossa base. <br />
+                <span className="text-brand-secondary">Não nosso limite.</span>
               </h2>
             </div>
 

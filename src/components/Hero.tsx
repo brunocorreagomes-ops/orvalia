@@ -35,10 +35,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="space-y-2 md:space-y-3"
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-white">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[92px] font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-white">
               Seu negócio cresceu.
             </h1>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-brand-secondary/90">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[92px] font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-[#B4BCCB]">
               Sua presença digital <br className="hidden sm:inline" />
               <span className="text-white relative inline-block">
                 ficou para trás.
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg sm:text-xl md:text-2xl text-brand-secondary font-sans font-normal leading-relaxed max-w-3xl"
           >
-            Reposicionamos marca, mensagem e site para empresas que já entregam valor no mundo real — mas ainda não conseguem transmitir essa força com a mesma clareza no digital.
+            Reposicionamos marca, mensagem e site para empresas que já entregam valor no mundo real, mas ainda não conseguem transmitir essa força com a mesma clareza no digital.
           </motion.p>
 
           {/* Actions */}

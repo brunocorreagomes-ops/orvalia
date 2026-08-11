@@ -54,7 +54,7 @@ export default function Article6() {
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Um site profissional não é apenas um cartão de visitas — é uma ferramenta estratégica de posicionamento e conversão. Segundo <strong>Steve Krug</strong>, autor de <em>Don’t Make Me Think</em>, um dos princípios mais importantes de usabilidade é a clareza. O usuário não deve precisar pensar para entender o que fazer.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Um site profissional não é apenas um cartão de visitas: é uma ferramenta estratégica de posicionamento e conversão. Segundo <strong>Steve Krug</strong>, autor de <em>Don’t Make Me Think</em>, um dos princípios mais importantes de usabilidade é a clareza. O usuário não deve precisar pensar para entender o que fazer.</p>
           
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Essa base clássica de UX continua válida, mas o cenário atual exige mais. Especialistas contemporâneos como <strong>Peep Laja</strong> reforçam que um site precisa ser orientado à conversão. Além disso, <strong>Neil Patel</strong> destaca que SEO e conteúdo são fundamentais para atrair tráfego qualificado.</p>
 

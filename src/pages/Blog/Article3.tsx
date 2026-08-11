@@ -54,9 +54,9 @@ export default function Article3() {
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Muitas empresas em Indaiatuba estão presentes no digital, mas poucas realmente se posicionam. E isso acontece por erros simples — mas extremamente prejudiciais.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Muitas empresas em Indaiatuba estão presentes no digital, mas poucas realmente se posicionam. E isso acontece por erros simples, porém extremamente prejudiciais.</p>
           
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">O primeiro erro é tratar branding como algo superficial. Segundo <strong>Marty Neumeier</strong>, quando não existe clareza de marca, o público cria sua própria interpretação — e isso raramente joga a seu favor.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">O primeiro erro é tratar branding como algo superficial. Segundo <strong>Marty Neumeier</strong>, quando não existe clareza de marca, o público cria sua própria interpretação, o que raramente joga a seu favor.</p>
 
           <div className="bg-red-500/5 border border-red-500/20 p-8 rounded-3xl my-8">
             <h3 className="text-brand-text font-bold mb-4">Entre os erros mais comuns estão:</h3>
@@ -78,7 +78,7 @@ export default function Article3() {
 
           <p>De acordo com <strong>Donald Miller</strong>, autor de <em>Building a StoryBrand</em>, marcas precisam ser claras para serem eficazes. Quando a comunicação é confusa, o cliente simplesmente ignora. O cérebro humano está programado para ignorar o que não entende rapidamente.</p>
 
-          <p>Outro erro crítico é focar apenas em estética. Como explica <strong>Simon Sinek</strong>, pessoas não compram o que você faz — compram o porquê você faz. Sem um propósito claro, sua marca não gera conexão real.</p>
+          <p>Outro erro crítico é focar apenas em estética. Como explica <strong>Simon Sinek</strong>, pessoas não compram o que você faz, compram o porquê você faz. Sem um propósito claro, sua marca não gera conexão real.</p>
 
           <p>Em cidades como Indaiatuba, corrigir esses problemas já coloca você à frente de grande parte da concorrência. Se você sente que sua empresa está travada nesse amadorismo, veja nosso guia sobre <Link to="/blog/por-que-nao-cresce" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">por que empresas não crescem no digital</Link>.</p>
         </div>

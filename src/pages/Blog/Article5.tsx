@@ -54,7 +54,7 @@ export default function Article5() {
         </motion.div>
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Posicionamento premium não tem relação direta com preço — tem relação com percepção. Segundo <strong>Al Ries</strong>, o posicionamento acontece na mente do consumidor. Ou seja, não é o que você cobra que define se sua marca é premium — é como ela é percebida.</p>
+          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Posicionamento premium não tem relação direta com preço: tem relação com percepção. Segundo <strong>Al Ries</strong>, o posicionamento acontece na mente do consumidor. Ou seja, não é o que você cobra que define se sua marca é premium, é como ela é percebida.</p>
           
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">Essa visão também é reforçada por <strong>Philip Kotler</strong>, que destaca que marcas fortes ocupam espaços claros e diferenciados na mente do público.</p>
 
@@ -81,7 +81,7 @@ export default function Article5() {
                 <span className="font-mono text-brand-text font-black">3. //</span>
                 <div>
                   <strong className="text-brand-text block mb-1">Identidade visual consistente</strong>
-                  <span className="text-brand-secondary">Tudo parece alinhado — do site ao Instagram.</span>
+                  <span className="text-brand-secondary">Tudo parece alinhado, do site ao Instagram.</span>
                 </div>
               </li>
               <li className="flex gap-4">

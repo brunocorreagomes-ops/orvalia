@@ -54,7 +54,7 @@ export default function Article10() {
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
-            Construir uma marca forte no digital exige mais do que presença — exige estratégia. Empresas em Indaiatuba que entendem isso conseguem crescer de forma consistente e sustentável.
+            Construir uma marca forte no digital exige mais do que presença: exige estratégia. Empresas em Indaiatuba que entendem isso conseguem crescer de forma consistente e sustentável.
           </p>
           
           <p>Segundo <strong>Al Ries</strong>, marketing é uma batalha de percepções. E no digital, essa batalha acontece todos os dias em cada clique e scroll.</p>
@@ -97,7 +97,7 @@ export default function Article10() {
 
           <p>Muitas empresas falham por tentar crescer sem essa base estratégica. Isso gera inconsistência e baixa percepção de valor. Se você sente que sua marca está desalinhada, comece lendo sobre os <Link to="/blog/erros-marca-amadora" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">erros que fazem sua marca parecer amadora</Link>.</p>
 
-          <p>Conclusão: marcas fortes não acontecem por acaso — são construídas com estratégia, paciência e consistência visual.</p>
+          <p>Conclusão: marcas fortes não acontecem por acaso. São construídas com estratégia, paciência e consistência visual.</p>
         </div>
 
         <footer className="mt-32">

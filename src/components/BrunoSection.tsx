@@ -19,20 +19,20 @@ export default function BrunoSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
                 <p className="text-white font-black uppercase text-sm tracking-wider">Bruno Correa Gomes</p>
-                <p className="text-brand-red font-mono text-[10px] uppercase tracking-widest font-bold">Direção Estratégica — Orvalia Studio</p>
+                <p className="text-brand-accent-light font-mono text-[10px] uppercase tracking-widest font-bold">Direção Estratégica | Orvalia Studio</p>
               </div>
             </div>
             
             {/* Architectural accent border */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r border-b border-brand-red pointer-events-none hidden sm:block" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r border-b border-brand-accent-light/40 pointer-events-none hidden sm:block" />
           </div>
 
           {/* Text Column */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-brand-red" />
-                <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-red font-semibold">
+                <span className="w-2 h-2 bg-brand-accent-light" />
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent-light font-semibold">
                   LIDERANÇA ESTRATÉGICA
                 </span>
               </div>
@@ -44,7 +44,7 @@ export default function BrunoSection() {
             </div>
 
             <div className="space-y-6 text-base md:text-lg text-brand-secondary font-sans leading-relaxed">
-              <p className="text-white font-medium text-lg md:text-xl font-sans border-l-2 border-brand-red pl-4 py-1">
+              <p className="text-white font-medium text-lg md:text-xl font-sans border-l-2 border-brand-accent-light pl-4 py-1">
                 "A Orvalia não nasceu para fazer telas bonitas. Nosso ponto de partida é entender como sua empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa."
               </p>
 
@@ -57,7 +57,7 @@ export default function BrunoSection() {
               </p>
 
               <p>
-                Essa bagagem orienta a forma como cada projeto é analisado e construído — garantindo que marca e site trabalhem como instrumentos comerciais estratégicos para acelerar a decisão do cliente.
+                Essa bagagem orienta a forma como cada projeto é analisado e construído, garantindo que marca e site trabalhem como instrumentos comerciais estratégicos para acelerar a decisão do cliente.
               </p>
             </div>
 

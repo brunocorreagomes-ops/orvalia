@@ -62,7 +62,7 @@ export default function Article2() {
 
           <p>O problema é que muitas empresas optam pelo mais barato, sem entender o impacto disso. Uma identidade visual mal construída pode transmitir amadorismo, gerar desconfiança e afastar clientes.</p>
 
-          <p>Segundo <strong>Seth Godin</strong>, autor de <em>This is Marketing</em>, as pessoas não compram produtos — elas compram histórias, percepções e conexões. E a identidade visual é uma das principais formas de comunicar isso.</p>
+          <p>Segundo <strong>Seth Godin</strong>, autor de <em>This is Marketing</em>, as pessoas não compram produtos: elas compram histórias, percepções e conexões. E a identidade visual é uma das principais formas de comunicar isso.</p>
 
           <div className="p-8 md:p-12 bg-white/5 border border-gray-100 rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.02)] my-16">
             <h3 className="text-2xl font-black text-brand-text tracking-tighter mb-8 uppercase">Quando você investe de forma estratégica, sua marca passa a:</h3>

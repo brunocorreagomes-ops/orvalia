@@ -28,7 +28,7 @@ export default function TrustSection() {
     <section className="py-24 bg-brand-bg relative overflow-hidden">
       <div className="container mx-auto px-6">
         
-        {/* [5 — CONTEÚDO PARA GEO] Por que a Orvalia */}
+        {/* [5 | CONTEÚDO PARA GEO] Por que a Orvalia */}
         <div className="mb-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">
     <div>

@@ -58,9 +58,9 @@ export default function Article1() {
             Criar uma marca forte vai muito além de desenvolver um logotipo. Em cidades em crescimento como Indaiatuba, empresas que entendem branding como estratégia conseguem se posicionar melhor, atrair clientes de maior valor e crescer com consistência no digital.
           </p>
           
-          <p>Segundo <strong>Philip Kotler</strong>, considerado um dos maiores nomes do marketing moderno, uma marca não é apenas um nome ou símbolo, mas um conjunto de percepções construídas na mente do consumidor. Isso significa que branding está diretamente ligado à forma como sua empresa é percebida — e não apenas à sua estética.</p>
+          <p>Segundo <strong>Philip Kotler</strong>, considerado um dos maiores nomes do marketing moderno, uma marca não é apenas um nome ou símbolo, mas um conjunto de percepções construídas na mente do consumidor. Isso significa que branding está diretamente ligado à forma como sua empresa é percebida, e não apenas à sua estética.</p>
 
-          <p>Já <strong>Marty Neumeier</strong>, autor do livro <em>The Brand Gap</em>, define marca como “a percepção intuitiva de uma pessoa sobre um produto, serviço ou organização”. Ou seja, sua marca não é o que você diz que ela é — é o que o público entende.</p>
+          <p>Já <strong>Marty Neumeier</strong>, autor do livro <em>The Brand Gap</em>, define marca como “a percepção intuitive de uma pessoa sobre um produto, serviço ou organização”. Ou seja, sua marca não é o que você diz que ela é; é o que o público entende.</p>
 
           <p>Na prática, empresas em Indaiatuba que investem apenas em um logo bonito, sem estratégia, acabam competindo por preço. Isso acontece porque não existe diferenciação clara. Sem posicionamento, você vira mais uma opção no mercado.</p>
 
@@ -91,11 +91,11 @@ export default function Article1() {
             </ul>
           </div>
 
-          <p>Outro ponto importante é a percepção de valor. Como explica <strong>Al Ries</strong>, especialista em posicionamento, “o marketing não é uma batalha de produtos, é uma batalha de percepções”. Isso significa que, muitas vezes, a marca mais forte vence — não necessariamente a melhor tecnicamente.</p>
+          <p>Outro ponto importante é a percepção de valor. Como explica <strong>Al Ries</strong>, especialista em posicionamento, “o marketing não é uma batalha de produtos, é uma batalha de percepções”. Isso significa que, muitas vezes, a marca mais forte vence, não necessariamente a melhor tecnicamente.</p>
 
           <p>Em um mercado local como Indaiatuba, isso é ainda mais evidente. Empresas que investem em branding estratégico conseguem se destacar rapidamente porque a concorrência ainda é, em grande parte, focada apenas no operacional.</p>
 
-          <p>Se você quer construir uma marca forte no digital, o caminho não é começar pelo design — é começar pela estratégia.</p>
+          <p>Se você quer construir uma marca forte no digital, o caminho não é começar pelo design, mas pela estratégia.</p>
           
           <p className="border-t border-white/5 pt-8 italic">
             Para entender melhor como isso se aplica a sistemas completos, veja nosso artigo sobre a <Link to="/blog/logo-vs-branding" className="text-white font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">diferença entre logo e branding</Link> e também nosso <Link to="/blog/guia-marca-forte" className="text-white font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">guia completo de construção de marca</Link>.

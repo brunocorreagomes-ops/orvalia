@@ -158,7 +158,7 @@ export default function ArticleGEO() {
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
-            Sorocaba consolidou-se como um dos maiores polos tecnológicos e industriais do Brasil. No entanto, muitas empresas locais — das gigantes do Parque Tecnológico às consultorias especializadas — enfrentam um novo "apagão digital": elas são invisíveis para a Inteligência Artificial. Se o Gemini ou o ChatGPT não citam sua marca como referência, sua presença digital está obsoleta.
+            Sorocaba consolidou-se como um dos maiores polos tecnológicos e industriais do Brasil. No entanto, muitas empresas locais, das gigantes do Parque Tecnológico às consultorias especializadas, enfrentam um novo "apagão digital": elas são invisíveis para a Inteligência Artificial. Se o Gemini ou o ChatGPT não citam sua marca como referência, sua presença digital está obsoleta.
           </p>
 
           <section>

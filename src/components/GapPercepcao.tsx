@@ -42,7 +42,7 @@ export default function GapPercepcao() {
           </h2>
 
           <p className="text-lg md:text-2xl text-brand-secondary font-sans leading-relaxed max-w-3xl">
-            Uma empresa pode ter excelente atendimento, conhecimento técnico, reputação e clientes satisfeitos — e ainda parecer comum quando alguém abre seu site. É aí que o valor se perde antes da primeira conversa.
+            Uma empresa pode ter excelente atendimento, conhecimento técnico, reputação e clientes satisfeitos, e ainda parecer comum quando alguém abre seu site. É aí que o valor se perde antes da primeira conversa.
           </p>
         </div>
 

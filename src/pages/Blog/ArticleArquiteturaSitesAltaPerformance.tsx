@@ -44,7 +44,7 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
           className="prose prose-invert prose-lg max-w-none text-brand-secondary font-serif"
         >
           <p className="lead text-2xl text-brand-text font-light italic mb-12">
-            No cenário empresarial altamente competitivo de Campinas, Indaiatuba e de toda a Região Metropolitana (RMC), a presença digital de uma empresa não pode mais depender de uma estrutura estática. O conceito tradicional de site institucional — aquele que atua apenas como um catálogo digital passivo — tornou-se obsoleto.
+            No cenário empresarial altamente competitivo de Campinas, Indaiatuba e de toda a Região Metropolitana (RMC), a presença digital de uma empresa não pode mais depender de uma estrutura estática. O conceito tradicional de site institucional, aquele que atua apenas como um catálogo digital passivo, tornou-se obsoleto.
           </p>
 
           <p>
@@ -56,7 +56,7 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
             Um site desenvolvido sob a ótica do posicionamento premium equilibra duas forças essenciais: a experiência visual humana (<strong>UX/UI</strong>) e a clareza semântica para os algoritmos (<strong>SEO e GEO</strong>).
           </p>
           <p>
-            Quando a Orvalia Studio projeta uma plataforma digital, a sofisticação visual — caracterizada pelo uso inteligente do espaço negativo, tipografia refinada e transições fluidas — serve para reter e converter o usuário de alto valor. Paralelamente, o código subjacente é construído como um mapa de conhecimento puro.
+            Quando a Orvalia Studio projeta uma plataforma digital, a sofisticação visual, caracterizada pelo uso inteligente do espaço negativo, tipografia refinada e transições fluidas, serve para reter e converter o usuário de alto valor. Paralelamente, o código subjacente é construído como um mapa de conhecimento puro.
           </p>
 
           <h3 className="text-xl font-bold text-brand-text mt-12 mb-6 font-sans">Por que a Velocidade e a Limpeza do Código Ditam seu Faturamento?</h3>
@@ -91,7 +91,7 @@ export default function ArticleArquiteturaSitesAltaPerformance() {
 
           <h2 className="text-3xl font-black text-brand-text uppercase tracking-tight mt-16 mb-8 font-sans">O Impacto do Posicionamento Premium na Conversão</h2>
           <p>
-            Atrair o tráfego correto é apenas metade da equação. Um site de alta performance converte visitantes em leads qualificados porque respeita o comportamento do consumidor moderno. O design minimalista elimina as distrações, conduzindo o olhar do usuário diretamente para os pontos de conversão estratégicos — seja um agendamento exclusivo ou um contato direto de consultoria.
+            Atrair o tráfego correto é apenas metade da equação. Um site de alta performance converte visitantes em leads qualificados porque respeita o comportamento do consumidor moderno. O design minimalista elimina as distrações, conduzindo o olhar do usuário diretamente para os pontos de conversão estratégicos: um agendamento exclusivo ou um contato direto de consultoria.
           </p>
 
           <hr className="my-16 border-white/10" />

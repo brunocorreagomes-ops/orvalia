@@ -27,10 +27,10 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]"
           >
-            SE SUA EMPRESA JÁ ENTREGA MAIS DO QUE O DIGITAL CONSEGUE MOSTRAR, <br className="hidden sm:inline" />
-            <span className="text-brand-red">ENCONTRAMOS A DIFERENÇA.</span>
+            Se sua empresa já entrega mais do que o digital consegue mostrar, <br className="hidden sm:inline" />
+            <span className="text-brand-red">encontramos a diferença.</span>
           </motion.h2>
 
           <motion.p 
