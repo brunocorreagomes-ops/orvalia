@@ -57,9 +57,9 @@ export default function FormasTrabalhar() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase">
-            NÃO VENDEMOS UMA LISTA <br />
-            <span className="text-brand-secondary">DE ENTREGÁVEIS.</span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
+            Não vendemos uma lista <br />
+            <span className="text-brand-secondary">de entregáveis.</span>
           </h2>
 
           <p className="text-lg md:text-xl text-brand-secondary font-sans leading-relaxed max-w-2xl">
@@ -67,8 +67,8 @@ export default function FormasTrabalhar() {
           </p>
         </div>
 
-        {/* 3 Momentos Editorial Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* 3 Momentos Editorial Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-b border-white/10">
           {momentos.map((m, idx) => (
             <motion.div
               key={m.momento}
@@ -76,43 +76,43 @@ export default function FormasTrabalhar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="p-8 md:p-10 border border-white/10 bg-white/[0.01] flex flex-col justify-between space-y-8 relative group hover:border-brand-red/50 transition-colors"
+              className="p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-white/10 last:border-r-0 last:border-b-0 flex flex-col justify-between space-y-8 group hover:bg-white/[0.01] transition-colors"
             >
               <div className="space-y-6">
-                <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                  <span className="font-mono text-xs text-brand-red font-bold tracking-widest">
-                    [SITUAÇÃO {m.num}]
+                <div className="flex justify-between items-center pb-2">
+                  <span className="font-sans text-xs text-brand-red font-bold tracking-wider">
+                    [0{idx + 1}]
                   </span>
-                  <span className="font-mono text-[10px] text-brand-secondary uppercase tracking-widest">
-                    DIAGNÓSTICO //
+                  <span className="font-sans text-xs text-brand-secondary uppercase tracking-widest">
+                    Situação {m.num}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-sans font-black text-white tracking-tight uppercase mb-3">
+                  <h3 className="text-2xl md:text-3xl font-sans font-extrabold text-white tracking-tight mb-2">
                     {m.momento}
                   </h3>
-                  <p className="text-sm font-sans text-white/90 font-medium leading-snug">
+                  <p className="text-sm font-sans text-white/90 font-medium leading-relaxed">
                     {m.quando}
                   </p>
                 </div>
 
-                <div className="p-4 bg-neutral-900 border border-white/5">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-brand-secondary block mb-1">
+                <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
+                  <span className="font-sans text-xs font-semibold text-brand-secondary block">
                     Objetivo Principal:
                   </span>
-                  <p className="text-xs text-brand-secondary font-sans leading-relaxed">
+                  <p className="text-xs text-brand-secondary/90 font-sans leading-relaxed">
                     {m.foco}
                   </p>
                 </div>
 
                 <div className="space-y-3 pt-2">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-white font-semibold block">
+                  <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold block">
                     Escopo Estrutural:
                   </span>
                   <ul className="space-y-2">
                     {m.entregaveis.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs text-brand-secondary font-sans">
+                      <li key={i} className="flex items-start gap-2.5 text-xs text-brand-secondary font-sans">
                         <span className="w-1.5 h-1.5 bg-brand-red mt-1 shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -126,7 +126,7 @@ export default function FormasTrabalhar() {
                   href={`https://wa.me/5511978959567?text=Olá,%20Bruno.%20Minha%20empresa%20está%20no%20momento%20de%20${m.momento}.%20Gostaria%20de%20conversar.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white font-bold group-hover:text-brand-red transition-colors"
+                  className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-wider text-white font-bold group-hover:text-brand-red transition-colors"
                 >
                   <span>Identificar meu momento</span>
                   <ArrowUpRight size={16} />

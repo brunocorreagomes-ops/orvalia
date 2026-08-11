@@ -65,11 +65,11 @@ export default function ArticleGapPercepcao() {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-black text-white leading-[1.05] tracking-tighter uppercase">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
               Gap de percepção digital: por que empresas excelentes parecem comuns na internet
             </h1>
 
-            <p className="text-lg md:text-2xl text-brand-secondary font-sans leading-relaxed border-l-2 border-brand-red pl-6 py-1 italic font-serif">
+            <p className="text-lg md:text-2xl text-white/90 font-sans leading-relaxed border-l-2 border-brand-red pl-6 py-1 font-medium">
               A distância entre a competência real do seu negócio no mundo físico e o valor que o seu cliente consegue perceber no primeiro clique.
             </p>
 
@@ -96,7 +96,7 @@ export default function ArticleGapPercepcao() {
           <div className="space-y-12 text-brand-secondary text-base md:text-lg leading-relaxed font-sans font-normal">
             
             <section className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tight">
                 1. O sintoma invisível dos negócios maduros
               </h2>
               <p>
@@ -114,13 +114,13 @@ export default function ArticleGapPercepcao() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tight">
                 2. Os 3 sinais mais comuns de que sua empresa tem um Gap de Percepção
               </h2>
               
               <div className="space-y-6 pt-2">
                 <div className="p-6 bg-white/[0.02] border border-white/5 space-y-2">
-                  <h3 className="text-lg font-black text-white uppercase tracking-tight">
+                  <h3 className="text-lg font-bold text-white tracking-tight">
                     Sinal 01: O cliente compara seu preço com o da concorrência amadora
                   </h3>
                   <p className="text-sm text-brand-secondary">
@@ -129,7 +129,7 @@ export default function ArticleGapPercepcao() {
                 </div>
 
                 <div className="p-6 bg-white/[0.02] border border-white/5 space-y-2">
-                  <h3 className="text-lg font-black text-white uppercase tracking-tight">
+                  <h3 className="text-lg font-bold text-white tracking-tight">
                     Sinal 02: O site é um folheto institucional, não um filtro comercial
                   </h3>
                   <p className="text-sm text-brand-secondary">
@@ -138,7 +138,7 @@ export default function ArticleGapPercepcao() {
                 </div>
 
                 <div className="p-6 bg-white/[0.02] border border-white/5 space-y-2">
-                  <h3 className="text-lg font-black text-white uppercase tracking-tight">
+                  <h3 className="text-lg font-bold text-white tracking-tight">
                     Sinal 03: A liderança sente vergonha de passar o link do próprio site
                   </h3>
                   <p className="text-sm text-brand-secondary">
@@ -149,7 +149,7 @@ export default function ArticleGapPercepcao() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tight">
                 3. Como fechar o Gap: O Framework de 4 Camadas da Orvalia
               </h2>
               <p>
@@ -158,26 +158,26 @@ export default function ArticleGapPercepcao() {
 
               <ul className="space-y-4 pt-2">
                 <li className="p-4 border-l-2 border-brand-red bg-white/[0.01]">
-                  <strong className="text-white block font-sans font-bold uppercase text-sm mb-1">01 / MERCADO:</strong>
+                  <strong className="text-white block font-sans font-bold text-sm mb-1">01 / MERCADO:</strong>
                   Compreender exatamente contra quem o seu cliente compara você e qual padrão estético saturado da sua categoria precisa ser rompido.
                 </li>
                 <li className="p-4 border-l-2 border-brand-red bg-white/[0.01]">
-                  <strong className="text-white block font-sans font-bold uppercase text-sm mb-1">02 / MENSAGEM:</strong>
+                  <strong className="text-white block font-sans font-bold text-sm mb-1">02 / MENSAGEM:</strong>
                   Articular em poucas palavras a razão inquestionável pela qual a sua empresa é a escolha mais segura para o cliente.
                 </li>
                 <li className="p-4 border-l-2 border-brand-red bg-white/[0.01]">
-                  <strong className="text-white block font-sans font-bold uppercase text-sm mb-1">03 / EXPERIÊNCIA:</strong>
+                  <strong className="text-white block font-sans font-bold text-sm mb-1">03 / EXPERIÊNCIA:</strong>
                   Desenvolver uma interface rápida, elegante e com hierarquia tipográfica rigorosa, na qual cada detalhe visual projeta maturidade.
                 </li>
                 <li className="p-4 border-l-2 border-brand-red bg-white/[0.01]">
-                  <strong className="text-white block font-sans font-bold uppercase text-sm mb-1">04 / AQUISIÇÃO:</strong>
+                  <strong className="text-white block font-sans font-bold text-sm mb-1">04 / AQUISIÇÃO:</strong>
                   Otimizar a estrutura técnica para buscas locais e motores de IA (GEO/SEO), encurtando o caminho entre a intenção do cliente e a conversa direta.
                 </li>
               </ul>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tight">
                 Conclusão: O valor real precisa de uma tradução à altura
               </h2>
               <p>

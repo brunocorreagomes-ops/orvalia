@@ -36,9 +36,9 @@ export default function GapPercepcao() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase">
-            NÃO FALTA QUALIDADE. <br />
-            <span className="text-brand-secondary">FALTA TRADUÇÃO.</span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
+            Não falta qualidade. <br />
+            <span className="text-brand-secondary">Falta tradução.</span>
           </h2>
 
           <p className="text-lg md:text-2xl text-brand-secondary font-sans leading-relaxed max-w-3xl">
@@ -102,7 +102,7 @@ export default function GapPercepcao() {
                 <span className="w-1.5 h-1.5 bg-white/20 group-hover:bg-brand-red transition-colors" />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-sans font-black text-white leading-snug uppercase">
+              <h3 className="text-xl md:text-2xl font-sans font-bold text-white leading-snug">
                 {item.title}
               </h3>
 
@@ -119,7 +119,7 @@ export default function GapPercepcao() {
             <span className="font-mono text-xs uppercase tracking-widest text-brand-red font-bold">
               SOLUÇÃO ESTRATÉGICA
             </span>
-            <h4 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
+            <h4 className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tight">
               A Orvalia trabalha exatamente nessa distância.
             </h4>
           </div>

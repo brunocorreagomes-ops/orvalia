@@ -131,7 +131,7 @@ const articles = [
     id: "site-profissional-conversao",
     territoryId: "sites",
     territoryName: "03 / SITES & DECISÃO",
-    title: "Criação de site profissional: da usabilidade à conversão de clientes",
+    title: "O que transforma navegação em decisão dentro de um site",
     excerpt: "Como transformar o site da empresa em uma jornada fluida de decisão, combinando velocidade, prova técnica e clareza.",
     date: "17 Abr 2026",
     readTime: "5 min",
@@ -192,7 +192,7 @@ export default function BlogIndex() {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-black text-white leading-[0.98] tracking-tighter uppercase">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
               Ideias para empresas que já cresceram — <br />
               <span className="text-brand-secondary">mas cuja presença digital ainda não acompanhou.</span>
             </h1>
@@ -220,7 +220,7 @@ export default function BlogIndex() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-4xl md:text-5xl font-sans font-black text-white uppercase tracking-tight leading-snug group-hover:text-brand-red transition-colors">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-sans font-bold text-white tracking-tight leading-snug group-hover:text-brand-red transition-colors">
                   {pillarArticle.title}
                 </h2>
 
@@ -285,7 +285,7 @@ export default function BlogIndex() {
                     <span className="font-mono text-xs text-brand-red uppercase tracking-widest font-bold block">
                       {art.territoryName}
                     </span>
-                    <h3 className="text-xl md:text-2xl font-sans font-black text-white uppercase tracking-tight group-hover:text-brand-red transition-colors">
+                    <h3 className="text-xl md:text-2xl font-sans font-bold text-white tracking-tight group-hover:text-brand-red transition-colors">
                       {art.title}
                     </h3>
                     <p className="text-sm text-brand-secondary font-sans leading-relaxed">
@@ -323,9 +323,33 @@ export default function BlogIndex() {
                       <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold">
                         [INSIGHT DE DIAGNÓSTICO]
                       </span>
-                      <p className="text-sm md:text-base text-white font-serif italic">
+                      <p className="text-sm md:text-base text-white font-sans font-medium">
                         "O Gap de Percepção não se resolve com mais posts nas redes sociais. Resolve-se com clareza de posicionamento, mensagem consistente e um canal próprio que conduza o cliente à decisão."
                       </p>
+                    </div>
+                  )}
+
+                  {/* Second Editorial Break at 60%-70% mark */}
+                  {activeTerritory === "all" && idx === 7 && (
+                    <div className="p-8 my-8 border-l-2 border-brand-red bg-white/[0.02] border border-white/5 space-y-3">
+                      <span className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold block">
+                        [INTERVALO EDITORIAL]
+                      </span>
+                      <h4 className="text-xl md:text-2xl font-sans font-bold text-white">
+                        Quando o problema não é falta de tráfego?
+                      </h4>
+                      <p className="text-sm md:text-base text-brand-secondary font-sans leading-relaxed max-w-3xl">
+                        Se as pessoas chegam, mas continuam entendendo sua empresa como apenas mais uma alternativa, aumentar aquisição pode apenas ampliar um problema de percepção.
+                      </p>
+                      <a 
+                        href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20entender%20o%20diagnóstico%20de%20percepção%20da%20minha%20empresa."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-wider text-white font-bold hover:text-brand-red transition-colors pt-1"
+                      >
+                        <span>Entender o diagnóstico</span>
+                        <ArrowUpRight size={14} />
+                      </a>
                     </div>
                   )}
 
@@ -334,15 +358,15 @@ export default function BlogIndex() {
                   >
                     <div className="space-y-2 max-w-3xl">
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold">
+                        <span className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold">
                           {art.territoryName}
                         </span>
-                        <span className="font-mono text-[10px] text-brand-secondary uppercase">
+                        <span className="font-sans text-xs text-brand-secondary uppercase">
                           {art.date}
                         </span>
                       </div>
 
-                      <h4 className="text-lg md:text-xl font-sans font-black text-white uppercase tracking-tight group-hover:text-brand-red transition-colors">
+                      <h4 className="text-lg md:text-xl font-sans font-bold text-white tracking-tight group-hover:text-brand-red transition-colors">
                         {art.title}
                       </h4>
 
@@ -353,7 +377,7 @@ export default function BlogIndex() {
 
                     <Link 
                       to={art.slug}
-                      className="px-6 py-3 border border-white/10 group-hover:border-white text-white font-mono text-xs uppercase tracking-widest inline-flex items-center gap-2 shrink-0 transition-all"
+                      className="px-6 py-3 border border-white/10 group-hover:border-white text-white font-sans text-xs uppercase tracking-wider inline-flex items-center gap-2 shrink-0 transition-all"
                     >
                       <span>Ler Artigo</span>
                       <ChevronRight size={14} />

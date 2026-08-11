@@ -66,14 +66,14 @@ export default function Navbar() {
                 {link.isLink ? (
                   <Link 
                     to={link.href}
-                    className={`text-xs font-bold uppercase tracking-widest transition-colors ${pathname === link.href ? 'text-brand-red' : 'text-brand-secondary hover:text-white'}`}
+                    className={`text-xs font-semibold tracking-wider transition-colors ${pathname === link.href ? 'text-brand-red' : 'text-brand-secondary hover:text-white'}`}
                   >
                     {link.name}
                   </Link>
                 ) : (
                   <a 
                     href={link.href}
-                    className="text-xs font-bold uppercase tracking-widest text-brand-secondary hover:text-white transition-colors"
+                    className="text-xs font-semibold tracking-wider text-brand-secondary hover:text-white transition-colors"
                   >
                     {link.name}
                   </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
             href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-brand-red hover:bg-red-600 text-white font-black text-[10px] uppercase tracking-[0.2em] transition-colors"
+            className="px-5 py-2.5 bg-brand-red hover:bg-red-600 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0"
           >
             Mapear meu gap
           </a>

@@ -30,23 +30,23 @@ export default function Footer() {
 
           {/* Col 2: Navigation */}
           <div className="md:col-span-3 space-y-4">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white font-bold block">
+            <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold block">
               DIRETÓRIO
             </span>
-            <ul className="space-y-3 font-sans text-xs">
-              <li><a href="/#gap-percepcao" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">O Gap de Percepção</a></li>
-              <li><a href="/#cases" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Cases de Transformação</a></li>
-              <li><a href="/#metodo" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Método em 4 Camadas</a></li>
-              <li><a href="/#formas-trabalhar" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Momentos de Atuação</a></li>
-              <li><a href="/#autoridade" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Direção Estratégica</a></li>
-              <li><Link to="/branding" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Presença Indaiatuba</Link></li>
-              <li><Link to="/blog" className="text-brand-secondary hover:text-white uppercase tracking-wider transition-colors">Artigos & Diagnósticos</Link></li>
+            <ul className="space-y-2.5 font-sans text-xs">
+              <li><a href="/#gap-percepcao" className="text-brand-secondary hover:text-white transition-colors">O Gap de Percepção</a></li>
+              <li><a href="/#cases" className="text-brand-secondary hover:text-white transition-colors">Cases de Transformação</a></li>
+              <li><a href="/#metodo" className="text-brand-secondary hover:text-white transition-colors">Método em 4 Camadas</a></li>
+              <li><a href="/#formas-trabalhar" className="text-brand-secondary hover:text-white transition-colors">Momentos de Atuação</a></li>
+              <li><a href="/#autoridade" className="text-brand-secondary hover:text-white transition-colors">Direção Estratégica</a></li>
+              <li><Link to="/branding" className="text-brand-secondary hover:text-white transition-colors">Presença Indaiatuba</Link></li>
+              <li><Link to="/blog" className="text-brand-secondary hover:text-white transition-colors">Artigos & Diagnósticos</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Direct Action */}
           <div className="md:col-span-4 space-y-6 p-6 bg-white/[0.02] border border-white/5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-red font-bold block">
+            <span className="font-sans text-xs uppercase tracking-wider text-brand-red font-semibold block">
               DIAGNÓSTICO DIRETO
             </span>
 
@@ -58,19 +58,19 @@ export default function Footer() {
               href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20meu%20diagnóstico%20de%20percepção."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-brand-red hover:bg-red-600 text-white font-black text-[10px] uppercase tracking-widest transition-colors w-full justify-center"
+              className="inline-flex items-center gap-2 px-5 py-3.5 bg-brand-red hover:bg-red-600 text-white font-bold text-xs uppercase tracking-wider transition-colors w-full justify-center"
             >
               <span>Quero meu diagnóstico</span>
-              <ArrowUpRight size={14} />
+              <ArrowUpRight size={16} />
             </a>
           </div>
 
         </div>
 
         {/* Bottom Legal & SEO Ribbon */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-[10px] font-mono uppercase tracking-widest">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-xs font-sans tracking-wide">
           <div>
-            © 2026 ORVALIA STUDIO — TODOS OS DIREITOS RESERVADOS.
+            © 2026 ORVALIA STUDIO — Todos os direitos reservados.
           </div>
 
           <div className="flex gap-6">

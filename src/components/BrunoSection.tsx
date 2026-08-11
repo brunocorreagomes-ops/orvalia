@@ -37,15 +37,15 @@ export default function BrunoSection() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-black text-white leading-[1.05] tracking-tighter uppercase">
-                ESTRATÉGIA COMERCIAL <br />
-                <span className="text-brand-secondary">ANTES DO LAYOUT.</span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
+                Estratégia comercial <br />
+                <span className="text-brand-secondary">antes do layout.</span>
               </h2>
             </div>
 
             <div className="space-y-6 text-base md:text-lg text-brand-secondary font-sans leading-relaxed">
-              <p className="text-white font-medium text-lg md:text-xl font-serif italic border-l-2 border-brand-red pl-4 py-1">
-                "A Orvalia não nasceu da ideia de fazer telas bonitas. Nosso ponto de partida é entender como uma empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa."
+              <p className="text-white font-medium text-lg md:text-xl font-sans border-l-2 border-brand-red pl-4 py-1">
+                "A Orvalia não nasceu para fazer telas bonitas. Nosso ponto de partida é entender como sua empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa."
               </p>
 
               <p>
@@ -62,7 +62,7 @@ export default function BrunoSection() {
             </div>
 
             {/* Qualifications Ribbon */}
-            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 font-mono text-[10px] uppercase tracking-wider text-brand-secondary">
+            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 font-sans text-xs tracking-wide text-brand-secondary">
               <div className="p-3 bg-white/[0.02] border border-white/5">
                 <span className="text-white font-bold block mb-1">18+ ANOS</span>
                 <span>Experiência Comercial</span>

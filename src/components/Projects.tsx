@@ -64,9 +64,9 @@ export default function Projects() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase">
-            TRABALHOS QUE MUDARAM <br />
-            <span className="text-brand-secondary">O PAPEL DO DIGITAL.</span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
+            Trabalhos que mudaram <br />
+            <span className="text-brand-secondary">o papel do digital.</span>
           </h2>
 
           <p className="text-base md:text-xl text-brand-secondary font-sans leading-relaxed max-w-2xl">
@@ -101,18 +101,18 @@ export default function Projects() {
               {/* Editorial Info Column */}
               <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="font-mono text-xs text-brand-red uppercase tracking-widest font-semibold mb-2">
+                  <div className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold mb-2">
                     {item.categoria}
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-sans font-black text-white uppercase tracking-tight mb-6">
+                  <h3 className="text-2xl md:text-3xl font-sans font-extrabold text-white tracking-tight mb-6">
                     {item.cliente}
                   </h3>
 
                   {/* Problem / Decision / Result Grid */}
                   <div className="space-y-3 text-xs md:text-sm">
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-brand-secondary font-bold block">
-                        [ANTES] O Desafio:
+                      <span className="font-sans text-xs uppercase tracking-wider text-brand-secondary font-semibold block">
+                        Antes — O Desafio:
                       </span>
                       <p className="text-brand-secondary leading-relaxed font-sans">
                         {item.antes}
@@ -120,8 +120,8 @@ export default function Projects() {
                     </div>
 
                     <div className="p-4 bg-white/[0.02] border border-white/5 space-y-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold block">
-                        [DECISÃO] O que mudou:
+                      <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold block">
+                        Decisão — O que mudou:
                       </span>
                       <p className="text-white/90 leading-relaxed font-sans">
                         {item.decisao}
@@ -129,8 +129,8 @@ export default function Projects() {
                     </div>
 
                     <div className="p-4 bg-brand-red/10 border border-brand-red/30 space-y-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-brand-red font-bold block">
-                        [DEPOIS] Resultado na percepção:
+                      <span className="font-sans text-xs uppercase tracking-wider text-brand-red font-semibold block">
+                        Depois — Resultado na percepção:
                       </span>
                       <p className="text-white leading-relaxed font-sans font-medium">
                         {item.depois}
@@ -142,7 +142,7 @@ export default function Projects() {
                 <div className="pt-2">
                   <Link 
                     to={`/portfolio`}
-                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white font-bold group-hover:text-brand-red transition-colors"
+                    className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-wider text-white font-bold group-hover:text-brand-red transition-colors"
                   >
                     <span>Ver transformações detalhadas</span>
                     <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

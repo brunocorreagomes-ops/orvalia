@@ -33,12 +33,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="space-y-2 md:space-y-4"
+            className="space-y-2 md:space-y-3"
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-black leading-[0.98] tracking-tighter uppercase text-white">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-white">
               Seu negócio cresceu.
             </h1>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-black leading-[0.98] tracking-tighter uppercase text-brand-secondary/90">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-extrabold leading-[1.02] tracking-[-0.03em] text-brand-secondary/90">
               Sua presença digital <br className="hidden sm:inline" />
               <span className="text-white relative inline-block">
                 ficou para trás.
@@ -90,13 +90,13 @@ export default function Hero() {
 
       {/* Supporting Footer Ribbon */}
       <div className="container mx-auto px-6 relative z-10 pt-12">
-        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-[11px] font-mono uppercase tracking-widest">
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-secondary text-xs font-sans tracking-wide">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-            <span className="text-white font-semibold">Indaiatuba + Região Metropolitana de Campinas</span>
+            <span className="text-white font-medium">Indaiatuba + Região Metropolitana de Campinas</span>
           </div>
           <div>
-            <span>Estratégia • Branding • Sites • Presença Digital</span>
+            <span className="text-brand-secondary/80">Estratégia • Branding • Sites • Presença Digital</span>
           </div>
         </div>
       </div>
