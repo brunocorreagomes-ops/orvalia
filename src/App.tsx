@@ -34,6 +34,7 @@ import ArticleRebrandingB2B from "./pages/Blog/ArticleRebrandingB2B";
 import ArticleGEO from "./pages/Blog/ArticleGEO";
 import ArticleNewGEO from "./pages/Blog/ArticleNewGEO";
 import ArticleEstetica from "./pages/Blog/ArticleEstetica";
+import ArticleGapPercepcao from "./pages/Blog/ArticleGapPercepcao";
 import PresencaDigital from "./pages/PresencaDigital";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
@@ -137,6 +138,7 @@ export default function App() {
           <Route path="/plano-profissional" element={<Profissional />} />
           <Route path="/plano-evolucao" element={<Evolucao />} />
           <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/gap-de-percepcao-digital-empresas-excelentes-comuns" element={<ArticleGapPercepcao />} />
           <Route path="/blog/branding-indaiatuba" element={<Article1 />} />
           <Route path="/blog/identidade-visual-precos" element={<Article2 />} />
           <Route path="/blog/erros-marca-amadora" element={<Article3 />} />

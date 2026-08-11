@@ -57,7 +57,7 @@ export default function BrunoSection() {
               </p>
 
               <p>
-                Essa bagagem garante que o seu site e sua marca não sejam tratados como meros artigos de decoração, mas como instrumentos estratégicos para aumentar a autoridade e acelerar a decisão do cliente.
+                Essa bagagem orienta a forma como cada projeto é analisado e construído — garantindo que marca e site trabalhem como instrumentos comerciais estratégicos para acelerar a decisão do cliente.
               </p>
             </div>
 
