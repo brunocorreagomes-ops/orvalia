@@ -136,3 +136,56 @@ html{scroll-padding-top:0!important}
   .visual-section,.operation-section,.price-section{padding-top:46px}
   .close-section{padding:56px 0}
 }
+
+
+/* V12 — Perspectiva Orvalia + títulos mais contidos */
+.section:not(.hero) h2{font-size:clamp(34px,3.65vw,52px);line-height:1.01;letter-spacing:-.045em}
+.price-copy h2{font-size:clamp(36px,3.65vw,50px);line-height:1.02}
+.brand-panel h3{font-size:36px}
+.story-copy h3{font-size:29px}
+
+.orvalia-audio{--audio-accent:var(--red);position:relative;width:min(760px,100%);margin:0 0 46px 110px;padding:18px 0 16px;border-top:1px solid var(--audio-line);border-bottom:1px solid var(--audio-line);color:var(--audio-ink)}
+.audio-light{--audio-ink:#17191e;--audio-muted:#7b7770;--audio-line:rgba(16,18,23,.16);--audio-track:rgba(16,18,23,.13)}
+.audio-dark{--audio-ink:#fff;--audio-muted:rgba(255,255,255,.48);--audio-line:rgba(255,255,255,.16);--audio-track:rgba(255,255,255,.14)}
+.audio-kicker{display:flex;align-items:center;gap:8px;color:var(--audio-muted);font-size:8px;line-height:1;font-weight:800;letter-spacing:.17em;text-transform:uppercase;margin-bottom:14px}
+.audio-kicker .audio-total{margin-left:auto;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.audio-live{height:11px;display:inline-flex;align-items:flex-end;gap:2px;width:13px}
+.audio-live i{width:2px;height:4px;background:var(--audio-accent);display:block;opacity:.65;transform-origin:bottom}
+.orvalia-audio.is-playing .audio-live i:nth-child(1){animation:orvaliaBars .74s ease-in-out infinite alternate}
+.orvalia-audio.is-playing .audio-live i:nth-child(2){animation:orvaliaBars .52s ease-in-out .12s infinite alternate}
+.orvalia-audio.is-playing .audio-live i:nth-child(3){animation:orvaliaBars .68s ease-in-out .22s infinite alternate}
+.audio-row{display:grid;grid-template-columns:46px 1fr;gap:15px;align-items:center}
+.audio-play{width:44px;height:44px;border-radius:50%;border:1px solid var(--audio-line);color:var(--audio-ink);background:transparent;cursor:pointer;display:grid;place-items:center;transition:.2s ease}
+.audio-play:hover{border-color:var(--audio-accent);color:var(--audio-accent);transform:translateY(-1px)}
+.audio-play-icon{font-size:12px;margin-left:2px}
+.orvalia-audio.is-playing .audio-play-icon{font-size:0;margin-left:0}
+.orvalia-audio.is-playing .audio-play-icon:before{content:"";display:block;width:10px;height:13px;border-left:3px solid currentColor;border-right:3px solid currentColor}
+.audio-body strong{display:block;font-size:13px;line-height:1.35;letter-spacing:-.015em;margin-bottom:9px}
+.audio-progress-wrap{display:grid;grid-template-columns:1fr auto;gap:11px;align-items:center}
+.audio-seek{appearance:none;-webkit-appearance:none;width:100%;height:16px;margin:0;background:transparent;cursor:pointer}
+.audio-seek::-webkit-slider-runnable-track{height:2px;background:linear-gradient(to right,var(--audio-accent) 0 var(--audio-progress,0%),var(--audio-track) var(--audio-progress,0%) 100%)}
+.audio-seek::-moz-range-track{height:2px;background:var(--audio-track)}
+.audio-seek::-moz-range-progress{height:2px;background:var(--audio-accent)}
+.audio-seek::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:7px;height:7px;border-radius:50%;background:var(--audio-accent);margin-top:-2.5px}
+.audio-seek::-moz-range-thumb{width:7px;height:7px;border-radius:50%;border:0;background:var(--audio-accent)}
+.audio-elapsed{color:var(--audio-muted);font-size:9px;font-variant-numeric:tabular-nums;min-width:31px;text-align:right}
+.audio-transcript-toggle{padding:0;margin-top:8px;border:0;background:none;color:var(--audio-muted);font-size:9px;font-weight:700;letter-spacing:.04em;cursor:pointer}
+.audio-transcript-toggle:hover{color:var(--audio-accent)}
+.audio-transcript{margin:16px 0 2px 61px;padding:15px 18px 2px;border-left:1px solid var(--audio-accent);color:var(--audio-muted);max-width:650px}
+.audio-transcript p{font-size:12px;line-height:1.62;margin:0 0 12px}
+.price-copy .orvalia-audio{margin:26px 0 4px;width:100%}
+@keyframes orvaliaBars{from{transform:scaleY(.65);opacity:.45}to{transform:scaleY(2.1);opacity:1}}
+@media(max-width:820px){
+  .section:not(.hero) h2{font-size:clamp(34px,7.5vw,46px)}
+  .price-copy h2{font-size:clamp(34px,7.5vw,44px)}
+  .brand-panel h3{font-size:32px}.story-copy h3{font-size:27px}
+  .orvalia-audio{margin:0 0 38px 0;width:100%}
+}
+@media(max-width:560px){
+  .section:not(.hero) h2{font-size:32px;line-height:1.04}.price-copy h2{font-size:34px}
+  .brand-panel h3{font-size:29px}.story-copy h3{font-size:25px}
+  .orvalia-audio{padding:15px 0 14px;margin-bottom:32px}
+  .audio-row{grid-template-columns:42px 1fr;gap:12px}.audio-play{width:40px;height:40px}
+  .audio-body strong{font-size:12px}.audio-transcript{margin-left:0;padding-left:14px}
+}
+@media(prefers-reduced-motion:reduce){.orvalia-audio.is-playing .audio-live i{animation:none!important}}

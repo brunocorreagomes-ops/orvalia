@@ -21,3 +21,6 @@ Atualizações V11:
 - assets de Stories otimizados em JPG para carregamento mobile;
 - PDF web otimizado;
 - CTA de aceite via WhatsApp corporativo.
+
+
+V12 — 5 players Perspectiva Orvalia + transcrições + títulos de seção reduzidos.

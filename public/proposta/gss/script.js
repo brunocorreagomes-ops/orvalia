@@ -75,3 +75,73 @@ const sectionObserver = new IntersectionObserver((entries) => {
   navLinks.forEach((link) => link.classList.toggle('active', link.dataset.section === key));
 }, { rootMargin: '-18% 0px -62% 0px', threshold: [0.01, 0.15, 0.35] });
 observedSections.forEach((section) => sectionObserver.observe(section));
+
+
+/* Perspectiva Orvalia — custom audio players */
+const orvaliaPlayers = [...document.querySelectorAll('[data-orvalia-player]')];
+const formatAudioTime = (seconds) => {
+  if (!Number.isFinite(seconds) || seconds < 0) return '00:00';
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+};
+const stopOtherPlayers = (current) => {
+  orvaliaPlayers.forEach((player) => {
+    if (player === current) return;
+    const otherAudio = player.querySelector('audio');
+    if (otherAudio && !otherAudio.paused) otherAudio.pause();
+  });
+};
+orvaliaPlayers.forEach((player) => {
+  const audio = player.querySelector('audio');
+  const play = player.querySelector('.audio-play');
+  const seek = player.querySelector('.audio-seek');
+  const elapsed = player.querySelector('.audio-elapsed');
+  const total = player.querySelector('.audio-total');
+  const transcriptToggle = player.querySelector('.audio-transcript-toggle');
+  const transcript = player.querySelector('.audio-transcript');
+  if (!audio || !play || !seek) return;
+  const updateDuration = () => {
+    if (Number.isFinite(audio.duration)) total.textContent = formatAudioTime(audio.duration);
+  };
+  const updatePlayer = () => {
+    const ratio = audio.duration ? audio.currentTime / audio.duration : 0;
+    seek.value = String(Math.round(ratio * 1000));
+    seek.style.setProperty('--audio-progress', `${ratio * 100}%`);
+    elapsed.textContent = formatAudioTime(audio.currentTime);
+  };
+  play.addEventListener('click', async () => {
+    if (audio.paused) {
+      stopOtherPlayers(player);
+      try { await audio.play(); } catch (_) {}
+    } else audio.pause();
+  });
+  audio.addEventListener('play', () => {
+    player.classList.add('is-playing');
+    play.setAttribute('aria-label','Pausar áudio');
+  });
+  audio.addEventListener('pause', () => {
+    player.classList.remove('is-playing');
+    play.setAttribute('aria-label','Reproduzir áudio');
+  });
+  audio.addEventListener('ended', () => {
+    player.classList.remove('is-playing');
+    audio.currentTime = 0;
+    updatePlayer();
+  });
+  audio.addEventListener('loadedmetadata', updateDuration);
+  audio.addEventListener('durationchange', updateDuration);
+  audio.addEventListener('timeupdate', updatePlayer);
+  seek.addEventListener('input', () => {
+    if (!audio.duration) return;
+    audio.currentTime = (Number(seek.value) / 1000) * audio.duration;
+    updatePlayer();
+  });
+  transcriptToggle?.addEventListener('click', () => {
+    const open = transcriptToggle.getAttribute('aria-expanded') === 'true';
+    transcriptToggle.setAttribute('aria-expanded', String(!open));
+    transcriptToggle.textContent = open ? 'Ver transcrição' : 'Ocultar transcrição';
+    if (transcript) transcript.hidden = open;
+  });
+  updatePlayer();
+});
