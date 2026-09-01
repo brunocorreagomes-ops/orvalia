@@ -189,3 +189,207 @@ html{scroll-padding-top:0!important}
   .audio-body strong{font-size:12px}.audio-transcript{margin-left:0;padding-left:14px}
 }
 @media(prefers-reduced-motion:reduce){.orvalia-audio.is-playing .audio-live i{animation:none!important}}
+
+
+/* =========================================================
+   V14 — MOBILE REBUILD
+   Reworked from scratch for 390–820px rather than shrinking desktop.
+   ========================================================= */
+
+@media (max-width:820px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .container{width:calc(100% - 28px)}
+  .topbar-inner{height:64px;width:calc(100% - 24px)}
+  .mobile-nav{top:64px;max-height:calc(100dvh - 64px)}
+  .mobile-nav-backdrop{top:64px}
+
+  .section:not(.hero):not(.close-section){
+    padding-top:42px;
+    padding-bottom:62px;
+  }
+  .split-section{padding-top:42px;padding-bottom:0}
+  .visual-section,.operation-section,.price-section{padding-top:44px}
+
+  .section-head{
+    display:block;
+    margin-bottom:26px;
+  }
+  .section-no{
+    font-size:34px;
+    line-height:1;
+    letter-spacing:-.06em;
+    margin-bottom:12px;
+  }
+  .section:not(.hero) h2,
+  .price-copy h2{
+    font-size:clamp(29px,8vw,38px);
+    line-height:1.04;
+    letter-spacing:-.04em;
+    margin:7px 0 12px;
+  }
+  .head-copy{
+    font-size:13px;
+    line-height:1.58;
+    max-width:none;
+  }
+
+  .hero{
+    padding:98px 0 62px;
+  }
+  .hero-grid{gap:30px}
+  .hero h1{
+    font-size:clamp(42px,12vw,58px);
+    line-height:1;
+    letter-spacing:-.05em;
+    margin:16px 0 20px;
+  }
+  .hero-sub{font-size:20px;line-height:1.2}
+  .hero-note{font-size:13px;line-height:1.62}
+  .hero-actions{margin-top:26px}
+  .logo-card{min-height:138px}
+
+  .lead p{font-size:25px;line-height:1.28}
+  .diag-item{padding:20px 0}
+  .diag-item h3{font-size:16px}
+  .diag-item p{font-size:13px;line-height:1.55}
+
+  .brand-panel{min-height:0;padding:44px 20px 48px}
+  .brand-panel h3{font-size:28px;line-height:1.09}
+  .brand-panel p:not(.panel-label){font-size:13px;line-height:1.6}
+  .panel-logo{height:54px;max-width:205px;margin-bottom:28px}
+  .tags{margin:22px 0}
+  .agenda{margin-top:26px}
+
+  .stories-wrap{gap:52px}
+  .stories-row{gap:18px}
+  .story-copy h3{font-size:24px;line-height:1.12}
+  .story-copy p{font-size:13px;line-height:1.55;max-width:none}
+  .story-card,.story-note-stack{max-width:292px}
+  .editorial-flex{padding:14px;border-radius:2px}
+
+  .operation-flow{margin:30px 0 42px}
+  .operation-flow article{padding:18px 14px}
+  .operation-flow span{font-size:13px}
+  .scope-grid{gap:34px}
+  .scope-list h3,.payment-block h3,.formal-block h3{font-size:21px}
+  .metrics strong{font-size:35px}
+  .terms{font-size:11px;line-height:1.55}
+
+  .price-grid{gap:34px}
+  .price-copy>p{font-size:13px;line-height:1.58}
+  .price-card{margin-top:22px;padding:22px 18px}
+  .old-price{font-size:19px}
+  .main-price{font-size:35px}
+  .main-price span{font-size:18px}
+  .price-details{gap:32px}
+  .payment-block article{padding:13px 0}
+  .formal-block p{font-size:11.5px;line-height:1.55}
+
+  .close-section{padding:54px 0}
+  .close-grid{gap:30px}
+  .close-grid blockquote{font-size:29px}
+  .approval{padding:21px 16px;border-radius:2px}
+  .approval h3{font-size:22px}
+  .approval p:not(.eyebrow){font-size:13px}
+
+  /* Perspectiva Orvalia — mobile-specific editorial player */
+  .orvalia-audio{
+    width:100%;
+    margin:0 0 30px;
+    padding:14px 0 13px;
+    border-top:1px solid var(--audio-line);
+    border-bottom:1px solid var(--audio-line);
+  }
+  .audio-kicker{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    gap:8px;
+    align-items:center;
+    font-size:7.5px;
+    letter-spacing:.14em;
+    margin-bottom:12px;
+  }
+  .audio-live{width:11px}
+  .audio-row{
+    display:grid;
+    grid-template-columns:34px minmax(0,1fr);
+    gap:11px;
+    align-items:start;
+  }
+  .audio-play{
+    width:34px;
+    height:34px;
+    border-radius:1px;
+    border:0;
+    background:var(--audio-accent);
+    color:#fff;
+    margin-top:1px;
+  }
+  .audio-play:hover{
+    color:#fff;
+    border-color:transparent;
+    transform:none;
+  }
+  .audio-body{
+    min-width:0;
+  }
+  .audio-body strong{
+    display:block;
+    max-width:100%;
+    font-size:11.5px;
+    line-height:1.35;
+    letter-spacing:-.005em;
+    margin:0 0 8px;
+    overflow-wrap:anywhere;
+  }
+  .audio-progress-wrap{
+    grid-template-columns:minmax(0,1fr) 34px;
+    gap:9px;
+  }
+  .audio-seek{
+    min-width:0;
+    width:100%;
+    height:18px;
+    touch-action:pan-x;
+  }
+  .audio-elapsed{
+    font-size:8.5px;
+    min-width:34px;
+  }
+  .audio-transcript-toggle{
+    margin-top:6px;
+    font-size:8.5px;
+    min-height:26px;
+    text-align:left;
+  }
+  .audio-transcript{
+    margin:13px 0 0;
+    padding:12px 0 1px 12px;
+    max-width:none;
+  }
+  .audio-transcript p{
+    font-size:11.5px;
+    line-height:1.62;
+    margin-bottom:10px;
+  }
+  .price-copy .orvalia-audio{
+    margin:20px 0 2px;
+  }
+}
+
+@media (max-width:430px){
+  .container{width:calc(100% - 24px)}
+  .brand-main{font-size:15px}
+  .section:not(.hero) h2,
+  .price-copy h2{font-size:29px}
+  .hero h1{font-size:42px}
+  .hero-sub{font-size:19px}
+  .section-no{font-size:31px}
+  .story-card,.story-note-stack{max-width:270px}
+  .main-price{font-size:33px}
+  .footer-inner{font-size:8px}
+}
+
+/* Ensure native range controls remain usable on iOS/Safari */
+.audio-seek{touch-action:manipulation}
+.audio-play,.audio-transcript-toggle,.menu-toggle{ -webkit-tap-highlight-color:transparent }

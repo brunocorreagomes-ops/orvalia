@@ -24,3 +24,5 @@ Atualizações V11:
 
 
 V12 — 5 players Perspectiva Orvalia + transcrições + títulos de seção reduzidos.
+
+V14 — mobile rebuilt: compact titles, editorial audio player, touch-safe controls, tighter spacing.

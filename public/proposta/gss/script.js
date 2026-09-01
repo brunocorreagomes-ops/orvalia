@@ -145,3 +145,13 @@ orvaliaPlayers.forEach((player) => {
   });
   updatePlayer();
 });
+
+
+/* V14 mobile hardening */
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    document.querySelectorAll('[data-orvalia-player] audio').forEach((audio) => {
+      if (!audio.paused) audio.pause();
+    });
+  }
+});
