@@ -74,7 +74,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     event.preventDefault();
     setMenu(false);
     const headerHeight = topbar?.getBoundingClientRect().height || 0;
-    const y = target.getBoundingClientRect().top + window.scrollY - headerHeight + 1;
+    const y = target.getBoundingClientRect().top + window.scrollY - headerHeight + 4;
     window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
     history.replaceState(null, '', href);
   });
