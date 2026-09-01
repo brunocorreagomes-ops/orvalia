@@ -1,3 +1,12 @@
+/*
+ * Só ativamos a animação de entrada (.reveal fica opaco:0 até aparecer)
+ * depois que confirmamos que este script rodou até aqui. Se o script.js
+ * falhar em carregar (erro 404 por diferença de maiúscula/minúscula no
+ * GitHub Pages, adblocker, falha de rede etc.), a classe "js" nunca é
+ * adicionada e o CSS mantém todo o conteúdo visível por padrão.
+ */
+document.documentElement.classList.add('js');
+
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -8,6 +17,13 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 reveals.forEach((el) => revealObserver.observe(el));
+
+// Rede de segurança: se por algum motivo um elemento nunca cruzar o
+// threshold do observer (ex: viewport atípico, elemento fora de fluxo),
+// garante que nada fique invisível para sempre.
+window.setTimeout(() => {
+  reveals.forEach((el) => el.classList.add('visible'));
+}, 2500);
 
 const progressBar = document.querySelector('.progress span');
 const updateProgress = () => {

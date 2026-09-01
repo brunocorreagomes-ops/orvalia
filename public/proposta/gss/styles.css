@@ -63,7 +63,10 @@ button{font:inherit}
 /* CLOSE */
 .close-section{padding:105px 0}.close-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:85px;align-items:center}.close-grid blockquote{font-family:"Cormorant Garamond",Georgia,serif;font-size:45px;line-height:1.12;margin:0;color:#fff;font-style:italic}.close-grid blockquote span{color:#aab2bf}.approval{padding:34px;border:1px solid rgba(255,255,255,.12);border-radius:4px;background:rgba(255,255,255,.035)}.approval h3{font-size:29px;margin:7px 0}.approval p:not(.eyebrow){color:rgba(255,255,255,.57);font-size:14px}.approval .btn{margin:8px 7px 0 0}.footer{background:#07090d;color:rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.08)}.footer-inner{min-height:82px;display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.11em}.footer-inner div{display:flex;flex-direction:column}.footer-inner strong{color:#fff;font-size:12px}.footer-inner div span{color:var(--red2);font-size:6.5px;margin-top:3px}
 
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.1s}
+.reveal{opacity:1;transform:none}
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
+html.js .reveal.visible{opacity:1;transform:none}
+.delay-1{transition-delay:.1s}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(145,211,41,.42)}70%{box-shadow:0 0 0 10px rgba(145,211,41,0)}100%{box-shadow:0 0 0 0 rgba(145,211,41,0)}}
 
 @media(max-width:1080px){
@@ -91,7 +94,7 @@ button{font:inherit}
    - stronger mobile navigation / backdrop
    ========================================================= */
 html{scroll-padding-top:0!important}
-#diagnostico,#direcao,#operacao,#investimento{scroll-margin-top:0!important}
+#diagnostico,#direcao,#direcao-visual,#operacao,#investimento{scroll-margin-top:0!important}
 
 @media (min-width:821px){
   .section:not(.hero):not(.close-section){padding-top:58px;padding-bottom:92px}
