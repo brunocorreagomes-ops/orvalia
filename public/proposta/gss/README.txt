@@ -17,3 +17,5 @@ Atualizações V19:
 - PDF atualizado para validade de 08/09/2026 e renomeado V19;
 - validade no HTML: condições comerciais válidas até 08/09/2026;
 - 5 players Perspectiva Orvalia preservados com transcrição e reprodução exclusiva.
+
+V20 — Hero rebuilt for first-fold visibility on desktop/laptop. Reduced title scale, vertical spacing, logo-card height and CTA height; added short-viewport rules for 1366x768-class screens.
