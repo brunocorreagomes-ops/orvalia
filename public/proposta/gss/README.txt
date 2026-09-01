@@ -26,3 +26,7 @@ Atualizações V11:
 V12 — 5 players Perspectiva Orvalia + transcrições + títulos de seção reduzidos.
 
 V14 — mobile rebuilt: compact titles, editorial audio player, touch-safe controls, tighter spacing.
+
+V15 — desktop refined: smaller section titles, reduced top spacing below fixed nav, tighter first-fold alignment.
+
+V16 — GSS Capacitação logo replaced with client-supplied transparent PNG.

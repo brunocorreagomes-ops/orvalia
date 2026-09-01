@@ -393,3 +393,217 @@ html{scroll-padding-top:0!important}
 /* Ensure native range controls remain usable on iOS/Safari */
 .audio-seek{touch-action:manipulation}
 .audio-play,.audio-transcript-toggle,.menu-toggle{ -webkit-tap-highlight-color:transparent }
+
+
+/* =========================================================
+   V15 — DESKTOP FOLD / TYPE REFINEMENT
+   Goal: tighter fold alignment and less dead space below fixed nav.
+   ========================================================= */
+
+@media (min-width:821px){
+  :root{
+    --desktop-header-h:72px;
+  }
+
+  .topbar-inner{
+    height:72px;
+  }
+
+  /* All anchored sections begin visually closer to fixed nav */
+  .section:not(.hero):not(.close-section){
+    padding-top:34px;
+    padding-bottom:70px;
+  }
+
+  .split-section{
+    padding-top:34px;
+  }
+
+  .visual-section,
+  .operation-section,
+  .price-section{
+    padding-top:34px;
+  }
+
+  /* Section header block: reduce vertical footprint */
+  .section-head{
+    margin-bottom:24px;
+    gap:28px;
+  }
+
+  .section-no{
+    font-size:39px;
+    line-height:.95;
+    margin-top:2px;
+  }
+
+  .section:not(.hero) h2{
+    font-size:clamp(31px,2.75vw,43px);
+    line-height:1.01;
+    letter-spacing:-.042em;
+    margin:0 0 10px;
+    max-width:850px;
+  }
+
+  .price-copy h2{
+    font-size:clamp(32px,2.8vw,44px);
+    line-height:1.01;
+    margin-bottom:12px;
+  }
+
+  .head-copy{
+    font-size:12.5px;
+    line-height:1.55;
+    max-width:610px;
+  }
+
+  /* Ponto de partida */
+  .lead{
+    margin-bottom:30px;
+  }
+
+  .lead p{
+    font-size:clamp(23px,2vw,30px);
+    line-height:1.28;
+    max-width:920px;
+  }
+
+  .diagnostic-grid{
+    margin-top:20px;
+  }
+
+  /* Brand section */
+  .brand-panel{
+    padding-top:44px;
+    padding-bottom:48px;
+  }
+
+  .brand-panel h3{
+    font-size:32px;
+    line-height:1.08;
+    margin-bottom:12px;
+  }
+
+  .brand-panel p:not(.panel-label){
+    font-size:12.5px;
+    line-height:1.58;
+  }
+
+  /* Visual direction */
+  .story-copy h3{
+    font-size:26px;
+    line-height:1.1;
+  }
+
+  .story-copy p{
+    font-size:12.5px;
+    line-height:1.55;
+  }
+
+  /* Operation */
+  .operation-flow{
+    margin-top:24px;
+    margin-bottom:36px;
+  }
+
+  .operation-flow article{
+    padding-top:18px;
+    padding-bottom:18px;
+  }
+
+  .operation-flow span{
+    font-size:12.5px;
+  }
+
+  .scope-list h3,
+  .payment-block h3,
+  .formal-block h3{
+    font-size:20px;
+  }
+
+  .terms,
+  .formal-block p{
+    font-size:11px;
+    line-height:1.5;
+  }
+
+  /* Pricing */
+  .price-grid{
+    gap:54px;
+    align-items:start;
+  }
+
+  .price-copy>p{
+    font-size:12.5px;
+    line-height:1.55;
+  }
+
+  .price-card{
+    margin-top:22px;
+    padding:24px 22px;
+  }
+
+  .old-price{
+    font-size:18px;
+  }
+
+  .main-price{
+    font-size:39px;
+  }
+
+  .main-price span{
+    font-size:18px;
+  }
+
+  /* Audio component: smaller and closer to section header */
+  .orvalia-audio{
+    width:min(700px,100%);
+    margin:0 0 32px 92px;
+    padding:14px 0 12px;
+  }
+
+  .audio-kicker{
+    margin-bottom:11px;
+    font-size:7.5px;
+  }
+
+  .audio-row{
+    grid-template-columns:40px 1fr;
+    gap:13px;
+  }
+
+  .audio-play{
+    width:38px;
+    height:38px;
+  }
+
+  .audio-body strong{
+    font-size:12px;
+    margin-bottom:7px;
+  }
+
+  .audio-transcript-toggle{
+    margin-top:6px;
+  }
+
+  .audio-transcript{
+    margin-top:12px;
+    margin-left:53px;
+  }
+
+  .price-copy .orvalia-audio{
+    margin:18px 0 2px;
+  }
+
+  /* Keep first content from falling below fold after anchor navigation */
+  .section[id]{
+    scroll-margin-top:72px;
+  }
+}
+
+/* Very wide desktop: do not let typography re-expand excessively */
+@media (min-width:1440px){
+  .section:not(.hero) h2{font-size:43px}
+  .price-copy h2{font-size:44px}
+  .lead p{font-size:30px}
+}
