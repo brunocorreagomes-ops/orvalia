@@ -4,52 +4,54 @@ import { Link } from "react-router-dom";
 
 export default function Essencial() {
   return (
-    <section className="min-h-screen bg-brand-bg pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24">
-      <Link to="/" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-accent-light mb-10 md:mb-12 transition-colors">
-        <ChevronLeft size={20} />
-        <span className="font-mono text-[10px] uppercase tracking-widest">Voltar para a página inicial</span>
+    <section className="min-h-screen bg-brand-mineral text-brand-ink pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24 selection:bg-brand-cyan selection:text-brand-ink">
+      <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink mb-10 md:mb-12 transition-colors border-b border-transparent hover:border-brand-ink pb-1">
+        <ChevronLeft size={16} />
+        <span className="font-mono text-[10px] uppercase tracking-widest font-bold">Voltar para a página inicial</span>
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
         <div>
-          <span className="text-brand-accent-light font-black text-[10px] uppercase tracking-[0.3em] block mb-4">Plano de Entrada</span>
-          <h1 className="text-4xl xs:text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-tight uppercase">
-            Plano <span className="text-gradient">Essencial</span>
+          <span className="text-brand-cyan-dark font-mono font-bold text-[10px] uppercase tracking-[0.3em] block mb-6">
+            Plano de Entrada
+          </span>
+          <h1 className="text-4xl xs:text-5xl md:text-7xl font-sans font-medium tracking-tight mb-8 leading-[1.05] uppercase">
+            Plano <span className="italic font-serif font-light text-[#64706D] normal-case">Essencial</span>
           </h1>
-          <p className="text-brand-secondary text-base md:text-lg leading-relaxed mb-10 md:mb-12 max-w-xl italic">
-            Ideal para profissionais liberais e pequenos negócios que precisam de uma presença digital profissional e confiável com investimento otimizado.
+          <p className="text-[#475553] text-lg leading-relaxed mb-10 md:mb-12 max-w-xl">
+            Ideal para profissionais liberais e pequenos negócios que precisam de uma presença digital profissional, limpa e confiável, com investimento otimizado.
           </p>
 
-          <div className="text-3xl md:text-4xl font-black text-white mb-10 md:mb-12 uppercase tracking-tighter">
-            a partir de <span className="text-brand-accent-light">R$ 1.497</span>
+          <div className="text-3xl md:text-4xl font-medium text-brand-ink mb-10 md:mb-12 tracking-tight">
+            a partir de <span className="text-brand-cyan-dark font-bold">R$ 1.497</span>
           </div>
 
           <a 
             href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20contratar%20o%20Plano%20Essencial%20pela%20Orvalia%20Studio."
-            className="inline-flex items-center justify-center px-10 md:px-12 py-5 bg-brand-whatsapp text-white rounded-full font-black text-sm md:text-lg hover:brightness-110 transition-all shadow-2xl uppercase tracking-widest"
+            className="inline-flex items-center justify-center px-10 md:px-12 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold text-xs hover:-translate-y-1 transition-transform uppercase tracking-widest"
           >
             Contratar Agora
           </a>
         </div>
 
-        <div className="space-y-10 md:space-y-12">
-          <div className="glass p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-white/5">
-            <h3 className="text-xl md:text-2xl font-black text-white mb-6 md:mb-8 flex items-center gap-3 uppercase tracking-tight">
-              <Target size={24} className="text-brand-accent-light" />
+        <div className="space-y-8 md:space-y-10">
+          <div className="p-10 md:p-12 bg-brand-warm border border-brand-line rounded-[2rem]">
+            <h3 className="text-xl md:text-2xl font-medium text-brand-ink mb-8 flex items-center gap-4 tracking-tight">
+              <Target size={24} className="text-brand-cyan-dark" />
               O que contempla
             </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {[
                 "Landing Page de Alta Conversão",
                 "Identidade Visual (Logo + Cores)",
-                "Otimização Mobile",
+                "Otimização Mobile-First",
                 "Hospedagem por 1 ano",
-                "Domínio incluso",
+                "Domínio incluso no primeiro ano",
                 "Integração com WhatsApp",
                 "Suporte 15 dias pós-lançamento"
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-brand-secondary">
-                  <Check size={16} className="text-brand-accent-light mt-1 flex-shrink-0" />
+                <li key={i} className="flex items-start gap-3 text-sm text-[#475553] leading-relaxed">
+                  <Check size={16} className="text-brand-cyan-dark mt-1 flex-shrink-0" strokeWidth={3} />
                   {item}
                 </li>
               ))}
@@ -57,33 +59,33 @@ export default function Essencial() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="glass p-8 rounded-3xl border-white/5">
-              <Clock size={32} className="text-brand-accent-light mb-4" />
-              <h4 className="text-white font-bold mb-2">Prazo de Entrega</h4>
-              <p className="text-sm text-brand-secondary">Aproximadamente 7 a 10 dias úteis após o envio dos materiais.</p>
+            <div className="p-8 bg-brand-warm border border-brand-line rounded-[2rem]">
+              <Clock size={28} className="text-brand-cyan-dark mb-5" strokeWidth={1.5} />
+              <h4 className="text-brand-ink font-bold mb-2">Prazo de Entrega</h4>
+              <p className="text-sm text-[#55615d] leading-relaxed">Aproximadamente 7 a 10 dias úteis após o alinhamento estratégico.</p>
             </div>
-            <div className="glass p-8 rounded-3xl border-white/5">
-              <RotateCcw size={32} className="text-brand-accent-light mb-4" />
-              <h4 className="text-white font-bold mb-2">Ajustes Inclusos</h4>
-              <p className="text-sm text-brand-secondary">Até 2 rodadas de revisões completas para garantir sua satisfação total.</p>
+            <div className="p-8 bg-brand-warm border border-brand-line rounded-[2rem]">
+              <RotateCcw size={28} className="text-brand-cyan-dark mb-5" strokeWidth={1.5} />
+              <h4 className="text-brand-ink font-bold mb-2">Ajustes Inclusos</h4>
+              <p className="text-sm text-[#55615d] leading-relaxed">Até 2 rodadas de revisões editoriais para garantir precisão e satisfação.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-32">
-        <h2 className="text-3xl font-bold text-white mb-16 text-center tracking-tight">Passo a Passo da Jornada</h2>
+      <div className="mt-32 pt-24 border-t border-brand-line">
+        <h2 className="text-3xl font-medium text-brand-ink mb-16 text-center tracking-tight">Passo a Passo da Jornada</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            { step: "01", title: "Briefing", desc: "Entendemos seu público e seus diferenciais." },
-            { step: "02", title: "Design", desc: "Criamos o protótipo visual da sua marca e LP." },
-            { step: "03", title: "Desenvolvimento", desc: "Transformamos o design em código funcional." },
-            { step: "04", title: "Lançamento", desc: "Publicamos seu site e configuramos o SEO básico." }
+            { step: "01", title: "Diagnóstico", desc: "Compreendemos o seu público e o valor latente do seu negócio." },
+            { step: "02", title: "Design", desc: "Criamos a arquitetura visual e a narrativa da sua marca." },
+            { step: "03", title: "Desenvolvimento", desc: "Transformamos o design numa interface rápida e funcional." },
+            { step: "04", title: "Lançamento", desc: "Publicamos o seu site e realizamos as configurações de SEO base." }
           ].map((item, i) => (
-            <div key={i} className="relative">
-              <div className="text-6xl font-black text-white/5 absolute -top-8 -left-4">{item.step}</div>
-              <h4 className="text-white font-bold mb-3 relative z-10">{item.title}</h4>
-              <p className="text-sm text-brand-secondary relative z-10">{item.desc}</p>
+            <div key={i} className="border-l border-brand-line pl-6">
+              <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#687971] mb-4">Passo / {item.step}</div>
+              <h4 className="text-brand-ink font-bold mb-2">{item.title}</h4>
+              <p className="text-sm text-[#55615d] leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
