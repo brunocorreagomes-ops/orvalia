@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = 'https://orvalia.com.br';
@@ -70,7 +70,7 @@ async function prerender() {
   console.log('Starting prerendering...');
   
   const serverEntryPath = path.resolve(__dirname, 'dist-server/entry-server.js');
-  const { render } = await import(serverEntryPath);
+  const { render } = await import(pathToFileURL(serverEntryPath).href);
   
   const templatePath = path.resolve(__dirname, 'dist/index.html');
   const template = fs.readFileSync(templatePath, 'utf-8');
@@ -191,4 +191,7 @@ async function prerender() {
   console.log('Prerendering completed.');
 }
 
-prerender().catch(console.error);
+prerender().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

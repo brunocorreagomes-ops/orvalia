@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html {\n    scroll-padding-top: 96px;\n  }\n\n  body {
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  body {
     @apply bg-brand-bg text-brand-text antialiased font-sans selection:bg-brand-accent-light/30 selection:text-brand-accent-light;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
