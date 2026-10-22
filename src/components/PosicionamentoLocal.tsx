@@ -1,94 +1,71 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const locations = [
+  { city: "Indaiatuba", role: "Base estratégica" },
+  { city: "Campinas", role: "Região Metropolitana" },
+  { city: "Itu, Salto, Sorocaba e Jundiaí", role: "Atendimento regional" },
+  { city: "São Paulo e Brasil", role: "Atuação ampliada" }
+];
 
 export default function PosicionamentoLocal() {
-  const cidades = [
-    { nome: "Indaiatuba", papel: "Sede & Base Estratégica" },
-    { nome: "Campinas", papel: "Polo Corporativo & RMC" },
-    { nome: "Itu & Salto", papel: "Expansão Industrial & Serviços" },
-    { nome: "Sorocaba & Jundiaí", papel: "Atendimento Regional" },
-    { nome: "São Paulo & Brasil", papel: "Atuação Nacional" }
-  ];
-
   return (
-    <section id="presenca-regional" className="py-24 md:py-36 bg-brand-bg relative z-10 border-b border-white/5">
+    <section id="regional" className="py-24 md:py-32 bg-[#e2e5df] text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
       <div className="container mx-auto px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
-          {/* Main Content */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-brand-red" />
-                <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-red font-semibold">
-                  PRESENÇA REGIONAL & ALCANCE
-                </span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
-                Indaiatuba é nossa base. <br />
-                <span className="text-brand-secondary">Não nosso limite.</span>
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-base md:text-lg text-brand-secondary font-sans leading-relaxed">
-              <p className="text-white font-medium text-lg md:text-xl">
-                Conhecer o mercado regional importa. Mas design local não precisa ter aparência local.
-              </p>
-
-              <p>
-                Criamos experiências digitais capazes de combinar proximidade comercial, compreensão do contexto e um nível de execução compatível com marcas que querem crescer além da própria vizinhança.
-              </p>
-
-              <p>
-                Empresas, clínicas, escritórios e profissionais de Indaiatuba, Campinas, Itu, Salto, Sorocaba e Jundiaí encontram na Orvalia a parceria estratégica para projetar autoridade digital sem depender de agências genéricas ou soluções padronizadas.
-              </p>
-            </div>
-
-            <div className="pt-4">
-              <a 
-                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Tenho%20uma%20empresa%20na%20região%20e%20gostaria%20de%20mapear%20nosso%20gap%20de%20percepção."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/20 hover:border-brand-red hover:text-brand-red text-white font-black text-xs uppercase tracking-widest transition-colors"
-              >
-                <span>Mapear empresa da região</span>
-                <ArrowUpRight size={16} />
-              </a>
-            </div>
-          </div>
-
-          {/* Regional Reach Grid */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="p-6 bg-neutral-900 border border-white/10 font-mono text-xs uppercase tracking-widest text-white flex items-center justify-between">
-              <span className="flex items-center gap-2">
-                <MapPin size={16} className="text-brand-red" />
-                ABRANGÊNCIA GEOGRÁFICA
+          {/* Esquerda: Texto */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-center"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                06 / Presença Regional
               </span>
-              <span className="text-brand-red font-bold">RMC + BRASIL</span>
             </div>
+            
+            <h2 className="text-4xl md:text-6xl lg:text-[4.7vw] font-sans font-medium tracking-tight leading-[1.08] my-8">
+              Indaiatuba é a nossa base.<br />
+              <span className="italic font-serif font-light text-[#63716a]">Não o nosso limite.</span>
+            </h2>
+            
+            <p className="text-[#63716a] text-lg leading-relaxed mb-10 max-w-lg">
+              Combinamos a proximidade comercial e a compreensão do contexto regional com um padrão de execução capaz de acompanhar empresas em novos mercados.
+            </p>
 
-            <div className="space-y-2">
-              {cidades.map((c, idx) => (
+            <Link 
+              to="/agencia-indaiatuba" 
+              className="inline-flex items-center gap-3 text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 self-start hover:border-brand-cyan-dark transition-all"
+            >
+              Consultoria para a RMC <ArrowUpRight size={14} />
+            </Link>
+          </motion.div>
+
+          {/* Direita: Lista de Locais */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-center border-t border-[#aeb9b2] lg:border-t-0"
+          >
+            <div className="lg:border-t border-[#aeb9b2]">
+              {locations.map((loc, i) => (
                 <div 
-                  key={c.nome}
-                  className="p-4 bg-white/[0.02] border border-white/5 flex items-center justify-between hover:border-white/20 transition-colors"
+                  key={i} 
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-8 py-6 border-b border-[#aeb9b2] group hover:px-4 transition-all duration-500"
                 >
-                  <span className="font-sans font-black text-white text-sm md:text-base uppercase tracking-tight">
-                    {c.nome}
-                  </span>
-                  <span className="font-mono text-[10px] text-brand-secondary uppercase tracking-widest">
-                    {c.papel}
-                  </span>
+                  <span className="text-lg font-medium text-brand-ink">{loc.city}</span>
+                  <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-[#79857d]">{loc.role}</span>
                 </div>
               ))}
             </div>
-
-            <p className="font-mono text-[10px] text-brand-secondary uppercase tracking-widest pt-2 text-center md:text-left">
-              Otimização de SEO técnico e visibilidade para buscas locais e geograficamente qualificadas.
-            </p>
-          </div>
+          </motion.div>
 
         </div>
 
