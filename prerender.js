@@ -64,28 +64,23 @@ const routesToPrerender = [
   '/plano-evolucao/'
 ];
 
-// Rotas que não devem receber prioridade alta no Sitemap (ex: páginas legais)
 const lowPriorityRoutes = ['/privacidade/', '/termos/', '/cookies/'];
 
 async function prerender() {
   console.log('Starting prerendering...');
   
-  // 1. Get the SSR render function
   const serverEntryPath = path.resolve(__dirname, 'dist-server/entry-server.js');
   const { render } = await import(serverEntryPath);
   
-  // 2. Read index.html from dist
   const templatePath = path.resolve(__dirname, 'dist/index.html');
   const template = fs.readFileSync(templatePath, 'utf-8');
   
-  // 3. Render each route
   for (const url of routesToPrerender) {
     const context = {};
     const appHtml = render(url, context);
     const routePath = url.endsWith('/') ? url : `${url}/`;
     const fullCanonicalUrl = `${SITE_URL}${routePath}`;
     
-    // Extracted helmet data
     const { helmet } = context;
     
     let html = template.replace(
@@ -93,7 +88,6 @@ async function prerender() {
       `<div id="root">${appHtml}</div>`
     );
 
-    // Remove o FAQ Schema exclusivo da Home nas páginas internas para evitar conflito no Google Search Console
     if (routePath !== '/') {
       html = html.replace(/<script id="home-faq-schema"[\s\S]*?<\/script>/gi, '');
     }
@@ -119,7 +113,6 @@ async function prerender() {
       if (metaString.includes('property="og:url"')) {
         html = html.replace(/<meta property="og:url"[^>]*>/gi, '');
       } else {
-        // Garante que og:url corresponde sempre à URL real da página
         html = html.replace(
           /<meta property="og:url"[^>]*>/gi,
           `<meta property="og:url" content="${fullCanonicalUrl}" />`
@@ -132,7 +125,6 @@ async function prerender() {
         html = html.replace(/<meta name="twitter:description"[^>]*>/gi, '');
       }
 
-      // Proteção Crítica de SEO: Atualiza sempre a Canonical e Hreflang para a rota atual
       if (linkString.includes('rel="canonical"')) {
         html = html.replace(/<link rel="canonical"[^>]*>/gi, '');
       } else {
@@ -155,7 +147,6 @@ async function prerender() {
       html = html.replace('</head>', `${helmetTags}\n  </head>`);
     }
 
-    // Determine output file path
     const outDir = path.join(__dirname, 'dist', routePath);
     const outFile = path.join(outDir, 'index.html');
     
@@ -165,7 +156,6 @@ async function prerender() {
     console.log(`Prerendered ${url} -> ${outFile}`);
   }
 
-  // 4. Auto-Generate Complete Sitemap.xml
   const today = new Date().toISOString().split('T')[0];
   const sitemapUrls = routesToPrerender
     .filter((route) => !lowPriorityRoutes.includes(route))
