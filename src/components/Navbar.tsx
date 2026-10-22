@@ -20,23 +20,24 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 h-[90px] flex items-center justify-between">
         <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-          {/* Se a página rolar, o menu fica com fundo claro, logo a cor da fonte muda */}
-          <OrvaliaLogo className="w-40 md:w-44" theme={isScrolled ? "light" : "dark"} />
+          {/* Corrigido: O fundo do topo é Mineral, logo o tema do logótipo deve ser sempre 'light' (texto escuro) */}
+          <OrvaliaLogo className="w-40 md:w-44" theme="light" />
         </Link>
 
         {/* Desktop Navigation */}
+        {/* Corrigido: O texto da navegação e links deve ser sempre escuro/brand-muted */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="/#gap-percepcao" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>O Gap</a>
-          <a href="/#cases" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Trabalhos</a>
-          <a href="/#metodo" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Método</a>
-          <a href="/#autoridade" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Liderança</a>
-          <Link to="/blog" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Inteligência</Link>
+          <a href="/#gap-percepcao" className="text-xs font-semibold text-brand-muted hover:text-brand-ink transition-colors">O Gap</a>
+          <a href="/#cases" className="text-xs font-semibold text-brand-muted hover:text-brand-ink transition-colors">Trabalhos</a>
+          <a href="/#metodo" className="text-xs font-semibold text-brand-muted hover:text-brand-ink transition-colors">Método</a>
+          <a href="/#autoridade" className="text-xs font-semibold text-brand-muted hover:text-brand-ink transition-colors">Liderança</a>
+          <Link to="/blog" className="text-xs font-semibold text-brand-muted hover:text-brand-ink transition-colors">Inteligência</Link>
           
           <a 
             href="https://wa.me/5511978959567" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`ml-4 pb-1 border-b text-xs font-bold flex items-center gap-2 hover:opacity-70 transition-opacity ${isScrolled ? 'border-brand-ink text-brand-ink' : 'border-white text-white'}`}
+            className="ml-4 pb-1 border-b border-brand-ink text-brand-ink text-xs font-bold flex items-center gap-2 hover:opacity-70 transition-opacity"
           >
             Mapear meu gap <span>↗</span>
           </a>
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-          className={`md:hidden w-11 h-11 border flex items-center justify-center ${isScrolled ? 'border-brand-line text-brand-ink' : 'border-white/20 text-white'}`}
+          className="md:hidden w-11 h-11 border border-brand-line text-brand-ink flex items-center justify-center"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? "×" : "☰"}
