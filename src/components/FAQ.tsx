@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: "Quanto custa um projeto de branding para empresas?",
-    answer: "O investimento em branding na Orvalia Studio é modular. Temos desde soluções essenciais para empresas em crescimento até ecossistemas completos para marcas de elite. O valor reflete a profundidade estratégica, pesquisa de mercado e o impacto direto no posicionamento e faturamento do negócio."
+    answer: "O valor depende do escopo: diagnóstico, identidade visual, textos e criação ou revisão do site. A proposta detalha as entregas e os prazos combinados."
   },
   {
     question: "Qual a diferença entre branding e marketing digital?",

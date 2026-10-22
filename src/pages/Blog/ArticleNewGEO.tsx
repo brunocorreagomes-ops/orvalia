@@ -1,188 +1,51 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight, HelpCircle } from "lucide-react";
-import { useEffect } from "react";
+import { ChevronLeft, ArrowRight } from "lucide-react";
+import SEO from "../../components/SEO";
 import ShareButton from "../../components/ShareButton";
-import BlogCTA from "../../components/BlogCTA";
 import BlogImage from "../../components/BlogImage";
 
 export default function ArticleNewGEO() {
-  useEffect(() => {
-    // SEO Metadata
-    document.title = "O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA | Orvalia Studio";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Entenda o que é Generative Engine Optimization (GEO) e como a Orval'IA Studio prepara sua marca para ser a principal recomendação em respostas do ChatGPT e Gemini."
-      );
-    }
-    
-    // Add keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    const keywords = "Generative Engine Optimization, GEO, SEO para IA, como aparecer no ChatGPT, otimização para IAs generativas, posicionamento digital premium, agência de SEO Indaiatuba, autoridade semântica, Inteligência Artificial Generativa, ChatGPT, Google Gemini, Perplexity AI, Large Language Models, LLM, Processamento de Linguagem Natural, NLP, E-E-A-T, Branding Estratégico";
-    if (metaKeywords) {
-      metaKeywords.setAttribute("content", keywords);
-    } else {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      metaKeywords.setAttribute('content', keywords);
-      document.head.appendChild(metaKeywords);
-    }
-  }, []);
-
   return (
-    <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-8 md:px-24 selection:bg-brand-surface selection:text-white">
+    <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-6 md:px-24">
+      <SEO title="GEO e buscas com IA: o que revisar no site da sua empresa | Orvalia Studio" description="Uma revisão de conteúdo, informações de atendimento e navegação para empresas que querem manter sua presença nas buscas clara e atualizada." canonical="https://orvalia.com.br/blog/geo-generative-engine-optimization-buscas-ia" />
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-16 md:mb-20">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text transition-colors font-mono text-[10px] uppercase tracking-[0.2em]">
-            <ChevronLeft size={16} />
-            Voltar ao Blog
+        <div className="flex justify-between items-center mb-16">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text font-mono text-[10px] uppercase tracking-[0.2em]">
+            <ChevronLeft size={16} /> Voltar ao Blog
           </Link>
           <ShareButton />
         </div>
-
-        <header className="mb-16">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] block mb-6 md:mb-8"
-          >
-            Inovação & IA
-          </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-[clamp(2.6rem,4vw,4.4rem)] font-sans font-black text-brand-text tracking-[-0.03em] leading-[0.98] mb-12 max-w-[12ch] md:max-w-[14ch]"
-          >
-            O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA
-          </motion.h1>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-4 text-brand-secondary text-[10px] font-mono uppercase tracking-widest"
-          >
-            <span>26 Mai 2026</span>
-            <span className="w-1 h-1 rounded-full bg-gray-300" />
-            <span>7 min de leitura</span>
-          </motion.div>
+        <header className="mb-12">
+          <p className="text-xs text-brand-secondary font-mono mb-6">26 Mai 2026 · Sites e conteúdo</p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">GEO e buscas com IA: o que revisar no site da sua empresa</h1>
         </header>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
-        >
-          <BlogImage src="https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="O que é GEO" caption="GEO: O futuro das buscas já começou" />
-        </motion.div>
-
-        <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-8 font-sans selection:bg-brand-surface selection:text-white">
-          <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
-            O Google mudou. Descubra por que as IAs já decidem quem domina o mercado e como posicionar sua empresa como a única recomendação possível.
-          </p>
-
-          <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase pt-6">O que é GEO e Por Que Ele é o Futuro da Presença Digital</h2>
-          <p>
-            A forma como seus clientes procuram por serviços premium mudou. Onde antes havia uma lista de links azuis no Google, agora há respostas diretas, formuladas por Inteligências Artificiais. O <strong>Generative Engine Optimization (GEO)</strong> é a disciplina focada em garantir que a sua marca seja a resposta exata fornecida por ferramentas como ChatGPT, Gemini e Perplexity. Não se trata mais de lutar por cliques, mas de garantir a citação como a principal autoridade do seu nicho.
-          </p>
-
-          <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase pt-6">A Diferença Fundamental entre SEO Tradicional e GEO</h2>
-          <p>
-            Enquanto o SEO tradicional foca em otimizar páginas para algoritmos de ranqueamento baseados em palavras-chave e backlinks, o GEO otimiza para Modelos de Linguagem de Grande Escala (LLMs). As IAs não leem palavras-chave soltas; elas compreendem o contexto, a semântica e a profundidade. Para ser citado por uma IA, seu conteúdo não pode ser superficial. Ele precisa ser a fonte mais rica, estruturada e confiável de informação sobre aquele tema.
-          </p>
-
-          <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase pt-6">Por que Clínicas e Escritórios Premium Precisam do GEO Agora?</h2>
-          <p>
-            O consumidor de alto ticket valoriza o próprio tempo. Um paciente buscando um especialista, ou um empresário buscando assessoria jurídica, prefere perguntar a uma IA: <em>"Qual é a clínica de estética mais conceituada em Indaiatuba e por quê?"</em> do que garimpar dezenas de sites para tentar decidir sozinho.
-          </p>
-
-          <div className="p-8 md:p-12 bg-white/5 border border-gray-100 rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.02)] my-12">
-            <h3 className="text-2xl font-black text-brand-text tracking-tighter mb-4 uppercase">O Impacto Regional</h3>
-            <h4 className="text-lg font-bold text-brand-text mb-6 font-mono uppercase tracking-wider">Dominando Indaiatuba e a RMC</h4>
-            <p className="text-brand-secondary m-0">
-              Se a presença digital da sua empresa for baseada apenas em posts de redes sociais sem estrutura semântica em um site próprio, as IAs simplesmente ignorarão o seu negócio. As inteligências artificiais extraem dados de conteúdos robustos e interligados. Marcas locais que se posicionarem agora através do GEO terão uma vantagem competitiva quase impossível de ser alcançada pelos retardatários.
-            </p>
-          </div>
-
-          <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase pt-6">3 Pilares para Otimizar seu Negócio para Inteligências Artificiais</h2>
-          <p>
-            Para que a <strong>Orval'IA Studio</strong> transforme sua marca na referência absoluta para as IAs, trabalhamos o posicionamento em três fundamentos estratégicos:
-          </p>
-
-          <div className="p-8 md:p-12 bg-white/5 border border-gray-100 rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.02)] my-12">
-            <ul className="space-y-8 list-none p-0 m-0">
-              <li className="flex gap-4">
-                <span className="font-mono text-brand-text font-black">01 //</span>
-                <div>
-                  <strong className="text-brand-text block mb-2 text-lg uppercase tracking-tight">Conteúdo de Profundidade e Contexto (E-E-A-T)</strong>
-                  <span className="text-brand-secondary">Desenvolvemos materiais que provam de forma concreta a sua experiência, especialização, autoridade e confiabilidade (Experience, Expertise, Authoritativeness, Trustworthiness). As inteligências artificiais priorizam fontes comprovadamente consistentes e seguras.</span>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="font-mono text-brand-text font-black">02 //</span>
-                <div>
-                  <strong className="text-brand-text block mb-2 text-lg uppercase tracking-tight">Estrutura de Dados Clara</strong>
-                  <span className="text-brand-secondary">Construímos a arquitetura do seu site e do seu conteúdo em blocos lógicos. Parágrafos concisos, listas estruturadas e uso estratégico de marcações estruturadas (Schema Markup) que as IAs conseguem ler, interpretar e mapear semanticamente de forma instantânea.</span>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="font-mono text-brand-text font-black">03 //</span>
-                <div>
-                  <strong className="text-brand-text block mb-2 text-lg uppercase tracking-tight">Citações e Branding Consistente</strong>
-                  <span className="text-brand-secondary">O nome da sua empresa, seu endereço e suas especialidades precisam estar semanticamente alinhados em toda a internet. A percepção premium do seu design valida a qualidade do seu serviço tanto perante as pessoas quanto perante as bases de dados das IAs.</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase pt-6">A Orval'IA Studio e a Transição Estratégica</h2>
-          <p>
-            O design estratégico e a arquitetura de conteúdo não são mais apenas para impressionar o olho humano; são necessários para educar a Inteligência Artificial sobre o seu real valor. A <strong>Orval'IA Studio</strong> une o refinamento estético do <Link to="/blog/posicionamento-premium" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">posicionamento premium</Link> à mais avançada engenharia de conteúdo semântico.
-          </p>
-          <p>
-            Para dar suporte a essa evolução, desenvolvemos soluções exclusivas focadas em marcas modernas, como a nossa <Link to="/sites-estrategicos" className="text-brand-text font-semibold underline decoration-brand-accent-light/30 hover:decoration-brand-accent-light transition-all">criação de sites de alta performance</Link>, criando uma base sólida e limpa que as inteligências artificiais adoram ler.
-          </p>
-
-          <hr className="border-white/10 my-16" />
-
-          {/* FAQ SECTION */}
-          <div className="space-y-10 pt-4">
-            <div className="flex items-center gap-3">
-              <HelpCircle className="text-brand-text shrink-0" size={28} />
-              <h2 className="text-3xl font-black text-brand-text tracking-tight uppercase m-0">FAQ Otimizado para IA (PAA - People Also Ask)</h2>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="p-8 bg-white/5 border border-gray-100 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-lg font-black text-brand-text uppercase tracking-tight mb-3">O que significa GEO no marketing digital?</h4>
-                <p className="text-brand-secondary text-base m-0 leading-relaxed">
-                  <strong>GEO</strong> significa <strong>Generative Engine Optimization</strong>. É o conjunto de estratégias para otimizar a presença digital de uma marca para que ela seja citada, referenciada e recomendada em respostas geradas por Inteligências Artificiais generativas, como o ChatGPT, o Google Gemini e o Perplexity AI.
-                </p>
-              </div>
-
-              <div className="p-8 bg-white/5 border border-gray-100 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-lg font-black text-brand-text uppercase tracking-tight mb-3">Como aparecer nas respostas do ChatGPT e Gemini?</h4>
-                <p className="text-brand-secondary text-base m-0 leading-relaxed">
-                  Para aparecer nas respostas de IAs, uma empresa precisa ter um site com conteúdo semântico profundo, arquitetura técnica limpa, informações ricas e atualizadas, e alta autoridade técnica no seu nicho de atuação, facilitando que os algoritmos de NLP (Processamento de Linguagem Natural) façam o rastreamento das informações de forma clara.
-                </p>
-              </div>
-
-              <div className="p-8 bg-white/5 border border-gray-100 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-lg font-black text-brand-text uppercase tracking-tight mb-3">O SEO tradicional vai acabar por causa do GEO?</h4>
-                <p className="text-brand-secondary text-base m-0 leading-relaxed">
-                  O SEO não acaba, mas evolui. Enquanto o SEO tradicional foca fortemente em links e posições em páginas de resultado (SERPs) focadas em buscas clássicas, o GEO foca em contexto, reputação corporativa (EEAT) e respostas diretas construídas em tempo real a perguntas complexas. Ambos atuarão de forma complementar na sua presença.
-                </p>
-              </div>
-            </div>
+        <div className="mb-12 overflow-hidden rounded-3xl border border-white/5">
+          <BlogImage src="https://i.ibb.co/DfY9bnCR/04-o-que-e-geo-e-como-preparar-sua-marca.webp" alt="Conteúdo de um site e buscas com inteligência artificial" caption="Informações úteis e atualizadas para quem pesquisa os serviços da empresa" />
+        </div>
+        <div className="prose prose-invert prose-lg max-w-none text-brand-secondary font-serif">
+          <p className="mb-6 leading-relaxed">GEO é a sigla usada para Generative Engine Optimization, um termo comum nas discussões sobre visibilidade em respostas geradas por inteligência artificial. Para quem mantém um site, vale começar pelas informações que o cliente precisa consultar.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">Descreva os serviços com exemplos</h2>
+          <p className="mb-6 leading-relaxed">Explique o que sua empresa faz, quais pedidos atende e em quais situações o serviço é indicado. Exemplos do trabalho ajudam mais do que repetir palavras como “excelência”, “inovação” e “solução completa”.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">Mantenha os dados de atendimento em dia</h2>
+          <p className="mb-6 leading-relaxed">Confira telefone, endereço, região atendida e horários. Revise também os perfis comerciais que a própria empresa mantém. Dados antigos podem confundir quem está tentando entrar em contato.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">Publique o que a empresa consegue demonstrar</h2>
+          <p className="mb-6 leading-relaxed">Use trabalhos autorizados, informações sobre a equipe, descrição do processo e respostas às dúvidas recebidas no atendimento. Evite números, depoimentos e resultados que não possam ser confirmados.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">Organize o conteúdo para as pessoas</h2>
+          <p className="mb-6 leading-relaxed">Títulos claros, links entre assuntos relacionados e textos legíveis ajudam o visitante a consultar o site. Divida o conteúdo conforme o assunto, sem repetir a mesma informação em várias páginas.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">É preciso criar um formato especial para o Google?</h2>
+          <p className="mb-6 leading-relaxed">Segundo o <a className="text-brand-text underline underline-offset-4" href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer">guia do Google sobre buscas com IA</a>, não há uma marcação especial obrigatória nem a necessidade de reescrever o conteúdo exclusivamente para sistemas de IA. As boas práticas de SEO continuam relevantes.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">O trabalho garante que a empresa será recomendada?</h2>
+          <p className="mb-6 leading-relaxed">Não prometemos uma posição ou uma recomendação específica. A revisão organiza o conteúdo, corrige informações e facilita a consulta ao site. A proposta deve descrever essas entregas de forma verificável.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-text font-sans mt-12 mb-5">Como a Orvalia pode ajudar</h2>
+          <p className="mb-6 leading-relaxed">Revisamos os textos de apresentação, as páginas de serviços, os títulos e os caminhos de contato. A partir dessa revisão, combinamos quais mudanças fazem sentido para o negócio e como acompanhar o trabalho.</p>
+          <div className="mt-16 p-6 md:p-12 bg-brand-surface rounded-3xl">
+            <h2 className="text-2xl font-semibold text-brand-text font-sans">Quer revisar o seu site?</h2>
+            <p className="mb-6 leading-relaxed">Conte quais serviços sua empresa oferece e o que precisa melhorar. Podemos conversar sobre o conteúdo, a navegação e o contato com seus clientes.</p>
+            <a href="https://wa.me/5511978959567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-brand-text font-sans font-semibold">
+              Conversar com Bruno <ArrowRight size={18} />
+            </a>
           </div>
         </div>
-
-        <footer className="mt-32">
-          <BlogCTA articleTitle="O que é GEO (Generative Engine Optimization) e Como Preparar sua Marca para as Buscas por IA" />
-        </footer>
       </div>
     </article>
   );

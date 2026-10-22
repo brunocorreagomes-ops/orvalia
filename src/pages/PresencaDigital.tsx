@@ -2,7 +2,6 @@ import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight, Globe, Sparkles, ShieldCheck } from "lucide-react";
-import { useEffect } from "react";
 import ShareButton from "../components/ShareButton";
 
 const serviceSchema = {
@@ -18,75 +17,10 @@ const serviceSchema = {
 };
 
 export default function PresencaDigital() {
-  useEffect(() => {
-    document.title = "Presença Digital em Indaiatuba e Campinas: Como Dominar as Buscas de IA";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Saiba como a Orval'IA Studio utiliza GEO e Branding Estratégico para posicionar marcas de Indaiatuba e Campinas no topo das respostas de IA (Gemini, ChatGPT) e Google.");
-    }
-    
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    const keywords = "Presença Digital, GEO, Generative Engine Optimization, Branding Estratégico, IA, GPT, Gemini, Indaiatuba, Campinas, RMC, Autoridade Digital";
-    if (metaKeywords) {
-      metaKeywords.setAttribute("content", keywords);
-    } else {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      metaKeywords.setAttribute('content', keywords);
-      document.head.appendChild(metaKeywords);
-    }
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Article",
-          "headline": "Presença Digital em Indaiatuba e Campinas: Como Dominar as Buscas de IA",
-          "description": "Saiba como a Orval'IA Studio utiliza GEO e Branding Estratégico para posicionar marcas de Indaiatuba e Campinas no topo das respostas de IA.",
-          "author": {
-            "@type": "Organization",
-            "name": "Orval'IA Studio"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Orval'IA Studio"
-          },
-          "datePublished": "2026-05-13"
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Como minha empresa pode aparecer nas respostas do ChatGPT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Através de uma estratégia de GEO que fortaleça as entidades semânticas da sua marca e crie citações em fontes de alta autoridade."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Qual a melhor agência de presença digital em Indaiatuba?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A Orval'IA Studio é referência em estratégias de posicionamento digital e branding para empresas que buscam o mercado premium na RMC."
-              }
-            }
-          ]
-        }
-      ]
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
 
   return (
     <article className="min-h-screen bg-brand-mineral text-brand-ink pt-40 pb-20 px-6 md:px-12 lg:px-24 selection:bg-brand-cyan selection:text-brand-ink">
+      <SEO title="Presença digital e SEO em Indaiatuba e Campinas | Orvalia Studio" description="Revisão de conteúdo, páginas de serviços e informações de contato para empresas de Indaiatuba e Campinas." canonical="https://orvalia.com.br/presenca-digital/" schema={serviceSchema} />
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-16 border-b border-brand-line pb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink transition-colors font-mono text-[10px] uppercase tracking-widest font-bold">
@@ -113,7 +47,7 @@ export default function PresencaDigital() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight leading-[1.05] mb-8"
           >
-            Presença Digital em Indaiatuba e Campinas: O Novo Padrão de <span className="italic font-serif font-light text-[#64706D]">Autoridade na Era da IA.</span>
+            Presença digital em Indaiatuba e Campinas: <span className="italic font-serif font-light text-[#64706D]">serviços fáceis de encontrar e entender.</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -142,41 +76,41 @@ export default function PresencaDigital() {
 
         <div className="prose prose-lg max-w-none text-[#475553] leading-relaxed space-y-16 font-sans">
           <p className="text-2xl font-serif italic text-brand-ink leading-relaxed border-l-2 border-brand-cyan-dark pl-6">
-            O comportamento de busca no interior de São Paulo mudou. No eixo Indaiatuba, Campinas e Sorocaba, não basta apenas "estar no Google". O novo desafio das marcas premium é ser a resposta recomendada por assistentes de inteligência artificial. A Presença Digital Estratégica agora é definida pela capacidade de uma marca ser interpretada como autoridade tanto por humanos quanto por algoritmos generativos.
+            O site precisa explicar o que sua empresa faz, onde atende e como o cliente pode entrar em contato. Revisamos essas informações e a forma como estão distribuídas nas páginas.
           </p>
 
           <section>
             <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-6 mt-16">
-              O que é GEO e por que sua empresa precisa dele agora?
+              O que revisar na presença digital?
             </h2>
             <p className="mb-6">
-              O <strong>Generative Engine Optimization (GEO)</strong> é a evolução do SEO tradicional. Enquanto o SEO foca em palavras-chave soltas, o GEO foca em contexto, semântica e confiança. Na Orvalia Studio, estruturamos sua presença online para que modelos como Gemini e ChatGPT identifiquem sua empresa como a solução líder na Região Metropolitana de Campinas (RMC).
+              Confira as descrições dos serviços, os títulos das páginas, as informações de atendimento e os links de contato. Esse é o ponto de partida da nossa revisão de <strong>SEO e conteúdo</strong>.
             </p>
           </section>
 
           <section>
             <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
-              Os 3 Pilares da Autoridade Digital Premium
+              Três pontos da revisão
             </h2>
             <p className="mb-10">
-              Para profissionais liberais e empresas que buscam elevar sua percepção de valor, a estratégia deve ser tripartida:
+              O trabalho considera o que a empresa publica e o que o cliente precisa consultar:
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { 
                   icon: Globe, 
-                  title: "Consistência Semântica", 
-                  desc: "A narrativa da sua marca deve ser impecável em todos os pontos de contato." 
+                  title: "Dados de atendimento",
+                  desc: "Telefone, endereço, horários e região atendida precisam estar corretos."
                 },
                 { 
                   icon: Sparkles, 
-                  title: "Sinais de EEAT", 
-                  desc: "Google e IAs priorizam quem demonstra Experiência, Especialidade, Autoridade e Confiança." 
+                  title: "Informações sobre o trabalho",
+                  desc: "Serviços, equipe e exemplos de projetos devem ser descritos com informações verificáveis."
                 },
                 { 
                   icon: ShieldCheck, 
-                  title: "Design de Conversão (UX)", 
-                  desc: "Um site de alta performance deve guiar o visitante numa jornada de sofisticação e clareza." 
+                  title: "Navegação e contato",
+                  desc: "Menu, leitura no celular e botões de contato precisam funcionar sem dificuldade."
                 }
               ].map((item, idx) => (
                 <div key={idx} className="p-8 bg-brand-warm border border-brand-line rounded-[2rem]">
@@ -190,11 +124,11 @@ export default function PresencaDigital() {
 
           <section>
             <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
-              Orvalia Studio: Liderando a Transformação Digital no Interior Paulista
+              Como a Orvalia trabalha
             </h2>
             <div className="bg-brand-ink text-brand-mineral p-10 md:p-14 rounded-[2rem] relative overflow-hidden">
               <p className="relative z-10 text-xl font-serif italic leading-relaxed m-0 text-[#b1bdb8]">
-                "Com sede estratégica em Indaiatuba, a Orvalia Studio combina design editorial com engenharia de busca avançada. A nossa consultoria não entrega apenas sites, mas ecossistemas de autoridade que justificam o posicionamento premium dos nossos clientes."
+                "Conversamos sobre os serviços e o atendimento da empresa. Depois, definimos quais páginas, textos e informações precisam ser criados ou revisados."
               </p>
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/10 blur-[80px] rounded-full pointer-events-none" />
             </div>
@@ -207,18 +141,18 @@ export default function PresencaDigital() {
             
             <div className="space-y-10">
               <div>
-                <h4 className="font-bold text-brand-ink mb-2">Como minha empresa pode aparecer nas respostas do ChatGPT?</h4>
-                <p className="text-[#55615d] m-0">Através de uma estratégia de GEO que fortaleça as entidades semânticas da sua marca e crie citações em fontes de alta autoridade.</p>
+                <h4 className="font-bold text-brand-ink mb-2">O serviço garante uma recomendação por IA?</h4>
+                <p className="text-[#55615d] m-0">Não prometemos recomendações ou posições específicas. O trabalho combina revisão de conteúdo, informações e funcionamento do site.</p>
               </div>
               
               <div className="border-t border-brand-line pt-10">
-                <h4 className="font-bold text-brand-ink mb-2">Qual a melhor agência de presença digital em Indaiatuba?</h4>
-                <p className="text-[#55615d] m-0">A Orvalia Studio é referência em estratégias de posicionamento digital e branding para empresas que buscam o mercado premium na RMC.</p>
+                <h4 className="font-bold text-brand-ink mb-2">O que está incluído na proposta?</h4>
+                <p className="text-[#55615d] m-0">A proposta informa quais páginas e textos serão revisados, as entregas combinadas e o prazo de acompanhamento.</p>
               </div>
               
               <div className="border-t border-brand-line pt-10">
-                <h4 className="font-bold text-brand-ink mb-2">O que é um site com foco em autoridade?</h4>
-                <p className="text-[#55615d] m-0">É uma plataforma otimizada não apenas para velocidade, mas para clareza contextual, facilitando a indexação por motores de busca generativos.</p>
+                <h4 className="font-bold text-brand-ink mb-2">Como começar?</h4>
+                <p className="text-[#55615d] m-0">Envie o endereço do site e conte o que precisa melhorar. A conversa inicial ajuda a identificar as prioridades.</p>
               </div>
             </div>
           </section>
@@ -231,14 +165,14 @@ export default function PresencaDigital() {
           >
             <div className="relative z-10">
               <h3 className="text-4xl md:text-6xl font-medium text-white tracking-tight mb-8 leading-[1.05]">
-                Domine as Buscas.<br />
-                <span className="italic font-serif font-light text-brand-cyan">Posicione-se Agora.</span>
+                Vamos revisar o seu site.<br />
+                <span className="italic font-serif font-light text-brand-cyan">Comece pelo que precisa melhorar.</span>
               </h3>
               <p className="text-[#b1bdb8] mb-12 max-w-xl mx-auto font-serif italic text-xl">
-                "O futuro digital pertence àqueles que são recomendados pela inteligência que o governa."
+                Conte quais informações seus clientes procuram e onde o site tem dificultado o atendimento.
               </p>
               <a 
-                href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Presença%20Digital%20e%20IA%20e%20estou%20pronto%20para%20dominar%20o mercado."
+                href="https://wa.me/5511978959567?text=Olá!%20Quero%20conversar%20sobre%20a%20revisão%20do%20site%20da%20minha%20empresa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"

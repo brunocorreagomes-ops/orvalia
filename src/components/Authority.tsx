@@ -31,7 +31,7 @@ export default function Authority() {
               CONSTRUÇÃO <br /> DE <span className="text-gradient">AUTORIDADE.</span>
             </h2>
             <p className="font-serif text-xl md:text-3xl text-brand-secondary italic leading-relaxed font-light max-w-2xl">
-              "Branding não é apenas estética; é uma <span className="text-white not-italic font-medium">arquitetura de percepção</span> que sustenta sua liderança e garante seu retorno digital."
+              "A marca precisa ajudar o cliente a <span className="text-white not-italic font-medium">entender o que sua empresa faz</span> e reconhecer seu trabalho."
             </p>
           </motion.div>
 

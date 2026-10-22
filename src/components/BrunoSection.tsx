@@ -41,16 +41,16 @@ export default function BrunoSection() {
 
             <div className="border-l-2 border-brand-cyan-dark pl-6 my-10">
               <p className="text-xl md:text-2xl font-serif italic text-brand-ink leading-relaxed">
-                “A Orvalia não nasceu para fazer telas bonitas. Nosso ponto de partida é entender como sua empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa.”
+                “Antes de desenhar o site, quero entender o que sua empresa vende, como atende e o que o cliente precisa saber para contratar.”
               </p>
             </div>
 
             <div className="space-y-6 text-[#475553] text-lg leading-relaxed mb-12">
               <p>
-                À frente da Orvalia está <strong>Bruno Correa Gomes</strong>, com mais de 18 anos de trajetória executiva e comercial no setor financeiro. Essa experiência real de mercado orienta cada decisão de negócio, marca e experiência digital no estúdio.
+                À frente da Orvalia está <strong>Bruno Correa Gomes</strong>, com mais de 18 anos de trajetória executiva e comercial no setor financeiro. Essa experiência orienta o planejamento dos projetos e a organização das informações comerciais.
               </p>
               <p>
-                A qualificação técnica é um pilar: com formação de pós-graduação e MBA pela <strong>Fundação Getulio Vargas (FGV)</strong> e a rigorosa certificação <strong>CEA da ANBIMA</strong> (Especialista em Investimentos), o direcionamento estratégico da Orvalia vai muito além do marketing convencional, dialogando diretamente com os resultados financeiros dos clientes.
+                Tem pós-graduação e MBA pela <strong>Fundação Getulio Vargas (FGV)</strong> e certificação <strong>CEA da ANBIMA</strong> (Especialista em Investimentos). Na Orvalia, acompanha o projeto e o contato com cada cliente.
               </p>
             </div>
 

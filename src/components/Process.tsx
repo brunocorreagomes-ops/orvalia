@@ -9,7 +9,7 @@ const steps = [
   {
     num: "02",
     title: "Estratégia",
-    desc: "Definimos posicionamento, narrativa, oferta, arquitetura da página e direção criativa."
+    desc: "Definimos a oferta, os textos, a ordem das seções e a direção visual."
   },
   {
     num: "03",

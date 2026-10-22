@@ -14,14 +14,14 @@ export default function Portfolio() {
         <div className="flex items-center gap-4 mb-6">
           <div className="w-8 h-[2px] bg-brand-cyan-dark" />
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-            Patrimônio Digital
+            Projetos da Orvalia
           </span>
         </div>
         <h1 className="text-5xl md:text-7xl font-sans font-medium text-brand-ink tracking-tight mb-6 leading-[1.05]">
           Nosso <span className="italic font-serif font-light text-[#64706D]">Portfólio.</span>
         </h1>
         <p className="text-[#475553] text-lg max-w-2xl leading-relaxed">
-          Projetos de posicionamento estratégico e presença digital premium para marcas que buscam destacar-se no seu mercado de atuação.
+          Uma seleção de trabalhos de identidade visual, sites e apresentação de serviços.
         </p>
       </div>
 

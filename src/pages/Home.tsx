@@ -76,7 +76,7 @@ export default function Home() {
     <>
       <SEO 
         title="Orvalia Studio | Branding e Sites Estratégicos em Indaiatuba" 
-        description="Estratégia de marca, criação de sites, posicionamento e SEO local para empresas de Indaiatuba e região que precisam elevar sua presença digital."
+        description="Identidade visual, criação de sites e SEO local para empresas de Indaiatuba e região. Conheça os projetos e fale com Bruno sobre sua empresa."
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />

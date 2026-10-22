@@ -176,7 +176,7 @@ export default function ArticleGEO() {
               {[
                 { title: "Falta de Dados Estruturados", desc: "Sem a marcação correta (Schema Markup), a IA não entende quem você é." },
                 { title: "Conteúdo Superficial", desc: "IAs buscam profundidade e utilidade real (EEAT). Textos genéricos são descartados." },
-                { title: "Ausência de Citações Contextuais", desc: "Sua marca precisa estar inserida em uma \"teia de relevância\" no ecossistema de Sorocaba e região." }
+                { title: "Ausência de Citações Contextuais", desc: "Confira se os dados da empresa estão corretos no site, nos perfis comerciais e nos diretórios da região." }
               ].map((item, idx) => (
                 <div key={idx} className="p-8 bg-white/5 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
                   <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">{item.title}</h4>

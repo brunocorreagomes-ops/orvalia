@@ -160,7 +160,7 @@ export default function ArticleEstetica() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { title: "Identidade Visual Minimalista", desc: "Cores sóbrias e tipografia elegante que comunicam segurança e exclusividade." },
-                { title: "Arquitetura de Marca Digital", desc: "Um site que espelha o conforto da sua recepção, focado em clareza e beleza." },
+                { title: "Apresentação da clínica no site", desc: "Fotos da clínica, descrição dos atendimentos e informações para agendar." },
                 { title: "Autoridade Semântica", desc: "Ser a resposta das IAs para buscas como \"Melhor experiência de estética em Indaiatuba\"." }
               ].map((item, idx) => (
                 <div key={idx} className="p-8 bg-white/5 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">

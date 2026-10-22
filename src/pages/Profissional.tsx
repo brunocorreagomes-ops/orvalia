@@ -19,7 +19,7 @@ export default function Profissional() {
             Plano <span className="italic font-serif font-light text-[#64706D] normal-case">Profissional</span>
           </h1>
           <p className="text-[#475553] text-lg leading-relaxed mb-10 md:mb-12 max-w-xl">
-            A solução completa para empresas que buscam liderança regional. Branding estratégico e tecnologia de ponta para traduzir excelência em autoridade digital.
+            Identidade visual e site para apresentar os serviços, os trabalhos e os contatos da empresa.
           </p>
 
           <div className="text-3xl md:text-4xl font-medium text-brand-ink mb-10 md:mb-12 tracking-tight">
@@ -96,7 +96,7 @@ export default function Profissional() {
               <Check className="text-brand-cyan-dark" size={36} strokeWidth={1} />
             </div>
             <h4 className="text-xl font-bold text-brand-ink mb-4">Escalabilidade</h4>
-            <p className="text-[#55615d] text-sm leading-relaxed">Arquitetura de dados preparada para escalar com campanhas e novas páginas futuras.</p>
+            <p className="text-[#55615d] text-sm leading-relaxed">Estrutura que permite adicionar páginas de serviços e campanhas conforme a empresa precisar.</p>
           </div>
         </div>
       </div>

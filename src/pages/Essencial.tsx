@@ -78,7 +78,7 @@ export default function Essencial() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
             { step: "01", title: "Diagnóstico", desc: "Compreendemos o seu público e o valor latente do seu negócio." },
-            { step: "02", title: "Design", desc: "Criamos a arquitetura visual e a narrativa da sua marca." },
+            { step: "02", title: "Design", desc: "Definimos cores, tipografia e textos de apresentação da marca." },
             { step: "03", title: "Desenvolvimento", desc: "Transformamos o design numa interface rápida e funcional." },
             { step: "04", title: "Lançamento", desc: "Publicamos o seu site e realizamos as configurações de SEO base." }
           ].map((item, i) => (

@@ -11,7 +11,7 @@ export default function Footer() {
               <OrvaliaLogo theme="dark" className="w-32 md:w-44 mb-6" />
             </Link>
             <p className="text-[#a9b8b3] text-sm max-w-sm leading-relaxed">
-              Construímos o património digital de empresas que já construíram valor no mundo real.
+              Identidade visual, sites e conteúdo para apresentar sua empresa e facilitar o contato.
             </p>
           </div>
           

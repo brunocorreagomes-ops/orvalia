@@ -11,7 +11,7 @@ export default function ArticleArquitetura() {
     document.title = "Design Estratégico para Escritórios de Arquitetura em Itu e Jundiaí";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Eleve seu escritório de arquitetura ao patamar premium. A Orvalia Studio cria identidades visuais e sites de luxo para arquitetos em Itu e Jundiaí. Descubra o poder do branding estratégico.");
+      metaDescription.setAttribute("content", "Identidade visual e sites para apresentar projetos, serviços e informações de contato de escritórios de arquitetura em Itu e Jundiaí.");
     }
     
     // Add keywords if they exist or create them
@@ -35,7 +35,7 @@ export default function ArticleArquitetura() {
         {
           "@type": "Article",
           "headline": "Design Estratégico para Arquitetos: Consolidando a Autoridade Premium em Itu e Jundiaí",
-          "description": "Eleve seu escritório de arquitetura ao patamar premium. A Orvalia Studio cria identidades visuais e sites de luxo para arquitetos em Itu e Jundiaí.",
+          "description": "Identidade visual e sites para apresentar os projetos e os serviços de escritórios de arquitetura em Itu e Jundiaí.",
           "author": {
             "@type": "Organization",
             "name": "Orvalia Studio"
@@ -47,20 +47,6 @@ export default function ArticleArquitetura() {
           "datePublished": "2026-05-14"
         },
         {
-          "@type": "ProfessionalService",
-          "name": "Escritório de Arquitetura Exemplo",
-          "image": "https://images.unsplash.com/photo-1600607687931-cebf80211ff1?auto=format&fit=crop&q=80&w=1200",
-          "@id": "",
-          "url": "https://orvalia.com.br",
-          "telephone": "+5511978959567",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Itu",
-            "addressRegion": "SP",
-            "addressCountry": "BR"
-          }
-        },
-        {
           "@type": "FAQPage",
           "mainEntity": [
             {
@@ -68,7 +54,7 @@ export default function ArticleArquitetura() {
               "name": "Por que arquitetos precisam de branding?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O branding diferencia o profissional em um mercado saturado, permitindo a cobrança de honorários condizentes com a autoridade percebida."
+                "text": "A identidade visual ajuda a reconhecer o escritório no site, nas propostas e nas apresentações de projeto."
               }
             },
             {
@@ -76,7 +62,7 @@ export default function ArticleArquitetura() {
               "name": "Como a Orvalia Studio ajuda escritórios em Jundiaí?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Criamos identidades visuais exclusivas, sites de alta performance e estratégias de posicionamento que atraem o público AAA."
+                "text": "Criamos identidades visuais e sites com apresentação dos serviços, portfólio e informações de atendimento."
               }
             },
             {
@@ -84,7 +70,7 @@ export default function ArticleArquitetura() {
               "name": "O que é um site otimizado para IA na arquitetura?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "É um site estruturado semânticamente para que motores como Gemini e ChatGPT identifiquem suas especialidades e o recomendem para buscas específicas."
+                "text": "É um site com descrição dos serviços, dados corretos e páginas acessíveis às ferramentas de busca. Isso não garante uma recomendação por IA."
               }
             }
           ]
@@ -147,19 +133,19 @@ export default function ArticleArquitetura() {
 
         <div className="prose prose-invert prose-xl max-w-none text-brand-secondary leading-relaxed space-y-12 font-sans selection:bg-brand-surface selection:text-white">
           <p className="text-xl md:text-2xl font-medium text-brand-text/80 leading-snug">
-            Em cidades marcadas pelo alto padrão e pelo design, como Itu e Jundiaí, um portfólio impecável é apenas o ponto de partida. O que diferencia os escritórios que assinam os grandes projetos é o seu posicionamento de marca. Para o arquiteto, o branding é a moldura que valoriza a obra, transformando o serviço técnico em um objeto de desejo e prestígio.
+            O site de um escritório de arquitetura pode reunir os projetos, as áreas de atuação e as informações para solicitar uma proposta. Fotos acompanhadas de contexto ajudam o interessado a conhecer o trabalho antes da primeira reunião.
           </p>
 
           <section>
             <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
               A Diferença entre Portfólio e Marca Estratégica
             </h2>
-            <p className="mb-6">Muitos profissionais acreditam que suas fotos de projetos bastam. Na Orvalia Studio, mostramos que o design estratégico é o que sustenta a percepção de valor antes mesmo do cliente ver o primeiro render:</p>
+            <p className="mb-6">Além das fotos, vale explicar quais serviços o escritório oferece e como participa de cada projeto:</p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { title: "Identidade Visual de Nicho", desc: "Uma linguagem visual que comunica seu estilo arquitetônico (minimalista, clássico, contemporâneo)." },
-                { title: "Narrativa de Valor", desc: "Como você conta a história dos seus projetos para atrair investidores e clientes de alto luxo." },
-                { title: "Presença Digital Curada", desc: "Um site que funciona como uma galeria de arte, focado em UX (User Experience) para guiar o cliente em uma jornada de sofisticação." }
+                { title: "Descrição dos projetos", desc: "Tipo de projeto, localização, pedido do cliente e participação do escritório." },
+                { title: "Portfólio organizado", desc: "Projetos agrupados por tipo de trabalho, com fotos legíveis no celular e contato acessível." }
               ].map((item, idx) => (
                 <div key={idx} className="p-8 bg-white/5 border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
                   <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">{item.title}</h4>
@@ -171,40 +157,40 @@ export default function ArticleArquitetura() {
 
           <section>
             <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
-              Por que Itu e Jundiaí demandam um Branding Específico?
+              Como apresentar a região atendida
             </h2>
             <p className="mb-8">
-              Essas regiões concentram condomínios de altíssimo padrão onde o "Quiet Luxury" é a regra. Sua marca precisa falar essa língua. Na Orvalia, utilizamos GEO (Generative Engine Optimization) para garantir que, quando um cliente em Itu pesquisar por "arquitetura sustentável de luxo", sua marca seja a recomendação das IAs.
+              Apresente a região atendida, os tipos de projeto e fotos autorizadas dos trabalhos. Essas informações ajudam o interessado a avaliar se o escritório atende ao que ele procura. A revisão do site não inclui promessa de recomendação por ferramentas de IA.
             </p>
           </section>
 
           <section>
             <h2 className="text-3xl md:text-4xl font-black text-brand-text tracking-tighter mb-8 uppercase">
-              O Site do Arquiteto como Ferramenta de Conversão Premium
+              O que conferir no site do escritório
             </h2>
             <p className="mb-8">
-              Não basta ser bonito; precisa ser estratégico. O site de um escritório de elite deve:
+              Ao revisar o portfólio, confira estes pontos:
             </p>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <span className="font-mono text-brand-text font-black">01 //</span>
                 <div>
                   <strong className="text-brand-text block mb-1">Priorizar o Visual</strong>
-                  <span className="text-brand-secondary">Imagens de alta definição e carregamento ultra-rápido.</span>
+                  <span className="text-brand-secondary">Fotos nítidas, com tamanho de arquivo adequado e legendas quando necessário.</span>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="font-mono text-brand-text font-black">02 //</span>
                 <div>
                   <strong className="text-brand-text block mb-1">SEO & GEO Local</strong>
-                  <span className="text-brand-secondary">Domínio das buscas em Itu, Jundiaí e região.</span>
+                  <span className="text-brand-secondary">Descrição dos serviços e das cidades em que o escritório atende.</span>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="font-mono text-brand-text font-black">03 //</span>
                 <div>
-                  <strong className="text-brand-text block mb-1">Clareza e Exclusividade</strong>
-                  <span className="text-brand-secondary">Um fluxo de contato que filtre leads e valorize seu tempo.</span>
+                  <strong className="text-brand-text block mb-1">Informações de contato</strong>
+                  <span className="text-brand-secondary">Um caminho para enviar o pedido, com orientações sobre as informações necessárias.</span>
                 </div>
               </li>
             </ul>
@@ -218,17 +204,17 @@ export default function ArticleArquitetura() {
             <div className="space-y-12">
               <div>
                 <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Por que arquitetos precisam de branding?</h4>
-                <p className="text-brand-secondary">O branding diferencia o profissional em um mercado saturado, permitindo a cobrança de honorários condizentes com a autoridade percebida.</p>
+                <p className="text-brand-secondary">A identidade visual ajuda a reconhecer o escritório no site, nas propostas e nas apresentações de projeto.</p>
               </div>
               
               <div>
                 <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">Como a Orvalia Studio ajuda escritórios em Jundiaí?</h4>
-                <p className="text-brand-secondary">Criamos identidades visuais exclusivas, sites de alta performance e estratégias de posicionamento que atraem o público AAA.</p>
+                <p className="text-brand-secondary">Criamos identidades visuais e sites com apresentação dos serviços, portfólio e informações de atendimento.</p>
               </div>
               
               <div>
                 <h4 className="font-black text-brand-text uppercase text-xs tracking-widest mb-4">O que é um site otimizado para IA na arquitetura?</h4>
-                <p className="text-brand-secondary">É um site estruturado semânticamente para que motores como Gemini e ChatGPT identifiquem suas especialidades e o recomendem para buscas específicas.</p>
+                <p className="text-brand-secondary">É um site com descrição dos serviços, dados corretos e páginas acessíveis às ferramentas de busca. Isso não garante uma recomendação por IA.</p>
               </div>
             </div>
           </section>
@@ -245,7 +231,7 @@ export default function ArticleArquitetura() {
                 <span className="text-gray-300">Fale com a Orvalia.</span>
               </h3>
               <p className="text-brand-secondary mb-12 max-w-xl mx-auto font-serif italic text-lg">
-                "Grandes projetos merecem uma assinatura à altura. Transforme seu escritório em uma marca de prestígio."
+                Converse sobre a identidade visual e o portfólio do seu escritório. A proposta pode incluir textos, organização dos projetos e criação do site.
               </p>
               <a 
                 href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20artigo%20sobre%20Design%20Estratégico%20para%20Arquitetura%20e%20quero%20elevar%20o%20posicionamento%20do%20meu%20escritório."

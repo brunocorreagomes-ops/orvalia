@@ -30,7 +30,7 @@ const articles = [
     territoryId: "sites",
     territoryName: "03 / SITES & DECISÃO",
     title: "Como estruturar um site para ser entendido por pessoas, Google e IA",
-    excerpt: "A engenharia invisível de arquitetura de informação e dados estruturados que faz uma empresa se destacar em buscas e conversões.",
+    excerpt: "Como organizar serviços, títulos, links e informações de contato para facilitar a navegação e a leitura do site.",
     date: "03 Jul 2026",
     readTime: "6 min",
     slug: "/blog/arquitetura-sites-alta-performance-campinas",
@@ -132,7 +132,7 @@ const articles = [
     territoryId: "sites",
     territoryName: "03 / SITES & DECISÃO",
     title: "O que transforma navegação em decisão dentro de um site",
-    excerpt: "Como transformar o site da empresa em uma jornada fluida de decisão, combinando velocidade, prova técnica e clareza.",
+    excerpt: "Como apresentar os serviços, responder às dúvidas e deixar os contatos fáceis de encontrar.",
     date: "17 Abr 2026",
     readTime: "5 min",
     slug: "/blog/site-profissional-conversao"
