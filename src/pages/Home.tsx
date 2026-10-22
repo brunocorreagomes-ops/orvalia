@@ -50,7 +50,7 @@ export default function Home() {
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />
-      {/* 1. HERO */}
+      {/* 1. HERO V3 (Cinematic + Interactive Gap) */}
       <Hero />
 
       {/* 2. O GAP DE PERCEPÇÃO */}
