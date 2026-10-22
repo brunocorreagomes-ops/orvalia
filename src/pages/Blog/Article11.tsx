@@ -139,7 +139,7 @@ export default function Article11() {
             </h2>
             <div className="bg-brand-surface text-white p-10 md:p-16 rounded-[3rem] relative overflow-hidden group">
               <p className="relative z-10 text-xl font-medium leading-relaxed opacity-90">
-                Localizada estrategicamente para atender o eixo Campinas-Indaiatuba, a Orval’IA Studio não é uma agência de posts genéricos. Somos uma célula de estratégia focada em transformar marcas comuns em referências premium. Unimos o rigor do design clássico com a vanguarda das tecnologias de IA para criar ecossistemas digitais que vendem sozinhos.
+                A Orvalia atende empresas de Campinas e Indaiatuba com projetos de identidade visual, conteúdo e sites. O trabalho começa pela definição dos serviços, do público e das informações necessárias para o primeiro contato.
               </p>
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent-light/10 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-1000" />
             </div>

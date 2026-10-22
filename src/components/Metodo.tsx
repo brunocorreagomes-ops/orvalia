@@ -5,25 +5,25 @@ const steps = [
     num: "01",
     title: "Mercado",
     subtitle: "Contexto e concorrência real",
-    desc: "Onde a empresa compete, quais alternativas o cliente considera e que códigos da categoria estão saturados."
+    desc: "Quem são os clientes, quais empresas eles comparam e o que pesa na contratação."
   },
   {
     num: "02",
     title: "Mensagem",
     subtitle: "Clareza e proposta de valor",
-    desc: "O que precisa ser compreendido rapidamente para justificar atenção, confiança e escolha."
+    desc: "O que a empresa oferece, para quem e quais informações o cliente precisa para decidir."
   },
   {
     num: "03",
     title: "Experiência",
     subtitle: "Identidade e interface",
-    desc: "Como a identidade visual, o conteúdo e o comportamento digital traduzem a estratégia em percepção."
+    desc: "Como organizar textos, imagens e navegação para facilitar a consulta aos serviços."
   },
   {
     num: "04",
     title: "Aquisição",
     subtitle: "Jornada comercial e SEO",
-    desc: "Como as buscas, o conteúdo, as páginas indexáveis e os caminhos comerciais transformam interesse em contacto."
+    desc: "Como o cliente encontra o site e quais caminhos levam ao contato."
   }
 ];
 
@@ -46,7 +46,7 @@ export default function Metodo() {
             </h2>
           </div>
           <p className="max-w-[330px] text-[#475553] leading-relaxed text-lg">
-            A Orvalia investiga quatro camadas fundamentais da experiência antes de produzir uma interface ou uma única linha de código.
+            Antes de desenhar o site, conversamos sobre os clientes, a oferta, o conteúdo e a forma de atendimento.
           </p>
         </div>
 

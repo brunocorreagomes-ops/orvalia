@@ -36,7 +36,7 @@ export default function PosicionamentoLocal() {
             </h2>
             
             <p className="text-[#63716a] text-lg leading-relaxed mb-10 max-w-lg">
-              Combinamos a proximidade comercial e a compreensão do contexto regional com um padrão de execução capaz de acompanhar empresas em novos mercados.
+              Atendemos empresas de Indaiatuba, Campinas e região. As reuniões e o acompanhamento do projeto também podem ser feitos a distância.
             </p>
 
             <Link 

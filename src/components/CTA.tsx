@@ -19,13 +19,13 @@ export default function CTA() {
           viewport={{ once: true }}
           className="text-6xl md:text-[8vw] font-sans font-medium tracking-tight leading-[0.94] my-10 md:my-16"
         >
-          Seu negócio merece <br />
-          <span className="italic font-serif font-light text-brand-cyan">visible.</span>
+          Vamos conversar <br />
+          <span className="italic font-serif font-light text-brand-cyan">sobre o seu projeto.</span>
         </motion.h2>
 
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 border-b border-[#56615d] pb-24">
           <p className="max-w-[520px] text-[#b1bdb8] text-lg md:text-xl leading-relaxed">
-            O primeiro passo não é comprar um novo site. É identificar onde a percepção, a clareza e a conversão estão abaixo do potencial do seu negócio.
+            Conte como sua empresa funciona e o que precisa melhorar na marca ou no site. A conversa inicial ajuda a definir o escopo do trabalho.
           </p>
           
           <a 

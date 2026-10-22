@@ -9,7 +9,7 @@ export default function ArticleIdentidadeVisualPremium() {
     <article className="min-h-screen bg-brand-bg text-brand-text pt-40 pb-20 px-8 md:px-24">
       <SEO 
         title="Design de Alto Padrão para Profissionais Liberais | Orvalia Studio"
-        description="Entenda como o design de marcas estratégico e a arquitetura visual de plataformas digitais consolidam a autoridade de médicos, advogados e arquitetos de elite na região de Jundiaí e Campinas."
+        description="Como apresentar a formação, os serviços e os contatos de médicos, advogados e arquitetos no site e na identidade visual."
         canonical="https://orvalia.com.br/blog/identidade-visual-profissionais-liberais-premium"
       />
       
@@ -26,7 +26,7 @@ export default function ArticleIdentidadeVisualPremium() {
             <span className="text-[10px] text-brand-text font-mono uppercase tracking-[0.2em]">Personal Branding</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-brand-text tracking-tighter mb-8 leading-[1.1] uppercase">
-            Arquitetura da Autoridade Visual: O Papel do Design de Alto Padrão no Posicionamento Digital de Profissionais Liberais na Região de Jundiaí e Campinas
+            Identidade visual e site para profissionais liberais: o que apresentar antes do primeiro contato
           </h1>
         </header>
         <motion.div
@@ -35,7 +35,7 @@ export default function ArticleIdentidadeVisualPremium() {
           transition={{ delay: 0.3 }}
           className="mb-16 w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
         >
-          <BlogImage src="https://i.ibb.co/KpYfYybp/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp" alt="Arquitetura da Autoridade Visual para Profissionais Liberais" caption="O visual que transmite extrema autoridade" />
+          <BlogImage src="https://i.ibb.co/KpYfYybp/02-arquitetura-da-autoridade-visual-para-profissionais-liberais.webp" alt="Identidade visual para profissionais liberais" caption="Cores, tipografia e informações de atendimento" />
         </motion.div>
 
         <motion.div 
@@ -62,7 +62,7 @@ export default function ArticleIdentidadeVisualPremium() {
           </p>
           <ul className="list-disc pl-6 mb-8">
             <li className="mb-4"><strong>Segurança Institucional:</strong> A solidez visual elimina a desconfiança inicial.</li>
-            <li className="mb-4"><strong>Precisão Técnica:</strong> Um ecossistema visual meticulosamente planejado reflete o rigor do profissional em sua própria prática técnica.</li>
+            <li className="mb-4"><strong>Precisão Técnica:</strong> Cores, fontes e imagens consistentes ajudam a reconhecer o mesmo profissional em diferentes canais.</li>
             <li className="mb-4"><strong>Exclusividade:</strong> Identidades personalizadas distanciam o profissional da vala comum das identidades prontas de bancos de imagens.</li>
           </ul>
 
@@ -101,7 +101,7 @@ export default function ArticleIdentidadeVisualPremium() {
           <div className="mt-20 p-12 bg-brand-surface text-white rounded-3xl text-center">
             <h3 className="text-3xl font-black uppercase tracking-tight mb-6 font-sans">Posicionamento de Elite</h3>
             <p className="text-brand-secondary mb-8 font-serif italic max-w-2xl mx-auto">
-              Sua imagem digital atual reflete a excelência da sua trajetória profissional? Desenvolva com a Orvalia Studio um ecossistema de marca e plataforma web à altura do seu legado.
+              Quer revisar como seus serviços aparecem no site? Converse com a Orvalia sobre identidade visual, conteúdo e informações de atendimento.
             </p>
             <a 
               href="https://wa.me/5511978959567" 

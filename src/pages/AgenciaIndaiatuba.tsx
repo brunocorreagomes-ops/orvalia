@@ -227,7 +227,7 @@ export default function AgenciaIndaiatuba() {
                   </p>
 
                   <p className="text-[#475553] text-lg leading-relaxed">
-                    Com MBA e pós-graduações pela renomada <strong>Fundação Getulio Vargas (FGV)</strong> e detentor da certificação <strong>CEA (ANBIMA)</strong> de especialista em investimentos, unifica a visão analítica de negócios ao refinamento estético, estruturando ecossistemas digitais que impulsionam resultados.
+                    Com MBA e pós-graduações pela <strong>Fundação Getulio Vargas (FGV)</strong> e certificação <strong>CEA (ANBIMA)</strong> de especialista em investimentos, usa sua experiência comercial para planejar os projetos de marca e site.
                   </p>
                 </div>
 
@@ -347,7 +347,7 @@ export default function AgenciaIndaiatuba() {
                   </div>
                   <h4 className="text-2xl font-medium mb-4">Precision Editorial</h4>
                   <p className="text-brand-mist text-base leading-relaxed mb-10">
-                    O padrão Orvalia Studio. Desenho estratégico, arquitetura de marca limpa e posicionamento para empresas de Indaiatuba e região que não aceitam parecer genéricas.
+                    Identidade visual, textos e sites para apresentar os serviços de empresas de Indaiatuba e região.
                   </p>
                   <a 
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20seção%20sobre%20Indaiatuba%20e%20gostaria%20de%20solicitar%20um%20diagnóstico%20da%20presença%20digital%20da%20minha%20empresa."

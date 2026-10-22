@@ -32,7 +32,7 @@ const plans = [
     name: "360° Elite",
     price: "R$ 6.800",
     period: "/mês",
-    focus: "ECOSSISTEMA TOTAL",
+    focus: "ACOMPANHAMENTO COMPLETO",
     features: ["Comunicação Omnichannel", "Produção de Vídeo Mensal", "SEO Técnico Contínuo", "Growth Hacking Estratégico"],
     id: "04"
   }

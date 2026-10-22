@@ -19,7 +19,7 @@ export default function Evolucao() {
             Plano <span className="italic font-serif font-light text-[#94a7a3] normal-case">Evolução</span>
           </h1>
           <p className="text-[#a9b8b3] text-lg leading-relaxed mb-10 md:mb-12 max-w-xl">
-            Uma parceria estratégica contínua. Não é apenas um projeto, é a gestão integral do seu ecossistema digital para empresas que exigem excelência técnica e conversão.
+            Acompanhamento contínuo para revisar o conteúdo, atualizar o site e organizar as próximas melhorias.
           </p>
 
           <div className="text-3xl md:text-4xl font-medium text-white mb-10 md:mb-12 tracking-tight">
@@ -38,7 +38,7 @@ export default function Evolucao() {
           <div className="p-10 md:p-12 border border-[#23312e] bg-transparent rounded-[2rem]">
             <h3 className="text-xl md:text-2xl font-medium text-white mb-8 flex items-center gap-4 tracking-tight">
               <Globe size={24} className="text-brand-cyan" strokeWidth={1.5} />
-              O Ecossistema
+              O acompanhamento
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {[

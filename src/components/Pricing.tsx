@@ -37,7 +37,7 @@ const paths = [
     focus: "Autoridade & Presença Local",
     desc: "Desenvolvimento sob medida projetado para posicionar sua marca com destaque e alta competitividade em buscas locais e orgânicas do Google.",
     features: [
-      "Arquitetura robusta estruturada",
+      "Páginas organizadas por serviço",
       "SEO local e regional nativo integrado",
       "Velocidade ultra-rápida (Web Vitals)",
       "Integrações de contato inteligentes"

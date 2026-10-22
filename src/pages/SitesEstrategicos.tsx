@@ -84,7 +84,7 @@ export default function SitesEstrategicos() {
                   ele está <span className="italic font-serif font-light text-[#64706D]">a custar-lhe dinheiro.</span>
                 </h1>
                 <p className="text-xl text-[#475553] leading-relaxed max-w-2xl mb-12">
-                  Criamos sites em Indaiatuba que não só parecem profissionais. Eles aparecem no Google, transmitem autoridade e transformam visitantes em clientes todos os dias.
+                  Criamos sites em Indaiatuba com informações sobre os serviços, navegação para celular e caminhos diretos para entrar em contato.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <a 
@@ -242,8 +242,8 @@ export default function SitesEstrategicos() {
                   "Site profissional otimizado para SEO",
                   "Design editorial alinhado ao posicionamento",
                   "Integração direta com WhatsApp e captura de leads",
-                  "Alta performance (carregamento em milissegundos)",
-                  "Arquitetura escalável para crescimento"
+                  "Revisão do carregamento e do tamanho das imagens",
+                  "Possibilidade de adicionar serviços e novas páginas"
                 ].map((item, i) => (
                   <motion.div
                     key={i}
