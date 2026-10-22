@@ -1,105 +1,75 @@
 import { motion } from "framer-motion";
 
-export default function Metodo() {
-  const camadas = [
-    {
-      num: "01",
-      title: "MERCADO",
-      subtitle: "Contexto & Concorrência Real",
-      desc: "Onde sua empresa realmente compete e contra quais alternativas o cliente compara você. Identificamos os padrões visuais saturados da sua categoria para diferenciar sua marca do ruído comum."
-    },
-    {
-      num: "02",
-      title: "MENSAGEM",
-      subtitle: "Clareza & Proposta de Valor",
-      desc: "O que precisa ser entendido rapidamente para justificar atenção, confiança e escolha. Eliminamos jargões vazios para articular exatamente a competência técnica e o valor entregue."
-    },
-    {
-      num: "03",
-      title: "EXPERIÊNCIA",
-      subtitle: "Identidade, Interface & Comportamento",
-      desc: "Como identidade, conteúdo, interface e comportamento transformam estratégia em percepção. Cada escolha tipográfica, espaçamento e tempo de carregamento comunica autoridade."
-    },
-    {
-      num: "04",
-      title: "AQUISIÇÃO",
-      subtitle: "Jornada Comercial & SEO Local",
-      desc: "Como busca, conteúdo, páginas e caminhos comerciais aproximam intenção de contato. Estruturamos a navegação para conduzir a decisão do cliente sem barreiras."
-    }
-  ];
+const steps = [
+  {
+    num: "01",
+    title: "Mercado",
+    subtitle: "Contexto e concorrência real",
+    desc: "Onde a empresa compete, quais alternativas o cliente considera e que códigos da categoria estão saturados."
+  },
+  {
+    num: "02",
+    title: "Mensagem",
+    subtitle: "Clareza e proposta de valor",
+    desc: "O que precisa ser compreendido rapidamente para justificar atenção, confiança e escolha."
+  },
+  {
+    num: "03",
+    title: "Experiência",
+    subtitle: "Identidade e interface",
+    desc: "Como a identidade visual, o conteúdo e o comportamento digital traduzem a estratégia em percepção."
+  },
+  {
+    num: "04",
+    title: "Aquisição",
+    subtitle: "Jornada comercial e SEO",
+    desc: "Como as buscas, o conteúdo, as páginas indexáveis e os caminhos comerciais transformam interesse em contacto."
+  }
+];
 
+export default function Metodo() {
   return (
-    <section id="metodo" className="py-24 md:py-36 bg-brand-bg relative z-10 border-b border-white/5">
+    <section id="metodo" className="py-24 md:py-32 bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
       <div className="container mx-auto px-6">
         
-        {/* Header */}
-        <div className="max-w-4xl mb-16 md:mb-24 space-y-6">
-          <div className="flex items-center gap-3">
-            <span className="w-2 h-2 bg-brand-red" />
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-red font-semibold">
-              MÉTODO ESTRATÉGICO
-            </span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16 md:mb-20">
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                03 / Método Estratégico
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-sans font-medium tracking-tight leading-[1.05] max-w-2xl">
+              Antes do desenho, <br />
+              <span className="italic font-serif font-light text-[#64706D]">a decisão.</span>
+            </h2>
           </div>
-
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[1.02] tracking-tighter uppercase">
-            ANTES DE DESENHAR, <br />
-            <span className="text-brand-secondary">PRECISAMOS DESCOBRIR O QUE ESTÁ SENDO MAL PERCEBIDO.</span>
-          </h2>
-
-          <p className="text-lg md:text-xl text-brand-secondary font-sans leading-relaxed max-w-2xl">
-            A Orvalia investiga quatro camadas da experiência antes de produzir qualquer linha de código ou tela.
+          <p className="max-w-[330px] text-[#475553] leading-relaxed text-lg">
+            A Orvalia investiga quatro camadas fundamentais da experiência antes de produzir uma interface ou uma única linha de código.
           </p>
         </div>
 
-        {/* 4 Layers Architectural Grid */}
-        <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-px bg-white/10 border border-white/10">
-          {camadas.map((item, idx) => (
-            <motion.div 
-              key={item.num}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-brand-line pt-8 gap-y-12">
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-8 md:p-10 bg-brand-bg flex flex-col justify-between space-y-8 relative group hover:bg-neutral-900/60 transition-colors"
+              transition={{ delay: i * 0.1 }}
+              className="lg:border-r border-brand-line lg:pr-8 lg:mr-8 last:border-r-0 last:mr-0 last:pr-0"
             >
-              <div className="space-y-6">
-                <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                  <span className="font-mono text-xs text-brand-red font-bold tracking-widest">
-                    CAMADA {item.num}
-                  </span>
-                  <span className="w-2 h-2 bg-white/20 group-hover:bg-brand-red transition-colors" />
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-sans font-black text-white tracking-tight uppercase mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="font-mono text-[10px] text-brand-secondary uppercase tracking-widest font-semibold">
-                    {item.subtitle}
-                  </p>
-                </div>
-
-                <p className="text-sm text-brand-secondary leading-relaxed font-sans font-normal">
-                  {item.desc}
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-brand-secondary/60 uppercase tracking-widest">
-                <span>FASE {idx + 1} DE 4</span>
-                <span className="group-hover:text-white transition-colors">DIAGNÓSTICO</span>
-              </div>
+              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#53625d] block mb-12">
+                {step.num} / Camada
+              </span>
+              <h3 className="text-2xl font-medium tracking-tight mb-2">{step.title}</h3>
+              <h4 className="text-xs font-bold text-[#75807d] mb-5 uppercase tracking-widest">{step.subtitle}</h4>
+              <p className="text-[#67716e] text-sm leading-relaxed">
+                {step.desc}
+              </p>
             </motion.div>
           ))}
-        </div>
-
-        {/* Method Conclusion */}
-        <div className="mt-12 text-center p-8 bg-neutral-900/50 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-left font-mono text-xs text-brand-secondary uppercase tracking-widest">
-            PROCESSO ANÁLITICO PROPRIETÁRIO ORVALIA STUDIO
-          </div>
-          <div className="text-xl md:text-2xl font-sans font-black text-white uppercase tracking-tight">
-            SÓ ENTÃO COMECAMOS O DESIGN.
-          </div>
         </div>
 
       </div>
