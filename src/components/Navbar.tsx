@@ -1,170 +1,67 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Instagram } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import OrvaliaLogo from "./OrvaliaLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { pathname } = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isMenuOpen]);
-
-  const navLinks = [
-    { name: "O Gap", href: "/#gap-percepcao", id: "01" },
-    { name: "Cases", href: "/#cases", id: "02" },
-    { name: "Método", href: "/#metodo", id: "03" },
-    { name: "Atuação", href: "/#formas-trabalhar", id: "04" },
-    { name: "Liderança", href: "/#autoridade", id: "05" },
-    { name: "Indaiatuba", href: "/branding", id: "06", isLink: true },
-    { name: "Blog", href: "/blog", id: "07", isLink: true },
-  ];
-
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
-        isMenuOpen 
-          ? "py-4 bg-brand-bg border-b border-white/10" 
-          : isScrolled 
-            ? "py-4 bg-brand-bg/95 backdrop-blur-md border-b border-white/10 shadow-xl" 
-            : "py-6 bg-transparent"
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-brand-mineral/90 backdrop-blur-md border-b border-brand-line" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center relative z-[110]">
-        
-        {/* Brand Logo */}
-        <Link to="/" className="group flex items-center gap-3 relative" onClick={() => setIsMenuOpen(false)}>
-          <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-black tracking-tighter text-white uppercase block leading-none">
-              ORVALIA
-            </span>
-            <span className="font-mono text-[8px] uppercase tracking-[0.3em] text-brand-red font-bold">
-              ESTRUTURA DE PERCEPÇÃO
-            </span>
-          </div>
+      <div className="container mx-auto px-6 h-[90px] flex items-center justify-between">
+        <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+          {/* Se a página rolar, o menu fica com fundo claro, logo a cor da fonte muda */}
+          <OrvaliaLogo className="w-40 md:w-44" theme={isScrolled ? "light" : "dark"} />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
-          <div className="flex items-center gap-6">
-            {navLinks.map((link) => (
-              <div key={link.name} className="flex flex-col items-start">
-                {link.isLink ? (
-                  <Link 
-                    to={link.href}
-                    className={`text-xs font-semibold tracking-wider transition-colors ${pathname === link.href ? 'text-brand-red' : 'text-brand-secondary hover:text-white'}`}
-                  >
-                    {link.name}
-                  </Link>
-                ) : (
-                  <a 
-                    href={link.href}
-                    className="text-xs font-semibold tracking-wider text-brand-secondary hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="/#gap-percepcao" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>O Gap</a>
+          <a href="/#cases" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Trabalhos</a>
+          <a href="/#metodo" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Método</a>
+          <a href="/#autoridade" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Liderança</a>
+          <Link to="/blog" className={`text-xs font-semibold transition-colors ${isScrolled ? 'text-brand-muted hover:text-brand-ink' : 'text-white/70 hover:text-white'}`}>Inteligência</Link>
+          
           <a 
-            href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
+            href="https://wa.me/5511978959567" 
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-brand-red hover:bg-red-600 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0"
+            className={`ml-4 pb-1 border-b text-xs font-bold flex items-center gap-2 hover:opacity-70 transition-opacity ${isScrolled ? 'border-brand-ink text-brand-ink' : 'border-white text-white'}`}
           >
-            Mapear meu gap
+            Mapear meu gap <span>↗</span>
           </a>
-        </div>
+        </nav>
 
         {/* Mobile Toggle */}
-        <div className="flex items-center gap-3 lg:hidden">
-          <a 
-            href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-brand-red text-white text-[9px] font-black uppercase tracking-widest"
-          >
-            Mapear gap
-          </a>
-          <button 
-            className="w-9 h-9 flex items-center justify-center text-white bg-white/5 border border-white/10"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-          >
-            {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
-        </div>
+        <button 
+          className={`md:hidden w-11 h-11 border flex items-center justify-center ${isScrolled ? 'border-brand-line text-brand-ink' : 'border-white/20 text-white'}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? "×" : "☰"}
+        </button>
       </div>
 
-      {/* Mobile Drawer */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-brand-bg z-40 lg:hidden flex flex-col pt-24 px-8 pb-12 overflow-y-auto"
-          >
-            <div className="flex flex-col gap-6 my-auto">
-              {navLinks.map((link) => (
-                <div key={link.name} className="border-b border-white/10 pb-4">
-                  {link.isLink ? (
-                    <Link 
-                      to={link.href}
-                      className="text-2xl font-black uppercase tracking-tight text-white hover:text-brand-red"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <a 
-                      href={link.href}
-                      className="text-2xl font-black uppercase tracking-tight text-white hover:text-brand-red"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </a>
-                  )}
-                </div>
-              ))}
-
-              <div className="pt-4">
-                <a 
-                  href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-4 bg-brand-red text-white font-black text-xs uppercase tracking-widest flex items-center justify-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Mapear meu gap de percepção
-                </a>
-              </div>
-            </div>
-
-            <div className="pt-8 border-t border-white/10 flex justify-between items-center text-brand-secondary font-mono text-[10px] uppercase">
-              <span>Indaiatuba / SP</span>
-              <span>© 2026 ORVALIA STUDIO</span>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-[90px] left-0 right-0 h-[calc(100dvh-90px)] bg-brand-mineral border-t border-brand-line p-8 flex flex-col gap-6 overflow-y-auto">
+          <a href="/#gap-percepcao" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-brand-ink border-b border-brand-line pb-4">O Gap</a>
+          <a href="/#cases" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-brand-ink border-b border-brand-line pb-4">Trabalhos</a>
+          <a href="/#metodo" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-brand-ink border-b border-brand-line pb-4">Método</a>
+          <a href="/#autoridade" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-brand-ink border-b border-brand-line pb-4">Liderança</a>
+          <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-brand-ink border-b border-brand-line pb-4">Inteligência</Link>
+          <a href="https://wa.me/5511978959567" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-brand-cyan-dark mt-4">Mapear meu gap ↗</a>
+        </div>
+      )}
+    </header>
   );
 }
