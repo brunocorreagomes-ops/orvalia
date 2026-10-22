@@ -1,45 +1,44 @@
 import SEO from "../components/SEO";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, MessageSquare, Target, Zap, TrendingUp, BarChart3, Search, Clock } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Search, Target, Zap, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { num: "Foco", label: "Presença digital mais clara, profissional e preparada para conversão" },
-  { num: "Atração", label: "Estrutura pensada para atrair contatos mais alinhados ao seu negócio" }
+  { num: "Foco", label: "Presença digital mais clara, profissional e preparada para conversão." },
+  { num: "Atração", label: "Estrutura pensada para atrair contatos mais alinhados ao seu negócio." }
 ];
 
 const problems = [
-  "Você busca seu serviço e sua empresa não aparece",
-  "Seu site não gera mensagens no WhatsApp",
-  "Clientes confiam mais no Instagram do que no seu site",
-  "Você investe em tráfego, mas não converte"
+  "Você busca o seu serviço e a sua empresa não aparece.",
+  "O seu site não gera mensagens no WhatsApp.",
+  "Os clientes confiam mais no Instagram do que no seu site.",
+  "Você investe em tráfego, mas não converte."
 ];
 
 const solutions = [
   {
     icon: Search,
     title: "SEO desde a base",
-    desc: "Estrutura pensada para ranquear no Google desde o primeiro dia."
+    desc: "Estrutura desenhada para indexar e ranquear no Google desde o primeiro dia."
   },
   {
     icon: Target,
     title: "Copy estratégica",
-    desc: "Textos que guiam o usuário e aumentam conversão."
+    desc: "Textos de alta precisão que guiam o utilizador e aumentam a conversão."
   },
   {
     icon: Zap,
     title: "UX focada em resultado",
-    desc: "Cada elemento existe para gerar ação."
+    desc: "Cada elemento, espaço e contraste existe com a função de gerar uma ação."
   }
 ];
 
 const steps = [
-  { num: "01", title: "Diagnóstico", desc: "Análise do seu negócio e concorrência." },
+  { num: "01", title: "Diagnóstico", desc: "Análise do negócio e concorrência real." },
   { num: "02", title: "Estratégia", desc: "Definição de posicionamento e estrutura." },
-  { num: "03", title: "Produção", desc: "Design, desenvolvimento e copy." },
-  { num: "04", title: "Lançamento", desc: "Publicação + suporte inicial." }
+  { num: "03", title: "Produção", desc: "Design editorial, desenvolvimento e copy." },
+  { num: "04", title: "Lançamento", desc: "Publicação, indexação e suporte inicial." }
 ];
-
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -55,11 +54,16 @@ const serviceSchema = {
 
 export default function SitesEstrategicos() {
   return (
-    <div className="min-h-screen bg-brand-bg pt-32">
+    <div className="min-h-screen bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink pt-32">
+      <SEO 
+        title="Criação de Sites e Landing Pages | Orvalia Studio"
+        description="Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão em Indaiatuba."
+        canonical="https://orvalia.com.br/sites-estrategicos"
+        schema={serviceSchema}
+      />
+
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-        
         <div className="container mx-auto px-6 relative z-10">
           <div className="dna-grid gap-12 items-center">
             <div className="col-span-4 lg:col-span-10">
@@ -68,33 +72,37 @@ export default function SitesEstrategicos() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-6 block">
-                  Indaiatuba · RMC Campinas
-                </span>
-                <h1 className="responsive-title font-sans font-black text-white leading-[1.1] md:leading-[0.95] tracking-tight md:tracking-tighter uppercase mb-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                    Indaiatuba · RMC Campinas
+                  </span>
+                </div>
+                
+                <h1 className="text-5xl md:text-7xl lg:text-[6vw] font-sans font-medium leading-[0.95] tracking-tight mb-8">
                   Se o seu site não gera clientes, <br />
-                  ele está <span className="text-gradient">custando dinheiro.</span>
+                  ele está <span className="italic font-serif font-light text-[#64706D]">a custar-lhe dinheiro.</span>
                 </h1>
-                <p className="font-serif text-2xl text-brand-secondary italic leading-relaxed max-w-2xl mb-12">
+                <p className="text-xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   Criamos sites em Indaiatuba que não só parecem profissionais. Eles aparecem no Google, transmitem autoridade e transformam visitantes em clientes todos os dias.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <a 
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:" 
+                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site." 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-10 py-5 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-all text-center flex items-center justify-center gap-3"
+                    className="px-10 py-5 bg-brand-ink text-brand-warm rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
                   >
-                Diagnóstico Gratuito
-              </a>
-                  <a 
-                    href="/portfolio/" 
-                    className="px-10 py-5 bg-white/5 text-white border border-white/10 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all text-center"
+                    Diagnóstico Gratuito
+                  </a>
+                  <Link 
+                    to="/portfolio/" 
+                    className="px-10 py-5 bg-transparent text-brand-ink border border-brand-line rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors text-center"
                   >
                     Ver cases
-                  </a>
+                  </Link>
                 </div>
-                <p className="mt-8 font-mono text-[10px] text-brand-secondary/60 uppercase tracking-widest italic">
+                <p className="mt-10 font-mono text-[10px] text-[#64706D] font-bold uppercase tracking-widest">
                   Projetos Autorais · Foco em Percepção de Valor · Atendimento na Região
                 </p>
               </motion.div>
@@ -106,19 +114,16 @@ export default function SitesEstrategicos() {
                   key={i}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + i * 0.1 }}
-                  className="p-10 rounded-[3rem] glass-premium border border-white/5 relative overflow-hidden group text-left"
+                  transition={{ delay: 0.3 + i * 0.1 }}
+                  className="p-8 md:p-10 rounded-[2rem] bg-brand-warm border border-brand-line relative overflow-hidden group text-left"
                 >
-                  <div className="relative z-10">
-                    <div className="text-2xl font-black text-white uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-brand-accent-light" />
-                      {stat.num}
-                    </div>
-                    <div className="text-sm text-brand-secondary/80 leading-relaxed font-sans">
-                      {stat.label}
-                    </div>
+                  <div className="text-xl font-medium text-brand-ink tracking-tight mb-3 flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-brand-cyan-dark" />
+                    {stat.num}
                   </div>
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-brand-accent-light/5 blur-3xl rounded-full group-hover:scale-150 transition-transform duration-700" />
+                  <div className="text-sm text-[#55615d] leading-relaxed">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -127,15 +132,15 @@ export default function SitesEstrategicos() {
       </section>
 
       {/* Problema */}
-      <section className="py-24 bg-white/[0.02] border-y border-white/5">
+      <section className="py-24 bg-brand-warm border-y border-brand-line">
         <div className="container mx-auto px-6">
           <div className="dna-grid gap-12">
             <div className="col-span-4 lg:col-span-6">
-              <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase mb-8">
-                A maioria dos <br /> <span className="italic font-serif font-light text-brand-secondary">sites não funciona.</span>
+              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+                A maioria dos sites <br /> <span className="italic font-serif font-light text-[#64706D]">não funciona.</span>
               </h2>
-              <p className="text-xl text-brand-secondary leading-relaxed mb-12">
-                Eles são bonitos. Mas não aparecem no Google, não passam confiança e não geram clientes.
+              <p className="text-lg text-[#475553] leading-relaxed mb-12">
+                Eles são bonitos. Mas não indexam no Google, não transmitem confiança e não geram contactos comerciais reais.
               </p>
             </div>
             <div className="col-span-4 lg:col-span-6">
@@ -147,10 +152,10 @@ export default function SitesEstrategicos() {
                     initial={{ opacity: 0, x: 20 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex gap-4 items-start p-6 rounded-2xl bg-white/5 border border-white/5"
+                    className="flex gap-5 items-start p-6 rounded-2xl bg-brand-mineral border border-brand-line"
                   >
-                    <div className="mt-1 w-2 h-2 rounded-full bg-brand-accent-light shrink-0" />
-                    <span className="text-lg text-white font-medium">{prob}</span>
+                    <div className="mt-2 w-2 h-2 rounded-full bg-brand-cyan-dark shrink-0" />
+                    <span className="text-lg text-brand-ink font-medium">{prob}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -159,34 +164,39 @@ export default function SitesEstrategicos() {
         </div>
       </section>
 
-      {/* Quebra de Crença */}
-      <section className="py-32 relative text-center overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
+      {/* Quebra de Crença (Deep Ink Contrast) */}
+      <section className="py-32 bg-brand-ink text-brand-mineral text-center">
+        <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase mb-8">
-              Um site não é design. <br /> É um <span className="text-gradient">sistema de aquisição.</span>
+            <div className="flex justify-center gap-2 mb-8">
+              <span className="block w-2.5 h-2.5 rounded-full bg-brand-cyan"></span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+              Um site não é design. <br /> É um <span className="italic font-serif font-light text-brand-cyan">sistema de aquisição.</span>
             </h2>
-            <p className="text-2xl text-brand-secondary font-serif italic max-w-2xl mx-auto leading-relaxed">
-              Um site precisa ser encontrado, convencer e converter. Sem isso, ele é só um cartão de visita caro.
+            <p className="text-xl md:text-2xl text-[#b1bdb8] font-serif italic max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-cyan pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+              Um site precisa de ser encontrado, de convencer e de converter. Sem isso, é apenas um cartão de visita caro e ineficaz.
             </p>
           </motion.div>
         </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-accent-light/5 blur-[150px] rounded-full pointer-events-none" />
       </section>
 
       {/* Solução */}
-      <section className="py-24 border-t border-white/5">
+      <section className="py-24 bg-brand-mineral border-b border-brand-line">
         <div className="container mx-auto px-6">
           <div className="dna-grid mb-20">
             <div className="col-span-4 lg:col-span-8">
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-accent-light mb-6 block">Como resolvemos isso</span>
-              <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase">
-                Sites que trabalham <br /> <span className="italic font-serif font-light text-brand-secondary">para sua empresa.</span>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">Como resolvemos isso</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
+                Sites que trabalham <br /> <span className="italic font-serif font-light text-[#64706D]">para a sua empresa.</span>
               </h2>
             </div>
           </div>
@@ -199,13 +209,13 @@ export default function SitesEstrategicos() {
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="col-span-4 lg:col-span-4 p-10 rounded-[3rem] glass-premium border border-white/5 hover:border-brand-accent-light/30 transition-all duration-500 group"
+                className="col-span-4 lg:col-span-4 p-10 rounded-[2rem] bg-brand-warm border border-brand-line"
               >
-                <div className="w-14 h-14 rounded-2xl bg-brand-accent-light/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <sol.icon className="text-brand-accent-light" size={28} />
+                <div className="mb-8">
+                  <sol.icon className="text-brand-cyan-dark" size={32} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight">{sol.title}</h3>
-                <p className="text-brand-secondary leading-relaxed italic">{sol.desc}</p>
+                <h3 className="text-2xl font-medium text-brand-ink mb-4 tracking-tight">{sol.title}</h3>
+                <p className="text-[#55615d] leading-relaxed">{sol.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -213,16 +223,16 @@ export default function SitesEstrategicos() {
       </section>
 
       {/* Entregas */}
-      <section className="py-24 bg-white/[0.02] border-t border-white/5">
+      <section className="py-24 bg-brand-warm border-b border-brand-line">
         <div className="container mx-auto px-6">
           <div className="dna-grid gap-12 items-center">
             <div className="col-span-4 lg:col-span-5">
-              <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase mb-6">
-                O que você <br /> <span className="italic font-serif font-light text-brand-secondary">recebe.</span>
+              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+                O que você <br /> <span className="italic font-serif font-light text-[#64706D]">recebe.</span>
               </h2>
-              <div className="p-8 rounded-[2rem] border border-brand-accent-light/20 bg-brand-accent-light/5 italic">
-                <p className="text-xl text-brand-accent-light leading-relaxed">
-                  “Enquanto outras agências entregam apenas layout, nós entregamos <span className="font-bold underline decoration-brand-accent-light/30">posicionamento estratégico e clareza comercial.</span>”
+              <div className="border-l-2 border-brand-cyan-dark pl-6">
+                <p className="text-xl text-brand-ink font-serif italic leading-relaxed">
+                  “Enquanto outras agências entregam apenas layout, nós entregamos posicionamento estratégico e clareza comercial.”
                 </p>
               </div>
             </div>
@@ -230,10 +240,10 @@ export default function SitesEstrategicos() {
               <div className="space-y-4">
                 {[
                   "Site profissional otimizado para SEO",
-                  "Design alinhado ao posicionamento",
-                  "Integração com WhatsApp e leads",
-                  "Alta performance (carregamento rápido)",
-                  "Estrutura pronta para crescimento"
+                  "Design editorial alinhado ao posicionamento",
+                  "Integração direta com WhatsApp e captura de leads",
+                  "Alta performance (carregamento em milissegundos)",
+                  "Arquitetura escalável para crescimento"
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -241,10 +251,10 @@ export default function SitesEstrategicos() {
                     initial={{ opacity: 0, x: -20 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-6 p-6 rounded-2xl bg-brand-bg border border-white/5 hover:border-brand-accent-light/20 transition-all"
+                    className="flex items-center gap-6 p-6 rounded-2xl bg-brand-mineral border border-brand-line hover:border-brand-ink transition-colors"
                   >
-                    <CheckCircle2 className="text-brand-accent-light shrink-0" size={24} />
-                    <span className="text-lg text-white font-medium">{item}</span>
+                    <CheckCircle2 className="text-brand-cyan-dark shrink-0" size={24} strokeWidth={1.5} />
+                    <span className="text-lg text-brand-ink font-medium">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -254,15 +264,16 @@ export default function SitesEstrategicos() {
       </section>
 
       {/* Processo */}
-      <section className="py-24 border-t border-white/5">
+      <section className="py-24 bg-brand-mineral border-b border-brand-line">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase">
-              Como <span className="italic font-serif font-light text-brand-secondary">funciona.</span>
+          <div className="flex flex-col items-center text-center mb-20">
+            <div className="w-8 h-[2px] bg-brand-cyan-dark mb-6" />
+            <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
+              Como <span className="italic font-serif font-light text-[#64706D]">funciona.</span>
             </h2>
           </div>
 
-          <div className="dna-grid gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
@@ -270,43 +281,44 @@ export default function SitesEstrategicos() {
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="col-span-4 lg:col-span-3 text-center"
+                className="border-t border-brand-line pt-8"
               >
-                <div className="text-7xl font-sans font-black text-white/5 mb-[-20px] select-none">{step.num}</div>
-                <div className="relative z-10 px-6 py-10 rounded-[2.5rem] bg-white/5 border border-white/5 hover:border-brand-accent-light/20 transition-all">
-                  <h3 className="text-xl font-black text-white mb-4 uppercase tracking-widest">{step.title}</h3>
-                  <p className="text-sm text-brand-secondary/80 leading-relaxed font-mono uppercase tracking-widest">{step.desc}</p>
+                <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#687971] mb-6">
+                  Passo / {step.num}
                 </div>
+                <h3 className="text-2xl font-medium text-brand-ink mb-4">{step.title}</h3>
+                <p className="text-[#55615d] text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Captura / Pressão */}
-      <section className="py-24 bg-brand-accent-light/10 border-y border-white/5 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-ultra-tight uppercase mb-8">
-              Enquanto você decide, seu <span className="text-gradient">concorrente avança.</span>
+      {/* Captura / Pressão (Deep Ink) */}
+      <section className="py-32 bg-brand-ink text-brand-mineral text-center border-b border-[#23312e]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+              Enquanto você decide, o seu <br className="hidden md:block" />
+              <span className="italic font-serif font-light text-brand-cyan">concorrente avança.</span>
             </h2>
-            <p className="text-xl text-brand-secondary leading-relaxed opacity-80 mb-12">
-              Todo dia que sua empresa não aparece no Google, você perde clientes para quem já entendeu o jogo digital.
+            <p className="text-xl text-[#b1bdb8] leading-relaxed mb-12 max-w-2xl mx-auto">
+              Cada dia que a sua empresa não aparece com clareza no Google, é um dia em que perde clientes para quem já compreendeu as regras do jogo digital.
             </p>
             <a 
-              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all hover:scale-105 shadow-xl shadow-brand-accent-light/20"
+              className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
             >
-                Diagnóstico Gratuito <MessageSquare size={18} />
-              </a>
+              Diagnóstico Gratuito <ArrowUpRight size={18} />
+            </a>
           </div>
         </div>
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-32 text-center">
+      <section className="py-24 bg-brand-warm text-center">
         <div className="container mx-auto px-6">
           <motion.div
              initial={{ opacity: 0, y: 20 }}
@@ -314,26 +326,32 @@ export default function SitesEstrategicos() {
              viewport={{ once: true }}
              className="max-w-4xl mx-auto"
           >
-            <h2 className="responsive-subtitle font-sans font-black text-white leading-none tracking-tighter uppercase mb-8">
-              Pronto para transformar seu site em um <br /> <span className="text-gradient">ativo de vendas?</span>
+            <div className="flex justify-center gap-4 mb-6">
+              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+              Pronto para transformar o seu site <br /> 
+              num <span className="italic font-serif font-light text-[#64706D]">ativo de vendas?</span>
             </h2>
-            <p className="text-xl text-brand-secondary leading-relaxed mb-12 max-w-2xl mx-auto italic">
-              Solicite um diagnóstico gratuito e veja exatamente o que está impedindo seu crescimento no digital.
+            <p className="text-lg text-[#475553] leading-relaxed mb-12 max-w-2xl mx-auto">
+              Solicite um diagnóstico gratuito e descubra com exatidão o que está a impedir o seu crescimento no ambiente digital.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
-                href="mailto:orvaliastudio@gmail.com" 
-                className="px-12 py-6 bg-white text-brand-bg rounded-full font-black uppercase tracking-widest text-sm hover:bg-brand-accent-light transition-all"
-              >
-                Solicitar via E-mail
-              </a>
-              <a 
-                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:" 
+                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico." 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-12 py-6 border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all flex items-center justify-center gap-3"
+                className="px-10 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
               >
-                <div className="w-2 h-2 rounded-full bg-brand-accent-light animate-pulse" />Diagnóstico Gratuito</a>
+                <div className="w-2 h-2 rounded-full bg-brand-cyan" />
+                Diagnóstico Gratuito
+              </a>
+              <a 
+                href="mailto:orvaliastudio@gmail.com" 
+                className="px-10 py-5 border border-brand-line text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"
+              >
+                Contactar via E-mail
+              </a>
             </div>
           </motion.div>
         </div>
