@@ -1,96 +1,76 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 export default function BrunoSection() {
   return (
-    <section id="autoridade" className="py-24 md:py-36 bg-brand-bg relative z-10 border-b border-white/5">
+    <section id="autoridade" className="py-32 bg-brand-warm text-brand-ink border-t border-brand-line selection:bg-brand-cyan selection:text-brand-ink">
       <div className="container mx-auto px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 lg:gap-24 items-center">
           
-          {/* Photo Column */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative overflow-hidden bg-neutral-900 border border-white/10 aspect-[4/5] max-w-md mx-auto lg:max-w-none">
-              <img 
-                src="https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg" 
-                alt="Bruno Correa Gomes - Direção Estratégica Orvalia Studio" 
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
-                <p className="text-white font-black uppercase text-sm tracking-wider">Bruno Correa Gomes</p>
-                <p className="text-brand-accent-light font-mono text-[10px] uppercase tracking-widest font-bold">Direção Estratégica | Orvalia Studio</p>
-              </div>
-            </div>
-            
-            {/* Architectural accent border */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r border-b border-brand-accent-light/40 pointer-events-none hidden sm:block" />
-          </div>
+          {/* Foto Editorial */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative bg-[#ced6d0] border border-brand-line aspect-[4/5] max-w-lg mx-auto lg:mx-0 w-full overflow-hidden group"
+          >
+            <img 
+              src="https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg" 
+              alt="Bruno Correa Gomes, direção estratégica da Orvalia" 
+              loading="lazy" 
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover grayscale-[0.8] group-hover:grayscale-0 transition-all duration-700"
+            />
+            {/* Overlay sutil */}
+            <div className="absolute inset-0 bg-brand-ink/5 mix-blend-multiply pointer-events-none" />
+          </motion.div>
 
-          {/* Text Column */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-brand-accent-light" />
-                <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent-light font-semibold">
-                  LIDERANÇA ESTRATÉGICA
-                </span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
-                Estratégia comercial <br />
-                <span className="text-brand-secondary">antes do layout.</span>
-              </h2>
+          {/* Conteúdo */}
+          <div className="flex flex-col justify-center">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                05 / Direção Estratégica
+              </span>
             </div>
 
-            <div className="space-y-6 text-base md:text-lg text-brand-secondary font-sans leading-relaxed">
-              <p className="text-white font-medium text-lg md:text-xl font-sans border-l-2 border-brand-accent-light pl-4 py-1">
-                "A Orvalia não nasceu para fazer telas bonitas. Nosso ponto de partida é entender como sua empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa."
+            <h2 className="text-4xl md:text-6xl font-sans font-medium tracking-tight leading-[1.05] mb-8">
+              Estratégia comercial <br className="hidden md:block" />
+              <span className="italic font-serif font-light text-[#64706D]">antes do layout.</span>
+            </h2>
+
+            <div className="border-l-2 border-brand-cyan-dark pl-6 my-10">
+              <p className="text-xl md:text-2xl font-serif italic text-brand-ink leading-relaxed">
+                “A Orvalia não nasceu para fazer telas bonitas. Nosso ponto de partida é entender como sua empresa é percebida, como seu cliente decide e quais sinais fazem uma marca parecer mais clara, confiável e valiosa.”
               </p>
+            </div>
 
+            <div className="space-y-6 text-[#475553] text-lg leading-relaxed mb-12">
               <p>
-                Depois usamos estratégia, design, tecnologia e conteúdo para corrigir o que estiver entre o negócio e essa percepção.
+                À frente da Orvalia está <strong>Bruno Correa Gomes</strong>, com mais de 18 anos de trajetória executiva e comercial no setor financeiro. Essa experiência real de mercado orienta cada decisão de negócio, marca e experiência digital no estúdio.
               </p>
-
               <p>
-                À frente da Orvalia está <strong className="text-white font-bold">Bruno Correa Gomes</strong>. Com mais de 18 anos de trajetória executiva e comercial no setor financeiro, pós-graduações e MBA pela Fundação Getulio Vargas (FGV) e certificação CEA, Bruno aplica inteligência de mercado e visão de negócios a cada projeto do estúdio.
-              </p>
-
-              <p>
-                Essa bagagem orienta a forma como cada projeto é analisado e construído, garantindo que marca e site trabalhem como instrumentos comerciais estratégicos para acelerar a decisão do cliente.
+                A qualificação técnica é um pilar: com formação de pós-graduação e MBA pela <strong>Fundação Getulio Vargas (FGV)</strong> e a rigorosa certificação <strong>CEA da ANBIMA</strong> (Especialista em Investimentos), o direcionamento estratégico da Orvalia vai muito além do marketing convencional, dialogando diretamente com os resultados financeiros dos clientes.
               </p>
             </div>
 
-            {/* Qualifications Ribbon */}
-            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 font-sans text-xs tracking-wide text-brand-secondary">
-              <div className="p-3 bg-white/[0.02] border border-white/5">
-                <span className="text-white font-bold block mb-1">18+ ANOS</span>
-                <span>Experiência Comercial</span>
+            {/* Grid de Autoridade */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-brand-line pt-10">
+              <div>
+                <strong className="block text-3xl font-medium text-brand-ink mb-2">18+ anos</strong>
+                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">Trajetória executiva</span>
               </div>
-              <div className="p-3 bg-white/[0.02] border border-white/5">
-                <span className="text-white font-bold block mb-1">FGV</span>
-                <span>MBA & Pós-Graduações</span>
+              <div>
+                <strong className="block text-3xl font-medium text-brand-ink mb-2">FGV & CEA</strong>
+                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">MBA e Certificações</span>
               </div>
-              <div className="p-3 bg-white/[0.02] border border-white/5">
-                <span className="text-white font-bold block mb-1">CEA</span>
-                <span>Certificação de Mercado</span>
+              <div>
+                <strong className="block text-3xl font-medium text-brand-ink mb-2">Direta</strong>
+                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">Atenção Sênior no Projeto</span>
               </div>
-            </div>
-
-            <div className="pt-2">
-              <a 
-                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Li%20sua%20apresentação%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20conversar%20sobre%20o%20posicionamento%20da%20minha%20empresa."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-brand-red hover:bg-red-600 text-white font-black text-xs uppercase tracking-widest transition-colors"
-              >
-                <span>Falar com o Bruno</span>
-                <ArrowUpRight size={16} />
-              </a>
             </div>
 
           </div>
-
         </div>
 
       </div>
