@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SITE_URL = 'https://orvalia.com.br';
 
 const routesToPrerender = [
   '/',
@@ -35,12 +36,13 @@ const routesToPrerender = [
   '/blog/rebranding-digital-b2b-sorocaba-itu-salto/',
   '/blog/guia-marca-forte/',
   '/blog/branding-estrategico-indaiatuba-campinas/',
+  '/blog/geo-generative-engine-optimization-buscas-ia/',
+  // Regional & Vertical Hubs
   '/branding-estrategico-indaiatuba-campinas/',
   '/branding-para-clinicas-campinas-indaiatuba/',
   '/posicionamento-digital-advogados-indaiatuba/',
   '/design-estrategico-arquitetura-itu-jundiai/',
   '/geo-inteligencia-artificial-empresas-sorocaba/',
-  '/blog/geo-generative-engine-optimization-buscas-ia/',
   '/percepcao-de-valor-estetica-premium-indaiatuba/',
   '/presenca-digital-estrategica-ia-indaiatuba-campinas/',
   // Solutions
@@ -62,6 +64,9 @@ const routesToPrerender = [
   '/plano-evolucao/'
 ];
 
+// Rotas que não devem receber prioridade alta no Sitemap (ex: páginas legais)
+const lowPriorityRoutes = ['/privacidade/', '/termos/', '/cookies/'];
+
 async function prerender() {
   console.log('Starting prerendering...');
   
@@ -77,6 +82,8 @@ async function prerender() {
   for (const url of routesToPrerender) {
     const context = {};
     const appHtml = render(url, context);
+    const routePath = url.endsWith('/') ? url : `${url}/`;
+    const fullCanonicalUrl = `${SITE_URL}${routePath}`;
     
     // Extracted helmet data
     const { helmet } = context;
@@ -85,6 +92,11 @@ async function prerender() {
       `<div id="root"></div>`,
       `<div id="root">${appHtml}</div>`
     );
+
+    // Remove o FAQ Schema exclusivo da Home nas páginas internas para evitar conflito no Google Search Console
+    if (routePath !== '/') {
+      html = html.replace(/<script id="home-faq-schema"[\s\S]*?<\/script>/gi, '');
+    }
     
     if (helmet) {
       const titleString = helmet.title ? helmet.title.toString() : '';
@@ -98,9 +110,6 @@ async function prerender() {
       if (metaString.includes('name="description"')) {
         html = html.replace(/<meta name="description"[^>]*>/gi, '');
       }
-      if (linkString.includes('rel="canonical"')) {
-        html = html.replace(/<link rel="canonical"[^>]*>/gi, '');
-      }
       if (metaString.includes('property="og:title"')) {
         html = html.replace(/<meta property="og:title"[^>]*>/gi, '');
       }
@@ -109,6 +118,12 @@ async function prerender() {
       }
       if (metaString.includes('property="og:url"')) {
         html = html.replace(/<meta property="og:url"[^>]*>/gi, '');
+      } else {
+        // Garante que og:url corresponde sempre à URL real da página
+        html = html.replace(
+          /<meta property="og:url"[^>]*>/gi,
+          `<meta property="og:url" content="${fullCanonicalUrl}" />`
+        );
       }
       if (metaString.includes('name="twitter:title"')) {
         html = html.replace(/<meta name="twitter:title"[^>]*>/gi, '');
@@ -116,6 +131,20 @@ async function prerender() {
       if (metaString.includes('name="twitter:description"')) {
         html = html.replace(/<meta name="twitter:description"[^>]*>/gi, '');
       }
+
+      // Proteção Crítica de SEO: Atualiza sempre a Canonical e Hreflang para a rota atual
+      if (linkString.includes('rel="canonical"')) {
+        html = html.replace(/<link rel="canonical"[^>]*>/gi, '');
+      } else {
+        html = html.replace(
+          /<link rel="canonical"[^>]*>/gi,
+          `<link rel="canonical" href="${fullCanonicalUrl}" />`
+        );
+      }
+      html = html.replace(
+        /<link rel="alternate" hreflang="pt-BR"[^>]*>/gi,
+        `<link rel="alternate" hreflang="pt-BR" href="${fullCanonicalUrl}" />`
+      );
 
       const helmetTags = `
         ${titleString}
@@ -127,7 +156,6 @@ async function prerender() {
     }
 
     // Determine output file path
-    const routePath = url.endsWith('/') ? url : `${url}/`;
     const outDir = path.join(__dirname, 'dist', routePath);
     const outFile = path.join(outDir, 'index.html');
     
@@ -136,6 +164,39 @@ async function prerender() {
     
     console.log(`Prerendered ${url} -> ${outFile}`);
   }
+
+  // 4. Auto-Generate Complete Sitemap.xml
+  const today = new Date().toISOString().split('T')[0];
+  const sitemapUrls = routesToPrerender
+    .filter((route) => !lowPriorityRoutes.includes(route))
+    .map((route) => {
+      const normalizedRoute = route.endsWith('/') ? route : `${route}/`;
+      let priority = '0.8';
+      let changefreq = 'monthly';
+
+      if (normalizedRoute === '/') {
+        priority = '1.0';
+        changefreq = 'weekly';
+      } else if (['/branding/', '/sites/', '/seo-geo/', '/portfolio/', '/blog/', '/contato/'].includes(normalizedRoute)) {
+        priority = '0.9';
+        changefreq = 'weekly';
+      } else if (normalizedRoute.startsWith('/solucoes/') || normalizedRoute.includes('indaiatuba') || normalizedRoute.includes('campinas')) {
+        priority = '0.85';
+        changefreq = 'monthly';
+      } else if (normalizedRoute.startsWith('/blog/')) {
+        priority = '0.75';
+        changefreq = 'monthly';
+      }
+
+      return `  <url>\n    <loc>${SITE_URL}${normalizedRoute}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+    })
+    .join('\n');
+
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls}\n</urlset>\n`;
+
+  fs.writeFileSync(path.join(__dirname, 'dist', 'sitemap.xml'), sitemapXml);
+  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemapXml);
+  console.log('Sitemap.xml automatically updated with all strategic routes.');
   
   console.log('Prerendering completed.');
 }
