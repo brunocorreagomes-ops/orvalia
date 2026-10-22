@@ -8,32 +8,35 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: "#0D1117", // Grafite profundo mineral
-          surface: "#141820",
-          card: "#12161F",
-          text: "#EAECEF", // Off-white mineral de alta legibilidade
-          secondary: "#A0A8B8", // Neutro legível e de alto contraste
-          whatsapp: "#25D366",
-          red: "#E5383B", // Vermelho de diagnóstico e correção
-          accent: {
-            red: "#E5383B", // Marcador de diagnóstico / gap
-            light: "#EAECEF", // Off-white
-            dark: "#1A222D",
-            teal: "#79DEC8",
-          },
-        },
+          // Cores Legadas (mantidas para não quebrar componentes não migrados)
+          bg: '#0D1117',
+          red: '#E5383B',
+          secondary: '#A1A1AA',
+          'accent-light': '#66E7E1',
+          whatsapp: '#25D366',
+          surface: '#1A1A1A',
+          text: '#FFFFFF',
+          
+          // Novo Sistema Dew Point V3 (Mineral Editorial)
+          mineral: '#E9E8E3',
+          warm: '#F5F4EF',
+          ink: '#080A0C',
+          graphite: '#181B1E',
+          cyan: '#66E7E1',
+          'cyan-dark': '#009E99',
+          muted: '#64706D',
+          line: '#C8CDCA',
+          mist: '#CDD3D0',
+        }
       },
       fontFamily: {
-        sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
-        serif: ['"Hanken Grotesk"', 'serif'],
+        // Mantendo a Hanken Grotesk como base e adicionando fallbacks editoriais
+        sans: ['"Hanken Grotesk"', 'Inter', 'sans-serif'],
+        serif: ['"Hanken Grotesk"', 'Georgia', 'serif'],
         mono: ['"Hanken Grotesk"', 'monospace'],
       },
       letterSpacing: {
-        'ultra-tight': '-0.06em',
-        'super-tight': '-0.1em',
-      },
-      backgroundImage: {
-        'orvalho-gradient': 'linear-gradient(135deg, #0A1620 0%, #0D2430 100%)',
+        'ultra-tight': '-0.075em',
       }
     },
   },
