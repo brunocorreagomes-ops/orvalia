@@ -71,7 +71,7 @@ export default function AgenciaIndaiatuba() {
       <SEO 
         title="Agência de Branding e Sites em Indaiatuba | Orvalia Studio"
         description="A Orvalia Studio cria marcas e sites de luxo em Indaiatuba e na RMC. Identidade visual exclusiva, SEO local e posicionamento premium para negócios de elite."
-        canonical="https://orvalia.com.br/agencia-indaiatuba"
+        canonical="https://orvalia.com.br/branding/"
         schema={agencySchema}
       />
       <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20 selection:bg-brand-cyan selection:text-brand-ink">

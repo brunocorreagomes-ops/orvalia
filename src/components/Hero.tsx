@@ -41,10 +41,13 @@ export default function Hero() {
               ORVALIA / DIGITAL VALUE STUDIO
             </div>
             
-            <h1 className="text-5xl md:text-[5.5vw] font-medium leading-[0.96] tracking-tight max-w-[880px] text-brand-ink m-0">
+            <h1 className="text-sm md:text-base font-semibold leading-relaxed tracking-tight max-w-[720px] text-brand-muted mb-5">
+              Estratégia de Marca, Branding e Sites de Alta Performance em Indaiatuba e Campinas
+            </h1>
+            <h2 className="text-5xl md:text-[5.5vw] font-medium leading-[0.96] tracking-tight max-w-[880px] text-brand-ink m-0">
               Seu negócio vale <br className="hidden md:block"/>
               <span className="text-[#808a87]">mais do que parece.</span>
-            </h1>
+            </h2>
             
             <p className="text-brand-muted text-lg md:text-xl leading-relaxed max-w-[610px] mt-8">
               Reposicionamos marca, mensagem e site para empresas que já entregam valor no mundo real, mas ainda não conseguem transmitir essa força com a mesma clareza no digital.
@@ -52,12 +55,12 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-10">
               <a 
-                href="https://wa.me/5511978959567"
+                href={`https://wa.me/5511978959567?text=${encodeURIComponent("Olá, Bruno! Vim pela página inicial da Orvalia e gostaria de pedir um diagnóstico estratégico.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-between gap-6 px-6 py-4 bg-brand-ink text-brand-warm border border-brand-ink text-sm font-semibold min-w-[200px] hover:bg-[#2c4141] hover:-translate-y-0.5 transition-all"
               >
-                Mapear meu gap <ArrowUpRight size={16} className="text-brand-cyan" />
+                Pedir diagnóstico estratégico <ArrowUpRight size={16} className="text-brand-cyan" />
               </a>
               <a 
                 href="#cases" 

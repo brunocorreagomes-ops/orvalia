@@ -58,7 +58,7 @@ export default function SitesEstrategicos() {
       <SEO 
         title="Criação de Sites e Landing Pages | Orvalia Studio"
         description="Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão em Indaiatuba."
-        canonical="https://orvalia.com.br/sites-estrategicos"
+        canonical="https://orvalia.com.br/sites/"
         schema={serviceSchema}
       />
 

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
+  html {\n    scroll-padding-top: 96px;\n  }\n\n  body {
     @apply bg-brand-bg text-brand-text antialiased font-sans selection:bg-brand-accent-light/30 selection:text-brand-accent-light;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -64,3 +63,17 @@
     scrollbar-width: none;
   }
 }
+
+/* Respeita a preferência do sistema por movimento reduzido. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Contraste reforçado para texto secundário em fundos claros. */
+.text-brand-muted { color: #3F4A47; }

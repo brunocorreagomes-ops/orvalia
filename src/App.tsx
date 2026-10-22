@@ -1,10 +1,9 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
-import { MessageCircle, ChevronUp } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Sobre from "./pages/Sobre";
@@ -64,23 +63,6 @@ function ElifeRedirect() {
   return null;
 }
 
-function BackToTop() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  return (
-    <motion.button
-      onClick={scrollToTop}
-      aria-label="Voltar ao topo"
-      whileHover={{ y: -5 }}
-      whileTap={{ scale: 0.9 }}
-      className="fixed bottom-32 right-8 z-[200] bg-white text-brand-bg p-4 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-white/10 active:scale-95"
-    >
-      <ChevronUp size={22} />
-    </motion.button>
-  );
-}
-
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -99,26 +81,28 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+  const whatsappHref = `https://wa.me/5511978959567?text=${encodeURIComponent(
+    `Olá, Bruno! Vim pela página ${pathname} da Orvalia e gostaria de conversar sobre um diagnóstico estratégico.`
+  )}`;
   return (
     <>
       <ScrollToTop />
       <main className="relative bg-brand-bg text-brand-text">
         <SmoothScroll />
-        <BackToTop />
-        <motion.a
-          href="https://wa.me/5511978959567?text=Olá,%20Bruno."
+
+        <a
+          href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Entre em contato pelo WhatsApp"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 z-[200] bg-brand-whatsapp text-brand-bg p-5 rounded-full shadow-2xl transition-all flex items-center justify-center shadow-brand-whatsapp/20 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-whatsapp"
+          aria-label={`Falar com Bruno Correa Gomes pelo WhatsApp. Página de origem: ${pathname}`}
+          data-analytics-event="whatsapp_floating_click"
+          data-analytics-page={pathname}
+          className="fixed bottom-5 right-5 z-[90] bg-brand-ink text-brand-warm border border-brand-muted px-4 py-3 shadow-lg transition-colors flex items-center gap-2.5 hover:bg-brand-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan"
         >
-          <MessageCircle size={32} />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-black uppercase tracking-widest text-xs whitespace-nowrap">
-            Conversar Agora
-          </span>
-        </motion.a>
+          <MessageCircle size={19} className="text-brand-cyan" />
+          <span className="text-xs font-semibold tracking-wide hidden sm:inline">Falar com Bruno</span>
+        </a>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
