@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ChevronRight, BookOpen, Search } from "lucide-react";
-import SEO from "../../components/SEO";
+import SEO from "../components/SEO";
 
 const territories = [
   { id: "all", name: "TODOS OS INSIGHTS" },
@@ -65,7 +65,7 @@ const articles = [
     excerpt: "Estratégias de clareza visual, tom de voz e experiência de navegação para clínicas de estética e saúde em Indaiatuba e região.",
     date: "14 Mai 2026",
     readTime: "5 min",
-    slug: "/percepcao-de-valor-estetica-premium-indaiatuba"
+    slug: "/blog/percepcao-de-valor-estetica-premium-indaiatuba"
   },
   {
     id: "geo-generative-engine-optimization-buscas-ia",
@@ -85,7 +85,7 @@ const articles = [
     excerpt: "Do SEO tradicional para a reputação de entidade: como empresas do interior de SP constroem presença em respostas generativas.",
     date: "14 Mai 2026",
     readTime: "6 min",
-    slug: "/geo-inteligencia-artificial-empresas-sorocaba"
+    slug: "/blog/geo-inteligencia-artificial-empresas-sorocaba"
   },
   {
     id: "identidade-visual-precos",
@@ -180,92 +180,82 @@ export default function BlogIndex() {
         schema={blogSchema}
       />
 
-      <div className="min-h-screen bg-brand-bg pt-32 md:pt-40 pb-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto space-y-16">
+      <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20 selection:bg-brand-cyan selection:text-brand-ink">
+        <div className="container mx-auto px-6">
           
           {/* Header */}
-          <div className="space-y-6 max-w-4xl border-b border-white/10 pb-12">
-            <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 bg-brand-red" />
-              <span className="font-mono text-xs uppercase tracking-[0.35em] text-white font-bold">
-                ORVALIA / PERSPECTIVAS
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                Orvalia / Perspectivas
               </span>
             </div>
-
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-extrabold text-white leading-[1.04] tracking-[-0.03em]">
-              Ideias para empresas que já cresceram, <br />
-              <span className="text-brand-secondary">mas cuja presença digital ainda não acompanhou.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight leading-[1.05] max-w-4xl mb-6">
+              Ideias para empresas que já cresceram, <span className="italic font-serif font-light text-[#64706D]">mas cuja presença digital ainda não acompanhou.</span>
             </h1>
-
-            <p className="text-base md:text-xl text-brand-secondary font-sans leading-relaxed max-w-3xl">
-              Estratégia de marca, posicionamento, experiência digital e visibilidade em IA vistos pela lente do <strong className="text-white font-bold">Gap de Percepção</strong>.
+            <p className="text-[#475553] text-lg leading-relaxed max-w-2xl">
+              Estratégia de marca, posicionamento, experiência digital e visibilidade em IA vistos pela lente do <strong>Gap de Percepção</strong>.
             </p>
           </div>
 
-          {/* Cornerstone Pillar Featured Block */}
+          {/* Cornerstone Pillar Featured Block (Deep Ink para contraste dramático) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="p-8 md:p-12 bg-neutral-900 border border-brand-red/50 relative overflow-hidden group hover:border-brand-red transition-all"
+            className="p-10 md:p-16 bg-brand-ink text-brand-mineral rounded-[2rem] border border-brand-ink relative overflow-hidden group mb-16"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
               <div className="lg:col-span-8 space-y-6">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 bg-brand-red text-white font-mono text-[10px] uppercase tracking-widest font-bold">
-                    {pillarArticle.tag}
-                  </span>
-                  <span className="font-mono text-xs text-brand-secondary uppercase tracking-widest">
-                    {pillarArticle.territoryName}
+                  <span className="font-mono text-[10px] text-brand-cyan uppercase tracking-widest font-bold block">
+                    {pillarArticle.tag} // {pillarArticle.territoryName}
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-4xl md:text-5xl font-sans font-bold text-white tracking-tight leading-snug group-hover:text-brand-red transition-colors">
+                <h2 className="text-3xl md:text-5xl font-sans font-medium text-white tracking-tight leading-[1.05] group-hover:text-[#b1bdb8] transition-colors">
                   {pillarArticle.title}
                 </h2>
 
-                <p className="text-brand-secondary text-sm md:text-lg font-sans leading-relaxed">
+                <p className="text-[#a9b8b3] text-lg font-sans leading-relaxed">
                   {pillarArticle.excerpt}
                 </p>
 
-                <div className="pt-2 flex items-center gap-6 font-mono text-xs text-brand-secondary uppercase tracking-widest">
+                <div className="pt-2 flex items-center gap-6 font-mono text-xs text-[#8b9f99] uppercase tracking-widest font-bold">
                   <span>{pillarArticle.date}</span>
                   <span>•</span>
                   <span>{pillarArticle.readTime}</span>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                <div className="p-4 bg-white/[0.02] border border-white/5 w-full">
-                  <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold block mb-1">
-                    ANÁLISE CORNERSTONE
-                  </span>
-                  <p className="font-mono text-xs text-white">
-                    Entenda como a falta de tradução afasta clientes antes da primeira conversa.
-                  </p>
-                </div>
-
+              <div className="lg:col-span-4 flex flex-col justify-center items-start border-t lg:border-t-0 lg:border-l border-[#23312e] pt-8 lg:pt-0 lg:pl-10 h-full">
+                <span className="font-mono text-[10px] text-brand-cyan uppercase tracking-widest font-bold block mb-4">
+                  Análise Cornerstone
+                </span>
+                <p className="text-sm text-[#b1bdb8] leading-relaxed mb-8">
+                  Entenda como a falta de tradução afasta clientes antes da primeira conversa.
+                </p>
                 <Link 
                   to={pillarArticle.slug}
-                  className="px-8 py-4 bg-brand-red hover:bg-red-600 text-white font-black text-xs uppercase tracking-widest inline-flex items-center gap-3 transition-colors w-full justify-center"
+                  className="inline-flex items-center gap-3 text-brand-cyan font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan/30 pb-1 self-start hover:border-brand-cyan transition-all"
                 >
-                  <span>Ler artigo manifesto</span>
-                  <ArrowUpRight size={16} />
+                  Ler Artigo Manifesto <ArrowUpRight size={14} />
                 </Link>
               </div>
             </div>
           </motion.div>
 
           {/* Territory Filters */}
-          <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-white/10">
+          <div className="flex flex-wrap items-center gap-3 pt-6 mb-12 border-b border-brand-line pb-8">
             {territories.map((t) => (
               <button
                 key={t.id}
                 onClick={() => setActiveTerritory(t.id)}
-                className={`px-4 py-2.5 font-mono text-xs uppercase tracking-widest transition-all ${
+                className={`px-5 py-3 font-mono text-[10px] uppercase tracking-widest font-bold transition-all rounded-full border ${
                   activeTerritory === t.id 
-                    ? "bg-white text-black font-bold" 
-                    : "bg-white/[0.03] text-brand-secondary hover:text-white border border-white/10"
+                    ? "bg-brand-ink text-brand-mineral border-brand-ink" 
+                    : "bg-transparent text-brand-ink border-brand-line hover:border-brand-ink"
                 }`}
               >
                 {t.name}
@@ -273,31 +263,31 @@ export default function BlogIndex() {
             ))}
           </div>
 
-          {/* Destaques Secundários */}
+          {/* Destaques Secundários (Apenas na view 'all') */}
           {activeTerritory === "all" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {featuredArticles.map((art) => (
                 <div 
                   key={art.id}
-                  className="p-8 bg-white/[0.01] border border-white/10 space-y-6 group hover:border-white/30 transition-all flex flex-col justify-between"
+                  className="p-10 bg-brand-warm border border-brand-line rounded-[2rem] space-y-6 flex flex-col justify-between"
                 >
                   <div className="space-y-4">
-                    <span className="font-mono text-xs text-brand-red uppercase tracking-widest font-bold block">
+                    <span className="font-mono text-[9px] text-brand-cyan-dark uppercase tracking-widest font-bold block">
                       {art.territoryName}
                     </span>
-                    <h3 className="text-xl md:text-2xl font-sans font-bold text-white tracking-tight group-hover:text-brand-red transition-colors">
+                    <h3 className="text-2xl font-sans font-medium text-brand-ink tracking-tight">
                       {art.title}
                     </h3>
-                    <p className="text-sm text-brand-secondary font-sans leading-relaxed">
+                    <p className="text-sm text-[#55615d] font-sans leading-relaxed">
                       {art.excerpt}
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-white/5 flex items-center justify-between font-mono text-xs text-brand-secondary">
+                  <div className="pt-8 border-t border-brand-line flex items-center justify-between font-mono text-[9px] font-bold text-[#687971] uppercase tracking-widest">
                     <span>{art.date} • {art.readTime}</span>
                     <Link 
                       to={art.slug}
-                      className="text-white font-bold uppercase tracking-widest inline-flex items-center gap-2 group-hover:text-brand-red transition-colors"
+                      className="text-brand-cyan-dark inline-flex items-center gap-2 hover:text-brand-ink transition-colors"
                     >
                       <span>Ler</span>
                       <ArrowUpRight size={14} />
@@ -309,124 +299,85 @@ export default function BlogIndex() {
           )}
 
           {/* Editorial List Feed */}
-          <div className="space-y-6 pt-6">
-            <h3 className="font-mono text-xs text-brand-secondary uppercase tracking-[0.3em] font-semibold">
-              TODAS AS PUBLICAÇÕES EDITORIAIS ({filteredArticles.length})
+          <div className="space-y-8 pt-8">
+            <h3 className="font-mono text-[10px] text-brand-cyan-dark uppercase tracking-[0.2em] font-bold mb-8">
+              Todas as Publicações Editoriais ({filteredArticles.length})
             </h3>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredArticles.map((art, idx) => (
-                <div key={art.id} className="space-y-4">
-                  {/* Subtle Editorial Divider Callout every 4th item in 'all' view */}
-                  {activeTerritory === "all" && idx === 3 && (
-                    <div className="p-6 my-6 border-l-2 border-brand-red bg-neutral-900/80 space-y-2">
-                      <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest font-bold">
-                        [INSIGHT DE DIAGNÓSTICO]
-                      </span>
-                      <p className="text-sm md:text-base text-white font-sans font-medium">
-                        "O Gap de Percepção não se resolve com mais posts nas redes sociais. Resolve-se com clareza de posicionamento, mensagem consistente e um canal próprio que conduza o cliente à decisão."
-                      </p>
-                    </div>
-                  )}
-
-                  {/* Second Editorial Break at 60%-70% mark */}
-                  {activeTerritory === "all" && idx === 7 && (
-                    <div className="p-8 my-8 border-l-2 border-brand-red bg-white/[0.02] border border-white/5 space-y-3">
-                      <span className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold block">
-                        [INTERVALO EDITORIAL]
-                      </span>
-                      <h4 className="text-xl md:text-2xl font-sans font-bold text-white">
-                        Quando o problema não é falta de tráfego?
-                      </h4>
-                      <p className="text-sm md:text-base text-brand-secondary font-sans leading-relaxed max-w-3xl">
-                        Se as pessoas chegam, mas continuam entendendo sua empresa como apenas mais uma alternativa, aumentar aquisição pode apenas ampliar um problema de percepção.
-                      </p>
-                      <a 
-                        href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20entender%20o%20diagnóstico%20de%20percepção%20da%20minha%20empresa."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-wider text-white font-bold hover:text-brand-red transition-colors pt-1"
-                      >
-                        <span>Entender o diagnóstico</span>
-                        <ArrowUpRight size={14} />
-                      </a>
-                    </div>
-                  )}
-
-                  <div 
-                    className="p-6 md:p-8 bg-white/[0.01] border border-white/5 hover:border-white/20 transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group"
-                  >
-                    <div className="space-y-2 max-w-3xl">
-                      <div className="flex items-center gap-3">
-                        <span className="font-sans text-xs text-brand-red uppercase tracking-wider font-semibold">
-                          {art.territoryName}
-                        </span>
-                        <span className="font-sans text-xs text-brand-secondary uppercase">
-                          {art.date}
-                        </span>
-                      </div>
-
-                      <h4 className="text-lg md:text-xl font-sans font-bold text-white tracking-tight group-hover:text-brand-red transition-colors">
-                        {art.title}
-                      </h4>
-
-                      <p className="text-xs md:text-sm text-brand-secondary font-sans line-clamp-2">
-                        {art.excerpt}
-                      </p>
-                    </div>
-
-                    <Link 
-                      to={art.slug}
-                      className="px-6 py-3 border border-white/10 group-hover:border-white text-white font-sans text-xs uppercase tracking-wider inline-flex items-center gap-2 shrink-0 transition-all"
-                    >
-                      <span>Ler Artigo</span>
-                      <ChevronRight size={14} />
-                    </Link>
+                <Link 
+                  key={art.id} 
+                  to={art.slug}
+                  className="group flex flex-col bg-brand-mineral border-t border-brand-line pt-8 pb-4 transition-transform duration-300"
+                >
+                  <div className="mb-6">
+                    <span className="font-mono text-[9px] font-bold uppercase tracking-widest text-brand-cyan-dark block mb-4">
+                      {art.territoryName}
+                    </span>
+                    <h3 className="text-xl font-medium tracking-tight mb-4 text-brand-ink group-hover:text-[#64706D] transition-colors">
+                      {art.title}
+                    </h3>
+                    <p className="text-[#55615d] text-sm leading-relaxed line-clamp-3">
+                      {art.excerpt}
+                    </p>
                   </div>
-                </div>
+                  
+                  <div className="mt-auto pt-6 flex items-center justify-between">
+                    <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-[#687971]">
+                      {art.date}
+                    </span>
+                    <ArrowUpRight size={16} className="text-brand-muted group-hover:text-brand-ink transition-colors" />
+                  </div>
+                </Link>
               ))}
             </div>
+
+            {/* Inserções Editoriais (Apenas na view 'all') */}
+            {activeTerritory === "all" && (
+              <div className="pt-16 pb-8">
+                <div className="p-10 md:p-16 border-l-2 border-brand-cyan-dark bg-brand-warm flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+                  <div className="max-w-2xl">
+                    <span className="font-sans text-[10px] text-brand-cyan-dark uppercase tracking-wider font-bold block mb-4">
+                      [Insight de Diagnóstico]
+                    </span>
+                    <p className="text-xl md:text-2xl text-brand-ink font-serif italic font-medium leading-relaxed m-0">
+                      "O Gap de Percepção não se resolve com mais posts nas redes sociais. Resolve-se com clareza de posicionamento, mensagem consistente e um canal próprio que conduza o cliente à decisão."
+                    </p>
+                  </div>
+                  <a 
+                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20entender%20o%20diagnóstico%20de%20percepção%20da%20minha%20empresa."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-brand-ink text-brand-mineral rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform shrink-0"
+                  >
+                    Diagnóstico Gratuito <ArrowUpRight size={14} />
+                  </a>
+                </div>
+              </div>
+            )}
+            
           </div>
 
-          {/* Transformation Case Highlight Section */}
-          <div className="p-8 md:p-12 border border-white/10 bg-neutral-900/60 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="space-y-3 max-w-2xl">
-              <span className="font-mono text-xs text-brand-red uppercase tracking-widest font-bold block">
-                EVIDÊNCIA EM AÇÃO
-              </span>
-              <h3 className="text-2xl md:text-3xl font-sans font-black text-white uppercase tracking-tight">
-                Veja como o Gap de Percepção foi fechado em cases reais
+          {/* Bloco de Diagnóstico Final (Deep Ink) */}
+          <div className="mt-32 p-12 md:p-20 bg-brand-ink text-brand-mineral text-center">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+                A sua empresa está a transmitir <br className="hidden md:block"/>
+                <span className="italic font-serif font-light text-brand-cyan">o valor real que entrega?</span>
               </h3>
-              <p className="text-sm text-brand-secondary font-sans">
-                Análises de como Beth Olmeda, Dario Eletricidade e Ryna Hayashi reorganizaram sua presença digital para comunicar sua maturidade real.
+              <p className="text-xl text-[#b1bdb8] leading-relaxed mb-12 italic font-serif max-w-2xl mx-auto">
+                Descubra os pontos exatos onde a sua presença digital está a ficar abaixo da sua verdadeira reputação comercial.
               </p>
+              <a 
+                href="https://wa.me/5511978959567?text=Olá!%20Li%20o%20blog%20da%20Orvalia%20e%20gostaria%20de%20mapear%20meu%20gap%20de%20percepção."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
+              >
+                Mapear o meu Gap <ArrowUpRight size={16} />
+              </a>
             </div>
-
-            <Link 
-              to="/#cases"
-              className="px-8 py-4 bg-white/5 border border-white/20 hover:border-white text-white font-black text-xs uppercase tracking-widest shrink-0 transition-colors"
-            >
-              Ver transformações
-            </Link>
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="p-8 md:p-12 bg-brand-red/10 border border-brand-red/30 text-center space-y-6">
-            <h3 className="text-2xl md:text-4xl font-sans font-black text-white uppercase tracking-tight">
-              Sua empresa está transmitindo o valor real que entrega?
-            </h3>
-            <p className="text-sm md:text-base text-brand-secondary font-sans max-w-xl mx-auto">
-              Descubra os pontos onde sua presença digital está ficando abaixo da sua reputação comercial.
-            </p>
-            <a 
-              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vim%20pelo%20blog%20e%20gostaria%20de%20mapear%20o%20gap%20de%20percepção%20da%20minha%20empresa."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-brand-red hover:bg-red-600 text-white font-black text-xs uppercase tracking-widest transition-colors"
-            >
-              <span>Mapear meu gap de percepção</span>
-              <ArrowUpRight size={16} />
-            </a>
           </div>
 
         </div>
