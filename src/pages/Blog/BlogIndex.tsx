@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ChevronRight, BookOpen, Search } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../../components/SEO";
 
 const territories = [
   { id: "all", name: "TODOS OS INSIGHTS" },
