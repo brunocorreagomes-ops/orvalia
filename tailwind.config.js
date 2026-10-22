@@ -24,16 +24,16 @@ export default {
           graphite: '#181B1E',
           cyan: '#66E7E1',
           'cyan-dark': '#009E99',
-          muted: '#64706D',
-          line: '#C8CDCA',
+          muted: '#3F4A47',
+          line: '#C2C8C5',
           mist: '#CDD3D0',
         }
       },
       fontFamily: {
         // Mantendo a Hanken Grotesk como base e adicionando fallbacks editoriais
         sans: ['"Hanken Grotesk"', 'Inter', 'sans-serif'],
-        serif: ['"Hanken Grotesk"', 'Georgia', 'serif'],
-        mono: ['"Hanken Grotesk"', 'monospace'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       letterSpacing: {
         'ultra-tight': '-0.075em',
