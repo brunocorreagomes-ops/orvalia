@@ -34,7 +34,7 @@ export default function Privacidade() {
           <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemo-los dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
 
           <h2 className="text-2xl font-bold text-white mt-12">3. Compartilhamento de Dados</h2>
-          <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
+          <p>As respostas ao formulário de contato são processadas pelo Google Forms e armazenadas em uma planilha privada do Google Sheets, na conta da Orvalia. A equipe recebe uma notificação de nova solicitação por e-mail. Esses dados são usados para analisar o projeto e responder ao contato; não são publicados no site. Para solicitar informações ou a exclusão de uma resposta, escreva para orvaliastudio@gmail.com.</p>
 
           <h2 className="text-2xl font-bold text-white mt-12">4. Compromisso do Usuário</h2>
           <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que a Orvalia Studio oferece no site.</p>

@@ -43,7 +43,7 @@ const agencySchema = {
         "name": "Bruno Correa Gomes",
         "jobTitle": "Fundador da Orvalia Studio",
         "sameAs": [
-          "https://www.linkedin.com/in/brunocorreagomes"
+          "https://www.linkedin.com/in/bruno-correa-gomes/"
         ],
         "image": "https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg",
         "worksFor": {
@@ -234,7 +234,7 @@ export default function AgenciaIndaiatuba() {
                 {/* LinkedIn & WhatsApp button */}
                 <div className="flex flex-wrap gap-5 pt-6">
                   <a 
-                    href="https://www.linkedin.com/in/brunocorreagomes" 
+                    href="https://www.linkedin.com/in/bruno-correa-gomes/"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="px-8 py-4 border border-brand-line bg-brand-warm text-brand-ink hover:border-brand-ink font-mono font-semibold text-[10px] uppercase tracking-widest transition-all flex items-center gap-3"

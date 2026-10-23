@@ -7,8 +7,9 @@
 - O portfólio deixa de oferecer um link para si próprio.
 - Publicada a rota já existente /solucoes/branding-em-indaiatuba/, antes ausente no prerender.
 - Metadados das páginas legais passam a usar SEO/Helmet para funcionar também na navegação pelo cliente.
-- Formulário inclui e-mail de resposta e telefone opcional. Destino confirmado pelo proprietário: orvaliastudio@gmail.com.
-- O modo atual prepara a mensagem no aplicativo de e-mail do visitante. Não afirma que a mensagem foi enviada. A mensagem também permanece disponível para copiar, caso o visitante não tenha aplicativo configurado.
+- Formulário inclui e-mail de resposta e telefone opcional. 
+- Recebimento automático por Google Forms incorporado na página, sem depender do aplicativo de e-mail do visitante. Link alternativo abre o mesmo formulário em outra aba.
+- LinkedIn de Bruno corrigido no perfil visível e nos dados estruturados: https://www.linkedin.com/in/bruno-correa-gomes/.
 
 ## Validação
 
@@ -20,6 +21,8 @@ Fontes externas Google Search, OAB, CFM e W3C responderam HTTP 200. O LinkedIn r
 
 Limitação preexistente: a checagem TypeScript completa aponta erros de tipagem de animação em ForWho.tsx e Services.tsx, não relacionados a esta revisão. Nenhum erro adicional nos arquivos alterados.
 
-## Próxima etapa do recebimento automático
+## Formulário de contato
 
-Para receber sem depender do aplicativo de e-mail do visitante e manter histórico no Drive, a opção proposta é Google Forms com respostas em Google Sheets e notificações para a conta da Orvalia. Campos: nome, empresa, e-mail de resposta, telefone opcional, site/Instagram, prioridade e contexto. Respostas e planilha devem permanecer privadas. Só o formulário de preenchimento será público. A configuração exige login na conta Google proprietária, ainda não autorizado no navegador desta sessão. Não há integração automática ativa nem resposta de cliente gravada no Drive neste momento.
+O contato usa um formulário Google Forms incorporado, com alternativa para abertura em outra aba. Campos obrigatórios: e-mail válido, nome, empresa e prioridade; telefone, site/Instagram e contexto opcionais. A política de privacidade descreve o processamento dos dados.
+
+Validação técnica: envio e confirmação nativa do provedor conferidos. Em 320 e 390 px, a página e o formulário não apresentam rolagem horizontal. O formulário usa rolagem própria para manter a confirmação visível após o envio e exibe a interface em português.
