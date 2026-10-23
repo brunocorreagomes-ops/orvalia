@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
 import './blog.css';
+import './interactions.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Elemento #root não encontrado.');

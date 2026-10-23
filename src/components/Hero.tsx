@@ -85,16 +85,6 @@ export default function Hero() {
                 className="absolute inset-0 w-full h-full bg-cover bg-center z-0" 
                 style={{ backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTAwIDEzNTAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iLjA4IiB5MT0iMCIgeDI9Ii45IiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzA3MTMxNiIvPjxzdG9wIG9mZnNldD0iLjQyIiBzdG9wLWNvbG9yPSIjMjMzZDQyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDcwZTExIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMDAiIGhlaWdodD0iMTM1MCIgZmlsbD0idXJsKCNiZykiLz48L3N2Zz4=')` }} 
               />
-              <video 
-                autoPlay 
-                muted 
-                loop 
-                playsInline 
-                preload="metadata" 
-                className="absolute inset-0 w-full h-full object-cover z-10 opacity-70"
-              >
-                {/* <source src="/video/orvalia-cinematic-loop.mp4" type="video/mp4" /> */}
-              </video>
               <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#010B0E]/30 via-transparent to-[#010B0E]/60" />
 
               {/* Informação Superior do Palco */}
@@ -113,7 +103,7 @@ export default function Hero() {
                   style={{ 
                     clipPath: 'polygon(0 0, 100% 25%, 100% 78%, 0 100%)',
                     background: 'linear-gradient(105deg, rgba(220,246,239,0.02), rgba(138,207,208,0.19))',
-                    x: isMobile ? (mobileAligned ? 0 : -72) : leftSurfaceX 
+                    x: mobileAligned ? 0 : (isMobile ? -72 : leftSurfaceX)
                   }}
                 />
                 <motion.div 
@@ -121,14 +111,14 @@ export default function Hero() {
                   style={{ 
                     clipPath: 'polygon(0 25%, 100% 0, 100% 100%, 0 78%)',
                     background: 'linear-gradient(260deg, rgba(220,246,239,0.02), rgba(138,207,208,0.15))',
-                    x: isMobile ? (mobileAligned ? 0 : 72) : rightSurfaceX 
+                    x: mobileAligned ? 0 : (isMobile ? 72 : rightSurfaceX)
                   }}
                 />
                 <motion.span 
                   className="block relative z-[60] w-3 h-3 rounded-full bg-brand-cyan"
                   style={{ 
                     boxShadow: '0 0 0 7px rgba(102,231,225,0.1), 0 0 25px rgba(102,231,225,0.45)',
-                    scale: isMobile ? (mobileAligned ? 1.08 : 0.6) : pointScale 
+                    scale: mobileAligned ? 1.08 : (isMobile ? 0.6 : pointScale)
                   }}
                 />
               </div>
@@ -139,7 +129,7 @@ export default function Hero() {
                 <div className="flex-1 max-w-[105px] h-[1px] bg-[#718c8d] relative">
                   <motion.i 
                     className="absolute inset-y-[-1px] left-0 bg-brand-cyan origin-left" 
-                    style={{ scaleX: isMobile ? (mobileAligned ? 1 : 0.05) : barScaleX }} 
+                    style={{ scaleX: mobileAligned ? 1 : (isMobile ? 0.05 : barScaleX) }}
                   />
                 </div>
                 <span className="text-right">VALOR PERCEBIDO</span>
@@ -152,12 +142,13 @@ export default function Hero() {
               <span>DEW POINT / 00</span>
             </div>
             
-            {isMobile && (
+            {(
               <button 
                 onClick={() => setMobileAligned(!mobileAligned)}
+                aria-pressed={mobileAligned}
                 className="w-full flex justify-between items-center py-4 text-brand-ink font-bold text-xs uppercase border-b border-[#bfc8c4] text-left"
               >
-                {mobileAligned ? 'Rever o intervalo' : 'Alinhar valor e percepção'} <span>↗</span>
+                {mobileAligned ? 'Reabrir o intervalo' : 'Experimente alinhar as superfícies'} <span>↗</span>
               </button>
             )}
           </div>

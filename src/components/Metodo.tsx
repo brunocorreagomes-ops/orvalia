@@ -1,78 +1,34 @@
-import { motion } from "framer-motion";
+import { useState, type KeyboardEvent } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const steps = [
-  {
-    num: "01",
-    title: "Mercado",
-    subtitle: "Contexto e concorrência real",
-    desc: "Quem são os clientes, quais empresas eles comparam e o que pesa na contratação."
-  },
-  {
-    num: "02",
-    title: "Mensagem",
-    subtitle: "Clareza e proposta de valor",
-    desc: "O que a empresa oferece, para quem e quais informações o cliente precisa para decidir."
-  },
-  {
-    num: "03",
-    title: "Experiência",
-    subtitle: "Identidade e interface",
-    desc: "Como organizar textos, imagens e navegação para facilitar a consulta aos serviços."
-  },
-  {
-    num: "04",
-    title: "Aquisição",
-    subtitle: "Jornada comercial e SEO",
-    desc: "Como o cliente encontra o site e quais caminhos levam ao contato."
-  }
+  { title:'Mercado', subtitle:'Entender antes de propor.', desc:'Quem são os clientes, quais empresas eles comparam e o que pesa na contratação.', question:'Por que alguém escolheria sua empresa?', outputs:['Público e situação de contratação','Alternativas que o cliente considera','Diferenças que a empresa consegue demonstrar'], link:'/blog/branding-estrategico-indaiatuba-campinas/' },
+  { title:'Mensagem', subtitle:'Dar forma ao que importa.', desc:'O que a empresa oferece, para quem e quais informações o cliente precisa para decidir.', question:'Seu serviço é compreendido no primeiro contato?', outputs:['Apresentação da empresa','Organização dos serviços','Linguagem e dúvidas de contratação'], link:'/blog/branding-indaiatuba/' },
+  { title:'Experiência', subtitle:'Transformar clareza em presença.', desc:'Como organizar textos, imagens e navegação para facilitar a consulta aos serviços.', question:'O caminho é tão bom quanto a entrega?', outputs:['Identidade e aplicações prioritárias','Estrutura das páginas e navegação','Leitura e contato no celular'], link:'/blog/arquitetura-sites-alta-performance-campinas/' },
+  { title:'Aquisição', subtitle:'Conectar descoberta e conversa.', desc:'Como o cliente encontra o site e quais caminhos levam ao contato.', question:'Quem encontra sua empresa sabe como avançar?', outputs:['Conteúdo e ligações entre páginas','Informações de atendimento consistentes','Caminhos de contato e acompanhamento'], link:'/blog/site-profissional-conversao/' },
 ];
-
 export default function Metodo() {
-  return (
-    <section id="metodo" className="py-24 md:py-32 bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
-      <div className="container mx-auto px-6">
-        
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16 md:mb-20">
-          <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-                03 / Método Estratégico
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-sans font-medium tracking-tight leading-[1.05] max-w-2xl">
-              Antes do desenho, <br />
-              <span className="italic font-serif font-light text-[#64706D]">a decisão.</span>
-            </h2>
-          </div>
-          <p className="max-w-[330px] text-[#475553] leading-relaxed text-lg">
-            Antes de desenhar o site, conversamos sobre os clientes, a oferta, o conteúdo e a forma de atendimento.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-brand-line pt-8 gap-y-12">
-          {steps.map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="lg:border-r border-brand-line lg:pr-8 lg:mr-8 last:border-r-0 last:mr-0 last:pr-0"
-            >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#53625d] block mb-12">
-                {step.num} / Camada
-              </span>
-              <h3 className="text-2xl font-medium tracking-tight mb-2">{step.title}</h3>
-              <h4 className="text-xs font-bold text-[#75807d] mb-5 uppercase tracking-widest">{step.subtitle}</h4>
-              <p className="text-[#67716e] text-sm leading-relaxed">
-                {step.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
+  const [active, setActive] = useState(0);
+  const onKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let next = index;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % steps.length;
+    else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + steps.length - 1) % steps.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = steps.length - 1;
+    else return;
+    event.preventDefault(); setActive(next);
+    event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
+  };
+  return <section id="metodo" className="method-explorer">
+    <div className="container mx-auto px-6">
+      <div className="method-header"><div><span className="editorial-label">03 / Método estratégico</span><h2>Antes do desenho,<br /><em>a decisão.</em></h2></div><p>Quatro camadas que se conectam. Escolha uma para explorar as perguntas e decisões do projeto.</p></div>
+      <div className="method-tabs" role="tablist" aria-label="Camadas do método Orvalia">{steps.map((item, i) => <button type="button" role="tab" key={item.title} id={`method-tab-${i}`} aria-selected={active === i} aria-controls={`method-panel-${i}`} tabIndex={active === i ? 0 : -1} onClick={() => setActive(i)} onKeyDown={event => onKeyDown(event, i)}><span>{String(i + 1).padStart(2, '0')}</span>{item.title}<span aria-hidden="true">↗</span></button>)}</div>
+      {steps.map((item, i) => <div key={item.title} id={`method-panel-${i}`} role="tabpanel" aria-labelledby={`method-tab-${i}`} hidden={active !== i} tabIndex={0} className="method-panel">
+        <div className="method-map" aria-hidden="true"><svg viewBox="0 0 500 350"><path d="M100 90H400V260H100ZM100 90L400 260M400 90L100 260" stroke="#b7c9c3" strokeWidth="1" fill="none" opacity=".4" />{[[100,90],[400,90],[400,260],[100,260]].map(([x,y],n)=><g key={n}><circle cx={x} cy={y} r={n===i?38:17} fill={n===i?'#66e7e1':'#284346'} /><text x={x} y={y+4} fill={n===i?'#101e20':'#c6d3cc'} fontSize="11" textAnchor="middle">{String(n+1).padStart(2,'0')}</text></g>)}<circle cx="250" cy="175" r="5" fill="#66e7e1" /><text x="250" y="325" textAnchor="middle" fill="#c6d3cc" fontSize="11" letterSpacing="3">THE POINT / {String(i+1).padStart(2,'0')}</text></svg><span>{item.subtitle}</span></div>
+        <div className="method-detail"><span className="editorial-label">{String(i+1).padStart(2,'0')} / {item.title}</span><h3>{item.question}</h3><p>{item.desc}</p><ul>{item.outputs.map(output=><li key={output}>{output}</li>)}</ul><Link to={item.link}>Aprofundar essa camada <ArrowUpRight size={16} /></Link></div>
+      </div>)}
+      <p className="method-footnote">O escopo de cada projeto é definido na conversa inicial. Explore as quatro camadas acima.</p>
+    </div>
+  </section>;
 }

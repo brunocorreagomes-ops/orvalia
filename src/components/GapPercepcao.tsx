@@ -1,20 +1,9 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import PerceptionLab from "./PerceptionLab";
+import { motion } from "framer-motion";
 
 export default function GapPercepcao() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Animação do palco (as linhas convergem conforme o scroll)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "center center"]
-  });
-  
-  const leftTrackX = useTransform(scrollYProgress, [0, 1], ["-6%", "0%"]);
-  const rightTrackX = useTransform(scrollYProgress, [0, 1], ["6%", "0%"]);
-
   return (
-    <section id="gap-percepcao" ref={containerRef} className="py-24 md:py-32 bg-brand-ink text-brand-warm selection:bg-brand-cyan selection:text-brand-ink overflow-hidden">
+    <section id="gap-percepcao" className="py-24 md:py-32 bg-brand-ink text-brand-warm selection:bg-brand-cyan selection:text-brand-ink overflow-hidden">
       <div className="container mx-auto px-6">
         
         <div className="flex items-center gap-4 mb-8 md:mb-12">
@@ -34,34 +23,7 @@ export default function GapPercepcao() {
           </p>
         </div>
 
-        {/* O Palco do Gap */}
-        <div className="relative border-y border-[#53615d] min-h-[205px] md:min-height-[230px] py-8 flex flex-col justify-between overflow-hidden my-16">
-          <div className="flex justify-between items-center gap-4 font-mono text-[8px] md:text-[11px] font-bold tracking-widest text-[#b7c5c0] uppercase">
-            <span>Valor Real</span>
-            <span className="text-brand-cyan">The Point / Alinhamento</span>
-            <span>Valor Percebido</span>
-          </div>
-          
-          <div className="relative w-full grid grid-cols-2 items-center z-10 py-10">
-            {/* O ponto de orvalho central */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[15px] h-[15px] rounded-full bg-brand-cyan z-20 shadow-[0_0_0_10px_rgba(102,231,225,0.08)]" />
-            
-            {/* Pistas móveis */}
-            <motion.span 
-              className="block h-[2px] bg-[#c0d4cd] w-full origin-right"
-              style={{ x: leftTrackX }}
-            />
-            <motion.span 
-              className="block h-[2px] bg-[#557571] w-full origin-left"
-              style={{ x: rightTrackX }}
-            />
-          </div>
-
-          <div className="flex justify-between items-center gap-4 font-mono text-[9px] md:text-[11px] font-bold tracking-widest text-[#8b9f99] uppercase">
-            <span>Competência Existente</span>
-            <span>Expressão de Marca</span>
-          </div>
-        </div>
+        <PerceptionLab />
 
         {/* Dores (Painpoints) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 mt-16 md:mt-20">

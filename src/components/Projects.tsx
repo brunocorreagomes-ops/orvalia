@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -37,19 +38,31 @@ const cases = [
     client: "Marta Ana Chiconato",
     category: "05 / TERAPIA INTEGRATIVA",
     description: "Apresentação dos atendimentos e informações para o primeiro contato.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.ibb.co/2366nSC3/marta-identidade.webp",
     featured: false
   },
   {
     client: "KNJ Tur",
     category: "06 / INTERFACE B2B",
     description: "Organização das informações e dos contatos para clientes de turismo corporativo.",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.ibb.co/zXqG9zF/knj.webp",
     featured: false
   }
 ];
 
 export default function Projects() {
+  const [selected, setSelected] = useState<(typeof cases)[number] | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    if (!selected) {
+      if (dialogRef.current?.open) dialogRef.current.close();
+      return;
+    }
+    if (!dialogRef.current?.open) dialogRef.current?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [selected]);
   const featuredCase = cases.find(c => c.featured);
   const otherCases = cases.filter(c => !c.featured);
 
@@ -84,7 +97,7 @@ export default function Projects() {
             viewport={{ once: true }}
             className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] border border-brand-line bg-brand-mineral mb-16 group"
           >
-            <div className="relative min-w-0 overflow-hidden bg-[#d1d7d3]">
+            <button type="button" onClick={() => setSelected(featuredCase)} aria-label={`Ampliar apresentação de ${featuredCase.client}`} className="relative min-w-0 overflow-hidden bg-[#d1d7d3] text-left cursor-zoom-in">
               <img 
                 src={featuredCase.image} 
                 alt={`Site de ${featuredCase.client}, psicóloga — apresentação do projeto`}
@@ -95,9 +108,9 @@ export default function Projects() {
                 className="block w-full h-auto object-contain lg:h-full lg:object-cover filter saturate-[0.85] transition-transform duration-1000 lg:group-hover:scale-105"
               />
               <div className="relative bg-brand-warm/95 px-4 py-3 text-[10px] font-bold tracking-widest uppercase border-t border-brand-line lg:absolute lg:bottom-6 lg:left-6 lg:py-2 lg:border lg:backdrop-blur-sm">
-                Case em destaque
+                Case em destaque · Toque para ampliar
               </div>
-            </div>
+            </button>
             
             <div className="p-6 sm:p-10 md:p-16 min-w-0 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-brand-line">
               <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-cyan-dark mb-4 block">
@@ -141,6 +154,7 @@ export default function Projects() {
               transition={{ delay: i * 0.1 }}
               className="group border-t border-brand-line pt-6 flex flex-col"
             >
+              {item.image.includes('ibb.co') && <button type="button" className="project-preview" aria-label={`Ampliar apresentação de ${item.client}`} onClick={() => setSelected(item)}><img src={item.image} alt={`Apresentação do projeto ${item.client}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" width="800" height="500" /><span>Ampliar apresentação <ArrowUpRight size={14} /></span></button>}
               <div className="flex justify-between items-start mb-4">
                 <span className="font-mono text-[9px] font-bold uppercase tracking-widest text-brand-cyan-dark">
                   {item.category}
@@ -156,6 +170,9 @@ export default function Projects() {
         </div>
 
       </div>
+      <dialog ref={dialogRef} className="project-dialog" aria-labelledby="project-dialog-title" data-lenis-prevent onClose={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) setSelected(null); }}>
+        {selected && <div className="project-dialog-content"><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p></div>}
+      </dialog>
     </section>
   );
 }
