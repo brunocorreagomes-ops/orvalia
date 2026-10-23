@@ -35,7 +35,7 @@ export default function Contato() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] font-bold text-brand-cyan-dark mb-5">Contato & diagnóstico direto</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.03] mb-7">
+              <h1 className="page-title text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.03] mb-7">
                 Vamos analisar o próximo movimento da sua marca.
               </h1>
               <p className="text-lg text-brand-muted leading-relaxed max-w-xl mb-9">

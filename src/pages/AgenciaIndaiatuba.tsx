@@ -94,8 +94,8 @@ export default function AgenciaIndaiatuba() {
                     Estratégia local com foco no público de Indaiatuba
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-7xl font-sans font-medium text-brand-ink leading-[0.95] tracking-tight mb-8">
-                  Agência de Branding e <br /> <span className="text-[#64706D] font-normal italic">Sites em Indaiatuba</span>
+                <h1 className="page-title text-5xl md:text-7xl font-sans font-medium text-brand-ink leading-[0.95] tracking-tight mb-8">
+                  Agência de Branding e <br /> <span className="text-[#64706D] font-serif font-normal italic">Sites em Indaiatuba</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   A Orvalia Studio transforma marcas de Indaiatuba e da RMC em referências no mercado. Identidade visual, sites de alta performance e experiência digital com padrão editorial.
@@ -103,13 +103,13 @@ export default function AgenciaIndaiatuba() {
                 <div className="flex flex-col sm:flex-row gap-6">
                   <a 
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
-                    className="px-10 py-5 bg-brand-ink text-brand-warm rounded-full font-bold text-xs uppercase tracking-widest transition-transform hover:-translate-y-1 flex items-center justify-center gap-3"
+                    className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold text-xs uppercase tracking-widest transition-transform hover:-translate-y-1 flex items-center justify-center gap-3"
                   >
                     Diagnóstico Gratuito
                   </a>
                   <a 
                      href="#atendimento"
-                     className="px-10 py-5 border border-brand-line text-brand-ink rounded-full font-bold text-xs uppercase tracking-widest transition-colors hover:bg-brand-ink hover:text-brand-warm flex items-center justify-center gap-3"
+                     className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold text-xs uppercase tracking-widest transition-colors hover:bg-brand-ink hover:text-brand-warm flex items-center justify-center gap-3"
                   >
                      Atendimento Regional
                   </a>
@@ -151,7 +151,7 @@ export default function AgenciaIndaiatuba() {
                 </div>
               </div>
 
-              <div className="col-span-4 lg:col-span-7 p-10 md:p-14 bg-brand-warm rounded-[2rem] border border-brand-line flex flex-col justify-center space-y-10">
+              <div className="col-span-4 lg:col-span-7 p-6 md:p-14 surface-secondary editorial-panel border border-brand-line flex flex-col justify-center space-y-10">
                 <h4 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark">Dinâmica de Atendimento</h4>
                 <div className="space-y-8">
                   <div>
@@ -207,13 +207,13 @@ export default function AgenciaIndaiatuba() {
               <div className="col-span-4 lg:col-span-7 space-y-10 lg:pl-10">
                 <div>
                   <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4 block">Liderança & Visão</span>
-                  <h2 className="text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-2">
+                  <h2 className="section-title text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-2">
                     Quem está por trás da <br className="hidden sm:inline" /><span className="text-[#64706D] italic font-normal">Orvalia Studio?</span>
                   </h2>
                 </div>
 
                 <div className="space-y-8">
-                  <p className="text-brand-ink text-xl md:text-2xl leading-relaxed font-serif italic border-l-2 border-brand-cyan-dark pl-6">
+                  <p className="text-brand-ink text-xl md:text-2xl leading-relaxed font-sans not-italic border-l-2 border-brand-cyan-dark pl-6">
                     "Acreditamos que negócios extraordinários de Indaiatuba e região merecem um nível de design e estratégia que projeta sua verdadeira maestria. Nosso papel é pavimentar essa autoridade digital."
                   </p>
                   
@@ -263,7 +263,7 @@ export default function AgenciaIndaiatuba() {
             <div className="dna-grid mb-16">
               <div className="col-span-4 lg:col-span-12">
                 <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Casos de Sucesso Local</h3>
-                <h2 className="text-4xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight">
+                <h2 className="section-title text-4xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight">
                   Projetos em <span className="italic font-serif font-light text-[#64706D]">Indaiatuba</span>
                 </h2>
               </div>
@@ -309,7 +309,7 @@ export default function AgenciaIndaiatuba() {
             <div className="dna-grid mb-16">
               <div className="col-span-4 lg:col-span-8">
                 <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Dúvidas Frequentes</h3>
-                <h2 className="text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-8">
+                <h2 className="section-title text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-8">
                   Estratégia e Design <br /> <span className="italic font-serif font-light text-[#64706D]">EM INDAIATUBA.</span>
                 </h2>
                 <div className="space-y-12 mt-16 border-t border-brand-line pt-12">

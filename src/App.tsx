@@ -88,7 +88,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <main className="relative bg-brand-bg text-brand-text">
+      <main className="editorial-system relative bg-brand-mineral text-brand-ink">
         <SmoothScroll />
 
         <a

@@ -1,14 +1,10 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 import BrunoSection from "../components/BrunoSection";
 
 export default function Sobre() {
   return (
     <div className="pt-32 pb-20 bg-brand-warm min-h-screen">
-      <Helmet>
-        <title>Sobre Nós | Orvalia Studio</title>
-        <meta name="description" content="Conheça a Orvalia Studio, consultoria de posicionamento digital, branding e criação de sites em Indaiatuba e região." />
-        <link rel="canonical" href="https://orvalia.com.br/sobre/" />
-      </Helmet>
+      <SEO title="Sobre Nós | Orvalia Studio" description="Conheça a Orvalia Studio, consultoria de posicionamento digital, branding e criação de sites em Indaiatuba e região." canonical="https://orvalia.com.br/sobre/" />
       
       <div className="container mx-auto px-6 mb-8">
         <div className="flex items-center gap-4 mb-6">

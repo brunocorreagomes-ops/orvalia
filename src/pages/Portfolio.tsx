@@ -1,14 +1,10 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 import Projects from "../components/Projects";
 
 export default function Portfolio() {
   return (
     <div className="pt-32 pb-20 bg-brand-mineral min-h-screen">
-      <Helmet>
-        <title>Portfólio de Casos Reais | Orvalia Studio</title>
-        <meta name="description" content="Conheça os projetos de branding, sites e posicionamento digital criados pela Orvalia Studio em Indaiatuba." />
-        <link rel="canonical" href="https://orvalia.com.br/portfolio/" />
-      </Helmet>
+      <SEO title="Portfólio de Casos Reais | Orvalia Studio" description="Conheça os projetos de branding, sites e posicionamento digital criados pela Orvalia Studio em Indaiatuba." canonical="https://orvalia.com.br/portfolio/" />
       
       <div className="container mx-auto px-6 mb-4">
         <div className="flex items-center gap-4 mb-6">
@@ -17,7 +13,7 @@ export default function Portfolio() {
             Projetos da Orvalia
           </span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-sans font-medium text-brand-ink tracking-tight mb-6 leading-[1.05]">
+        <h1 className="page-title text-5xl md:text-7xl font-sans font-medium text-brand-ink tracking-tight mb-6 leading-[1.05]">
           Nosso <span className="italic font-serif font-light text-[#64706D]">Portfólio.</span>
         </h1>
         <p className="text-[#475553] text-lg max-w-2xl leading-relaxed">

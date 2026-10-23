@@ -24,7 +24,7 @@ const solutions = [
   {
     icon: Target,
     title: "Copy estratégica",
-    desc: "Textos de alta precisão que guiam o utilizador e aumentam a conversão."
+    desc: "Textos de alta precisão que guiam o visitante e aumentam a conversão."
   },
   {
     icon: Zap,
@@ -54,7 +54,7 @@ const serviceSchema = {
 
 export default function SitesEstrategicos() {
   return (
-    <div className="min-h-screen bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink pt-32">
+    <div className="min-h-screen bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink pt-28 md:pt-36">
       <SEO 
         title="Criação de Sites e Landing Pages | Orvalia Studio"
         description="Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão em Indaiatuba."
@@ -63,10 +63,10 @@ export default function SitesEstrategicos() {
       />
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative pb-20 md:pb-28 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="dna-grid gap-12 items-center">
-            <div className="col-span-4 lg:col-span-10">
+            <div className="col-span-4 lg:col-span-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -79,9 +79,9 @@ export default function SitesEstrategicos() {
                   </span>
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl lg:text-[6vw] font-sans font-medium leading-[0.95] tracking-tight mb-8">
-                  Se o seu site não gera clientes, <br />
-                  ele está <span className="italic font-serif font-light text-[#64706D]">a custar-lhe dinheiro.</span>
+                <h1 className="page-title text-5xl md:text-7xl lg:text-[6vw] font-sans font-medium leading-[0.95] tracking-tight mb-8">
+                  Seu site precisa mostrar <br />
+                  <span className="italic font-serif font-light text-[#64706D]">o valor da sua empresa.</span>
                 </h1>
                 <p className="text-xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   Criamos sites em Indaiatuba com informações sobre os serviços, navegação para celular e caminhos diretos para entrar em contato.
@@ -91,13 +91,13 @@ export default function SitesEstrategicos() {
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site." 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-10 py-5 bg-brand-ink text-brand-warm rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
+                    className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
                   >
                     Diagnóstico Gratuito
                   </a>
                   <Link 
                     to="/portfolio/" 
-                    className="px-10 py-5 bg-transparent text-brand-ink border border-brand-line rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors text-center"
+                    className="px-10 py-5 bg-transparent text-brand-ink border border-brand-line editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors text-center"
                   >
                     Ver cases
                   </Link>
@@ -115,7 +115,7 @@ export default function SitesEstrategicos() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + i * 0.1 }}
-                  className="p-8 md:p-10 rounded-[2rem] bg-brand-warm border border-brand-line relative overflow-hidden group text-left"
+                  className="p-8 md:p-10 editorial-panel bg-brand-warm border border-brand-line relative overflow-hidden group text-left"
                 >
                   <div className="text-xl font-medium text-brand-ink tracking-tight mb-3 flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-brand-cyan-dark" />
@@ -132,15 +132,15 @@ export default function SitesEstrategicos() {
       </section>
 
       {/* Problema */}
-      <section className="py-24 bg-brand-warm border-y border-brand-line">
+      <section className="surface-secondary py-24 border-y border-brand-line">
         <div className="container mx-auto px-6">
           <div className="dna-grid gap-12">
             <div className="col-span-4 lg:col-span-6">
-              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
-                A maioria dos sites <br /> <span className="italic font-serif font-light text-[#64706D]">não funciona.</span>
+              <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+                Ser encontrado é o começo. <br /> <span className="italic font-serif font-light text-[#64706D]">Fazer sentido vem depois.</span>
               </h2>
               <p className="text-lg text-[#475553] leading-relaxed mb-12">
-                Eles são bonitos. Mas não indexam no Google, não transmitem confiança e não geram contactos comerciais reais.
+                Um site precisa explicar seus serviços, transmitir confiança e facilitar o próximo passo. É essa conexão que orienta cada página do projeto.
               </p>
             </div>
             <div className="col-span-4 lg:col-span-6">
@@ -176,10 +176,10 @@ export default function SitesEstrategicos() {
             <div className="flex justify-center gap-2 mb-8">
               <span className="block w-2.5 h-2.5 rounded-full bg-brand-cyan"></span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+            <h2 className="section-title text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
               Um site não é design. <br /> É um <span className="italic font-serif font-light text-brand-cyan">sistema de aquisição.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-[#b1bdb8] font-serif italic max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-cyan pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+            <p className="text-xl md:text-2xl text-[#b1bdb8] font-sans not-italic max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-cyan pl-6 text-left md:text-center md:border-l-0 md:pl-0">
               Um site precisa de ser encontrado, de convencer e de converter. Sem isso, é apenas um cartão de visita caro e ineficaz.
             </p>
           </motion.div>
@@ -195,7 +195,7 @@ export default function SitesEstrategicos() {
                 <div className="w-8 h-[2px] bg-brand-cyan-dark" />
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">Como resolvemos isso</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
+              <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
                 Sites que trabalham <br /> <span className="italic font-serif font-light text-[#64706D]">para a sua empresa.</span>
               </h2>
             </div>
@@ -209,7 +209,7 @@ export default function SitesEstrategicos() {
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="col-span-4 lg:col-span-4 p-10 rounded-[2rem] bg-brand-warm border border-brand-line"
+                className="col-span-4 lg:col-span-4 p-10 editorial-panel bg-brand-warm border border-brand-line"
               >
                 <div className="mb-8">
                   <sol.icon className="text-brand-cyan-dark" size={32} strokeWidth={1.5} />
@@ -227,11 +227,11 @@ export default function SitesEstrategicos() {
         <div className="container mx-auto px-6">
           <div className="dna-grid gap-12 items-center">
             <div className="col-span-4 lg:col-span-5">
-              <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+              <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
                 O que você <br /> <span className="italic font-serif font-light text-[#64706D]">recebe.</span>
               </h2>
               <div className="border-l-2 border-brand-cyan-dark pl-6">
-                <p className="text-xl text-brand-ink font-serif italic leading-relaxed">
+                <p className="text-xl text-brand-ink font-sans not-italic leading-relaxed">
                   “Enquanto outras agências entregam apenas layout, nós entregamos posicionamento estratégico e clareza comercial.”
                 </p>
               </div>
@@ -268,7 +268,7 @@ export default function SitesEstrategicos() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center mb-20">
             <div className="w-8 h-[2px] bg-brand-cyan-dark mb-6" />
-            <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
+            <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
               Como <span className="italic font-serif font-light text-[#64706D]">funciona.</span>
             </h2>
           </div>
@@ -298,7 +298,7 @@ export default function SitesEstrategicos() {
       <section className="py-32 bg-brand-ink text-brand-mineral text-center border-b border-[#23312e]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+            <h2 className="section-title text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
               Enquanto você decide, o seu <br className="hidden md:block" />
               <span className="italic font-serif font-light text-brand-cyan">concorrente avança.</span>
             </h2>
@@ -309,7 +309,7 @@ export default function SitesEstrategicos() {
               href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
             >
               Diagnóstico Gratuito <ArrowUpRight size={18} />
             </a>
@@ -329,7 +329,7 @@ export default function SitesEstrategicos() {
             <div className="flex justify-center gap-4 mb-6">
               <div className="w-8 h-[2px] bg-brand-cyan-dark" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
+            <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
               Pronto para transformar o seu site <br /> 
               num <span className="italic font-serif font-light text-[#64706D]">ativo de vendas?</span>
             </h2>
@@ -341,14 +341,14 @@ export default function SitesEstrategicos() {
                 href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico." 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
+                className="px-10 py-5 bg-brand-ink text-brand-mineral editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
               >
                 <div className="w-2 h-2 rounded-full bg-brand-cyan" />
                 Diagnóstico Gratuito
               </a>
               <a 
                 href="mailto:orvaliastudio@gmail.com" 
-                className="px-10 py-5 border border-brand-line text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"
+                className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"
               >
                 Contactar via E-mail
               </a>

@@ -1,0 +1,49 @@
+/* Shared visual language: the home page is the reference for every menu page. */
+:root {
+  --orvalia-sans: 'Hanken Grotesk', Inter, sans-serif;
+  --orvalia-serif: 'Instrument Serif', Georgia, serif;
+  --orvalia-mono: 'JetBrains Mono', monospace;
+  --orvalia-mineral: #e9e8e3;
+  --orvalia-secondary: #dbe0da;
+  --orvalia-warm: #f5f4ef;
+  --orvalia-ink: #080a0c;
+  --orvalia-muted: #3f4a47;
+  --orvalia-accent: #64706d;
+}
+.editorial-system { font-family:var(--orvalia-sans); }
+.editorial-system :where(h1,h2,h3,h4) { font-family:var(--orvalia-sans); font-weight:500; }
+.editorial-system :where(h1,h2) { letter-spacing:-.04em; }
+.editorial-system :where(h1,h2) :is(em,.italic) {
+  font-family:var(--orvalia-serif); font-weight:400; font-style:italic; letter-spacing:-.025em;
+}
+.editorial-system .page-title, .editorial-system .blog-header h1 {
+  font-family:var(--orvalia-sans); font-size:clamp(2.25rem,5.5vw,5.5rem);
+  font-weight:500; line-height:1.05; letter-spacing:-.04em; text-wrap:balance;
+}
+.editorial-system .section-title, .editorial-system .method-header h2 {
+  font-size:clamp(2.25rem,4.5vw,4.5rem); font-weight:500; line-height:1.05; letter-spacing:-.04em;
+}
+.editorial-system .surface-secondary { background:var(--orvalia-secondary); color:var(--orvalia-ink); }
+.editorial-system .editorial-panel { border-radius:0; }
+.editorial-system .editorial-button { border-radius:0; font-size:14px; letter-spacing:0; text-transform:none; }
+.editorial-system .service-section { background:var(--orvalia-secondary); padding:40px; color:var(--orvalia-muted); }
+.editorial-system .service-section h2 { margin-top:0; }
+.editorial-system .service-content { font-size:18px; line-height:1.75; }
+.editorial-system .service-content > p, .editorial-system .service-content section > p { max-width:760px; }
+.editorial-system .service-content > p { font-size:20px; line-height:1.65; }
+.editorial-system .article-page, .editorial-system .blog-index { background:var(--orvalia-mineral); }
+.editorial-system .blog-header h1 em { color:var(--orvalia-accent); }
+.editorial-system .article-header h1 { font-family:var(--orvalia-sans); font-weight:500; }
+.editorial-system .article-body h2 { font-family:var(--orvalia-sans); font-weight:500; }
+.editorial-system .article-answer { background:var(--orvalia-secondary); }
+.editorial-system .article-answer p { font-family:var(--orvalia-sans); font-style:normal; }
+.editorial-system .article-toc a span,
+.editorial-system .blog-card-number,
+.editorial-system .method-tabs button span:first-child { font-family:var(--orvalia-mono); }
+@media (max-width:639px) {
+  .editorial-system .page-title, .editorial-system .blog-header h1 { font-size:clamp(2.25rem,10vw,3.75rem); }
+  .editorial-system .section-title, .editorial-system .method-header h2 { font-size:clamp(2rem,9vw,3rem); }
+  .editorial-system .service-section { padding:26px 20px; }
+  .editorial-system .service-content { font-size:17px; }
+  .editorial-system .service-content > p { font-size:18px; }
+}

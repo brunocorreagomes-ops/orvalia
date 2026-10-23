@@ -19,9 +19,9 @@ const serviceSchema = {
 export default function PresencaDigital() {
 
   return (
-    <article className="min-h-screen bg-brand-mineral text-brand-ink pt-40 pb-20 px-6 md:px-12 lg:px-24 selection:bg-brand-cyan selection:text-brand-ink">
-      <SEO title="Presença digital e SEO em Indaiatuba e Campinas | Orvalia Studio" description="Revisão de conteúdo, páginas de serviços e informações de contato para empresas de Indaiatuba e Campinas." canonical="https://orvalia.com.br/presenca-digital/" schema={serviceSchema} />
-      <div className="max-w-4xl mx-auto">
+    <article className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36 pb-20 selection:bg-brand-cyan selection:text-brand-ink">
+      <SEO title="Presença digital e SEO em Indaiatuba e Campinas | Orvalia Studio" description="Revisão de conteúdo, páginas de serviços e informações de contato para empresas de Indaiatuba e Campinas." canonical="https://orvalia.com.br/seo-geo/" schema={serviceSchema} />
+      <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-16 border-b border-brand-line pb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink transition-colors font-mono text-[10px] uppercase tracking-widest font-bold">
             <ChevronLeft size={16} />
@@ -38,16 +38,16 @@ export default function PresencaDigital() {
           >
             <div className="w-8 h-[2px] bg-brand-cyan-dark" />
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-              Conteúdo Pilar // Presença Digital
+              SEO & IA (GEO) / Indaiatuba e Campinas
             </span>
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight leading-[1.05] mb-8"
+            className="page-title text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight leading-[1.05] mb-8"
           >
-            Presença digital em Indaiatuba e Campinas: <span className="italic font-serif font-light text-[#64706D]">serviços fáceis de encontrar e entender.</span>
+            Serviços fáceis de encontrar. <br /><span className="italic font-serif font-light text-[#64706D]">Uma empresa fácil de entender.</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -65,22 +65,22 @@ export default function PresencaDigital() {
            initial={{ opacity: 0, scale: 0.98 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3 }}
-           className="border border-brand-line p-2 bg-brand-warm rounded-[2rem] mb-16"
+           className="border border-brand-line p-2 bg-brand-warm editorial-panel mb-16"
         >
           <img 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
             alt="Presença Digital Estratégica em Indaiatuba e Campinas - Orval'IA Studio" 
-            className="w-full h-[500px] object-cover rounded-[1.5rem] filter grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
+            className="w-full h-[240px] md:h-[400px] object-cover editorial-panel filter grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
           />
         </motion.div>
 
-        <div className="prose prose-lg max-w-none text-[#475553] leading-relaxed space-y-16 font-sans">
-          <p className="text-2xl font-serif italic text-brand-ink leading-relaxed border-l-2 border-brand-cyan-dark pl-6">
+        <div className="service-content text-[#475553] leading-relaxed space-y-16 font-sans">
+          <p className="text-2xl font-sans not-italic text-brand-ink leading-relaxed border-l-2 border-brand-cyan-dark pl-6">
             O site precisa explicar o que sua empresa faz, onde atende e como o cliente pode entrar em contato. Revisamos essas informações e a forma como estão distribuídas nas páginas.
           </p>
 
-          <section>
-            <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-6 mt-16">
+          <section className="service-section">
+            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-6 mt-16">
               O que revisar na presença digital?
             </h2>
             <p className="mb-6">
@@ -89,7 +89,7 @@ export default function PresencaDigital() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
+            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
               Três pontos da revisão
             </h2>
             <p className="mb-10">
@@ -113,7 +113,7 @@ export default function PresencaDigital() {
                   desc: "Menu, leitura no celular e botões de contato precisam funcionar sem dificuldade."
                 }
               ].map((item, idx) => (
-                <div key={idx} className="p-8 bg-brand-warm border border-brand-line rounded-[2rem]">
+                <div key={idx} className="p-8 bg-brand-warm border border-brand-line editorial-panel">
                   <item.icon size={28} className="text-brand-cyan-dark mb-6" strokeWidth={1.5} />
                   <h4 className="font-bold text-brand-ink mb-3">{item.title}</h4>
                   <p className="text-sm text-[#55615d] leading-relaxed m-0">{item.desc}</p>
@@ -123,18 +123,18 @@ export default function PresencaDigital() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
+            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
               Como a Orvalia trabalha
             </h2>
-            <div className="bg-brand-ink text-brand-mineral p-10 md:p-14 rounded-[2rem] relative overflow-hidden">
-              <p className="relative z-10 text-xl font-serif italic leading-relaxed m-0 text-[#b1bdb8]">
+            <div className="bg-brand-ink text-brand-mineral p-10 md:p-14 editorial-panel relative overflow-hidden">
+              <p className="relative z-10 text-xl font-sans not-italic leading-relaxed m-0 text-[#b1bdb8]">
                 "Conversamos sobre os serviços e o atendimento da empresa. Depois, definimos quais páginas, textos e informações precisam ser criados ou revisados."
               </p>
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/10 blur-[80px] rounded-full pointer-events-none" />
             </div>
           </section>
 
-          <section className="bg-brand-warm p-10 md:p-14 rounded-[2rem] border border-brand-line mt-16">
+          <section className="surface-secondary p-6 md:p-14 editorial-panel border border-brand-line mt-16">
             <h3 className="text-2xl font-medium text-brand-ink tracking-tight mb-10">
               Perguntas Frequentes sobre Presença Digital e IA
             </h3>
@@ -161,21 +161,21 @@ export default function PresencaDigital() {
         <footer className="mt-32 pt-20 border-t border-brand-line">
           <motion.div 
             whileHover={{ y: -5 }}
-            className="p-12 md:p-20 rounded-[3rem] bg-brand-ink text-center relative overflow-hidden"
+            className="p-12 md:p-20 editorial-panel bg-brand-ink text-center relative overflow-hidden"
           >
             <div className="relative z-10">
               <h3 className="text-4xl md:text-6xl font-medium text-white tracking-tight mb-8 leading-[1.05]">
                 Vamos revisar o seu site.<br />
                 <span className="italic font-serif font-light text-brand-cyan">Comece pelo que precisa melhorar.</span>
               </h3>
-              <p className="text-[#b1bdb8] mb-12 max-w-xl mx-auto font-serif italic text-xl">
+              <p className="text-[#b1bdb8] mb-12 max-w-xl mx-auto font-sans not-italic text-xl">
                 Conte quais informações seus clientes procuram e onde o site tem dificultado o atendimento.
               </p>
               <a 
                 href="https://wa.me/5511978959567?text=Olá!%20Quero%20conversar%20sobre%20a%20revisão%20do%20site%20da%20minha%20empresa."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
+                className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
               >
                 Diagnóstico Gratuito <ArrowRight size={16} />
               </a>

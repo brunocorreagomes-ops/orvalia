@@ -71,6 +71,40 @@ const routesToPrerender = [
 
 const lowPriorityRoutes = ['/privacidade/', '/termos/', '/cookies/'];
 
+// Share crawlers need the metadata in the initial HTML, including legacy pages.
+function completeSharingMetadata(html) {
+  const tags = () => Array.from(html.matchAll(/<meta\b[^>]*>/gi), match => match[0]);
+  const matching = key => tags().find(tag => tag.match(/(?:property|name)="([^"]+)"/)?.[1] === key);
+  const value = key => matching(key)?.match(/content="([^"]*)"/)?.[1];
+  const put = (key, content, attribute = 'property') => {
+    if (!content) return;
+    html = html.replace(/<meta\b[^>]*>/gi, tag => tag.match(/(?:property|name)="([^"]+)"/)?.[1] === key ? '' : tag);
+    html = html.replace('</head>', `<meta ${attribute}="${key}" content="${content}" />\n</head>`);
+  };
+  let title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/)?.[1];
+  if (!title?.trim()) {
+    const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]+>/g, '').trim();
+    title = heading ? `${heading} | Orvalia Studio` : 'Orvalia Studio';
+    html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/, `<title data-rh="true">${title}</title>`);
+  }
+  const description = value('description');
+  if (!matching('og:title')?.includes('data-rh=')) put('og:title', title);
+  if (!matching('og:description')?.includes('data-rh=')) put('og:description', description);
+  if (!matching('twitter:title')?.includes('data-rh=')) put('twitter:title', title, 'name');
+  if (!matching('twitter:description')?.includes('data-rh=')) put('twitter:description', description, 'name');
+  const image = value('og:image') || 'https://orvalia.com.br/social/orvalia-preview-v1.jpg';
+  if (!value('og:image')) put('og:image', image);
+  if (!value('og:image:secure_url')) put('og:image:secure_url', image);
+  if (!value('og:image:type')) put('og:image:type', image.endsWith('.png') ? 'image/png' : 'image/jpeg');
+  if (!value('og:image:width')) put('og:image:width', '1200');
+  if (!value('og:image:height')) put('og:image:height', '630');
+  if (!value('og:image:alt')) put('og:image:alt', title);
+  if (!value('twitter:image')) put('twitter:image', image, 'name');
+  if (!value('twitter:image:alt')) put('twitter:image:alt', value('og:image:alt'), 'name');
+  return html;
+}
+
+
 async function prerender() {
   console.log('Starting prerendering...');
   
@@ -165,6 +199,7 @@ async function prerender() {
     const outFile = path.join(outDir, 'index.html');
     
     fs.mkdirSync(outDir, { recursive: true });
+    html = completeSharingMetadata(html);
     fs.writeFileSync(outFile, html);
     
     console.log(`Prerendered ${url} -> ${outFile}`);

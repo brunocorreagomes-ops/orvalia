@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#E9E8E3"/>
+<svg x="44" y="37" width="372" height="112" viewBox="0 0 530.69 160"><g fill="#080A0C">
+
+        <path
+          d="M 89.074 77.667 A 39 39 0 1 1 89.074 36.333"
+          stroke="#080A0C"
+          stroke-width="10.5"
+          stroke-linecap="butt"
+          fill="none"
+        />
+
+        <circle cx="94" cy="57" r="10" fill="#009E99" />
+
+
+        <path d="M148 0H328V585H687C692 585 696 585 701 585L1015 0H1225L890 614C1085 674 1207 825 1207 1038C1207 1316 1012 1490 701 1490H148ZM328 745V1330H695C902 1330 1029 1219 1029 1038C1029 857 903 745 697 745Z" transform="translate(116.000 99) scale(0.0550336 -0.0550336)"/>
+        <path d="M570 0H774L1318 1490H1130L816 592C786 505 740 369 675 165C608 369 563 505 532 592L210 1490H20Z" transform="translate(191.668 99) scale(0.0550336 -0.0550336)"/>
+        <path d="M20 0H208L358 418H980L1126 0H1318L774 1490H570ZM415 578 530 898C568 1003 608 1123 672 1321C736 1123 776 1003 813 898L925 578Z" transform="translate(269.703 99) scale(0.0550336 -0.0550336)"/>
+        <path d="M148 0H1046V160H328V1490H148Z" transform="translate(347.738 99) scale(0.0550336 -0.0550336)"/>
+        <path d="M328 1490H148V0H328Z" transform="translate(412.455 99) scale(0.0550336 -0.0550336)"/>
+        <path d="M20 0H208L358 418H980L1126 0H1318L774 1490H570ZM415 578 530 898C568 1003 608 1123 672 1321C736 1123 776 1003 813 898L925 578Z" transform="translate(443.051 99) scale(0.0550336 -0.0550336)"/>
+      </g></svg>
+<text x="1136" y="88" text-anchor="end" font-family="DejaVu Sans,sans-serif" font-size="12" letter-spacing="2.5" fill="#3F4A47">DIGITAL VALUE STUDIO</text>
+<text x="64" y="267" font-family="DejaVu Sans,sans-serif" font-size="64" letter-spacing="-2.5" fill="#080A0C">Seu negócio vale</text>
+<text x="64" y="349" font-family="DejaVu Serif,serif" font-style="italic" font-size="61" letter-spacing="-2.3" fill="#596B62">mais do que parece.</text>
+<g fill="none" stroke="#B1BFB4" stroke-width="1"><path d="M1015 175V425M880 300H1150"/><path d="M890 216L980 253V346L890 380Z" fill="#D9DED2"/><path d="M1140 216L1050 253V346L1140 380Z" fill="#D2DCD1"/></g>
+<circle cx="1015" cy="300" r="24" fill="#009E99" opacity=".10"/><circle cx="1015" cy="300" r="9" fill="#009E99"/>
+<path d="M64 483H1136" stroke="#B7C1B9"/>
+<text x="64" y="529" font-family="DejaVu Sans,sans-serif" font-size="14" letter-spacing="2" fill="#263A32">ESTRATÉGIA DE MARCA · BRANDING · SITES</text>
+<text x="64" y="575" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#596B62">Indaiatuba · Campinas · Brasil</text>
+<text x="1136" y="575" text-anchor="end" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#080A0C">orvalia.com.br</text>
+</svg>
