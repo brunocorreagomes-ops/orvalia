@@ -45,7 +45,7 @@ export const marketingPages: MarketingPage[] = [
       context: "Identidade visual desatualizada que não representava a solidez do grupo.",
       solution: "Reorganização visual e estratégica para comunicar segurança, experiência e profissionalismo no planejamento de viagens.",
       metric: "Turismo com presença mais confiável e global",
-      image: "https://i.ibb.co/S7W7szP4/Gemini-Generated-Image-oyd0rboyd0rboyd0.png"
+      image: "/cases/knj-tur-mobile.jpg"
     }
   },
   {
@@ -97,7 +97,7 @@ export const marketingPages: MarketingPage[] = [
       context: "Baixa presença orgânica no Google frente a concorrentes na cidade.",
       solution: "Reposicionamento digital para apresentar serviços industriais com mais clareza, autoridade e objetividade.",
       metric: "Serviço técnico com comunicação mais confiável",
-      image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
+      image: "/cases/dario-eletricidade-mobile.jpg"
     }
   },
   {
@@ -123,7 +123,7 @@ export const marketingPages: MarketingPage[] = [
       context: "Falta de presença estruturada e dependência de indicações físicas locais.",
       solution: "Construção de uma presença digital sensível, técnica e premium para fortalecer autoridade clínica.",
       metric: "Psicologia com posicionamento mais acolhedor e sofisticado",
-      image: "https://i.ibb.co/S7733Rfs/ryna-hayashi.webp"
+      image: "/cases/ryna-hayashi-mobile.jpg"
     }
   },
   {
@@ -175,7 +175,7 @@ export const marketingPages: MarketingPage[] = [
       context: "Identidade visual genérica que não refletia a exclusividade dos pacotes oferecidos.",
       solution: "Redesign completo de marca, posicionando a empresa como boutique de experiências e viagens personalizadas.",
       metric: "Aumento na procura por pacotes premium",
-      image: "https://i.ibb.co/zXqG9zF/knj.webp"
+      image: "/cases/knj-tur-mobile.jpg"
     }
   }
 ];

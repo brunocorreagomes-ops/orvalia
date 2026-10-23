@@ -172,11 +172,11 @@ export default function MarketingLandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 bg-brand-mineral border border-brand-line rounded-[2rem] overflow-hidden group">
               
               {/* Image Side */}
-              <div className="relative h-[350px] lg:h-auto overflow-hidden bg-[#d1d7d3]">
+              <div className={`relative overflow-hidden bg-[#d1d7d3] ${pageContent.relatedCase.image.startsWith("/cases/") ? "h-[560px] sm:h-[640px]" : "h-[350px] lg:h-auto"}`}>
                 <img 
                   src={pageContent.relatedCase.image} 
                   alt={pageContent.relatedCase.client} 
-                  className="w-full h-full object-cover filter saturate-[0.85] transition-transform duration-1000 group-hover:scale-105"
+                  className={`w-full h-full ${pageContent.relatedCase.image.startsWith("/cases/") ? "object-contain p-5" : "object-cover filter saturate-[0.85] transition-transform duration-1000 group-hover:scale-105"}`}
                 />
               </div>
               

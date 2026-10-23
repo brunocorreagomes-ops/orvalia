@@ -145,3 +145,12 @@
 .project-dialog p { font-size:14px; line-height:1.7; padding:16px 0 0; }
 @media(max-width:639px) { .project-dialog-content { padding:16px; } .project-dialog-header { gap:12px; } .project-preview img { height:190px; } }
 @media(prefers-reduced-motion:reduce) { .project-preview img { transition:none; } }
+
+/* Preserve complete mobile website captures in project cards and the viewer. */
+.project-preview-mobile img { display:block; height:440px; padding:16px; object-fit:contain; }
+.project-dialog-mobile img { width:min(100%,560px); height:auto; max-height:none; }
+.project-dialog-mobile .project-dialog-header { position:sticky; top:-24px; z-index:1; padding-block:12px; background:#f5f4ef; }
+@media(max-width:639px) {
+  .project-preview-mobile img { height:440px; }
+  .project-dialog-mobile .project-dialog-header { top:-16px; }
+}

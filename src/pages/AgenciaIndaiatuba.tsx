@@ -16,7 +16,7 @@ const localCases = [
     metric: "Mensagem mais profissional para clientes que precisam de segurança técnica",
     location: "Indaiatuba/SP",
     category: "Marketing • Digital",
-    image: "https://i.ibb.co/h0zgcXS/darioeletricidadesitemobile.png"
+    image: "/cases/dario-eletricidade-mobile.jpg"
   }
 ];
 
@@ -283,7 +283,7 @@ export default function AgenciaIndaiatuba() {
                         src={project.image} 
                         alt={project.title} 
                         referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.85]"
+                        className={`w-full h-full ${project.image.startsWith("/cases/") ? "object-contain p-4" : "object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.85]"}`}
                      />
                   </div>
                   <div className="p-8 md:p-12 border-t border-brand-line">
