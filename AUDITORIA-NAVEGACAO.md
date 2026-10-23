@@ -23,6 +23,8 @@ Limitação preexistente: a checagem TypeScript completa aponta erros de tipagem
 
 ## Formulário de contato
 
-O contato usa um formulário Google Forms incorporado, com alternativa para abertura em outra aba. Campos obrigatórios: e-mail válido, nome, empresa e prioridade; telefone, site/Instagram e contexto opcionais. A política de privacidade descreve o processamento dos dados.
+Interface própria em React e CSS, com a identidade visual da Orvalia. Seleção de prioridade por cartões, dados essenciais obrigatórios e informações complementares opcionais em seção expansível. Sem iframe ou rolagem interna. No celular, um atalho leva diretamente ao formulário.
 
-Validação técnica: envio e confirmação nativa do provedor conferidos. Em 320 e 390 px, a página e o formulário não apresentam rolagem horizontal. O formulário usa rolagem própria para manter a confirmação visível após o envio e exibe a interface em português.
+O envio HTML nativo faz POST para o formulário existente e abre a confirmação do provedor em outra aba. A página preserva os dados e orienta a conferir essa confirmação, sem declarar sucesso a partir do evento submit. Campos mapeados aos identificadores do formulário; mudanças nas perguntas do provedor exigem nova conferência da integração.
+
+Validação: envio técnico aceito com confirmação explícita do provedor. Campos obrigatórios impedem envio vazio. Em 320 e 390 px, ausência de rolagem horizontal; estado visual de seleção conferido.

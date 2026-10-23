@@ -1,10 +1,13 @@
+import { useState } from "react";
+import "../contact.css";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
-import { ArrowUpRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Check, Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contato() {
   const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeBpHWidIKmwrucijCwndBQhce1P2x5-4mPBBxct4KuNgGySQ/viewform?usp=publish-editor&hl=pt-BR";
-  const embedUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeBpHWidIKmwrucijCwndBQhce1P2x5-4mPBBxct4KuNgGySQ/viewform?embedded=true&hl=pt-BR";
+  const [submitted, setSubmitted] = useState(false);
+  const submitUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeBpHWidIKmwrucijCwndBQhce1P2x5-4mPBBxct4KuNgGySQ/formResponse?hl=pt-BR&embedded=true";
 
   return (
     <>
@@ -24,6 +27,8 @@ export default function Contato() {
               <p className="text-lg text-brand-muted leading-relaxed max-w-xl mb-9">
                 A conversa inicial é conduzida diretamente por <strong>Bruno Correa Gomes</strong>. Vamos entender o momento do negócio e identificar oportunidades de evolução na marca, no site e na presença digital.
               </p>
+
+              <a href="#contact-form-title" className="lg:hidden inline-flex items-center gap-3 mb-9 text-sm font-semibold underline underline-offset-4">Contar sobre meu projeto <ArrowUpRight size={16} aria-hidden="true" /></a>
 
               <div className="p-6 md:p-7 bg-brand-warm border border-brand-line mb-9">
                 <h2 className="text-sm font-bold uppercase tracking-wider mb-4">Como funciona</h2>
@@ -54,21 +59,55 @@ export default function Contato() {
               </div>
             </div>
 
-            <section aria-labelledby="contact-form-title" className="min-w-0">
-              <h2 id="contact-form-title" className="sr-only">Formulário de diagnóstico estratégico</h2>
-              <p className="text-sm text-brand-muted leading-relaxed mb-5">Preencha o formulário e clique em Enviar. Sua solicitação será registrada e a Orvalia responderá pelo e-mail informado.</p>
-              <iframe
-                src={embedUrl}
-                title="Formulário de diagnóstico estratégico da Orvalia"
-                width="100%"
-                height="760"
-                className="block w-full h-[80svh] min-h-[560px] max-h-[840px] border border-brand-line bg-[#f6f6f6]"
-                data-lenis-prevent
-              >Carregando formulário de contato…</iframe>
-              <div className="border-t border-brand-line pt-5 mt-5 space-y-4">
-                <a href={formUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm font-semibold underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">Abrir formulário em outra aba <ArrowUpRight size={16} /></a>
-                <p className="text-xs text-brand-muted leading-relaxed">As informações são usadas para responder à sua solicitação. O formulário é processado pelo Google e as respostas ficam em uma planilha privada da Orvalia. <Link to="/privacidade/" className="underline underline-offset-2">Política de privacidade</Link>.</p>
+            <section aria-labelledby="contact-form-title" className="inquiry-panel min-w-0">
+              <div className="inquiry-heading">
+                <span className="inquiry-eyebrow">Uma boa conversa começa aqui</span>
+                <h2 id="contact-form-title" tabIndex={-1}>O que você quer transformar?</h2>
+                <p>Conte o essencial. O próximo passo a gente constrói junto.</p>
               </div>
+              <form action={submitUrl} method="post" target="_blank" rel="noopener noreferrer" onSubmit={() => setSubmitted(true)}>
+                <fieldset className="inquiry-section">
+                  <legend><span>01</span> Seu momento</legend>
+                  <p id="priority-help" className="inquiry-hint">Escolha a prioridade do seu negócio.</p>
+                  <div className="inquiry-options" aria-describedby="priority-help">
+                    {[
+                      ["Marca e identidade visual", "Marca & identidade", "Apresentar o valor da sua empresa"],
+                      ["Criar ou melhorar o site", "Site estratégico", "Transformar visitas em conversas"],
+                      ["Google, SEO e buscas com IA", "SEO & buscas com IA", "Ser encontrado por quem procura"],
+                      ["Diagnóstico completo", "Quero uma orientação", "Entender por onde começar"],
+                    ].map(([value, title, hint]) => (
+                      <label key={value} className="inquiry-option">
+                        <input type="radio" name="entry.695967425" value={value} required />
+                        <span className="inquiry-option-copy"><strong>{title}</strong><span>{hint}</span></span>
+                        <Check size={16} aria-hidden="true" />
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
+                <fieldset className="inquiry-section">
+                  <legend><span>02</span> Como podemos falar com você?</legend>
+                  <p className="inquiry-hint mb-4">Nome, e-mail e empresa são obrigatórios.</p>
+                  <div className="inquiry-fields">
+                    <label htmlFor="inquiry-name">Seu nome<input id="inquiry-name" name="entry.522600955" autoComplete="name" placeholder="Como você gosta de ser chamado?" required maxLength={200} /></label>
+                    <label htmlFor="inquiry-email">E-mail<input id="inquiry-email" name="emailAddress" type="email" autoComplete="email" inputMode="email" placeholder="voce@empresa.com.br" required maxLength={254} /></label>
+                    <label htmlFor="inquiry-company">Empresa ou negócio<input id="inquiry-company" name="entry.607905347" autoComplete="organization" placeholder="O nome da sua empresa ou projeto" required maxLength={200} /></label>
+                  </div>
+                </fieldset>
+                <details className="inquiry-details">
+                  <summary>Quer contar um pouco mais? <span>Opcional</span></summary>
+                  <div className="inquiry-fields">
+                    <label htmlFor="inquiry-phone">Telefone <span>(opcional)</span><input id="inquiry-phone" name="entry.1723222290" type="tel" autoComplete="tel" inputMode="tel" placeholder="DDD + número" maxLength={40} /></label>
+                    <label htmlFor="inquiry-site">Site ou Instagram <span>(opcional)</span><input id="inquiry-site" name="entry.375472757" placeholder="Seu site ou @perfil" maxLength={500} /></label>
+                    <label htmlFor="inquiry-context">Sobre o projeto <span>(opcional)</span><textarea id="inquiry-context" name="entry.591864992" rows={4} placeholder="O que você gostaria de melhorar?" maxLength={5000} /></label>
+                  </div>
+                </details>
+                <div className="inquiry-send">
+                  <p>Ao enviar, você permite que a Orvalia use essas informações para responder ao seu contato. <Link to="/privacidade/">Política de privacidade</Link>.</p>
+                  <button type="submit">Enviar meu projeto <ArrowUpRight size={20} aria-hidden="true" /></button>
+                  <span className="inquiry-hint">A confirmação do envio abre em outra aba. Sem compromisso.</span>
+                  {submitted && <div className="inquiry-status" role="status">Confira a confirmação na aba aberta pelo Google. Seus dados continuam aqui caso precise tentar novamente. <a href={formUrl} target="_blank" rel="noopener noreferrer">Abrir formulário alternativo <ArrowUpRight size={14} aria-hidden="true" /></a></div>}
+                </div>
+              </form>
             </section>
           </div>
         </div>
