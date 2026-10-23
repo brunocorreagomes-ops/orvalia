@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import OrvaliaLogo from "./OrvaliaLogo";
@@ -16,6 +16,8 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -26,14 +28,42 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    const desktop = window.matchMedia("(min-width: 1280px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setMobileMenuOpen(false);
+    };
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => desktop.removeEventListener("change", closeOnDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    drawerRef.current?.querySelector<HTMLElement>("a")?.focus();
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMobileMenuOpen(false);
+      if (event.key !== "Tab") return;
+      const links = Array.from(drawerRef.current?.querySelectorAll<HTMLElement>("a[href]") ?? []);
+      const first = toggleRef.current;
+      const last = links[links.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
       window.removeEventListener("keydown", handleKeyDown);
+      toggleRef.current?.focus({ preventScroll: true });
     };
   }, [mobileMenuOpen]);
 
@@ -51,8 +81,8 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 inset-x-0 z-[100] border-b transition-all duration-300 ${
       isScrolled || mobileMenuOpen
-        ? "bg-brand-mineral/95 backdrop-blur-md border-brand-line shadow-sm"
-        : "bg-brand-mineral/90 border-transparent backdrop-blur-sm"
+        ? "bg-brand-mineral border-brand-line shadow-sm"
+        : "bg-brand-mineral border-transparent"
     }`}>
       <nav aria-label="Navegação principal" className="container mx-auto px-6 h-[76px] md:h-[88px] flex items-center justify-between">
         <Link
@@ -88,6 +118,7 @@ export default function Navbar() {
         </div>
 
         <button
+          ref={toggleRef}
           type="button"
           className="xl:hidden w-11 h-11 border border-brand-line text-brand-ink flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-cyan-dark"
           onClick={() => setMobileMenuOpen((open) => !open)}
@@ -100,8 +131,10 @@ export default function Navbar() {
       </nav>
 
       {mobileMenuOpen && (
-        <div id="mobile-navigation-drawer" className="xl:hidden fixed inset-x-0 top-[76px] bottom-0 md:top-[88px] bg-brand-mineral border-t border-brand-line px-6 py-7 flex flex-col overflow-y-auto">
-          <div className="flex-1">
+        <div ref={drawerRef} id="mobile-navigation-drawer" data-lenis-prevent
+          role="navigation" aria-label="Menu de navegação"
+          className="mobile-navigation-drawer xl:hidden fixed inset-x-0 top-[76px] md:top-[88px] bg-brand-mineral border-t border-brand-line px-6 py-5 flex flex-col overflow-y-auto overscroll-contain">
+          <div className="flex-1 shrink-0">
             {navLinks.map((link) => link.route ? (
               <Link key={link.label} to={link.href} onClick={() => setMobileMenuOpen(false)}
                 className="py-4 border-b border-brand-line text-xl font-medium text-brand-ink flex items-center justify-between">
@@ -114,9 +147,10 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <div className="pt-6">
+          <div className="pt-6 shrink-0">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
               data-analytics-event="whatsapp_click" data-analytics-location="navbar_mobile"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-4 px-5 bg-brand-ink text-brand-warm font-semibold text-sm flex items-center justify-between">
               Pedir diagnóstico estratégico <ArrowUpRight size={18} className="text-brand-cyan" />
             </a>

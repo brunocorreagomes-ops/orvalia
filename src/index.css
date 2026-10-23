@@ -81,3 +81,24 @@
 
 /* Contraste reforçado para texto secundário em fundos claros. */
 .text-brand-muted { color: #3F4A47; }
+
+/* The drawer uses the viewport, with its own native touch scroll area. */
+.mobile-navigation-drawer {
+  height: calc(100vh - 76px);
+  height: calc(100dvh - 76px);
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px) {
+  .mobile-navigation-drawer {
+    height: calc(100vh - 88px);
+    height: calc(100dvh - 88px);
+  }
+}
+@layer base {
+  h1, h2, h3 { overflow-wrap: break-word; }
+  input, textarea, select { max-width: 100%; }
+  @media (max-width: 767px) {
+    input, textarea, select { font-size: max(1rem, 1em); }
+  }
+}

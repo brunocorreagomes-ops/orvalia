@@ -17,7 +17,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-6xl md:text-[8vw] font-sans font-medium tracking-tight leading-[0.94] my-10 md:my-16"
+          className="text-[clamp(2.25rem,10vw,3.75rem)] md:text-[8vw] font-sans font-medium tracking-tight leading-[0.94] my-10 md:my-16"
         >
           Vamos conversar <br />
           <span className="italic font-serif font-light text-brand-cyan">sobre o seu projeto.</span>
