@@ -13,8 +13,9 @@
 .editorial-system { font-family:var(--orvalia-sans); }
 .editorial-system :where(h1,h2,h3,h4) { font-family:var(--orvalia-sans); font-weight:500; }
 .editorial-system :where(h1,h2) { letter-spacing:-.04em; }
-.editorial-system :where(h1,h2) :is(em,.italic) {
-  font-family:var(--orvalia-serif); font-weight:400; font-style:italic; letter-spacing:-.025em;
+/* Headline accents follow the Home hero: only the color changes. */
+.editorial-system :is(h1,h2,h3,h4) :is(em,.italic,.font-serif) {
+  font-family:inherit; font-weight:inherit; font-style:normal; letter-spacing:inherit;
 }
 .editorial-system .page-title, .editorial-system .blog-header h1 {
   font-family:var(--orvalia-sans); font-size:clamp(2.25rem,5.5vw,5.5rem);
