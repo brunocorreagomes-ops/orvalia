@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 import SEO from "../../components/SEO";
 
 export default function Privacidade() {
-  useEffect(() => {
-    document.title = "Política de Privacidade | Orvalia Studio - Branding em Indaiatuba";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", "Saiba como a Orvalia Studio protege seus dados. Estúdio de branding e design em Indaiatuba.");
-  }, []);
 
   return (
     <article className="min-h-screen bg-brand-bg pt-40 pb-20 px-8 md:px-24 text-brand-secondary">
+      <SEO title="Política de Privacidade | Orvalia Studio" description="Saiba como usamos os dados de contato enviados para a Orvalia Studio." canonical="https://orvalia.com.br/privacidade/" />
       <div className="max-w-4xl mx-auto">
         <Link to="/" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-accent-light mb-12 transition-colors">
           <ChevronLeft size={20} />

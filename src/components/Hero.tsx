@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
@@ -54,14 +55,12 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 mt-10">
-              <a 
-                href={`https://wa.me/5511978959567?text=${encodeURIComponent("Olá, Bruno! Vim pela página inicial da Orvalia e gostaria de pedir um diagnóstico estratégico.")}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contato/"
                 className="inline-flex items-center justify-between gap-3 px-5 sm:px-6 py-4 bg-brand-ink text-brand-warm border border-brand-ink text-sm font-semibold w-full sm:w-auto min-w-0 hover:bg-[#2c4141] hover:-translate-y-0.5 transition-all"
               >
                 Pedir diagnóstico estratégico <ArrowUpRight size={16} className="text-brand-cyan" />
-              </a>
+              </Link>
               <a 
                 href="#cases" 
                 className="inline-flex items-center gap-3 text-brand-ink text-sm font-semibold border-b border-[#7d8683] pb-1 hover:border-brand-ink transition-all"

@@ -48,3 +48,10 @@
   .editorial-system .service-content { font-size:17px; }
   .editorial-system .service-content > p { font-size:18px; }
 }
+
+/* One opaque, high-contrast selection on light and dark surfaces alike. */
+::selection, .editorial-system::selection, .editorial-system *::selection {
+  background-color:#66e7e1;
+  color:#080a0c;
+  text-shadow:none;
+}

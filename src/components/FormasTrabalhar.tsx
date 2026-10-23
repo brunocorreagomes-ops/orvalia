@@ -20,7 +20,7 @@ const offers = [
 
 export default function FormasTrabalhar() {
   return (
-    <section id="formas-trabalhar" className="py-24 md:py-32 bg-[#dbe0da] text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
+    <section id="formas-trabalhar" className="py-24 md:py-32 bg-[#dbe0da] text-brand-ink">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16 md:mb-20">

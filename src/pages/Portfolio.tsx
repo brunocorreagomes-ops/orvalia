@@ -22,7 +22,7 @@ export default function Portfolio() {
       </div>
 
       {/* O componente Projects já possui a estética Mineral Editorial internamente */}
-      <Projects />
+      <Projects showPortfolioLink={false} />
     </div>
   );
 }

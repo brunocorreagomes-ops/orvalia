@@ -19,7 +19,7 @@ const serviceSchema = {
 export default function PresencaDigital() {
 
   return (
-    <article className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36 pb-20 selection:bg-brand-cyan selection:text-brand-ink">
+    <article className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36 pb-20">
       <SEO title="Presença digital e SEO em Indaiatuba e Campinas | Orvalia Studio" description="Revisão de conteúdo, páginas de serviços e informações de contato para empresas de Indaiatuba e Campinas." canonical="https://orvalia.com.br/seo-geo/" schema={serviceSchema} />
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-16 border-b border-brand-line pb-6">
@@ -171,14 +171,12 @@ export default function PresencaDigital() {
               <p className="text-[#b1bdb8] mb-12 max-w-xl mx-auto font-sans not-italic text-xl">
                 Conte quais informações seus clientes procuram e onde o site tem dificultado o atendimento.
               </p>
-              <a 
-                href="https://wa.me/5511978959567?text=Olá!%20Quero%20conversar%20sobre%20a%20revisão%20do%20site%20da%20minha%20empresa."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contato/"
                 className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
               >
                 Diagnóstico Gratuito <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </footer>

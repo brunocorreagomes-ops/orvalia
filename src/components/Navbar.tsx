@@ -69,10 +69,6 @@ export default function Navbar() {
 
   useEffect(() => setMobileMenuOpen(false), [pathname]);
 
-  const whatsappUrl = `https://wa.me/5511978959567?text=${encodeURIComponent(
-    `Olá, Bruno! Vim pela página ${pathname} da Orvalia e gostaria de pedir um diagnóstico estratégico para minha empresa.`
-  )}`;
-
   const linkClass = (active: boolean) =>
     `text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan-dark ${
       active ? "text-brand-ink underline decoration-brand-cyan-dark underline-offset-8" : "text-brand-muted hover:text-brand-ink"
@@ -96,7 +92,7 @@ export default function Navbar() {
 
         <div className="hidden xl:flex items-center gap-6">
           {navLinks.map((link) => link.route ? (
-            <Link key={link.label} to={link.href} className={linkClass(pathname === link.href)}>
+            <Link key={link.label} to={link.href} className={linkClass(pathname.replace(/\/$/, "") === link.href)}>
               {link.label}
             </Link>
           ) : (
@@ -105,16 +101,14 @@ export default function Navbar() {
         </div>
 
         <div className="hidden xl:block">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-analytics-event="whatsapp_click"
+          <Link
+            to="/contato/"
+            data-analytics-event="contact_form_open"
             data-analytics-location="navbar"
             className="inline-flex items-center gap-3 bg-brand-ink text-brand-warm px-5 py-3 text-xs font-bold hover:bg-brand-graphite transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan-dark"
           >
             Pedir diagnóstico estratégico <ArrowUpRight size={15} className="text-brand-cyan" />
-          </a>
+          </Link>
         </div>
 
         <button
@@ -148,12 +142,12 @@ export default function Navbar() {
             ))}
           </div>
           <div className="pt-6 shrink-0">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-              data-analytics-event="whatsapp_click" data-analytics-location="navbar_mobile"
+            <Link to="/contato/"
+              data-analytics-event="contact_form_open" data-analytics-location="navbar_mobile"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-4 px-5 bg-brand-ink text-brand-warm font-semibold text-sm flex items-center justify-between">
               Pedir diagnóstico estratégico <ArrowUpRight size={18} className="text-brand-cyan" />
-            </a>
+            </Link>
             <p className="text-xs text-brand-muted text-center mt-3">Atendimento direto com Bruno Correa Gomes</p>
           </div>
         </div>

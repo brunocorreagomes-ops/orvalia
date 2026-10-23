@@ -74,7 +74,7 @@ export default function AgenciaIndaiatuba() {
         canonical="https://orvalia.com.br/branding/"
         schema={agencySchema}
       />
-      <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20 selection:bg-brand-cyan selection:text-brand-ink">
+      <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,12 +101,12 @@ export default function AgenciaIndaiatuba() {
                   A Orvalia Studio transforma marcas de Indaiatuba e da RMC em referências no mercado. Identidade visual, sites de alta performance e experiência digital com padrão editorial.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <a 
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site.%20Meu%20negócio%20é:"
+                  <Link
+                    to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold text-xs uppercase tracking-widest transition-transform hover:-translate-y-1 flex items-center justify-center gap-3"
                   >
                     Diagnóstico Gratuito
-                  </a>
+                  </Link>
                   <a 
                      href="#atendimento"
                      className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold text-xs uppercase tracking-widest transition-colors hover:bg-brand-ink hover:text-brand-warm flex items-center justify-center gap-3"
@@ -349,14 +349,12 @@ export default function AgenciaIndaiatuba() {
                   <p className="text-brand-mist text-base leading-relaxed mb-10">
                     Identidade visual, textos e sites para apresentar os serviços de empresas de Indaiatuba e região.
                   </p>
-                  <a 
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20seção%20sobre%20Indaiatuba%20e%20gostaria%20de%20solicitar%20um%20diagnóstico%20da%20presença%20digital%20da%20minha%20empresa."
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/contato/"
                     className="text-brand-cyan font-mono font-bold text-[10px] uppercase tracking-widest border-b border-brand-cyan/40 pb-1 hover:border-brand-cyan transition-colors"
                   >
                     Iniciar projeto agora
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

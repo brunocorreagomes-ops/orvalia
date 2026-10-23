@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 import SEO from "../../components/SEO";
 
 export default function Termos() {
-  useEffect(() => {
-    document.title = "Termos de Uso | Orvalia Studio - Branding e Identidade Visual em Indaiatuba";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", "Conheça os termos de uso da Orvalia Studio, especialista em branding e identidade visual em Indaiatuba.");
-  }, []);
 
   return (
     <article className="min-h-screen bg-brand-bg pt-40 pb-20 px-8 md:px-24 text-brand-secondary">
+      <SEO title="Termos de Uso | Orvalia Studio" description="Consulte os termos de uso do site da Orvalia Studio." canonical="https://orvalia.com.br/termos/" />
       <div className="max-w-4xl mx-auto">
         <Link to="/" className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-accent-light mb-12 transition-colors">
           <ChevronLeft size={20} />

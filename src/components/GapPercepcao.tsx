@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function GapPercepcao() {
   return (
-    <section id="gap-percepcao" className="py-24 md:py-32 bg-brand-ink text-brand-warm selection:bg-brand-cyan selection:text-brand-ink overflow-hidden">
+    <section id="gap-percepcao" className="py-24 md:py-32 bg-brand-ink text-brand-warm overflow-hidden">
       <div className="container mx-auto px-6">
         
         <div className="flex items-center gap-4 mb-8 md:mb-12">

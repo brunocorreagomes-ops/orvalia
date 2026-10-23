@@ -21,14 +21,14 @@ export default function Footer() {
               <ul className="space-y-4 text-sm text-[#8b9f99]">
                 <li><Link to="/portfolio" className="hover:text-white transition-colors">Trabalhos</Link></li>
                 <li><Link to="/sobre" className="hover:text-white transition-colors">Liderança Estratégica</Link></li>
-                <li><Link to="/agencia-indaiatuba" className="hover:text-white transition-colors">Indaiatuba & RMC</Link></li>
+                <li><Link to="/branding/" className="hover:text-white transition-colors">Indaiatuba & RMC</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-cyan mb-5">Inteligência</h4>
               <ul className="space-y-4 text-sm text-[#8b9f99]">
                 <li><Link to="/blog" className="hover:text-white transition-colors">Perspectivas (Blog)</Link></li>
-                <li><Link to="/sites-estrategicos" className="hover:text-white transition-colors">Sites Estratégicos</Link></li>
+                <li><Link to="/sites/" className="hover:text-white transition-colors">Sites Estratégicos</Link></li>
                 <li><Link to="/seo-geo/" className="hover:text-white transition-colors">GEO & IA</Link></li>
               </ul>
             </div>

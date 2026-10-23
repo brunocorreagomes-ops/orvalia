@@ -13,7 +13,7 @@ export default function MarketingLandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20 selection:bg-brand-cyan selection:text-brand-ink">
+    <div className="min-h-screen bg-brand-mineral text-brand-ink pt-32 pb-20">
       <SEO 
         title={`${pageContent.title} | Orvalia Studio`}
         description={pageContent.problem.description}

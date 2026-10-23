@@ -11,7 +11,7 @@ const locations = [
 
 export default function PosicionamentoLocal() {
   return (
-    <section id="regional" className="py-24 md:py-32 bg-[#e2e5df] text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
+    <section id="regional" className="py-24 md:py-32 bg-[#e2e5df] text-brand-ink">
       <div className="container mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -40,7 +40,7 @@ export default function PosicionamentoLocal() {
             </p>
 
             <Link 
-              to="/agencia-indaiatuba" 
+              to="/branding/"
               className="inline-flex items-center gap-3 text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 self-start hover:border-brand-cyan-dark transition-all"
             >
               Consultoria para a RMC <ArrowUpRight size={14} />

@@ -50,7 +50,7 @@ const cases = [
   }
 ];
 
-export default function Projects() {
+export default function Projects({ showPortfolioLink = true }: { showPortfolioLink?: boolean }) {
   const [selected, setSelected] = useState<(typeof cases)[number] | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function Projects() {
   const otherCases = cases.filter(c => !c.featured);
 
   return (
-    <section id="cases" className="py-32 bg-brand-warm text-brand-ink selection:bg-brand-cyan selection:text-brand-ink">
+    <section id="cases" className="py-32 bg-brand-warm text-brand-ink">
       <div className="container mx-auto px-6">
         
         {/* Cabeçalho da Seção */}
@@ -133,12 +133,12 @@ export default function Projects() {
                 </div>
               </div>
 
-              <Link 
-                to="/portfolio" 
+              {showPortfolioLink && <Link
+                to="/portfolio/"
                 className="mt-12 inline-flex items-center gap-3 text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 self-start hover:border-brand-cyan-dark transition-all"
               >
                 Ver portfólio <ArrowUpRight size={14} />
-              </Link>
+              </Link>}
             </div>
           </motion.div>
         )}

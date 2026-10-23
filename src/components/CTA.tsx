@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="gap-diagnostico" className="py-24 md:py-32 bg-brand-ink text-brand-warm selection:bg-brand-cyan selection:text-brand-ink">
+    <section id="gap-diagnostico" className="py-24 md:py-32 bg-brand-ink text-brand-warm">
       <div className="container mx-auto px-6">
         
         <div className="flex items-center gap-4 mb-8">
@@ -28,16 +29,14 @@ export default function CTA() {
             Conte como sua empresa funciona e o que precisa melhorar na marca ou no site. A conversa inicial ajuda a definir o escopo do trabalho.
           </p>
           
-          <a 
-            href={`https://wa.me/5511978959567?text=${encodeURIComponent("Olá, Bruno! Vim pela chamada de diagnóstico da Orvalia e gostaria de conversar sobre minha marca e presença digital.")}` }
-            data-analytics-event="whatsapp_click"
+          <Link
+            to="/contato/"
+            data-analytics-event="contact_form_open"
             data-analytics-location="cta_final"
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center justify-between gap-6 px-8 py-5 bg-brand-cyan text-brand-ink font-bold text-xs uppercase tracking-widest hover:bg-[#80e6e2] transition-colors shrink-0"
           >
             Agendar diagnóstico de marca <ArrowUpRight size={18} />
-          </a>
+          </Link>
         </div>
 
 

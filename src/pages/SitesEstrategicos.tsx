@@ -54,7 +54,7 @@ const serviceSchema = {
 
 export default function SitesEstrategicos() {
   return (
-    <div className="min-h-screen bg-brand-mineral text-brand-ink selection:bg-brand-cyan selection:text-brand-ink pt-28 md:pt-36">
+    <div className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36">
       <SEO 
         title="Criação de Sites e Landing Pages | Orvalia Studio"
         description="Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão em Indaiatuba."
@@ -87,14 +87,12 @@ export default function SitesEstrategicos() {
                   Criamos sites em Indaiatuba com informações sobre os serviços, navegação para celular e caminhos diretos para entrar em contato.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <a 
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site." 
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
                   >
                     Diagnóstico Gratuito
-                  </a>
+                  </Link>
                   <Link 
                     to="/portfolio/" 
                     className="px-10 py-5 bg-transparent text-brand-ink border border-brand-line editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors text-center"
@@ -305,14 +303,12 @@ export default function SitesEstrategicos() {
             <p className="text-xl text-[#b1bdb8] leading-relaxed mb-12 max-w-2xl mx-auto">
               Cada dia que a sua empresa não aparece com clareza no Google, é um dia em que perde clientes para quem já compreendeu as regras do jogo digital.
             </p>
-            <a 
-              href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico%20da%20minha%20marca/site."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contato/"
               className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
             >
               Diagnóstico Gratuito <ArrowUpRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -337,15 +333,13 @@ export default function SitesEstrategicos() {
               Solicite um diagnóstico gratuito e descubra com exatidão o que está a impedir o seu crescimento no ambiente digital.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a 
-                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20o%20site%20da%20Orvalia%20e%20quero%20um%20diagnóstico." 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contato/"
                 className="px-10 py-5 bg-brand-ink text-brand-mineral editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
               >
                 <div className="w-2 h-2 rounded-full bg-brand-cyan" />
                 Diagnóstico Gratuito
-              </a>
+              </Link>
               <a 
                 href="mailto:orvaliastudio@gmail.com" 
                 className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"

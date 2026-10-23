@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Essencial() {
   return (
-    <section className="min-h-screen bg-brand-mineral text-brand-ink pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24 selection:bg-brand-cyan selection:text-brand-ink">
+    <section className="min-h-screen bg-brand-mineral text-brand-ink pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24">
       <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink mb-10 md:mb-12 transition-colors border-b border-transparent hover:border-brand-ink pb-1">
         <ChevronLeft size={16} />
         <span className="font-mono text-[10px] uppercase tracking-widest font-bold">Voltar para a página inicial</span>

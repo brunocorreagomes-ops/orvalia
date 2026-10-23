@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function BrunoSection() {
   return (
-    <section id="autoridade" className="py-32 bg-brand-warm text-brand-ink border-t border-brand-line selection:bg-brand-cyan selection:text-brand-ink">
+    <section id="autoridade" className="py-32 bg-brand-warm text-brand-ink border-t border-brand-line">
       <div className="container mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 lg:gap-24 items-center">

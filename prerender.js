@@ -54,6 +54,7 @@ const routesToPrerender = [
   '/solucoes/criacao-de-sites-indaiatuba/',
   '/solucoes/landing-pages-indaiatuba/',
   '/solucoes/seo-indaiatuba/',
+  '/solucoes/branding-em-indaiatuba/',
   '/solucoes/sites-para-medicos-indaiatuba/',
   '/solucoes/sites-para-advogados-indaiatuba/',
   // Legal
