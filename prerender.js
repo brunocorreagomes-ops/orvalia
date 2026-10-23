@@ -4,6 +4,11 @@ import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = 'https://orvalia.com.br';
+const articleRoutes = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/data/article-routes.json'), 'utf8'));
+const articleDates = new Map(articleRoutes.map(article => [article.slug, article.modified]));
+const canonicalArticleRoutes = new Set(articleRoutes.map(article => article.slug));
+const legacyArticleRoutes = new Set(articleRoutes.map(article => article.slug.replace('/blog/', '/')));
+
 
 const routesToPrerender = [
   '/',
@@ -75,7 +80,8 @@ async function prerender() {
   const templatePath = path.resolve(__dirname, 'dist/index.html');
   const template = fs.readFileSync(templatePath, 'utf-8');
   
-  for (const url of routesToPrerender) {
+  const allRoutes = [...new Set([...routesToPrerender, ...canonicalArticleRoutes])];
+  for (const url of allRoutes) {
     const context = {};
     const appHtml = render(url, context);
     const routePath = url.endsWith('/') ? url : `${url}/`;
@@ -92,11 +98,19 @@ async function prerender() {
       html = html.replace(/<script id="home-faq-schema"[\s\S]*?<\/script>/gi, '');
     }
     
+    if (canonicalArticleRoutes.has(routePath) || legacyArticleRoutes.has(routePath) || routePath === '/blog/') {
+      html = html.replace(/<script id="entity-schema"[\s\S]*?<\/script>/gi, '');
+    }
     if (helmet) {
       const titleString = helmet.title ? helmet.title.toString() : '';
       const metaString = helmet.meta ? helmet.meta.toString() : '';
       const linkString = helmet.link ? helmet.link.toString() : '';
       const scriptString = helmet.script ? helmet.script.toString() : '';
+      const suppliedMeta = new Set(Array.from(metaString.matchAll(/(?:name|property)="([^"]+)"/g), match => match[1]));
+      html = html.replace(/<meta\b[^>]*>/gi, tag => {
+        const key = tag.match(/(?:name|property)="([^"]+)"/i)?.[1];
+        return suppliedMeta.has(key) ? '' : tag;
+      });
 
       if (titleString.trim()) {
         html = html.replace(/<title>[\s\S]*?<\/title>/gi, '');
@@ -135,7 +149,7 @@ async function prerender() {
       }
       html = html.replace(
         /<link rel="alternate" hreflang="pt-BR"[^>]*>/gi,
-        `<link rel="alternate" hreflang="pt-BR" href="${fullCanonicalUrl}" />`
+        `<link rel="alternate" hreflang="pt-BR" href="${linkString.match(/rel="canonical" href="([^"]+)"/)?.[1] || fullCanonicalUrl}" />`
       );
 
       const helmetTags = `
@@ -156,9 +170,8 @@ async function prerender() {
     console.log(`Prerendered ${url} -> ${outFile}`);
   }
 
-  const today = new Date().toISOString().split('T')[0];
-  const sitemapUrls = routesToPrerender
-    .filter((route) => !lowPriorityRoutes.includes(route))
+  const sitemapUrls = allRoutes
+    .filter((route) => !lowPriorityRoutes.includes(route) && !legacyArticleRoutes.has(route))
     .map((route) => {
       const normalizedRoute = route.endsWith('/') ? route : `${route}/`;
       let priority = '0.8';
@@ -178,7 +191,8 @@ async function prerender() {
         changefreq = 'monthly';
       }
 
-      return `  <url>\n    <loc>${SITE_URL}${normalizedRoute}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      const modified = articleDates.get(normalizedRoute) || (normalizedRoute === '/blog/' ? '2026-10-23' : null);
+      return `  <url>\n    <loc>${SITE_URL}${normalizedRoute}</loc>\n${modified ? `    <lastmod>${modified}</lastmod>\n` : ''}    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join('\n');
 

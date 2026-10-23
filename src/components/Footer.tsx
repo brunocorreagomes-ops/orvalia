@@ -29,7 +29,7 @@ export default function Footer() {
               <ul className="space-y-4 text-sm text-[#8b9f99]">
                 <li><Link to="/blog" className="hover:text-white transition-colors">Perspectivas (Blog)</Link></li>
                 <li><Link to="/sites-estrategicos" className="hover:text-white transition-colors">Sites Estratégicos</Link></li>
-                <li><Link to="/presenca-digital-ia" className="hover:text-white transition-colors">GEO & IA</Link></li>
+                <li><Link to="/seo-geo/" className="hover:text-white transition-colors">GEO & IA</Link></li>
               </ul>
             </div>
           </div>

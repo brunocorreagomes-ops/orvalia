@@ -114,6 +114,12 @@ export default function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
 
+          <Route path="/blog/branding-para-clinicas-campinas-indaiatuba" element={<ArticleClinicas />} />
+          <Route path="/blog/posicionamento-digital-advogados-indaiatuba" element={<ArticleAdvogados />} />
+          <Route path="/blog/design-estrategico-arquitetura-itu-jundiai" element={<ArticleArquitetura />} />
+          <Route path="/blog/geo-inteligencia-artificial-empresas-sorocaba" element={<ArticleGEO />} />
+          <Route path="/blog/percepcao-de-valor-estetica-premium-indaiatuba" element={<ArticleEstetica />} />
+
           {/* Legacy routes kept to avoid breaking old links */}
           <Route path="/agencia-indaiatuba" element={<AgenciaIndaiatuba />} />
           <Route path="/sites-estrategicos" element={<SitesEstrategicos />} />
