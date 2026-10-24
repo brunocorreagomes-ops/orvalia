@@ -14,7 +14,9 @@ O endpoint de recebimento está publicado no Sites. Ele valida a origem, o taman
 
 A interface tem estados de envio, erro e recebimento, bloqueio de envios simultâneos e preservação dos campos em falha. O evento `generate_lead` só é emitido depois da confirmação verificável. O endpoint não publica respostas; o armazenamento e os avisos continuam no Google.
 
-`src/lib/site-config.ts` mantém a integração desativada até um envio real autorizado. O teste real foi bloqueado pela revisão automática por usar um novo endpoint externo e gerar notificação. O formulário anterior continua funcionando; não foi ativado um fluxo sem validação de ponta a ponta.
+O envio integrado está ativado em `src/lib/site-config.ts`. A interface não abre nem redireciona para o Google. A confirmação é exibida na própria página apenas após uma resposta verificável do serviço. Em falha, mantém os campos preenchidos e apresenta uma mensagem da Orvalia.
+
+A verificação OPTIONS confirmou que o endpoint aceita a origem do site. O envio real de teste foi bloqueado pela revisão automática por transmitir dados ao endpoint e poder gerar notificação; a entrega real continua pendente de validação. Os testes de contrato utilizam provedor simulado.
 
 ## Analytics preparado, ainda sem coleta
 

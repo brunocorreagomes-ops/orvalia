@@ -1,6 +1,6 @@
-// Public configuration. Activation waits for the owner's real end-to-end test.
+// Public configuration. Contact receipts are shown within the Orvalia page.
 export const siteConfig = {
   ga4MeasurementId: '',
-  contactApiEnabled: false,
+  contactApiEnabled: true,
   contactApiUrl: 'https://orvalia-contact-api.plasmaframe.chatgpt.site/api/contact',
 };
