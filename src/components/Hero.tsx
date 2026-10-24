@@ -4,13 +4,14 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section data-contact-hero className="relative bg-brand-mineral text-brand-ink isolate">
-      <div className="min-h-[100svh] flex items-center px-6 md:px-10 lg:px-16 pt-28 pb-8">
+    <section data-contact-hero className="hero-opening relative bg-brand-mineral text-brand-ink isolate overflow-hidden">
+      <DewPointScene />
+      <div className="relative min-h-[100svh] flex items-center px-6 md:px-10 lg:px-16 pt-28 pb-8">
         
-        <div className="w-full max-w-[1550px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-10 md:gap-16">
+        <div className="w-full max-w-[1550px] mx-auto">
           
           {/* Coluna Esquerda: Narrativa Editorial */}
-          <div className="relative z-10">
+          <div className="hero-copy relative z-10">
             <div className="flex items-center gap-3 text-xs tracking-[0.19em] font-bold text-brand-muted mb-8 md:mb-16">
               <span className="block w-2.5 h-2.5 rounded-full bg-[#008a86] border-2 border-[#4fcfc9]"></span>
               ORVALIA / MARCA, SITE E ESTRATÉGIA
@@ -49,10 +50,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative min-w-0 max-w-[610px] w-full mx-auto">
-            <DewPointScene />
-            <p className="py-4 border-b border-brand-line text-brand-muted text-xs leading-relaxed">Marca, site e comunicação trabalhando na mesma direção.</p>
-          </div>
+
         </div>
       </div>
     </section>
