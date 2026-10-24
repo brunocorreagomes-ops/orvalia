@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { analyticsConfigured } from "../lib/analytics";
 import OrvaliaLogo from "./OrvaliaLogo";
+import { studioProfile } from "../data/studio";
 
 export default function Footer() {
   return (
@@ -14,6 +15,12 @@ export default function Footer() {
             <p className="text-[#a9b8b3] text-sm max-w-sm leading-relaxed">
               Identidade visual, sites e conteúdo para apresentar sua empresa e facilitar o contato.
             </p>
+            <address className="footer-contact not-italic mt-6 text-sm text-[#b8c8c1] leading-relaxed">
+              <p>{studioProfile.name} · Indaiatuba, SP</p>
+              <p>Atendimento a Campinas e região. Reuniões por agendamento.</p>
+              <a href={`mailto:${studioProfile.email}`}>{studioProfile.email}</a><br />
+              <a href={`tel:${studioProfile.telephone}`}>{studioProfile.telephoneDisplay}</a>
+            </address>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-12 md:gap-20">

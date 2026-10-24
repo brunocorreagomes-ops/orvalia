@@ -252,3 +252,11 @@
 .project-back { display:inline-flex; align-items:center; gap:12px; font-size:13px; color:#006a67; min-height:44px; }
 @media(max-width:1023px) { .audience-heading { align-items:start; flex-direction:column; gap:12px; } .audience-grid { grid-template-columns:1fr 1fr; } .project-page-body { gap:28px; } }
 @media(max-width:639px) { .audience-band { padding:32px 0; } .audience-grid { grid-template-columns:1fr; gap:20px; } .studio-facts > div { grid-template-columns:1fr; gap:6px; } .project-page-body,.project-related > div { grid-template-columns:1fr; } .project-page-image { padding:16px; } .project-page-header > p:not(.editorial-label) { font-size:18px; } .project-breadcrumb { margin-bottom:28px; } }
+
+/* Consistent preview area preserves real identities and screenshots without cropping. */
+.project-preview img { display:block; height:440px; padding:16px; object-fit:contain; }
+.hero-contact-note { font-size:14px; }
+.situation-card ul { font-size:14px; }
+.studio-facts dd { font-size:14px; }
+.footer-contact a { display:inline-block; padding-block:6px; text-decoration:underline; text-underline-offset:3px; }
+@media(max-width:639px) { .project-preview img { height:360px; } }

@@ -1,6 +1,7 @@
 import { MotionConfig } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ArticlePage from "./components/ArticlePage";
 import Analytics from "./components/Analytics";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -93,7 +94,7 @@ export default function App() {
     return () => observer.disconnect();
   }, [pathname]);
   const whatsappHref = `https://wa.me/5511978959567?text=${encodeURIComponent(
-    `Olá, Bruno! Vim pela página ${pathname} da Orvalia e gostaria de conversar sobre um diagnóstico estratégico.`
+    "Olá, Bruno! Vim pelo site da Orvalia e quero conversar sobre meu projeto."
   )}`;
   return (
     <>
@@ -105,7 +106,7 @@ export default function App() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Falar com Bruno Correa Gomes pelo WhatsApp. Página de origem: ${pathname}`}
+          aria-label="Falar com Bruno Correa Gomes pelo WhatsApp"
           data-analytics-event="whatsapp_floating_click"
           data-analytics-page={pathname}
           hidden={pathname === "/" && !pastHero}
@@ -139,6 +140,7 @@ export default function App() {
           <Route path="/plano-profissional" element={<Profissional />} />
           <Route path="/plano-evolucao" element={<Evolucao />} />
           <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/quanto-custa-site-indaiatuba" element={<ArticlePage id="quanto-custa-site-indaiatuba" />} />
           <Route path="/blog/gap-de-percepcao-digital-empresas-excelentes-comuns" element={<ArticleGapPercepcao />} />
           <Route path="/blog/branding-indaiatuba" element={<Article1 />} />
           <Route path="/blog/identidade-visual-precos" element={<Article2 />} />

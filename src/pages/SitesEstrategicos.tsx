@@ -19,16 +19,16 @@ const solutions = [
   {
     icon: Search,
     title: "SEO desde a base",
-    desc: "Estrutura desenhada para indexar e ranquear no Google desde o primeiro dia."
+    desc: "Estrutura preparada para rastreamento e indexação: títulos, navegação e conteúdo acessíveis. A indexação e as posições dependem dos buscadores."
   },
   {
     icon: Target,
-    title: "Copy estratégica",
-    desc: "Textos de alta precisão que guiam o visitante e aumentam a conversão."
+    title: "Textos claros",
+    desc: "Textos que explicam os serviços, respondem às dúvidas e mostram como entrar em contato."
   },
   {
     icon: Zap,
-    title: "UX focada em resultado",
+    title: "Navegação simples",
     desc: "Cada elemento, espaço e contraste existe com a função de gerar uma ação."
   }
 ];
@@ -36,8 +36,8 @@ const solutions = [
 const steps = [
   { num: "01", title: "Diagnóstico", desc: "Análise do negócio e concorrência real." },
   { num: "02", title: "Estratégia", desc: "Definição de posicionamento e estrutura." },
-  { num: "03", title: "Produção", desc: "Design editorial, desenvolvimento e copy." },
-  { num: "04", title: "Lançamento", desc: "Publicação, indexação e suporte inicial." }
+  { num: "03", title: "Produção", desc: "Design, desenvolvimento e textos." },
+  { num: "04", title: "Lançamento", desc: "Publicação, conferência técnica e suporte combinado." }
 ];
 
 const serviceSchema = {
@@ -56,8 +56,8 @@ export default function SitesEstrategicos() {
   return (
     <div className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36">
       <SEO 
-        title="Criação de sites e páginas para campanhas | Orvalia Studio"
-        description="Sites e páginas para apresentar seu negócio e facilitar o contato em Indaiatuba."
+        title="Criação de sites em Indaiatuba e Campinas | Orvalia Studio"
+        description="Sites para empresas e profissionais de Indaiatuba e Campinas. Serviços claros, contato integrado e estrutura preparada para buscas. Converse sobre seu projeto."
         canonical="https://orvalia.com.br/sites/"
         schema={serviceSchema}
       />
@@ -80,8 +80,8 @@ export default function SitesEstrategicos() {
                 </div>
                 
                 <h1 className="page-title text-5xl md:text-7xl lg:text-[6vw] font-sans font-medium leading-[0.95] tracking-tight mb-8">
-                  Seu site precisa mostrar <br />
-                  <span className="italic font-serif font-light text-[#55605D]">o valor da sua empresa.</span>
+                  Criação de sites em <br />
+                  <span className="italic font-serif font-light text-[#55605D]">Indaiatuba e Campinas.</span>
                 </h1>
                 <p className="text-xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   Criamos sites em Indaiatuba com informações sobre os serviços, navegação para celular e caminhos diretos para entrar em contato.
@@ -91,7 +91,7 @@ export default function SitesEstrategicos() {
                     to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
                   >
-                    Pedir diagnóstico estratégico
+                    Conversar sobre meu projeto
                   </Link>
                   <Link 
                     to="/portfolio/" 
@@ -175,10 +175,10 @@ export default function SitesEstrategicos() {
               <span className="block w-2.5 h-2.5 rounded-full bg-brand-cyan"></span>
             </div>
             <h2 className="section-title text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
-              Um site não é design. <br /> É um <span className="italic font-serif font-light text-brand-cyan">sistema de aquisição.</span>
+              Um site organiza <br /> <span className="italic font-serif font-light text-brand-cyan">a conversa com seu cliente.</span>
             </h2>
             <p className="text-xl md:text-2xl text-[#b1bdb8] font-sans not-italic max-w-2xl mx-auto leading-relaxed border-l-2 border-brand-cyan pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-              Um site precisa de ser encontrado, de convencer e de converter. Sem isso, é apenas um cartão de visita caro e ineficaz.
+              Seu cliente precisa entender o que você oferece, encontrar informações confiáveis e saber como falar com sua empresa. Conteúdo e design trabalham juntos para facilitar esse caminho.
             </p>
           </motion.div>
         </div>
@@ -230,7 +230,7 @@ export default function SitesEstrategicos() {
               </h2>
               <div className="border-l-2 border-brand-cyan-dark pl-6">
                 <p className="text-xl text-brand-ink font-sans not-italic leading-relaxed">
-                  “Enquanto outras agências entregam apenas layout, nós entregamos posicionamento estratégico e clareza comercial.”
+                  O projeto reúne apresentação dos serviços, organização do conteúdo e caminhos de contato. A proposta detalha as páginas, integrações e responsabilidades de cada parte.
                 </p>
               </div>
             </div>
@@ -292,23 +292,14 @@ export default function SitesEstrategicos() {
         </div>
       </section>
 
-      {/* Captura / Pressão (Deep Ink) */}
-      <section className="py-32 bg-brand-ink text-brand-mineral text-center border-b border-[#23312e]">
+      <section className="py-20 bg-brand-mineral border-b border-brand-line">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-title text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
-              Enquanto você decide, o seu <br className="hidden md:block" />
-              <span className="italic font-serif font-light text-brand-cyan">concorrente avança.</span>
-            </h2>
-            <p className="text-xl text-[#b1bdb8] leading-relaxed mb-12 max-w-2xl mx-auto">
-              Cada dia que a sua empresa não aparece com clareza no Google, é um dia em que perde clientes para quem já compreendeu as regras do jogo digital.
-            </p>
-            <Link
-              to="/contato/"
-              className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
-            >
-              Pedir diagnóstico estratégico <ArrowUpRight size={18} />
-            </Link>
+          <h2 className="section-title text-3xl md:text-4xl mb-6">Antes de pedir uma proposta.</h2>
+          <p className="text-lg text-[#475553] max-w-2xl mb-8">Veja como comparar escopos e conheça exemplos reais. O investimento depende das páginas, do conteúdo e das integrações necessárias.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link className="project-detail-link" to="/blog/quanto-custa-site-indaiatuba/">O que define o custo de um site <ArrowUpRight size={17} /></Link>
+            <Link className="project-detail-link" to="/portfolio/dario-eletricidade/">Serviços técnicos: Dario Eletricidade <ArrowUpRight size={17} /></Link>
+            <Link className="project-detail-link" to="/portfolio/quinta-de-caraiva/">Hospedagem: Quinta de Caraíva <ArrowUpRight size={17} /></Link>
           </div>
         </div>
       </section>
@@ -326,11 +317,11 @@ export default function SitesEstrategicos() {
               <div className="w-8 h-[2px] bg-brand-cyan-dark" />
             </div>
             <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
-              Pronto para transformar o seu site <br /> 
-              num <span className="italic font-serif font-light text-[#55605D]">ativo de vendas?</span>
+              Vamos organizar <br />
+              <span className="italic font-serif font-light text-[#55605D]">o site da sua empresa?</span>
             </h2>
             <p className="text-lg text-[#475553] leading-relaxed mb-12 max-w-2xl mx-auto">
-              Conte sobre seu projeto e vamos identificar oportunidades para melhorar a navegação, o conteúdo e o contato no seu site.
+              Conte o momento da empresa no formulário. Bruno analisa e responde pelo e-mail informado para combinar o próximo passo. Você avalia a proposta antes de decidir.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
@@ -338,13 +329,13 @@ export default function SitesEstrategicos() {
                 className="px-10 py-5 bg-brand-ink text-brand-mineral editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
               >
                 <div className="w-2 h-2 rounded-full bg-brand-cyan" />
-                Pedir diagnóstico estratégico
+                Conversar sobre meu projeto
               </Link>
               <a 
                 href="mailto:orvaliastudio@gmail.com" 
                 className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"
               >
-                Contactar via E-mail
+                Enviar e-mail
               </a>
             </div>
           </motion.div>

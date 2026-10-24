@@ -61,7 +61,7 @@ export default function MarketingLandingPage() {
                     to="/contato/"
                     className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
                   >
-                    Pedir diagnóstico estratégico <ArrowUpRight size={16} />
+                    Conversar sobre meu projeto <ArrowUpRight size={16} />
                   </Link>
                   <Link
                     to="/portfolio"
@@ -235,7 +235,7 @@ export default function MarketingLandingPage() {
               {pageContent.cta}
             </h2>
             <p className="text-xl md:text-2xl text-[#b1bdb8] font-serif italic max-w-2xl mx-auto leading-relaxed mb-12">
-              Não deixe a sua empresa invisível no digital. Comece hoje a sua transformação com um diagnóstico estratégico sem custos.
+              Conte o que sua empresa precisa apresentar melhor. Bruno analisa as informações e responde pelo e-mail informado para combinar o próximo passo.
             </p>
             <a 
               href="https://wa.me/5511978959567"
@@ -243,7 +243,7 @@ export default function MarketingLandingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-cyan text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
             >
-              Pedir diagnóstico estratégico <ArrowUpRight size={16} />
+              Conversar sobre meu projeto <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

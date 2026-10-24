@@ -5,6 +5,7 @@ export interface Article {
   published: string | null; modified: string; image: string | null; readTime: number;
   sections: { id: string; title: string; paragraphs: string[] }[];
   checklist: string[]; faq: { question: string; answer: string }[];
+  relatedProjects?: string[];
   related: string[]; sources: { label: string; url: string }[];
 }
 export const categories: Record<ArticleCategory, string> = {
@@ -20,7 +21,7 @@ export const articles: Article[] = [
     "description": "Saiba como definir posicionamento, mensagem e identidade visual para uma empresa em Indaiatuba e organizar um projeto de branding.",
     "answer": "Branding é o trabalho de definir e manter como uma empresa se apresenta e é reconhecida. Começa pelo público, pela oferta e pelas diferenças que o negócio consegue demonstrar; a identidade visual traduz essas decisões.",
     "published": "2026-04-22",
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": null,
     "sections": [
       {
@@ -54,6 +55,30 @@ export const articles: Article[] = [
           "Escolha os primeiros pontos de contato: site, apresentação comercial e perfis mantidos pela empresa. Corrija informações divergentes e substitua os materiais em uma sequência viável.",
           "Acompanhe dúvidas recorrentes e a qualidade dos pedidos recebidos. Uma nova identidade pode melhorar a apresentação, mas a evolução comercial também depende de preço, atendimento, oferta e demanda."
         ]
+      },
+      {
+        "id": "exemplo-1",
+        "title": "O contexto local entra nas informações, não só no título",
+        "paragraphs": [
+          "Uma empresa em Indaiatuba pode atender apenas determinados bairros, toda a região de Campinas ou clientes a distância. Essa diferença precisa aparecer na apresentação dos serviços e no atendimento. Repetir o nome da cidade em cada frase não resolve a dúvida sobre deslocamento, disponibilidade ou formato de trabalho. O planejamento da marca deve partir de como o negócio realmente opera.",
+          "Converse com quem atende os pedidos e anote perguntas recorrentes. O cliente quer saber se há visita técnica, se o serviço é para empresas ou pessoas, como recebe a proposta e quem vai acompanhá-lo. Essas respostas ajudam a definir a mensagem. São informações que a própria empresa consegue conferir, manter e explicar, sem depender de adjetivos como excelência, inovação ou exclusividade."
+        ]
+      },
+      {
+        "id": "exemplo-2",
+        "title": "Um exemplo de diferença que o cliente consegue perceber",
+        "paragraphs": [
+          "Imagine, como situação ilustrativa, duas empresas de manutenção. Ambas dizem oferecer qualidade. Uma delas explica quais equipamentos atende, em quais cidades faz visitas e que informações precisa para avaliar o serviço. Sua marca fica mais compreensível porque apresenta uma operação concreta. Isso não prova que ela é melhor; torna mais simples decidir se o serviço é adequado à necessidade de quem procura.",
+          "Na identidade visual, essa clareza precisa continuar em propostas, uniformes, placas e páginas. Uma assinatura que funciona em uma imagem grande pode ficar ilegível no celular ou na impressão pequena. Defina aplicações prioritárias e revise exemplos nessas condições antes de aprovar. A preferência estética importa, mas precisa conviver com o uso cotidiano da empresa."
+        ]
+      },
+      {
+        "id": "exemplo-3",
+        "title": "Um primeiro roteiro para organizar o projeto",
+        "paragraphs": [
+          "Reúna a apresentação atual, três dúvidas frequentes de clientes e os materiais usados no atendimento. Escreva quais serviços são prioritários e quais pedidos a empresa não atende. Se o negócio mudou, registre o que ficou desatualizado na comunicação. Esse conjunto oferece uma base mais útil para conversar com um estúdio do que uma lista de logotipos de concorrentes.",
+          "Depois da implantação, observe se a equipe consegue explicar a oferta com os novos materiais e se as dúvidas iniciais ficaram mais específicas. Pedidos de proposta e contratos dependem também de procura, preço e atendimento. Uma mudança visual isolada não permite atribuir resultados comerciais à marca. Combine o que será observado e mantenha os materiais alinhados à operação."
+        ]
       }
     ],
     "checklist": [
@@ -78,7 +103,11 @@ export const articles: Article[] = [
       "branding-estrategico-indaiatuba-campinas"
     ],
     "sources": [],
-    "readTime": 2
+    "readTime": 4,
+    "relatedProjects": [
+      "beth-olmeda",
+      "dario-eletricidade"
+    ]
   },
   {
     "id": "identidade-visual-precos",
@@ -89,7 +118,7 @@ export const articles: Article[] = [
     "description": "Entenda o que muda o preço de uma identidade visual: pesquisa, aplicações, arquivos, direitos de uso e implantação da marca.",
     "answer": "O preço de uma identidade visual depende do escopo, da complexidade e das entregas contratadas. Para comparar propostas, confira pesquisa, versões do logotipo, aplicações, arquivos finais, revisões e condições de uso.",
     "published": "2026-04-21",
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": null,
     "sections": [
       {
@@ -123,6 +152,30 @@ export const articles: Article[] = [
           "Priorize os materiais que a empresa usa para vender e atender. Pode ser melhor implantar primeiro uma identidade consistente no site e nas propostas do que produzir várias peças sem uso definido.",
           "Este artigo não apresenta uma tabela de preços da Orvalia. O valor de um projeto exige conhecer a necessidade e definir o escopo. Peça um orçamento que permita entender e comparar o trabalho."
         ]
+      },
+      {
+        "id": "exemplo-1",
+        "title": "Um orçamento começa pelo uso da marca",
+        "paragraphs": [
+          "Antes de pedir um valor, liste onde a identidade será usada nos próximos meses. Uma profissional que precisa organizar assinatura de e-mail, perfil e apresentação de serviços tem demandas diferentes de uma empresa com veículos, uniformes e várias equipes. O número de aplicações muda o trabalho de preparação, revisão e entrega. Não é preciso contratar tudo de uma vez: separe o que será usado agora do que pode esperar.",
+          "Como exemplo de materiais apresentados no portfólio da Orvalia, o projeto de Beth Olmeda reúne identidade visual, textos de apresentação e página de serviços. Essas frentes podem se conectar, mas não são sinônimos. Ao comparar propostas, confira se o preço cobre apenas a identidade ou também textos e implementação da página. O exemplo demonstra um escopo, não uma tabela de valores válida para qualquer empresa."
+        ]
+      },
+      {
+        "id": "exemplo-2",
+        "title": "Compare duas propostas com o mesmo roteiro",
+        "paragraphs": [
+          "Peça que cada fornecedor descreva as peças incluídas, os formatos dos arquivos, as etapas de aprovação e como serão tratadas alterações de direção depois de uma etapa aprovada. Também pergunte quem fornecerá textos, fotografias e informações comerciais. Uma proposta curta pode parecer mais barata por deixar essas responsabilidades fora do documento. A comparação só fica útil quando as entregas e os limites estão claros.",
+          "Separe criação de custos externos. Impressão, registro de marca, compra de fotografias, licenças de fontes, domínio e hospedagem podem exigir contratações próprias. A inclusão de cada item depende da proposta; não presuma que todos acompanham o logotipo. O importante é saber o que você recebe, o que pode usar e quais despesas continuam depois da entrega."
+        ]
+      },
+      {
+        "id": "exemplo-3",
+        "title": "Como conversar sobre investimento sem uma tabela pronta",
+        "paragraphs": [
+          "Conte o momento do negócio, as aplicações prioritárias e a data em que precisa começar a usar os materiais. Se houver um limite de orçamento, compartilhá-lo ajuda a discutir etapas possíveis. Isso não transforma qualquer valor em um projeto viável; permite identificar o que cabe no primeiro ciclo e o que ficaria para uma fase posterior.",
+          "A Orvalia não publica neste guia uma faixa de preços ou um pacote padronizado. O investimento é apresentado em proposta a partir do escopo. Para iniciar a conversa, não é necessário saber nomes técnicos: explique o que hoje está difícil de apresentar e onde a marca precisa funcionar melhor. Avalie as entregas e as condições antes de decidir pela contratação."
+        ]
       }
     ],
     "checklist": [
@@ -147,7 +200,10 @@ export const articles: Article[] = [
       "guia-marca-forte"
     ],
     "sources": [],
-    "readTime": 2
+    "readTime": 4,
+    "relatedProjects": [
+      "beth-olmeda"
+    ]
   },
   {
     "id": "erros-marca-amadora",
@@ -418,6 +474,7 @@ export const articles: Article[] = [
       }
     ],
     "related": [
+      "quanto-custa-site-indaiatuba",
       "arquitetura-sites-alta-performance-campinas",
       "erros-marca-amadora",
       "geo-generative-engine-optimization-buscas-ia"
@@ -637,11 +694,11 @@ export const articles: Article[] = [
     "file": "Article10",
     "slug": "/blog/guia-marca-forte/",
     "category": "branding",
-    "title": "Como construir uma marca forte no digital: guia prático",
-    "description": "Um roteiro para alinhar público, posicionamento, identidade visual, site, conteúdo e acompanhamento da comunicação da sua empresa.",
+    "title": "Como manter a marca consistente no dia a dia da empresa",
+    "description": "Veja como organizar aplicações, responsabilidades e revisões para manter a marca consistente nas propostas, no atendimento e nos canais digitais.",
     "answer": "Uma marca forte no digital resulta da coerência entre oferta, mensagem, aparência e atendimento. O planejamento começa pelo negócio e continua na implantação dos canais e na revisão das dúvidas que chegam dos clientes.",
     "published": "2026-04-13",
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": null,
     "sections": [
       {
@@ -716,18 +773,18 @@ export const articles: Article[] = [
       "site-profissional-conversao"
     ],
     "sources": [],
-    "readTime": 2
+    "readTime": 3
   },
   {
     "id": "branding-estrategico-indaiatuba-campinas",
     "file": "Article11",
     "slug": "/blog/branding-estrategico-indaiatuba-campinas/",
     "category": "branding",
-    "title": "Branding estratégico em Indaiatuba e Campinas: como planejar",
-    "description": "Veja as etapas de um projeto de branding estratégico para empresas de Indaiatuba e Campinas, do diagnóstico à implantação.",
+    "title": "Como funciona um projeto de branding: etapas e decisões",
+    "description": "Entenda as etapas de um projeto de marca: preparação, mensagem, identidade e implantação. Veja o que combinar antes de contratar em Indaiatuba e região.",
     "answer": "Um projeto de branding estratégico organiza decisões sobre mercado, mensagem e experiência antes de criar os materiais. O escopo deve partir do momento da empresa e terminar com entregas que a operação consiga usar.",
     "published": null,
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": null,
     "sections": [
       {
@@ -1165,7 +1222,7 @@ export const articles: Article[] = [
     "description": "Veja como organizar marca, serviços e experiência digital de uma clínica em Campinas ou Indaiatuba com informação clara e responsável.",
     "answer": "O branding de uma clínica deve facilitar a identificação do serviço e manter coerência entre comunicação e atendimento. A apresentação precisa informar com clareza e respeitar as regras aplicáveis aos profissionais e procedimentos divulgados.",
     "published": null,
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
     "sections": [
       {
@@ -1199,6 +1256,30 @@ export const articles: Article[] = [
           "Confira se o canal anunciado é acompanhado pela equipe e se a resposta informa o próximo passo. Organize o conteúdo com as dúvidas recebidas, sem expor dados pessoais de pacientes.",
           "A marca deve acompanhar a experiência possível na operação. Não prometa desfechos clínicos, preferência dos pacientes ou resultados financeiros como consequência de uma mudança visual."
         ]
+      },
+      {
+        "id": "exemplo-1",
+        "title": "Organize a informação para quem está procurando atendimento",
+        "paragraphs": [
+          "Quem procura uma clínica pode chegar por indicação e ainda assim ter dúvidas sobre especialidades, profissionais, localização e agendamento. A página inicial não precisa explicar todos os procedimentos em profundidade. Ela precisa mostrar quais atendimentos existem e indicar onde encontrar informações mais específicas. Os nomes usados nos menus devem fazer sentido para o público, sem exigir familiaridade com a organização interna da clínica.",
+          "Antes de escrever, separe informações do estabelecimento e informações de cada profissional. Horários gerais não significam disponibilidade de todas as especialidades. Uma mesma unidade pode ter modalidades de atendimento diferentes. Confira esses dados com os responsáveis e indique um canal para confirmar agenda. Essa organização reduz ambiguidades sem prometer que o site substitua o atendimento ou a avaliação profissional."
+        ]
+      },
+      {
+        "id": "exemplo-2",
+        "title": "Use exemplos sem transformar comunicação em promessa",
+        "paragraphs": [
+          "O portfólio da Orvalia apresenta o site de Ryna Hayashi, na área de psicologia. O material mostra apresentação profissional, informações de atendimento e acesso ao contato. É um exemplo de organização de conteúdo, não uma comprovação de resultado clínico, quantidade de pacientes ou experiência em todas as especialidades de saúde. A apresentação de qualquer projeto precisa respeitar essa diferença.",
+          "Fotografias e depoimentos podem envolver pessoas identificáveis. Não os trate como peças de decoração disponíveis automaticamente para publicação. A equipe responsável pelo atendimento deve verificar autorizações e as regras que se aplicam à sua atividade antes de aprovar materiais. O projeto de comunicação pode prever esse ponto de validação, sem presumir que as mesmas condições valem para todas as profissões."
+        ]
+      },
+      {
+        "id": "exemplo-3",
+        "title": "Revise o caminho do interesse ao agendamento",
+        "paragraphs": [
+          "Abra o site no celular e procure uma especialidade, o endereço e o canal de agendamento. Leia o texto que aparece depois do clique: ele deve explicar se haverá resposta da recepção, preenchimento de formulário ou abertura de um aplicativo. Não anuncie agendamento confirmado quando a ação apenas envia uma solicitação. O nome do botão deve corresponder ao que o sistema realmente faz.",
+          "Planeje também a manutenção. Mudanças de equipe, horários e contatos precisam ter um responsável e um processo simples de atualização. Uma identidade consistente perde utilidade se as informações estiverem antigas. Na proposta, esclareça quem fará essas revisões, quais materiais serão entregues e o que depende da equipe da clínica após a publicação."
+        ]
       }
     ],
     "checklist": [
@@ -1228,7 +1309,10 @@ export const articles: Article[] = [
         "url": "https://publicidademedica.cfm.org.br/"
       }
     ],
-    "readTime": 2
+    "readTime": 4,
+    "relatedProjects": [
+      "ryna-hayashi"
+    ]
   },
   {
     "id": "posicionamento-digital-advogados-indaiatuba",
@@ -1239,7 +1323,7 @@ export const articles: Article[] = [
     "description": "Saiba como planejar a apresentação de um escritório de advocacia: áreas de atuação, trajetória, conteúdo informativo e contato.",
     "answer": "Um site de advocacia deve apresentar o escritório e suas áreas de atuação com informação clara e responsável. Identidade, conteúdo e chamadas de contato precisam ser validados conforme as regras profissionais aplicáveis.",
     "published": "2026-05-14",
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1200",
     "sections": [
       {
@@ -1273,6 +1357,30 @@ export const articles: Article[] = [
           "Use menus descritivos, páginas legíveis e informações de contato fáceis de encontrar. Um formulário inicial pode solicitar apenas os dados necessários para a equipe orientar o próximo passo.",
           "Organize o recebimento de mensagens e o cuidado com informações enviadas pelos interessados. Não publique relatos de clientes ou documentos para demonstrar trabalho sem a análise adequada."
         ]
+      },
+      {
+        "id": "exemplo-1",
+        "title": "Dê contexto às áreas de atuação",
+        "paragraphs": [
+          "Uma lista de áreas jurídicas pode não ser suficiente para uma pessoa reconhecer se está no lugar adequado. O site pode apresentar, em linguagem compreensível, quais temas o escritório atende e como funciona o contato inicial. Evite publicar casos ou circunstâncias de clientes como exemplos sem a avaliação apropriada dos responsáveis. Situações ilustrativas devem ser identificadas como tal e não servir de promessa de solução.",
+          "Como exercício editorial, pense em alguém que busca orientação sobre um contrato. A página pode explicar quais informações gerais são necessárias para solicitar atendimento, quem fará o retorno e se existe opção remota. Não precisa avaliar o contrato publicamente nem antecipar uma conclusão. O objetivo comercial do conteúdo é esclarecer a adequação do serviço e o caminho para conversar com o profissional."
+        ]
+      },
+      {
+        "id": "exemplo-2",
+        "title": "Confiança também depende da qualidade da informação",
+        "paragraphs": [
+          "Confira os nomes dos profissionais, qualificações divulgadas, contatos e cidade de atuação. Inclua somente informações que o escritório consiga confirmar e manter. A identidade visual deve apoiar essa leitura, com tamanho de texto confortável e hierarquia entre os assuntos. Uma página escura ou uma tipografia sofisticada não demonstra, por si, qualidade de atendimento.",
+          "As regras profissionais de publicidade precisam entrar no processo de aprovação. Este guia trata de organização de marca e site; não substitui a análise das normas aplicáveis pelo escritório. Antes de publicar depoimentos, resultados ou comparações, faça essa avaliação. O projeto deve deixar claro quem aprova o conteúdo e como serão corrigidas informações que se tornem desatualizadas."
+        ]
+      },
+      {
+        "id": "exemplo-3",
+        "title": "Defina um primeiro contato compatível com a operação",
+        "paragraphs": [
+          "Um formulário inicial pode pedir nome, canal de retorno e uma indicação geral do assunto, conforme a necessidade do escritório. Evite incentivar o visitante a enviar documentos ou detalhes sensíveis antes de entender como será o atendimento. O formulário não deve dar a impressão de que uma contratação ou análise jurídica já começou apenas porque houve o envio de uma mensagem.",
+          "Para avaliar o site, teste uma jornada completa: encontrar uma área de atuação, ler a apresentação, localizar os profissionais e iniciar o contato. Registre se há links quebrados, conteúdo repetido ou dúvidas sem resposta. Essa revisão mostra prioridades concretas. Criar novas páginas sem corrigir o caminho básico pode aumentar a quantidade de conteúdo e manter o mesmo problema de compreensão."
+        ]
       }
     ],
     "checklist": [
@@ -1302,7 +1410,8 @@ export const articles: Article[] = [
         "url": "https://eticaedisciplina.oab.org.br/provimento"
       }
     ],
-    "readTime": 2
+    "readTime": 4,
+    "relatedProjects": []
   },
   {
     "id": "design-estrategico-arquitetura-itu-jundiai",
@@ -1382,7 +1491,7 @@ export const articles: Article[] = [
     "description": "Entenda como informações claras, identidade visual e experiência de contato ajudam a apresentar uma clínica de estética em Indaiatuba.",
     "answer": "A percepção de valor de uma clínica depende de como a pessoa entende o serviço, as condições de atendimento e os cuidados apresentados. Identidade e site ajudam nessa comunicação, sem substituir qualificação profissional ou garantir resultados.",
     "published": "2026-05-14",
-    "modified": "2026-10-23",
+    "modified": "2026-10-24",
     "image": null,
     "sections": [
       {
@@ -1416,6 +1525,30 @@ export const articles: Article[] = [
           "O contato inicial deve explicar o próximo passo e evitar respostas que contradigam o site. Revise horários, endereço e disponibilidade de serviços.",
           "Observe as dúvidas recorrentes e atualize as páginas para facilitar a consulta. A comunicação pode tornar o trabalho mais compreensível, mas não elimina objeções de preço nem garante preferência dos clientes."
         ]
+      },
+      {
+        "id": "exemplo-1",
+        "title": "Apresente o atendimento antes de acumular adjetivos",
+        "paragraphs": [
+          "Quem consulta uma página de estética precisa distinguir os serviços, entender como pedir informações e saber quem realiza o atendimento. Expressões como premium ou exclusivo não respondem a essas perguntas. Organize uma apresentação com descrição objetiva, responsáveis e orientações de contato. Quando o serviço depende de avaliação individual, essa condição deve aparecer de maneira clara no conteúdo aprovado pela equipe.",
+          "O material de Beth Olmeda, apresentado no portfólio da Orvalia, conecta identidade visual, textos de apresentação e página de serviços. O exemplo permite observar a coerência entre essas frentes. Ele não sustenta uma promessa de agenda cheia, aumento de faturamento ou resultado de procedimento. A prova do trabalho de comunicação está no que foi entregue e pode ser mostrado."
+        ]
+      },
+      {
+        "id": "exemplo-2",
+        "title": "Imagens precisam esclarecer e respeitar o contexto",
+        "paragraphs": [
+          "Uma fotografia pode ajudar a conhecer o espaço ou a profissional, mas não deve deixar o visitante sem entender qual serviço está sendo apresentado. Inclua texto de apoio e mantenha boa leitura no celular. Se a imagem for ilustrativa, não a apresente como registro de um resultado ou como fotografia de um cliente real. A escolha visual deve preservar essa distinção.",
+          "Materiais com pessoas, depoimentos ou comparações de resultados exigem avaliação dos responsáveis e das regras da atividade. O desenho da página não resolve sozinho essas condições. Preveja uma aprovação específica antes de publicar. Quando não houver autorização ou informação suficiente, prefira explicar o processo de atendimento em vez de preencher a página com provas que não podem ser confirmadas."
+        ]
+      },
+      {
+        "id": "exemplo-3",
+        "title": "Avalie clareza ao longo de toda a jornada",
+        "paragraphs": [
+          "Compare as informações do perfil social, do site e das mensagens de atendimento. Se um canal usa nomes diferentes para o mesmo serviço ou anuncia condições antigas, a identidade visual não corrige a confusão. Defina uma versão de referência para serviços, contatos e orientações. Depois, estabeleça quem atualiza cada canal quando houver uma mudança.",
+          "Um teste simples é pedir a alguém que não conhece o negócio para localizar um serviço e explicar o próximo passo usando apenas o site. Anote o que essa pessoa encontrou e onde parou. Isso é uma observação de uso, não uma medição de conversão. Para acompanhar contatos e vendas, combine dados de navegação com informações do atendimento, evitando atribuir todo resultado à nova aparência."
+        ]
       }
     ],
     "checklist": [
@@ -1445,7 +1578,10 @@ export const articles: Article[] = [
         "url": "https://publicidademedica.cfm.org.br/"
       }
     ],
-    "readTime": 2
+    "readTime": 4,
+    "relatedProjects": [
+      "beth-olmeda"
+    ]
   },
   {
     "id": "gap-de-percepcao-digital-empresas-excelentes-comuns",
@@ -1522,6 +1658,96 @@ export const articles: Article[] = [
       "site-profissional-conversao"
     ],
     "sources": [],
-    "readTime": 2
+    "readTime": 3
+  },
+  {
+    "id": "quanto-custa-site-indaiatuba",
+    "file": "ArticleSiteCost",
+    "slug": "/blog/quanto-custa-site-indaiatuba/",
+    "category": "sites",
+    "title": "Quanto custa um site em Indaiatuba? Como comparar propostas",
+    "description": "Entenda o que muda o investimento em um site: páginas, conteúdo, integrações e manutenção. Um roteiro para comparar propostas em Indaiatuba e região.",
+    "answer": "O custo de um site depende do que será produzido e mantido: estrutura, páginas, textos, imagens, formulários e integrações. A Orvalia define o investimento em proposta, sem uma tabela pública. Compare escopos equivalentes e custos recorrentes antes de contratar.",
+    "published": "2026-10-24",
+    "modified": "2026-10-24",
+    "image": null,
+    "sections": [
+      {
+        "id": "escopo",
+        "title": "Comece pelo que o site precisa resolver",
+        "paragraphs": [
+          "Antes de perguntar o preço, descreva o papel do site. Uma profissional pode precisar apresentar atendimentos e receber contatos. Uma empresa de serviços técnicos talvez precise explicar várias áreas de atuação, localidades atendidas e como solicitar uma visita. Os dois projetos podem ser chamados de site institucional, mas exigem decisões e quantidades de conteúdo diferentes.",
+          "Liste as páginas prioritárias e as perguntas que cada uma precisa responder. Não use apenas o número de telas como medida: uma página com uma integração ou um conteúdo complexo pode exigir mais trabalho que várias páginas simples. Informe também se o negócio já tem identidade visual, textos aprovados e fotografias autorizadas. A produção desses materiais precisa ser considerada na proposta."
+        ]
+      },
+      {
+        "id": "conteudo",
+        "title": "Texto, imagem e implementação são trabalhos diferentes",
+        "paragraphs": [
+          "Confira se o orçamento inclui escrever os textos, organizar informações fornecidas ou apenas inserir conteúdo pronto. A mesma dúvida vale para imagens, tratamento de fotografias e identidade visual. Quando essas responsabilidades ficam indefinidas, o projeto pode parar à espera de materiais ou exigir contratações que não estavam previstas.",
+          "Peça uma descrição das etapas de revisão e aprovação. Quem confere os serviços? Quem aprova contatos, preços e condições eventualmente publicados? Quantas rodadas de ajustes estão incluídas? Uma proposta útil registra essas combinações e explica como será tratada uma mudança de escopo. O objetivo é reduzir surpresas durante a execução, não transformar a contratação em uma lista de termos técnicos."
+        ]
+      },
+      {
+        "id": "integracoes",
+        "title": "O que acontece depois do clique também entra no escopo",
+        "paragraphs": [
+          "Um botão que abre o WhatsApp é diferente de um formulário que recebe dados, valida o envio e exibe uma confirmação. Agenda, pagamento e integração com sistemas existentes acrescentam outras responsabilidades. Descreva a ação esperada pelo visitante e peça que o fornecedor explique o caminho completo, incluindo o que ocorre se o serviço externo estiver indisponível.",
+          "Na Orvalia, o formulário de contato confirma o recebimento na própria página quando o serviço retorna sucesso. Isso é um exemplo do tipo de comportamento que deve ser combinado em um projeto, não uma funcionalidade automaticamente incluída em qualquer proposta. Também vale esclarecer quem acompanhará as solicitações recebidas depois que o site entrar no ar."
+        ]
+      },
+      {
+        "id": "recorrentes",
+        "title": "Separe implantação de despesas recorrentes",
+        "paragraphs": [
+          "Domínio, hospedagem, contas de e-mail, serviços externos e manutenção podem ter cobranças próprias. Pergunte quem administra cada conta, em nome de quem será registrada e como funcionam renovações. A proposta deve distinguir o que está incluído na criação e o que dependerá de pagamento ou acompanhamento posterior.",
+          "Manutenção também precisa de definição: corrigir uma falha não é o mesmo que criar novas páginas ou atualizar conteúdo todos os meses. Combine os itens cobertos, a forma de solicitar mudanças e o que acontece após a entrega. Não compare um projeto com acompanhamento contínuo a uma entrega pontual sem reconhecer essa diferença."
+        ]
+      },
+      {
+        "id": "exemplos",
+        "title": "Compare com exemplos de necessidades, não com promessas",
+        "paragraphs": [
+          "No portfólio da Orvalia, Dario Eletricidade apresenta serviços de elétrica e caminhos de contato. Quinta de Caraíva organiza a apresentação da hospedagem e o contato para reservas. Esses projetos mostram necessidades diferentes de informação. Eles ajudam a conversar sobre o que seu site precisa conter, mas não estabelecem um preço padrão para empresas desses setores.",
+          "Veja os materiais e anote o que faz sentido para sua operação. Uma empresa de Indaiatuba que atende Campinas e região precisa explicar sua área de atendimento com precisão. Não é necessário criar uma página repetida para cada cidade. Também não faz sentido contratar uma integração que a equipe não conseguirá usar ou acompanhar."
+        ]
+      },
+      {
+        "id": "proposta",
+        "title": "Como iniciar uma conversa sobre investimento",
+        "paragraphs": [
+          "Envie o nome da empresa, os serviços prioritários, o endereço do site atual se houver e o que hoje está difícil de apresentar. Se existir uma data importante ou um limite de orçamento, informe para discutir possibilidades de escopo. Você não precisa escolher uma tecnologia antes de explicar o problema.",
+          "A Orvalia responde pelo e-mail informado para combinar o próximo passo e apresenta as condições em proposta. Este artigo não informa faixa de preços porque não há uma tabela pública aprovada para os diferentes escopos. Antes de contratar, confirme entregas, responsabilidades, prazos, condições de pagamento e custos recorrentes. O envio do formulário não gera contratação automática."
+        ]
+      }
+    ],
+    "checklist": [
+      "Listar páginas e dúvidas prioritárias.",
+      "Separar textos e imagens de implementação.",
+      "Confirmar como os contatos serão recebidos.",
+      "Perguntar sobre domínio, hospedagem e manutenção.",
+      "Comparar propostas com entregas equivalentes."
+    ],
+    "faq": [
+      {
+        "question": "A Orvalia tem um preço fixo para criar um site?",
+        "answer": "Não há uma tabela pública. A proposta considera as páginas, o conteúdo, as integrações e as responsabilidades do projeto."
+      },
+      {
+        "question": "Hospedagem e domínio estão sempre incluídos?",
+        "answer": "Não presuma essa inclusão. A proposta precisa indicar quais contas e despesas estão cobertas e quais serão contratadas ou renovadas separadamente."
+      }
+    ],
+    "related": [
+      "site-profissional-conversao",
+      "identidade-visual-precos",
+      "arquitetura-sites-alta-performance-campinas"
+    ],
+    "relatedProjects": [
+      "dario-eletricidade",
+      "quinta-de-caraiva"
+    ],
+    "sources": [],
+    "readTime": 4
   }
 ];

@@ -2,9 +2,9 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const offers = [
-  { title:'Reposicionar', desc:'Seu negócio mudou, mas a marca ainda conta a história antiga.', start:'Entender o novo momento e organizar a mensagem.', outputs:['Posicionamento e identidade visual','Uma apresentação que acompanhe sua empresa'], action:'Conversar sobre minha marca' },
-  { title:'Reconstruir', desc:'Sua empresa atende bem. O site precisa mostrar isso com a mesma clareza.', start:'Rever a estrutura, o conteúdo e o caminho até o contato.', outputs:['Site mais claro e fácil de usar','Informações organizadas para quem quer contratar'], action:'Conversar sobre meu site' },
-  { title:'Evoluir', desc:'Você já tem uma base. Agora quer que ela ajude mais o negócio.', start:'Identificar o que funciona e o que merece melhorar.', outputs:['Ajustes na presença no Google e nas buscas com IA','Melhorias no site e nos caminhos de contato'], action:'Planejar os próximos passos' },
+  { title:'Marca e identidade', desc:'Para quem está começando ou precisa alinhar a apresentação da empresa ao que ela faz hoje.', outputs:['Posicionamento, mensagem e identidade visual','Logotipo e aplicações definidos na proposta'], href:'/branding/' },
+  { title:'Criação de sites', desc:'Para quem precisa apresentar os serviços e facilitar a consulta e o contato pelo celular.', outputs:['Páginas, textos e navegação organizados','Formulário ou WhatsApp conforme o projeto'], href:'/sites/' },
+  { title:'Google e buscas com IA', desc:'Para quem já tem um site e precisa revisar como seus serviços podem ser encontrados e compreendidos.', outputs:['Revisão técnica e informações locais','Conteúdo e estrutura, sem promessa de posição'], href:'/seo-geo/' },
 ];
 function SituationArt({ index }: { index: number }) {
   return <svg viewBox="0 0 360 150" fill="none" aria-hidden="true" focusable="false">
@@ -16,16 +16,17 @@ function SituationArt({ index }: { index: number }) {
 export default function FormasTrabalhar() {
   return <section id="formas-trabalhar" className="situations-section">
     <div className="container mx-auto px-6">
-      <div className="situations-heading"><div><p className="editorial-label">04 / Como podemos ajudar</p><h2>Marca, site e buscas.<br/><span>Cada um com um papel.</span></h2></div><p>Não precisa chegar com tudo decidido. Veja o que mais se parece com a situação da sua empresa.</p></div>
+      <div className="situations-heading"><div><p className="editorial-label">02 / O que fazemos</p><h2>Marca, site e buscas.<br/><span>O que sua empresa precisa agora?</span></h2></div><p>Três frentes de trabalho, com escopo definido de acordo com o negócio. Conheça as entregas de cada uma.</p></div>
       <div className="situations-grid">{offers.map((offer,i)=><article className="situation-card" key={offer.title}>
         <div className="situation-top"><span>0{i+1}</span><span>{['Logotipo e identidade visual','Criação de sites e páginas','Google e buscas com IA'][i]}</span></div>
         <SituationArt index={i}/>
         <h3>{offer.title}</h3><p className="situation-description">{offer.desc}</p>
-        <div className="situation-start"><h4>Por onde começamos</h4><p>{offer.start}</p></div>
+
         <ul>{offer.outputs.map(output=><li key={output}>{output}</li>)}</ul>
-        <Link to="/contato/">{offer.action}<ArrowUpRight size={17} aria-hidden="true"/></Link>
+        <Link to={offer.href}>Conhecer o serviço<ArrowUpRight size={17} aria-hidden="true"/></Link>
       </article>)}</div>
-      <p className="situations-note">O primeiro passo é uma conversa com Bruno para entender o negócio e definir o que faz sentido agora.</p>
+      <p className="situations-note">Ainda não sabe por onde começar? Conte sua prioridade no formulário. Bruno responde pelo e-mail informado.</p>
+      <Link className="project-detail-link" to="/contato/">Conversar sobre meu projeto <ArrowUpRight size={17} aria-hidden="true" /></Link>
     </div>
   </section>;
 }

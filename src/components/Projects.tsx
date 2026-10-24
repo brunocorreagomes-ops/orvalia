@@ -32,7 +32,7 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-[2px] bg-brand-cyan-dark" />
               <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-                02 / Projetos selecionados
+                03 / Projetos selecionados
               </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-sans font-medium tracking-tight leading-[1.05] max-w-3xl">
@@ -113,7 +113,7 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
               transition={{ delay: i * 0.1 }}
               className="group border-t border-brand-line pt-6 flex flex-col"
             >
-              {item.image && <button type="button" className={`project-preview${item.image.startsWith("/cases/") ? " project-preview-mobile" : ""}`} aria-label={`Ampliar apresentação de ${item.client}`} onClick={() => setSelected(item)}><img src={item.image} alt={`Apresentação do projeto ${item.client}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" width={item.width} height={item.height} /><span>Ampliar apresentação <ArrowUpRight size={14} /></span></button>}
+              {item.image && <button type="button" className={`project-preview${item.imageKind === "site" ? " project-preview-mobile" : ""}`} aria-label={`Ampliar apresentação de ${item.client}`} onClick={() => setSelected(item)}><img src={item.image} alt={`Apresentação do projeto ${item.client}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" width={item.width} height={item.height} /><span>Ampliar apresentação <ArrowUpRight size={14} /></span></button>}
               <div className="flex justify-between items-start mb-4">
                 <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan-dark">
                   {item.category}
@@ -132,7 +132,7 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
 
       </div>
       <dialog ref={dialogRef} className="project-dialog" aria-labelledby="project-dialog-title" data-lenis-prevent onClose={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) setSelected(null); }}>
-        {selected && <div className={`project-dialog-content${selected.image.startsWith("/cases/") ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} decoding="async" width={selected.width} height={selected.height} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p><ul className="project-deliverables">{selected.deliverables.map(item => <li key={item}>{item}</li>)}</ul><Link className="project-detail-link" to={`/portfolio/${selected.slug}/`} onClick={() => setSelected(null)}>Conhecer este projeto <ArrowUpRight size={15} aria-hidden="true" /></Link></div>}
+        {selected && <div className={`project-dialog-content${selected.imageKind === "site" ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} decoding="async" width={selected.width} height={selected.height} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p><ul className="project-deliverables">{selected.deliverables.map(item => <li key={item}>{item}</li>)}</ul><Link className="project-detail-link" to={`/portfolio/${selected.slug}/`} onClick={() => setSelected(null)}>Conhecer este projeto <ArrowUpRight size={15} aria-hidden="true" /></Link></div>}
       </dialog>
     </section>
   );

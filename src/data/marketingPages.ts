@@ -93,7 +93,7 @@ export const marketingPages: MarketingPage[] = [
       "context": "Apresentar os serviços e a identidade profissional.",
       "solution": "Identidade visual, textos de apresentação e página de serviços.",
       "metric": "Uma apresentação organizada para conhecer o trabalho e iniciar o contato.",
-      "image": "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
+      "image": "/images/projects/beth-olmeda.webp",
       "width": 1024,
       "height": 1024
     }

@@ -33,7 +33,7 @@ export default function GapPercepcao() {
             viewport={{ once: true }}
             className="border-t border-[#455450] pt-6"
           >
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">01 / Percepção</div>
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">Percepção</div>
             <h3 className="text-2xl font-medium mb-4 leading-snug">Seu trabalho é bom. O site mostra isso?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
               Um cliente indicado pode pesquisar sua empresa antes de conversar. Se encontrar uma apresentação genérica ou desatualizada, talvez não perceba o cuidado que existe no seu trabalho.
@@ -47,7 +47,7 @@ export default function GapPercepcao() {
             transition={{ delay: 0.1 }}
             className="border-t border-[#455450] pt-6"
           >
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">02 / Clareza</div>
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">Clareza</div>
             <h3 className="text-2xl font-medium mb-4 leading-snug">Você explica sempre as mesmas coisas?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
               Quando os serviços, o público e o atendimento não estão claros, a conversa começa com dúvidas que o site já poderia resolver.
@@ -61,7 +61,7 @@ export default function GapPercepcao() {
             transition={{ delay: 0.2 }}
             className="border-t border-[#455450] pt-6"
           >
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">03 / Conversão</div>
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">Contato</div>
             <h3 className="text-2xl font-medium mb-4 leading-snug">O visitante sabe como pedir um orçamento?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
               Telefone escondido, informações incompletas ou uma página difícil de usar no celular podem interromper o contato antes mesmo de ele começar.

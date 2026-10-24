@@ -34,7 +34,7 @@ export default function PresencaDigital() {
           <p className="editorial-label mb-6">Sua empresa nas buscas · Indaiatuba e Campinas</p>
           <h1 className="page-title mb-8">Serviços fáceis de encontrar.<br /><span className="text-[#55605d]">Uma empresa fácil de entender.</span></h1>
           <p className="text-lg md:text-xl text-brand-muted leading-relaxed max-w-3xl">Seu cliente pesquisa antes de conversar. Organizamos a estrutura e o conteúdo do seu site para explicar o que sua empresa faz, onde atende e por que o trabalho merece atenção.</p>
-          <Link to="/contato/" className="inline-flex gap-3 items-center mt-8 border-b border-brand-ink pb-2 font-semibold">Pedir diagnóstico estratégico <ArrowRight size={18} /></Link>
+          <Link to="/contato/" className="inline-flex gap-3 items-center mt-8 border-b border-brand-ink pb-2 font-semibold">Conversar sobre meu projeto <ArrowRight size={18} /></Link>
         </header>
 
         <figure className="border border-brand-line bg-brand-warm p-6 md:p-10 mb-16">
@@ -95,7 +95,7 @@ export default function PresencaDigital() {
         <section className="mt-20 p-7 md:p-14 bg-brand-ink text-brand-warm">
           <h2 className="text-3xl md:text-5xl font-medium mb-6">Vamos olhar para o que seu cliente procura.</h2>
           <p className="text-[#c3d0c8] text-lg leading-relaxed max-w-2xl mb-8">Conte quais serviços você quer apresentar melhor e envie o endereço do site. A conversa inicial ajuda a definir por onde começar.</p>
-          <Link to="/contato/" className="inline-flex items-center gap-4 bg-brand-cyan text-brand-ink px-6 py-4 font-semibold">Pedir diagnóstico estratégico <ArrowRight size={18} /></Link>
+          <Link to="/contato/" className="inline-flex items-center gap-4 bg-brand-cyan text-brand-ink px-6 py-4 font-semibold">Conversar sobre meu projeto <ArrowRight size={18} /></Link>
         </section>
       </div>
     </article>

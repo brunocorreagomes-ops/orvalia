@@ -88,7 +88,7 @@ export default function Profissional() {
               <Zap className="text-brand-cyan-dark" size={36} strokeWidth={1} />
             </div>
             <h4 className="text-xl font-bold text-brand-ink mb-4">Site rápido e fácil de usar</h4>
-            <p className="text-[#55615d] text-sm leading-relaxed">Código purificado para tempos de carregamento mínimos, retendo a atenção do utilizador.</p>
+            <p className="text-[#55615d] text-sm leading-relaxed">Revisão do código e das imagens para facilitar o carregamento e a navegação.</p>
           </div>
           <div className="p-8 border border-brand-line bg-brand-mineral rounded-[2rem]">
             <div className="mb-6 flex justify-center">

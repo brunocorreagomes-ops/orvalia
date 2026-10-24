@@ -1,4 +1,5 @@
 import Audience from "../components/Audience";
+import { Link } from "react-router-dom";
 import { homeFaqs, studioProfile } from "../data/studio";
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
@@ -38,14 +39,18 @@ export default function Home() {
       {/* 2. O GAP DE PERCEPÇÃO */}
       <GapPercepcao />
 
-      {/* 3. CASES / TRANSFORMAÇÕES */}
+      <FormasTrabalhar />
+      <nav className="container mx-auto px-6 py-7 flex flex-wrap gap-x-10 gap-y-3" aria-label="Planeje seu investimento">
+        <Link className="project-detail-link" to="/blog/identidade-visual-precos/">O que define o custo de uma identidade visual ↗</Link>
+        <Link className="project-detail-link" to="/blog/quanto-custa-site-indaiatuba/">Como comparar propostas de sites ↗</Link>
+      </nav>
+
+      {/* Projetos */}
       <Projects />
 
       {/* 4. MÉTODO */}
       <Metodo />
 
-      {/* 5. FORMAS DE TRABALHAR */}
-      <FormasTrabalhar />
 
       {/* 6. BRUNO / VISÃO ESTRATÉGICA E COMERCIAL */}
       <BrunoSection />
@@ -57,7 +62,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-brand-mineral text-brand-ink border-t border-brand-line">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark mb-5">Perguntas frequentes</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark mb-5">07 / Perguntas frequentes</p>
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight">Antes de dar o próximo passo.</h2>
           </div>
           <div className="lg:col-span-8 divide-y divide-brand-line">

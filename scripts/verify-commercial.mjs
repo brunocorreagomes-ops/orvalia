@@ -35,3 +35,20 @@ for (const project of projects) {
   assert(scripts(html).some(item => item['@type'] === 'CreativeWork' && item.url === canonical));
 }
 console.log('PASS: six unique, discoverable project pages; home FAQ and organization match visible content; contact expectations are explicit.');
+
+const sites = fs.readFileSync('dist/sites/index.html', 'utf8');
+assert(sites.includes('<title data-rh="true">Criação de sites em Indaiatuba e Campinas | Orvalia Studio</title>'));
+assert(!sites.includes('ranquear no Google desde o primeiro dia') && !sites.includes('concorrente avança'));
+for (const href of ['/branding/', '/sites/', '/seo-geo/']) assert(root.includes(`href="${href}"`));
+assert(root.indexOf('id="formas-trabalhar"') < root.indexOf('id="cases"'), 'Service explanation precedes proof');
+assert(root.includes('href="/blog/quanto-custa-site-indaiatuba/"') && root.includes('href="/blog/identidade-visual-precos/"'));
+assert(!root.includes('Vim%20pela%20p%C3%A1gina%20%2F'), 'No raw route in WhatsApp greeting');
+const cost = fs.readFileSync('dist/blog/quanto-custa-site-indaiatuba/index.html','utf8');
+assert(cost.includes('A Orvalia define o investimento em proposta, sem uma tabela pública.'));
+for (const slug of ['dario-eletricidade','quinta-de-caraiva']) assert(cost.includes(`href="/portfolio/${slug}/"`));
+for (const route of ['index.html','sites/index.html','contato/index.html','blog/index.html']) {
+ const html = fs.readFileSync(path.join('dist',route),'utf8');
+ assert(html.includes('footer-contact') && html.includes('Indaiatuba, SP') && html.includes('mailto:orvaliastudio@gmail.com'));
+ assert(!html.includes('https://i.ibb.co'), route + ': primary content images are local');
+}
+console.log('PASS: service clarity, contextual budget links, factual footer and readable WhatsApp greeting.');

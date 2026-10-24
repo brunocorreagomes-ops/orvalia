@@ -109,7 +109,7 @@ export default function AgenciaIndaiatuba() {
                     to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold text-xs uppercase tracking-widest transition-transform hover:-translate-y-1 flex items-center justify-center gap-3"
                   >
-                    Pedir diagnóstico estratégico
+                    Conversar sobre meu projeto
                   </Link>
                   <a
                      href="#atendimento"

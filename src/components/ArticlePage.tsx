@@ -1,3 +1,4 @@
+import { projects } from "../data/projects";
 import { editorialOrganization } from "../data/editorial";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Check, ChevronRight } from "lucide-react";
@@ -38,6 +39,7 @@ export default function ArticlePage({ id }: { id: string }) {
   const canonical = `https://orvalia.com.br${article.slug}`;
   const image = `https://orvalia.com.br/blog/capas/${article.id}.png`;
   const related = article.related.map(key => articles.find(item => item.id === key)).filter((item): item is typeof article => Boolean(item));
+  const relatedProjects = projects.filter(project => article.relatedProjects?.includes(project.slug));
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [editorialOrganization,
@@ -123,6 +125,7 @@ export default function ArticlePage({ id }: { id: string }) {
             <div className="article-author"><span className="editorial-label">Sobre a publicação</span><p>Conteúdo editorial da <Link to="/sobre/">Orvalia Studio</Link>, estúdio de estratégia de marca, identidade visual e sites com base em Indaiatuba. Orientações práticas para organizar a apresentação de empresas e profissionais.</p></div>
           </div>
         </div>
+        {relatedProjects.length > 0 ? <section className="article-related" aria-label="Projetos relacionados"><span className="editorial-label">Do conteúdo à prática</span><h2>Conheça os materiais apresentados.</h2><div>{relatedProjects.map(project => <Link key={project.slug} to={`/portfolio/${project.slug}/`}><h3>{project.client}</h3><p>{project.description}</p><span className="article-related-action">Conhecer o projeto <ArrowUpRight size={17} /></span></Link>)}</div></section> : null}
         <section className="article-related" aria-labelledby="related-title"><span className="editorial-label">Continue a leitura</span><h2 id="related-title">Assuntos que se conectam.</h2>
           <div>{related.map(item => <Link key={item.id} to={item.slug}><span className="editorial-label">{categories[item.category]}</span><h3>{item.title}</h3><span className="article-related-action">Ler artigo <ArrowUpRight size={17} /></span></Link>)}</div>
         </section>

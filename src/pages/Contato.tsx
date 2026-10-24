@@ -39,17 +39,17 @@ export default function Contato() {
   return (
     <>
       <SEO
-        title="Contato e Diagnóstico Estratégico | Orvalia Studio"
-        description="Solicite um diagnóstico estratégico de marca, site e presença nas buscas com Bruno Correa Gomes. Atendimento em Indaiatuba, Campinas e região."
+        title="Converse sobre seu projeto | Orvalia Studio"
+        description="Converse com Bruno Correa Gomes sobre marca, site e presença nas buscas. Envie o formulário e receba o retorno por e-mail. Indaiatuba, Campinas e região."
         canonical="https://orvalia.com.br/contato/"
       />
       <section className="min-h-screen pt-28 md:pt-36 pb-20 bg-brand-mineral text-brand-ink">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.18em] font-bold text-brand-cyan-dark mb-5">Contato & diagnóstico direto</p>
+              <p className="font-mono text-xs uppercase tracking-[0.18em] font-bold text-brand-cyan-dark mb-5">Converse com Bruno</p>
               <h1 className="page-title text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.03] mb-7">
-                Vamos analisar o próximo movimento da sua marca.
+                Vamos conversar sobre seu projeto.
               </h1>
               <p className="text-lg text-brand-muted leading-relaxed max-w-xl mb-9">
                 A conversa inicial é conduzida diretamente por <strong>Bruno Correa Gomes</strong>. Vamos entender o momento do negócio e identificar oportunidades de evolução na marca, no site e na presença digital.
@@ -60,9 +60,9 @@ export default function Contato() {
               <div className="p-6 md:p-7 bg-brand-warm border border-brand-line mb-9">
                 <h2 className="text-sm font-bold uppercase tracking-wider mb-4">Como funciona</h2>
                 <ol className="list-decimal list-inside space-y-3 text-sm text-brand-muted leading-relaxed">
-                  <li><strong className="text-brand-ink">Você envia o contexto:</strong> leva menos de um minuto.</li>
+                  <li><strong className="text-brand-ink">Você envia o contexto:</strong> informe sua prioridade e seus dados de contato.</li>
                   <li><strong className="text-brand-ink">Leitura preliminar:</strong> analisamos a presença digital e os objetivos informados.</li>
-                  <li><strong className="text-brand-ink">Próximo passo:</strong> conversamos sobre prioridades e caminhos possíveis, sem compromisso.</li>
+                  <li><strong className="text-brand-ink">Próximo passo:</strong> Bruno responde pelo e-mail informado para combinar uma conversa, sem compromisso.</li>
                 </ol>
               </div>
 

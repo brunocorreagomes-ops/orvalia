@@ -4,7 +4,7 @@ import path from 'node:path';
 const source = fs.readFileSync('src/data/articles.ts', 'utf8');
 const articles = JSON.parse(source.split('export const articles: Article[] = ')[1].trim().replace(/;$/, ''));
 const manifest = JSON.parse(fs.readFileSync('src/data/article-routes.json','utf8'));
-assert.equal(articles.length, 21);
+assert.equal(articles.length, 22);
 assert.deepEqual(manifest, articles.map(({slug, modified}) => ({slug, modified})));
 const titles = new Set(), descriptions = new Set();
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8');
@@ -53,4 +53,4 @@ for(const entry of manifest){
     assert(fs.readFileSync(path.join('dist',legacy,'index.html'),'utf8').includes(`rel="canonical" href="https://orvalia.com.br${entry.slug}"`));
   }
 }
-console.log('PASS: 21 articles: SSR content, unique metadata, canonical URLs, schema, visible FAQ, TOC anchors, related links, covers and sitemap.');
+console.log('PASS: 22 articles: SSR content, unique metadata, canonical URLs, schema, visible FAQ, TOC anchors, related links, covers and sitemap.');
