@@ -5,8 +5,8 @@ import SEO from "../components/SEO";
 const deliverables = [
   { icon: ChartNoAxesCombined, title: "Análise da presença digital", text: "Leitura do site, dos perfis e dos caminhos de contato para entender o que está claro, onde há lacunas e o que merece prioridade." },
   { icon: ClipboardList, title: "Planejamento de conteúdo", text: "Definição de temas, linguagem, canais e formatos de acordo com os serviços, o público e a capacidade de atendimento da empresa." },
-  { icon: Images, title: "Posts estáticos para o feed", text: "Criação de peças e textos para apresentar serviços, responder dúvidas e manter uma comunicação alinhada à identidade da marca." },
-  { icon: Film, title: "Vídeos para stories", text: "Produção de vídeos no formato vertical para os temas combinados. Roteiro, materiais, duração e edição são definidos conforme o projeto." },
+  { icon: Images, title: "Publicações com imagens (feed)", text: "Criação de peças e textos para apresentar serviços, responder dúvidas e manter uma comunicação alinhada à identidade da marca." },
+  { icon: Film, title: "Vídeos curtos (stories)", text: "Produção de vídeos no formato vertical para os temas combinados. Roteiro, materiais, duração e edição são definidos conforme o projeto." },
 ];
 const faqs = [
   { question: "Vocês analisam a presença digital antes de propor publicações?", answer: "Sim. Podemos avaliar o site, os perfis e os caminhos de contato para identificar prioridades. A análise pode ser contratada como uma etapa própria ou fazer parte de um projeto de conteúdo, conforme a proposta." },

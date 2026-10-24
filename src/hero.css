@@ -1,27 +1,35 @@
-/* The hero uses the exact wordmark symbol, with light volume and no enclosing card. */
+/* Shared editorial grid keeps the symbol beside the copy without overlap. */
 .hero-opening { position:relative; }
-.hero-copy { width:min(100%,760px); }
-.dew-scene { position:absolute; inset:0; margin:0; pointer-events:none; overflow:hidden; }
-.dew-art { display:block; position:absolute; top:50%; right:-3vw; width:min(51vw,820px); height:auto; aspect-ratio:1; transform:translateY(-50%); }
-.dew-symbol { transform-box:view-box; transform-origin:360px 360px; animation:dew-symbol-float 16s ease-in-out infinite; }
-.dew-caption { z-index:20; position:absolute; bottom:27px; right:clamp(24px,4.5vw,72px); pointer-events:auto; }
+.hero-shell { min-height:100svh; display:flex; align-items:center; padding-top:128px; padding-bottom:48px; }
+.hero-layout { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); align-items:center; gap:clamp(24px,3vw,56px); }
+.hero-copy { min-width:0; width:100%; }
+.hero-copy h2 { font-size:clamp(3rem,5.1vw,5.5rem); }
+.dew-scene { position:relative; margin:0; min-width:0; padding-bottom:48px; pointer-events:none; }
+.dew-art { display:block; width:100%; height:auto; aspect-ratio:1; overflow:visible; }
+.dew-symbol { transform-box:view-box; transform-origin:360px 360px; animation:dew-symbol-float 12s ease-in-out infinite; }
+.dew-caption { position:absolute; bottom:0; right:0; pointer-events:auto; }
 .dew-caption button { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; min-width:44px; padding:8px; font-size:12px; color:#475b50; }
 .dew-caption button:hover { color:#006a67; }
 .dew-caption button:focus-visible { outline:2px solid #006a67; outline-offset:4px; }
 .dew-scene[data-paused=true] .dew-symbol { animation-play-state:paused; }
 @keyframes dew-symbol-float {
   0%,100% { transform:perspective(1000px) translateY(0) rotateX(4deg) rotateY(-10deg) rotateZ(-3deg); }
-  50% { transform:perspective(1000px) translateY(-10px) rotateX(-3deg) rotateY(10deg) rotateZ(3deg); }
+  50% { transform:perspective(1000px) translateY(-16px) rotateX(-3deg) rotateY(10deg) rotateZ(3deg); }
 }
-@media(min-width:1024px) and (max-width:1279px) { .hero-copy { width:68%; } .hero-copy h2 { font-size:clamp(3.7rem,6vw,5rem); } .dew-art { right:-6vw; width:49vw; } }
 @media(max-width:1023px) {
-  .hero-copy { width:min(100%,700px); }
-  .dew-scene { position:relative; inset:auto; height:320px; margin:-24px 0 0; }
-  .dew-art { width:360px; max-width:95%; right:50%; top:44%; transform:translate(50%,-50%); }
-  .dew-caption { bottom:4px; right:24px; }
+  .hero-shell { min-height:0; padding-top:128px; padding-bottom:32px; }
+  .hero-layout { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .hero-copy { max-width:700px; }
+  .hero-copy h2 { font-size:clamp(2.25rem,7vw,4.5rem); }
+  .dew-scene { width:min(100%,380px); justify-self:center; }
 }
-@media(max-width:639px) { .dew-scene { height:280px; } .dew-art { width:310px; } .dew-caption { bottom:4px; right:16px; } .hero-copy > div:last-child { padding-bottom:16px; } }
+@media(max-width:639px) {
+  .hero-shell { padding-top:112px; }
+  .hero-copy h2 { font-size:clamp(2.25rem,10vw,3.75rem); }
+  .dew-scene { width:min(100%,264px); }
+  .hero-copy > div:last-child { margin-top:32px; }
+}
 @media(prefers-reduced-motion:reduce) {
   .dew-symbol { animation:none; }
-  .hero-opening .dew-scene[data-allow-motion=true] .dew-symbol { animation-name:dew-symbol-float; animation-duration:16s !important; animation-iteration-count:infinite !important; animation-timing-function:ease-in-out; }
+  .hero-opening .dew-scene[data-allow-motion=true] .dew-symbol { animation-name:dew-symbol-float; animation-duration:12s !important; animation-iteration-count:infinite !important; animation-timing-function:ease-in-out; }
 }

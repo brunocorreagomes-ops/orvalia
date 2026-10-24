@@ -57,7 +57,7 @@ const social = fs.readFileSync('dist/redes-sociais/index.html','utf8');
 assert(root.includes('href="/redes-sociais/"'), 'Social service discoverable from home');
 assert(sitemap.includes('<loc>https://orvalia.com.br/redes-sociais/</loc>'));
 assert(social.includes('rel="canonical" href="https://orvalia.com.br/redes-sociais/"'));
-for (const text of ['Análise da presença digital','Posts estáticos para o feed','Vídeos para stories','Quantidade de peças, formatos e frequência de entrega.']) assert(social.includes(text), text);
+for (const text of ['Análise da presença digital','Publicações com imagens (feed)','Vídeos curtos (stories)','Quantidade de peças, formatos e frequência de entrega.']) assert(social.includes(text), text);
 assert(scripts(social).some(item=>item['@type']==='Service' && item.url==='https://orvalia.com.br/redes-sociais/'));
 for (const item of scripts(social).find(item=>item['@type']==='FAQPage').mainEntity) assert(decode(social).includes(item.acceptedAnswer.text));
 assert(fs.readFileSync('dist/contato/index.html','utf8').includes('value="Presença digital e redes sociais"'));

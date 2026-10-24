@@ -190,17 +190,17 @@ export default function AgenciaIndaiatuba() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  className="relative aspect-[3/4] bg-[#ced6d0] overflow-hidden border border-brand-line group"
+                  className="founder-portrait relative aspect-[3/4] bg-[#ced6d0] overflow-hidden border border-brand-line group"
                 >
                   <img
                     src="/images/people/bruno-correa-gomes.webp"
                     alt="Bruno Correa Gomes - Fundador da Orvalia Studio"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale-[0.8] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    className="w-full h-full object-cover grayscale-[0.8] transition-[transform,filter] duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   />
 
                   {/* Frame Accent corner */}
-                  <div className="absolute bottom-6 left-6 right-6 p-6 bg-brand-warm/95 backdrop-blur-md border border-brand-line opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="founder-caption absolute bottom-6 left-6 right-6 p-6 bg-brand-warm/95 backdrop-blur-md border border-brand-line">
                     <p className="text-brand-ink font-bold uppercase text-xs tracking-widest mb-1">Bruno Correa Gomes</p>
                     <p className="text-brand-muted font-mono text-xs uppercase tracking-widest">Liderança Estratégica & Design</p>
                   </div>

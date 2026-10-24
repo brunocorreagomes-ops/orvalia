@@ -262,3 +262,22 @@
 @media(max-width:639px) { .project-preview img { height:360px; } }
 
 @media(min-width:1280px) { .situations-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } .situation-card h3 { font-size:29px; } }
+
+/* Feedback belongs to the actionable element, including keyboard focus. */
+.project-preview:focus-visible { outline:2px solid #006a67; outline-offset:4px; }
+.project-preview:focus-visible img { transform:scale(1.025); }
+.project-detail-link svg,.situation-card > a svg,.audience-grid h3 svg { transition:transform .2s; }
+:is(.project-detail-link,.situation-card > a,.audience-grid > a):focus-visible svg { transform:translate(2px,-2px); }
+.method-tabs button { transition:background-color .2s,border-color .2s; }
+.method-tabs button:focus-visible { background:#f5f4ef; }
+@media(hover:hover) and (pointer:fine) {
+  :is(.project-detail-link,.situation-card > a,.audience-grid > a):hover svg { transform:translate(2px,-2px); }
+  .method-tabs button:hover { background:#e0e7dd; border-color:#007d77; }
+}
+@media(hover:none) {
+  .founder-portrait img { filter:none; }
+  .project-preview:hover img { transform:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .founder-portrait img,.project-preview:is(:hover,:focus-visible) img { transform:none; }
+}

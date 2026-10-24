@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const offers = [
   { title:'Marca e identidade', desc:'Para quem está começando ou precisa alinhar a apresentação da empresa ao que ela faz hoje.', outputs:['Posicionamento, mensagem e identidade visual','Logotipo e aplicações definidos na proposta'], href:'/branding/' },
   { title:'Criação de sites', desc:'Para quem precisa apresentar os serviços e facilitar a consulta e o contato pelo celular.', outputs:['Páginas, textos e navegação organizados','Formulário ou WhatsApp conforme o projeto'], href:'/sites/' },
-  { title:'Redes sociais', desc:'Para quem precisa analisar a presença digital e organizar o conteúdo da empresa de acordo com a estratégia.', outputs:['Análise e planejamento da presença digital','Pacotes de posts estáticos para o feed e vídeos para stories'], href:'/redes-sociais/' },
+  { title:'Redes sociais', desc:'Para quem precisa analisar a presença digital e organizar o conteúdo da empresa de acordo com a estratégia.', outputs:['Análise e planejamento da presença digital','Pacotes de publicações com imagens e vídeos curtos'], href:'/redes-sociais/' },
   { title:'Google e buscas com IA', desc:'Para quem já tem um site e precisa revisar como seus serviços podem ser encontrados e compreendidos.', outputs:['Revisão técnica e informações locais','Conteúdo e estrutura, sem promessa de posição'], href:'/seo-geo/' },
 ];
 function SituationArt({ index }: { index: number }) {
@@ -20,7 +20,7 @@ export default function FormasTrabalhar() {
     <div className="container mx-auto px-6">
       <div className="situations-heading"><div><p className="editorial-label">02 / O que fazemos</p><h2>Marca, site e presença digital.<br/><span>O que sua empresa precisa agora?</span></h2></div><p>Quatro frentes de trabalho, com escopo definido de acordo com o negócio. Conheça as entregas de cada uma.</p></div>
       <div className="situations-grid">{offers.map((offer,i)=><article className="situation-card" key={offer.title}>
-        <div className="situation-top"><span>0{i+1}</span><span>{['Logotipo e identidade visual','Criação de sites e páginas','Análise, feed e stories','Google e buscas com IA'][i]}</span></div>
+        <div className="situation-top"><span>0{i+1}</span><span>{['Logotipo e identidade visual','Criação de sites e páginas','Análise e publicações','Google e buscas com IA'][i]}</span></div>
         <SituationArt index={i}/>
         <h3>{offer.title}</h3><p className="situation-description">{offer.desc}</p>
 
