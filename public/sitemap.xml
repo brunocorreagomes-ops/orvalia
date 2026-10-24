@@ -26,6 +26,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://orvalia.com.br/portfolio/ryna-hayashi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orvalia.com.br/portfolio/beth-olmeda/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orvalia.com.br/portfolio/dario-eletricidade/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orvalia.com.br/portfolio/quinta-de-caraiva/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orvalia.com.br/portfolio/knj-tur/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orvalia.com.br/portfolio/marta-ana-chiconato/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://orvalia.com.br/sobre/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

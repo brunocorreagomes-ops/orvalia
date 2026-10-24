@@ -1,66 +1,10 @@
+import { projects } from "../data/projects";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const cases = [
-  {
-    client: "Ryna Hayashi",
-    category: "01 / PSICOLOGIA CLÍNICA",
-    before: "Apresentar o trabalho clínico e facilitar o primeiro contato.",
-    decision: "Criar um site com informações sobre os atendimentos e acesso direto ao WhatsApp.",
-    after: "Uma página para conhecer a profissional, consultar os serviços e iniciar uma conversa.",
-    image: "/cases/ryna-hayashi-mobile.jpg",
-    width: 631,
-    height: 1536,
-    featured: true
-  },
-  {
-    client: "Beth Olmeda",
-    category: "02 / MARCA PESSOAL",
-    description: "Identidade visual, textos de apresentação e página de serviços.",
-    image: "/images/projects/beth-olmeda.webp",
-    width: 1024,
-    height: 1024,
-    featured: false
-  },
-  {
-    client: "Dario Eletricidade",
-    category: "03 / ENGENHARIA",
-    description: "Site para apresentar os serviços de elétrica e atender buscas da região.",
-    image: "/cases/dario-eletricidade-mobile.jpg",
-    width: 842,
-    height: 1536,
-    featured: false
-  },
-  {
-    client: "Quinta de Caraíva",
-    category: "04 / HOTELARIA",
-    description: "Apresentação da hospedagem e contato direto para reservas.",
-    image: "/cases/quinta-de-caraiva-mobile.jpg",
-    width: 899,
-    height: 1536,
-    featured: false
-  },
-  {
-    client: "Marta Ana Chiconato",
-    category: "05 / TERAPIA INTEGRATIVA",
-    description: "Apresentação dos atendimentos e informações para o primeiro contato.",
-    image: "/images/projects/marta-ana-chiconato.webp",
-    width: 1536,
-    height: 1024,
-    featured: false
-  },
-  {
-    client: "KNJ Tur",
-    category: "06 / TURISMO",
-    description: "Site para apresentar assessoria de vistos, viagens e canais de atendimento.",
-    image: "/cases/knj-tur-mobile.jpg",
-    width: 837,
-    height: 1536,
-    featured: false
-  }
-];
+const cases = projects;
 
 export default function Projects({ showPortfolioLink = true }: { showPortfolioLink?: boolean }) {
   const [selected, setSelected] = useState<(typeof cases)[number] | null>(null);
@@ -129,7 +73,9 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan-dark mb-4 block">
                 {featuredCase.category}
               </span>
-              <h3 className="text-4xl md:text-5xl font-medium mb-10">{featuredCase.client}</h3>
+              <h3 className="text-4xl md:text-5xl font-medium mb-6">{featuredCase.client}</h3>
+              <ul className="project-deliverables">{featuredCase.deliverables.map(item => <li key={item}>{item}</li>)}</ul>
+              <Link className="project-detail-link" to={`/portfolio/${featuredCase.slug}/`}>Conhecer este projeto <ArrowUpRight size={15} aria-hidden="true" /></Link>
               
               <div className="space-y-8">
                 <div className="border-l-2 border-brand-line pl-5 hover:border-brand-cyan-dark transition-colors">
@@ -178,13 +124,15 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
               <p className="text-[#55605D] text-sm leading-relaxed mb-6">
                 {item.description}
               </p>
+              <ul className="project-deliverables">{item.deliverables.map(deliverable => <li key={deliverable}>{deliverable}</li>)}</ul>
+              <Link className="project-detail-link" to={`/portfolio/${item.slug}/`}>Conhecer este projeto <ArrowUpRight size={15} aria-hidden="true" /></Link>
             </motion.div>
           ))}
         </div>
 
       </div>
       <dialog ref={dialogRef} className="project-dialog" aria-labelledby="project-dialog-title" data-lenis-prevent onClose={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) setSelected(null); }}>
-        {selected && <div className={`project-dialog-content${selected.image.startsWith("/cases/") ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} decoding="async" width={selected.width} height={selected.height} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p></div>}
+        {selected && <div className={`project-dialog-content${selected.image.startsWith("/cases/") ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} decoding="async" width={selected.width} height={selected.height} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p><ul className="project-deliverables">{selected.deliverables.map(item => <li key={item}>{item}</li>)}</ul><Link className="project-detail-link" to={`/portfolio/${selected.slug}/`} onClick={() => setSelected(null)}>Conhecer este projeto <ArrowUpRight size={15} aria-hidden="true" /></Link></div>}
       </dialog>
     </section>
   );

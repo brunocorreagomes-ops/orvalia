@@ -1,3 +1,5 @@
+import Audience from "../components/Audience";
+import { homeFaqs, studioProfile } from "../data/studio";
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
 import GapPercepcao from "../components/GapPercepcao";
@@ -9,81 +11,29 @@ import PosicionamentoLocal from "../components/PosicionamentoLocal";
 import CTA from "../components/CTA";
 
 const orgSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://orvalia.com.br/#organization",
-      "name": "Orvalia Studio",
-      "url": "https://orvalia.com.br/",
-      "logo": "https://orvalia.com.br/logo.png",
-      "description": "Estúdio de estratégia de marca, criação de sites e posicionamento digital em Indaiatuba.",
-      "founder": {
-        "@type": "Person",
-        "name": "Bruno Correa Gomes",
-        "jobTitle": "Diretor Estratégico"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://orvalia.com.br/#localbusiness",
-      "name": "Orvalia Studio",
-      "url": "https://orvalia.com.br/",
-      "telephone": "+5511978959567",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Indaiatuba",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "areaServed": ["Indaiatuba", "Campinas", "RMC", "Brasil"]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://orvalia.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é o diagnóstico estratégico da Orvalia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É uma conversa inicial para entender o momento da empresa e identificar oportunidades de melhoria na marca, no site e na presença digital."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A Orvalia atende empresas fora de Indaiatuba?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. A Orvalia atende Indaiatuba, Campinas e região, além de poder conduzir projetos remotamente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quais serviços a Orvalia oferece?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A atuação inclui estratégia de marca e identidade visual, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO."
-          }
-        }
-      ]
-    }
-  ]
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'ProfessionalService', '@id': 'https://orvalia.com.br/#organization', name: studioProfile.name, url: 'https://orvalia.com.br/', logo: 'https://orvalia.com.br/logo.png', description: 'Estratégia de marca, identidade visual, criação de sites e melhorias para buscas. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos a distância.', email: studioProfile.email, telephone: studioProfile.telephone, address: { '@type': 'PostalAddress', addressLocality: 'Indaiatuba', addressRegion: 'SP', addressCountry: 'BR' }, areaServed: studioProfile.areas, founder: { '@id': 'https://orvalia.com.br/#founder' } },
+    { '@type': 'Person', '@id': 'https://orvalia.com.br/#founder', name: studioProfile.founder, jobTitle: 'Fundador e responsável pelos projetos da Orvalia', sameAs: [studioProfile.linkedin], worksFor: { '@id': 'https://orvalia.com.br/#organization' } },
+    { '@type': 'WebSite', '@id': 'https://orvalia.com.br/#website', name: studioProfile.name, url: 'https://orvalia.com.br/', inLanguage: 'pt-BR', publisher: { '@id': 'https://orvalia.com.br/#organization' } },
+    { '@type': 'FAQPage', '@id': 'https://orvalia.com.br/#faq', mainEntity: homeFaqs.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
+  ],
 };
 
 export default function Home() {
   return (
     <>
       <SEO
-        title="Orvalia Studio | Marca e Sites Estratégicos em Indaiatuba"
-        description="Identidade visual, criação de sites e SEO local para empresas de Indaiatuba e região. Conheça os projetos e fale com Bruno sobre sua empresa."
+        title="Identidade visual e criação de sites em Indaiatuba | Orvalia"
+        description="Identidade visual, criação de sites e presença nas buscas para empresas de Indaiatuba, Campinas e região. Veja projetos e fale diretamente com Bruno."
         socialTitle="Orvalia Studio | Seu negócio vale mais do que parece."
         socialDescription="Estratégia de marca, identidade visual e sites para tornar visível o valor da sua empresa. Conheça a Orvalia e converse sobre seu projeto."
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />
-      {/* 1. HERO V3 (Cinematic + Interactive Gap) */}
+      {/* Abertura e identificação do público */}
       <Hero />
+      <Audience />
 
       {/* 2. O GAP DE PERCEPÇÃO */}
       <GapPercepcao />
@@ -111,27 +61,10 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight">Antes de dar o próximo passo.</h2>
           </div>
           <div className="lg:col-span-8 divide-y divide-brand-line">
-            <details className="py-6 group">
-              <summary className="cursor-pointer list-none flex items-center justify-between gap-6 text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">
-                O que é o diagnóstico estratégico da Orvalia?
-                <span aria-hidden="true" className="text-brand-cyan-dark text-2xl">+</span>
-              </summary>
-              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">É uma conversa inicial para entender o momento da empresa e identificar oportunidades de melhoria na marca, no site e na presença digital.</p>
-            </details>
-            <details className="py-6 group">
-              <summary className="cursor-pointer list-none flex items-center justify-between gap-6 text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">
-                A Orvalia atende empresas fora de Indaiatuba?
-                <span aria-hidden="true" className="text-brand-cyan-dark text-2xl">+</span>
-              </summary>
-              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">Sim. A Orvalia atende Indaiatuba, Campinas e região, além de poder conduzir projetos remotamente.</p>
-            </details>
-            <details className="py-6 group">
-              <summary className="cursor-pointer list-none flex items-center justify-between gap-6 text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">
-                Quais serviços a Orvalia oferece?
-                <span aria-hidden="true" className="text-brand-cyan-dark text-2xl">+</span>
-              </summary>
-              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">A atuação inclui estratégia de marca e identidade visual, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO.</p>
-            </details>
+            {homeFaqs.map(item => <details key={item.question} className="py-6 group">
+              <summary className="cursor-pointer list-none flex items-center justify-between gap-6 text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">{item.question}<span aria-hidden="true" className="text-brand-cyan-dark text-2xl">+</span></summary>
+              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">{item.answer}</p>
+            </details>)}
           </div>
         </div>
       </section>

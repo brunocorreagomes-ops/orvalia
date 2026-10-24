@@ -107,7 +107,7 @@ export default function Navbar() {
             data-analytics-location="navbar"
             className="inline-flex items-center gap-3 bg-brand-ink text-brand-warm px-5 py-3 text-xs font-bold hover:bg-brand-graphite transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan-dark"
           >
-            Pedir diagnóstico estratégico <ArrowUpRight size={15} className="text-brand-cyan" />
+            Conversar sobre meu projeto <ArrowUpRight size={15} className="text-brand-cyan" />
           </Link>
         </div>
 
@@ -146,7 +146,7 @@ export default function Navbar() {
               data-analytics-event="contact_form_open" data-analytics-location="navbar_mobile"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-4 px-5 bg-brand-ink text-brand-warm font-semibold text-sm flex items-center justify-between">
-              Pedir diagnóstico estratégico <ArrowUpRight size={18} className="text-brand-cyan" />
+              Conversar sobre meu projeto <ArrowUpRight size={18} className="text-brand-cyan" />
             </Link>
             <p className="text-xs text-brand-muted text-center mt-3">Atendimento direto com Bruno Correa Gomes</p>
           </div>

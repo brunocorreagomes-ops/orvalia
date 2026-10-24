@@ -16,9 +16,9 @@ function SituationArt({ index }: { index: number }) {
 export default function FormasTrabalhar() {
   return <section id="formas-trabalhar" className="situations-section">
     <div className="container mx-auto px-6">
-      <div className="situations-heading"><div><p className="editorial-label">04 / Como podemos ajudar</p><h2>A solução começa<br/><span>pelo seu momento.</span></h2></div><p>Não precisa chegar com tudo decidido. Veja o que mais se parece com a situação da sua empresa.</p></div>
+      <div className="situations-heading"><div><p className="editorial-label">04 / Como podemos ajudar</p><h2>Marca, site e buscas.<br/><span>Cada um com um papel.</span></h2></div><p>Não precisa chegar com tudo decidido. Veja o que mais se parece com a situação da sua empresa.</p></div>
       <div className="situations-grid">{offers.map((offer,i)=><article className="situation-card" key={offer.title}>
-        <div className="situation-top"><span>0{i+1}</span><span>{['Marca e mensagem','Site e experiência','Presença e continuidade'][i]}</span></div>
+        <div className="situation-top"><span>0{i+1}</span><span>{['Logotipo e identidade visual','Criação de sites e páginas','Google e buscas com IA'][i]}</span></div>
         <SituationArt index={i}/>
         <h3>{offer.title}</h3><p className="situation-description">{offer.desc}</p>
         <div className="situation-start"><h4>Por onde começamos</h4><p>{offer.start}</p></div>

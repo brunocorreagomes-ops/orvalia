@@ -16,10 +16,10 @@ export default function GapPercepcao() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_0.55fr] gap-10 lg:gap-20 items-end mb-16 md:mb-24">
           <h2 className="text-5xl md:text-6xl lg:text-[5.5vw] font-sans font-medium leading-[1.05] tracking-tight m-0">
             Não falta qualidade.<br />
-            <span className="text-[#94a7a3] italic font-light font-serif">Falta tradução.</span>
+            <span className="text-[#94a7a3] italic font-light font-serif">Falta clareza.</span>
           </h2>
           <p className="text-[#a9b8b3] text-lg md:text-xl leading-relaxed mb-2">
-            Seu negócio cresceu. Sua presença digital ficou para trás. O desafio está na distância entre o que sua empresa entrega e o que o mercado reconhece.
+            A marca e o site precisam explicar o que você oferece, para quem é o serviço e como pedir uma proposta. Sem isso, um bom trabalho pode passar despercebido.
           </p>
         </div>
 
@@ -34,9 +34,9 @@ export default function GapPercepcao() {
             className="border-t border-[#455450] pt-6"
           >
             <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">01 / Percepção</div>
-            <h3 className="text-2xl font-medium mb-4 leading-snug">Seu negócio é melhor do que parece.</h3>
+            <h3 className="text-2xl font-medium mb-4 leading-snug">Seu trabalho é bom. O site mostra isso?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
-              A identidade, a linguagem ou a experiência digital ainda não correspondem ao nível real da empresa e ao público que você deseja atingir.
+              Um cliente indicado pode pesquisar sua empresa antes de conversar. Se encontrar uma apresentação genérica ou desatualizada, talvez não perceba o cuidado que existe no seu trabalho.
             </p>
           </motion.article>
 
@@ -48,9 +48,9 @@ export default function GapPercepcao() {
             className="border-t border-[#455450] pt-6"
           >
             <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">02 / Clareza</div>
-            <h3 className="text-2xl font-medium mb-4 leading-snug">O cliente precisa trabalhar para entender você.</h3>
+            <h3 className="text-2xl font-medium mb-4 leading-snug">Você explica sempre as mesmas coisas?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
-              Oferta demais e hierarquia de menos transformam competência em ruído. Um site confuso afasta quem tem pouco tempo.
+              Quando os serviços, o público e o atendimento não estão claros, a conversa começa com dúvidas que o site já poderia resolver.
             </p>
           </motion.article>
 
@@ -62,9 +62,9 @@ export default function GapPercepcao() {
             className="border-t border-[#455450] pt-6"
           >
             <div className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan mb-5">03 / Conversão</div>
-            <h3 className="text-2xl font-medium mb-4 leading-snug">O site informa, mas não conduz.</h3>
+            <h3 className="text-2xl font-medium mb-4 leading-snug">O visitante sabe como pedir um orçamento?</h3>
             <p className="text-[#a8b5b1] text-sm leading-relaxed">
-              O tráfego orgânico ou pago até existe, mas faltam sinais claros, design de conversão e segurança para o visitante avançar para o contato.
+              Telefone escondido, informações incompletas ou uma página difícil de usar no celular podem interromper o contato antes mesmo de ele começar.
             </p>
           </motion.article>
         </div>

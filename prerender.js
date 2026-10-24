@@ -16,6 +16,9 @@ const routesToPrerender = [
   '/sites/',
   '/seo-geo/',
   '/portfolio/',
+  '/portfolio/ryna-hayashi/',
+  '/portfolio/beth-olmeda/',
+  '/portfolio/dario-eletricidade/',
   '/portfolio/debora-bolangno/',
   '/portfolio/elife-fitness/',
   '/portfolio/quinta-de-caraiva/',
@@ -134,7 +137,7 @@ async function prerender() {
       html = html.replace(/<script id="home-faq-schema"[\s\S]*?<\/script>/gi, '');
     }
     
-    if (canonicalArticleRoutes.has(routePath) || legacyArticleRoutes.has(routePath) || routePath === '/blog/') {
+    if (routePath === '/' || routePath.startsWith('/portfolio/') || canonicalArticleRoutes.has(routePath) || legacyArticleRoutes.has(routePath) || routePath === '/blog/') {
       html = html.replace(/<script id="entity-schema"[\s\S]*?<\/script>/gi, '');
     }
     if (helmet) {

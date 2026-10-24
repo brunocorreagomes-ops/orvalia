@@ -1,3 +1,4 @@
+import { studioProfile } from "../data/studio";
 import { motion } from "framer-motion";
 
 export default function BrunoSection() {
@@ -57,21 +58,14 @@ export default function BrunoSection() {
               </p>
             </div>
 
-            {/* Grid de Autoridade */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-brand-line pt-10">
-              <div>
-                <strong className="block text-3xl font-medium text-brand-ink mb-2">18+ anos</strong>
-                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">Trajetória executiva</span>
-              </div>
-              <div>
-                <strong className="block text-3xl font-medium text-brand-ink mb-2">FGV & CEA</strong>
-                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">MBA e Certificações</span>
-              </div>
-              <div>
-                <strong className="block text-3xl font-medium text-brand-ink mb-2">Direta</strong>
-                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">Atenção Sênior no Projeto</span>
-              </div>
-            </div>
+            <dl className="studio-facts">
+              <div><dt>Quem conduz</dt><dd>{studioProfile.founder}, fundador da {studioProfile.name}.</dd></div>
+              <div><dt>O que fazemos</dt><dd>Estratégia de marca, identidade visual, sites e melhorias para buscas.</dd></div>
+              <div><dt>Onde atendemos</dt><dd>Base em {studioProfile.base}. Campinas e região, com projetos a distância para o Brasil.</dd></div>
+              <div><dt>Como falar</dt><dd><a href={`mailto:${studioProfile.email}`}>{studioProfile.email}</a>{" · "}<a href={`tel:${studioProfile.telephone}`}>{studioProfile.telephoneDisplay}</a></dd></div>
+            </dl>
+
+
 
           </div>
         </div>

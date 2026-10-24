@@ -1,7 +1,13 @@
+import { useParams } from "react-router-dom";
+import ProjectDetail from "../components/ProjectDetail";
+import { projects } from "../data/projects";
 import SEO from "../components/SEO";
 import Projects from "../components/Projects";
 
 export default function Portfolio() {
+  const { cliente } = useParams();
+  const project = projects.find(item => item.slug === cliente);
+  if (project) return <ProjectDetail project={project} />;
   return (
     <div className="pt-32 pb-20 bg-brand-mineral min-h-screen">
       <SEO title="Portfólio de Casos Reais | Orvalia Studio" description="Conheça os projetos de branding, sites e posicionamento digital criados pela Orvalia Studio em Indaiatuba." canonical="https://orvalia.com.br/portfolio/" />

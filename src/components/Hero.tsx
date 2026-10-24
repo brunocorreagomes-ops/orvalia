@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-sm md:text-base font-semibold leading-relaxed tracking-tight max-w-[720px] text-brand-muted mb-5">
-              Marca e sites para empresas de Indaiatuba e Campinas
+              Identidade visual e criação de sites em Indaiatuba e Campinas
             </h1>
             <h2 className="text-[clamp(2.25rem,10vw,3.75rem)] lg:text-[5.5vw] font-medium leading-[0.96] tracking-tight max-w-[880px] text-brand-ink m-0">
               Seu negócio vale <br className="hidden md:block"/>
@@ -26,7 +26,7 @@ export default function Hero() {
             </h2>
             
             <p className="text-brand-muted text-lg md:text-xl leading-relaxed max-w-[610px] mt-8">
-              Sua empresa faz um bom trabalho. A gente cuida da marca, do site e da comunicação para que mais pessoas percebam isso e queiram conversar com você.
+              Quem recebe uma indicação também pesquisa antes de entrar em contato. Organizamos sua marca, seu site e seus serviços para que essa pessoa entenda seu trabalho e saiba como falar com você.
             </p>
             
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 mt-10">
@@ -34,15 +34,17 @@ export default function Hero() {
                 to="/contato/"
                 className="inline-flex items-center justify-between gap-3 px-5 sm:px-6 py-4 bg-brand-ink text-brand-warm border border-brand-ink text-sm font-semibold w-full sm:w-auto min-w-0 hover:bg-[#2c4141] hover:-translate-y-0.5 transition-all"
               >
-                Pedir diagnóstico estratégico <ArrowUpRight size={16} className="text-brand-cyan" />
+                Conversar sobre meu projeto <ArrowUpRight size={16} className="text-brand-cyan" />
               </Link>
               <a 
                 href="#cases" 
                 className="inline-flex items-center gap-3 text-brand-ink text-sm font-semibold border-b border-[#7d8683] pb-1 hover:border-brand-ink transition-all"
               >
-                Ver transformações ↘
+                Conhecer os projetos ↘
               </a>
             </div>
+
+            <p className="hero-contact-note">Você preenche um formulário curto. Bruno analisa e responde pelo e-mail informado. Sem compromisso.</p>
 
             <div className="flex flex-wrap justify-between items-center gap-4 max-w-[640px] border-t border-[#bec4bf] pt-4 mt-16 md:mt-24 text-xs text-brand-muted tracking-widest uppercase">
               <span>Indaiatuba · Campinas · Brasil</span>
