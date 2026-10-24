@@ -1,29 +1,37 @@
-Orvalia Studio
+# Orvalia Studio
 
-Estúdio de identidade visual, criação de sites e conteúdo, com base em Indaiatuba, São Paulo. Atende Campinas e região e conduz projetos a distância.
+Estúdio de estratégia de marca, identidade visual, criação de sites e revisão de presença nas buscas. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos conduzidos remotamente.
 
-Contato: https://orvalia.com.br/contato/
-WhatsApp: +55 11 97895-9567
-Direção: Bruno Correa Gomes.
+Direção: Bruno Correa Gomes. Nome público do estúdio: Orvalia Studio.
 
-Serviços
-- Branding: definição de posicionamento, identidade visual e textos de apresentação. https://orvalia.com.br/branding/
-- Sites: páginas de serviços, portfólio, navegação e contato. https://orvalia.com.br/sites/
-- SEO e conteúdo: revisão de títulos, informações de atendimento, páginas e links. https://orvalia.com.br/seo-geo/
+## Páginas principais
+- Início: https://orvalia.com.br/
+- Branding: https://orvalia.com.br/branding/
+- Sites estratégicos: https://orvalia.com.br/sites/
+- SEO, GEO e buscas com IA: https://orvalia.com.br/seo-geo/
+- Projetos: https://orvalia.com.br/portfolio/
+- Sobre: https://orvalia.com.br/sobre/
+- Artigos: https://orvalia.com.br/blog/
+- Contato: https://orvalia.com.br/contato/
 
-Método
-A conversa inicial aborda os clientes, a oferta, o conteúdo e a forma de atendimento. A proposta define as entregas e os prazos.
+## Serviços e escopo
+Branding: posicionamento, identidade visual e linguagem para apresentar a oferta e o momento da empresa.
+Sites: arquitetura das informações, páginas de serviços, experiência no celular, portfólio e caminhos de contato.
+SEO e GEO: diagnóstico técnico, revisão de conteúdo e informações locais, navegação, metadados e dados estruturados coerentes com as páginas visíveis. Implementação e acompanhamento dependem do escopo contratado e dos acessos autorizados.
 
-Projetos selecionados
-- Ryna Hayashi: site para apresentar o trabalho clínico e facilitar o contato.
-- Beth Olmeda: identidade visual, textos de apresentação e página de serviços.
-- Dario Eletricidade: apresentação dos serviços de elétrica e atendimento regional.
+## Como começar
+O formulário permite indicar a prioridade e informar nome, e-mail e empresa. Telefone, site e contexto são opcionais. A conversa inicial ajuda a definir a proposta; não há contratação automática pelo formulário.
+Não há garantia de posição no Google, prazo de indexação ou recomendação por ferramentas de IA. Este arquivo é uma referência de navegação, não um mecanismo que assegure visibilidade.
+
+## Projetos apresentados
+- Ryna Hayashi: site de apresentação do trabalho clínico em psicologia.
+- Beth Olmeda: identidade visual, textos e página de serviços.
+- Dario Eletricidade: apresentação dos serviços de elétrica industrial.
 - Quinta de Caraíva: apresentação da hospedagem e contato para reservas.
-- Marta Ana Chiconato: organização das informações sobre os atendimentos.
-- KNJ Tur: organização das informações de turismo corporativo.
+- Marta Ana Chiconato: informações sobre os atendimentos.
+- KNJ Tur: apresentação de vistos, viagens e canais de atendimento.
+O portfólio mostra entregas. As imagens não comprovam aumento de vendas, tráfego ou posições de busca.
 
-Portfólio: https://orvalia.com.br/portfolio/
-Sobre: https://orvalia.com.br/sobre/
-Blog: https://orvalia.com.br/blog/
-
-Os serviços de revisão de conteúdo e SEO não incluem garantia de posição nas buscas ou de recomendação por ferramentas de inteligência artificial.
+## Conteúdo e privacidade
+Os artigos explicam decisões de marca, conteúdo, sites e buscas. As referências e datas específicas devem ser consultadas em cada artigo.
+Política de privacidade: https://orvalia.com.br/privacidade/

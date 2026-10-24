@@ -116,6 +116,7 @@ async function prerender() {
   const template = fs.readFileSync(templatePath, 'utf-8');
   
   const allRoutes = [...new Set([...routesToPrerender, ...canonicalArticleRoutes])];
+  const canonicalRoutes = new Set();
   for (const url of allRoutes) {
     const context = {};
     const appHtml = render(url, context);
@@ -202,12 +203,14 @@ async function prerender() {
     fs.mkdirSync(outDir, { recursive: true });
     html = completeSharingMetadata(html);
     fs.writeFileSync(outFile, html);
+    const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
+    if (canonical === fullCanonicalUrl) canonicalRoutes.add(routePath);
     
     console.log(`Prerendered ${url} -> ${outFile}`);
   }
 
   const sitemapUrls = allRoutes
-    .filter((route) => !lowPriorityRoutes.includes(route) && !legacyArticleRoutes.has(route))
+    .filter((route) => canonicalRoutes.has(route) && !lowPriorityRoutes.includes(route) && !legacyArticleRoutes.has(route))
     .map((route) => {
       const normalizedRoute = route.endsWith('/') ? route : `${route}/`;
       let priority = '0.8';

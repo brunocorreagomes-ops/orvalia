@@ -53,7 +53,7 @@
 .method-explorer { padding:96px 0; background:#e9e8e3; color:#080a0c; }
 .method-header { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:48px; }
 .method-header h2 { font-size:clamp(2.3rem,5vw,4.2rem); letter-spacing:-.04em; line-height:1.05; margin-top:20px; }
-.method-header em { font-family:'Instrument Serif',Georgia,serif; color:#64706d; font-weight:400; }
+.method-header em { font-family:'Instrument Serif',Georgia,serif; color:#55605d; font-weight:400; }
 .method-header > p { font-size:18px; line-height:1.7; max-width:340px; color:#475553; }
 .method-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid #a8b6ac; }
 .method-tabs button { padding:22px 18px; display:flex; align-items:center; gap:16px; min-height:76px; font-size:19px; border-bottom:2px solid #b8c4bb; text-align:left; }
@@ -82,7 +82,7 @@
 .visual-topic-grid svg.editorial-art { height:100px; object-fit:cover; }
 .visual-topic-label { display:flex; justify-content:space-between; gap:10px; padding:14px; font-size:14px; font-weight:500; line-height:1.4; min-height:68px; }
 .visual-topic-label > span { font:11px monospace; color:#53625c; padding-top:3px; }
-.visual-topic-action { display:flex; align-items:center; justify-content:space-between; padding:0 14px; gap:12px; font-size:10px; color:#006a67; }
+.visual-topic-action { display:flex; align-items:center; justify-content:space-between; padding:0 14px; gap:12px; font-size:12px; color:#006a67; }
 .perception-lab button:focus-visible,.perception-lab input:focus-visible { outline:2px solid #66e7e1; outline-offset:5px; }
 .method-explorer button:focus-visible,.method-explorer a:focus-visible,.method-explorer [role=tabpanel]:focus-visible { outline:2px solid #006a67; outline-offset:4px; }
 @media(max-width:1023px) { .method-header { align-items:start; flex-direction:column; gap:24px; } .method-header > p { max-width:640px; } .method-detail { padding:28px; } .method-tabs button { font-size:16px; padding:18px 12px; gap:10px; } }
@@ -111,13 +111,13 @@
  .comparison-tags > span { font-size:7px; padding:5px; }
  .comparison-controls { padding:18px 14px; }
  .comparison-lenses { gap:8px; }
- .comparison-lenses button { font-size:11px; line-height:1.4; }
+ .comparison-lenses button { font-size:12px; line-height:1.4; }
  .comparison-explanation { grid-template-columns:minmax(0,1fr); gap:16px; }
  .comparison-explanation h3 { font-size:24px; }
  .method-explorer { padding:64px 0; }
  .method-tabs { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 8px; }
  .method-tabs button { font-size:15px; min-height:60px; padding:16px 10px; gap:9px; }
- .method-tabs button span:first-child { font-size:9px; }
+ .method-tabs button span:first-child { font-size:12px; }
  .method-panel:not([hidden]) { grid-template-columns:minmax(0,1fr); margin-top:22px; }
  .method-map { padding:16px; }
  .method-map svg { max-height:220px; }
@@ -126,13 +126,13 @@
  .visual-topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
  .visual-topic-grid svg.editorial-art { height:75px; }
  .visual-topic-label { padding:10px; font-size:12px; min-height:62px; }
- .visual-topic-action { padding:0 10px; font-size:9px; gap:5px; }
+ .visual-topic-action { padding:0 10px; font-size:12px; gap:5px; }
 }
 @media(prefers-reduced-motion:reduce) { .visual-topic-grid button { transition:none; } }
 .project-preview { display:block; width:100%; margin-bottom:22px; border:1px solid #c2c8c5; background:#e9e8e3; text-align:left; cursor:zoom-in; }
 .project-preview img { width:100%; height:220px; object-fit:contain; transition:transform .3s; }
 .project-preview:hover img { transform:scale(1.02); }
-.project-preview > span { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; font-size:11px; background:#f5f4ef; border-top:1px solid #c2c8c5; }
+.project-preview > span { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; font-size:12px; background:#f5f4ef; border-top:1px solid #c2c8c5; }
 .project-preview:focus-visible { outline:2px solid #006a67; outline-offset:4px; }
 .project-dialog { width:min(1100px,calc(100% - 32px)); max-height:calc(100dvh - 32px); background:#f5f4ef; color:#101e20; border:1px solid #82948a; padding:0; margin:auto; }
 .project-dialog::backdrop { background:#071817d9; }

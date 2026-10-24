@@ -29,14 +29,14 @@ export default function BrunoSection() {
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
                 05 / Direção Estratégica
               </span>
             </div>
 
             <h2 className="text-4xl md:text-6xl font-sans font-medium tracking-tight leading-[1.05] mb-8">
               Estratégia comercial <br className="hidden md:block" />
-              <span className="italic font-serif font-light text-[#64706D]">antes do layout.</span>
+              <span className="italic font-serif font-light text-[#55605D]">antes do layout.</span>
             </h2>
 
             <div className="border-l-2 border-brand-cyan-dark pl-6 my-10">
@@ -58,15 +58,15 @@ export default function BrunoSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-brand-line pt-10">
               <div>
                 <strong className="block text-3xl font-medium text-brand-ink mb-2">18+ anos</strong>
-                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">Trajetória executiva</span>
+                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">Trajetória executiva</span>
               </div>
               <div>
                 <strong className="block text-3xl font-medium text-brand-ink mb-2">FGV & CEA</strong>
-                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">MBA e Certificações</span>
+                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">MBA e Certificações</span>
               </div>
               <div>
                 <strong className="block text-3xl font-medium text-brand-ink mb-2">Direta</strong>
-                <span className="font-mono text-[9px] uppercase tracking-widest font-bold text-brand-muted">Atenção Sênior no Projeto</span>
+                <span className="font-mono text-xs uppercase tracking-widest font-bold text-brand-muted">Atenção Sênior no Projeto</span>
               </div>
             </div>
 

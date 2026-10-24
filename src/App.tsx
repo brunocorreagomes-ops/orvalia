@@ -1,8 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SmoothScroll from "./components/SmoothScroll";
 import { MessageCircle } from "lucide-react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
@@ -67,12 +66,12 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     if (!hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     } else {
       setTimeout(() => {
         const element = document.getElementById(hash.replace("#", ""));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
         }
       }, 100);
     }
@@ -82,6 +81,15 @@ function ScrollToTop() {
 
 export default function App() {
   const { pathname } = useLocation();
+  const [pastHero, setPastHero] = useState(false);
+  useEffect(() => {
+    const hero = document.querySelector('[data-contact-hero]');
+    if (pathname !== "/" || !hero) return;
+    setPastHero(false);
+    const observer = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting));
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, [pathname]);
   const whatsappHref = `https://wa.me/5511978959567?text=${encodeURIComponent(
     `Olá, Bruno! Vim pela página ${pathname} da Orvalia e gostaria de conversar sobre um diagnóstico estratégico.`
   )}`;
@@ -89,7 +97,6 @@ export default function App() {
     <>
       <ScrollToTop />
       <main className="editorial-system relative bg-brand-mineral text-brand-ink">
-        <SmoothScroll />
 
         <a
           href={whatsappHref}
@@ -98,7 +105,8 @@ export default function App() {
           aria-label={`Falar com Bruno Correa Gomes pelo WhatsApp. Página de origem: ${pathname}`}
           data-analytics-event="whatsapp_floating_click"
           data-analytics-page={pathname}
-          className="fixed bottom-5 right-5 z-[90] bg-brand-ink text-brand-warm border border-brand-muted px-4 py-3 shadow-lg transition-colors flex items-center gap-2.5 hover:bg-brand-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan"
+          hidden={pathname === "/" && !pastHero}
+          className="floating-contact fixed bottom-5 right-5 z-[90] bg-brand-ink text-brand-warm border border-brand-muted px-4 py-3 shadow-lg transition-colors flex items-center gap-2.5 hover:bg-brand-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan"
         >
           <MessageCircle size={19} className="text-brand-cyan" />
           <span className="text-xs font-semibold tracking-wide hidden sm:inline">Falar com Bruno</span>

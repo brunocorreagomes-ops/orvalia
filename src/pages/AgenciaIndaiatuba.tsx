@@ -9,14 +9,18 @@ const localCases = [
     metric: "Imagem mais elegante, clara e alinhada a um atendimento de alto valor",
     location: "Indaiatuba/SP",
     category: "Branding • Estética",
-    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg"
+    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
+    width: 1024,
+    height: 1024
   },
   {
     title: "Dario Eletricidade",
     metric: "Mensagem mais profissional para clientes que precisam de segurança técnica",
     location: "Indaiatuba/SP",
     category: "Marketing • Digital",
-    image: "/cases/dario-eletricidade-mobile.jpg"
+    image: "/cases/dario-eletricidade-mobile.jpg",
+    width: 842,
+    height: 1536
   }
 ];
 
@@ -70,7 +74,7 @@ export default function AgenciaIndaiatuba() {
     <>
       <SEO 
         title="Agência de Branding e Sites em Indaiatuba | Orvalia Studio"
-        description="A Orvalia Studio cria marcas e sites de luxo em Indaiatuba e na RMC. Identidade visual exclusiva, SEO local e posicionamento premium para negócios de elite."
+        description="Estratégia de marca, identidade visual e criação de sites em Indaiatuba e região. Conheça projetos da Orvalia e converse sobre sua empresa."
         canonical="https://orvalia.com.br/branding/"
         schema={agencySchema}
       />
@@ -83,19 +87,19 @@ export default function AgenciaIndaiatuba() {
           >
             <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink transition-colors mb-12">
               <ArrowLeft size={16} />
-              <span className="font-mono text-[10px] uppercase tracking-widest font-semibold">Voltar ao Início</span>
+              <span className="font-mono text-xs uppercase tracking-widest font-semibold">Voltar ao Início</span>
             </Link>
             
             <div className="dna-grid items-end gap-12">
               <div className="col-span-4 lg:col-span-8">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-[2px] bg-brand-cyan-dark" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
                     Estratégia local com foco no público de Indaiatuba
                   </span>
                 </div>
                 <h1 className="page-title text-5xl md:text-7xl font-sans font-medium text-brand-ink leading-[0.95] tracking-tight mb-8">
-                  Agência de Branding e <br /> <span className="text-[#64706D] font-serif font-normal italic">Sites em Indaiatuba</span>
+                  Agência de Branding e <br /> <span className="text-[#55605D] font-serif font-normal italic">Sites em Indaiatuba</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   A Orvalia Studio transforma marcas de Indaiatuba e da RMC em referências no mercado. Identidade visual, sites de alta performance e experiência digital com padrão editorial.
@@ -105,7 +109,7 @@ export default function AgenciaIndaiatuba() {
                     to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold text-xs uppercase tracking-widest transition-transform hover:-translate-y-1 flex items-center justify-center gap-3"
                   >
-                    Diagnóstico Gratuito
+                    Pedir diagnóstico estratégico
                   </Link>
                   <a 
                      href="#atendimento"
@@ -123,17 +127,17 @@ export default function AgenciaIndaiatuba() {
             <div className="dna-grid gap-12">
               <div className="col-span-4 lg:col-span-5 space-y-16">
                 <div>
-                  <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6">Atendimento Regional</h3>
+                  <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6">Atendimento Regional</h3>
                   <div className="flex items-start gap-5 text-brand-ink">
                     <MapPin className="text-brand-cyan-dark shrink-0 mt-1" size={24} />
                     <p className="text-lg leading-relaxed text-[#475553]">
-                      Atendimento estratégico para empresas de Indaiatuba, Campinas, Salto, Itu, Sorocaba e região, com diagnóstico inicial pelo WhatsApp e reuniões por agendamento.
+                      Atendimento estratégico para empresas de Indaiatuba, Campinas, Salto, Itu, Sorocaba e região, com diagnóstico inicial pelo formulário ou WhatsApp e reuniões por agendamento.
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6">Contato Direto</h3>
+                  <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6">Contato Direto</h3>
                   <ul className="space-y-6">
                     <li className="flex items-center gap-5 text-brand-ink">
                       <Phone className="text-brand-cyan-dark" size={20} />
@@ -152,10 +156,10 @@ export default function AgenciaIndaiatuba() {
               </div>
 
               <div className="col-span-4 lg:col-span-7 p-6 md:p-14 surface-secondary editorial-panel border border-brand-line flex flex-col justify-center space-y-10">
-                <h4 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark">Dinâmica de Atendimento</h4>
+                <h4 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark">Dinâmica de Atendimento</h4>
                 <div className="space-y-8">
                   <div>
-                    <h5 className="text-brand-ink font-bold text-xl mb-3">1. Primeiro Passo via WhatsApp</h5>
+                    <h5 className="text-brand-ink font-bold text-xl mb-3">1. Primeiro contato</h5>
                     <p className="text-[#55615d] text-base leading-relaxed">
                       Tudo começa com uma conversa direta e sem intermediários. Você nos conta sobre seus objetivos de negócio e nós realizamos um diagnóstico prévio da sua presença digital.
                     </p>
@@ -197,8 +201,8 @@ export default function AgenciaIndaiatuba() {
                   
                   {/* Frame Accent corner */}
                   <div className="absolute bottom-6 left-6 right-6 p-6 bg-brand-warm/95 backdrop-blur-md border border-brand-line opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-brand-ink font-bold uppercase text-[10px] tracking-widest mb-1">Bruno Correa Gomes</p>
-                    <p className="text-brand-muted font-mono text-[9px] uppercase tracking-widest">Liderança Estratégica & Design</p>
+                    <p className="text-brand-ink font-bold uppercase text-xs tracking-widest mb-1">Bruno Correa Gomes</p>
+                    <p className="text-brand-muted font-mono text-xs uppercase tracking-widest">Liderança Estratégica & Design</p>
                   </div>
                 </motion.div>
               </div>
@@ -206,9 +210,9 @@ export default function AgenciaIndaiatuba() {
               {/* Content Column */}
               <div className="col-span-4 lg:col-span-7 space-y-10 lg:pl-10">
                 <div>
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4 block">Liderança & Visão</span>
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4 block">Liderança & Visão</span>
                   <h2 className="section-title text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-2">
-                    Quem está por trás da <br className="hidden sm:inline" /><span className="text-[#64706D] italic font-normal">Orvalia Studio?</span>
+                    Quem está por trás da <br className="hidden sm:inline" /><span className="text-[#55605D] italic font-normal">Orvalia Studio?</span>
                   </h2>
                 </div>
 
@@ -219,7 +223,7 @@ export default function AgenciaIndaiatuba() {
                   
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-brand-ink tracking-tight">Bruno Correa Gomes</h3>
-                    <p className="text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest">Fundador da Orvalia Studio</p>
+                    <p className="text-brand-cyan-dark font-mono text-xs font-bold uppercase tracking-widest">Fundador da Orvalia Studio</p>
                   </div>
 
                   <p className="text-[#475553] text-lg leading-relaxed">
@@ -237,7 +241,7 @@ export default function AgenciaIndaiatuba() {
                     href="https://www.linkedin.com/in/bruno-correa-gomes/"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="px-8 py-4 border border-brand-line bg-brand-warm text-brand-ink hover:border-brand-ink font-mono font-semibold text-[10px] uppercase tracking-widest transition-all flex items-center gap-3"
+                    className="px-8 py-4 border border-brand-line bg-brand-warm text-brand-ink hover:border-brand-ink font-mono font-semibold text-xs uppercase tracking-widest transition-all flex items-center gap-3"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                       <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
@@ -249,7 +253,7 @@ export default function AgenciaIndaiatuba() {
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20sua%20trajetória%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20agendar%20uma%20conversa."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-4 bg-[#E0F7F6] text-[#006663] hover:bg-[#008A86] hover:text-white font-mono font-bold text-[10px] uppercase tracking-widest transition-colors flex items-center gap-3"
+                    className="px-8 py-4 bg-[#E0F7F6] text-[#006663] hover:bg-[#008A86] hover:text-white font-mono font-bold text-xs uppercase tracking-widest transition-colors flex items-center gap-3"
                   >
                     WhatsApp
                   </a>
@@ -262,9 +266,9 @@ export default function AgenciaIndaiatuba() {
           <section className="py-24 border-t border-brand-line">
             <div className="dna-grid mb-16">
               <div className="col-span-4 lg:col-span-12">
-                <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Casos de Sucesso Local</h3>
+                <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Casos de Sucesso Local</h3>
                 <h2 className="section-title text-4xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight">
-                  Projetos em <span className="italic font-serif font-light text-[#64706D]">Indaiatuba</span>
+                  Projetos em <span className="italic font-serif font-light text-[#55605D]">Indaiatuba</span>
                 </h2>
               </div>
             </div>
@@ -281,6 +285,10 @@ export default function AgenciaIndaiatuba() {
                   <div className="h-[450px] relative overflow-hidden bg-[#d1d7d3]">
                      <img 
                         src={project.image} 
+                        width={project.width}
+                        height={project.height}
+                        loading="lazy"
+                        decoding="async"
                         alt={project.title} 
                         referrerPolicy="no-referrer"
                         className={`w-full h-full ${project.image.startsWith("/cases/") ? "object-contain p-4" : "object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.85]"}`}
@@ -289,14 +297,14 @@ export default function AgenciaIndaiatuba() {
                   <div className="p-8 md:p-12 border-t border-brand-line">
                     <div className="flex justify-between items-start mb-6">
                       <div>
-                        <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-cyan-dark mb-3 block">{project.category}</span>
+                        <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-cyan-dark mb-3 block">{project.category}</span>
                         <h4 className="text-3xl font-medium text-brand-ink">{project.title}</h4>
                       </div>
                       <ArrowUpRight size={28} className="text-brand-muted shrink-0 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </div>
                     <div className="space-y-4 pt-6 border-t border-brand-line">
                       <p className="text-[#475553] text-lg leading-relaxed">{project.metric}</p>
-                      <p className="text-brand-muted font-mono font-semibold text-[10px] uppercase tracking-widest">{project.location}</p>
+                      <p className="text-brand-muted font-mono font-semibold text-xs uppercase tracking-widest">{project.location}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -308,9 +316,9 @@ export default function AgenciaIndaiatuba() {
           <section className="py-24 border-t border-brand-line">
             <div className="dna-grid mb-16">
               <div className="col-span-4 lg:col-span-8">
-                <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Dúvidas Frequentes</h3>
+                <h3 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4">Dúvidas Frequentes</h3>
                 <h2 className="section-title text-4xl md:text-5xl font-sans font-medium text-brand-ink leading-[1.05] tracking-tight mb-8">
-                  Estratégia e Design <br /> <span className="italic font-serif font-light text-[#64706D]">EM INDAIATUBA.</span>
+                  Estratégia e Design <br /> <span className="italic font-serif font-light text-[#55605D]">EM INDAIATUBA.</span>
                 </h2>
                 <div className="space-y-12 mt-16 border-t border-brand-line pt-12">
                   {[
@@ -320,7 +328,7 @@ export default function AgenciaIndaiatuba() {
                     },
                     {
                       q: "Qual a importância de trabalhar o SEO em Indaiatuba?",
-                      a: "A estratégia de SEO garante que sua empresa apareça no topo das buscas orgânicas quando potenciais clientes procurarem por seus serviços, incluindo a preparação para respostas em inteligências artificiais (GEO)."
+                      a: "O SEO melhora as condições para que páginas relevantes sejam encontradas e compreendidas nas buscas. Revisamos estrutura, conteúdo e informações locais, sem garantir posição no Google ou recomendação por inteligência artificial."
                     },
                     {
                       q: "Qual o diferencial da Orvalia em relação a uma agência de marketing tradicional?",
@@ -351,7 +359,7 @@ export default function AgenciaIndaiatuba() {
                   </p>
                   <Link
                     to="/contato/"
-                    className="text-brand-cyan font-mono font-bold text-[10px] uppercase tracking-widest border-b border-brand-cyan/40 pb-1 hover:border-brand-cyan transition-colors"
+                    className="text-brand-cyan font-mono font-bold text-xs uppercase tracking-widest border-b border-brand-cyan/40 pb-1 hover:border-brand-cyan transition-colors"
                   >
                     Iniciar projeto agora
                   </Link>

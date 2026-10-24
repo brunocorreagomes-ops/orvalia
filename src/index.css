@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-padding-top: 96px;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -102,3 +103,7 @@
     input, textarea, select { font-size: max(1rem, 1em); }
   }
 }
+
+.floating-contact { bottom:max(1.25rem, env(safe-area-inset-bottom)); }
+
+.floating-contact[hidden] { display:none; }

@@ -43,29 +43,27 @@ export default function MarketingLandingPage() {
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-                    Soluções de Autoridade em Indaiatuba
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                    Soluções para empresas em Indaiatuba
                   </span>
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-sans font-medium leading-[1.05] tracking-tight mb-8">
                   {pageContent.headline.split(' ').map((word, i) => (
-                    <span key={i} className={i % 3 === 0 ? "italic font-serif font-light text-[#64706D]" : ""}>
+                    <span key={i} className={i % 3 === 0 ? "italic font-serif font-light text-[#55605D]" : ""}>
                       {word}{' '}
                     </span>
                   ))}
                 </h1>
 
                 <div className="flex flex-col sm:flex-row gap-6 mt-12">
-                  <a 
-                    href="https://wa.me/5511978959567"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/contato/"
                     className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
                   >
-                    Diagnóstico Gratuito <ArrowUpRight size={16} />
-                  </a>
-                  <Link 
+                    Pedir diagnóstico estratégico <ArrowUpRight size={16} />
+                  </Link>
+                  <Link
                     to="/portfolio"
                     className="inline-flex items-center justify-center gap-4 px-10 py-5 border border-brand-line text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors"
                   >
@@ -83,7 +81,7 @@ export default function MarketingLandingPage() {
                 transition={{ delay: 0.2 }}
                 className="p-10 bg-brand-warm rounded-[2rem] border border-brand-line relative overflow-hidden"
               >
-                <div className="text-[10px] font-mono font-bold text-brand-cyan-dark uppercase tracking-widest mb-6">Foco Regional</div>
+                <div className="text-xs font-mono font-bold text-brand-cyan-dark uppercase tracking-widest mb-6">Foco Regional</div>
                 <div className="text-3xl font-medium text-brand-ink mb-4">Indaiatuba & RMC</div>
                 <p className="text-[#55615d] text-base leading-relaxed italic mb-10">
                   Especialistas em transformar empresas da região em referências digitais absolutas com websites de alta performance e branding estratégico.
@@ -91,12 +89,12 @@ export default function MarketingLandingPage() {
                 <div className="pt-8 border-t border-brand-line flex items-center justify-between">
                    <div className="flex flex-col">
                       <span className="text-2xl font-bold text-brand-ink">TOPO</span>
-                      <span className="text-[9px] font-mono font-bold text-[#687971] uppercase tracking-widest mt-1">Estrutura SEO</span>
+                      <span className="text-xs font-mono font-bold text-[#4c5955] uppercase tracking-widest mt-1">Estrutura SEO</span>
                    </div>
                    <div className="h-8 w-[1px] bg-brand-line" />
                    <div className="flex flex-col">
                       <span className="text-2xl font-bold text-brand-ink">ELITE</span>
-                      <span className="text-[9px] font-mono font-bold text-[#687971] uppercase tracking-widest mt-1">Design de Marca</span>
+                      <span className="text-xs font-mono font-bold text-[#4c5955] uppercase tracking-widest mt-1">Design de Marca</span>
                    </div>
                 </div>
               </motion.div>
@@ -113,7 +111,7 @@ export default function MarketingLandingPage() {
             
             {/* O Desafio */}
             <div>
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#687971] mb-6 block">O Desafio</span>
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#4c5955] mb-6 block">O Desafio</span>
               <h2 className="text-3xl md:text-5xl font-medium text-brand-ink tracking-tight mb-8">
                 {pageContent.problem.title}
               </h2>
@@ -124,7 +122,7 @@ export default function MarketingLandingPage() {
 
             {/* A Solução */}
             <div>
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6 block">Nossa Solução</span>
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-6 block">Nossa Solução</span>
               <h2 className="text-3xl md:text-5xl font-medium text-brand-ink tracking-tight mb-8">
                 {pageContent.solution.title}
               </h2>
@@ -149,9 +147,9 @@ export default function MarketingLandingPage() {
       <section className="py-32 bg-brand-mineral">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-[10px] font-mono font-bold text-brand-cyan-dark uppercase tracking-[0.4em] mb-8">Base de Operações: Indaiatuba</h3>
+            <h3 className="text-xs font-mono font-bold text-brand-cyan-dark uppercase tracking-[0.4em] mb-8">Base de Operações: Indaiatuba</h3>
             <p className="text-3xl md:text-5xl text-brand-ink font-sans font-medium tracking-tight leading-[1.1]">
-              Atendemos empresas em toda a <span className="italic font-serif font-light text-[#64706D]">Região Metropolitana de Campinas</span> que buscam posicionamento premium.
+              Atendemos empresas em toda a <span className="italic font-serif font-light text-[#55605D]">Região Metropolitana de Campinas</span> que precisam apresentar seus serviços com clareza.
             </p>
           </div>
         </div>
@@ -163,9 +161,9 @@ export default function MarketingLandingPage() {
           <div className="container mx-auto px-6">
             
             <div className="mb-16">
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4 block">Case Relacionado</span>
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan-dark mb-4 block">Case Relacionado</span>
               <h2 className="text-4xl md:text-6xl font-medium text-brand-ink tracking-tight">
-                Resultados <span className="italic font-serif font-light text-[#64706D]">Reais.</span>
+                Projetos <span className="italic font-serif font-light text-[#55605D]">selecionados.</span>
               </h2>
             </div>
             
@@ -175,6 +173,10 @@ export default function MarketingLandingPage() {
               <div className={`relative overflow-hidden bg-[#d1d7d3] ${pageContent.relatedCase.image.startsWith("/cases/") ? "h-[560px] sm:h-[640px]" : "h-[350px] lg:h-auto"}`}>
                 <img 
                   src={pageContent.relatedCase.image} 
+                  width={pageContent.relatedCase.width}
+                  height={pageContent.relatedCase.height}
+                  loading="lazy"
+                  decoding="async"
                   alt={pageContent.relatedCase.client} 
                   className={`w-full h-full ${pageContent.relatedCase.image.startsWith("/cases/") ? "object-contain p-5" : "object-cover filter saturate-[0.85] transition-transform duration-1000 group-hover:scale-105"}`}
                 />
@@ -182,7 +184,7 @@ export default function MarketingLandingPage() {
               
               {/* Content Side */}
               <div className="p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-brand-line">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#687971] mb-4 block">
+                <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#4c5955] mb-4 block">
                   {pageContent.relatedCase.segment}
                 </span>
                 <h3 className="text-3xl md:text-5xl font-medium text-brand-ink mb-10">
@@ -191,13 +193,13 @@ export default function MarketingLandingPage() {
                 
                 <div className="space-y-8 mb-10">
                   <div className="border-l-2 border-brand-line pl-5 hover:border-brand-cyan-dark transition-colors">
-                    <span className="block text-[9px] uppercase tracking-widest text-brand-muted font-bold mb-2">O Desafio</span>
+                    <span className="block text-xs uppercase tracking-widest text-brand-muted font-bold mb-2">O Desafio</span>
                     <p className="text-[#475553] text-sm leading-relaxed m-0">
                       {pageContent.relatedCase.context}
                     </p>
                   </div>
                   <div className="border-l-2 border-brand-line pl-5 hover:border-brand-cyan-dark transition-colors">
-                    <span className="block text-[9px] uppercase tracking-widest text-brand-cyan-dark font-bold mb-2">A Solução</span>
+                    <span className="block text-xs uppercase tracking-widest text-brand-cyan-dark font-bold mb-2">A Solução</span>
                     <p className="text-brand-ink font-medium text-sm leading-relaxed m-0">
                       {pageContent.relatedCase.solution}
                     </p>
@@ -206,14 +208,14 @@ export default function MarketingLandingPage() {
                 
                 <div className="pt-8 border-t border-brand-line flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
                   <div className="flex items-center gap-4 bg-brand-warm border border-brand-line px-5 py-3 rounded-xl">
-                    <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-brand-cyan-dark shrink-0">Resultado //</span>
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-cyan-dark shrink-0">Resultado //</span>
                     <span className="font-medium text-sm text-brand-ink">
                       {pageContent.relatedCase.metric}
                     </span>
                   </div>
-                  <Link 
+                  <Link
                     to="/portfolio" 
-                    className="inline-flex items-center gap-2 text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 hover:border-brand-cyan-dark transition-all"
+                    className="inline-flex items-center gap-2 text-brand-cyan-dark font-mono text-xs font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 hover:border-brand-cyan-dark transition-all"
                   >
                     Ver mais <ArrowUpRight size={14} />
                   </Link>
@@ -241,7 +243,7 @@ export default function MarketingLandingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-cyan text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
             >
-              Diagnóstico Gratuito <ArrowUpRight size={16} />
+              Pedir diagnóstico estratégico <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

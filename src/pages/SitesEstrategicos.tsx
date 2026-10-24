@@ -74,14 +74,14 @@ export default function SitesEstrategicos() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
                     Indaiatuba · RMC Campinas
                   </span>
                 </div>
                 
                 <h1 className="page-title text-5xl md:text-7xl lg:text-[6vw] font-sans font-medium leading-[0.95] tracking-tight mb-8">
                   Seu site precisa mostrar <br />
-                  <span className="italic font-serif font-light text-[#64706D]">o valor da sua empresa.</span>
+                  <span className="italic font-serif font-light text-[#55605D]">o valor da sua empresa.</span>
                 </h1>
                 <p className="text-xl text-[#475553] leading-relaxed max-w-2xl mb-12">
                   Criamos sites em Indaiatuba com informações sobre os serviços, navegação para celular e caminhos diretos para entrar em contato.
@@ -91,7 +91,7 @@ export default function SitesEstrategicos() {
                     to="/contato/"
                     className="px-10 py-5 bg-brand-ink text-brand-warm editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform text-center flex items-center justify-center gap-3"
                   >
-                    Diagnóstico Gratuito
+                    Pedir diagnóstico estratégico
                   </Link>
                   <Link 
                     to="/portfolio/" 
@@ -100,7 +100,7 @@ export default function SitesEstrategicos() {
                     Ver cases
                   </Link>
                 </div>
-                <p className="mt-10 font-mono text-[10px] text-[#64706D] font-bold uppercase tracking-widest">
+                <p className="mt-10 font-mono text-xs text-[#55605D] font-bold uppercase tracking-widest">
                   Projetos Autorais · Foco em Percepção de Valor · Atendimento na Região
                 </p>
               </motion.div>
@@ -135,7 +135,7 @@ export default function SitesEstrategicos() {
           <div className="dna-grid gap-12">
             <div className="col-span-4 lg:col-span-6">
               <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
-                Ser encontrado é o começo. <br /> <span className="italic font-serif font-light text-[#64706D]">Fazer sentido vem depois.</span>
+                Ser encontrado é o começo. <br /> <span className="italic font-serif font-light text-[#55605D]">Fazer sentido vem depois.</span>
               </h2>
               <p className="text-lg text-[#475553] leading-relaxed mb-12">
                 Um site precisa explicar seus serviços, transmitir confiança e facilitar o próximo passo. É essa conexão que orienta cada página do projeto.
@@ -191,10 +191,10 @@ export default function SitesEstrategicos() {
             <div className="col-span-4 lg:col-span-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">Como resolvemos isso</span>
+                <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">Como resolvemos isso</span>
               </div>
               <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
-                Sites que trabalham <br /> <span className="italic font-serif font-light text-[#64706D]">para a sua empresa.</span>
+                Sites que trabalham <br /> <span className="italic font-serif font-light text-[#55605D]">para a sua empresa.</span>
               </h2>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function SitesEstrategicos() {
           <div className="dna-grid gap-12 items-center">
             <div className="col-span-4 lg:col-span-5">
               <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
-                O que você <br /> <span className="italic font-serif font-light text-[#64706D]">recebe.</span>
+                O que você <br /> <span className="italic font-serif font-light text-[#55605D]">recebe.</span>
               </h2>
               <div className="border-l-2 border-brand-cyan-dark pl-6">
                 <p className="text-xl text-brand-ink font-sans not-italic leading-relaxed">
@@ -267,7 +267,7 @@ export default function SitesEstrategicos() {
           <div className="flex flex-col items-center text-center mb-20">
             <div className="w-8 h-[2px] bg-brand-cyan-dark mb-6" />
             <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight">
-              Como <span className="italic font-serif font-light text-[#64706D]">funciona.</span>
+              Como <span className="italic font-serif font-light text-[#55605D]">funciona.</span>
             </h2>
           </div>
 
@@ -281,7 +281,7 @@ export default function SitesEstrategicos() {
                 transition={{ delay: i * 0.1 }}
                 className="border-t border-brand-line pt-8"
               >
-                <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#687971] mb-6">
+                <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#4c5955] mb-6">
                   Passo / {step.num}
                 </div>
                 <h3 className="text-2xl font-medium text-brand-ink mb-4">{step.title}</h3>
@@ -307,7 +307,7 @@ export default function SitesEstrategicos() {
               to="/contato/"
               className="inline-flex items-center justify-center gap-4 px-10 py-5 bg-brand-cyan text-brand-ink editorial-button font-semibold uppercase tracking-widest text-xs transition-transform hover:-translate-y-1"
             >
-              Diagnóstico Gratuito <ArrowUpRight size={18} />
+              Pedir diagnóstico estratégico <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>
@@ -327,10 +327,10 @@ export default function SitesEstrategicos() {
             </div>
             <h2 className="section-title text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight mb-8">
               Pronto para transformar o seu site <br /> 
-              num <span className="italic font-serif font-light text-[#64706D]">ativo de vendas?</span>
+              num <span className="italic font-serif font-light text-[#55605D]">ativo de vendas?</span>
             </h2>
             <p className="text-lg text-[#475553] leading-relaxed mb-12 max-w-2xl mx-auto">
-              Solicite um diagnóstico gratuito e descubra com exatidão o que está a impedir o seu crescimento no ambiente digital.
+              Conte sobre seu projeto e vamos identificar oportunidades para melhorar a navegação, o conteúdo e o contato no seu site.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
@@ -338,7 +338,7 @@ export default function SitesEstrategicos() {
                 className="px-10 py-5 bg-brand-ink text-brand-mineral editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
               >
                 <div className="w-2 h-2 rounded-full bg-brand-cyan" />
-                Diagnóstico Gratuito
+                Pedir diagnóstico estratégico
               </Link>
               <a 
                 href="mailto:orvaliastudio@gmail.com" 

@@ -23,7 +23,7 @@ export default {
           ink: '#080A0C',
           graphite: '#181B1E',
           cyan: '#66E7E1',
-          'cyan-dark': '#009E99',
+          'cyan-dark': '#006B68',
           muted: '#3F4A47',
           line: '#C2C8C5',
           mist: '#CDD3D0',

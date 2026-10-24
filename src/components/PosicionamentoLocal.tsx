@@ -25,23 +25,23 @@ export default function PosicionamentoLocal() {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
                 06 / Presença Regional
               </span>
             </div>
             
             <h2 className="text-4xl md:text-6xl lg:text-[4.7vw] font-sans font-medium tracking-tight leading-[1.08] my-8">
               Indaiatuba é a nossa base.<br />
-              <span className="italic font-serif font-light text-[#63716a]">Não o nosso limite.</span>
+              <span className="italic font-serif font-light text-[#55605d]">Não o nosso limite.</span>
             </h2>
             
-            <p className="text-[#63716a] text-lg leading-relaxed mb-10 max-w-lg">
+            <p className="text-[#55605d] text-lg leading-relaxed mb-10 max-w-lg">
               Atendemos empresas de Indaiatuba, Campinas e região. As reuniões e o acompanhamento do projeto também podem ser feitos a distância.
             </p>
 
             <Link 
               to="/branding/"
-              className="inline-flex items-center gap-3 text-brand-cyan-dark font-mono text-[10px] font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 self-start hover:border-brand-cyan-dark transition-all"
+              className="inline-flex items-center gap-3 text-brand-cyan-dark font-mono text-xs font-bold uppercase tracking-widest border-b border-brand-cyan-dark/30 pb-1 self-start hover:border-brand-cyan-dark transition-all"
             >
               Consultoria para a RMC <ArrowUpRight size={14} />
             </Link>
@@ -61,7 +61,7 @@ export default function PosicionamentoLocal() {
                   className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-8 py-6 border-b border-[#aeb9b2] group hover:px-4 transition-all duration-500"
                 >
                   <span className="text-lg font-medium text-brand-ink">{loc.city}</span>
-                  <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-[#79857d]">{loc.role}</span>
+                  <span className="font-mono text-xs md:text-xs uppercase tracking-widest font-bold text-[#55605d]">{loc.role}</span>
                 </div>
               ))}
             </div>

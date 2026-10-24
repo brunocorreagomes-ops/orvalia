@@ -23,7 +23,7 @@ export default function ShareButton() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={handleShare}
-      className="inline-flex items-center gap-2 text-gray-400 hover:text-black transition-colors font-mono text-[10px] uppercase tracking-[0.2em]"
+      className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink transition-colors font-mono text-xs uppercase tracking-[0.2em]"
       title="Compartilhar"
     >
       <Share2 size={16} />

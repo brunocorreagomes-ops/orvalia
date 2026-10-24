@@ -7,16 +7,16 @@ export default function Essencial() {
     <section className="min-h-screen bg-brand-mineral text-brand-ink pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24">
       <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink mb-10 md:mb-12 transition-colors border-b border-transparent hover:border-brand-ink pb-1">
         <ChevronLeft size={16} />
-        <span className="font-mono text-[10px] uppercase tracking-widest font-bold">Voltar para a página inicial</span>
+        <span className="font-mono text-xs uppercase tracking-widest font-bold">Voltar para a página inicial</span>
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
         <div>
-          <span className="text-brand-cyan-dark font-mono font-bold text-[10px] uppercase tracking-[0.3em] block mb-6">
+          <span className="text-brand-cyan-dark font-mono font-bold text-xs uppercase tracking-[0.3em] block mb-6">
             Plano de Entrada
           </span>
           <h1 className="text-4xl xs:text-5xl md:text-7xl font-sans font-medium tracking-tight mb-8 leading-[1.05] uppercase">
-            Plano <span className="italic font-serif font-light text-[#64706D] normal-case">Essencial</span>
+            Plano <span className="italic font-serif font-light text-[#55605D] normal-case">Essencial</span>
           </h1>
           <p className="text-[#475553] text-lg leading-relaxed mb-10 md:mb-12 max-w-xl">
             Ideal para profissionais liberais e pequenos negócios que precisam de uma presença digital profissional, limpa e confiável, com investimento otimizado.
@@ -83,7 +83,7 @@ export default function Essencial() {
             { step: "04", title: "Lançamento", desc: "Publicamos o seu site e realizamos as configurações de SEO base." }
           ].map((item, i) => (
             <div key={i} className="border-l border-brand-line pl-6">
-              <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#687971] mb-4">Passo / {item.step}</div>
+              <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#4c5955] mb-4">Passo / {item.step}</div>
               <h4 className="text-brand-ink font-bold mb-2">{item.title}</h4>
               <p className="text-sm text-[#55615d] leading-relaxed">{item.desc}</p>
             </div>

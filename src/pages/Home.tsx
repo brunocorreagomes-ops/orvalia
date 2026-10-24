@@ -107,7 +107,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-brand-mineral text-brand-ink border-t border-brand-line">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark mb-5">Perguntas frequentes</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark mb-5">Perguntas frequentes</p>
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight">Antes de dar o próximo passo.</h2>
           </div>
           <div className="lg:col-span-8 divide-y divide-brand-line">

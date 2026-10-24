@@ -9,12 +9,12 @@ export default function Portfolio() {
       <div className="container mx-auto px-6 mb-4">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
             Projetos da Orvalia
           </span>
         </div>
         <h1 className="page-title text-5xl md:text-7xl font-sans font-medium text-brand-ink tracking-tight mb-6 leading-[1.05]">
-          Nosso <span className="italic font-serif font-light text-[#64706D]">Portfólio.</span>
+          Nosso <span className="italic font-serif font-light text-[#55605D]">Portfólio.</span>
         </h1>
         <p className="text-[#475553] text-lg max-w-2xl leading-relaxed">
           Uma seleção de trabalhos de identidade visual, sites e apresentação de serviços.

@@ -7,12 +7,12 @@ export default function Evolucao() {
     <section className="min-h-screen bg-brand-ink text-brand-mineral pt-32 md:pt-40 pb-20 px-6 md:px-12 lg:px-24">
       <Link to="/" className="inline-flex items-center gap-2 text-[#8b9f99] hover:text-white mb-10 md:mb-12 transition-colors border-b border-transparent hover:border-white pb-1">
         <ChevronLeft size={16} />
-        <span className="font-mono text-[10px] uppercase tracking-widest font-bold">Voltar para a página inicial</span>
+        <span className="font-mono text-xs uppercase tracking-widest font-bold">Voltar para a página inicial</span>
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
         <div>
-          <span className="text-brand-cyan font-mono font-bold text-[10px] uppercase tracking-[0.3em] block mb-6">
+          <span className="text-brand-cyan font-mono font-bold text-xs uppercase tracking-[0.3em] block mb-6">
             Elite Digital
           </span>
           <h1 className="text-4xl xs:text-5xl md:text-7xl font-sans font-medium tracking-tight mb-8 leading-[1.05] uppercase">

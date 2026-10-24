@@ -1,185 +1,102 @@
 import SEO from "../components/SEO";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight, Globe, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, ChevronLeft, Search, FileText, MessageCircle } from "lucide-react";
 import ShareButton from "../components/ShareButton";
 
-const serviceSchema = {
+const faqs = [
+  { question: "Qual é a diferença entre SEO e GEO?", answer: "SEO organiza a estrutura e o conteúdo para facilitar a descoberta nas buscas. GEO é o nome usado para o trabalho voltado à compreensão do conteúdo em respostas de inteligência artificial. Os dois dependem de informações úteis, acessíveis e verificáveis." },
+  { question: "O serviço garante o primeiro lugar no Google ou uma indicação por IA?", answer: "Não. A Orvalia não controla a seleção dos resultados nem promete posições, recomendações ou prazos de indexação. A proposta define as melhorias e como acompanhar os sinais disponíveis." },
+  { question: "O que pode entrar no projeto?", answer: "Diagnóstico técnico, revisão das páginas de serviços, títulos e descrições, navegação, informações locais, links internos e dados estruturados compatíveis com o conteúdo visível. As páginas, entregas e etapas de acompanhamento são definidas na proposta." },
+  { question: "Vocês precisam refazer o meu site?", answer: "Nem sempre. Primeiro avaliamos o conteúdo e a plataforma atual. Algumas melhorias cabem no site existente; outras dependem de acesso técnico ou de uma mudança de estrutura. Isso é discutido antes da contratação." },
+  { question: "Como os resultados podem ser acompanhados?", answer: "Com acesso autorizado ao Google Search Console, podemos observar indexação, consultas, impressões e cliques. Contatos e conversões precisam de uma medição configurada. A análise deve considerar o período e as mudanças realizadas, sem atribuir todo resultado a uma única ação." },
+  { question: "Em quanto tempo aparecem resultados?", answer: "O prazo de entrega do projeto é definido por escopo. Mudanças nos resultados de busca dependem do rastreamento, da concorrência e do histórico do site. Por isso, prazo de implementação e prazo de resultado são tratados separadamente." },
+  { question: "Um arquivo llms.txt faz a empresa aparecer nas respostas de IA?", answer: "Não há garantia. Ele pode servir como referência resumida sobre o site, mas não substitui páginas acessíveis, conteúdo relevante nem comprovação das informações publicadas." },
+  { question: "Como começar e quais regiões vocês atendem?", answer: "Envie o endereço do site e conte quais serviços quer apresentar melhor. A Orvalia tem base em Indaiatuba, atende Campinas e região e também conduz projetos remotamente." },
+];
+const schema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Consultoria em SEO e Inteligência Artificial (GEO)",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Orvalia Studio"
-  },
-  "areaServed": "Indaiatuba",
-  "description": "Estratégias de presença digital focadas em otimização para motores de busca e inteligência artificial."
+  "@graph": [
+    { "@type": "Service", "@id": "https://orvalia.com.br/seo-geo/#service", name: "SEO e GEO: presença nas buscas e em IA", url: "https://orvalia.com.br/seo-geo/", provider: { "@id": "https://orvalia.com.br/#organization" }, areaServed: ["Indaiatuba", "Campinas", "Brasil"], description: "Diagnóstico técnico e revisão de conteúdo, páginas de serviços, informações locais e dados estruturados, com escopo definido por projeto." },
+    { "@type": "FAQPage", mainEntity: faqs.map(item => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Início", item: "https://orvalia.com.br/" }, { "@type": "ListItem", position: 2, name: "SEO e GEO", item: "https://orvalia.com.br/seo-geo/" }] },
+  ],
 };
 
 export default function PresencaDigital() {
-
   return (
     <article className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36 pb-20">
-      <SEO title="Presença digital e SEO em Indaiatuba e Campinas | Orvalia Studio" description="Revisão de conteúdo, páginas de serviços e informações de contato para empresas de Indaiatuba e Campinas." canonical="https://orvalia.com.br/seo-geo/" schema={serviceSchema} />
+      <SEO title="SEO e GEO em Indaiatuba e Campinas | Buscas e IA | Orvalia" description="SEO técnico, conteúdo e GEO para empresas de Indaiatuba e Campinas. Conheça o processo, as entregas e como acompanhar a presença nas buscas e em IA." canonical="https://orvalia.com.br/seo-geo/" schema={schema} />
       <div className="container mx-auto px-6">
-        <div className="flex justify-between items-center mb-16 border-b border-brand-line pb-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-muted hover:text-brand-ink transition-colors font-mono text-[10px] uppercase tracking-widest font-bold">
-            <ChevronLeft size={16} />
-            Voltar ao Início
-          </Link>
-          <ShareButton />
+        <div className="flex justify-between items-center gap-4 mb-12 border-b border-brand-line pb-6">
+          <Link to="/" className="inline-flex items-center gap-2 text-brand-muted text-sm"><ChevronLeft size={16} /> Voltar ao início</Link><ShareButton />
         </div>
-
-        <header className="mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-4 mb-6"
-          >
-            <div className="w-8 h-[2px] bg-brand-cyan-dark" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-brand-cyan-dark">
-              SEO & IA (GEO) / Indaiatuba e Campinas
-            </span>
-          </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="page-title text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight leading-[1.05] mb-8"
-          >
-            Serviços fáceis de encontrar. <br /><span className="italic font-serif font-light text-[#64706D]">Uma empresa fácil de entender.</span>
-          </motion.h1>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-4 text-brand-muted text-[10px] font-mono uppercase tracking-widest font-bold"
-          >
-            <span>Orvalia Studio</span>
-            <span className="w-1 h-1 rounded-full bg-brand-line" />
-            <span>GEO Strategy</span>
-          </motion.div>
+        <header className="max-w-5xl mb-14">
+          <p className="editorial-label mb-6">SEO & IA (GEO) · Indaiatuba e Campinas</p>
+          <h1 className="page-title mb-8">Serviços fáceis de encontrar.<br /><span className="text-[#55605d]">Uma empresa fácil de entender.</span></h1>
+          <p className="text-lg md:text-xl text-brand-muted leading-relaxed max-w-3xl">Seu cliente pesquisa antes de conversar. Organizamos a estrutura e o conteúdo do seu site para explicar o que sua empresa faz, onde atende e por que o trabalho merece atenção.</p>
+          <Link to="/contato/" className="inline-flex gap-3 items-center mt-8 border-b border-brand-ink pb-2 font-semibold">Pedir diagnóstico estratégico <ArrowRight size={18} /></Link>
         </header>
 
-        <motion.div
-           initial={{ opacity: 0, scale: 0.98 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-           className="border border-brand-line p-2 bg-brand-warm editorial-panel mb-16"
-        >
-          <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
-            alt="Presença Digital Estratégica em Indaiatuba e Campinas - Orval'IA Studio" 
-            className="w-full h-[240px] md:h-[400px] object-cover editorial-panel filter grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
-          />
-        </motion.div>
+        <figure className="border border-brand-line bg-brand-warm p-6 md:p-10 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {[{ icon: Search, title: "Ser encontrado", text: "Páginas acessíveis e relacionadas ao que o cliente procura." }, { icon: FileText, title: "Fazer sentido", text: "Serviços, região e informações que podem ser conferidas." }, { icon: MessageCircle, title: "Facilitar o contato", text: "Um próximo passo claro para quem quer conversar." }].map(item => <div key={item.title}><item.icon className="text-brand-cyan-dark mb-5" size={26} aria-hidden="true" /><h2 className="text-2xl mb-3">{item.title}</h2><p className="text-brand-muted leading-relaxed">{item.text}</p></div>)}
+          </div>
+          <figcaption className="text-xs text-brand-muted border-t border-brand-line pt-5 mt-8">Três etapas da experiência de busca. Este esquema explica o trabalho; não representa um resultado medido.</figcaption>
+        </figure>
 
-        <div className="service-content text-[#475553] leading-relaxed space-y-16 font-sans">
-          <p className="text-2xl font-sans not-italic text-brand-ink leading-relaxed border-l-2 border-brand-cyan-dark pl-6">
-            O site precisa explicar o que sua empresa faz, onde atende e como o cliente pode entrar em contato. Revisamos essas informações e a forma como estão distribuídas nas páginas.
-          </p>
+        <div className="service-content text-brand-muted leading-relaxed space-y-16">
+          <section className="service-section">
+            <h2 className="section-title text-brand-ink mb-6">SEO e GEO começam pela informação.</h2>
+            <p className="mb-5"><strong>SEO</strong> considera como as páginas são encontradas, acessadas e compreendidas pelos mecanismos de busca. <strong>GEO</strong> é o termo usado para a presença do conteúdo em respostas geradas por inteligência artificial.</p>
+            <p>O Google informa que suas experiências de IA continuam apoiadas nos fundamentos de SEO. Não existe um código especial que garanta uma citação. Nosso foco é corrigir barreiras técnicas e tornar a informação mais útil e verificável.</p>
+            <a className="inline-block text-sm underline underline-offset-4 mt-6" href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br" target="_blank" rel="noopener noreferrer">Leia a orientação do Google sobre buscas com IA</a>
+          </section>
+
+          <section>
+            <h2 className="section-title text-brand-ink mb-8">O que pode ser entregue.</h2>
+            <p className="mb-8">A proposta define as páginas e os itens do projeto. Estas são as frentes avaliadas no diagnóstico:</p>
+            <dl className="divide-y divide-brand-line border-y border-brand-line">
+              {[
+                ["Diagnóstico técnico", "Verificação de acesso às páginas, indexação, links, navegação no celular e oportunidades de carregamento. Uma lista de prioridades orienta a implementação."],
+                ["Conteúdo de serviços", "Revisão de títulos, descrições, dúvidas frequentes e textos que expliquem a oferta e o atendimento, com base nas informações fornecidas pela empresa."],
+                ["Informações locais", "Conferência de nome, contatos, horários e região atendida. Quando incluído no escopo e com acesso autorizado, revisão do Perfil da Empresa no Google."],
+                ["Estrutura e dados", "Organização de links internos, URLs canônicas, sitemap e dados estruturados coerentes com a informação que o visitante consegue ler."],
+                ["Acompanhamento", "Registro do que foi alterado e dos indicadores disponíveis no período combinado. Configuração de medição e acesso às ferramentas são definidos na proposta."],
+              ].map(([title, text]) => <div key={title} className="grid md:grid-cols-[.7fr_1.3fr] gap-3 md:gap-10 py-7"><dt className="text-brand-ink text-xl font-medium">{title}</dt><dd className="text-base leading-relaxed">{text}</dd></div>)}
+            </dl>
+          </section>
+
+          <section>
+            <h2 className="section-title text-brand-ink mb-8">Da revisão ao acompanhamento.</h2>
+            <ol className="grid md:grid-cols-2 gap-6">
+              {[
+                ["Entender a procura", "Conversamos sobre serviços, clientes e regiões. Você envia o site e as informações que a empresa pode comprovar."],
+                ["Definir prioridades", "Separamos problemas técnicos, lacunas de conteúdo e ajustes de atendimento. Você recebe um escopo e uma proposta."],
+                ["Implementar e conferir", "Revisamos as páginas combinadas e verificamos conteúdo, navegação, metadados e contato antes da publicação."],
+                ["Observar e ajustar", "Quando contratado, o acompanhamento considera os dados disponíveis e o período acordado, com próximos passos documentados."],
+              ].map(([title, text], i) => <li key={title} className="p-7 bg-brand-warm border border-brand-line"><span className="editorial-label mb-4">Etapa {i + 1}</span><h3 className="text-2xl text-brand-ink mb-4">{title}</h3><p className="text-base">{text}</p></li>)}
+            </ol>
+          </section>
 
           <section className="service-section">
-            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-6 mt-16">
-              O que revisar na presença digital?
-            </h2>
-            <p className="mb-6">
-              Confira as descrições dos serviços, os títulos das páginas, as informações de atendimento e os links de contato. Esse é o ponto de partida da nossa revisão de <strong>SEO e conteúdo</strong>.
-            </p>
+            <h2 className="section-title text-brand-ink mb-8">Uma descrição que ajuda a decidir.</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div><h3 className="text-lg text-brand-ink mb-4">Informação genérica</h3><p>“Soluções completas com qualidade e excelência.”</p></div>
+              <div><h3 className="text-lg text-brand-ink mb-4">Informação concreta</h3><p>“Manutenção elétrica industrial em Indaiatuba. Conheça os serviços, a experiência da equipe e os canais de atendimento.”</p></div>
+            </div>
+            <p className="text-sm mt-8">Exemplo ilustrativo de clareza de conteúdo. Não é depoimento, promessa de posição ou medição de resultado de um cliente. <Link to="/portfolio/" className="underline underline-offset-4">Conheça os projetos reais da Orvalia</Link>.</p>
           </section>
 
           <section>
-            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
-              Três pontos da revisão
-            </h2>
-            <p className="mb-10">
-              O trabalho considera o que a empresa publica e o que o cliente precisa consultar:
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { 
-                  icon: Globe, 
-                  title: "Dados de atendimento",
-                  desc: "Telefone, endereço, horários e região atendida precisam estar corretos."
-                },
-                { 
-                  icon: Sparkles, 
-                  title: "Informações sobre o trabalho",
-                  desc: "Serviços, equipe e exemplos de projetos devem ser descritos com informações verificáveis."
-                },
-                { 
-                  icon: ShieldCheck, 
-                  title: "Navegação e contato",
-                  desc: "Menu, leitura no celular e botões de contato precisam funcionar sem dificuldade."
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="p-8 bg-brand-warm border border-brand-line editorial-panel">
-                  <item.icon size={28} className="text-brand-cyan-dark mb-6" strokeWidth={1.5} />
-                  <h4 className="font-bold text-brand-ink mb-3">{item.title}</h4>
-                  <p className="text-sm text-[#55615d] leading-relaxed m-0">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="section-title text-3xl font-medium text-brand-ink tracking-tight mb-8 mt-16">
-              Como a Orvalia trabalha
-            </h2>
-            <div className="bg-brand-ink text-brand-mineral p-10 md:p-14 editorial-panel relative overflow-hidden">
-              <p className="relative z-10 text-xl font-sans not-italic leading-relaxed m-0 text-[#b1bdb8]">
-                "Conversamos sobre os serviços e o atendimento da empresa. Depois, definimos quais páginas, textos e informações precisam ser criados ou revisados."
-              </p>
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/10 blur-[80px] rounded-full pointer-events-none" />
-            </div>
-          </section>
-
-          <section className="surface-secondary p-6 md:p-14 editorial-panel border border-brand-line mt-16">
-            <h3 className="text-2xl font-medium text-brand-ink tracking-tight mb-10">
-              Perguntas Frequentes sobre Presença Digital e IA
-            </h3>
-            
-            <div className="space-y-10">
-              <div>
-                <h4 className="font-bold text-brand-ink mb-2">O serviço garante uma recomendação por IA?</h4>
-                <p className="text-[#55615d] m-0">Não prometemos recomendações ou posições específicas. O trabalho combina revisão de conteúdo, informações e funcionamento do site.</p>
-              </div>
-              
-              <div className="border-t border-brand-line pt-10">
-                <h4 className="font-bold text-brand-ink mb-2">O que está incluído na proposta?</h4>
-                <p className="text-[#55615d] m-0">A proposta informa quais páginas e textos serão revisados, as entregas combinadas e o prazo de acompanhamento.</p>
-              </div>
-              
-              <div className="border-t border-brand-line pt-10">
-                <h4 className="font-bold text-brand-ink mb-2">Como começar?</h4>
-                <p className="text-[#55615d] m-0">Envie o endereço do site e conte o que precisa melhorar. A conversa inicial ajuda a identificar as prioridades.</p>
-              </div>
-            </div>
+            <h2 className="section-title text-brand-ink mb-8">Perguntas sobre SEO, GEO e IA.</h2>
+            <div className="divide-y divide-brand-line border-y border-brand-line">{faqs.map(item => <details key={item.question} className="py-6"><summary className="cursor-pointer text-lg text-brand-ink font-medium pr-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">{item.question}</summary><p className="text-base leading-relaxed pt-4 max-w-4xl">{item.answer}</p></details>)}</div>
           </section>
         </div>
-
-        <footer className="mt-32 pt-20 border-t border-brand-line">
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="p-12 md:p-20 editorial-panel bg-brand-ink text-center relative overflow-hidden"
-          >
-            <div className="relative z-10">
-              <h3 className="text-4xl md:text-6xl font-medium text-white tracking-tight mb-8 leading-[1.05]">
-                Vamos revisar o seu site.<br />
-                <span className="italic font-serif font-light text-brand-cyan">Comece pelo que precisa melhorar.</span>
-              </h3>
-              <p className="text-[#b1bdb8] mb-12 max-w-xl mx-auto font-sans not-italic text-xl">
-                Conte quais informações seus clientes procuram e onde o site tem dificultado o atendimento.
-              </p>
-              <Link
-                to="/contato/"
-                className="inline-flex items-center justify-center gap-4 bg-brand-cyan text-brand-ink px-10 py-5 editorial-button font-semibold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
-              >
-                Diagnóstico Gratuito <ArrowRight size={16} />
-              </Link>
-            </div>
-          </motion.div>
-        </footer>
+        <section className="mt-20 p-7 md:p-14 bg-brand-ink text-brand-warm">
+          <h2 className="text-3xl md:text-5xl font-medium mb-6">Vamos olhar para o que seu cliente procura.</h2>
+          <p className="text-[#c3d0c8] text-lg leading-relaxed max-w-2xl mb-8">Conte quais serviços você quer apresentar melhor e envie o endereço do site. A conversa inicial ajuda a definir por onde começar.</p>
+          <Link to="/contato/" className="inline-flex items-center gap-4 bg-brand-cyan text-brand-ink px-6 py-4 font-semibold">Pedir diagnóstico estratégico <ArrowRight size={18} /></Link>
+        </section>
       </div>
     </article>
   );

@@ -82,7 +82,7 @@ export default function ForWho() {
                 x: 0,
                 y: 0,
                 transition: {
-                  type: "spring",
+                  type: "spring" as const,
                   stiffness: 90,
                   damping: 18,
                   mass: 0.8

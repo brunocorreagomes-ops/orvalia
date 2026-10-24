@@ -9,7 +9,7 @@ export default function CTA() {
         
         <div className="flex items-center gap-4 mb-8">
           <div className="w-8 h-[2px] bg-brand-cyan" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-[#b0d1cb]">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-[#b0d1cb]">
             08 / Diagnóstico Direto
           </span>
         </div>

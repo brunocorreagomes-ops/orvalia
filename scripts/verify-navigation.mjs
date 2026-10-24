@@ -39,5 +39,16 @@ for (const [route, page] of pages) {
     if (url.hash && target && !target.ids.has(decodeURIComponent(url.hash.slice(1)))) issues.push(`${route}: missing anchor ${href}`);
   }
 }
+const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => decode(match[1]));
+if (new Set(sitemapUrls).size !== sitemapUrls.length) issues.push('sitemap: duplicate URLs');
+for (const href of sitemapUrls) {
+  const url = new URL(href);
+  const page = pages.get(url.pathname);
+  if (!page) { issues.push(`sitemap: missing page ${href}`); continue; }
+  const canonical = page.html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
+  if (canonical !== href) issues.push(`sitemap: noncanonical URL ${href}`);
+  if (/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/i.test(page.html)) issues.push(`sitemap: noindex URL ${href}`);
+}
 if (issues.length) { console.error([...new Set(issues)].join('\n')); process.exitCode = 1; }
 else console.log(`PASS: ${appPages} app pages, ${files.length} HTML files, ${links} link/canonical references, ${destinations.size} internal destinations and ${checkedCanonical.size} canonical URLs; no missing internal pages or anchors, invalid email/phone targets or placeholder links.`);

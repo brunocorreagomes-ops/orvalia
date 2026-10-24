@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Generated SSR bundle, rebuilt by npm run build.
+dist-server/

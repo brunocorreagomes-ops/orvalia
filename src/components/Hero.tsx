@@ -30,14 +30,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative lg:min-h-[150svh] bg-brand-mineral text-brand-ink isolate">
+    <section data-contact-hero ref={containerRef} className="relative lg:min-h-[150svh] bg-brand-mineral text-brand-ink isolate">
       <div className="lg:sticky lg:top-0 lg:min-h-[100svh] flex items-center px-6 md:px-10 lg:px-16 pt-28 pb-8">
         
         <div className="w-full max-w-[1550px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-10 md:gap-16">
           
           {/* Coluna Esquerda: Narrativa Editorial */}
           <div className="relative z-10">
-            <div className="flex items-center gap-3 text-[10px] tracking-[0.19em] font-bold text-brand-muted mb-8 md:mb-16">
+            <div className="flex items-center gap-3 text-xs tracking-[0.19em] font-bold text-brand-muted mb-8 md:mb-16">
               <span className="block w-2.5 h-2.5 rounded-full bg-[#008a86] border-2 border-[#4fcfc9]"></span>
               ORVALIA / DIGITAL VALUE STUDIO
             </div>
@@ -47,7 +47,7 @@ export default function Hero() {
             </h1>
             <h2 className="text-[clamp(2.25rem,10vw,3.75rem)] lg:text-[5.5vw] font-medium leading-[0.96] tracking-tight max-w-[880px] text-brand-ink m-0">
               Seu negócio vale <br className="hidden md:block"/>
-              <span className="text-[#808a87]">mais do que parece.</span>
+              <span className="text-[#55605d]">mais do que parece.</span>
             </h2>
             
             <p className="text-brand-muted text-lg md:text-xl leading-relaxed max-w-[610px] mt-8">
@@ -69,7 +69,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-wrap justify-between items-center gap-4 max-w-[640px] border-t border-[#bec4bf] pt-4 mt-16 md:mt-24 text-[10px] text-brand-muted tracking-widest uppercase">
+            <div className="flex flex-wrap justify-between items-center gap-4 max-w-[640px] border-t border-[#bec4bf] pt-4 mt-16 md:mt-24 text-xs text-brand-muted tracking-widest uppercase">
               <span>Indaiatuba · Campinas · Brasil</span>
               <span>Make value visible.</span>
             </div>
@@ -87,7 +87,7 @@ export default function Hero() {
               <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#010B0E]/30 via-transparent to-[#010B0E]/60" />
 
               {/* Informação Superior do Palco */}
-              <div className="absolute top-6 left-6 right-6 flex justify-between z-30 text-[#e3eeed] text-[9px] md:text-[10px] font-semibold tracking-widest uppercase">
+              <div className="absolute top-6 left-6 right-6 flex justify-between z-30 text-[#e3eeed] text-xs md:text-xs font-semibold tracking-widest uppercase">
                 <span>01 / THE GAP</span>
                 <span>REAL → PERCEIVED</span>
               </div>
@@ -123,7 +123,7 @@ export default function Hero() {
               </div>
 
               {/* Informação Inferior do Palco (Contador Dinâmico) */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between gap-4 z-30 text-[#e3eeed] text-[9px] md:text-[10px] font-semibold tracking-widest uppercase">
+              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between gap-4 z-30 text-[#e3eeed] text-xs md:text-xs font-semibold tracking-widest uppercase">
                 <span>VALOR REAL</span>
                 <div className="flex-1 max-w-[105px] h-[1px] bg-[#718c8d] relative">
                   <motion.i 
@@ -136,7 +136,7 @@ export default function Hero() {
             </div>
 
             {/* Legenda e Botão de Interação Mobile */}
-            <div className="flex flex-wrap gap-3 justify-between items-center py-4 border-b border-[#bfc8c4] text-[#606e69] text-[9px] md:text-[10px] tracking-widest uppercase mt-1">
+            <div className="flex flex-wrap gap-3 justify-between items-center py-4 border-b border-[#bfc8c4] text-[#55605d] text-xs md:text-xs tracking-widest uppercase mt-1">
               <span>O ponto em que o valor se torna visível.</span>
               <span>DEW POINT / 00</span>
             </div>

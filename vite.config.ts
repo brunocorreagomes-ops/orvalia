@@ -15,7 +15,7 @@ export default defineConfig(({ isSsrBuild }) => {
         output: isSsrBuild ? {} : {
           manualChunks: {
             vendor: ['react', 'react-dom', 'react-router-dom'],
-            animations: ['framer-motion', 'gsap', '@studio-freight/lenis'],
+            animations: ['framer-motion'],
           },
         },
       },

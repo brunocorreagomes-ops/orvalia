@@ -8,7 +8,7 @@
   --orvalia-warm: #f5f4ef;
   --orvalia-ink: #080a0c;
   --orvalia-muted: #3f4a47;
-  --orvalia-accent: #64706d;
+  --orvalia-accent: #55605d;
 }
 .editorial-system { font-family:var(--orvalia-sans); }
 .editorial-system :where(h1,h2,h3,h4) { font-family:var(--orvalia-sans); font-weight:500; }
