@@ -12,6 +12,7 @@ const steps = [
 export default function Metodo() {
   const [active, setActive] = useState(0);
   const onKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
     let next = index;
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % steps.length;
     else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + steps.length - 1) % steps.length;
