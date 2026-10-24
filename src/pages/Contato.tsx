@@ -99,9 +99,9 @@ export default function Contato() {
                   <p id="priority-help" className="inquiry-hint">Escolha a prioridade do seu negócio.</p>
                   <div className="inquiry-options" aria-describedby="priority-help">
                     {[
-                      ["Marca e identidade visual", "Marca & identidade", "Apresentar o valor da sua empresa"],
+                      ["Marca e identidade visual", "Marca e identidade", "Apresentar o valor da sua empresa"],
                       ["Criar ou melhorar o site", "Site estratégico", "Transformar visitas em conversas"],
-                      ["Google, SEO e buscas com IA", "SEO & buscas com IA", "Ser encontrado por quem procura"],
+                      ["Google, SEO e buscas com IA", "Google e buscas com IA", "Ser encontrado por quem procura"],
                       ["Diagnóstico completo", "Quero uma orientação", "Entender por onde começar"],
                     ].map(([value, title, hint]) => (
                       <label key={value} className="inquiry-option">

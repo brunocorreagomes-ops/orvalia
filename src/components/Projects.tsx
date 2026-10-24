@@ -19,7 +19,7 @@ const cases = [
     client: "Beth Olmeda",
     category: "02 / MARCA PESSOAL",
     description: "Identidade visual, textos de apresentação e página de serviços.",
-    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
+    image: "/images/projects/beth-olmeda.webp",
     width: 1024,
     height: 1024,
     featured: false
@@ -116,11 +116,12 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
                 width={featuredCase.width}
                 height={featuredCase.height}
                 loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="block w-full h-[540px] sm:h-[640px] p-5 object-contain"
               />
               <div className="relative bg-brand-warm/95 px-4 py-3 text-xs font-bold tracking-widest uppercase border-t border-brand-line lg:absolute lg:bottom-6 lg:left-6 lg:py-2 lg:border lg:backdrop-blur-sm">
-                Case em destaque · Toque para ampliar
+                Projeto em destaque · Toque para ampliar
               </div>
             </button>
             
@@ -183,7 +184,7 @@ export default function Projects({ showPortfolioLink = true }: { showPortfolioLi
 
       </div>
       <dialog ref={dialogRef} className="project-dialog" aria-labelledby="project-dialog-title" data-lenis-prevent onClose={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) setSelected(null); }}>
-        {selected && <div className={`project-dialog-content${selected.image.startsWith("/cases/") ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p></div>}
+        {selected && <div className={`project-dialog-content${selected.image.startsWith("/cases/") ? " project-dialog-mobile" : ""}`}><div className="project-dialog-header"><div><span className="editorial-label">Projeto Orvalia</span><h2 id="project-dialog-title">{selected.client}</h2></div><button type="button" onClick={() => setSelected(null)} aria-label="Fechar apresentação">Fechar ×</button></div><img src={selected.image} alt={`Apresentação ampliada do projeto ${selected.client}`} decoding="async" width={selected.width} height={selected.height} referrerPolicy="no-referrer" /><p>{selected.description || selected.after}</p></div>}
       </dialog>
     </section>
   );

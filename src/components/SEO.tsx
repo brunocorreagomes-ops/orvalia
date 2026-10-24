@@ -14,7 +14,7 @@ interface SEOProps {
   modified?: string;
 }
 
-export default function SEO({ title, description, canonical, schema, type = "website", image = "https://orvalia.com.br/social/orvalia-preview-v1.jpg", imageAlt = "Orvalia Studio. Seu negócio vale mais do que parece. Estratégia de marca, branding e sites.", published, modified, socialTitle, socialDescription }: SEOProps) {
+export default function SEO({ title, description, canonical, schema, type = "website", image = "https://orvalia.com.br/social/orvalia-preview-v1.jpg", imageAlt = "Orvalia Studio. Seu negócio vale mais do que parece. Estratégia de marca, identidade visual e sites.", published, modified, socialTitle, socialDescription }: SEOProps) {
   return (
     <Helmet>
       <title>{title}</title>

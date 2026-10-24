@@ -31,7 +31,7 @@ export default function PresencaDigital() {
           <Link to="/" className="inline-flex items-center gap-2 text-brand-muted text-sm"><ChevronLeft size={16} /> Voltar ao início</Link><ShareButton />
         </div>
         <header className="max-w-5xl mb-14">
-          <p className="editorial-label mb-6">SEO & IA (GEO) · Indaiatuba e Campinas</p>
+          <p className="editorial-label mb-6">Sua empresa nas buscas · Indaiatuba e Campinas</p>
           <h1 className="page-title mb-8">Serviços fáceis de encontrar.<br /><span className="text-[#55605d]">Uma empresa fácil de entender.</span></h1>
           <p className="text-lg md:text-xl text-brand-muted leading-relaxed max-w-3xl">Seu cliente pesquisa antes de conversar. Organizamos a estrutura e o conteúdo do seu site para explicar o que sua empresa faz, onde atende e por que o trabalho merece atenção.</p>
           <Link to="/contato/" className="inline-flex gap-3 items-center mt-8 border-b border-brand-ink pb-2 font-semibold">Pedir diagnóstico estratégico <ArrowRight size={18} /></Link>

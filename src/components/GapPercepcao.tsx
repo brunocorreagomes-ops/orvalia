@@ -9,7 +9,7 @@ export default function GapPercepcao() {
         <div className="flex items-center gap-4 mb-8 md:mb-12">
           <div className="w-8 h-[2px] bg-brand-cyan" />
           <span className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-brand-cyan">
-            01 / O Gap de Percepção
+            01 / Entre o que você entrega e o que o cliente vê
           </span>
         </div>
 

@@ -41,7 +41,7 @@ export default function Essencial() {
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {[
-                "Landing Page de Alta Conversão",
+                "Página para apresentar sua oferta e receber contatos",
                 "Identidade Visual (Logo + Cores)",
                 "Otimização Mobile-First",
                 "Hospedagem por 1 ano",

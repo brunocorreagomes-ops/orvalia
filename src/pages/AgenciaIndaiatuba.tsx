@@ -8,8 +8,8 @@ const localCases = [
     title: "Beth Olmeda",
     metric: "Imagem mais elegante, clara e alinhada a um atendimento de alto valor",
     location: "Indaiatuba/SP",
-    category: "Branding • Estética",
-    image: "https://i.ibb.co/fYJHdnnM/beth-2.jpg",
+    category: "Identidade visual • Estética",
+    image: "/images/projects/beth-olmeda.webp",
     width: 1024,
     height: 1024
   },
@@ -17,7 +17,7 @@ const localCases = [
     title: "Dario Eletricidade",
     metric: "Mensagem mais profissional para clientes que precisam de segurança técnica",
     location: "Indaiatuba/SP",
-    category: "Marketing • Digital",
+    category: "Comunicação • Digital",
     image: "/cases/dario-eletricidade-mobile.jpg",
     width: 842,
     height: 1536
@@ -49,7 +49,7 @@ const agencySchema = {
         "sameAs": [
           "https://www.linkedin.com/in/bruno-correa-gomes/"
         ],
-        "image": "https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg",
+        "image": "https://orvalia.com.br/images/people/bruno-correa-gomes.webp",
         "worksFor": {
           "@type": "Organization",
           "name": "Orvalia Studio",
@@ -59,12 +59,12 @@ const agencySchema = {
     },
     {
       "@type": "Service",
-      "name": "Branding e Identidade Visual",
+      "name": "Estratégia de marca e identidade visual",
       "provider": {
         "@id": "https://orvalia.com.br/#localbusiness"
       },
       "areaServed": "Indaiatuba",
-      "description": "Construção de posicionamento de marca premium e identidade visual corporativa para empresas."
+      "description": "Construção de posicionamento de marca claro e identidade visual corporativa para empresas."
     }
   ]
 };
@@ -72,8 +72,8 @@ const agencySchema = {
 export default function AgenciaIndaiatuba() {
   return (
     <>
-      <SEO 
-        title="Agência de Branding e Sites em Indaiatuba | Orvalia Studio"
+      <SEO
+        title="Marca, identidade e sites em Indaiatuba | Orvalia Studio"
         description="Estratégia de marca, identidade visual e criação de sites em Indaiatuba e região. Conheça projetos da Orvalia e converse sobre sua empresa."
         canonical="https://orvalia.com.br/branding/"
         schema={agencySchema}
@@ -89,7 +89,7 @@ export default function AgenciaIndaiatuba() {
               <ArrowLeft size={16} />
               <span className="font-mono text-xs uppercase tracking-widest font-semibold">Voltar ao Início</span>
             </Link>
-            
+
             <div className="dna-grid items-end gap-12">
               <div className="col-span-4 lg:col-span-8">
                 <div className="flex items-center gap-4 mb-8">
@@ -99,10 +99,10 @@ export default function AgenciaIndaiatuba() {
                   </span>
                 </div>
                 <h1 className="page-title text-5xl md:text-7xl font-sans font-medium text-brand-ink leading-[0.95] tracking-tight mb-8">
-                  Agência de Branding e <br /> <span className="text-[#55605D] font-serif font-normal italic">Sites em Indaiatuba</span>
+                  Marca, identidade e <br /> <span className="text-[#55605D] font-serif font-normal italic">Sites em Indaiatuba</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-[#475553] leading-relaxed max-w-2xl mb-12">
-                  A Orvalia Studio transforma marcas de Indaiatuba e da RMC em referências no mercado. Identidade visual, sites de alta performance e experiência digital com padrão editorial.
+                  Ajudamos empresas de Indaiatuba e região a apresentar melhor seu trabalho. Cuidamos da identidade visual, do site e das informações que o cliente precisa para escolher com segurança.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <Link
@@ -111,7 +111,7 @@ export default function AgenciaIndaiatuba() {
                   >
                     Pedir diagnóstico estratégico
                   </Link>
-                  <a 
+                  <a
                      href="#atendimento"
                      className="px-10 py-5 border border-brand-line text-brand-ink editorial-button font-semibold text-xs uppercase tracking-widest transition-colors hover:bg-brand-ink hover:text-brand-warm flex items-center justify-center gap-3"
                   >
@@ -186,19 +186,19 @@ export default function AgenciaIndaiatuba() {
             <div className="dna-grid gap-12 items-center">
               {/* Portrait Column */}
               <div className="col-span-4 lg:col-span-5">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   className="relative aspect-[3/4] bg-[#ced6d0] overflow-hidden border border-brand-line group"
                 >
-                  <img 
-                    src="https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg" 
-                    alt="Bruno Correa Gomes - Fundador da Orvalia Studio" 
+                  <img
+                    src="/images/people/bruno-correa-gomes.webp"
+                    alt="Bruno Correa Gomes - Fundador da Orvalia Studio"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover grayscale-[0.8] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   />
-                  
+
                   {/* Frame Accent corner */}
                   <div className="absolute bottom-6 left-6 right-6 p-6 bg-brand-warm/95 backdrop-blur-md border border-brand-line opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <p className="text-brand-ink font-bold uppercase text-xs tracking-widest mb-1">Bruno Correa Gomes</p>
@@ -220,7 +220,7 @@ export default function AgenciaIndaiatuba() {
                   <p className="text-brand-ink text-xl md:text-2xl leading-relaxed font-sans not-italic border-l-2 border-brand-cyan-dark pl-6">
                     "Acreditamos que negócios extraordinários de Indaiatuba e região merecem um nível de design e estratégia que projeta sua verdadeira maestria. Nosso papel é pavimentar essa autoridade digital."
                   </p>
-                  
+
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-brand-ink tracking-tight">Bruno Correa Gomes</h3>
                     <p className="text-brand-cyan-dark font-mono text-xs font-bold uppercase tracking-widest">Fundador da Orvalia Studio</p>
@@ -237,9 +237,9 @@ export default function AgenciaIndaiatuba() {
 
                 {/* LinkedIn & WhatsApp button */}
                 <div className="flex flex-wrap gap-5 pt-6">
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/bruno-correa-gomes/"
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 border border-brand-line bg-brand-warm text-brand-ink hover:border-brand-ink font-mono font-semibold text-xs uppercase tracking-widest transition-all flex items-center gap-3"
                   >
@@ -249,7 +249,7 @@ export default function AgenciaIndaiatuba() {
                     LinkedIn
                   </a>
 
-                  <a 
+                  <a
                     href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20sua%20trajetória%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20agendar%20uma%20conversa."
                     target="_blank"
                     rel="noopener noreferrer"
@@ -283,13 +283,13 @@ export default function AgenciaIndaiatuba() {
                   className="col-span-4 lg:col-span-6 group relative bg-brand-warm border border-brand-line"
                 >
                   <div className="h-[450px] relative overflow-hidden bg-[#d1d7d3]">
-                     <img 
-                        src={project.image} 
+                     <img
+                        src={project.image}
                         width={project.width}
                         height={project.height}
                         loading="lazy"
                         decoding="async"
-                        alt={project.title} 
+                        alt={project.title}
                         referrerPolicy="no-referrer"
                         className={`w-full h-full ${project.image.startsWith("/cases/") ? "object-contain p-4" : "object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.85]"}`}
                      />
@@ -323,8 +323,8 @@ export default function AgenciaIndaiatuba() {
                 <div className="space-y-12 mt-16 border-t border-brand-line pt-12">
                   {[
                     {
-                      q: "Como funciona o branding em Indaiatuba para atrair clientes premium?",
-                      a: "O branding foca em criar um posicionamento estratégico que se destaca da concorrência local. Ajustamos a narrativa, a identidade visual e a comunicação para atrair um público regional exigente."
+                      q: "Como a estratégia de marca ajuda a atrair os clientes certos em Indaiatuba?",
+                      a: "Começamos entendendo o trabalho da empresa e quem ela atende. Depois, organizamos a mensagem, a identidade visual e o site para que o cliente compreenda a oferta e saiba como entrar em contato."
                     },
                     {
                       q: "Qual a importância de trabalhar o SEO em Indaiatuba?",

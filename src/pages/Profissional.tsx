@@ -42,7 +42,7 @@ export default function Profissional() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {[
                 "Website Multi-páginas",
-                "Branding Estratégico Completo",
+                "Estratégia de marca e identidade visual",
                 "SEO Avançado (On-page)",
                 "GEO (Otimização para IAs)",
                 "Blog ou Seção Editorial",
@@ -87,7 +87,7 @@ export default function Profissional() {
             <div className="mb-6 flex justify-center">
               <Zap className="text-brand-cyan-dark" size={36} strokeWidth={1} />
             </div>
-            <h4 className="text-xl font-bold text-brand-ink mb-4">Performance Extrema</h4>
+            <h4 className="text-xl font-bold text-brand-ink mb-4">Site rápido e fácil de usar</h4>
             <p className="text-[#55615d] text-sm leading-relaxed">Código purificado para tempos de carregamento mínimos, retendo a atenção do utilizador.</p>
           </div>
           <div className="p-8 border border-brand-line bg-brand-mineral rounded-[2rem]">

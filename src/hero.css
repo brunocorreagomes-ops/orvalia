@@ -1,0 +1,23 @@
+/* The sculpture returns to exactly its first pose at each loop boundary. */
+.dew-scene { position:relative; margin:0; background:#102624; color:#e6eee3; overflow:hidden; isolation:isolate; }
+.dew-scene-heading { position:absolute; z-index:1; top:28px; left:28px; right:28px; display:flex; justify-content:space-between; gap:16px; font:10px/1.5 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+.dew-art { display:block; width:100%; height:auto; aspect-ratio:5/6; }
+.dew-sculpture { transform-origin:300px 330px; animation:dew-float 14s ease-in-out infinite; }
+.dew-inner-orbit { transform-origin:300px 324px; animation:dew-orbit 20s linear infinite; }
+.dew-light { transform-origin:300px 324px; animation:dew-light 7s ease-in-out infinite; }
+.dew-glint { animation:dew-glint 7s ease-in-out infinite; }
+.dew-shadow { transform-origin:304px 578px; animation:dew-shadow 14s ease-in-out infinite; }
+.dew-caption { position:absolute; inset:auto 28px 26px; display:flex; justify-content:space-between; align-items:end; gap:16px; font-size:13px; line-height:1.7; }
+.dew-caption strong { font-weight:500; color:#a4d8c2; }
+.dew-caption button { display:flex; align-items:center; gap:8px; min-height:44px; border:1px solid #648b79; padding:8px 12px; font-size:11px; color:#e6eee3; background:#0b201ccc; }
+.dew-caption button:hover { background:#294a3b; }
+.dew-caption button:focus-visible { outline:2px solid #baffdd; outline-offset:4px; }
+.dew-caption button:disabled { cursor:default; opacity:.75; }
+.dew-scene[data-paused=true] :is(.dew-sculpture,.dew-inner-orbit,.dew-light,.dew-glint,.dew-shadow) { animation-play-state:paused; }
+@keyframes dew-float { 0%,100% { transform:translateY(7px) rotate(-4deg); } 50% { transform:translateY(-14px) rotate(5deg); } }
+@keyframes dew-orbit { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+@keyframes dew-light { 0%,100% { opacity:.65; transform:scale(.86); } 50% { opacity:1; transform:scale(1.12); } }
+@keyframes dew-glint { 0%,100% { opacity:.35; } 50% { opacity:.95; } }
+@keyframes dew-shadow { 0%,100% { transform:scaleX(1); opacity:.4; } 50% { transform:scaleX(.85); opacity:.25; } }
+@media(max-width:639px) { .dew-scene-heading { inset:20px 20px auto; font-size:9px; } .dew-caption { inset:auto 20px 18px; font-size:12px; } .dew-caption button { padding:8px; gap:5px; } }
+@media(prefers-reduced-motion:reduce) { .dew-scene :is(.dew-sculpture,.dew-inner-orbit,.dew-light,.dew-glint,.dew-shadow) { animation:none; } }

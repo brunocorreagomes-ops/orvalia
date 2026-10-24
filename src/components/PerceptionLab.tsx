@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, type PointerEvent } from "react";
 import { ArrowLeftRight, ArrowUpRight, Check } from "lucide-react";
 
 const lenses = [
@@ -12,16 +12,35 @@ function ArchitectureDrawing() {
 export default function PerceptionLab() {
   const [reveal, setReveal] = useState(55);
   const [lens, setLens] = useState(0);
+  const activePointer = useRef<number | null>(null);
+  const updateReveal = (event: PointerEvent<HTMLDivElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    setReveal(Math.round(Math.max(0, Math.min(100, (event.clientX - bounds.left) / bounds.width * 100))));
+  };
+  const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    if (!event.isPrimary || event.button !== 0) return;
+    activePointer.current = event.pointerId;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    updateReveal(event);
+  };
+  const onPointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    if (activePointer.current === event.pointerId || (event.pointerType === 'mouse' && event.buttons === 0)) updateReveal(event);
+  };
+  const endPointer = (event: PointerEvent<HTMLDivElement>) => {
+    if (activePointer.current !== event.pointerId) return;
+    activePointer.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+  };
   return <div className={`perception-lab lens-${lenses[lens].id}`}>
-    <div className="lab-topline"><span>O mesmo negócio. Duas formas de apresentar.</span><span><ArrowLeftRight size={15} /> Explore a diferença</span></div>
-    <div className="comparison-stage" aria-hidden="true">
-      <div className="comparison-page comparison-clear"><div className="mock-browser"><i /><i /><i /><span>exemplo / arquitetura</span></div><div className="mock-navigation"><strong>estúdio exemplo</strong><span>Projetos &nbsp; Estúdio &nbsp; Contato</span></div><div className="mock-clear-content"><div><span className="mock-kicker">ESPAÇOS PARA VIVER MELHOR</span><h3>Arquitetura.<br /><em>Para viver.</em></h3><p>Arquitetura residencial.<br />Do primeiro desenho aos detalhes.</p><span className="mock-cta">Conversar sobre um projeto <ArrowUpRight size={13} /></span></div><div className="mock-architecture"><ArchitectureDrawing /><span>01 / ESTUDO DE VOLUME</span></div></div><div className="mock-proof"><span><Check size={12} /> Processo explicado</span><span><Check size={12} /> Serviços definidos</span><span><Check size={12} /> Contato direto</span></div></div>
-      <div className="comparison-page comparison-vague" style={{ clipPath: `inset(0 ${100 - reveal}% 0 0)` }}><div className="mock-browser"><i /><i /><i /><span>empresa / apresentação</span></div><div className="mock-generic-header">ESTÚDIO EXEMPLO <span>INÍCIO &nbsp; SOBRE &nbsp; SERVIÇOS &nbsp; CONTATO</span></div><div className="mock-vague-content"><span>BEM-VINDO AO NOSSO SITE</span><h3>Soluções completas<br />com excelência.</h3><p>Qualidade, inovação e comprometimento<br />para realizar os seus sonhos.</p><span className="mock-generic-button">SAIBA MAIS</span><div className="mock-generic-boxes"><span>QUALIDADE</span><span>INOVAÇÃO</span><span>CONFIANÇA</span></div></div></div>
-      <div className="comparison-divider" style={{ left: `${reveal}%` }}><span><ArrowLeftRight size={19} /></span></div>
+    <div className="lab-topline"><span>O mesmo negócio. Duas formas de apresentar.</span><span><ArrowLeftRight size={15} /> Passe o mouse ou arraste sobre a imagem</span></div>
+    <div className="comparison-stage" role="group" aria-label="Comparação interativa de duas apresentações do mesmo negócio" aria-describedby="comparison-instructions" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endPointer} onPointerCancel={endPointer} onLostPointerCapture={() => { activePointer.current = null; }}>
+      <div className="comparison-page comparison-clear" aria-hidden="true"><div className="mock-browser"><i /><i /><i /><span>exemplo / arquitetura</span></div><div className="mock-navigation"><strong>estúdio exemplo</strong><span>Projetos &nbsp; Estúdio &nbsp; Contato</span></div><div className="mock-clear-content"><div><span className="mock-kicker">ESPAÇOS PARA VIVER MELHOR</span><h3>Arquitetura.<br /><em>Para viver.</em></h3><p>Arquitetura residencial.<br />Do primeiro desenho aos detalhes.</p><span className="mock-cta">Conversar sobre um projeto <ArrowUpRight size={13} /></span></div><div className="mock-architecture"><ArchitectureDrawing /><span>01 / ESTUDO DE VOLUME</span></div></div><div className="mock-proof"><span><Check size={12} /> Processo explicado</span><span><Check size={12} /> Serviços definidos</span><span><Check size={12} /> Contato direto</span></div></div>
+      <div className="comparison-page comparison-vague" aria-hidden="true" style={{ clipPath: `inset(0 ${100 - reveal}% 0 0)` }}><div className="mock-browser"><i /><i /><i /><span>empresa / apresentação</span></div><div className="mock-generic-header">ESTÚDIO EXEMPLO <span>INÍCIO &nbsp; SOBRE &nbsp; SERVIÇOS &nbsp; CONTATO</span></div><div className="mock-vague-content"><span>BEM-VINDO AO NOSSO SITE</span><h3>Soluções completas<br />com excelência.</h3><p>Qualidade, inovação e comprometimento<br />para realizar os seus sonhos.</p><span className="mock-generic-button">SAIBA MAIS</span><div className="mock-generic-boxes"><span>QUALIDADE</span><span>INOVAÇÃO</span><span>CONFIANÇA</span></div></div></div>
+      <div className="comparison-divider" aria-hidden="true" style={{ left: `${reveal}%` }}><span><ArrowLeftRight size={19} /></span></div>
       <div className="comparison-tags"><span hidden={reveal < 5}>Apresentação genérica</span><span hidden={reveal > 95}>Proposta organizada</span></div>
     </div>
-    <div className="comparison-controls"><label htmlFor="perception-reveal">Arraste para comparar <span>{reveal}% do lado inicial</span></label><input id="perception-reveal" type="range" min="0" max="100" value={reveal} onChange={event => setReveal(Number(event.target.value))} aria-valuetext={`${reveal}% da apresentação genérica visível`} /><div><button type="button" onClick={() => setReveal(100)}>Ver apresentação genérica</button><button type="button" onClick={() => setReveal(0)}>Ver proposta organizada</button></div></div>
-    <div className="comparison-lenses" role="group" aria-label="Explorar decisões do exemplo">{lenses.map((item, i) => <button type="button" key={item.id} aria-pressed={lens === i} onClick={() => setLens(i)}>{String(i + 1).padStart(2, '0')} / {item.label}</button>)}</div>
+    <div className="comparison-controls"><p id="comparison-instructions" className="comparison-instructions">Mova o mouse sobre a imagem ou arraste com o dedo. Você também pode usar a barra e as setas do teclado.</p><label htmlFor="perception-reveal">Compare as duas apresentações <span>{reveal}% do lado inicial</span></label><input id="perception-reveal" type="range" min="0" max="100" value={reveal} onChange={event => setReveal(Number(event.target.value))} aria-valuetext={`${reveal}% da apresentação genérica visível`} /><div><button type="button" onClick={() => setReveal(100)}>Ver apresentação genérica</button><button type="button" onClick={() => setReveal(0)}>Ver proposta organizada</button></div></div>
+    <div className="comparison-lenses" role="group" aria-label="Explorar decisões do exemplo">{lenses.map((item, i) => <button type="button" key={item.id} aria-pressed={lens === i} onClick={() => { setLens(i); setReveal(35); }}>{String(i + 1).padStart(2, '0')} / {item.label}</button>)}</div>
     <div className="comparison-explanation" aria-live="polite"><h3>{lenses[lens].title}</h3><p>{lenses[lens].text}</p></div>
     <p className="comparison-note">Estudo ilustrativo da Orvalia. Não representa um cliente nem uma medição de resultados.</p>
   </div>;

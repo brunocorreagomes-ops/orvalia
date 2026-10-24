@@ -63,11 +63,11 @@ export const marketingPages: MarketingPage[] = [
   },
   {
     "slug": "landing-pages-indaiatuba",
-    "title": "Landing Pages em Indaiatuba",
+    "title": "Páginas para campanhas em Indaiatuba",
     "headline": "Uma página com foco na oferta e no próximo passo.",
     "problem": {
       "title": "A campanha e a página precisam contar a mesma história.",
-      "description": "Landing pages para apresentar uma oferta específica em campanhas de Indaiatuba e região. Estrutura, texto e contato são planejados para a intenção do visitante."
+      "description": "Páginas para apresentar uma oferta específica em campanhas de Indaiatuba e região. Estrutura, texto e contato são planejados para a intenção do visitante."
     },
     "solution": {
       "title": "Uma oferta por página",
@@ -191,7 +191,7 @@ export const marketingPages: MarketingPage[] = [
   },
   {
     "slug": "branding-em-indaiatuba",
-    "title": "Branding em Indaiatuba",
+    "title": "Marca e identidade em Indaiatuba",
     "headline": "A marca precisa acompanhar o momento da empresa.",
     "problem": {
       "title": "A apresentação nem sempre mostra o que o negócio oferece.",

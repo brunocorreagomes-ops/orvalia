@@ -43,21 +43,21 @@ const steps = [
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Criação de Sites e Landing Pages",
+  "name": "Criação de sites e páginas para campanhas",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Orvalia Studio"
   },
   "areaServed": "Indaiatuba",
-  "description": "Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão."
+  "description": "Sites e páginas para apresentar seu negócio e facilitar o contato."
 };
 
 export default function SitesEstrategicos() {
   return (
     <div className="min-h-screen bg-brand-mineral text-brand-ink pt-28 md:pt-36">
       <SEO 
-        title="Criação de Sites e Landing Pages | Orvalia Studio"
-        description="Desenvolvimento de sites estratégicos de alta performance e Landing Pages focadas em conversão em Indaiatuba."
+        title="Criação de sites e páginas para campanhas | Orvalia Studio"
+        description="Sites e páginas para apresentar seu negócio e facilitar o contato em Indaiatuba."
         canonical="https://orvalia.com.br/sites/"
         schema={serviceSchema}
       />
@@ -97,7 +97,7 @@ export default function SitesEstrategicos() {
                     to="/portfolio/" 
                     className="px-10 py-5 bg-transparent text-brand-ink border border-brand-line editorial-button font-semibold uppercase tracking-widest text-xs hover:bg-brand-ink hover:text-brand-warm transition-colors text-center"
                   >
-                    Ver cases
+                    Ver projetos
                   </Link>
                 </div>
                 <p className="mt-10 font-mono text-xs text-[#55605D] font-bold uppercase tracking-widest">
@@ -239,7 +239,7 @@ export default function SitesEstrategicos() {
                 {[
                   "Site profissional otimizado para SEO",
                   "Design editorial alinhado ao posicionamento",
-                  "Integração direta com WhatsApp e captura de leads",
+                  "Integração direta com WhatsApp e recebimento de contatos",
                   "Revisão do carregamento e do tamanho das imagens",
                   "Possibilidade de adicionar serviços e novas páginas"
                 ].map((item, i) => (

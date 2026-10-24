@@ -4,22 +4,25 @@ export default function BrunoSection() {
   return (
     <section id="autoridade" className="py-32 bg-brand-warm text-brand-ink border-t border-brand-line">
       <div className="container mx-auto px-6">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 lg:gap-24 items-center">
-          
+
           {/* Foto Editorial */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative bg-[#ced6d0] border border-brand-line aspect-[4/5] max-w-lg mx-auto lg:mx-0 w-full overflow-hidden group"
           >
-            <img 
-              src="https://i.ibb.co/xqmr9M3F/bruno-correa-gomes.jpg" 
-              alt="Bruno Correa Gomes, direção estratégica da Orvalia" 
-              loading="lazy" 
+            <img
+              src="/images/people/bruno-correa-gomes.webp"
+              alt="Bruno Correa Gomes, direção estratégica da Orvalia"
+              loading="lazy"
+              decoding="async"
+              width={366}
+              height={640}
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover grayscale-[0.8] group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover  transition-all duration-700"
             />
             {/* Overlay sutil */}
             <div className="absolute inset-0 bg-brand-ink/5 mix-blend-multiply pointer-events-none" />

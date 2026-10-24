@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Analytics from "./components/Analytics";
@@ -98,7 +99,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <Analytics />
-      <main className="editorial-system relative bg-brand-mineral text-brand-ink">
+      <MotionConfig reducedMotion="user"><main className="editorial-system relative bg-brand-mineral text-brand-ink">
 
         <a
           href={whatsappHref}
@@ -170,7 +171,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-      </main>
+      </main></MotionConfig>
     </>
   );
 }

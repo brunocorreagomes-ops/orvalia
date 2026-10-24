@@ -42,12 +42,12 @@ export default function Evolucao() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {[
                 "Consultoria Mensal de Estratégia",
-                "SEO & GEO Elite (Otimização IA)",
+                "Presença no Google e nas buscas com IA",
                 "Gestão de Tráfego Pago",
                 "Desenvolvimento Sob Demanda",
                 "Dashboards de BI (Métricas)",
                 "Otimização de Conversão (CRO)",
-                "Gestão de Branding Contínua",
+                "Acompanhamento contínuo da marca",
                 "Suporte 24/7 de Alta Prioridade"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-[#b1bdb8] leading-relaxed">

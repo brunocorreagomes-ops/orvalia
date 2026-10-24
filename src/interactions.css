@@ -154,3 +154,15 @@
   .project-preview-mobile img { height:440px; }
   .project-dialog-mobile .project-dialog-header { top:-16px; }
 }
+
+/* The entire comparison is a touch target. Vertical page scroll stays native. */
+.comparison-stage { cursor:ew-resize; touch-action:pan-y pinch-zoom; -webkit-user-select:none; }
+.comparison-stage :is(.comparison-page,.comparison-divider,.comparison-tags) { pointer-events:none; }
+.comparison-instructions { margin:0 0 14px; font-size:12px; line-height:1.6; color:#bdcec5; }
+.comparison-stage .comparison-tags [hidden] { display:none; }
+@media(hover:none) { .lab-topline > span:last-child { font-size:12px; } }
+
+.project-preview { overflow:hidden; }
+.method-panel:not([hidden]) .method-map { animation:method-enter .4s ease-out both; }
+@keyframes method-enter { from { opacity:.4; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@media(prefers-reduced-motion:reduce) { .method-panel:not([hidden]) .method-map { animation:none; } }

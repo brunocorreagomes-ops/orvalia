@@ -4,9 +4,9 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import OrvaliaLogo from "./OrvaliaLogo";
 
 const navLinks = [
-  { label: "Branding", href: "/branding", route: true },
+  { label: "Marca e identidade", href: "/branding", route: true },
   { label: "Sites estratégicos", href: "/sites", route: true },
-  { label: "SEO & IA (GEO)", href: "/seo-geo", route: true },
+  { label: "Google e buscas com IA", href: "/seo-geo", route: true },
   { label: "Trabalhos", href: "/portfolio", route: true },
   { label: "Método", href: "/#metodo", route: false },
   { label: "Artigos", href: "/blog", route: true },

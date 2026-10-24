@@ -63,7 +63,7 @@ const orgSchema = {
           "name": "Quais serviços a Orvalia oferece?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A atuação inclui estratégia de marca e branding, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO."
+            "text": "A atuação inclui estratégia de marca e identidade visual, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO."
           }
         }
       ]
@@ -74,11 +74,11 @@ const orgSchema = {
 export default function Home() {
   return (
     <>
-      <SEO 
-        title="Orvalia Studio | Branding e Sites Estratégicos em Indaiatuba" 
+      <SEO
+        title="Orvalia Studio | Marca e Sites Estratégicos em Indaiatuba"
         description="Identidade visual, criação de sites e SEO local para empresas de Indaiatuba e região. Conheça os projetos e fale com Bruno sobre sua empresa."
         socialTitle="Orvalia Studio | Seu negócio vale mais do que parece."
-        socialDescription="Estratégia de marca, branding e sites para tornar visível o valor da sua empresa. Conheça a Orvalia e converse sobre seu projeto."
+        socialDescription="Estratégia de marca, identidade visual e sites para tornar visível o valor da sua empresa. Conheça a Orvalia e converse sobre seu projeto."
         canonical="https://orvalia.com.br/"
         schema={orgSchema}
       />
@@ -130,7 +130,7 @@ export default function Home() {
                 Quais serviços a Orvalia oferece?
                 <span aria-hidden="true" className="text-brand-cyan-dark text-2xl">+</span>
               </summary>
-              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">A atuação inclui estratégia de marca e branding, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO.</p>
+              <p className="pt-4 text-brand-muted leading-relaxed max-w-3xl">A atuação inclui estratégia de marca e identidade visual, criação de sites estratégicos e otimização de presença nas buscas, incluindo SEO e GEO.</p>
             </details>
           </div>
         </div>
