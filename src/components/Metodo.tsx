@@ -1,3 +1,4 @@
+import MethodVisual from "./MethodVisual";
 import { useState, type KeyboardEvent } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -25,8 +26,8 @@ export default function Metodo() {
       <div className="method-header"><div><span className="editorial-label">03 / Método estratégico</span><h2>Antes do desenho,<br /><em>a decisão.</em></h2></div><p>Quatro camadas que se conectam. Escolha uma para explorar as perguntas e decisões do projeto.</p></div>
       <div className="method-tabs" role="tablist" aria-label="Camadas do método Orvalia">{steps.map((item, i) => <button type="button" role="tab" key={item.title} id={`method-tab-${i}`} aria-selected={active === i} aria-controls={`method-panel-${i}`} tabIndex={active === i ? 0 : -1} onClick={() => setActive(i)} onKeyDown={event => onKeyDown(event, i)}><span>{String(i + 1).padStart(2, '0')}</span>{item.title}<span aria-hidden="true">↗</span></button>)}</div>
       {steps.map((item, i) => <div key={item.title} id={`method-panel-${i}`} role="tabpanel" aria-labelledby={`method-tab-${i}`} hidden={active !== i} tabIndex={0} className="method-panel">
-        <div className="method-map" aria-hidden="true"><svg viewBox="0 0 500 350"><path d="M100 90H400V260H100ZM100 90L400 260M400 90L100 260" stroke="#b7c9c3" strokeWidth="1" fill="none" opacity=".4" />{[[100,90],[400,90],[400,260],[100,260]].map(([x,y],n)=><g key={n}><circle cx={x} cy={y} r={n===i?38:17} fill={n===i?'#66e7e1':'#284346'} /><text x={x} y={y+4} fill={n===i?'#101e20':'#c6d3cc'} fontSize="11" textAnchor="middle">{String(n+1).padStart(2,'0')}</text></g>)}<circle cx="250" cy="175" r="5" fill="#66e7e1" /><text x="250" y="325" textAnchor="middle" fill="#c6d3cc" fontSize="11" letterSpacing="3">NOSSO MÉTODO / {String(i+1).padStart(2,'0')}</text></svg><span>{item.subtitle}</span></div>
-        <div className="method-detail"><span className="editorial-label">{String(i+1).padStart(2,'0')} / {item.title}</span><h3>{item.question}</h3><p>{item.desc}</p><ul>{item.outputs.map(output=><li key={output}>{output}</li>)}</ul><Link to={item.link}>Aprofundar essa camada <ArrowUpRight size={16} /></Link></div>
+        <MethodVisual step={i} />
+        <div className="method-detail"><span className="editorial-label">{String(i+1).padStart(2,'0')} / {item.title}</span><h3>{item.question}</h3><p>{item.desc}</p><h4 className="method-output-label">O que fica definido nesta etapa</h4><ul>{item.outputs.map(output=><li key={output}>{output}</li>)}</ul><Link to={item.link}>Entender esta etapa <ArrowUpRight size={16} /></Link><button type="button" className="method-next" onClick={() => { const next = (i + 1) % steps.length; setActive(next); document.getElementById(`method-tab-${next}`)?.focus({ preventScroll: true }); }}>{i === steps.length - 1 ? "Voltar à primeira etapa" : `Próxima: ${steps[i + 1].title}`} <ArrowUpRight size={16} aria-hidden="true" /></button></div>
       </div>)}
       <p className="method-footnote">O escopo de cada projeto é definido na conversa inicial. Explore as quatro camadas acima.</p>
     </div>

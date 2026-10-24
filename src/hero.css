@@ -3,15 +3,20 @@
 .hero-copy { width:min(100%,760px); }
 .dew-scene { position:absolute; inset:0; margin:0; pointer-events:none; overflow:hidden; }
 .dew-art { display:block; position:absolute; top:50%; right:-4vw; width:min(55vw,900px); height:auto; aspect-ratio:1; transform:translateY(-50%); }
-.dew-orbit { transform-origin:360px 360px; animation:dew-orbit 22s linear infinite; }
+.dew-orbit { transform-origin:360px 360px; animation:dew-orbit 18s linear infinite; }
 .dew-caption { z-index:20; position:absolute; bottom:27px; right:clamp(24px,4.5vw,72px); pointer-events:auto; }
 .dew-caption button { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; min-width:44px; padding:8px; font-size:11px; color:#556a61; }
 .dew-caption button:hover { color:#006a67; }
 .dew-caption button:focus-visible { outline:2px solid #006a67; outline-offset:4px; }
-.dew-caption button:disabled { cursor:default; opacity:.75; }
+.dew-caption button:disabled { cursor:default; opacity:1; }
 .dew-scene[data-paused=true] .dew-orbit { animation-play-state:paused; }
 @keyframes dew-orbit { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
 @media(min-width:1024px) and (max-width:1279px) { .hero-copy { width:68%; } .hero-copy h2 { font-size:clamp(3.7rem,6vw,5rem); } }
-@media(max-width:1023px) { .hero-copy { width:min(100%,700px); } .dew-art { width:650px; right:-355px; top:67%; opacity:.75; } }
-@media(max-width:639px) { .dew-art { width:560px; right:-290px; top:78%; opacity:.65; } .dew-caption { bottom:8px; right:16px; } .hero-copy > div:last-child { padding-bottom:32px; } }
+@media(max-width:1023px) { .hero-copy { width:min(100%,700px); } .dew-art { width:650px; right:-355px; top:67%; opacity:1; } }
+@media(max-width:639px) { .dew-art { width:560px; right:-290px; top:78%; opacity:1; } .dew-caption { bottom:8px; right:16px; } .hero-copy > div:last-child { padding-bottom:32px; } }
 @media(prefers-reduced-motion:reduce) { .dew-orbit { animation:none; } }
+
+/* An explicit visitor choice can enable this animation when the OS prefers less motion. */
+@media(prefers-reduced-motion:reduce) {
+ .hero-opening .dew-scene[data-allow-motion=true] .dew-orbit { animation-name:dew-orbit; animation-duration:18s !important; animation-iteration-count:infinite !important; animation-timing-function:linear; }
+}
