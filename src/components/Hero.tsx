@@ -5,8 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function Hero() {
   return (
     <section data-contact-hero className="hero-opening relative bg-brand-mineral text-brand-ink isolate overflow-hidden">
-      <DewPointScene />
-      <div className="relative min-h-[100svh] flex items-center px-6 md:px-10 lg:px-16 pt-28 pb-8">
+      <div className="relative min-h-[90svh] lg:min-h-[100svh] flex items-center px-6 md:px-10 lg:px-16 pt-28 pb-8">
         
         <div className="w-full max-w-[1550px] mx-auto">
           
@@ -55,6 +54,7 @@ export default function Hero() {
 
         </div>
       </div>
+      <DewPointScene />
     </section>
   );
 }

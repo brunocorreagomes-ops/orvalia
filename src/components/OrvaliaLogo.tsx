@@ -1,4 +1,5 @@
 import React from 'react';
+import { orvaliaSymbol } from './brand-symbol';
 
 interface OrvaliaLogoProps {
   className?: string;
@@ -22,14 +23,14 @@ export default function OrvaliaLogo({ className = "w-40", theme = 'dark' }: Orva
       <g fill={textColor}>
         {/* Arco do O com abertura controlada de 64° */}
         <path
-          d="M 89.074 77.667 A 39 39 0 1 1 89.074 36.333"
+          d={orvaliaSymbol.arc}
           stroke={textColor}
-          strokeWidth="10.5"
+          strokeWidth={orvaliaSymbol.strokeWidth}
           strokeLinecap="butt"
           fill="none"
         />
         {/* Dew Point Calibrado */}
-        <circle cx="94" cy="57" r="10" fill={cyanColor} />
+        <circle cx={orvaliaSymbol.point.x} cy={orvaliaSymbol.point.y} r={orvaliaSymbol.point.radius} fill={cyanColor} />
 
         {/* Lettering RVALIA */}
         <path d="M148 0H328V585H687C692 585 696 585 701 585L1015 0H1225L890 614C1085 674 1207 825 1207 1038C1207 1316 1012 1490 701 1490H148ZM328 745V1330H695C902 1330 1029 1219 1029 1038C1029 857 903 745 697 745Z" transform="translate(116.000 99) scale(0.0550336 -0.0550336)"/>
