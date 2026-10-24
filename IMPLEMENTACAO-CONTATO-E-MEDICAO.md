@@ -16,7 +16,7 @@ A interface tem estados de envio, erro e recebimento, bloqueio de envios simult�
 
 O envio integrado está ativado em `src/lib/site-config.ts`. A interface não abre nem redireciona para o Google. A confirmação é exibida na própria página apenas após uma resposta verificável do serviço. Em falha, mantém os campos preenchidos e apresenta uma mensagem da Orvalia.
 
-A verificação OPTIONS confirmou que o endpoint aceita a origem do site. O envio real de teste foi bloqueado pela revisão automática por transmitir dados ao endpoint e poder gerar notificação; a entrega real continua pendente de validação. Os testes de contrato utilizam provedor simulado.
+A verificação OPTIONS confirmou que o endpoint aceita a origem do site. Em 24/10/2026, após autorização do proprietário e confirmação de que o serviço pertence à sua conta, um envio real identificado como teste retornou HTTP 200, `ok: true` e um identificador de recebimento. O endpoint só retorna esse estado após verificar a confirmação explícita do Google Forms. A entrega da notificação por e-mail não foi confirmada nesta verificação. Os testes de contrato também passaram com provedor simulado.
 
 ## Analytics preparado, ainda sem coleta
 
