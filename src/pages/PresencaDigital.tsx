@@ -92,6 +92,7 @@ export default function PresencaDigital() {
             <div className="divide-y divide-brand-line border-y border-brand-line">{faqs.map(item => <details key={item.question} className="py-6"><summary className="cursor-pointer text-lg text-brand-ink font-medium pr-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark">{item.question}</summary><p className="text-base leading-relaxed pt-4 max-w-4xl">{item.answer}</p></details>)}</div>
           </section>
         </div>
+        <p className="mt-12 text-brand-muted leading-relaxed">Sua prioridade está nos perfis e nas publicações? <Link className="underline underline-offset-4" to="/redes-sociais/">Conheça a análise de presença digital e os pacotes de conteúdo para redes sociais</Link>.</p>
         <section className="mt-20 p-7 md:p-14 bg-brand-ink text-brand-warm">
           <h2 className="text-3xl md:text-5xl font-medium mb-6">Vamos olhar para o que seu cliente procura.</h2>
           <p className="text-[#c3d0c8] text-lg leading-relaxed max-w-2xl mb-8">Conte quais serviços você quer apresentar melhor e envie o endereço do site. A conversa inicial ajuda a definir por onde começar.</p>

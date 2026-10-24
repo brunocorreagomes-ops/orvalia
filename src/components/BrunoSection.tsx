@@ -60,7 +60,7 @@ export default function BrunoSection() {
 
             <dl className="studio-facts">
               <div><dt>Quem conduz</dt><dd>{studioProfile.founder}, fundador da {studioProfile.name}.</dd></div>
-              <div><dt>O que fazemos</dt><dd>Estratégia de marca, identidade visual, sites e melhorias para buscas.</dd></div>
+              <div><dt>O que fazemos</dt><dd>Estratégia de marca, identidade visual, sites, análise da presença digital, buscas e conteúdo para redes sociais.</dd></div>
               <div><dt>Onde atendemos</dt><dd>Base em {studioProfile.base}. Campinas e região, com projetos a distância para o Brasil.</dd></div>
               <div><dt>Como falar</dt><dd><a href={`mailto:${studioProfile.email}`}>{studioProfile.email}</a>{" · "}<a href={`tel:${studioProfile.telephone}`}>{studioProfile.telephoneDisplay}</a></dd></div>
             </dl>

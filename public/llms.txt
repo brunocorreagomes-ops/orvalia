@@ -1,6 +1,6 @@
 # Orvalia Studio
 
-Estúdio de estratégia de marca, identidade visual, criação de sites e revisão de presença nas buscas. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos conduzidos remotamente.
+Estúdio de estratégia de marca, identidade visual, criação de sites, análise de presença digital, conteúdo para redes sociais e revisão de presença nas buscas. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos conduzidos remotamente.
 
 Direção: Bruno Correa Gomes. Nome público do estúdio: Orvalia Studio.
 
@@ -9,6 +9,7 @@ Direção: Bruno Correa Gomes. Nome público do estúdio: Orvalia Studio.
 - Branding: https://orvalia.com.br/branding/
 - Sites estratégicos: https://orvalia.com.br/sites/
 - SEO, GEO e buscas com IA: https://orvalia.com.br/seo-geo/
+- Redes sociais e conteúdo: https://orvalia.com.br/redes-sociais/
 - Projetos: https://orvalia.com.br/portfolio/
 - Sobre: https://orvalia.com.br/sobre/
 - Artigos: https://orvalia.com.br/blog/
@@ -18,6 +19,8 @@ Direção: Bruno Correa Gomes. Nome público do estúdio: Orvalia Studio.
 Branding: posicionamento, identidade visual e linguagem para apresentar a oferta e o momento da empresa.
 Sites: arquitetura das informações, páginas de serviços, experiência no celular, portfólio e caminhos de contato.
 SEO e GEO: diagnóstico técnico, revisão de conteúdo e informações locais, navegação, metadados e dados estruturados coerentes com as páginas visíveis. Implementação e acompanhamento dependem do escopo contratado e dos acessos autorizados.
+
+Presença digital e redes sociais: análise do site, perfis e caminhos de contato; planejamento de temas, canais e formatos; pacotes de publicações, posts estáticos para o feed e vídeos para stories. Quantidades, frequência, materiais, aprovações e responsabilidades pela publicação são combinados na proposta, conforme a estratégia.
 
 ## Como começar
 O formulário permite indicar a prioridade e informar nome, e-mail e empresa. Telefone, site e contexto são opcionais. A conversa inicial ajuda a definir a proposta; não há contratação automática pelo formulário.

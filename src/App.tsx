@@ -37,6 +37,7 @@ import ArticleNewGEO from "./pages/Blog/ArticleNewGEO";
 import ArticleEstetica from "./pages/Blog/ArticleEstetica";
 import ArticleGapPercepcao from "./pages/Blog/ArticleGapPercepcao";
 import PresencaDigital from "./pages/PresencaDigital";
+import RedesSociais from "./pages/RedesSociais";
 import Termos from "./pages/Legal/Termos";
 import Privacidade from "./pages/Legal/Privacidade";
 import Cookies from "./pages/Legal/Cookies";
@@ -121,6 +122,7 @@ export default function App() {
           <Route path="/branding" element={<AgenciaIndaiatuba />} />
           <Route path="/sites" element={<SitesEstrategicos />} />
           <Route path="/seo-geo" element={<PresencaDigital />} />
+          <Route path="/redes-sociais" element={<RedesSociais />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:cliente" element={<Portfolio />} />
           <Route path="/sobre" element={<Sobre />} />

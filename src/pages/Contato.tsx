@@ -21,7 +21,12 @@ export default function Contato() {
     sending.current = true;
     const form = new FormData(event.currentTarget);
     const value = (name: string) => String(form.get(name) || '');
-    const payload = { name: value('entry.522600955'), email: value('emailAddress'), company: value('entry.607905347'), phone: value('entry.1723222290'), site: value('entry.375472757'), context: value('entry.591864992'), priority: value('entry.695967425'), website_check: value('website_check') };
+    const chosenPriority = value('entry.695967425');
+    const socialInquiry = chosenPriority === 'Presença digital e redes sociais';
+    // Keep the accepted Google Form option; record the specific service in the context.
+    const priority = socialInquiry ? 'Diagnóstico completo' : chosenPriority;
+    const context = socialInquiry ? `Interesse: análise da presença digital e conteúdo para redes sociais.\n${value('entry.591864992')}` : value('entry.591864992');
+    const payload = { name: value('entry.522600955'), email: value('emailAddress'), company: value('entry.607905347'), phone: value('entry.1723222290'), site: value('entry.375472757'), context, priority, website_check: value('website_check') };
     setStatus('sending');
     trackEvent('contact_form_submit', { source_page: '/contato/' });
     try {
@@ -102,6 +107,7 @@ export default function Contato() {
                       ["Marca e identidade visual", "Marca e identidade", "Apresentar o valor da sua empresa"],
                       ["Criar ou melhorar o site", "Site estratégico", "Transformar visitas em conversas"],
                       ["Google, SEO e buscas com IA", "Google e buscas com IA", "Ser encontrado por quem procura"],
+                      ["Presença digital e redes sociais", "Redes sociais e conteúdo", "Análise, posts para feed e vídeos para stories"],
                       ["Diagnóstico completo", "Quero uma orientação", "Entender por onde começar"],
                     ].map(([value, title, hint]) => (
                       <label key={value} className="inquiry-option">
@@ -126,7 +132,7 @@ export default function Contato() {
                   <div className="inquiry-fields">
                     <label htmlFor="inquiry-phone">Telefone <span>(opcional)</span><input id="inquiry-phone" name="entry.1723222290" type="tel" autoComplete="tel" inputMode="tel" placeholder="DDD + número" maxLength={40} /></label>
                     <label htmlFor="inquiry-site">Site ou Instagram <span>(opcional)</span><input id="inquiry-site" name="entry.375472757" placeholder="Seu site ou @perfil" maxLength={500} /></label>
-                    <label htmlFor="inquiry-context">Sobre o projeto <span>(opcional)</span><textarea id="inquiry-context" name="entry.591864992" rows={4} placeholder="O que você gostaria de melhorar?" maxLength={5000} /></label>
+                    <label htmlFor="inquiry-context">Sobre o projeto <span>(opcional)</span><textarea id="inquiry-context" name="entry.591864992" rows={4} placeholder="O que você gostaria de melhorar?" maxLength={4800} /></label>
                   </div>
                 </details>
                 <div className="inquiry-send">

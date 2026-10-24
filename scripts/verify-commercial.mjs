@@ -52,3 +52,13 @@ for (const route of ['index.html','sites/index.html','contato/index.html','blog/
  assert(!html.includes('https://i.ibb.co'), route + ': primary content images are local');
 }
 console.log('PASS: service clarity, contextual budget links, factual footer and readable WhatsApp greeting.');
+
+const social = fs.readFileSync('dist/redes-sociais/index.html','utf8');
+assert(root.includes('href="/redes-sociais/"'), 'Social service discoverable from home');
+assert(sitemap.includes('<loc>https://orvalia.com.br/redes-sociais/</loc>'));
+assert(social.includes('rel="canonical" href="https://orvalia.com.br/redes-sociais/"'));
+for (const text of ['Análise da presença digital','Posts estáticos para o feed','Vídeos para stories','Quantidade de peças, formatos e frequência de entrega.']) assert(social.includes(text), text);
+assert(scripts(social).some(item=>item['@type']==='Service' && item.url==='https://orvalia.com.br/redes-sociais/'));
+for (const item of scripts(social).find(item=>item['@type']==='FAQPage').mainEntity) assert(decode(social).includes(item.acceptedAnswer.text));
+assert(fs.readFileSync('dist/contato/index.html','utf8').includes('value="Presença digital e redes sociais"'));
+console.log('PASS: presence analysis and social content service, explicit scope, visible FAQ and inquiry option.');

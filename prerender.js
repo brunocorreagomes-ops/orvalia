@@ -15,6 +15,7 @@ const routesToPrerender = [
   '/branding/',
   '/sites/',
   '/seo-geo/',
+  '/redes-sociais/',
   '/portfolio/',
   '/portfolio/ryna-hayashi/',
   '/portfolio/beth-olmeda/',

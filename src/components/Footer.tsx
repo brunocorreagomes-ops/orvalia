@@ -37,6 +37,7 @@ export default function Footer() {
               <ul className="space-y-4 text-sm text-[#8b9f99]">
                 <li><Link to="/blog/" className="hover:text-white transition-colors">Artigos e orientações</Link></li>
                 <li><Link to="/sites/" className="hover:text-white transition-colors">Sites Estratégicos</Link></li>
+                <li><Link to="/redes-sociais/" className="hover:text-white transition-colors">Redes sociais e conteúdo</Link></li>
                 <li><Link to="/seo-geo/" className="hover:text-white transition-colors">Buscas com IA</Link></li>
               </ul>
             </div>

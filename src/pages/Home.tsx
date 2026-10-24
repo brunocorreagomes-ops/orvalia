@@ -14,7 +14,7 @@ import CTA from "../components/CTA";
 const orgSchema = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'ProfessionalService', '@id': 'https://orvalia.com.br/#organization', name: studioProfile.name, url: 'https://orvalia.com.br/', logo: 'https://orvalia.com.br/logo.png', description: 'Estratégia de marca, identidade visual, criação de sites e melhorias para buscas. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos a distância.', email: studioProfile.email, telephone: studioProfile.telephone, address: { '@type': 'PostalAddress', addressLocality: 'Indaiatuba', addressRegion: 'SP', addressCountry: 'BR' }, areaServed: studioProfile.areas, founder: { '@id': 'https://orvalia.com.br/#founder' } },
+    { '@type': 'ProfessionalService', '@id': 'https://orvalia.com.br/#organization', name: studioProfile.name, url: 'https://orvalia.com.br/', logo: 'https://orvalia.com.br/logo.png', description: 'Estratégia de marca, identidade visual, sites, análise da presença digital, buscas e conteúdo para redes sociais. Base em Indaiatuba, São Paulo; atendimento a Campinas e região e projetos a distância.', email: studioProfile.email, telephone: studioProfile.telephone, address: { '@type': 'PostalAddress', addressLocality: 'Indaiatuba', addressRegion: 'SP', addressCountry: 'BR' }, areaServed: studioProfile.areas, founder: { '@id': 'https://orvalia.com.br/#founder' } },
     { '@type': 'Person', '@id': 'https://orvalia.com.br/#founder', name: studioProfile.founder, jobTitle: 'Fundador e responsável pelos projetos da Orvalia', sameAs: [studioProfile.linkedin], worksFor: { '@id': 'https://orvalia.com.br/#organization' } },
     { '@type': 'WebSite', '@id': 'https://orvalia.com.br/#website', name: studioProfile.name, url: 'https://orvalia.com.br/', inLanguage: 'pt-BR', publisher: { '@id': 'https://orvalia.com.br/#organization' } },
     { '@type': 'FAQPage', '@id': 'https://orvalia.com.br/#faq', mainEntity: homeFaqs.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) },
@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <SEO
         title="Identidade visual e criação de sites em Indaiatuba | Orvalia"
-        description="Identidade visual, criação de sites e presença nas buscas para empresas de Indaiatuba, Campinas e região. Veja projetos e fale diretamente com Bruno."
+        description="Marca, sites, análise da presença digital e conteúdo para redes sociais em Indaiatuba e região. Conheça os serviços e converse sobre seu projeto."
         socialTitle="Orvalia Studio | Seu negócio vale mais do que parece."
         socialDescription="Estratégia de marca, identidade visual e sites para tornar visível o valor da sua empresa. Conheça a Orvalia e converse sobre seu projeto."
         canonical="https://orvalia.com.br/"

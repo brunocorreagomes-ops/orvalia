@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Marca e identidade", href: "/branding", route: true },
   { label: "Sites estratégicos", href: "/sites", route: true },
   { label: "Google e buscas com IA", href: "/seo-geo", route: true },
+  { label: "Redes sociais", href: "/redes-sociais", route: true },
   { label: "Trabalhos", href: "/portfolio", route: true },
   { label: "Método", href: "/#metodo", route: false },
   { label: "Artigos", href: "/blog", route: true },
@@ -90,7 +91,7 @@ export default function Navbar() {
           <OrvaliaLogo className="w-36 md:w-44" theme="light" />
         </Link>
 
-        <div className="hidden xl:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-4">
           {navLinks.map((link) => link.route ? (
             <Link key={link.label} to={link.href} className={linkClass(pathname.replace(/\/$/, "") === link.href)}>
               {link.label}
