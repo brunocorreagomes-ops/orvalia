@@ -23,15 +23,14 @@ export default function Essencial() {
           </p>
 
           <div className="text-3xl md:text-4xl font-medium text-brand-ink mb-10 md:mb-12 tracking-tight">
-            a partir de <span className="text-brand-cyan-dark font-bold">R$ 1.497</span>
+            <span className="text-brand-cyan-dark">Solicitar proposta</span>
           </div>
 
-          <a 
-            href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20contratar%20o%20Plano%20Essencial%20pela%20Orvalia%20Studio."
+          <Link to="/contato/"
             className="inline-flex items-center justify-center px-10 md:px-12 py-5 bg-brand-ink text-brand-mineral rounded-full font-bold text-xs hover:-translate-y-1 transition-transform uppercase tracking-widest"
           >
-            Contratar Agora
-          </a>
+            Solicitar proposta
+          </Link>
         </div>
 
         <div className="space-y-8 md:space-y-10">

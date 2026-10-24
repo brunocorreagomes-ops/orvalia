@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { analyticsConfigured } from "../lib/analytics";
 import OrvaliaLogo from "./OrvaliaLogo";
 
 export default function Footer() {
@@ -40,6 +41,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-6">
             <Link to="/privacidade/" className="hover:text-white transition-colors">Privacidade</Link>
             <Link to="/termos/" className="hover:text-white transition-colors">Termos</Link>
+            {analyticsConfigured && <button type="button" onClick={() => window.dispatchEvent(new Event("orvalia:privacy"))} className="hover:text-white transition-colors">Preferências de privacidade</button>}
             <Link to="/cookies/" className="hover:text-white transition-colors">Cookies</Link>
           </div>
         </div>

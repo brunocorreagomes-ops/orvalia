@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { analyticsConfigured } from "../../lib/analytics";
+import { siteConfig } from "../../lib/site-config";
 import SEO from "../../components/SEO";
 
 export default function Privacidade() {
@@ -35,6 +37,9 @@ export default function Privacidade() {
 
           <h2 className="text-2xl font-bold text-brand-ink mt-12">3. Compartilhamento de Dados</h2>
           <p>As respostas ao formulário de contato são processadas pelo Google Forms e armazenadas em uma planilha privada do Google Sheets, na conta da Orvalia. A equipe recebe uma notificação de nova solicitação por e-mail. Esses dados são usados para analisar o projeto e responder ao contato; não são publicados no site. Para solicitar informações ou a exclusão de uma resposta, escreva para orvaliastudio@gmail.com.</p>
+
+          {siteConfig.contactApiEnabled && <p>O formulário utiliza um serviço de recebimento hospedado no Sites, com infraestrutura Cloudflare, para encaminhar os dados ao Google e verificar a confirmação. A aplicação não registra nome, e-mail ou mensagem nos próprios logs de diagnóstico.</p>}
+          {analyticsConfigured && <p>Com sua autorização, o Google Analytics recebe eventos de visita e interação. A instrumentação própria não envia os campos do formulário, o endereço de e-mail nem o número do WhatsApp. Você pode recusar ou revogar a medição nas preferências de privacidade do rodapé.</p>}
 
           <h2 className="text-2xl font-bold text-brand-ink mt-12">4. Compromisso do Usuário</h2>
           <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que a Orvalia Studio oferece no site.</p>

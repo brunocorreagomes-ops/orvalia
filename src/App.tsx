@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Analytics from "./components/Analytics";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { MessageCircle } from "lucide-react";
@@ -96,6 +97,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <Analytics />
       <main className="editorial-system relative bg-brand-mineral text-brand-ink">
 
         <a

@@ -26,12 +26,11 @@ export default function Evolucao() {
             Sob <span className="text-brand-cyan font-bold">Consulta</span>
           </div>
 
-          <a 
-            href="https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20solicitar%20uma%20proposta%20personalizada%20para%20o%20Plano%20Evolução%20pela%20Orvalia%20Studio."
+          <Link to="/contato/"
             className="inline-flex items-center justify-center px-10 md:px-12 py-5 bg-brand-cyan text-brand-ink rounded-full font-bold text-xs hover:-translate-y-1 transition-transform uppercase tracking-widest"
           >
-            Solicitar Proposta
-          </a>
+            Solicitar proposta
+          </Link>
         </div>
 
         <div className="space-y-8 md:space-y-10">

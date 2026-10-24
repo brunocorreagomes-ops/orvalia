@@ -9,10 +9,12 @@
   },
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-server && node prerender.js",
+    "build": "node scripts/clean-build.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir dist-server && node prerender.js",
     "preview": "vite preview",
-    "verify": "node scripts/verify-navigation.mjs && node scripts/verify-sharing.mjs && node scripts/verify-blog.mjs",
-    "typecheck": "tsc --noEmit"
+    "verify": "node scripts/verify-navigation.mjs && node scripts/verify-sharing.mjs && node scripts/verify-blog.mjs && node scripts/verify-release.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:contact": "node --test server/contact/contact.test.mjs",
+    "test:analytics": "node --test scripts/verify-analytics.test.mjs"
   },
   "dependencies": {
     "@fontsource/hanken-grotesk": "^5.3.0",

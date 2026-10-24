@@ -34,6 +34,9 @@ jobs:
       - name: Check TypeScript
         run: npm run typecheck
 
+      - name: Verify contact and analytics contracts
+        run: node --test server/contact/contact.test.mjs scripts/verify-analytics.test.mjs
+
       - name: Build
         run: npm run build
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const plans = [
   {
     name: "Presença",
-    price: "R$ 1.800",
+    price: "Sob consulta",
     period: "/mês",
     focus: "MÁXIMA CONSISTÊNCIA",
     features: ["4 Posts Profissionais / semana", "Gestão de Bio & Identidade", "Relatório Mensal de Performance", "Suporte VIP WhatsApp"],
@@ -13,7 +13,7 @@ const plans = [
   },
   {
     name: "Estratégia",
-    price: "R$ 2.800",
+    price: "Sob consulta",
     period: "/mês",
     focus: "CRESCIMENTO ACELERADO",
     features: ["6 Posts Profissionais / semana", "Estratégia de Reels & Trends", "Engajamento Ativo Pro", "Análise de Concorrência Local"],
@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: "Autoridade",
-    price: "R$ 4.500",
+    price: "Sob consulta",
     period: "/mês",
     focus: "DOMÍNIO DE MERCADO",
     features: ["Conteúdo Diário Premium", "Criação de Artigos SEO", "Gestão de Tráfego Inclusa", "Consultoria de Marca Mensal"],
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: "360° Elite",
-    price: "R$ 6.800",
+    price: "Sob consulta",
     period: "/mês",
     focus: "ACOMPANHAMENTO COMPLETO",
     features: ["Comunicação Omnichannel", "Produção de Vídeo Mensal", "SEO Técnico Contínuo", "Growth Hacking Estratégico"],

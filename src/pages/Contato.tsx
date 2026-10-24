@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import "../contact.css";
+import { siteConfig } from "../lib/site-config";
+import { trackEvent } from "../lib/analytics";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { ArrowUpRight, Check, Clock, Mail, MapPin, Phone } from "lucide-react";
@@ -7,6 +9,34 @@ import { ArrowUpRight, Check, Clock, Mail, MapPin, Phone } from "lucide-react";
 export default function Contato() {
   const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeBpHWidIKmwrucijCwndBQhce1P2x5-4mPBBxct4KuNgGySQ/viewform?usp=publish-editor&hl=pt-BR";
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const sending = useRef(false);
+  const started = useRef(false);
+  const successHeading = useRef<HTMLHeadingElement>(null);
+  const integrated = import.meta.env.VITE_CONTACT_API_ENABLED === 'true' || siteConfig.contactApiEnabled;
+  const apiUrl = import.meta.env.VITE_CONTACT_API_URL || siteConfig.contactApiUrl;
+  useEffect(() => { if (status === 'success') successHeading.current?.focus(); }, [status]);
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    if (!integrated) { setSubmitted(true); trackEvent('contact_form_submit', { source_page: '/contato/' }); return; }
+    event.preventDefault();
+    if (sending.current) return;
+    sending.current = true;
+    const form = new FormData(event.currentTarget);
+    const value = (name: string) => String(form.get(name) || '');
+    const payload = { name: value('entry.522600955'), email: value('emailAddress'), company: value('entry.607905347'), phone: value('entry.1723222290'), site: value('entry.375472757'), context: value('entry.591864992'), priority: value('entry.695967425'), website_check: value('website_check') };
+    setStatus('sending');
+    trackEvent('contact_form_submit', { source_page: '/contato/' });
+    try {
+      const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'omit', body: JSON.stringify(payload), signal: AbortSignal.timeout(25000) });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true || typeof result.requestId !== 'string') throw new Error('Receipt not confirmed');
+      setStatus('success');
+      trackEvent('generate_lead', { source_page: '/contato/' });
+    } catch {
+      setStatus('error');
+      trackEvent('contact_form_error', { source_page: '/contato/' });
+    } finally { sending.current = false; }
+  };
   const submitUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeBpHWidIKmwrucijCwndBQhce1P2x5-4mPBBxct4KuNgGySQ/formResponse?hl=pt-BR&embedded=true";
 
   return (
@@ -65,7 +95,8 @@ export default function Contato() {
                 <h2 id="contact-form-title" tabIndex={-1}>O que você quer transformar?</h2>
                 <p>Conte o essencial. O próximo passo a gente constrói junto.</p>
               </div>
-              <form action={submitUrl} method="post" target="_blank" rel="noopener noreferrer" onSubmit={() => setSubmitted(true)}>
+              {status === 'success' ? <div className="inquiry-confirmation" role="status"><Check size={36} aria-hidden="true" /><h3 ref={successHeading} tabIndex={-1}>Seu projeto chegou até nós.</h3><p>Solicitação recebida pela Orvalia. Vamos analisar o contexto e responder pelo e-mail informado.</p><p>Prefere conversar agora? <a href="mailto:orvaliastudio@gmail.com">Escreva para orvaliastudio@gmail.com</a>.</p><button type="button" onClick={() => { setStatus('idle'); setSubmitted(false); started.current = false; }}>Enviar outro projeto</button></div> : <form action={submitUrl} method="post" target={integrated ? undefined : '_blank'} rel="noopener noreferrer" onSubmit={onSubmit} onFocusCapture={() => { if (!started.current) { started.current = true; trackEvent('contact_form_start', { source_page: '/contato/' }); } }}>
+                <div className="inquiry-honeypot" aria-hidden="true"><label>Deixe este campo vazio<input name="website_check" tabIndex={-1} autoComplete="off" /></label></div>
                 <fieldset className="inquiry-section">
                   <legend><span>01</span> Seu momento</legend>
                   <p id="priority-help" className="inquiry-hint">Escolha a prioridade do seu negócio.</p>
@@ -103,11 +134,12 @@ export default function Contato() {
                 </details>
                 <div className="inquiry-send">
                   <p>Ao enviar, você permite que a Orvalia use essas informações para responder ao seu contato. <Link to="/privacidade/">Política de privacidade</Link>.</p>
-                  <button type="submit">Enviar meu projeto <ArrowUpRight size={20} aria-hidden="true" /></button>
-                  <span className="inquiry-hint">A confirmação do envio abre em outra aba. Sem compromisso.</span>
+                  <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Enviando seu projeto…' : 'Enviar meu projeto'} <ArrowUpRight size={20} aria-hidden="true" /></button>
+                  <span className="inquiry-hint">{integrated ? "Você recebe a confirmação nesta página. Sem compromisso." : "A confirmação do envio abre em outra aba. Sem compromisso."}</span>
+                  {status === 'error' && <div className="inquiry-status inquiry-status-error" role="alert">Não foi possível confirmar o recebimento. Seus dados continuam preenchidos. Antes de tentar novamente, confira se já recebeu algum retorno. Você também pode <a href="mailto:orvaliastudio@gmail.com">falar por e-mail</a> ou <a href={formUrl} target="_blank" rel="noopener noreferrer">usar o formulário alternativo</a>.</div>}
                   {submitted && <div className="inquiry-status" role="status">Confira a confirmação na aba aberta pelo Google. Seus dados continuam aqui caso precise tentar novamente. <a href={formUrl} target="_blank" rel="noopener noreferrer">Abrir formulário alternativo <ArrowUpRight size={14} aria-hidden="true" /></a></div>}
                 </div>
-              </form>
+              </form>}
             </section>
           </div>
         </div>

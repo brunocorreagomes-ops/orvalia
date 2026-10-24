@@ -8,6 +8,7 @@ export default defineConfig(({ isSsrBuild }) => {
     plugins: [react()],
     build: {
       outDir: 'dist',
+      emptyOutDir: true,
       assetsDir: 'assets',
       sourcemap: false,
       minify: 'esbuild',

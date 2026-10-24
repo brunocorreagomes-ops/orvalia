@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { analyticsConfigured } from "../../lib/analytics";
+import { siteConfig } from "../../lib/site-config";
 import SEO from "../../components/SEO";
 
 export default function Cookies() {
@@ -26,9 +28,9 @@ export default function Cookies() {
 
         <section className="prose prose-brand max-w-none space-y-8 leading-relaxed text-lg">
           <h2 className="text-2xl font-bold text-brand-ink mt-12">Recursos do site</h2>
-          <p>O site institucional não oferece cadastro ou login de visitantes. As fontes são servidas pelo próprio site. Nesta versão, não há uma ferramenta de analytics configurada para coletar visitas ou conversões.</p>
+          <p>O site institucional não oferece cadastro ou login de visitantes. As fontes são servidas pelo próprio site. {analyticsConfigured ? "Com sua permissão, o Google Analytics mede visitas e cliques. A escolha pode ser alterada em Preferências de privacidade no rodapé. A medição fica desligada enquanto você não permitir." : "A medição opcional de visitas e cliques não está ativa nesta versão."}</p>
           <h2 className="text-2xl font-bold text-brand-ink mt-12">Serviços externos</h2>
-          <p>Ao enviar o formulário, uma nova aba abre o Google Forms para mostrar a confirmação. Links de WhatsApp, redes sociais e algumas imagens também usam serviços externos. Esses serviços podem tratar dados de conexão ou utilizar cookies conforme suas próprias políticas.</p>
+          <p>{siteConfig.contactApiEnabled ? "Ao enviar o formulário, o serviço de recebimento confirma a resposta do Google Forms e apresenta o resultado nesta página." : "Ao enviar o formulário, uma nova aba abre o Google Forms para mostrar a confirmação."} Links de WhatsApp, redes sociais e algumas imagens também usam serviços externos. Esses serviços podem tratar dados de conexão ou utilizar cookies conforme suas próprias políticas.</p>
           <h2 className="text-2xl font-bold text-brand-ink mt-12">Preferências do navegador</h2>
           <p>Você pode consultar e gerenciar cookies nas configurações do seu navegador. Alterações nessas preferências podem afetar o funcionamento dos serviços externos acessados a partir do site.</p>
           <p>Para informações sobre os dados enviados pelo formulário, consulte a <Link to="/privacidade/" className="underline underline-offset-4">Política de Privacidade</Link>.</p>
