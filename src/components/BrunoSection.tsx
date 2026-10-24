@@ -40,7 +40,7 @@ export default function BrunoSection() {
 
             <h2 className="text-4xl md:text-6xl font-sans font-medium tracking-tight leading-[1.05] mb-8">
               Estratégia comercial <br className="hidden md:block" />
-              <span className="italic font-serif font-light text-[#55605D]">antes do layout.</span>
+              <span className="italic font-serif font-light text-[#55605D]">antes do visual.</span>
             </h2>
 
             <div className="border-l-2 border-brand-cyan-dark pl-6 my-10">
