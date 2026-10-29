@@ -262,3 +262,46 @@
 @media(max-width:639px) { .project-preview img { height:360px; } }
 
 @media(min-width:1280px) { .situations-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } .situation-card h3 { font-size:29px; } }
+
+
+/* V2 editorial before/after: responsive art direction, not a compressed desktop screenshot. */
+.perception-lab .comparison-stage { border-radius:12px; box-shadow:0 24px 64px #050f1129; border-color:#6d8079; }
+.perception-lab .comparison-clear { background:#f2efe6; }
+.perception-lab .mock-navigation { padding:17px 30px 12px; }
+.perception-lab .mock-navigation strong { font-size:clamp(27px,3vw,41px); }
+.perception-lab .mock-clear-content { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); align-items:center; padding:6px 30px 0; gap:24px; }
+.perception-lab .mock-clear-content h3 { font-size:clamp(30px,3.7vw,53px); line-height:1.03; }
+.perception-lab .mock-clear-content p { font-size:clamp(10px,.95vw,14px); }
+.perception-lab .mock-architecture { border-radius:2px; overflow:hidden; padding:0; background:#dbe1d7; aspect-ratio:640/460; }
+.perception-lab .mock-architecture svg { width:100%; max-height:none; display:block; }
+.perception-lab .mock-architecture > span { position:absolute; right:12px; bottom:12px; background:#f5f0e5ed; color:#27443b; padding:7px 9px; }
+.perception-lab .mock-proof { padding:12px 30px; gap:18px; }
+.perception-lab .comparison-divider > span { width:46px; height:46px; border:3px solid #f1f3e9; }
+.perception-lab .comparison-tags > span { font-size:10px; letter-spacing:.04em; padding:7px 11px; border-radius:2px; }
+@media(max-width:767px) {
+  .perception-lab .comparison-stage { height:530px; border-radius:9px; }
+  .perception-lab .mock-browser { height:24px; padding:0 9px; }
+  .perception-lab .mock-navigation { padding:16px 19px 8px; }
+  .perception-lab .mock-navigation strong { font-size:29px; }
+  .perception-lab .mock-navigation > span { font-size:7px; }
+  .perception-lab .mock-clear-content { grid-template-columns:minmax(0,1fr); gap:13px; padding:2px 19px 0; }
+  .perception-lab .mock-kicker { font-size:7px; letter-spacing:.13em; }
+  .perception-lab .mock-clear-content h3 { font-size:clamp(32px,8vw,43px); margin:9px 0; }
+  .perception-lab .mock-clear-content p { font-size:11px; margin:10px 0; }
+  .perception-lab .mock-cta { padding:10px 12px; font-size:9px; }
+  .perception-lab .mock-architecture { max-height:200px; aspect-ratio:640/360; }
+  .perception-lab .mock-architecture svg { height:100%; object-fit:cover; }
+  .perception-lab .mock-architecture > span { font-size:7px; bottom:5px; right:5px; }
+  .perception-lab .mock-proof { padding:12px 19px; gap:8px; font-size:8px; }
+  .perception-lab .mock-vague-content { padding:57px 18px; }
+  .perception-lab .mock-vague-content h3 { font-size:clamp(28px,7.4vw,38px); }
+  .perception-lab .mock-vague-content p { font-size:12px; }
+  .perception-lab .mock-generic-header { padding:20px 18px; }
+  .perception-lab .comparison-divider { top:24px; }
+}
+@media(max-width:360px) {
+  .perception-lab .comparison-stage { height:512px; }
+  .perception-lab .mock-navigation strong { font-size:26px; }
+  .perception-lab .mock-clear-content h3 { font-size:30px; }
+  .perception-lab .mock-architecture { max-height:155px; }
+}
