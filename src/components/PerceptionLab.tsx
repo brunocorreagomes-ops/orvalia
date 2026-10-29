@@ -7,7 +7,36 @@ const lenses = [
   { id: 'contato', label: 'Próximo passo', title: 'O contato faz parte do projeto.', text: 'A chamada explica o que acontece depois do clique. O visitante sabe por onde começar a conversa.' },
 ];
 function ArchitectureDrawing() {
-  return <svg viewBox="0 0 360 290" aria-hidden="true"><path d="M10 250L175 281L350 231M60 237V91L205 32L317 88V239M60 91L205 150L317 88M205 150V269M60 237L205 269L317 239M93 105V222M128 120V230M164 135V240M235 137V247M272 117V241M60 176L205 215L317 175" fill="none" stroke="currentColor" strokeWidth="1.1" /><path d="M60 91L205 32L317 88L205 150Z" fill="currentColor" opacity=".09" /><path d="M10 250H350M175 14V281" stroke="currentColor" opacity=".2" strokeDasharray="4 6" /><circle cx="205" cy="150" r="5" fill="#66e7e1" /></svg>;
+  return <svg viewBox="0 0 640 460" role="img" aria-label="Estudo autoral de arquitetura residencial: casa modernista, jardim e luz natural">
+    <defs>
+      <linearGradient id="sceneSky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#dbe1d7"/><stop offset="1" stopColor="#f0e7d4"/></linearGradient>
+      <linearGradient id="sceneWall" x1="0" x2="1"><stop offset="0" stopColor="#d8cbbb"/><stop offset="1" stopColor="#f0e4d2"/></linearGradient>
+      <linearGradient id="sceneGlass" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stopColor="#7a9890"/><stop offset="1" stopColor="#253e3d"/></linearGradient>
+    </defs>
+    <rect width="640" height="460" fill="url(#sceneSky)"/>
+    <circle cx="514" cy="82" r="63" fill="#f7f0d9" opacity=".7"/>
+    <path d="M0 328 Q150 296 305 319 T640 302V460H0Z" fill="#bdc8aa"/>
+    <path d="M0 371 Q230 320 640 365V460H0Z" fill="#a6b59d"/>
+    <path d="M55 337 371 267 613 345 279 436Z" fill="#718477" opacity=".25"/>
+    <path d="M140 160 438 100 572 154 273 222Z" fill="#465751"/>
+    <path d="M149 170 437 112 437 296 149 351Z" fill="url(#sceneWall)"/>
+    <path d="M437 112 562 160 562 316 437 296Z" fill="#9d9e8c"/>
+    <path d="M137 164 444 101 577 150 272 218Z" fill="#364b45"/>
+    <path d="M189 218 404 177 404 317 189 354Z" fill="url(#sceneGlass)"/>
+    <path d="M208 218 208 350 M268 206 268 336 M337 193 337 325 M189 278 404 236" stroke="#c9d7c9" strokeWidth="3" opacity=".8"/>
+    <path d="M452 178 540 209 540 299 452 277Z" fill="#344f4c"/>
+    <path d="M462 182V270 M495 195V282 M529 207V294" stroke="#c8d8cc" strokeWidth="3"/>
+    <path d="M124 355 438 293 588 345 272 425Z" fill="#d5c8b2"/>
+    <path d="M160 350 440 294 559 339 275 399Z" fill="#ece0ca"/>
+    <path d="M403 317 429 309 429 346 403 354Z" fill="#4c6556"/>
+    <path d="M0 375Q72 342 129 359M517 368Q575 324 640 345" stroke="#647c65" strokeWidth="5" fill="none"/>
+    {Array.from({length:7},(_,i)=><g key={i} transform={`translate(${38+i*24} ${359-i*5})`}><path d="M0 28Q-18-5-3-20Q9-1 0 28M0 28Q9-11 24-15Q20 10 0 28" fill="#657d60"/></g>)}
+    <path d="M500 348Q512 295 528 259M525 310Q550 268 570 265M526 324Q560 304 582 313" stroke="#536c59" strokeWidth="5" fill="none"/>
+    <circle cx="540" cy="249" r="4.5" fill="#44d5d0"/>
+    <rect x="22" y="22" width="175" height="29" fill="#f3f0e7" opacity=".92"/>
+    <text x="34" y="41" fontFamily="monospace" fontSize="11" letterSpacing="2" fill="#314e45">ESTUDO / RESIDÊNCIA 01</text>
+    <text x="24" y="437" fontFamily="monospace" fontSize="12" letterSpacing="2" fill="#28483d">MATÉRIA · LUZ · HABITAR</text>
+  </svg>;
 }
 export default function PerceptionLab() {
   const [reveal, setReveal] = useState(55);
@@ -34,7 +63,7 @@ export default function PerceptionLab() {
   return <div className={`perception-lab lens-${lenses[lens].id}`}>
     <div className="lab-topline"><span>O mesmo negócio. Duas formas de apresentar.</span><span><ArrowLeftRight size={15} /> Passe o mouse ou arraste sobre a imagem</span></div>
     <div className="comparison-stage" role="group" aria-label="Comparação interativa de duas apresentações do mesmo negócio" aria-describedby="comparison-instructions" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endPointer} onPointerCancel={endPointer} onLostPointerCapture={() => { activePointer.current = null; }}>
-      <div className="comparison-page comparison-clear" aria-hidden="true"><div className="mock-browser"><i /><i /><i /><span>exemplo / arquitetura</span></div><div className="mock-navigation"><strong>estúdio exemplo</strong><span>Projetos &nbsp; Estúdio &nbsp; Contato</span></div><div className="mock-clear-content"><div><span className="mock-kicker">ESPAÇOS PARA VIVER MELHOR</span><h3>Arquitetura.<br /><em>Para viver.</em></h3><p>Arquitetura residencial.<br />Do primeiro desenho aos detalhes.</p><span className="mock-cta">Conversar sobre um projeto <ArrowUpRight size={13} /></span></div><div className="mock-architecture"><ArchitectureDrawing /><span>01 / ESTUDO DE VOLUME</span></div></div><div className="mock-proof"><span><Check size={12} /> Processo explicado</span><span><Check size={12} /> Serviços definidos</span><span><Check size={12} /> Contato direto</span></div></div>
+      <div className="comparison-page comparison-clear" aria-hidden="true"><div className="mock-browser"><i /><i /><i /><span>exemplo / arquitetura</span></div><div className="mock-navigation"><strong>estúdio exemplo</strong><span>Projetos &nbsp; Estúdio &nbsp; Contato</span></div><div className="mock-clear-content"><div><span className="mock-kicker">ESPAÇOS PARA VIVER MELHOR</span><h3>Arquitetura.<br /><em>Para viver.</em></h3><p>Arquitetura residencial autoral.<br />Espaços pensados para viver bem.</p><span className="mock-cta">Conversar sobre um projeto <ArrowUpRight size={13} /></span></div><div className="mock-architecture"><ArchitectureDrawing /><span>CONCEITO / RESIDÊNCIA 01</span></div></div><div className="mock-proof"><span><Check size={12} /> Processo explicado</span><span><Check size={12} /> Serviços definidos</span><span><Check size={12} /> Contato direto</span></div></div>
       <div className="comparison-page comparison-vague" aria-hidden="true" style={{ clipPath: `inset(0 ${100 - reveal}% 0 0)` }}><div className="mock-browser"><i /><i /><i /><span>empresa / apresentação</span></div><div className="mock-generic-header">ESTÚDIO EXEMPLO <span>INÍCIO &nbsp; SOBRE &nbsp; SERVIÇOS &nbsp; CONTATO</span></div><div className="mock-vague-content"><span>BEM-VINDO AO NOSSO SITE</span><h3>Soluções completas<br />com excelência.</h3><p>Qualidade, inovação e comprometimento<br />para realizar os seus sonhos.</p><span className="mock-generic-button">SAIBA MAIS</span><div className="mock-generic-boxes"><span>QUALIDADE</span><span>INOVAÇÃO</span><span>CONFIANÇA</span></div></div></div>
       <div className="comparison-divider" aria-hidden="true" style={{ left: `${reveal}%` }}><span><ArrowLeftRight size={19} /></span></div>
       <div className="comparison-tags"><span hidden={reveal < 5}>Apresentação genérica</span><span hidden={reveal > 95}>Proposta organizada</span></div>
