@@ -3,8 +3,8 @@ export const studioProfile = {
   founder: 'Bruno Correa Gomes',
   base: 'Indaiatuba, São Paulo',
   email: 'orvaliastudio@gmail.com',
-  telephone: '+5511978959567',
-  telephoneDisplay: '+55 (11) 97895-9567',
+  telephone: '+5519992364061',
+  telephoneDisplay: '+55 (19) 99236-4061',
   linkedin: 'https://www.linkedin.com/in/bruno-correa-gomes/',
   areas: ['Indaiatuba', 'Campinas', 'Itu', 'Salto', 'Sorocaba', 'Jundiaí', 'São Paulo', 'Brasil'],
 };
