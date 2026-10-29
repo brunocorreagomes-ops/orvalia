@@ -33,7 +33,7 @@ const agencySchema = {
       "name": "Orvalia Studio",
       "url": "https://orvalia.com.br/agencia-indaiatuba",
       "logo": "https://orvalia.com.br/logo.png",
-      "telephone": "+5511978959567",
+      "telephone": "+5519992364061",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Indaiatuba",
@@ -141,7 +141,7 @@ export default function AgenciaIndaiatuba() {
                   <ul className="space-y-6">
                     <li className="flex items-center gap-5 text-brand-ink">
                       <Phone className="text-brand-cyan-dark" size={20} />
-                      <span className="text-lg font-medium">+55 11 97895-9567</span>
+                      <span className="text-lg font-medium">+55 19 99236-4061</span>
                     </li>
                     <li className="flex items-center gap-5 text-brand-ink">
                       <Mail className="text-brand-cyan-dark" size={20} />
@@ -250,7 +250,7 @@ export default function AgenciaIndaiatuba() {
                   </a>
 
                   <a
-                    href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20sua%20trajetória%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20agendar%20uma%20conversa."
+                    href="https://wa.me/5519992364061?text=Olá,%20Bruno.%20Vi%20sua%20trajetória%20no%20site%20da%20Orvalia%20e%20gostaria%20de%20agendar%20uma%20conversa."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-[#E0F7F6] text-[#006663] hover:bg-[#008A86] hover:text-white font-mono font-bold text-xs uppercase tracking-widest transition-colors flex items-center gap-3"
