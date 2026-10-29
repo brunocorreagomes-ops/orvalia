@@ -130,7 +130,7 @@ export default function ArticlePage({ id }: { id: string }) {
           <div>{related.map(item => <Link key={item.id} to={item.slug}><span className="editorial-label">{categories[item.category]}</span><h3>{item.title}</h3><span className="article-related-action">Ler artigo <ArrowUpRight size={17} /></span></Link>)}</div>
         </section>
         <section className="article-contact" aria-labelledby="contact-title"><div><span className="editorial-label">Da leitura à prática</span><h2 id="contact-title">O que precisa ficar mais claro na sua empresa?</h2><p>Converse sobre marca, conteúdo e site com Bruno Correa Gomes.</p></div>
-          <a href={`https://wa.me/5511978959567?text=${encodeURIComponent(`Olá, Bruno! Li o artigo “${article.title}” no blog da Orvalia e gostaria de conversar sobre meu projeto.`)}`} target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_click" data-analytics-location="blog_article">Conversar sobre meu projeto <ArrowUpRight size={18} /></a>
+          <a href={`https://wa.me/5519992364061?text=${encodeURIComponent(`Olá, Bruno! Li o artigo “${article.title}” no blog da Orvalia e gostaria de conversar sobre meu projeto.`)}`} target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_click" data-analytics-location="blog_article">Conversar sobre meu projeto <ArrowUpRight size={18} /></a>
         </section>
         <Link to="/blog/" className="article-back">← Ver todas as perspectivas</Link>
       </div>
