@@ -88,7 +88,7 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(false)}
           className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-cyan-dark"
         >
-          <OrvaliaLogo className="w-36 md:w-44" theme="light" />
+          <OrvaliaLogo className="w-40 md:w-44" theme="light" />
         </Link>
 
         <div className="hidden xl:flex items-center gap-4">
