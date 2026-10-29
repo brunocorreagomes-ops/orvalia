@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-16">
           <div>
             <Link to="/">
-              <OrvaliaLogo theme="dark" className="w-32 md:w-44 mb-6" />
+              <OrvaliaLogo theme="dark" className="w-40 md:w-44 mb-6" />
             </Link>
             <p className="text-[#a9b8b3] text-sm max-w-sm leading-relaxed">
               Identidade visual, sites e conteúdo para apresentar sua empresa e facilitar o contato.
