@@ -74,7 +74,7 @@ export default function Contato() {
               <div className="grid sm:grid-cols-2 gap-6 border-t border-brand-line pt-7 text-sm">
                 <div className="flex items-start gap-3">
                   <Phone size={18} className="text-brand-cyan-dark shrink-0 mt-0.5" />
-                  <div><span className="font-semibold block mb-1">WhatsApp & telefone</span><a href="tel:+5511978959567" className="text-brand-muted hover:text-brand-ink">+55 (11) 97895-9567</a></div>
+                  <div><span className="font-semibold block mb-1">WhatsApp & telefone</span><a href="tel:+5519992364061" className="text-brand-muted hover:text-brand-ink">+55 (19) 99236-4061</a></div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="text-brand-cyan-dark shrink-0 mt-0.5" />

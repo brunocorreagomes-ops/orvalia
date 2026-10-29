@@ -94,7 +94,7 @@ export default function App() {
     observer.observe(hero);
     return () => observer.disconnect();
   }, [pathname]);
-  const whatsappHref = `https://wa.me/5511978959567?text=${encodeURIComponent(
+  const whatsappHref = `https://wa.me/5519992364061?text=${encodeURIComponent(
     "Olá, Bruno! Vim pelo site da Orvalia e quero conversar sobre meu projeto."
   )}`;
   return (

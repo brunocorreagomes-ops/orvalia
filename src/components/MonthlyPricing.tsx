@@ -97,7 +97,7 @@ export default function MonthlyPricing() {
               </div>
 
               <a 
-                href={`https://wa.me/5511978959567?text=Olá!%20Gostaria%20de%20contratar%20o%20Plano%20de%20Recorrência%20${plan.name}%20da%20Orvalia.`}
+                href={`https://wa.me/5519992364061?text=Olá!%20Gostaria%20de%20contratar%20o%20Plano%20de%20Recorrência%20${plan.name}%20da%20Orvalia.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn relative py-4 px-8 rounded-full border border-white/10 flex items-center justify-center gap-4 overflow-hidden transition-all hover:border-brand-accent-light bg-white/5 hover:bg-brand-accent-light/10"

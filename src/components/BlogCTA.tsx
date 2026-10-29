@@ -32,7 +32,7 @@ export default function BlogCTA({ articleTitle }: BlogCTAProps) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href={`https://wa.me/5511978959567?text=${encodedMessage}`}
+            href={`https://wa.me/5519992364061?text=${encodedMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-4 bg-brand-accent-light text-brand-bg px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs transition-all hover:scale-105 shadow-xl shadow-brand-accent-light/10"

@@ -67,7 +67,7 @@ export default function FounderSection() {
             <div className="pt-4 flex flex-wrap gap-4">
               <MagneticWrapper>
                 <a 
-                  href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Vi%20a%20seção%20por%20trás%20da%20Orvalia%20e%20gostaria%20de%20conversar%20sobre%20a%20estratégia%20do%20meu%20negócio."
+                  href="https://wa.me/5519992364061?text=Olá,%20Bruno.%20Vi%20a%20seção%20por%20trás%20da%20Orvalia%20e%20gostaria%20de%20conversar%20sobre%20a%20estratégia%20do%20meu%20negócio."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-4 bg-brand-accent-light text-brand-bg px-8 py-4 rounded-full font-black uppercase tracking-[0.2em] text-xs shadow-xl hover:shadow-brand-accent-light/20 transition-all duration-300"
