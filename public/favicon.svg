@@ -1,4 +1,8 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 80 75 A 30 30 0 1 1 80 25" stroke="#080A0C" stroke-width="12" stroke-linecap="butt" fill="none" />
-  <circle cx="85" cy="50" r="10" fill="#0FCFC9" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Orvalia — The Point V12-E favicon</title>
+  <rect width="512" height="512" fill="#17232A"/>
+  <g transform="translate(24.9 -363.6) scale(2.88)">
+    <path d="M 143.770 198.605 A 66 66 0 1 1 111.985 160.725" fill="none" stroke="#F3F5F3" stroke-width="13.8"/>
+    <circle cx="131.559" cy="176.576" r="12" fill="#44D5D0"/>
+  </g>
 </svg>
