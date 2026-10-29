@@ -14,7 +14,7 @@ const paths = [
       "Entregável com plano de ação imediato"
     ],
     cta: "Quero meu diagnóstico gratuito",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20o%20Diagnóstico%20de%20Presença%20Digital%20gratuito%20da%20minha%20empresa.",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Quero%20o%20Diagnóstico%20de%20Presença%20Digital%20gratuito%20da%20minha%20empresa.",
     id: "01",
     highlight: true
   },
@@ -29,7 +29,7 @@ const paths = [
       "Foco absoluto em captação de leads"
     ],
     cta: "Conversar sobre meu projeto",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Tenho%20interesse%20na%20Landing%20Page%20Estratégica.%20Meu%20negócio%20é:",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Tenho%20interesse%20na%20Landing%20Page%20Estratégica.%20Meu%20negócio%20é:",
     id: "02"
   },
   {
@@ -43,7 +43,7 @@ const paths = [
       "Integrações de contato inteligentes"
     ],
     cta: "Avaliar minha presença digital",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20saber%20mais%20sobre%20o%20Site%20Institucional%20Premium.%20Meu%20negócio%20é:",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Quero%20saber%20mais%20sobre%20o%20Site%20Institucional%20Premium.%20Meu%20negócio%20é:",
     id: "03"
   },
   {
@@ -57,7 +57,7 @@ const paths = [
       "Direcionamento visual de canais"
     ],
     cta: "Ver melhor ponto de partida",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Gostaria%20de%20entender%20como%20minha%20marca%20pode%20vender%20melhor%20com%20Branding.",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Gostaria%20de%20entender%20como%20minha%20marca%20pode%20vender%20melhor%20com%20Branding.",
     id: "04"
   },
   {
@@ -71,7 +71,7 @@ const paths = [
       "Otimização de jornada comercial local"
     ],
     cta: "Entender como minha marca pode vender melhor",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Quero%20otimizar%20meus%20pontos%20de%20contato%20e%20jornada%20comercial.",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Quero%20otimizar%20meus%20pontos%20de%20contato%20e%20jornada%20comercial.",
     id: "05"
   },
   {
@@ -85,7 +85,7 @@ const paths = [
       "Evolução ágil de páginas e marca"
     ],
     cta: "Conversar sobre meu projeto",
-    link: "https://wa.me/5511978959567?text=Olá,%20Bruno.%20Gostaria%20de%20saber%20como%20funciona%20o%20Acompanhamento%20Mensal%20da%20Orvalia.",
+    link: "https://wa.me/5519992364061?text=Olá,%20Bruno.%20Gostaria%20de%20saber%20como%20funciona%20o%20Acompanhamento%20Mensal%20da%20Orvalia.",
     id: "06"
   }
 ];
@@ -202,7 +202,7 @@ export default function Pricing() {
           <div className="shrink-0">
             <MagneticWrapper>
               <a 
-                href="https://wa.me/5511978959567?text=Olá,%20Bruno.%20Gostaria%20de%20bater%20um%20papo%20sobre%20meu%20projeto%20e%20entender%20o%20melhor%20ponto%20de%20partida."
+                href="https://wa.me/5519992364061?text=Olá,%20Bruno.%20Gostaria%20de%20bater%20um%20papo%20sobre%20meu%20projeto%20e%20entender%20o%20melhor%20ponto%20de%20partida."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-12 py-6 bg-brand-accent-light text-brand-bg rounded-full font-black text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-accent-light/20 block text-center"
