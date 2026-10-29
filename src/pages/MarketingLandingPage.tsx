@@ -238,7 +238,7 @@ export default function MarketingLandingPage() {
               Conte o que sua empresa precisa apresentar melhor. Bruno analisa as informações e responde pelo e-mail informado para combinar o próximo passo.
             </p>
             <a 
-              href="https://wa.me/5511978959567"
+              href="https://wa.me/5519992364061"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-brand-cyan text-brand-ink rounded-full font-bold uppercase tracking-widest text-xs hover:-translate-y-1 transition-transform"
