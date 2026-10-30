@@ -2,12 +2,21 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import "../contact.css";
 import { siteConfig } from "../lib/site-config";
 import { trackEvent } from "../lib/analytics";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import SEO from "../components/SEO";
 import { ArrowUpRight, Check, Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contato() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [searchParams] = useSearchParams();
+  const servicePriority: Record<string, string> = {
+    marca: 'Marca e identidade visual',
+    site: 'Criar ou melhorar o site',
+    buscas: 'Google, SEO e buscas com IA',
+    redes: 'Presença digital e redes sociais',
+    orientacao: 'Diagnóstico completo',
+  };
+  const selectedPriority = servicePriority[searchParams.get('servico') || ''] || '';
   const sending = useRef(false);
   const started = useRef(false);
   const successHeading = useRef<HTMLHeadingElement>(null);
@@ -101,7 +110,7 @@ export default function Contato() {
                 <div className="inquiry-honeypot" aria-hidden="true"><label>Deixe este campo vazio<input name="website_check" tabIndex={-1} autoComplete="off" /></label></div>
                 <fieldset className="inquiry-section">
                   <legend><span>01</span> Seu momento</legend>
-                  <p id="priority-help" className="inquiry-hint">Escolha a prioridade do seu negócio.</p>
+                  <p id="priority-help" className="inquiry-hint">{selectedPriority ? "Já destacamos o assunto escolhido. Você pode mudar a opção." : "Escolha a prioridade do seu negócio."}</p>
                   <div className="inquiry-options" aria-describedby="priority-help">
                     {[
                       ["Marca e identidade visual", "Marca e identidade", "Apresentar o valor da sua empresa"],
@@ -111,7 +120,7 @@ export default function Contato() {
                       ["Diagnóstico completo", "Quero uma orientação", "Entender por onde começar"],
                     ].map(([value, title, hint]) => (
                       <label key={value} className="inquiry-option">
-                        <input type="radio" name="entry.695967425" value={value} required />
+                        <input type="radio" name="entry.695967425" value={value} defaultChecked={selectedPriority === value} required />
                         <span className="inquiry-option-copy"><strong>{title}</strong><span>{hint}</span></span>
                         <Check size={16} aria-hidden="true" />
                       </label>
