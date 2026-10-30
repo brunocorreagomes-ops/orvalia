@@ -2,10 +2,10 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const offers = [
-  { title:'Marca e identidade', desc:'Para quem está começando ou precisa alinhar a apresentação da empresa ao que ela faz hoje.', outputs:['Posicionamento, mensagem e identidade visual','Logotipo e aplicações definidos na proposta'], href:'/branding/' },
-  { title:'Criação de sites', desc:'Para quem precisa apresentar os serviços e facilitar a consulta e o contato pelo celular.', outputs:['Páginas, textos e navegação organizados','Formulário ou WhatsApp conforme o projeto'], href:'/sites/' },
-  { title:'Redes sociais', desc:'Para quem precisa analisar a presença digital e organizar o conteúdo da empresa de acordo com a estratégia.', outputs:['Análise e planejamento da presença digital','Pacotes de posts estáticos para o feed e vídeos para stories'], href:'/redes-sociais/' },
-  { title:'Google e buscas com IA', desc:'Para quem já tem um site e precisa revisar como seus serviços podem ser encontrados e compreendidos.', outputs:['Revisão técnica e informações locais','Conteúdo e estrutura, sem promessa de posição'], href:'/seo-geo/' },
+  { title:'Marca e identidade', desc:'Para quem está começando ou precisa alinhar a apresentação da empresa ao que ela faz hoje.', outputs:['Posicionamento, mensagem e identidade visual','Logotipo e aplicações definidos na proposta'], href:'/branding/', inquiry:'/contato/?servico=marca' },
+  { title:'Criação de sites', desc:'Para quem precisa apresentar os serviços e facilitar a consulta e o contato pelo celular.', outputs:['Páginas, textos e navegação organizados','Formulário ou WhatsApp conforme o projeto'], href:'/sites/', inquiry:'/contato/?servico=site' },
+  { title:'Redes sociais', desc:'Para quem precisa analisar a presença digital e organizar o conteúdo da empresa de acordo com a estratégia.', outputs:['Análise e planejamento da presença digital','Pacotes de posts estáticos para o feed e vídeos para stories'], href:'/redes-sociais/', inquiry:'/contato/?servico=redes' },
+  { title:'Google e buscas com IA', desc:'Para quem já tem um site e precisa revisar como seus serviços podem ser encontrados e compreendidos.', outputs:['Revisão técnica e informações locais','Conteúdo e estrutura, sem promessa de posição'], href:'/seo-geo/', inquiry:'/contato/?servico=buscas' },
 ];
 function SituationArt({ index }: { index: number }) {
   return <svg viewBox="0 0 360 150" fill="none" aria-hidden="true" focusable="false">
@@ -25,7 +25,7 @@ export default function FormasTrabalhar() {
         <h3>{offer.title}</h3><p className="situation-description">{offer.desc}</p>
 
         <ul>{offer.outputs.map(output=><li key={output}>{output}</li>)}</ul>
-        <Link to={offer.href}>Conhecer o serviço<ArrowUpRight size={17} aria-hidden="true"/></Link>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-3"><Link to={offer.href}>Conhecer o serviço<ArrowUpRight size={17} aria-hidden="true"/></Link><Link to={offer.inquiry} className="text-sm font-semibold underline underline-offset-4">Pedir uma proposta</Link></div>
       </article>)}</div>
       <p className="situations-note">Ainda não sabe por onde começar? Conte sua prioridade no formulário. Bruno responde pelo e-mail informado.</p>
       <Link className="project-detail-link" to="/contato/">Conversar sobre meu projeto <ArrowUpRight size={17} aria-hidden="true" /></Link>

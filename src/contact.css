@@ -60,3 +60,13 @@
 .analytics-actions button:last-child { background:#080a0c; color:#f5f4ef; }
 .analytics-choice button:focus-visible { outline:2px solid #006b68; outline-offset:3px; }
 @media(max-width:767px) { .analytics-choice { flex-direction:column; align-items:stretch; gap:18px; padding:20px; } .analytics-actions { display:grid; grid-template-columns:1fr 1fr; } }
+
+/* Commercial journey: mobile-first contact, full context on desktop. */
+.contact-layout { display:grid; grid-template-columns:minmax(0,1fr); align-items:start; gap:32px; }
+.contact-form { grid-row:1; scroll-margin-top:100px; }
+.contact-information { grid-row:2; }
+@media(min-width:1024px) {
+  .contact-layout { grid-template-columns:repeat(2,minmax(0,1fr)); gap:64px; }
+  .contact-information { grid-column:1; grid-row:1; }
+  .contact-form { grid-column:2; grid-row:1; }
+}
