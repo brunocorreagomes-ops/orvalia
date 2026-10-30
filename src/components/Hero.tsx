@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import DewPointScene from "./DewPointScene";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -42,6 +42,8 @@ export default function Hero() {
                 Conhecer os projetos ↘
               </a>
             </div>
+
+            <a href="https://wa.me/5519992364061?text=Ol%C3%A1%2C%20Bruno%21%20Vim%20pelo%20site%20da%20Orvalia%20e%20quero%20conversar%20sobre%20meu%20projeto." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-brand-ink underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-cyan-dark"><MessageCircle size={17} aria-hidden="true" /> Prefere WhatsApp? Conversar agora</a>
 
             <p className="hero-contact-note">Você preenche um formulário curto. Bruno analisa e responde pelo e-mail informado. Sem compromisso.</p>
 
