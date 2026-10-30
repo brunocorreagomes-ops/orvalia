@@ -59,8 +59,8 @@ export default function Contato() {
       />
       <section className="min-h-screen pt-28 md:pt-36 pb-20 bg-brand-mineral text-brand-ink">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div>
+          <div className="contact-layout">
+            <div className="contact-information">
               <p className="font-mono text-xs uppercase tracking-[0.18em] font-bold text-brand-cyan-dark mb-5">Converse com Bruno</p>
               <h1 className="page-title text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.03] mb-7">
                 Vamos conversar sobre seu projeto.
@@ -100,7 +100,7 @@ export default function Contato() {
               </div>
             </div>
 
-            <section aria-labelledby="contact-form-title" className="inquiry-panel min-w-0">
+            <section aria-labelledby="contact-form-title" className="inquiry-panel contact-form min-w-0">
               <div className="inquiry-heading">
                 <span className="inquiry-eyebrow">Uma boa conversa começa aqui</span>
                 <h2 id="contact-form-title" tabIndex={-1}>O que você quer transformar?</h2>
