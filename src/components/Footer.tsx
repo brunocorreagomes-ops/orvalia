@@ -39,6 +39,7 @@ export default function Footer() {
                 <li><Link to="/sites/" className="hover:text-white transition-colors">Sites Estratégicos</Link></li>
                 <li><Link to="/redes-sociais/" className="hover:text-white transition-colors">Redes sociais e conteúdo</Link></li>
                 <li><Link to="/seo-geo/" className="hover:text-white transition-colors">Buscas com IA</Link></li>
+                <li><a href="/intelligence/" className="hover:text-white transition-colors">Intelligence · IA para negócios</a></li>
               </ul>
             </div>
           </div>
