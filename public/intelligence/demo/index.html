@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Laboratório interativo | Orvalia Intelligence</title>
+<meta name="description" content="Demonstração interativa de atendimento e qualificação comercial. Dados fictícios e respostas simuladas.">
+<style>
+:root{color-scheme:light;--ink:#111b20;--muted:#586661;--cyan:#44d5d0;--line:#d6dcd8;--paper:#e9e8e3;--white:#f7f8f5;--glass:#fff;--shadow:0 12px 42px #0618200b;font-family:Inter,"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #008b8b;outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px max(24px,calc((100vw - 1420px)/2));background:#f9faf6;border-bottom:1px solid var(--line)}
+.top img{display:block;width:146px;height:auto}.toplinks{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:700}.toplinks a{text-decoration:none;border-bottom:1px solid transparent}.toplinks a:hover{border-bottom-color:currentColor}
+.eyebrow{font-family:ui-monospace,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}.eyebrow .dot,.badge .dot{display:inline-block;width:7px;height:7px;background:var(--cyan);border-radius:100%;margin-right:6px}
+.intro{background:var(--ink);color:#f7f8f4;padding:30px max(24px,calc((100vw - 1420px)/2)) 32px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.intro h1{font-size:clamp(29px,4vw,48px);line-height:1.08;letter-spacing:-.05em;font-weight:600;max-width:670px;margin:13px 0 10px}
+.intro h1 em{font-family:Georgia,serif;font-weight:400;color:#b5ebe7}
+.intro p{font-size:14px;max-width:620px;line-height:1.55;color:#bbcbc8;margin:0}
+.badge{border:1px solid #647a77;padding:10px 13px;border-radius:50px;font-size:11px;white-space:nowrap;color:#c5e3de}
+.shell{max-width:1468px;margin:auto;padding:22px 24px 45px;display:grid;grid-template-columns:225px minmax(0,1fr);gap:20px}
+.sidebar{background:#172328;color:#eff6f2;border-radius:17px;min-height:690px;padding:24px 18px;display:flex;flex-direction:column;gap:25px}
+.sidebar strong{font-size:16px;font-weight:600;letter-spacing:-.02em}.sidebar .note{font-size:12px;color:#9db1ae;line-height:1.6;margin:7px 0 0}
+.navlabel{color:#93a9a5;padding:0 10px;margin-bottom:12px}
+.navitem{display:flex;gap:10px;align-items:center;border-radius:9px;padding:12px 10px;margin-bottom:6px;color:#b6c7c3;font-size:13px;font-weight:600}.navitem.active{background:#284047;color:#f3fffc;border-left:2px solid var(--cyan)}
+.navitem i{display:inline-grid;place-items:center;width:19px;font-style:normal;font-size:16px}
+.sidebottom{margin-top:auto;padding:18px 12px;border-top:1px solid #355057;color:#b3cac6;font-size:12px;line-height:1.6}
+.content{min-width:0}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:1px 0 18px}
+.toolbar h2{font-size:25px;letter-spacing:-.04em;margin:0 0 4px}.toolbar p{font-size:12px;color:var(--muted);margin:0}
+.toolbar-actions{display:flex;gap:8px;flex-wrap:wrap}
+select,.secondary{border:1px solid #c6cfca;background:#fff;border-radius:9px;padding:12px 14px;color:#283735;font-size:12px;font-weight:650;min-height:42px}
+.secondary:hover{border-color:#617d78}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:17px 18px;box-shadow:var(--shadow)}
+.stat span{font-size:11px;color:#52615d}.stat strong{font-size:29px;letter-spacing:-.06em;display:block;margin-top:9px;line-height:1}.stat small{font-size:10px;color:#667976;display:block;margin-top:10px}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.82fr);gap:16px;align-items:start}
+.panel{background:#fafbf8;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px;overflow:hidden}
+.panelhead{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.panelhead h3{margin:0;font-size:15px;letter-spacing:-.02em}.panelhead small{font-size:11px;color:var(--muted)}
+.online{font-size:10px;color:#17594f;background:#e5f4ed;border-radius:25px;padding:7px 10px;font-weight:700}
+.leadpad{padding:20px}.leads{display:grid;gap:12px}
+.leadrow{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:10px;align-items:center;border:1px solid #e1e5e1;background:white;padding:12px;border-radius:9px}
+.avatar{width:20px;height:20px;border-radius:7px;display:grid;place-items:center;background:#dceae8;color:#245651;font-size:10px;font-weight:800}
+.leadrow b{display:block;font-size:12px;font-weight:700}.leadrow small{display:block;font-size:10px;color:#687874;margin-top:3px}
+.pill{font-size:10px;font-weight:700;border-radius:22px;padding:6px 8px;background:#edf0ec;color:#5b6963;white-space:nowrap}.pill.qualified{background:#dbf4ed;color:#176b56}.pill.forwarded{background:#dbe7f8;color:#2a527a}
+.pipeline{margin-top:18px;border-top:1px solid #e1e7e2;padding-top:17px}
+.pipeline-label{font-size:11px;font-weight:700;margin-bottom:11px}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.stage{height:7px;border-radius:20px;background:#dfe6e1}
+.stage.on{background:#39bab5}
+.stagenames{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;color:#60706b;font-size:9px;margin-top:7px}
+.detail{margin-top:17px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.detail div{background:#f2f5f0;border-radius:8px;padding:11px}.detail small{display:block;font-size:10px;color:#677670}.detail b{font-size:12px;display:block;margin-top:6px}
+.leadactions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.primary{border:1px solid #132e2b;border-radius:9px;background:#142e2c;color:white;padding:12px 13px;font-size:12px;font-weight:700}.primary:hover{background:#24534f}.primary:disabled{opacity:.5;cursor:not-allowed}
+.chat-panel{display:flex;flex-direction:column;min-height:615px}
+.chat-top{border-bottom:1px solid var(--line);padding:17px 18px;display:flex;justify-content:space-between;align-items:center;gap:9px}
+.chat-top strong{font-size:13px}.chat-top small{font-size:10px;color:#697b76;display:block;margin-top:4px}
+.chat-log{height:354px;overflow-y:auto;padding:19px 16px 12px;background:#f4f7f3;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+.bubble{border-radius:12px;max-width:90%;font-size:12px;line-height:1.55;padding:11px 13px;white-space:pre-wrap;overflow-wrap:anywhere}
+.bubble.assistant{background:#fff;color:#30413d;border:1px solid #e0e6e0;align-self:flex-start;border-top-left-radius:2px}
+.bubble.user{background:#173e3b;color:#f2f9f7;align-self:flex-end;border-top-right-radius:2px}
+.quick{display:flex;gap:7px;overflow-x:auto;padding:11px 13px;background:#fafbf8;border-top:1px solid #dce4de}
+.quick button{font-size:10px;white-space:nowrap;border:1px solid #bacbc4;background:#fff;padding:9px 10px;border-radius:20px;color:#254741}
+.composer{display:flex;gap:8px;padding:10px 13px 15px;border-top:1px solid #e2e8e2}
+.composer input{width:100%;min-width:0;flex:1;border:1px solid #c6d0c8;border-radius:9px;padding:11px;color:#1d2c29;font-size:12px}
+.composer button{white-space:nowrap}
+.warning{margin:0;padding:0 14px 14px;font-size:10px;line-height:1.5;color:#63736e;background:#fafbf8}
+.bottom{margin-top:15px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.bottom p{font-size:11px;line-height:1.65;color:#566861;margin:0}.bottom a{font-size:12px;font-weight:700}
+@media(max-width:1100px){.shell{grid-template-columns:1fr}.sidebar{min-height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:14px 18px}.sidebar nav,.sidebottom{display:none}.workspace{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.workspace{grid-template-columns:1fr}.intro{flex-direction:column;align-items:flex-start}.shell{padding:18px 15px 38px}.toolbar{flex-direction:column;align-items:flex-start}.chat-panel{min-height:0}.chat-log{height:320px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:24px}.stat small{font-size:9px}.top{padding:14px 16px}.toplinks{gap:10px}.toplinks a:first-child{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><a href="/" aria-label="Voltar à Orvalia"><img alt="Orvalia Studio" src="/brand/v12e/orvalia-wordmark-light.svg"></a><div class="toplinks"><a href="/intelligence/">Conheça a Orvalia Intelligence</a><a href="/contato/">Solicitar diagnóstico ↗</a></div></header>
+<section class="intro"><div><div class="eyebrow"><span class="dot"></span> ORVALIA / INTELLIGENCE LAB</div><h1>Uma conversa. <em>Uma oportunidade.</em><br>Um processo mais inteligente.</h1><p>Experimente um fluxo de recepção, qualificação e acompanhamento comercial. Tudo nesta tela é fictício, simulado e não envia mensagens nem dados para serviços externos.</p></div><span class="badge"><span class="dot"></span> Ambiente de demonstração</span></section>
+<main class="shell">
+<aside class="sidebar" aria-label="Navegação do laboratório"><div><strong>Intelligence <span style="color:#44d5d0">/ Lab</span></strong><p class="note">Atendimento & inteligência comercial</p></div><nav><div class="eyebrow navlabel">Módulos</div><div class="navitem active"><i>◉</i> Visão geral</div><div class="navitem"><i>◇</i> Atendimento</div><div class="navitem"><i>▥</i> Pipeline de leads</div><div class="navitem"><i>↗</i> Exportação de dados</div></nav><div class="sidebottom">Prova de conceito • V1<br>Sem API de IA • Sem CRM externo • Sem envio de WhatsApp.</div></aside>
+<div class="content">
+<section class="toolbar"><div><h2>Central comercial</h2><p id="scenario-description">Escolha uma operação e simule o atendimento.</p></div><div class="toolbar-actions"><label><span class="eyebrow" style="display:block;margin-bottom:6px">Setor da simulação</span><select id="scenario" aria-label="Selecionar cenário"><option value="service">Serviços técnicos</option><option value="clinic">Clínica</option><option value="consulting">Consultoria</option></select></label><button class="secondary" id="reset" type="button">↻ Reiniciar</button></div></section>
+<section class="stats" aria-label="Indicadores simulados"><div class="stat"><span>Conversas no painel</span><strong id="metric-conversations">04</strong><small>Volume ilustrativo</small></div><div class="stat"><span>Leads qualificados</span><strong id="metric-qualified">02</strong><small>Movimentação no funil</small></div><div class="stat"><span>Encaminhamentos</span><strong id="metric-forwarded">01</strong><small>Atendimento humano</small></div></section>
+<div class="workspace">
+<section class="panel"><div class="panelhead"><div><h3>Pipeline de oportunidades</h3><small>Contatos fictícios e lead ativo</small></div><span class="online">● Simulação ativa</span></div><div class="leadpad"><div class="leads" id="leads" aria-live="polite"></div><div class="pipeline"><div class="pipeline-label">Progresso do atendimento atual</div><div class="stages"><span class="stage on" id="stage0"></span><span class="stage" id="stage1"></span><span class="stage" id="stage2"></span></div><div class="stagenames"><span>Recebido</span><span>Qualificado</span><span>Encaminhado</span></div><div class="detail"><div><small>Interesse detectado</small><b id="interest">A identificar</b></div><div><small>Prioridade</small><b id="priority">Normal</b></div><div><small>Situação</small><b id="status">Novo contato</b></div><div><small>Origem</small><b>Chat de demonstração</b></div></div><div class="leadactions"><button id="qualify" class="primary" type="button">Marcar qualificado</button><button id="forward" class="secondary" type="button">Simular encaminhamento</button></div></div></div></section>
+<section class="panel chat-panel"><div class="chat-top"><div><strong id="assistant-name">Recepção • Nexa Serviços</strong><small>Assistente simulado · respostas por regras</small></div><span class="online">● Disponível</span></div><div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversa simulada"></div><div class="quick" id="quick" aria-label="Sugestões de mensagem"></div><form class="composer" id="chat-form"><label for="message" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Sua mensagem</label><input id="message" maxlength="300" autocomplete="off" required placeholder="Escreva uma mensagem de teste..." aria-label="Sua mensagem de teste"><button type="submit" class="primary">Enviar ↗</button></form><p class="warning">Não informe dados pessoais. Esta é uma interface demonstrativa; não agenda, não vende e não encaminha mensagens de verdade.</p></section>
+</div>
+<div class="bottom"><p>Indicadores calculados a partir de registros fictícios e interações desta sessão. Não representam resultados reais, atendimento por inteligência artificial ou integração operacional. Nada é armazenado em servidor.</p><div><button class="secondary" id="export" type="button">↓ Exportar leads fictícios (CSV)</button></div></div>
+</div>
+</main>
+<script>
+(function () {
+"use strict";
+var configs = {
+service:{brand:"Nexa Serviços",description:"Atendimento de manutenção e solicitações de orçamento.",welcome:"Olá! Você está falando com a recepção de demonstração da Nexa Serviços. Posso ajudar com orçamento, visita técnica ou atendimento humano. O que deseja?",quick:["Quero um orçamento","Agendar visita técnica","Preciso falar com uma pessoa"],defaultAnswer:"Entendi. Posso ajudar a organizar um pedido de orçamento ou visita técnica. Qual serviço e região você precisa atender?",rows:[["Contato 01","Instalação comercial","qualified"],["Contato 02","Visita técnica","forwarded"],["Contato 03","Manutenção preventiva","new"]]},
+clinic:{brand:"Clínica Horizonte",description:"Triagem administrativa de informações e agendamentos.",welcome:"Olá! Esta é a recepção demonstrativa da Clínica Horizonte. Posso explicar o fluxo de horários, informações administrativas ou encaminhar para a equipe. Não faço orientações médicas. Como posso ajudar?",quick:["Quero agendar uma consulta","Quais são os horários?","Falar com recepcionista"],defaultAnswer:"Posso organizar uma solicitação administrativa para a equipe da clínica. Você procura agendar, saber horários ou falar com uma recepcionista?",rows:[["Contato 01","Agendamento","qualified"],["Contato 02","Informações gerais","forwarded"],["Contato 03","Exames","new"]]},
+consulting:{brand:"Alto Vale Consultoria",description:"Triagem de interesses e pedidos de reunião comercial.",welcome:"Olá! Você está no atendimento demonstrativo da Alto Vale Consultoria. Posso ajudar a organizar uma reunião, entender seu desafio de gestão ou encaminhar à equipe. Por onde começamos?",quick:["Quero agendar uma reunião","Preciso de consultoria comercial","Falar com especialista"],defaultAnswer:"Para direcionar seu interesse, conte qual desafio da empresa deseja resolver. Posso registrar uma oportunidade demonstrativa para acompanhamento.",rows:[["Contato 01","Planejamento","qualified"],["Contato 02","Diagnóstico comercial","forwarded"],["Contato 03","Gestão de processos","new"]]}
+};
+var current="service", messages=[], lead={interest:"A identificar",priority:"Normal",status:"new"}, count=0;
+var $=function(id){return document.getElementById(id)};
+function text(id,value){$(id).textContent=value}
+function addBubble(role,content){var b=document.createElement("div");b.className="bubble "+role;b.textContent=content;$("chat-log").appendChild(b);$("chat-log").scrollTop=$("chat-log").scrollHeight;messages.push({role:role,content:content})}
+function statusLabel(v){return v==="qualified"?"Qualificado":v==="forwarded"?"Encaminhado":"Novo"}
+function createLeadRow(name,interest,status){var r=document.createElement("div");r.className="leadrow";var av=document.createElement("span");av.className="avatar";av.textContent=name==="Visitante demonstrativo"?"✦":name.slice(-2);var body=document.createElement("div");var n=document.createElement("b");n.textContent=name;var s=document.createElement("small");s.textContent=interest;body.append(n,s);var st=document.createElement("span");st.className="pill "+status;st.textContent=statusLabel(status);r.append(av,body,st);return r}
+function render(){
+var cfg=configs[current];
+text("scenario-description",cfg.description);text("assistant-name","Recepção • "+cfg.brand);
+var leads=$("leads");leads.replaceChildren();leads.appendChild(createLeadRow("Visitante demonstrativo",lead.interest,lead.status));
+cfg.rows.forEach(function(row){leads.appendChild(createLeadRow(row[0],row[1],row[2]))});
+text("metric-conversations",String(4+count).padStart(2,"0"));
+text("metric-qualified",String(1+(lead.status==="qualified"?1:0)).padStart(2,"0"));
+text("metric-forwarded",String(1+(lead.status==="forwarded"?1:0)).padStart(2,"0"));
+text("interest",lead.interest);text("priority",lead.priority);text("status",statusLabel(lead.status));
+$("stage0").classList.add("on");$("stage1").classList.toggle("on",lead.status==="qualified"||lead.status==="forwarded");$("stage2").classList.toggle("on",lead.status==="forwarded");
+$("qualify").disabled=lead.status==="qualified"||lead.status==="forwarded";$("forward").disabled=lead.status==="forwarded";
+}
+function reset(){
+current=$("scenario").value;lead={interest:"A identificar",priority:"Normal",status:"new"};count=0;messages=[];$("chat-log").replaceChildren();
+addBubble("assistant",configs[current].welcome);$("quick").replaceChildren();
+configs[current].quick.forEach(function(label){var b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",function(){send(label)});$("quick").appendChild(b)});$("message").value="";render()
+}
+function reply(input){
+var t=input.toLocaleLowerCase("pt-BR");
+if(/urgent|hoje|amanh|imediat|emergênc|emergenc/.test(t)){lead.priority="Alta"}
+if(/humano|pessoa|recepcionist|atendente|especialista|consultor/.test(t)){lead.interest="Atendimento humano";lead.status="forwarded";return "Registrei um encaminhamento fictício no painel. Em uma solução real, a equipe receberia o contexto da conversa mediante integração autorizada. Nenhuma pessoa foi acionada aqui."}
+if(/agendar|agenda|visita|reunião|reuniao|consulta/.test(t)){lead.interest=current==="service"?"Visita técnica":current==="clinic"?"Agendamento":"Reunião comercial";lead.status="qualified";return "Posso registrar o interesse em "+lead.interest.toLowerCase()+". Qual período seria melhor para você? Na demonstração não há agenda conectada e nenhuma reserva é criada."}
+if(/preço|preco|orçament|orcament|valor|custo|proposta/.test(t)){lead.interest="Pedido de orçamento";lead.status="qualified";return "Entendi o pedido de orçamento. Para preparar um atendimento real, seria útil informar o serviço desejado e a região. Aqui, esse interesse foi classificado apenas no painel fictício."}
+if(/horári|horari|abert|funcionament/.test(t)){lead.interest="Informações de horário";lead.status="qualified";return "Os horários usados nesta demonstração não correspondem a uma empresa real. Em uma implantação, eu consultaria os horários autorizados e atualizados na base de conhecimento."}
+if(/consultoria|comercial|marketing|gestão|gestao|processo/.test(t)){lead.interest="Consultoria / processo";lead.status="qualified";return "Esse tema parece adequado para uma conversa de diagnóstico. Já classifiquei a oportunidade na simulação. Qual resultado a empresa deseja alcançar?"}
+if(/obrigad|valeu|tchau/.test(t)){return "Obrigado pelo teste. Você pode simular outro atendimento, reiniciar ou exportar os registros fictícios."}
+return configs[current].defaultAnswer
+}
+function send(raw){var content=String(raw||"").trim().slice(0,300);if(!content)return;addBubble("user",content);count++;addBubble("assistant",reply(content));$("message").value="";render()}
+function csv(){
+var rows=[["Cenário","Contato","Interesse","Situação","Origem"],[configs[current].brand,"Visitante demonstrativo",lead.interest,statusLabel(lead.status),"Chat simulado"]];
+configs[current].rows.forEach(function(row){rows.push([configs[current].brand,row[0],row[1],statusLabel(row[2]),"Exemplo fictício"])});
+var content="\ufeff"+rows.map(function(row){return row.map(function(v){return '"'+String(v).replace(/^[=+\-@\t\r]/,"'").replace(/"/g,'""')+'"'}).join(";")}).join("\r\n");
+var url=URL.createObjectURL(new Blob([content],{type:"text/csv;charset=utf-8;"}));var a=document.createElement("a");a.href=url;a.download="orvalia-intelligence-leads-ficticios.csv";a.click();URL.revokeObjectURL(url)
+}
+$("scenario").addEventListener("change",reset);
+$("reset").addEventListener("click",reset);
+$("chat-form").addEventListener("submit",function(event){event.preventDefault();send($("message").value)});
+$("qualify").addEventListener("click",function(){lead.status="qualified";addBubble("assistant","Lead marcado como qualificado no painel de demonstração. Esta ação não envia nenhum dado para um CRM externo.");render()});
+$("forward").addEventListener("click",function(){lead.status="forwarded";addBubble("assistant","Encaminhamento simulado registrado. Nenhum atendente foi notificado.");render()});
+$("export").addEventListener("click",csv);
+reset();
+})();
+</script>
+</body>
+</html>
